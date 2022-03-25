@@ -14,7 +14,7 @@
 
 
 import { Configuration } from './configuration';
-import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
+import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from './common';
@@ -32,25 +32,25 @@ export interface CosmosBaseQueryV1beta1PageRequest {
      * @type {string}
      * @memberof CosmosBaseQueryV1beta1PageRequest
      */
-    key?: string;
+    'key'?: string;
     /**
      * offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
      * @type {string}
      * @memberof CosmosBaseQueryV1beta1PageRequest
      */
-    offset?: string;
+    'offset'?: string;
     /**
      * limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
      * @type {string}
      * @memberof CosmosBaseQueryV1beta1PageRequest
      */
-    limit?: string;
+    'limit'?: string;
     /**
      * count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
      * @type {boolean}
      * @memberof CosmosBaseQueryV1beta1PageRequest
      */
-    count_total?: boolean;
+    'count_total'?: boolean;
 }
 /**
  * PageResponse is to be embedded in gRPC response messages where the corresponding request message has used PageRequest.   message SomeResponse {          repeated Bar results = 1;          PageResponse page = 2;  }
@@ -63,13 +63,13 @@ export interface CosmosBaseQueryV1beta1PageResponse {
      * @type {string}
      * @memberof CosmosBaseQueryV1beta1PageResponse
      */
-    next_key?: string;
+    'next_key'?: string;
     /**
      * 
      * @type {string}
      * @memberof CosmosBaseQueryV1beta1PageResponse
      */
-    total?: string;
+    'total'?: string;
 }
 /**
  * Coin defines a token with a denomination and an amount.  NOTE: The amount field is an Int which implements the custom method signatures required by gogoproto.
@@ -82,13 +82,13 @@ export interface CosmosBaseV1beta1Coin {
      * @type {string}
      * @memberof CosmosBaseV1beta1Coin
      */
-    denom?: string;
+    'denom'?: string;
     /**
      * 
      * @type {string}
      * @memberof CosmosBaseV1beta1Coin
      */
-    amount?: string;
+    'amount'?: string;
 }
 /**
  * `Any` contains an arbitrary serialized protocol buffer message along with a URL that describes the type of the serialized message.  Protobuf library provides support to pack/unpack Any values in the form of utility functions or additional generated methods of the Any type.  Example 1: Pack and unpack a message in C++.      Foo foo = ...;     Any any;     any.PackFrom(foo);     ...     if (any.UnpackTo(&foo)) {       ...     }  Example 2: Pack and unpack a message in Java.      Foo foo = ...;     Any any = Any.pack(foo);     ...     if (any.is(Foo.class)) {       foo = any.unpack(Foo.class);     }   Example 3: Pack and unpack a message in Python.      foo = Foo(...)     any = Any()     any.Pack(foo)     ...     if any.Is(Foo.DESCRIPTOR):       any.Unpack(foo)       ...   Example 4: Pack and unpack a message in Go       foo := &pb.Foo{...}      any, err := ptypes.MarshalAny(foo)      ...      foo := &pb.Foo{}      if err := ptypes.UnmarshalAny(any, foo); err != nil {        ...      }  The pack methods provided by protobuf library will by default use \'type.googleapis.com/full.type.name\' as the type URL and the unpack methods only use the fully qualified type name after the last \'/\' in the type URL, for example \"foo.bar.com/x/y.z\" will yield type name \"y.z\".   JSON ==== The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:      package google.profile;     message Person {       string first_name = 1;       string last_name = 2;     }      {       \"@type\": \"type.googleapis.com/google.profile.Person\",       \"firstName\": <string>,       \"lastName\": <string>     }  If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message [google.protobuf.Duration][]):      {       \"@type\": \"type.googleapis.com/google.protobuf.Duration\",       \"value\": \"1.212s\"     }
@@ -101,13 +101,13 @@ export interface GoogleProtobufAny {
      * @type {string}
      * @memberof GoogleProtobufAny
      */
-    type_url?: string;
+    'type_url'?: string;
     /**
      * Must be a valid serialized protocol buffer of the above specified type.
      * @type {string}
      * @memberof GoogleProtobufAny
      */
-    value?: string;
+    'value'?: string;
 }
 /**
  * 
@@ -120,25 +120,25 @@ export interface GrpcGatewayRuntimeError {
      * @type {string}
      * @memberof GrpcGatewayRuntimeError
      */
-    error?: string;
+    'error'?: string;
     /**
      * 
      * @type {number}
      * @memberof GrpcGatewayRuntimeError
      */
-    code?: number;
+    'code'?: number;
     /**
      * 
      * @type {string}
      * @memberof GrpcGatewayRuntimeError
      */
-    message?: string;
+    'message'?: string;
     /**
      * 
      * @type {Array<InlineResponse200Auctions>}
      * @memberof GrpcGatewayRuntimeError
      */
-    details?: Array<InlineResponse200Auctions>;
+    'details'?: Array<InlineResponse200Auctions>;
 }
 /**
  * 
@@ -151,13 +151,13 @@ export interface InlineResponse200 {
      * @type {Array<InlineResponse200Auctions>}
      * @memberof InlineResponse200
      */
-    auctions?: Array<InlineResponse200Auctions>;
+    'auctions'?: Array<InlineResponse200Auctions>;
     /**
      * 
      * @type {InlineResponse200Pagination}
      * @memberof InlineResponse200
      */
-    pagination?: InlineResponse200Pagination;
+    'pagination'?: InlineResponse200Pagination;
 }
 /**
  * 
@@ -170,7 +170,7 @@ export interface InlineResponse2001 {
      * @type {InlineResponse200Auctions}
      * @memberof InlineResponse2001
      */
-    auction?: InlineResponse200Auctions;
+    'auction'?: InlineResponse200Auctions;
 }
 /**
  * 
@@ -183,7 +183,7 @@ export interface InlineResponse20010 {
      * @type {InlineResponse20010Params}
      * @memberof InlineResponse20010
      */
-    params?: InlineResponse20010Params;
+    'params'?: InlineResponse20010Params;
 }
 /**
  * 
@@ -196,13 +196,13 @@ export interface InlineResponse20010Params {
      * @type {boolean}
      * @memberof InlineResponse20010Params
      */
-    active?: boolean;
+    'active'?: boolean;
     /**
      * 
      * @type {Array<InlineResponse20010ParamsPeriods>}
      * @memberof InlineResponse20010Params
      */
-    periods?: Array<InlineResponse20010ParamsPeriods>;
+    'periods'?: Array<InlineResponse20010ParamsPeriods>;
 }
 /**
  * 
@@ -215,19 +215,19 @@ export interface InlineResponse20010ParamsPeriods {
      * @type {string}
      * @memberof InlineResponse20010ParamsPeriods
      */
-    start?: string;
+    'start'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse20010ParamsPeriods
      */
-    end?: string;
+    'end'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse20010ParamsPeriods
      */
-    inflation?: string;
+    'inflation'?: string;
 }
 /**
  * 
@@ -240,13 +240,13 @@ export interface InlineResponse20011 {
      * @type {Array<InlineResponse20011Markets>}
      * @memberof InlineResponse20011
      */
-    markets?: Array<InlineResponse20011Markets>;
+    'markets'?: Array<InlineResponse20011Markets>;
     /**
      * 
      * @type {InlineResponse200Pagination}
      * @memberof InlineResponse20011
      */
-    pagination?: InlineResponse200Pagination;
+    'pagination'?: InlineResponse200Pagination;
 }
 /**
  * 
@@ -259,31 +259,31 @@ export interface InlineResponse20011Markets {
      * @type {string}
      * @memberof InlineResponse20011Markets
      */
-    market_id?: string;
+    'market_id'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse20011Markets
      */
-    base_asset?: string;
+    'base_asset'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse20011Markets
      */
-    quote_asset?: string;
+    'quote_asset'?: string;
     /**
      * 
      * @type {Array<string>}
      * @memberof InlineResponse20011Markets
      */
-    oracles?: Array<string>;
+    'oracles'?: Array<string>;
     /**
      * 
      * @type {boolean}
      * @memberof InlineResponse20011Markets
      */
-    active?: boolean;
+    'active'?: boolean;
 }
 /**
  * 
@@ -296,13 +296,13 @@ export interface InlineResponse20012 {
      * @type {Array<string>}
      * @memberof InlineResponse20012
      */
-    oracles?: Array<string>;
+    'oracles'?: Array<string>;
     /**
      * 
      * @type {InlineResponse200Pagination}
      * @memberof InlineResponse20012
      */
-    pagination?: InlineResponse200Pagination;
+    'pagination'?: InlineResponse200Pagination;
 }
 /**
  * 
@@ -315,7 +315,7 @@ export interface InlineResponse20013 {
      * @type {InlineResponse20013Price}
      * @memberof InlineResponse20013
      */
-    price?: InlineResponse20013Price;
+    'price'?: InlineResponse20013Price;
 }
 /**
  * 
@@ -328,13 +328,13 @@ export interface InlineResponse20013Price {
      * @type {string}
      * @memberof InlineResponse20013Price
      */
-    market_id?: string;
+    'market_id'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse20013Price
      */
-    price?: string;
+    'price'?: string;
 }
 /**
  * 
@@ -347,13 +347,13 @@ export interface InlineResponse20014 {
      * @type {Array<InlineResponse20014Prices>}
      * @memberof InlineResponse20014
      */
-    prices?: Array<InlineResponse20014Prices>;
+    'prices'?: Array<InlineResponse20014Prices>;
     /**
      * 
      * @type {InlineResponse200Pagination}
      * @memberof InlineResponse20014
      */
-    pagination?: InlineResponse200Pagination;
+    'pagination'?: InlineResponse200Pagination;
 }
 /**
  * 
@@ -366,25 +366,25 @@ export interface InlineResponse20014Prices {
      * @type {string}
      * @memberof InlineResponse20014Prices
      */
-    market_id?: string;
+    'market_id'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse20014Prices
      */
-    oracle_address?: string;
+    'oracle_address'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse20014Prices
      */
-    price?: string;
+    'price'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse20014Prices
      */
-    expiry?: string;
+    'expiry'?: string;
 }
 /**
  * 
@@ -397,7 +397,7 @@ export interface InlineResponse20015 {
      * @type {InlineResponse20015Params}
      * @memberof InlineResponse20015
      */
-    params?: InlineResponse20015Params;
+    'params'?: InlineResponse20015Params;
 }
 /**
  * 
@@ -410,7 +410,7 @@ export interface InlineResponse20015Params {
      * @type {Array<InlineResponse20011Markets>}
      * @memberof InlineResponse20015Params
      */
-    markets?: Array<InlineResponse20011Markets>;
+    'markets'?: Array<InlineResponse20011Markets>;
 }
 /**
  * 
@@ -423,13 +423,13 @@ export interface InlineResponse20016 {
      * @type {Array<InlineResponse20013Price>}
      * @memberof InlineResponse20016
      */
-    prices?: Array<InlineResponse20013Price>;
+    'prices'?: Array<InlineResponse20013Price>;
     /**
      * 
      * @type {InlineResponse200Pagination}
      * @memberof InlineResponse20016
      */
-    pagination?: InlineResponse200Pagination;
+    'pagination'?: InlineResponse200Pagination;
 }
 /**
  * 
@@ -442,7 +442,7 @@ export interface InlineResponse2002 {
      * @type {InlineResponse2002Params}
      * @memberof InlineResponse2002
      */
-    params?: InlineResponse2002Params;
+    'params'?: InlineResponse2002Params;
 }
 /**
  * 
@@ -455,31 +455,31 @@ export interface InlineResponse2002Params {
      * @type {string}
      * @memberof InlineResponse2002Params
      */
-    max_auction_duration?: string;
+    'max_auction_duration'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2002Params
      */
-    bid_duration?: string;
+    'bid_duration'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2002Params
      */
-    increment_surplus?: string;
+    'increment_surplus'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2002Params
      */
-    increment_debt?: string;
+    'increment_debt'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2002Params
      */
-    increment_collateral?: string;
+    'increment_collateral'?: string;
 }
 /**
  * 
@@ -492,7 +492,7 @@ export interface InlineResponse2003 {
      * @type {Array<InlineResponse200Auctions>}
      * @memberof InlineResponse2003
      */
-    accounts?: Array<InlineResponse200Auctions>;
+    'accounts'?: Array<InlineResponse200Auctions>;
 }
 /**
  * 
@@ -505,13 +505,13 @@ export interface InlineResponse2004 {
      * @type {Array<InlineResponse2004Cdp1>}
      * @memberof InlineResponse2004
      */
-    cdp?: Array<InlineResponse2004Cdp1>;
+    'cdp'?: Array<InlineResponse2004Cdp1>;
     /**
      * 
      * @type {InlineResponse200Pagination}
      * @memberof InlineResponse2004
      */
-    pagination?: InlineResponse200Pagination;
+    'pagination'?: InlineResponse200Pagination;
 }
 /**
  * 
@@ -524,49 +524,49 @@ export interface InlineResponse2004Cdp {
      * @type {string}
      * @memberof InlineResponse2004Cdp
      */
-    id?: string;
+    'id'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2004Cdp
      */
-    owner?: string;
+    'owner'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2004Cdp
      */
-    type?: string;
+    'type'?: string;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof InlineResponse2004Cdp
      */
-    collateral?: InlineResponse2004CdpCollateral;
+    'collateral'?: InlineResponse2004CdpCollateral;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof InlineResponse2004Cdp
      */
-    principal?: InlineResponse2004CdpCollateral;
+    'principal'?: InlineResponse2004CdpCollateral;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof InlineResponse2004Cdp
      */
-    accumulated_fees?: InlineResponse2004CdpCollateral;
+    'accumulated_fees'?: InlineResponse2004CdpCollateral;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2004Cdp
      */
-    fees_updated?: string;
+    'fees_updated'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2004Cdp
      */
-    interest_factor?: string;
+    'interest_factor'?: string;
 }
 /**
  * 
@@ -579,19 +579,19 @@ export interface InlineResponse2004Cdp1 {
      * @type {InlineResponse2004Cdp}
      * @memberof InlineResponse2004Cdp1
      */
-    cdp?: InlineResponse2004Cdp;
+    'cdp'?: InlineResponse2004Cdp;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof InlineResponse2004Cdp1
      */
-    collateral_value?: InlineResponse2004CdpCollateral;
+    'collateral_value'?: InlineResponse2004CdpCollateral;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2004Cdp1
      */
-    collateralization_ratio?: string;
+    'collateralization_ratio'?: string;
 }
 /**
  * Coin defines a token with a denomination and an amount.  NOTE: The amount field is an Int which implements the custom method signatures required by gogoproto.
@@ -604,13 +604,13 @@ export interface InlineResponse2004CdpCollateral {
      * @type {string}
      * @memberof InlineResponse2004CdpCollateral
      */
-    denom?: string;
+    'denom'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2004CdpCollateral
      */
-    amount?: string;
+    'amount'?: string;
 }
 /**
  * 
@@ -623,7 +623,7 @@ export interface InlineResponse2005 {
      * @type {InlineResponse2004Cdp1}
      * @memberof InlineResponse2005
      */
-    cdp?: InlineResponse2004Cdp1;
+    'cdp'?: InlineResponse2004Cdp1;
 }
 /**
  * 
@@ -636,7 +636,7 @@ export interface InlineResponse2006 {
      * @type {Array<InlineResponse2006Deposits>}
      * @memberof InlineResponse2006
      */
-    deposits?: Array<InlineResponse2006Deposits>;
+    'deposits'?: Array<InlineResponse2006Deposits>;
 }
 /**
  * 
@@ -649,19 +649,19 @@ export interface InlineResponse2006Deposits {
      * @type {string}
      * @memberof InlineResponse2006Deposits
      */
-    cdp_id?: string;
+    'cdp_id'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2006Deposits
      */
-    depositor?: string;
+    'depositor'?: string;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof InlineResponse2006Deposits
      */
-    amount?: InlineResponse2004CdpCollateral;
+    'amount'?: InlineResponse2004CdpCollateral;
 }
 /**
  * 
@@ -674,7 +674,7 @@ export interface InlineResponse2007 {
      * @type {InlineResponse2007Params}
      * @memberof InlineResponse2007
      */
-    params?: InlineResponse2007Params;
+    'params'?: InlineResponse2007Params;
 }
 /**
  * 
@@ -687,49 +687,49 @@ export interface InlineResponse2007Params {
      * @type {Array<InlineResponse2007ParamsCollateralParams>}
      * @memberof InlineResponse2007Params
      */
-    collateral_params?: Array<InlineResponse2007ParamsCollateralParams>;
+    'collateral_params'?: Array<InlineResponse2007ParamsCollateralParams>;
     /**
      * 
      * @type {InlineResponse2007ParamsDebtParam}
      * @memberof InlineResponse2007Params
      */
-    debt_param?: InlineResponse2007ParamsDebtParam;
+    'debt_param'?: InlineResponse2007ParamsDebtParam;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof InlineResponse2007Params
      */
-    global_debt_limit?: InlineResponse2004CdpCollateral;
+    'global_debt_limit'?: InlineResponse2004CdpCollateral;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007Params
      */
-    surplus_auction_threshold?: string;
+    'surplus_auction_threshold'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007Params
      */
-    surplus_auction_lot?: string;
+    'surplus_auction_lot'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007Params
      */
-    debt_auction_threshold?: string;
+    'debt_auction_threshold'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007Params
      */
-    debt_auction_lot?: string;
+    'debt_auction_lot'?: string;
     /**
      * 
      * @type {boolean}
      * @memberof InlineResponse2007Params
      */
-    circuit_breaker?: boolean;
+    'circuit_breaker'?: boolean;
 }
 /**
  * 
@@ -742,79 +742,79 @@ export interface InlineResponse2007ParamsCollateralParams {
      * @type {string}
      * @memberof InlineResponse2007ParamsCollateralParams
      */
-    denom?: string;
+    'denom'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007ParamsCollateralParams
      */
-    type?: string;
+    'type'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007ParamsCollateralParams
      */
-    liquidation_ratio?: string;
+    'liquidation_ratio'?: string;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof InlineResponse2007ParamsCollateralParams
      */
-    debt_limit?: InlineResponse2004CdpCollateral;
+    'debt_limit'?: InlineResponse2004CdpCollateral;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007ParamsCollateralParams
      */
-    stability_fee?: string;
+    'stability_fee'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007ParamsCollateralParams
      */
-    auction_size?: string;
+    'auction_size'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007ParamsCollateralParams
      */
-    liquidation_penalty?: string;
+    'liquidation_penalty'?: string;
     /**
      * 
      * @type {number}
      * @memberof InlineResponse2007ParamsCollateralParams
      */
-    prefix?: number;
+    'prefix'?: number;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007ParamsCollateralParams
      */
-    spot_market_id?: string;
+    'spot_market_id'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007ParamsCollateralParams
      */
-    liquidation_market_id?: string;
+    'liquidation_market_id'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007ParamsCollateralParams
      */
-    keeper_reward_percentage?: string;
+    'keeper_reward_percentage'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007ParamsCollateralParams
      */
-    check_collateralization_index_count?: string;
+    'check_collateralization_index_count'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007ParamsCollateralParams
      */
-    conversion_factor?: string;
+    'conversion_factor'?: string;
 }
 /**
  * 
@@ -827,25 +827,25 @@ export interface InlineResponse2007ParamsDebtParam {
      * @type {string}
      * @memberof InlineResponse2007ParamsDebtParam
      */
-    denom?: string;
+    'denom'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007ParamsDebtParam
      */
-    reference_asset?: string;
+    'reference_asset'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007ParamsDebtParam
      */
-    conversion_factor?: string;
+    'conversion_factor'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2007ParamsDebtParam
      */
-    debt_floor?: string;
+    'debt_floor'?: string;
 }
 /**
  * 
@@ -858,7 +858,7 @@ export interface InlineResponse2008 {
      * @type {InlineResponse2008Params}
      * @memberof InlineResponse2008
      */
-    params?: InlineResponse2008Params;
+    'params'?: InlineResponse2008Params;
 }
 /**
  * 
@@ -871,19 +871,19 @@ export interface InlineResponse2008Params {
      * @type {Array<InlineResponse2008ParamsCdpMintingRewardPeriods>}
      * @memberof InlineResponse2008Params
      */
-    cdp_minting_reward_periods?: Array<InlineResponse2008ParamsCdpMintingRewardPeriods>;
+    'cdp_minting_reward_periods'?: Array<InlineResponse2008ParamsCdpMintingRewardPeriods>;
     /**
      * 
      * @type {Array<InlineResponse2008ParamsClaimMultipliers>}
      * @memberof InlineResponse2008Params
      */
-    claim_multipliers?: Array<InlineResponse2008ParamsClaimMultipliers>;
+    'claim_multipliers'?: Array<InlineResponse2008ParamsClaimMultipliers>;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2008Params
      */
-    claim_end?: string;
+    'claim_end'?: string;
 }
 /**
  * 
@@ -896,31 +896,31 @@ export interface InlineResponse2008ParamsCdpMintingRewardPeriods {
      * @type {boolean}
      * @memberof InlineResponse2008ParamsCdpMintingRewardPeriods
      */
-    active?: boolean;
+    'active'?: boolean;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2008ParamsCdpMintingRewardPeriods
      */
-    collateral_type?: string;
+    'collateral_type'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2008ParamsCdpMintingRewardPeriods
      */
-    start?: string;
+    'start'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2008ParamsCdpMintingRewardPeriods
      */
-    end?: string;
+    'end'?: string;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof InlineResponse2008ParamsCdpMintingRewardPeriods
      */
-    rewards_per_second?: InlineResponse2004CdpCollateral;
+    'rewards_per_second'?: InlineResponse2004CdpCollateral;
 }
 /**
  * 
@@ -933,19 +933,19 @@ export interface InlineResponse2008ParamsClaimMultipliers {
      * @type {string}
      * @memberof InlineResponse2008ParamsClaimMultipliers
      */
-    name?: string;
+    'name'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2008ParamsClaimMultipliers
      */
-    months_lockup?: string;
+    'months_lockup'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse2008ParamsClaimMultipliers
      */
-    factor?: string;
+    'factor'?: string;
 }
 /**
  * 
@@ -958,7 +958,7 @@ export interface InlineResponse2009 {
      * @type {Array<InlineResponse2004CdpCollateral>}
      * @memberof InlineResponse2009
      */
-    balances?: Array<InlineResponse2004CdpCollateral>;
+    'balances'?: Array<InlineResponse2004CdpCollateral>;
 }
 /**
  * `Any` contains an arbitrary serialized protocol buffer message along with a URL that describes the type of the serialized message.  Protobuf library provides support to pack/unpack Any values in the form of utility functions or additional generated methods of the Any type.  Example 1: Pack and unpack a message in C++.      Foo foo = ...;     Any any;     any.PackFrom(foo);     ...     if (any.UnpackTo(&foo)) {       ...     }  Example 2: Pack and unpack a message in Java.      Foo foo = ...;     Any any = Any.pack(foo);     ...     if (any.is(Foo.class)) {       foo = any.unpack(Foo.class);     }   Example 3: Pack and unpack a message in Python.      foo = Foo(...)     any = Any()     any.Pack(foo)     ...     if any.Is(Foo.DESCRIPTOR):       any.Unpack(foo)       ...   Example 4: Pack and unpack a message in Go       foo := &pb.Foo{...}      any, err := ptypes.MarshalAny(foo)      ...      foo := &pb.Foo{}      if err := ptypes.UnmarshalAny(any, foo); err != nil {        ...      }  The pack methods provided by protobuf library will by default use \'type.googleapis.com/full.type.name\' as the type URL and the unpack methods only use the fully qualified type name after the last \'/\' in the type URL, for example \"foo.bar.com/x/y.z\" will yield type name \"y.z\".   JSON ==== The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:      package google.profile;     message Person {       string first_name = 1;       string last_name = 2;     }      {       \"@type\": \"type.googleapis.com/google.profile.Person\",       \"firstName\": <string>,       \"lastName\": <string>     }  If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message [google.protobuf.Duration][]):      {       \"@type\": \"type.googleapis.com/google.protobuf.Duration\",       \"value\": \"1.212s\"     }
@@ -971,13 +971,13 @@ export interface InlineResponse200Auctions {
      * @type {string}
      * @memberof InlineResponse200Auctions
      */
-    type_url?: string;
+    'type_url'?: string;
     /**
      * Must be a valid serialized protocol buffer of the above specified type.
      * @type {string}
      * @memberof InlineResponse200Auctions
      */
-    value?: string;
+    'value'?: string;
 }
 /**
  * PageResponse is to be embedded in gRPC response messages where the corresponding request message has used PageRequest.   message SomeResponse {          repeated Bar results = 1;          PageResponse page = 2;  }
@@ -990,13 +990,13 @@ export interface InlineResponse200Pagination {
      * @type {string}
      * @memberof InlineResponse200Pagination
      */
-    next_key?: string;
+    'next_key'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponse200Pagination
      */
-    total?: string;
+    'total'?: string;
 }
 /**
  * 
@@ -1009,25 +1009,25 @@ export interface InlineResponseDefault {
      * @type {string}
      * @memberof InlineResponseDefault
      */
-    error?: string;
+    'error'?: string;
     /**
      * 
      * @type {number}
      * @memberof InlineResponseDefault
      */
-    code?: number;
+    'code'?: number;
     /**
      * 
      * @type {string}
      * @memberof InlineResponseDefault
      */
-    message?: string;
+    'message'?: string;
     /**
      * 
      * @type {Array<InlineResponse200Auctions>}
      * @memberof InlineResponseDefault
      */
-    details?: Array<InlineResponse200Auctions>;
+    'details'?: Array<InlineResponse200Auctions>;
 }
 /**
  * 
@@ -1040,25 +1040,25 @@ export interface InlineResponseDefault1 {
      * @type {string}
      * @memberof InlineResponseDefault1
      */
-    error?: string;
+    'error'?: string;
     /**
      * 
      * @type {number}
      * @memberof InlineResponseDefault1
      */
-    code?: number;
+    'code'?: number;
     /**
      * 
      * @type {string}
      * @memberof InlineResponseDefault1
      */
-    message?: string;
+    'message'?: string;
     /**
      * 
      * @type {Array<InlineResponseDefault1Details>}
      * @memberof InlineResponseDefault1
      */
-    details?: Array<InlineResponseDefault1Details>;
+    'details'?: Array<InlineResponseDefault1Details>;
 }
 /**
  * 
@@ -1071,13 +1071,13 @@ export interface InlineResponseDefault1Details {
      * @type {string}
      * @memberof InlineResponseDefault1Details
      */
-    type_url?: string;
+    'type_url'?: string;
     /**
      * 
      * @type {string}
      * @memberof InlineResponseDefault1Details
      */
-    value?: string;
+    'value'?: string;
 }
 /**
  * 
@@ -1090,31 +1090,31 @@ export interface UnunifiAuctionParams {
      * @type {string}
      * @memberof UnunifiAuctionParams
      */
-    max_auction_duration?: string;
+    'max_auction_duration'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiAuctionParams
      */
-    bid_duration?: string;
+    'bid_duration'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiAuctionParams
      */
-    increment_surplus?: string;
+    'increment_surplus'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiAuctionParams
      */
-    increment_debt?: string;
+    'increment_debt'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiAuctionParams
      */
-    increment_collateral?: string;
+    'increment_collateral'?: string;
 }
 /**
  * 
@@ -1127,13 +1127,13 @@ export interface UnunifiAuctionQueryAllAuctionResponse {
      * @type {Array<InlineResponse200Auctions>}
      * @memberof UnunifiAuctionQueryAllAuctionResponse
      */
-    auctions?: Array<InlineResponse200Auctions>;
+    'auctions'?: Array<InlineResponse200Auctions>;
     /**
      * 
      * @type {InlineResponse200Pagination}
      * @memberof UnunifiAuctionQueryAllAuctionResponse
      */
-    pagination?: InlineResponse200Pagination;
+    'pagination'?: InlineResponse200Pagination;
 }
 /**
  * 
@@ -1146,7 +1146,7 @@ export interface UnunifiAuctionQueryGetAuctionResponse {
      * @type {InlineResponse200Auctions}
      * @memberof UnunifiAuctionQueryGetAuctionResponse
      */
-    auction?: InlineResponse200Auctions;
+    'auction'?: InlineResponse200Auctions;
 }
 /**
  * 
@@ -1159,7 +1159,7 @@ export interface UnunifiAuctionQueryParamsResponse {
      * @type {InlineResponse2002Params}
      * @memberof UnunifiAuctionQueryParamsResponse
      */
-    params?: InlineResponse2002Params;
+    'params'?: InlineResponse2002Params;
 }
 /**
  * 
@@ -1172,19 +1172,19 @@ export interface UnunifiCdpAugmentedCdp {
      * @type {InlineResponse2004Cdp}
      * @memberof UnunifiCdpAugmentedCdp
      */
-    cdp?: InlineResponse2004Cdp;
+    'cdp'?: InlineResponse2004Cdp;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof UnunifiCdpAugmentedCdp
      */
-    collateral_value?: InlineResponse2004CdpCollateral;
+    'collateral_value'?: InlineResponse2004CdpCollateral;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpAugmentedCdp
      */
-    collateralization_ratio?: string;
+    'collateralization_ratio'?: string;
 }
 /**
  * 
@@ -1197,49 +1197,49 @@ export interface UnunifiCdpCdp {
      * @type {string}
      * @memberof UnunifiCdpCdp
      */
-    id?: string;
+    'id'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCdp
      */
-    owner?: string;
+    'owner'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCdp
      */
-    type?: string;
+    'type'?: string;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof UnunifiCdpCdp
      */
-    collateral?: InlineResponse2004CdpCollateral;
+    'collateral'?: InlineResponse2004CdpCollateral;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof UnunifiCdpCdp
      */
-    principal?: InlineResponse2004CdpCollateral;
+    'principal'?: InlineResponse2004CdpCollateral;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof UnunifiCdpCdp
      */
-    accumulated_fees?: InlineResponse2004CdpCollateral;
+    'accumulated_fees'?: InlineResponse2004CdpCollateral;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCdp
      */
-    fees_updated?: string;
+    'fees_updated'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCdp
      */
-    interest_factor?: string;
+    'interest_factor'?: string;
 }
 /**
  * 
@@ -1252,79 +1252,79 @@ export interface UnunifiCdpCollateralParam {
      * @type {string}
      * @memberof UnunifiCdpCollateralParam
      */
-    denom?: string;
+    'denom'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCollateralParam
      */
-    type?: string;
+    'type'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCollateralParam
      */
-    liquidation_ratio?: string;
+    'liquidation_ratio'?: string;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof UnunifiCdpCollateralParam
      */
-    debt_limit?: InlineResponse2004CdpCollateral;
+    'debt_limit'?: InlineResponse2004CdpCollateral;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCollateralParam
      */
-    stability_fee?: string;
+    'stability_fee'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCollateralParam
      */
-    auction_size?: string;
+    'auction_size'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCollateralParam
      */
-    liquidation_penalty?: string;
+    'liquidation_penalty'?: string;
     /**
      * 
      * @type {number}
      * @memberof UnunifiCdpCollateralParam
      */
-    prefix?: number;
+    'prefix'?: number;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCollateralParam
      */
-    spot_market_id?: string;
+    'spot_market_id'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCollateralParam
      */
-    liquidation_market_id?: string;
+    'liquidation_market_id'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCollateralParam
      */
-    keeper_reward_percentage?: string;
+    'keeper_reward_percentage'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCollateralParam
      */
-    check_collateralization_index_count?: string;
+    'check_collateralization_index_count'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpCollateralParam
      */
-    conversion_factor?: string;
+    'conversion_factor'?: string;
 }
 /**
  * 
@@ -1337,25 +1337,25 @@ export interface UnunifiCdpDebtParam {
      * @type {string}
      * @memberof UnunifiCdpDebtParam
      */
-    denom?: string;
+    'denom'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpDebtParam
      */
-    reference_asset?: string;
+    'reference_asset'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpDebtParam
      */
-    conversion_factor?: string;
+    'conversion_factor'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpDebtParam
      */
-    debt_floor?: string;
+    'debt_floor'?: string;
 }
 /**
  * 
@@ -1368,19 +1368,19 @@ export interface UnunifiCdpDeposit {
      * @type {string}
      * @memberof UnunifiCdpDeposit
      */
-    cdp_id?: string;
+    'cdp_id'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpDeposit
      */
-    depositor?: string;
+    'depositor'?: string;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof UnunifiCdpDeposit
      */
-    amount?: InlineResponse2004CdpCollateral;
+    'amount'?: InlineResponse2004CdpCollateral;
 }
 /**
  * 
@@ -1393,49 +1393,49 @@ export interface UnunifiCdpParams {
      * @type {Array<InlineResponse2007ParamsCollateralParams>}
      * @memberof UnunifiCdpParams
      */
-    collateral_params?: Array<InlineResponse2007ParamsCollateralParams>;
+    'collateral_params'?: Array<InlineResponse2007ParamsCollateralParams>;
     /**
      * 
      * @type {InlineResponse2007ParamsDebtParam}
      * @memberof UnunifiCdpParams
      */
-    debt_param?: InlineResponse2007ParamsDebtParam;
+    'debt_param'?: InlineResponse2007ParamsDebtParam;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof UnunifiCdpParams
      */
-    global_debt_limit?: InlineResponse2004CdpCollateral;
+    'global_debt_limit'?: InlineResponse2004CdpCollateral;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpParams
      */
-    surplus_auction_threshold?: string;
+    'surplus_auction_threshold'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpParams
      */
-    surplus_auction_lot?: string;
+    'surplus_auction_lot'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpParams
      */
-    debt_auction_threshold?: string;
+    'debt_auction_threshold'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiCdpParams
      */
-    debt_auction_lot?: string;
+    'debt_auction_lot'?: string;
     /**
      * 
      * @type {boolean}
      * @memberof UnunifiCdpParams
      */
-    circuit_breaker?: boolean;
+    'circuit_breaker'?: boolean;
 }
 /**
  * 
@@ -1448,7 +1448,7 @@ export interface UnunifiCdpQueryAllAccountResponse {
      * @type {Array<InlineResponse200Auctions>}
      * @memberof UnunifiCdpQueryAllAccountResponse
      */
-    accounts?: Array<InlineResponse200Auctions>;
+    'accounts'?: Array<InlineResponse200Auctions>;
 }
 /**
  * 
@@ -1461,13 +1461,13 @@ export interface UnunifiCdpQueryAllCdpResponse {
      * @type {Array<InlineResponse2004Cdp1>}
      * @memberof UnunifiCdpQueryAllCdpResponse
      */
-    cdp?: Array<InlineResponse2004Cdp1>;
+    'cdp'?: Array<InlineResponse2004Cdp1>;
     /**
      * 
      * @type {InlineResponse200Pagination}
      * @memberof UnunifiCdpQueryAllCdpResponse
      */
-    pagination?: InlineResponse200Pagination;
+    'pagination'?: InlineResponse200Pagination;
 }
 /**
  * 
@@ -1480,7 +1480,7 @@ export interface UnunifiCdpQueryAllDepositResponse {
      * @type {Array<InlineResponse2006Deposits>}
      * @memberof UnunifiCdpQueryAllDepositResponse
      */
-    deposits?: Array<InlineResponse2006Deposits>;
+    'deposits'?: Array<InlineResponse2006Deposits>;
 }
 /**
  * 
@@ -1493,7 +1493,7 @@ export interface UnunifiCdpQueryGetCdpResponse {
      * @type {InlineResponse2004Cdp1}
      * @memberof UnunifiCdpQueryGetCdpResponse
      */
-    cdp?: InlineResponse2004Cdp1;
+    'cdp'?: InlineResponse2004Cdp1;
 }
 /**
  * 
@@ -1506,7 +1506,7 @@ export interface UnunifiCdpQueryParamsResponse {
      * @type {InlineResponse2007Params}
      * @memberof UnunifiCdpQueryParamsResponse
      */
-    params?: InlineResponse2007Params;
+    'params'?: InlineResponse2007Params;
 }
 /**
  * 
@@ -1519,19 +1519,19 @@ export interface UnunifiIncentiveMultiplier {
      * @type {string}
      * @memberof UnunifiIncentiveMultiplier
      */
-    name?: string;
+    'name'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiIncentiveMultiplier
      */
-    months_lockup?: string;
+    'months_lockup'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiIncentiveMultiplier
      */
-    factor?: string;
+    'factor'?: string;
 }
 /**
  * 
@@ -1544,19 +1544,19 @@ export interface UnunifiIncentiveParams {
      * @type {Array<InlineResponse2008ParamsCdpMintingRewardPeriods>}
      * @memberof UnunifiIncentiveParams
      */
-    cdp_minting_reward_periods?: Array<InlineResponse2008ParamsCdpMintingRewardPeriods>;
+    'cdp_minting_reward_periods'?: Array<InlineResponse2008ParamsCdpMintingRewardPeriods>;
     /**
      * 
      * @type {Array<InlineResponse2008ParamsClaimMultipliers>}
      * @memberof UnunifiIncentiveParams
      */
-    claim_multipliers?: Array<InlineResponse2008ParamsClaimMultipliers>;
+    'claim_multipliers'?: Array<InlineResponse2008ParamsClaimMultipliers>;
     /**
      * 
      * @type {string}
      * @memberof UnunifiIncentiveParams
      */
-    claim_end?: string;
+    'claim_end'?: string;
 }
 /**
  * 
@@ -1569,7 +1569,7 @@ export interface UnunifiIncentiveQueryParamsResponse {
      * @type {InlineResponse2008Params}
      * @memberof UnunifiIncentiveQueryParamsResponse
      */
-    params?: InlineResponse2008Params;
+    'params'?: InlineResponse2008Params;
 }
 /**
  * 
@@ -1582,31 +1582,31 @@ export interface UnunifiIncentiveRewardPeriod {
      * @type {boolean}
      * @memberof UnunifiIncentiveRewardPeriod
      */
-    active?: boolean;
+    'active'?: boolean;
     /**
      * 
      * @type {string}
      * @memberof UnunifiIncentiveRewardPeriod
      */
-    collateral_type?: string;
+    'collateral_type'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiIncentiveRewardPeriod
      */
-    start?: string;
+    'start'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiIncentiveRewardPeriod
      */
-    end?: string;
+    'end'?: string;
     /**
      * 
      * @type {InlineResponse2004CdpCollateral}
      * @memberof UnunifiIncentiveRewardPeriod
      */
-    rewards_per_second?: InlineResponse2004CdpCollateral;
+    'rewards_per_second'?: InlineResponse2004CdpCollateral;
 }
 /**
  * 
@@ -1619,13 +1619,13 @@ export interface UnunifiPricefeedCurrentPrice {
      * @type {string}
      * @memberof UnunifiPricefeedCurrentPrice
      */
-    market_id?: string;
+    'market_id'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiPricefeedCurrentPrice
      */
-    price?: string;
+    'price'?: string;
 }
 /**
  * 
@@ -1638,31 +1638,31 @@ export interface UnunifiPricefeedMarket {
      * @type {string}
      * @memberof UnunifiPricefeedMarket
      */
-    market_id?: string;
+    'market_id'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiPricefeedMarket
      */
-    base_asset?: string;
+    'base_asset'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiPricefeedMarket
      */
-    quote_asset?: string;
+    'quote_asset'?: string;
     /**
      * 
      * @type {Array<string>}
      * @memberof UnunifiPricefeedMarket
      */
-    oracles?: Array<string>;
+    'oracles'?: Array<string>;
     /**
      * 
      * @type {boolean}
      * @memberof UnunifiPricefeedMarket
      */
-    active?: boolean;
+    'active'?: boolean;
 }
 /**
  * 
@@ -1675,7 +1675,7 @@ export interface UnunifiPricefeedParams {
      * @type {Array<InlineResponse20011Markets>}
      * @memberof UnunifiPricefeedParams
      */
-    markets?: Array<InlineResponse20011Markets>;
+    'markets'?: Array<InlineResponse20011Markets>;
 }
 /**
  * 
@@ -1688,25 +1688,25 @@ export interface UnunifiPricefeedPostedPrice {
      * @type {string}
      * @memberof UnunifiPricefeedPostedPrice
      */
-    market_id?: string;
+    'market_id'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiPricefeedPostedPrice
      */
-    oracle_address?: string;
+    'oracle_address'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiPricefeedPostedPrice
      */
-    price?: string;
+    'price'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiPricefeedPostedPrice
      */
-    expiry?: string;
+    'expiry'?: string;
 }
 /**
  * 
@@ -1719,13 +1719,13 @@ export interface UnunifiPricefeedQueryAllMarketResponse {
      * @type {Array<InlineResponse20011Markets>}
      * @memberof UnunifiPricefeedQueryAllMarketResponse
      */
-    markets?: Array<InlineResponse20011Markets>;
+    'markets'?: Array<InlineResponse20011Markets>;
     /**
      * 
      * @type {InlineResponse200Pagination}
      * @memberof UnunifiPricefeedQueryAllMarketResponse
      */
-    pagination?: InlineResponse200Pagination;
+    'pagination'?: InlineResponse200Pagination;
 }
 /**
  * 
@@ -1738,13 +1738,13 @@ export interface UnunifiPricefeedQueryAllOracleResponse {
      * @type {Array<string>}
      * @memberof UnunifiPricefeedQueryAllOracleResponse
      */
-    oracles?: Array<string>;
+    'oracles'?: Array<string>;
     /**
      * 
      * @type {InlineResponse200Pagination}
      * @memberof UnunifiPricefeedQueryAllOracleResponse
      */
-    pagination?: InlineResponse200Pagination;
+    'pagination'?: InlineResponse200Pagination;
 }
 /**
  * 
@@ -1757,13 +1757,13 @@ export interface UnunifiPricefeedQueryAllPriceResponse {
      * @type {Array<InlineResponse20013Price>}
      * @memberof UnunifiPricefeedQueryAllPriceResponse
      */
-    prices?: Array<InlineResponse20013Price>;
+    'prices'?: Array<InlineResponse20013Price>;
     /**
      * 
      * @type {InlineResponse200Pagination}
      * @memberof UnunifiPricefeedQueryAllPriceResponse
      */
-    pagination?: InlineResponse200Pagination;
+    'pagination'?: InlineResponse200Pagination;
 }
 /**
  * 
@@ -1776,13 +1776,13 @@ export interface UnunifiPricefeedQueryAllRawPriceResponse {
      * @type {Array<InlineResponse20014Prices>}
      * @memberof UnunifiPricefeedQueryAllRawPriceResponse
      */
-    prices?: Array<InlineResponse20014Prices>;
+    'prices'?: Array<InlineResponse20014Prices>;
     /**
      * 
      * @type {InlineResponse200Pagination}
      * @memberof UnunifiPricefeedQueryAllRawPriceResponse
      */
-    pagination?: InlineResponse200Pagination;
+    'pagination'?: InlineResponse200Pagination;
 }
 /**
  * 
@@ -1795,7 +1795,7 @@ export interface UnunifiPricefeedQueryGetPriceResponse {
      * @type {InlineResponse20013Price}
      * @memberof UnunifiPricefeedQueryGetPriceResponse
      */
-    price?: InlineResponse20013Price;
+    'price'?: InlineResponse20013Price;
 }
 /**
  * 
@@ -1808,7 +1808,7 @@ export interface UnunifiPricefeedQueryParamsResponse {
      * @type {InlineResponse20015Params}
      * @memberof UnunifiPricefeedQueryParamsResponse
      */
-    params?: InlineResponse20015Params;
+    'params'?: InlineResponse20015Params;
 }
 /**
  * 
@@ -1821,13 +1821,13 @@ export interface UnunifiUnunifidistParams {
      * @type {boolean}
      * @memberof UnunifiUnunifidistParams
      */
-    active?: boolean;
+    'active'?: boolean;
     /**
      * 
      * @type {Array<InlineResponse20010ParamsPeriods>}
      * @memberof UnunifiUnunifidistParams
      */
-    periods?: Array<InlineResponse20010ParamsPeriods>;
+    'periods'?: Array<InlineResponse20010ParamsPeriods>;
 }
 /**
  * 
@@ -1840,19 +1840,19 @@ export interface UnunifiUnunifidistPeriod {
      * @type {string}
      * @memberof UnunifiUnunifidistPeriod
      */
-    start?: string;
+    'start'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiUnunifidistPeriod
      */
-    end?: string;
+    'end'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiUnunifidistPeriod
      */
-    inflation?: string;
+    'inflation'?: string;
 }
 /**
  * 
@@ -1865,7 +1865,7 @@ export interface UnunifiUnunifidistQueryGetBalancesResponse {
      * @type {Array<InlineResponse2004CdpCollateral>}
      * @memberof UnunifiUnunifidistQueryGetBalancesResponse
      */
-    balances?: Array<InlineResponse2004CdpCollateral>;
+    'balances'?: Array<InlineResponse2004CdpCollateral>;
 }
 /**
  * 
@@ -1878,7 +1878,7 @@ export interface UnunifiUnunifidistQueryParamsResponse {
      * @type {InlineResponse20010Params}
      * @memberof UnunifiUnunifidistQueryParamsResponse
      */
-    params?: InlineResponse20010Params;
+    'params'?: InlineResponse20010Params;
 }
 
 /**
@@ -1892,7 +1892,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        accountAll: async (options: any = {}): Promise<RequestArgs> => {
+        accountAll: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/cdp/accounts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1907,7 +1907,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -1923,7 +1923,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        auction: async (id: string, options: any = {}): Promise<RequestArgs> => {
+        auction: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('auction', 'id', id)
             const localVarPath = `/ununifi/auction/auctions/{id}`
@@ -1941,7 +1941,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -1959,7 +1959,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        auctionAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: any = {}): Promise<RequestArgs> => {
+        auctionAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/auction/auctions`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1990,7 +1990,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2004,7 +2004,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        auctionParams: async (options: any = {}): Promise<RequestArgs> => {
+        auctionParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/auction/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2019,7 +2019,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2034,7 +2034,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        balances: async (options: any = {}): Promise<RequestArgs> => {
+        balances: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/ununifidist/balances`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2049,7 +2049,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2066,7 +2066,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        cdp: async (owner: string, collateralType: string, options: any = {}): Promise<RequestArgs> => {
+        cdp: async (owner: string, collateralType: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'owner' is not null or undefined
             assertParamExists('cdp', 'owner', owner)
             // verify required parameter 'collateralType' is not null or undefined
@@ -2087,7 +2087,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2105,7 +2105,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        cdpAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: any = {}): Promise<RequestArgs> => {
+        cdpAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/cdp/cdps`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2136,7 +2136,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2150,7 +2150,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        cdpParams: async (options: any = {}): Promise<RequestArgs> => {
+        cdpParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/cdp/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2165,7 +2165,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2181,7 +2181,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        depositAll: async (owner: string, collateralType: string, options: any = {}): Promise<RequestArgs> => {
+        depositAll: async (owner: string, collateralType: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'owner' is not null or undefined
             assertParamExists('depositAll', 'owner', owner)
             // verify required parameter 'collateralType' is not null or undefined
@@ -2202,7 +2202,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2216,7 +2216,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        incentiveParams: async (options: any = {}): Promise<RequestArgs> => {
+        incentiveParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/incentive/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2231,7 +2231,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2250,7 +2250,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        marketAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: any = {}): Promise<RequestArgs> => {
+        marketAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/pricefeed/markets`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2281,7 +2281,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2300,7 +2300,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oracleAll: async (marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: any = {}): Promise<RequestArgs> => {
+        oracleAll: async (marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'marketId' is not null or undefined
             assertParamExists('oracleAll', 'marketId', marketId)
             const localVarPath = `/ununifi/pricefeed/markets/{market_id}/oracles`
@@ -2334,7 +2334,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2349,7 +2349,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        price: async (marketId: string, options: any = {}): Promise<RequestArgs> => {
+        price: async (marketId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'marketId' is not null or undefined
             assertParamExists('price', 'marketId', marketId)
             const localVarPath = `/ununifi/pricefeed/markets/{market_id}/price`
@@ -2367,7 +2367,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2385,7 +2385,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        priceAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: any = {}): Promise<RequestArgs> => {
+        priceAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/pricefeed/prices`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2416,7 +2416,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2430,7 +2430,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        pricefeedParams: async (options: any = {}): Promise<RequestArgs> => {
+        pricefeedParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/pricefeed/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2445,7 +2445,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2464,7 +2464,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        rawPriceAll: async (marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: any = {}): Promise<RequestArgs> => {
+        rawPriceAll: async (marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'marketId' is not null or undefined
             assertParamExists('rawPriceAll', 'marketId', marketId)
             const localVarPath = `/ununifi/pricefeed/markets/{market_id}/raw_prices`
@@ -2498,7 +2498,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2512,7 +2512,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ununifidistParams: async (options: any = {}): Promise<RequestArgs> => {
+        ununifidistParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/ununifidist/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2527,7 +2527,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
 
     
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
@@ -2551,7 +2551,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async accountAll(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2003>> {
+        async accountAll(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2003>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.accountAll(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2562,7 +2562,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async auction(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2001>> {
+        async auction(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2001>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.auction(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2575,7 +2575,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async auctionAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
+        async auctionAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.auctionAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2584,7 +2584,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async auctionParams(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002>> {
+        async auctionParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.auctionParams(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2594,7 +2594,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async balances(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2009>> {
+        async balances(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2009>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.balances(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2606,7 +2606,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async cdp(owner: string, collateralType: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2005>> {
+        async cdp(owner: string, collateralType: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2005>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.cdp(owner, collateralType, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2619,7 +2619,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async cdpAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004>> {
+        async cdpAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.cdpAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2628,7 +2628,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async cdpParams(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+        async cdpParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.cdpParams(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2639,7 +2639,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async depositAll(owner: string, collateralType: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2006>> {
+        async depositAll(owner: string, collateralType: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2006>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.depositAll(owner, collateralType, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2648,7 +2648,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async incentiveParams(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2008>> {
+        async incentiveParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2008>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.incentiveParams(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2662,7 +2662,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async marketAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20011>> {
+        async marketAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20011>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.marketAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2676,7 +2676,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async oracleAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20012>> {
+        async oracleAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20012>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.oracleAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2686,7 +2686,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async price(marketId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20013>> {
+        async price(marketId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20013>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.price(marketId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2699,7 +2699,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async priceAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20016>> {
+        async priceAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20016>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.priceAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2708,7 +2708,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async pricefeedParams(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20015>> {
+        async pricefeedParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20015>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.pricefeedParams(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2722,7 +2722,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async rawPriceAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20014>> {
+        async rawPriceAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20014>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.rawPriceAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2731,7 +2731,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async ununifidistParams(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20010>> {
+        async ununifidistParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20010>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.ununifidistParams(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2933,7 +2933,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public accountAll(options?: any) {
+    public accountAll(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).accountAll(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -2945,7 +2945,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public auction(id: string, options?: any) {
+    public auction(id: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).auction(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -2959,7 +2959,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public auctionAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any) {
+    public auctionAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).auctionAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -2969,7 +2969,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public auctionParams(options?: any) {
+    public auctionParams(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).auctionParams(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -2980,7 +2980,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public balances(options?: any) {
+    public balances(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).balances(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -2993,7 +2993,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public cdp(owner: string, collateralType: string, options?: any) {
+    public cdp(owner: string, collateralType: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).cdp(owner, collateralType, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3007,7 +3007,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public cdpAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any) {
+    public cdpAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).cdpAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3017,7 +3017,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public cdpParams(options?: any) {
+    public cdpParams(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).cdpParams(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3029,7 +3029,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public depositAll(owner: string, collateralType: string, options?: any) {
+    public depositAll(owner: string, collateralType: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).depositAll(owner, collateralType, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3039,7 +3039,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public incentiveParams(options?: any) {
+    public incentiveParams(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).incentiveParams(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3054,7 +3054,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public marketAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any) {
+    public marketAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).marketAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3069,7 +3069,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public oracleAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any) {
+    public oracleAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).oracleAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3080,7 +3080,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public price(marketId: string, options?: any) {
+    public price(marketId: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).price(marketId, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3094,7 +3094,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public priceAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any) {
+    public priceAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).priceAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3104,7 +3104,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public pricefeedParams(options?: any) {
+    public pricefeedParams(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).pricefeedParams(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3119,7 +3119,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public rawPriceAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any) {
+    public rawPriceAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).rawPriceAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3129,7 +3129,7 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public ununifidistParams(options?: any) {
+    public ununifidistParams(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).ununifidistParams(options).then((request) => request(this.axios, this.basePath));
     }
 }
