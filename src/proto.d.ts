@@ -5,11 +5,11 @@ export namespace ununifi {
     /** Namespace auction. */
     namespace auction {
 
-        /** Represents a Query */
-        class Query extends $protobuf.rpc.Service {
+        /** Represents a Msg */
+        class Msg extends $protobuf.rpc.Service {
 
             /**
-             * Constructs a new Query service.
+             * Constructs a new Msg service.
              * @param rpcImpl RPC implementation
              * @param [requestDelimited=false] Whether requests are length-delimited
              * @param [responseDelimited=false] Whether responses are length-delimited
@@ -17,565 +17,197 @@ export namespace ununifi {
             constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
 
             /**
-             * Calls Params.
-             * @param request QueryParamsRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryParamsResponse
+             * Calls PlaceBid.
+             * @param request MsgPlaceBid message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgPlaceBidResponse
              */
-            public params(request: ununifi.auction.IQueryParamsRequest, callback: ununifi.auction.Query.ParamsCallback): void;
+            public placeBid(request: ununifi.auction.IMsgPlaceBid, callback: ununifi.auction.Msg.PlaceBidCallback): void;
 
             /**
-             * Calls Params.
-             * @param request QueryParamsRequest message or plain object
+             * Calls PlaceBid.
+             * @param request MsgPlaceBid message or plain object
              * @returns Promise
              */
-            public params(request: ununifi.auction.IQueryParamsRequest): Promise<ununifi.auction.QueryParamsResponse>;
-
-            /**
-             * Calls Auction.
-             * @param request QueryGetAuctionRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryGetAuctionResponse
-             */
-            public auction(request: ununifi.auction.IQueryGetAuctionRequest, callback: ununifi.auction.Query.AuctionCallback): void;
-
-            /**
-             * Calls Auction.
-             * @param request QueryGetAuctionRequest message or plain object
-             * @returns Promise
-             */
-            public auction(request: ununifi.auction.IQueryGetAuctionRequest): Promise<ununifi.auction.QueryGetAuctionResponse>;
-
-            /**
-             * Calls AuctionAll.
-             * @param request QueryAllAuctionRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryAllAuctionResponse
-             */
-            public auctionAll(request: ununifi.auction.IQueryAllAuctionRequest, callback: ununifi.auction.Query.AuctionAllCallback): void;
-
-            /**
-             * Calls AuctionAll.
-             * @param request QueryAllAuctionRequest message or plain object
-             * @returns Promise
-             */
-            public auctionAll(request: ununifi.auction.IQueryAllAuctionRequest): Promise<ununifi.auction.QueryAllAuctionResponse>;
+            public placeBid(request: ununifi.auction.IMsgPlaceBid): Promise<ununifi.auction.MsgPlaceBidResponse>;
         }
 
-        namespace Query {
+        namespace Msg {
 
             /**
-             * Callback as used by {@link ununifi.auction.Query#params}.
+             * Callback as used by {@link ununifi.auction.Msg#placeBid}.
              * @param error Error, if any
-             * @param [response] QueryParamsResponse
+             * @param [response] MsgPlaceBidResponse
              */
-            type ParamsCallback = (error: (Error|null), response?: ununifi.auction.QueryParamsResponse) => void;
-
-            /**
-             * Callback as used by {@link ununifi.auction.Query#auction}.
-             * @param error Error, if any
-             * @param [response] QueryGetAuctionResponse
-             */
-            type AuctionCallback = (error: (Error|null), response?: ununifi.auction.QueryGetAuctionResponse) => void;
-
-            /**
-             * Callback as used by {@link ununifi.auction.Query#auctionAll}.
-             * @param error Error, if any
-             * @param [response] QueryAllAuctionResponse
-             */
-            type AuctionAllCallback = (error: (Error|null), response?: ununifi.auction.QueryAllAuctionResponse) => void;
+            type PlaceBidCallback = (error: (Error|null), response?: ununifi.auction.MsgPlaceBidResponse) => void;
         }
 
-        /** Properties of a QueryParamsRequest. */
-        interface IQueryParamsRequest {
+        /** Properties of a MsgPlaceBid. */
+        interface IMsgPlaceBid {
+
+            /** MsgPlaceBid auction_id */
+            auction_id?: (Long|null);
+
+            /** MsgPlaceBid bidder */
+            bidder?: (string|null);
+
+            /** MsgPlaceBid amount */
+            amount?: (cosmos.base.v1beta1.ICoin|null);
         }
 
-        /** Represents a QueryParamsRequest. */
-        class QueryParamsRequest implements IQueryParamsRequest {
+        /** Represents a MsgPlaceBid. */
+        class MsgPlaceBid implements IMsgPlaceBid {
 
             /**
-             * Constructs a new QueryParamsRequest.
+             * Constructs a new MsgPlaceBid.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.auction.IQueryParamsRequest);
+            constructor(properties?: ununifi.auction.IMsgPlaceBid);
+
+            /** MsgPlaceBid auction_id. */
+            public auction_id: Long;
+
+            /** MsgPlaceBid bidder. */
+            public bidder: string;
+
+            /** MsgPlaceBid amount. */
+            public amount?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
-             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.auction.QueryParamsRequest.verify|verify} messages.
-             * @param message QueryParamsRequest message or plain object to encode
+             * Encodes the specified MsgPlaceBid message. Does not implicitly {@link ununifi.auction.MsgPlaceBid.verify|verify} messages.
+             * @param message MsgPlaceBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.auction.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.auction.IMsgPlaceBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.auction.QueryParamsRequest.verify|verify} messages.
-             * @param message QueryParamsRequest message or plain object to encode
+             * Encodes the specified MsgPlaceBid message, length delimited. Does not implicitly {@link ununifi.auction.MsgPlaceBid.verify|verify} messages.
+             * @param message MsgPlaceBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.auction.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.auction.IMsgPlaceBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a QueryParamsRequest message from the specified reader or buffer.
+             * Decodes a MsgPlaceBid message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns QueryParamsRequest
+             * @returns MsgPlaceBid
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.QueryParamsRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.MsgPlaceBid;
 
             /**
-             * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
+             * Decodes a MsgPlaceBid message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns QueryParamsRequest
+             * @returns MsgPlaceBid
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.QueryParamsRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.MsgPlaceBid;
 
             /**
-             * Verifies a QueryParamsRequest message.
+             * Verifies a MsgPlaceBid message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
+             * Creates a MsgPlaceBid message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns QueryParamsRequest
+             * @returns MsgPlaceBid
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.auction.QueryParamsRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.auction.MsgPlaceBid;
 
             /**
-             * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
-             * @param message QueryParamsRequest
+             * Creates a plain object from a MsgPlaceBid message. Also converts values to other types if specified.
+             * @param message MsgPlaceBid
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.auction.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.auction.MsgPlaceBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this QueryParamsRequest to JSON.
+             * Converts this MsgPlaceBid to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a QueryParamsResponse. */
-        interface IQueryParamsResponse {
-
-            /** QueryParamsResponse params */
-            params?: (ununifi.auction.IParams|null);
+        /** Properties of a MsgPlaceBidResponse. */
+        interface IMsgPlaceBidResponse {
         }
 
-        /** Represents a QueryParamsResponse. */
-        class QueryParamsResponse implements IQueryParamsResponse {
+        /** Represents a MsgPlaceBidResponse. */
+        class MsgPlaceBidResponse implements IMsgPlaceBidResponse {
 
             /**
-             * Constructs a new QueryParamsResponse.
+             * Constructs a new MsgPlaceBidResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.auction.IQueryParamsResponse);
-
-            /** QueryParamsResponse params. */
-            public params?: (ununifi.auction.IParams|null);
+            constructor(properties?: ununifi.auction.IMsgPlaceBidResponse);
 
             /**
-             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.auction.QueryParamsResponse.verify|verify} messages.
-             * @param message QueryParamsResponse message or plain object to encode
+             * Encodes the specified MsgPlaceBidResponse message. Does not implicitly {@link ununifi.auction.MsgPlaceBidResponse.verify|verify} messages.
+             * @param message MsgPlaceBidResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.auction.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.auction.IMsgPlaceBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.auction.QueryParamsResponse.verify|verify} messages.
-             * @param message QueryParamsResponse message or plain object to encode
+             * Encodes the specified MsgPlaceBidResponse message, length delimited. Does not implicitly {@link ununifi.auction.MsgPlaceBidResponse.verify|verify} messages.
+             * @param message MsgPlaceBidResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.auction.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.auction.IMsgPlaceBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a QueryParamsResponse message from the specified reader or buffer.
+             * Decodes a MsgPlaceBidResponse message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns QueryParamsResponse
+             * @returns MsgPlaceBidResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.QueryParamsResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.MsgPlaceBidResponse;
 
             /**
-             * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
+             * Decodes a MsgPlaceBidResponse message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns QueryParamsResponse
+             * @returns MsgPlaceBidResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.QueryParamsResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.MsgPlaceBidResponse;
 
             /**
-             * Verifies a QueryParamsResponse message.
+             * Verifies a MsgPlaceBidResponse message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
+             * Creates a MsgPlaceBidResponse message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns QueryParamsResponse
+             * @returns MsgPlaceBidResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.auction.QueryParamsResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.auction.MsgPlaceBidResponse;
 
             /**
-             * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
-             * @param message QueryParamsResponse
+             * Creates a plain object from a MsgPlaceBidResponse message. Also converts values to other types if specified.
+             * @param message MsgPlaceBidResponse
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.auction.QueryParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.auction.MsgPlaceBidResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this QueryParamsResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryGetAuctionRequest. */
-        interface IQueryGetAuctionRequest {
-
-            /** QueryGetAuctionRequest id */
-            id?: (Long|null);
-        }
-
-        /** Represents a QueryGetAuctionRequest. */
-        class QueryGetAuctionRequest implements IQueryGetAuctionRequest {
-
-            /**
-             * Constructs a new QueryGetAuctionRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.auction.IQueryGetAuctionRequest);
-
-            /** QueryGetAuctionRequest id. */
-            public id: Long;
-
-            /**
-             * Encodes the specified QueryGetAuctionRequest message. Does not implicitly {@link ununifi.auction.QueryGetAuctionRequest.verify|verify} messages.
-             * @param message QueryGetAuctionRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.auction.IQueryGetAuctionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryGetAuctionRequest message, length delimited. Does not implicitly {@link ununifi.auction.QueryGetAuctionRequest.verify|verify} messages.
-             * @param message QueryGetAuctionRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.auction.IQueryGetAuctionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryGetAuctionRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryGetAuctionRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.QueryGetAuctionRequest;
-
-            /**
-             * Decodes a QueryGetAuctionRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryGetAuctionRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.QueryGetAuctionRequest;
-
-            /**
-             * Verifies a QueryGetAuctionRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryGetAuctionRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryGetAuctionRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.auction.QueryGetAuctionRequest;
-
-            /**
-             * Creates a plain object from a QueryGetAuctionRequest message. Also converts values to other types if specified.
-             * @param message QueryGetAuctionRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.auction.QueryGetAuctionRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryGetAuctionRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryGetAuctionResponse. */
-        interface IQueryGetAuctionResponse {
-
-            /** QueryGetAuctionResponse auction */
-            auction?: (google.protobuf.IAny|null);
-        }
-
-        /** Represents a QueryGetAuctionResponse. */
-        class QueryGetAuctionResponse implements IQueryGetAuctionResponse {
-
-            /**
-             * Constructs a new QueryGetAuctionResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.auction.IQueryGetAuctionResponse);
-
-            /** QueryGetAuctionResponse auction. */
-            public auction?: (google.protobuf.IAny|null);
-
-            /**
-             * Encodes the specified QueryGetAuctionResponse message. Does not implicitly {@link ununifi.auction.QueryGetAuctionResponse.verify|verify} messages.
-             * @param message QueryGetAuctionResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.auction.IQueryGetAuctionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryGetAuctionResponse message, length delimited. Does not implicitly {@link ununifi.auction.QueryGetAuctionResponse.verify|verify} messages.
-             * @param message QueryGetAuctionResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.auction.IQueryGetAuctionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryGetAuctionResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryGetAuctionResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.QueryGetAuctionResponse;
-
-            /**
-             * Decodes a QueryGetAuctionResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryGetAuctionResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.QueryGetAuctionResponse;
-
-            /**
-             * Verifies a QueryGetAuctionResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryGetAuctionResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryGetAuctionResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.auction.QueryGetAuctionResponse;
-
-            /**
-             * Creates a plain object from a QueryGetAuctionResponse message. Also converts values to other types if specified.
-             * @param message QueryGetAuctionResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.auction.QueryGetAuctionResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryGetAuctionResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryAllAuctionRequest. */
-        interface IQueryAllAuctionRequest {
-
-            /** QueryAllAuctionRequest pagination */
-            pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-        }
-
-        /** Represents a QueryAllAuctionRequest. */
-        class QueryAllAuctionRequest implements IQueryAllAuctionRequest {
-
-            /**
-             * Constructs a new QueryAllAuctionRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.auction.IQueryAllAuctionRequest);
-
-            /** QueryAllAuctionRequest pagination. */
-            public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-
-            /**
-             * Encodes the specified QueryAllAuctionRequest message. Does not implicitly {@link ununifi.auction.QueryAllAuctionRequest.verify|verify} messages.
-             * @param message QueryAllAuctionRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.auction.IQueryAllAuctionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryAllAuctionRequest message, length delimited. Does not implicitly {@link ununifi.auction.QueryAllAuctionRequest.verify|verify} messages.
-             * @param message QueryAllAuctionRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.auction.IQueryAllAuctionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryAllAuctionRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryAllAuctionRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.QueryAllAuctionRequest;
-
-            /**
-             * Decodes a QueryAllAuctionRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryAllAuctionRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.QueryAllAuctionRequest;
-
-            /**
-             * Verifies a QueryAllAuctionRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryAllAuctionRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryAllAuctionRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.auction.QueryAllAuctionRequest;
-
-            /**
-             * Creates a plain object from a QueryAllAuctionRequest message. Also converts values to other types if specified.
-             * @param message QueryAllAuctionRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.auction.QueryAllAuctionRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryAllAuctionRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryAllAuctionResponse. */
-        interface IQueryAllAuctionResponse {
-
-            /** QueryAllAuctionResponse auctions */
-            auctions?: (google.protobuf.IAny[]|null);
-
-            /** QueryAllAuctionResponse pagination */
-            pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-        }
-
-        /** Represents a QueryAllAuctionResponse. */
-        class QueryAllAuctionResponse implements IQueryAllAuctionResponse {
-
-            /**
-             * Constructs a new QueryAllAuctionResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.auction.IQueryAllAuctionResponse);
-
-            /** QueryAllAuctionResponse auctions. */
-            public auctions: google.protobuf.IAny[];
-
-            /** QueryAllAuctionResponse pagination. */
-            public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-
-            /**
-             * Encodes the specified QueryAllAuctionResponse message. Does not implicitly {@link ununifi.auction.QueryAllAuctionResponse.verify|verify} messages.
-             * @param message QueryAllAuctionResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.auction.IQueryAllAuctionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryAllAuctionResponse message, length delimited. Does not implicitly {@link ununifi.auction.QueryAllAuctionResponse.verify|verify} messages.
-             * @param message QueryAllAuctionResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.auction.IQueryAllAuctionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryAllAuctionResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryAllAuctionResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.QueryAllAuctionResponse;
-
-            /**
-             * Decodes a QueryAllAuctionResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryAllAuctionResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.QueryAllAuctionResponse;
-
-            /**
-             * Verifies a QueryAllAuctionResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryAllAuctionResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryAllAuctionResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.auction.QueryAllAuctionResponse;
-
-            /**
-             * Creates a plain object from a QueryAllAuctionResponse message. Also converts values to other types if specified.
-             * @param message QueryAllAuctionResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.auction.QueryAllAuctionResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryAllAuctionResponse to JSON.
+             * Converts this MsgPlaceBidResponse to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -1175,11 +807,11 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Represents a Msg */
-        class Msg extends $protobuf.rpc.Service {
+        /** Represents a Query */
+        class Query extends $protobuf.rpc.Service {
 
             /**
-             * Constructs a new Msg service.
+             * Constructs a new Query service.
              * @param rpcImpl RPC implementation
              * @param [requestDelimited=false] Whether requests are length-delimited
              * @param [responseDelimited=false] Whether responses are length-delimited
@@ -1187,197 +819,565 @@ export namespace ununifi {
             constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
 
             /**
-             * Calls PlaceBid.
-             * @param request MsgPlaceBid message or plain object
-             * @param callback Node-style callback called with the error, if any, and MsgPlaceBidResponse
+             * Calls Params.
+             * @param request QueryParamsRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryParamsResponse
              */
-            public placeBid(request: ununifi.auction.IMsgPlaceBid, callback: ununifi.auction.Msg.PlaceBidCallback): void;
+            public params(request: ununifi.auction.IQueryParamsRequest, callback: ununifi.auction.Query.ParamsCallback): void;
 
             /**
-             * Calls PlaceBid.
-             * @param request MsgPlaceBid message or plain object
+             * Calls Params.
+             * @param request QueryParamsRequest message or plain object
              * @returns Promise
              */
-            public placeBid(request: ununifi.auction.IMsgPlaceBid): Promise<ununifi.auction.MsgPlaceBidResponse>;
-        }
-
-        namespace Msg {
+            public params(request: ununifi.auction.IQueryParamsRequest): Promise<ununifi.auction.QueryParamsResponse>;
 
             /**
-             * Callback as used by {@link ununifi.auction.Msg#placeBid}.
-             * @param error Error, if any
-             * @param [response] MsgPlaceBidResponse
+             * Calls Auction.
+             * @param request QueryGetAuctionRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryGetAuctionResponse
              */
-            type PlaceBidCallback = (error: (Error|null), response?: ununifi.auction.MsgPlaceBidResponse) => void;
-        }
-
-        /** Properties of a MsgPlaceBid. */
-        interface IMsgPlaceBid {
-
-            /** MsgPlaceBid auction_id */
-            auction_id?: (Long|null);
-
-            /** MsgPlaceBid bidder */
-            bidder?: (string|null);
-
-            /** MsgPlaceBid amount */
-            amount?: (cosmos.base.v1beta1.ICoin|null);
-        }
-
-        /** Represents a MsgPlaceBid. */
-        class MsgPlaceBid implements IMsgPlaceBid {
+            public auction(request: ununifi.auction.IQueryGetAuctionRequest, callback: ununifi.auction.Query.AuctionCallback): void;
 
             /**
-             * Constructs a new MsgPlaceBid.
+             * Calls Auction.
+             * @param request QueryGetAuctionRequest message or plain object
+             * @returns Promise
+             */
+            public auction(request: ununifi.auction.IQueryGetAuctionRequest): Promise<ununifi.auction.QueryGetAuctionResponse>;
+
+            /**
+             * Calls AuctionAll.
+             * @param request QueryAllAuctionRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryAllAuctionResponse
+             */
+            public auctionAll(request: ununifi.auction.IQueryAllAuctionRequest, callback: ununifi.auction.Query.AuctionAllCallback): void;
+
+            /**
+             * Calls AuctionAll.
+             * @param request QueryAllAuctionRequest message or plain object
+             * @returns Promise
+             */
+            public auctionAll(request: ununifi.auction.IQueryAllAuctionRequest): Promise<ununifi.auction.QueryAllAuctionResponse>;
+        }
+
+        namespace Query {
+
+            /**
+             * Callback as used by {@link ununifi.auction.Query#params}.
+             * @param error Error, if any
+             * @param [response] QueryParamsResponse
+             */
+            type ParamsCallback = (error: (Error|null), response?: ununifi.auction.QueryParamsResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.auction.Query#auction}.
+             * @param error Error, if any
+             * @param [response] QueryGetAuctionResponse
+             */
+            type AuctionCallback = (error: (Error|null), response?: ununifi.auction.QueryGetAuctionResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.auction.Query#auctionAll}.
+             * @param error Error, if any
+             * @param [response] QueryAllAuctionResponse
+             */
+            type AuctionAllCallback = (error: (Error|null), response?: ununifi.auction.QueryAllAuctionResponse) => void;
+        }
+
+        /** Properties of a QueryParamsRequest. */
+        interface IQueryParamsRequest {
+        }
+
+        /** Represents a QueryParamsRequest. */
+        class QueryParamsRequest implements IQueryParamsRequest {
+
+            /**
+             * Constructs a new QueryParamsRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.auction.IMsgPlaceBid);
-
-            /** MsgPlaceBid auction_id. */
-            public auction_id: Long;
-
-            /** MsgPlaceBid bidder. */
-            public bidder: string;
-
-            /** MsgPlaceBid amount. */
-            public amount?: (cosmos.base.v1beta1.ICoin|null);
+            constructor(properties?: ununifi.auction.IQueryParamsRequest);
 
             /**
-             * Encodes the specified MsgPlaceBid message. Does not implicitly {@link ununifi.auction.MsgPlaceBid.verify|verify} messages.
-             * @param message MsgPlaceBid message or plain object to encode
+             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.auction.QueryParamsRequest.verify|verify} messages.
+             * @param message QueryParamsRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.auction.IMsgPlaceBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.auction.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgPlaceBid message, length delimited. Does not implicitly {@link ununifi.auction.MsgPlaceBid.verify|verify} messages.
-             * @param message MsgPlaceBid message or plain object to encode
+             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.auction.QueryParamsRequest.verify|verify} messages.
+             * @param message QueryParamsRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.auction.IMsgPlaceBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.auction.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a MsgPlaceBid message from the specified reader or buffer.
+             * Decodes a QueryParamsRequest message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns MsgPlaceBid
+             * @returns QueryParamsRequest
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.MsgPlaceBid;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.QueryParamsRequest;
 
             /**
-             * Decodes a MsgPlaceBid message from the specified reader or buffer, length delimited.
+             * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns MsgPlaceBid
+             * @returns QueryParamsRequest
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.MsgPlaceBid;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.QueryParamsRequest;
 
             /**
-             * Verifies a MsgPlaceBid message.
+             * Verifies a QueryParamsRequest message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a MsgPlaceBid message from a plain object. Also converts values to their respective internal types.
+             * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns MsgPlaceBid
+             * @returns QueryParamsRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.auction.MsgPlaceBid;
+            public static fromObject(object: { [k: string]: any }): ununifi.auction.QueryParamsRequest;
 
             /**
-             * Creates a plain object from a MsgPlaceBid message. Also converts values to other types if specified.
-             * @param message MsgPlaceBid
+             * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
+             * @param message QueryParamsRequest
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.auction.MsgPlaceBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.auction.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this MsgPlaceBid to JSON.
+             * Converts this QueryParamsRequest to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a MsgPlaceBidResponse. */
-        interface IMsgPlaceBidResponse {
+        /** Properties of a QueryParamsResponse. */
+        interface IQueryParamsResponse {
+
+            /** QueryParamsResponse params */
+            params?: (ununifi.auction.IParams|null);
         }
 
-        /** Represents a MsgPlaceBidResponse. */
-        class MsgPlaceBidResponse implements IMsgPlaceBidResponse {
+        /** Represents a QueryParamsResponse. */
+        class QueryParamsResponse implements IQueryParamsResponse {
 
             /**
-             * Constructs a new MsgPlaceBidResponse.
+             * Constructs a new QueryParamsResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.auction.IMsgPlaceBidResponse);
+            constructor(properties?: ununifi.auction.IQueryParamsResponse);
+
+            /** QueryParamsResponse params. */
+            public params?: (ununifi.auction.IParams|null);
 
             /**
-             * Encodes the specified MsgPlaceBidResponse message. Does not implicitly {@link ununifi.auction.MsgPlaceBidResponse.verify|verify} messages.
-             * @param message MsgPlaceBidResponse message or plain object to encode
+             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.auction.QueryParamsResponse.verify|verify} messages.
+             * @param message QueryParamsResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.auction.IMsgPlaceBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.auction.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgPlaceBidResponse message, length delimited. Does not implicitly {@link ununifi.auction.MsgPlaceBidResponse.verify|verify} messages.
-             * @param message MsgPlaceBidResponse message or plain object to encode
+             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.auction.QueryParamsResponse.verify|verify} messages.
+             * @param message QueryParamsResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.auction.IMsgPlaceBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.auction.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a MsgPlaceBidResponse message from the specified reader or buffer.
+             * Decodes a QueryParamsResponse message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns MsgPlaceBidResponse
+             * @returns QueryParamsResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.MsgPlaceBidResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.QueryParamsResponse;
 
             /**
-             * Decodes a MsgPlaceBidResponse message from the specified reader or buffer, length delimited.
+             * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns MsgPlaceBidResponse
+             * @returns QueryParamsResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.MsgPlaceBidResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.QueryParamsResponse;
 
             /**
-             * Verifies a MsgPlaceBidResponse message.
+             * Verifies a QueryParamsResponse message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a MsgPlaceBidResponse message from a plain object. Also converts values to their respective internal types.
+             * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns MsgPlaceBidResponse
+             * @returns QueryParamsResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.auction.MsgPlaceBidResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.auction.QueryParamsResponse;
 
             /**
-             * Creates a plain object from a MsgPlaceBidResponse message. Also converts values to other types if specified.
-             * @param message MsgPlaceBidResponse
+             * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
+             * @param message QueryParamsResponse
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.auction.MsgPlaceBidResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.auction.QueryParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this MsgPlaceBidResponse to JSON.
+             * Converts this QueryParamsResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetAuctionRequest. */
+        interface IQueryGetAuctionRequest {
+
+            /** QueryGetAuctionRequest id */
+            id?: (Long|null);
+        }
+
+        /** Represents a QueryGetAuctionRequest. */
+        class QueryGetAuctionRequest implements IQueryGetAuctionRequest {
+
+            /**
+             * Constructs a new QueryGetAuctionRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.auction.IQueryGetAuctionRequest);
+
+            /** QueryGetAuctionRequest id. */
+            public id: Long;
+
+            /**
+             * Encodes the specified QueryGetAuctionRequest message. Does not implicitly {@link ununifi.auction.QueryGetAuctionRequest.verify|verify} messages.
+             * @param message QueryGetAuctionRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.auction.IQueryGetAuctionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetAuctionRequest message, length delimited. Does not implicitly {@link ununifi.auction.QueryGetAuctionRequest.verify|verify} messages.
+             * @param message QueryGetAuctionRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.auction.IQueryGetAuctionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetAuctionRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetAuctionRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.QueryGetAuctionRequest;
+
+            /**
+             * Decodes a QueryGetAuctionRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetAuctionRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.QueryGetAuctionRequest;
+
+            /**
+             * Verifies a QueryGetAuctionRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetAuctionRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetAuctionRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.auction.QueryGetAuctionRequest;
+
+            /**
+             * Creates a plain object from a QueryGetAuctionRequest message. Also converts values to other types if specified.
+             * @param message QueryGetAuctionRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.auction.QueryGetAuctionRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetAuctionRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetAuctionResponse. */
+        interface IQueryGetAuctionResponse {
+
+            /** QueryGetAuctionResponse auction */
+            auction?: (google.protobuf.IAny|null);
+        }
+
+        /** Represents a QueryGetAuctionResponse. */
+        class QueryGetAuctionResponse implements IQueryGetAuctionResponse {
+
+            /**
+             * Constructs a new QueryGetAuctionResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.auction.IQueryGetAuctionResponse);
+
+            /** QueryGetAuctionResponse auction. */
+            public auction?: (google.protobuf.IAny|null);
+
+            /**
+             * Encodes the specified QueryGetAuctionResponse message. Does not implicitly {@link ununifi.auction.QueryGetAuctionResponse.verify|verify} messages.
+             * @param message QueryGetAuctionResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.auction.IQueryGetAuctionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetAuctionResponse message, length delimited. Does not implicitly {@link ununifi.auction.QueryGetAuctionResponse.verify|verify} messages.
+             * @param message QueryGetAuctionResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.auction.IQueryGetAuctionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetAuctionResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetAuctionResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.QueryGetAuctionResponse;
+
+            /**
+             * Decodes a QueryGetAuctionResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetAuctionResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.QueryGetAuctionResponse;
+
+            /**
+             * Verifies a QueryGetAuctionResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetAuctionResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetAuctionResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.auction.QueryGetAuctionResponse;
+
+            /**
+             * Creates a plain object from a QueryGetAuctionResponse message. Also converts values to other types if specified.
+             * @param message QueryGetAuctionResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.auction.QueryGetAuctionResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetAuctionResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllAuctionRequest. */
+        interface IQueryAllAuctionRequest {
+
+            /** QueryAllAuctionRequest pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+        }
+
+        /** Represents a QueryAllAuctionRequest. */
+        class QueryAllAuctionRequest implements IQueryAllAuctionRequest {
+
+            /**
+             * Constructs a new QueryAllAuctionRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.auction.IQueryAllAuctionRequest);
+
+            /** QueryAllAuctionRequest pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+
+            /**
+             * Encodes the specified QueryAllAuctionRequest message. Does not implicitly {@link ununifi.auction.QueryAllAuctionRequest.verify|verify} messages.
+             * @param message QueryAllAuctionRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.auction.IQueryAllAuctionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllAuctionRequest message, length delimited. Does not implicitly {@link ununifi.auction.QueryAllAuctionRequest.verify|verify} messages.
+             * @param message QueryAllAuctionRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.auction.IQueryAllAuctionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllAuctionRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllAuctionRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.QueryAllAuctionRequest;
+
+            /**
+             * Decodes a QueryAllAuctionRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllAuctionRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.QueryAllAuctionRequest;
+
+            /**
+             * Verifies a QueryAllAuctionRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllAuctionRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllAuctionRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.auction.QueryAllAuctionRequest;
+
+            /**
+             * Creates a plain object from a QueryAllAuctionRequest message. Also converts values to other types if specified.
+             * @param message QueryAllAuctionRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.auction.QueryAllAuctionRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllAuctionRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllAuctionResponse. */
+        interface IQueryAllAuctionResponse {
+
+            /** QueryAllAuctionResponse auctions */
+            auctions?: (google.protobuf.IAny[]|null);
+
+            /** QueryAllAuctionResponse pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+        }
+
+        /** Represents a QueryAllAuctionResponse. */
+        class QueryAllAuctionResponse implements IQueryAllAuctionResponse {
+
+            /**
+             * Constructs a new QueryAllAuctionResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.auction.IQueryAllAuctionResponse);
+
+            /** QueryAllAuctionResponse auctions. */
+            public auctions: google.protobuf.IAny[];
+
+            /** QueryAllAuctionResponse pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+
+            /**
+             * Encodes the specified QueryAllAuctionResponse message. Does not implicitly {@link ununifi.auction.QueryAllAuctionResponse.verify|verify} messages.
+             * @param message QueryAllAuctionResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.auction.IQueryAllAuctionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllAuctionResponse message, length delimited. Does not implicitly {@link ununifi.auction.QueryAllAuctionResponse.verify|verify} messages.
+             * @param message QueryAllAuctionResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.auction.IQueryAllAuctionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllAuctionResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllAuctionResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.auction.QueryAllAuctionResponse;
+
+            /**
+             * Decodes a QueryAllAuctionResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllAuctionResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.auction.QueryAllAuctionResponse;
+
+            /**
+             * Verifies a QueryAllAuctionResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllAuctionResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllAuctionResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.auction.QueryAllAuctionResponse;
+
+            /**
+             * Creates a plain object from a QueryAllAuctionResponse message. Also converts values to other types if specified.
+             * @param message QueryAllAuctionResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.auction.QueryAllAuctionResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllAuctionResponse to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -1481,1658 +1481,6 @@ export namespace ununifi {
 
     /** Namespace cdp. */
     namespace cdp {
-
-        /** Represents a Query */
-        class Query extends $protobuf.rpc.Service {
-
-            /**
-             * Constructs a new Query service.
-             * @param rpcImpl RPC implementation
-             * @param [requestDelimited=false] Whether requests are length-delimited
-             * @param [responseDelimited=false] Whether responses are length-delimited
-             */
-            constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
-
-            /**
-             * Calls Params.
-             * @param request QueryParamsRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryParamsResponse
-             */
-            public params(request: ununifi.cdp.IQueryParamsRequest, callback: ununifi.cdp.Query.ParamsCallback): void;
-
-            /**
-             * Calls Params.
-             * @param request QueryParamsRequest message or plain object
-             * @returns Promise
-             */
-            public params(request: ununifi.cdp.IQueryParamsRequest): Promise<ununifi.cdp.QueryParamsResponse>;
-
-            /**
-             * Calls Cdp.
-             * @param request QueryGetCdpRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryGetCdpResponse
-             */
-            public cdp(request: ununifi.cdp.IQueryGetCdpRequest, callback: ununifi.cdp.Query.CdpCallback): void;
-
-            /**
-             * Calls Cdp.
-             * @param request QueryGetCdpRequest message or plain object
-             * @returns Promise
-             */
-            public cdp(request: ununifi.cdp.IQueryGetCdpRequest): Promise<ununifi.cdp.QueryGetCdpResponse>;
-
-            /**
-             * Calls CdpAll.
-             * @param request QueryAllCdpRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryAllCdpResponse
-             */
-            public cdpAll(request: ununifi.cdp.IQueryAllCdpRequest, callback: ununifi.cdp.Query.CdpAllCallback): void;
-
-            /**
-             * Calls CdpAll.
-             * @param request QueryAllCdpRequest message or plain object
-             * @returns Promise
-             */
-            public cdpAll(request: ununifi.cdp.IQueryAllCdpRequest): Promise<ununifi.cdp.QueryAllCdpResponse>;
-
-            /**
-             * Calls AccountAll.
-             * @param request QueryAllAccountRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryAllAccountResponse
-             */
-            public accountAll(request: ununifi.cdp.IQueryAllAccountRequest, callback: ununifi.cdp.Query.AccountAllCallback): void;
-
-            /**
-             * Calls AccountAll.
-             * @param request QueryAllAccountRequest message or plain object
-             * @returns Promise
-             */
-            public accountAll(request: ununifi.cdp.IQueryAllAccountRequest): Promise<ununifi.cdp.QueryAllAccountResponse>;
-
-            /**
-             * Calls DepositAll.
-             * @param request QueryAllDepositRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryAllDepositResponse
-             */
-            public depositAll(request: ununifi.cdp.IQueryAllDepositRequest, callback: ununifi.cdp.Query.DepositAllCallback): void;
-
-            /**
-             * Calls DepositAll.
-             * @param request QueryAllDepositRequest message or plain object
-             * @returns Promise
-             */
-            public depositAll(request: ununifi.cdp.IQueryAllDepositRequest): Promise<ununifi.cdp.QueryAllDepositResponse>;
-        }
-
-        namespace Query {
-
-            /**
-             * Callback as used by {@link ununifi.cdp.Query#params}.
-             * @param error Error, if any
-             * @param [response] QueryParamsResponse
-             */
-            type ParamsCallback = (error: (Error|null), response?: ununifi.cdp.QueryParamsResponse) => void;
-
-            /**
-             * Callback as used by {@link ununifi.cdp.Query#cdp}.
-             * @param error Error, if any
-             * @param [response] QueryGetCdpResponse
-             */
-            type CdpCallback = (error: (Error|null), response?: ununifi.cdp.QueryGetCdpResponse) => void;
-
-            /**
-             * Callback as used by {@link ununifi.cdp.Query#cdpAll}.
-             * @param error Error, if any
-             * @param [response] QueryAllCdpResponse
-             */
-            type CdpAllCallback = (error: (Error|null), response?: ununifi.cdp.QueryAllCdpResponse) => void;
-
-            /**
-             * Callback as used by {@link ununifi.cdp.Query#accountAll}.
-             * @param error Error, if any
-             * @param [response] QueryAllAccountResponse
-             */
-            type AccountAllCallback = (error: (Error|null), response?: ununifi.cdp.QueryAllAccountResponse) => void;
-
-            /**
-             * Callback as used by {@link ununifi.cdp.Query#depositAll}.
-             * @param error Error, if any
-             * @param [response] QueryAllDepositResponse
-             */
-            type DepositAllCallback = (error: (Error|null), response?: ununifi.cdp.QueryAllDepositResponse) => void;
-        }
-
-        /** Properties of a QueryParamsRequest. */
-        interface IQueryParamsRequest {
-        }
-
-        /** Represents a QueryParamsRequest. */
-        class QueryParamsRequest implements IQueryParamsRequest {
-
-            /**
-             * Constructs a new QueryParamsRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IQueryParamsRequest);
-
-            /**
-             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.cdp.QueryParamsRequest.verify|verify} messages.
-             * @param message QueryParamsRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryParamsRequest.verify|verify} messages.
-             * @param message QueryParamsRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryParamsRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryParamsRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryParamsRequest;
-
-            /**
-             * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryParamsRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryParamsRequest;
-
-            /**
-             * Verifies a QueryParamsRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryParamsRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryParamsRequest;
-
-            /**
-             * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
-             * @param message QueryParamsRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryParamsRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryParamsResponse. */
-        interface IQueryParamsResponse {
-
-            /** QueryParamsResponse params */
-            params?: (ununifi.cdp.IParams|null);
-        }
-
-        /** Represents a QueryParamsResponse. */
-        class QueryParamsResponse implements IQueryParamsResponse {
-
-            /**
-             * Constructs a new QueryParamsResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IQueryParamsResponse);
-
-            /** QueryParamsResponse params. */
-            public params?: (ununifi.cdp.IParams|null);
-
-            /**
-             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.cdp.QueryParamsResponse.verify|verify} messages.
-             * @param message QueryParamsResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryParamsResponse.verify|verify} messages.
-             * @param message QueryParamsResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryParamsResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryParamsResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryParamsResponse;
-
-            /**
-             * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryParamsResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryParamsResponse;
-
-            /**
-             * Verifies a QueryParamsResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryParamsResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryParamsResponse;
-
-            /**
-             * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
-             * @param message QueryParamsResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.QueryParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryParamsResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryGetCdpRequest. */
-        interface IQueryGetCdpRequest {
-
-            /** QueryGetCdpRequest owner */
-            owner?: (string|null);
-
-            /** QueryGetCdpRequest collateral_type */
-            collateral_type?: (string|null);
-        }
-
-        /** Represents a QueryGetCdpRequest. */
-        class QueryGetCdpRequest implements IQueryGetCdpRequest {
-
-            /**
-             * Constructs a new QueryGetCdpRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IQueryGetCdpRequest);
-
-            /** QueryGetCdpRequest owner. */
-            public owner: string;
-
-            /** QueryGetCdpRequest collateral_type. */
-            public collateral_type: string;
-
-            /**
-             * Encodes the specified QueryGetCdpRequest message. Does not implicitly {@link ununifi.cdp.QueryGetCdpRequest.verify|verify} messages.
-             * @param message QueryGetCdpRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IQueryGetCdpRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryGetCdpRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryGetCdpRequest.verify|verify} messages.
-             * @param message QueryGetCdpRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IQueryGetCdpRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryGetCdpRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryGetCdpRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryGetCdpRequest;
-
-            /**
-             * Decodes a QueryGetCdpRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryGetCdpRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryGetCdpRequest;
-
-            /**
-             * Verifies a QueryGetCdpRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryGetCdpRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryGetCdpRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryGetCdpRequest;
-
-            /**
-             * Creates a plain object from a QueryGetCdpRequest message. Also converts values to other types if specified.
-             * @param message QueryGetCdpRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.QueryGetCdpRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryGetCdpRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryGetCdpResponse. */
-        interface IQueryGetCdpResponse {
-
-            /** QueryGetCdpResponse cdp */
-            cdp?: (ununifi.cdp.IAugmentedCdp|null);
-        }
-
-        /** Represents a QueryGetCdpResponse. */
-        class QueryGetCdpResponse implements IQueryGetCdpResponse {
-
-            /**
-             * Constructs a new QueryGetCdpResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IQueryGetCdpResponse);
-
-            /** QueryGetCdpResponse cdp. */
-            public cdp?: (ununifi.cdp.IAugmentedCdp|null);
-
-            /**
-             * Encodes the specified QueryGetCdpResponse message. Does not implicitly {@link ununifi.cdp.QueryGetCdpResponse.verify|verify} messages.
-             * @param message QueryGetCdpResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IQueryGetCdpResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryGetCdpResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryGetCdpResponse.verify|verify} messages.
-             * @param message QueryGetCdpResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IQueryGetCdpResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryGetCdpResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryGetCdpResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryGetCdpResponse;
-
-            /**
-             * Decodes a QueryGetCdpResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryGetCdpResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryGetCdpResponse;
-
-            /**
-             * Verifies a QueryGetCdpResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryGetCdpResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryGetCdpResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryGetCdpResponse;
-
-            /**
-             * Creates a plain object from a QueryGetCdpResponse message. Also converts values to other types if specified.
-             * @param message QueryGetCdpResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.QueryGetCdpResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryGetCdpResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryAllCdpRequest. */
-        interface IQueryAllCdpRequest {
-
-            /** QueryAllCdpRequest pagination */
-            pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-        }
-
-        /** Represents a QueryAllCdpRequest. */
-        class QueryAllCdpRequest implements IQueryAllCdpRequest {
-
-            /**
-             * Constructs a new QueryAllCdpRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IQueryAllCdpRequest);
-
-            /** QueryAllCdpRequest pagination. */
-            public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-
-            /**
-             * Encodes the specified QueryAllCdpRequest message. Does not implicitly {@link ununifi.cdp.QueryAllCdpRequest.verify|verify} messages.
-             * @param message QueryAllCdpRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IQueryAllCdpRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryAllCdpRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllCdpRequest.verify|verify} messages.
-             * @param message QueryAllCdpRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IQueryAllCdpRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryAllCdpRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryAllCdpRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryAllCdpRequest;
-
-            /**
-             * Decodes a QueryAllCdpRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryAllCdpRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryAllCdpRequest;
-
-            /**
-             * Verifies a QueryAllCdpRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryAllCdpRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryAllCdpRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryAllCdpRequest;
-
-            /**
-             * Creates a plain object from a QueryAllCdpRequest message. Also converts values to other types if specified.
-             * @param message QueryAllCdpRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.QueryAllCdpRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryAllCdpRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryAllCdpResponse. */
-        interface IQueryAllCdpResponse {
-
-            /** QueryAllCdpResponse cdp */
-            cdp?: (ununifi.cdp.IAugmentedCdp[]|null);
-
-            /** QueryAllCdpResponse pagination */
-            pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-        }
-
-        /** Represents a QueryAllCdpResponse. */
-        class QueryAllCdpResponse implements IQueryAllCdpResponse {
-
-            /**
-             * Constructs a new QueryAllCdpResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IQueryAllCdpResponse);
-
-            /** QueryAllCdpResponse cdp. */
-            public cdp: ununifi.cdp.IAugmentedCdp[];
-
-            /** QueryAllCdpResponse pagination. */
-            public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-
-            /**
-             * Encodes the specified QueryAllCdpResponse message. Does not implicitly {@link ununifi.cdp.QueryAllCdpResponse.verify|verify} messages.
-             * @param message QueryAllCdpResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IQueryAllCdpResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryAllCdpResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllCdpResponse.verify|verify} messages.
-             * @param message QueryAllCdpResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IQueryAllCdpResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryAllCdpResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryAllCdpResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryAllCdpResponse;
-
-            /**
-             * Decodes a QueryAllCdpResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryAllCdpResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryAllCdpResponse;
-
-            /**
-             * Verifies a QueryAllCdpResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryAllCdpResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryAllCdpResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryAllCdpResponse;
-
-            /**
-             * Creates a plain object from a QueryAllCdpResponse message. Also converts values to other types if specified.
-             * @param message QueryAllCdpResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.QueryAllCdpResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryAllCdpResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryAllAccountRequest. */
-        interface IQueryAllAccountRequest {
-        }
-
-        /** Represents a QueryAllAccountRequest. */
-        class QueryAllAccountRequest implements IQueryAllAccountRequest {
-
-            /**
-             * Constructs a new QueryAllAccountRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IQueryAllAccountRequest);
-
-            /**
-             * Encodes the specified QueryAllAccountRequest message. Does not implicitly {@link ununifi.cdp.QueryAllAccountRequest.verify|verify} messages.
-             * @param message QueryAllAccountRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IQueryAllAccountRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryAllAccountRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllAccountRequest.verify|verify} messages.
-             * @param message QueryAllAccountRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IQueryAllAccountRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryAllAccountRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryAllAccountRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryAllAccountRequest;
-
-            /**
-             * Decodes a QueryAllAccountRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryAllAccountRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryAllAccountRequest;
-
-            /**
-             * Verifies a QueryAllAccountRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryAllAccountRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryAllAccountRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryAllAccountRequest;
-
-            /**
-             * Creates a plain object from a QueryAllAccountRequest message. Also converts values to other types if specified.
-             * @param message QueryAllAccountRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.QueryAllAccountRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryAllAccountRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryAllAccountResponse. */
-        interface IQueryAllAccountResponse {
-
-            /** QueryAllAccountResponse accounts */
-            accounts?: (google.protobuf.IAny[]|null);
-        }
-
-        /** Represents a QueryAllAccountResponse. */
-        class QueryAllAccountResponse implements IQueryAllAccountResponse {
-
-            /**
-             * Constructs a new QueryAllAccountResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IQueryAllAccountResponse);
-
-            /** QueryAllAccountResponse accounts. */
-            public accounts: google.protobuf.IAny[];
-
-            /**
-             * Encodes the specified QueryAllAccountResponse message. Does not implicitly {@link ununifi.cdp.QueryAllAccountResponse.verify|verify} messages.
-             * @param message QueryAllAccountResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IQueryAllAccountResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryAllAccountResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllAccountResponse.verify|verify} messages.
-             * @param message QueryAllAccountResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IQueryAllAccountResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryAllAccountResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryAllAccountResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryAllAccountResponse;
-
-            /**
-             * Decodes a QueryAllAccountResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryAllAccountResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryAllAccountResponse;
-
-            /**
-             * Verifies a QueryAllAccountResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryAllAccountResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryAllAccountResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryAllAccountResponse;
-
-            /**
-             * Creates a plain object from a QueryAllAccountResponse message. Also converts values to other types if specified.
-             * @param message QueryAllAccountResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.QueryAllAccountResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryAllAccountResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryAllDepositRequest. */
-        interface IQueryAllDepositRequest {
-
-            /** QueryAllDepositRequest owner */
-            owner?: (string|null);
-
-            /** QueryAllDepositRequest collateral_type */
-            collateral_type?: (string|null);
-        }
-
-        /** Represents a QueryAllDepositRequest. */
-        class QueryAllDepositRequest implements IQueryAllDepositRequest {
-
-            /**
-             * Constructs a new QueryAllDepositRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IQueryAllDepositRequest);
-
-            /** QueryAllDepositRequest owner. */
-            public owner: string;
-
-            /** QueryAllDepositRequest collateral_type. */
-            public collateral_type: string;
-
-            /**
-             * Encodes the specified QueryAllDepositRequest message. Does not implicitly {@link ununifi.cdp.QueryAllDepositRequest.verify|verify} messages.
-             * @param message QueryAllDepositRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IQueryAllDepositRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryAllDepositRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllDepositRequest.verify|verify} messages.
-             * @param message QueryAllDepositRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IQueryAllDepositRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryAllDepositRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryAllDepositRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryAllDepositRequest;
-
-            /**
-             * Decodes a QueryAllDepositRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryAllDepositRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryAllDepositRequest;
-
-            /**
-             * Verifies a QueryAllDepositRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryAllDepositRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryAllDepositRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryAllDepositRequest;
-
-            /**
-             * Creates a plain object from a QueryAllDepositRequest message. Also converts values to other types if specified.
-             * @param message QueryAllDepositRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.QueryAllDepositRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryAllDepositRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryAllDepositResponse. */
-        interface IQueryAllDepositResponse {
-
-            /** QueryAllDepositResponse deposits */
-            deposits?: (ununifi.cdp.IDeposit[]|null);
-        }
-
-        /** Represents a QueryAllDepositResponse. */
-        class QueryAllDepositResponse implements IQueryAllDepositResponse {
-
-            /**
-             * Constructs a new QueryAllDepositResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IQueryAllDepositResponse);
-
-            /** QueryAllDepositResponse deposits. */
-            public deposits: ununifi.cdp.IDeposit[];
-
-            /**
-             * Encodes the specified QueryAllDepositResponse message. Does not implicitly {@link ununifi.cdp.QueryAllDepositResponse.verify|verify} messages.
-             * @param message QueryAllDepositResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IQueryAllDepositResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryAllDepositResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllDepositResponse.verify|verify} messages.
-             * @param message QueryAllDepositResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IQueryAllDepositResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryAllDepositResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryAllDepositResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryAllDepositResponse;
-
-            /**
-             * Decodes a QueryAllDepositResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryAllDepositResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryAllDepositResponse;
-
-            /**
-             * Verifies a QueryAllDepositResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryAllDepositResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryAllDepositResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryAllDepositResponse;
-
-            /**
-             * Creates a plain object from a QueryAllDepositResponse message. Also converts values to other types if specified.
-             * @param message QueryAllDepositResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.QueryAllDepositResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryAllDepositResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a Cdp. */
-        interface ICdp {
-
-            /** Cdp id */
-            id?: (Long|null);
-
-            /** Cdp owner */
-            owner?: (string|null);
-
-            /** Cdp type */
-            type?: (string|null);
-
-            /** Cdp collateral */
-            collateral?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** Cdp principal */
-            principal?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** Cdp accumulated_fees */
-            accumulated_fees?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** Cdp fees_updated */
-            fees_updated?: (google.protobuf.ITimestamp|null);
-
-            /** Cdp interest_factor */
-            interest_factor?: (string|null);
-        }
-
-        /** Represents a Cdp. */
-        class Cdp implements ICdp {
-
-            /**
-             * Constructs a new Cdp.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.ICdp);
-
-            /** Cdp id. */
-            public id: Long;
-
-            /** Cdp owner. */
-            public owner: string;
-
-            /** Cdp type. */
-            public type: string;
-
-            /** Cdp collateral. */
-            public collateral?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** Cdp principal. */
-            public principal?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** Cdp accumulated_fees. */
-            public accumulated_fees?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** Cdp fees_updated. */
-            public fees_updated?: (google.protobuf.ITimestamp|null);
-
-            /** Cdp interest_factor. */
-            public interest_factor: string;
-
-            /**
-             * Encodes the specified Cdp message. Does not implicitly {@link ununifi.cdp.Cdp.verify|verify} messages.
-             * @param message Cdp message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.ICdp, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified Cdp message, length delimited. Does not implicitly {@link ununifi.cdp.Cdp.verify|verify} messages.
-             * @param message Cdp message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.ICdp, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a Cdp message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns Cdp
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.Cdp;
-
-            /**
-             * Decodes a Cdp message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns Cdp
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.Cdp;
-
-            /**
-             * Verifies a Cdp message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a Cdp message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns Cdp
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.Cdp;
-
-            /**
-             * Creates a plain object from a Cdp message. Also converts values to other types if specified.
-             * @param message Cdp
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.Cdp, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this Cdp to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a Deposit. */
-        interface IDeposit {
-
-            /** Deposit cdp_id */
-            cdp_id?: (Long|null);
-
-            /** Deposit depositor */
-            depositor?: (string|null);
-
-            /** Deposit amount */
-            amount?: (cosmos.base.v1beta1.ICoin|null);
-        }
-
-        /** Represents a Deposit. */
-        class Deposit implements IDeposit {
-
-            /**
-             * Constructs a new Deposit.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IDeposit);
-
-            /** Deposit cdp_id. */
-            public cdp_id: Long;
-
-            /** Deposit depositor. */
-            public depositor: string;
-
-            /** Deposit amount. */
-            public amount?: (cosmos.base.v1beta1.ICoin|null);
-
-            /**
-             * Encodes the specified Deposit message. Does not implicitly {@link ununifi.cdp.Deposit.verify|verify} messages.
-             * @param message Deposit message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IDeposit, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified Deposit message, length delimited. Does not implicitly {@link ununifi.cdp.Deposit.verify|verify} messages.
-             * @param message Deposit message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IDeposit, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a Deposit message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns Deposit
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.Deposit;
-
-            /**
-             * Decodes a Deposit message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns Deposit
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.Deposit;
-
-            /**
-             * Verifies a Deposit message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a Deposit message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns Deposit
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.Deposit;
-
-            /**
-             * Creates a plain object from a Deposit message. Also converts values to other types if specified.
-             * @param message Deposit
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.Deposit, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this Deposit to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of an AugmentedCdp. */
-        interface IAugmentedCdp {
-
-            /** AugmentedCdp cdp */
-            cdp?: (ununifi.cdp.ICdp|null);
-
-            /** AugmentedCdp collateral_value */
-            collateral_value?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** AugmentedCdp collateralization_ratio */
-            collateralization_ratio?: (string|null);
-        }
-
-        /** Represents an AugmentedCdp. */
-        class AugmentedCdp implements IAugmentedCdp {
-
-            /**
-             * Constructs a new AugmentedCdp.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IAugmentedCdp);
-
-            /** AugmentedCdp cdp. */
-            public cdp?: (ununifi.cdp.ICdp|null);
-
-            /** AugmentedCdp collateral_value. */
-            public collateral_value?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** AugmentedCdp collateralization_ratio. */
-            public collateralization_ratio: string;
-
-            /**
-             * Encodes the specified AugmentedCdp message. Does not implicitly {@link ununifi.cdp.AugmentedCdp.verify|verify} messages.
-             * @param message AugmentedCdp message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IAugmentedCdp, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified AugmentedCdp message, length delimited. Does not implicitly {@link ununifi.cdp.AugmentedCdp.verify|verify} messages.
-             * @param message AugmentedCdp message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IAugmentedCdp, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes an AugmentedCdp message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns AugmentedCdp
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.AugmentedCdp;
-
-            /**
-             * Decodes an AugmentedCdp message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns AugmentedCdp
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.AugmentedCdp;
-
-            /**
-             * Verifies an AugmentedCdp message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates an AugmentedCdp message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns AugmentedCdp
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.AugmentedCdp;
-
-            /**
-             * Creates a plain object from an AugmentedCdp message. Also converts values to other types if specified.
-             * @param message AugmentedCdp
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.AugmentedCdp, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this AugmentedCdp to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a Params. */
-        interface IParams {
-
-            /** Params collateral_params */
-            collateral_params?: (ununifi.cdp.ICollateralParam[]|null);
-
-            /** Params debt_param */
-            debt_param?: (ununifi.cdp.IDebtParam|null);
-
-            /** Params global_debt_limit */
-            global_debt_limit?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** Params surplus_auction_threshold */
-            surplus_auction_threshold?: (string|null);
-
-            /** Params surplus_auction_lot */
-            surplus_auction_lot?: (string|null);
-
-            /** Params debt_auction_threshold */
-            debt_auction_threshold?: (string|null);
-
-            /** Params debt_auction_lot */
-            debt_auction_lot?: (string|null);
-
-            /** Params circuit_breaker */
-            circuit_breaker?: (boolean|null);
-        }
-
-        /** Represents a Params. */
-        class Params implements IParams {
-
-            /**
-             * Constructs a new Params.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IParams);
-
-            /** Params collateral_params. */
-            public collateral_params: ununifi.cdp.ICollateralParam[];
-
-            /** Params debt_param. */
-            public debt_param?: (ununifi.cdp.IDebtParam|null);
-
-            /** Params global_debt_limit. */
-            public global_debt_limit?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** Params surplus_auction_threshold. */
-            public surplus_auction_threshold: string;
-
-            /** Params surplus_auction_lot. */
-            public surplus_auction_lot: string;
-
-            /** Params debt_auction_threshold. */
-            public debt_auction_threshold: string;
-
-            /** Params debt_auction_lot. */
-            public debt_auction_lot: string;
-
-            /** Params circuit_breaker. */
-            public circuit_breaker: boolean;
-
-            /**
-             * Encodes the specified Params message. Does not implicitly {@link ununifi.cdp.Params.verify|verify} messages.
-             * @param message Params message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.cdp.Params.verify|verify} messages.
-             * @param message Params message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a Params message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns Params
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.Params;
-
-            /**
-             * Decodes a Params message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns Params
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.Params;
-
-            /**
-             * Verifies a Params message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a Params message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns Params
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.Params;
-
-            /**
-             * Creates a plain object from a Params message. Also converts values to other types if specified.
-             * @param message Params
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this Params to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a CollateralParam. */
-        interface ICollateralParam {
-
-            /** CollateralParam denom */
-            denom?: (string|null);
-
-            /** CollateralParam type */
-            type?: (string|null);
-
-            /** CollateralParam liquidation_ratio */
-            liquidation_ratio?: (string|null);
-
-            /** CollateralParam debt_limit */
-            debt_limit?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** CollateralParam stability_fee */
-            stability_fee?: (string|null);
-
-            /** CollateralParam auction_size */
-            auction_size?: (string|null);
-
-            /** CollateralParam liquidation_penalty */
-            liquidation_penalty?: (string|null);
-
-            /** CollateralParam prefix */
-            prefix?: (number|null);
-
-            /** CollateralParam spot_market_id */
-            spot_market_id?: (string|null);
-
-            /** CollateralParam liquidation_market_id */
-            liquidation_market_id?: (string|null);
-
-            /** CollateralParam keeper_reward_percentage */
-            keeper_reward_percentage?: (string|null);
-
-            /** CollateralParam check_collateralization_index_count */
-            check_collateralization_index_count?: (string|null);
-
-            /** CollateralParam conversion_factor */
-            conversion_factor?: (string|null);
-        }
-
-        /** Represents a CollateralParam. */
-        class CollateralParam implements ICollateralParam {
-
-            /**
-             * Constructs a new CollateralParam.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.ICollateralParam);
-
-            /** CollateralParam denom. */
-            public denom: string;
-
-            /** CollateralParam type. */
-            public type: string;
-
-            /** CollateralParam liquidation_ratio. */
-            public liquidation_ratio: string;
-
-            /** CollateralParam debt_limit. */
-            public debt_limit?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** CollateralParam stability_fee. */
-            public stability_fee: string;
-
-            /** CollateralParam auction_size. */
-            public auction_size: string;
-
-            /** CollateralParam liquidation_penalty. */
-            public liquidation_penalty: string;
-
-            /** CollateralParam prefix. */
-            public prefix: number;
-
-            /** CollateralParam spot_market_id. */
-            public spot_market_id: string;
-
-            /** CollateralParam liquidation_market_id. */
-            public liquidation_market_id: string;
-
-            /** CollateralParam keeper_reward_percentage. */
-            public keeper_reward_percentage: string;
-
-            /** CollateralParam check_collateralization_index_count. */
-            public check_collateralization_index_count: string;
-
-            /** CollateralParam conversion_factor. */
-            public conversion_factor: string;
-
-            /**
-             * Encodes the specified CollateralParam message. Does not implicitly {@link ununifi.cdp.CollateralParam.verify|verify} messages.
-             * @param message CollateralParam message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.ICollateralParam, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified CollateralParam message, length delimited. Does not implicitly {@link ununifi.cdp.CollateralParam.verify|verify} messages.
-             * @param message CollateralParam message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.ICollateralParam, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a CollateralParam message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns CollateralParam
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.CollateralParam;
-
-            /**
-             * Decodes a CollateralParam message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns CollateralParam
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.CollateralParam;
-
-            /**
-             * Verifies a CollateralParam message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a CollateralParam message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns CollateralParam
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.CollateralParam;
-
-            /**
-             * Creates a plain object from a CollateralParam message. Also converts values to other types if specified.
-             * @param message CollateralParam
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.CollateralParam, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this CollateralParam to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a DebtParam. */
-        interface IDebtParam {
-
-            /** DebtParam denom */
-            denom?: (string|null);
-
-            /** DebtParam reference_asset */
-            reference_asset?: (string|null);
-
-            /** DebtParam conversion_factor */
-            conversion_factor?: (string|null);
-
-            /** DebtParam debt_floor */
-            debt_floor?: (string|null);
-        }
-
-        /** Represents a DebtParam. */
-        class DebtParam implements IDebtParam {
-
-            /**
-             * Constructs a new DebtParam.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.cdp.IDebtParam);
-
-            /** DebtParam denom. */
-            public denom: string;
-
-            /** DebtParam reference_asset. */
-            public reference_asset: string;
-
-            /** DebtParam conversion_factor. */
-            public conversion_factor: string;
-
-            /** DebtParam debt_floor. */
-            public debt_floor: string;
-
-            /**
-             * Encodes the specified DebtParam message. Does not implicitly {@link ununifi.cdp.DebtParam.verify|verify} messages.
-             * @param message DebtParam message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.cdp.IDebtParam, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified DebtParam message, length delimited. Does not implicitly {@link ununifi.cdp.DebtParam.verify|verify} messages.
-             * @param message DebtParam message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.cdp.IDebtParam, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a DebtParam message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns DebtParam
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.DebtParam;
-
-            /**
-             * Decodes a DebtParam message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns DebtParam
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.DebtParam;
-
-            /**
-             * Verifies a DebtParam message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a DebtParam message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns DebtParam
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.cdp.DebtParam;
-
-            /**
-             * Creates a plain object from a DebtParam message. Also converts values to other types if specified.
-             * @param message DebtParam
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.cdp.DebtParam, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this DebtParam to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
 
         /** Represents a Msg */
         class Msg extends $protobuf.rpc.Service {
@@ -4325,6 +2673,1664 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
+        /** Properties of a Cdp. */
+        interface ICdp {
+
+            /** Cdp id */
+            id?: (Long|null);
+
+            /** Cdp owner */
+            owner?: (string|null);
+
+            /** Cdp type */
+            type?: (string|null);
+
+            /** Cdp collateral */
+            collateral?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** Cdp principal */
+            principal?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** Cdp accumulated_fees */
+            accumulated_fees?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** Cdp fees_updated */
+            fees_updated?: (google.protobuf.ITimestamp|null);
+
+            /** Cdp interest_factor */
+            interest_factor?: (string|null);
+        }
+
+        /** Represents a Cdp. */
+        class Cdp implements ICdp {
+
+            /**
+             * Constructs a new Cdp.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.ICdp);
+
+            /** Cdp id. */
+            public id: Long;
+
+            /** Cdp owner. */
+            public owner: string;
+
+            /** Cdp type. */
+            public type: string;
+
+            /** Cdp collateral. */
+            public collateral?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** Cdp principal. */
+            public principal?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** Cdp accumulated_fees. */
+            public accumulated_fees?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** Cdp fees_updated. */
+            public fees_updated?: (google.protobuf.ITimestamp|null);
+
+            /** Cdp interest_factor. */
+            public interest_factor: string;
+
+            /**
+             * Encodes the specified Cdp message. Does not implicitly {@link ununifi.cdp.Cdp.verify|verify} messages.
+             * @param message Cdp message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.ICdp, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Cdp message, length delimited. Does not implicitly {@link ununifi.cdp.Cdp.verify|verify} messages.
+             * @param message Cdp message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.ICdp, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a Cdp message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Cdp
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.Cdp;
+
+            /**
+             * Decodes a Cdp message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Cdp
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.Cdp;
+
+            /**
+             * Verifies a Cdp message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a Cdp message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Cdp
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.Cdp;
+
+            /**
+             * Creates a plain object from a Cdp message. Also converts values to other types if specified.
+             * @param message Cdp
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.Cdp, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Cdp to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a Deposit. */
+        interface IDeposit {
+
+            /** Deposit cdp_id */
+            cdp_id?: (Long|null);
+
+            /** Deposit depositor */
+            depositor?: (string|null);
+
+            /** Deposit amount */
+            amount?: (cosmos.base.v1beta1.ICoin|null);
+        }
+
+        /** Represents a Deposit. */
+        class Deposit implements IDeposit {
+
+            /**
+             * Constructs a new Deposit.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IDeposit);
+
+            /** Deposit cdp_id. */
+            public cdp_id: Long;
+
+            /** Deposit depositor. */
+            public depositor: string;
+
+            /** Deposit amount. */
+            public amount?: (cosmos.base.v1beta1.ICoin|null);
+
+            /**
+             * Encodes the specified Deposit message. Does not implicitly {@link ununifi.cdp.Deposit.verify|verify} messages.
+             * @param message Deposit message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IDeposit, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Deposit message, length delimited. Does not implicitly {@link ununifi.cdp.Deposit.verify|verify} messages.
+             * @param message Deposit message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IDeposit, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a Deposit message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Deposit
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.Deposit;
+
+            /**
+             * Decodes a Deposit message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Deposit
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.Deposit;
+
+            /**
+             * Verifies a Deposit message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a Deposit message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Deposit
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.Deposit;
+
+            /**
+             * Creates a plain object from a Deposit message. Also converts values to other types if specified.
+             * @param message Deposit
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.Deposit, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Deposit to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of an AugmentedCdp. */
+        interface IAugmentedCdp {
+
+            /** AugmentedCdp cdp */
+            cdp?: (ununifi.cdp.ICdp|null);
+
+            /** AugmentedCdp collateral_value */
+            collateral_value?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** AugmentedCdp collateralization_ratio */
+            collateralization_ratio?: (string|null);
+        }
+
+        /** Represents an AugmentedCdp. */
+        class AugmentedCdp implements IAugmentedCdp {
+
+            /**
+             * Constructs a new AugmentedCdp.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IAugmentedCdp);
+
+            /** AugmentedCdp cdp. */
+            public cdp?: (ununifi.cdp.ICdp|null);
+
+            /** AugmentedCdp collateral_value. */
+            public collateral_value?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** AugmentedCdp collateralization_ratio. */
+            public collateralization_ratio: string;
+
+            /**
+             * Encodes the specified AugmentedCdp message. Does not implicitly {@link ununifi.cdp.AugmentedCdp.verify|verify} messages.
+             * @param message AugmentedCdp message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IAugmentedCdp, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AugmentedCdp message, length delimited. Does not implicitly {@link ununifi.cdp.AugmentedCdp.verify|verify} messages.
+             * @param message AugmentedCdp message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IAugmentedCdp, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an AugmentedCdp message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AugmentedCdp
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.AugmentedCdp;
+
+            /**
+             * Decodes an AugmentedCdp message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AugmentedCdp
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.AugmentedCdp;
+
+            /**
+             * Verifies an AugmentedCdp message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an AugmentedCdp message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AugmentedCdp
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.AugmentedCdp;
+
+            /**
+             * Creates a plain object from an AugmentedCdp message. Also converts values to other types if specified.
+             * @param message AugmentedCdp
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.AugmentedCdp, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AugmentedCdp to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a Params. */
+        interface IParams {
+
+            /** Params collateral_params */
+            collateral_params?: (ununifi.cdp.ICollateralParam[]|null);
+
+            /** Params debt_params */
+            debt_params?: (ununifi.cdp.IDebtParam[]|null);
+        }
+
+        /** Represents a Params. */
+        class Params implements IParams {
+
+            /**
+             * Constructs a new Params.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IParams);
+
+            /** Params collateral_params. */
+            public collateral_params: ununifi.cdp.ICollateralParam[];
+
+            /** Params debt_params. */
+            public debt_params: ununifi.cdp.IDebtParam[];
+
+            /**
+             * Encodes the specified Params message. Does not implicitly {@link ununifi.cdp.Params.verify|verify} messages.
+             * @param message Params message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.cdp.Params.verify|verify} messages.
+             * @param message Params message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a Params message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.Params;
+
+            /**
+             * Decodes a Params message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.Params;
+
+            /**
+             * Verifies a Params message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a Params message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Params
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.Params;
+
+            /**
+             * Creates a plain object from a Params message. Also converts values to other types if specified.
+             * @param message Params
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Params to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a CollateralParam. */
+        interface ICollateralParam {
+
+            /** CollateralParam denom */
+            denom?: (string|null);
+
+            /** CollateralParam type */
+            type?: (string|null);
+
+            /** CollateralParam liquidation_ratio */
+            liquidation_ratio?: (string|null);
+
+            /** CollateralParam debt_limit */
+            debt_limit?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** CollateralParam stability_fee */
+            stability_fee?: (string|null);
+
+            /** CollateralParam auction_size */
+            auction_size?: (string|null);
+
+            /** CollateralParam liquidation_penalty */
+            liquidation_penalty?: (string|null);
+
+            /** CollateralParam prefix */
+            prefix?: (number|null);
+
+            /** CollateralParam spot_market_id */
+            spot_market_id?: (string|null);
+
+            /** CollateralParam liquidation_market_id */
+            liquidation_market_id?: (string|null);
+
+            /** CollateralParam keeper_reward_percentage */
+            keeper_reward_percentage?: (string|null);
+
+            /** CollateralParam check_collateralization_index_count */
+            check_collateralization_index_count?: (string|null);
+
+            /** CollateralParam conversion_factor */
+            conversion_factor?: (string|null);
+        }
+
+        /** Represents a CollateralParam. */
+        class CollateralParam implements ICollateralParam {
+
+            /**
+             * Constructs a new CollateralParam.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.ICollateralParam);
+
+            /** CollateralParam denom. */
+            public denom: string;
+
+            /** CollateralParam type. */
+            public type: string;
+
+            /** CollateralParam liquidation_ratio. */
+            public liquidation_ratio: string;
+
+            /** CollateralParam debt_limit. */
+            public debt_limit?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** CollateralParam stability_fee. */
+            public stability_fee: string;
+
+            /** CollateralParam auction_size. */
+            public auction_size: string;
+
+            /** CollateralParam liquidation_penalty. */
+            public liquidation_penalty: string;
+
+            /** CollateralParam prefix. */
+            public prefix: number;
+
+            /** CollateralParam spot_market_id. */
+            public spot_market_id: string;
+
+            /** CollateralParam liquidation_market_id. */
+            public liquidation_market_id: string;
+
+            /** CollateralParam keeper_reward_percentage. */
+            public keeper_reward_percentage: string;
+
+            /** CollateralParam check_collateralization_index_count. */
+            public check_collateralization_index_count: string;
+
+            /** CollateralParam conversion_factor. */
+            public conversion_factor: string;
+
+            /**
+             * Encodes the specified CollateralParam message. Does not implicitly {@link ununifi.cdp.CollateralParam.verify|verify} messages.
+             * @param message CollateralParam message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.ICollateralParam, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified CollateralParam message, length delimited. Does not implicitly {@link ununifi.cdp.CollateralParam.verify|verify} messages.
+             * @param message CollateralParam message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.ICollateralParam, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a CollateralParam message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns CollateralParam
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.CollateralParam;
+
+            /**
+             * Decodes a CollateralParam message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns CollateralParam
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.CollateralParam;
+
+            /**
+             * Verifies a CollateralParam message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a CollateralParam message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns CollateralParam
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.CollateralParam;
+
+            /**
+             * Creates a plain object from a CollateralParam message. Also converts values to other types if specified.
+             * @param message CollateralParam
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.CollateralParam, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this CollateralParam to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a DebtParam. */
+        interface IDebtParam {
+
+            /** DebtParam denom */
+            denom?: (string|null);
+
+            /** DebtParam reference_asset */
+            reference_asset?: (string|null);
+
+            /** DebtParam conversion_factor */
+            conversion_factor?: (string|null);
+
+            /** DebtParam debt_floor */
+            debt_floor?: (string|null);
+
+            /** DebtParam global_debt_limit */
+            global_debt_limit?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** DebtParam debt_denom */
+            debt_denom?: (string|null);
+
+            /** DebtParam surplus_auction_threshold */
+            surplus_auction_threshold?: (string|null);
+
+            /** DebtParam surplus_auction_lot */
+            surplus_auction_lot?: (string|null);
+
+            /** DebtParam debt_auction_threshold */
+            debt_auction_threshold?: (string|null);
+
+            /** DebtParam debt_auction_lot */
+            debt_auction_lot?: (string|null);
+
+            /** DebtParam circuit_breaker */
+            circuit_breaker?: (boolean|null);
+        }
+
+        /** Represents a DebtParam. */
+        class DebtParam implements IDebtParam {
+
+            /**
+             * Constructs a new DebtParam.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IDebtParam);
+
+            /** DebtParam denom. */
+            public denom: string;
+
+            /** DebtParam reference_asset. */
+            public reference_asset: string;
+
+            /** DebtParam conversion_factor. */
+            public conversion_factor: string;
+
+            /** DebtParam debt_floor. */
+            public debt_floor: string;
+
+            /** DebtParam global_debt_limit. */
+            public global_debt_limit?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** DebtParam debt_denom. */
+            public debt_denom: string;
+
+            /** DebtParam surplus_auction_threshold. */
+            public surplus_auction_threshold: string;
+
+            /** DebtParam surplus_auction_lot. */
+            public surplus_auction_lot: string;
+
+            /** DebtParam debt_auction_threshold. */
+            public debt_auction_threshold: string;
+
+            /** DebtParam debt_auction_lot. */
+            public debt_auction_lot: string;
+
+            /** DebtParam circuit_breaker. */
+            public circuit_breaker: boolean;
+
+            /**
+             * Encodes the specified DebtParam message. Does not implicitly {@link ununifi.cdp.DebtParam.verify|verify} messages.
+             * @param message DebtParam message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IDebtParam, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified DebtParam message, length delimited. Does not implicitly {@link ununifi.cdp.DebtParam.verify|verify} messages.
+             * @param message DebtParam message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IDebtParam, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a DebtParam message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns DebtParam
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.DebtParam;
+
+            /**
+             * Decodes a DebtParam message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns DebtParam
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.DebtParam;
+
+            /**
+             * Verifies a DebtParam message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a DebtParam message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns DebtParam
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.DebtParam;
+
+            /**
+             * Creates a plain object from a DebtParam message. Also converts values to other types if specified.
+             * @param message DebtParam
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.DebtParam, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this DebtParam to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Represents a Query */
+        class Query extends $protobuf.rpc.Service {
+
+            /**
+             * Constructs a new Query service.
+             * @param rpcImpl RPC implementation
+             * @param [requestDelimited=false] Whether requests are length-delimited
+             * @param [responseDelimited=false] Whether responses are length-delimited
+             */
+            constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+            /**
+             * Calls Params.
+             * @param request QueryParamsRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryParamsResponse
+             */
+            public params(request: ununifi.cdp.IQueryParamsRequest, callback: ununifi.cdp.Query.ParamsCallback): void;
+
+            /**
+             * Calls Params.
+             * @param request QueryParamsRequest message or plain object
+             * @returns Promise
+             */
+            public params(request: ununifi.cdp.IQueryParamsRequest): Promise<ununifi.cdp.QueryParamsResponse>;
+
+            /**
+             * Calls Cdp.
+             * @param request QueryGetCdpRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryGetCdpResponse
+             */
+            public cdp(request: ununifi.cdp.IQueryGetCdpRequest, callback: ununifi.cdp.Query.CdpCallback): void;
+
+            /**
+             * Calls Cdp.
+             * @param request QueryGetCdpRequest message or plain object
+             * @returns Promise
+             */
+            public cdp(request: ununifi.cdp.IQueryGetCdpRequest): Promise<ununifi.cdp.QueryGetCdpResponse>;
+
+            /**
+             * Calls CdpAll.
+             * @param request QueryAllCdpRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryAllCdpResponse
+             */
+            public cdpAll(request: ununifi.cdp.IQueryAllCdpRequest, callback: ununifi.cdp.Query.CdpAllCallback): void;
+
+            /**
+             * Calls CdpAll.
+             * @param request QueryAllCdpRequest message or plain object
+             * @returns Promise
+             */
+            public cdpAll(request: ununifi.cdp.IQueryAllCdpRequest): Promise<ununifi.cdp.QueryAllCdpResponse>;
+
+            /**
+             * Calls AccountAll.
+             * @param request QueryAllAccountRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryAllAccountResponse
+             */
+            public accountAll(request: ununifi.cdp.IQueryAllAccountRequest, callback: ununifi.cdp.Query.AccountAllCallback): void;
+
+            /**
+             * Calls AccountAll.
+             * @param request QueryAllAccountRequest message or plain object
+             * @returns Promise
+             */
+            public accountAll(request: ununifi.cdp.IQueryAllAccountRequest): Promise<ununifi.cdp.QueryAllAccountResponse>;
+
+            /**
+             * Calls DepositAll.
+             * @param request QueryAllDepositRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryAllDepositResponse
+             */
+            public depositAll(request: ununifi.cdp.IQueryAllDepositRequest, callback: ununifi.cdp.Query.DepositAllCallback): void;
+
+            /**
+             * Calls DepositAll.
+             * @param request QueryAllDepositRequest message or plain object
+             * @returns Promise
+             */
+            public depositAll(request: ununifi.cdp.IQueryAllDepositRequest): Promise<ununifi.cdp.QueryAllDepositResponse>;
+        }
+
+        namespace Query {
+
+            /**
+             * Callback as used by {@link ununifi.cdp.Query#params}.
+             * @param error Error, if any
+             * @param [response] QueryParamsResponse
+             */
+            type ParamsCallback = (error: (Error|null), response?: ununifi.cdp.QueryParamsResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.cdp.Query#cdp}.
+             * @param error Error, if any
+             * @param [response] QueryGetCdpResponse
+             */
+            type CdpCallback = (error: (Error|null), response?: ununifi.cdp.QueryGetCdpResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.cdp.Query#cdpAll}.
+             * @param error Error, if any
+             * @param [response] QueryAllCdpResponse
+             */
+            type CdpAllCallback = (error: (Error|null), response?: ununifi.cdp.QueryAllCdpResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.cdp.Query#accountAll}.
+             * @param error Error, if any
+             * @param [response] QueryAllAccountResponse
+             */
+            type AccountAllCallback = (error: (Error|null), response?: ununifi.cdp.QueryAllAccountResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.cdp.Query#depositAll}.
+             * @param error Error, if any
+             * @param [response] QueryAllDepositResponse
+             */
+            type DepositAllCallback = (error: (Error|null), response?: ununifi.cdp.QueryAllDepositResponse) => void;
+        }
+
+        /** Properties of a QueryParamsRequest. */
+        interface IQueryParamsRequest {
+        }
+
+        /** Represents a QueryParamsRequest. */
+        class QueryParamsRequest implements IQueryParamsRequest {
+
+            /**
+             * Constructs a new QueryParamsRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IQueryParamsRequest);
+
+            /**
+             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.cdp.QueryParamsRequest.verify|verify} messages.
+             * @param message QueryParamsRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryParamsRequest.verify|verify} messages.
+             * @param message QueryParamsRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryParamsRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryParamsRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryParamsRequest;
+
+            /**
+             * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryParamsRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryParamsRequest;
+
+            /**
+             * Verifies a QueryParamsRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryParamsRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryParamsRequest;
+
+            /**
+             * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
+             * @param message QueryParamsRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryParamsRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryParamsResponse. */
+        interface IQueryParamsResponse {
+
+            /** QueryParamsResponse params */
+            params?: (ununifi.cdp.IParams|null);
+        }
+
+        /** Represents a QueryParamsResponse. */
+        class QueryParamsResponse implements IQueryParamsResponse {
+
+            /**
+             * Constructs a new QueryParamsResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IQueryParamsResponse);
+
+            /** QueryParamsResponse params. */
+            public params?: (ununifi.cdp.IParams|null);
+
+            /**
+             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.cdp.QueryParamsResponse.verify|verify} messages.
+             * @param message QueryParamsResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryParamsResponse.verify|verify} messages.
+             * @param message QueryParamsResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryParamsResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryParamsResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryParamsResponse;
+
+            /**
+             * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryParamsResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryParamsResponse;
+
+            /**
+             * Verifies a QueryParamsResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryParamsResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryParamsResponse;
+
+            /**
+             * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
+             * @param message QueryParamsResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.QueryParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryParamsResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetCdpRequest. */
+        interface IQueryGetCdpRequest {
+
+            /** QueryGetCdpRequest owner */
+            owner?: (string|null);
+
+            /** QueryGetCdpRequest collateral_type */
+            collateral_type?: (string|null);
+        }
+
+        /** Represents a QueryGetCdpRequest. */
+        class QueryGetCdpRequest implements IQueryGetCdpRequest {
+
+            /**
+             * Constructs a new QueryGetCdpRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IQueryGetCdpRequest);
+
+            /** QueryGetCdpRequest owner. */
+            public owner: string;
+
+            /** QueryGetCdpRequest collateral_type. */
+            public collateral_type: string;
+
+            /**
+             * Encodes the specified QueryGetCdpRequest message. Does not implicitly {@link ununifi.cdp.QueryGetCdpRequest.verify|verify} messages.
+             * @param message QueryGetCdpRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IQueryGetCdpRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetCdpRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryGetCdpRequest.verify|verify} messages.
+             * @param message QueryGetCdpRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IQueryGetCdpRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetCdpRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetCdpRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryGetCdpRequest;
+
+            /**
+             * Decodes a QueryGetCdpRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetCdpRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryGetCdpRequest;
+
+            /**
+             * Verifies a QueryGetCdpRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetCdpRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetCdpRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryGetCdpRequest;
+
+            /**
+             * Creates a plain object from a QueryGetCdpRequest message. Also converts values to other types if specified.
+             * @param message QueryGetCdpRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.QueryGetCdpRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetCdpRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetCdpResponse. */
+        interface IQueryGetCdpResponse {
+
+            /** QueryGetCdpResponse cdp */
+            cdp?: (ununifi.cdp.IAugmentedCdp|null);
+        }
+
+        /** Represents a QueryGetCdpResponse. */
+        class QueryGetCdpResponse implements IQueryGetCdpResponse {
+
+            /**
+             * Constructs a new QueryGetCdpResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IQueryGetCdpResponse);
+
+            /** QueryGetCdpResponse cdp. */
+            public cdp?: (ununifi.cdp.IAugmentedCdp|null);
+
+            /**
+             * Encodes the specified QueryGetCdpResponse message. Does not implicitly {@link ununifi.cdp.QueryGetCdpResponse.verify|verify} messages.
+             * @param message QueryGetCdpResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IQueryGetCdpResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetCdpResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryGetCdpResponse.verify|verify} messages.
+             * @param message QueryGetCdpResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IQueryGetCdpResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetCdpResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetCdpResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryGetCdpResponse;
+
+            /**
+             * Decodes a QueryGetCdpResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetCdpResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryGetCdpResponse;
+
+            /**
+             * Verifies a QueryGetCdpResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetCdpResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetCdpResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryGetCdpResponse;
+
+            /**
+             * Creates a plain object from a QueryGetCdpResponse message. Also converts values to other types if specified.
+             * @param message QueryGetCdpResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.QueryGetCdpResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetCdpResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllCdpRequest. */
+        interface IQueryAllCdpRequest {
+
+            /** QueryAllCdpRequest pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+        }
+
+        /** Represents a QueryAllCdpRequest. */
+        class QueryAllCdpRequest implements IQueryAllCdpRequest {
+
+            /**
+             * Constructs a new QueryAllCdpRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IQueryAllCdpRequest);
+
+            /** QueryAllCdpRequest pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+
+            /**
+             * Encodes the specified QueryAllCdpRequest message. Does not implicitly {@link ununifi.cdp.QueryAllCdpRequest.verify|verify} messages.
+             * @param message QueryAllCdpRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IQueryAllCdpRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllCdpRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllCdpRequest.verify|verify} messages.
+             * @param message QueryAllCdpRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IQueryAllCdpRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllCdpRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllCdpRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryAllCdpRequest;
+
+            /**
+             * Decodes a QueryAllCdpRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllCdpRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryAllCdpRequest;
+
+            /**
+             * Verifies a QueryAllCdpRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllCdpRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllCdpRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryAllCdpRequest;
+
+            /**
+             * Creates a plain object from a QueryAllCdpRequest message. Also converts values to other types if specified.
+             * @param message QueryAllCdpRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.QueryAllCdpRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllCdpRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllCdpResponse. */
+        interface IQueryAllCdpResponse {
+
+            /** QueryAllCdpResponse cdp */
+            cdp?: (ununifi.cdp.IAugmentedCdp[]|null);
+
+            /** QueryAllCdpResponse pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+        }
+
+        /** Represents a QueryAllCdpResponse. */
+        class QueryAllCdpResponse implements IQueryAllCdpResponse {
+
+            /**
+             * Constructs a new QueryAllCdpResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IQueryAllCdpResponse);
+
+            /** QueryAllCdpResponse cdp. */
+            public cdp: ununifi.cdp.IAugmentedCdp[];
+
+            /** QueryAllCdpResponse pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+
+            /**
+             * Encodes the specified QueryAllCdpResponse message. Does not implicitly {@link ununifi.cdp.QueryAllCdpResponse.verify|verify} messages.
+             * @param message QueryAllCdpResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IQueryAllCdpResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllCdpResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllCdpResponse.verify|verify} messages.
+             * @param message QueryAllCdpResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IQueryAllCdpResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllCdpResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllCdpResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryAllCdpResponse;
+
+            /**
+             * Decodes a QueryAllCdpResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllCdpResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryAllCdpResponse;
+
+            /**
+             * Verifies a QueryAllCdpResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllCdpResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllCdpResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryAllCdpResponse;
+
+            /**
+             * Creates a plain object from a QueryAllCdpResponse message. Also converts values to other types if specified.
+             * @param message QueryAllCdpResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.QueryAllCdpResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllCdpResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllAccountRequest. */
+        interface IQueryAllAccountRequest {
+        }
+
+        /** Represents a QueryAllAccountRequest. */
+        class QueryAllAccountRequest implements IQueryAllAccountRequest {
+
+            /**
+             * Constructs a new QueryAllAccountRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IQueryAllAccountRequest);
+
+            /**
+             * Encodes the specified QueryAllAccountRequest message. Does not implicitly {@link ununifi.cdp.QueryAllAccountRequest.verify|verify} messages.
+             * @param message QueryAllAccountRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IQueryAllAccountRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllAccountRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllAccountRequest.verify|verify} messages.
+             * @param message QueryAllAccountRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IQueryAllAccountRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllAccountRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllAccountRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryAllAccountRequest;
+
+            /**
+             * Decodes a QueryAllAccountRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllAccountRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryAllAccountRequest;
+
+            /**
+             * Verifies a QueryAllAccountRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllAccountRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllAccountRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryAllAccountRequest;
+
+            /**
+             * Creates a plain object from a QueryAllAccountRequest message. Also converts values to other types if specified.
+             * @param message QueryAllAccountRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.QueryAllAccountRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllAccountRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllAccountResponse. */
+        interface IQueryAllAccountResponse {
+
+            /** QueryAllAccountResponse accounts */
+            accounts?: (google.protobuf.IAny[]|null);
+        }
+
+        /** Represents a QueryAllAccountResponse. */
+        class QueryAllAccountResponse implements IQueryAllAccountResponse {
+
+            /**
+             * Constructs a new QueryAllAccountResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IQueryAllAccountResponse);
+
+            /** QueryAllAccountResponse accounts. */
+            public accounts: google.protobuf.IAny[];
+
+            /**
+             * Encodes the specified QueryAllAccountResponse message. Does not implicitly {@link ununifi.cdp.QueryAllAccountResponse.verify|verify} messages.
+             * @param message QueryAllAccountResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IQueryAllAccountResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllAccountResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllAccountResponse.verify|verify} messages.
+             * @param message QueryAllAccountResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IQueryAllAccountResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllAccountResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllAccountResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryAllAccountResponse;
+
+            /**
+             * Decodes a QueryAllAccountResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllAccountResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryAllAccountResponse;
+
+            /**
+             * Verifies a QueryAllAccountResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllAccountResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllAccountResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryAllAccountResponse;
+
+            /**
+             * Creates a plain object from a QueryAllAccountResponse message. Also converts values to other types if specified.
+             * @param message QueryAllAccountResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.QueryAllAccountResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllAccountResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllDepositRequest. */
+        interface IQueryAllDepositRequest {
+
+            /** QueryAllDepositRequest owner */
+            owner?: (string|null);
+
+            /** QueryAllDepositRequest collateral_type */
+            collateral_type?: (string|null);
+        }
+
+        /** Represents a QueryAllDepositRequest. */
+        class QueryAllDepositRequest implements IQueryAllDepositRequest {
+
+            /**
+             * Constructs a new QueryAllDepositRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IQueryAllDepositRequest);
+
+            /** QueryAllDepositRequest owner. */
+            public owner: string;
+
+            /** QueryAllDepositRequest collateral_type. */
+            public collateral_type: string;
+
+            /**
+             * Encodes the specified QueryAllDepositRequest message. Does not implicitly {@link ununifi.cdp.QueryAllDepositRequest.verify|verify} messages.
+             * @param message QueryAllDepositRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IQueryAllDepositRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllDepositRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllDepositRequest.verify|verify} messages.
+             * @param message QueryAllDepositRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IQueryAllDepositRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllDepositRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllDepositRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryAllDepositRequest;
+
+            /**
+             * Decodes a QueryAllDepositRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllDepositRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryAllDepositRequest;
+
+            /**
+             * Verifies a QueryAllDepositRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllDepositRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllDepositRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryAllDepositRequest;
+
+            /**
+             * Creates a plain object from a QueryAllDepositRequest message. Also converts values to other types if specified.
+             * @param message QueryAllDepositRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.QueryAllDepositRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllDepositRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllDepositResponse. */
+        interface IQueryAllDepositResponse {
+
+            /** QueryAllDepositResponse deposits */
+            deposits?: (ununifi.cdp.IDeposit[]|null);
+        }
+
+        /** Represents a QueryAllDepositResponse. */
+        class QueryAllDepositResponse implements IQueryAllDepositResponse {
+
+            /**
+             * Constructs a new QueryAllDepositResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.cdp.IQueryAllDepositResponse);
+
+            /** QueryAllDepositResponse deposits. */
+            public deposits: ununifi.cdp.IDeposit[];
+
+            /**
+             * Encodes the specified QueryAllDepositResponse message. Does not implicitly {@link ununifi.cdp.QueryAllDepositResponse.verify|verify} messages.
+             * @param message QueryAllDepositResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.cdp.IQueryAllDepositResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllDepositResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllDepositResponse.verify|verify} messages.
+             * @param message QueryAllDepositResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.cdp.IQueryAllDepositResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllDepositResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllDepositResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.cdp.QueryAllDepositResponse;
+
+            /**
+             * Decodes a QueryAllDepositResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllDepositResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.cdp.QueryAllDepositResponse;
+
+            /**
+             * Verifies a QueryAllDepositResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllDepositResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllDepositResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.cdp.QueryAllDepositResponse;
+
+            /**
+             * Creates a plain object from a QueryAllDepositResponse message. Also converts values to other types if specified.
+             * @param message QueryAllDepositResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.cdp.QueryAllDepositResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllDepositResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
         /** Properties of a GenesisState. */
         interface IGenesisState {
 
@@ -4339,9 +4345,6 @@ export namespace ununifi {
 
             /** GenesisState starting_cdp_id */
             starting_cdp_id?: (Long|null);
-
-            /** GenesisState debt_denom */
-            debt_denom?: (string|null);
 
             /** GenesisState gov_denom */
             gov_denom?: (string|null);
@@ -4373,9 +4376,6 @@ export namespace ununifi {
 
             /** GenesisState starting_cdp_id. */
             public starting_cdp_id: Long;
-
-            /** GenesisState debt_denom. */
-            public debt_denom: string;
 
             /** GenesisState gov_denom. */
             public gov_denom: string;
@@ -4637,6 +4637,208 @@ export namespace ununifi {
 
     /** Namespace incentive. */
     namespace incentive {
+
+        /** Represents a Msg */
+        class Msg extends $protobuf.rpc.Service {
+
+            /**
+             * Constructs a new Msg service.
+             * @param rpcImpl RPC implementation
+             * @param [requestDelimited=false] Whether requests are length-delimited
+             * @param [responseDelimited=false] Whether responses are length-delimited
+             */
+            constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+            /**
+             * Calls ClaimCdpMintingReward.
+             * @param request MsgClaimCdpMintingReward message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgClaimCdpMintingRewardResponse
+             */
+            public claimCdpMintingReward(request: ununifi.incentive.IMsgClaimCdpMintingReward, callback: ununifi.incentive.Msg.ClaimCdpMintingRewardCallback): void;
+
+            /**
+             * Calls ClaimCdpMintingReward.
+             * @param request MsgClaimCdpMintingReward message or plain object
+             * @returns Promise
+             */
+            public claimCdpMintingReward(request: ununifi.incentive.IMsgClaimCdpMintingReward): Promise<ununifi.incentive.MsgClaimCdpMintingRewardResponse>;
+        }
+
+        namespace Msg {
+
+            /**
+             * Callback as used by {@link ununifi.incentive.Msg#claimCdpMintingReward}.
+             * @param error Error, if any
+             * @param [response] MsgClaimCdpMintingRewardResponse
+             */
+            type ClaimCdpMintingRewardCallback = (error: (Error|null), response?: ununifi.incentive.MsgClaimCdpMintingRewardResponse) => void;
+        }
+
+        /** Properties of a MsgClaimCdpMintingReward. */
+        interface IMsgClaimCdpMintingReward {
+
+            /** MsgClaimCdpMintingReward sender */
+            sender?: (string|null);
+
+            /** MsgClaimCdpMintingReward multiplier_name */
+            multiplier_name?: (string|null);
+        }
+
+        /** Represents a MsgClaimCdpMintingReward. */
+        class MsgClaimCdpMintingReward implements IMsgClaimCdpMintingReward {
+
+            /**
+             * Constructs a new MsgClaimCdpMintingReward.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.incentive.IMsgClaimCdpMintingReward);
+
+            /** MsgClaimCdpMintingReward sender. */
+            public sender: string;
+
+            /** MsgClaimCdpMintingReward multiplier_name. */
+            public multiplier_name: string;
+
+            /**
+             * Encodes the specified MsgClaimCdpMintingReward message. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingReward.verify|verify} messages.
+             * @param message MsgClaimCdpMintingReward message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.incentive.IMsgClaimCdpMintingReward, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgClaimCdpMintingReward message, length delimited. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingReward.verify|verify} messages.
+             * @param message MsgClaimCdpMintingReward message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.incentive.IMsgClaimCdpMintingReward, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgClaimCdpMintingReward message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgClaimCdpMintingReward
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.incentive.MsgClaimCdpMintingReward;
+
+            /**
+             * Decodes a MsgClaimCdpMintingReward message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgClaimCdpMintingReward
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.incentive.MsgClaimCdpMintingReward;
+
+            /**
+             * Verifies a MsgClaimCdpMintingReward message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgClaimCdpMintingReward message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgClaimCdpMintingReward
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.incentive.MsgClaimCdpMintingReward;
+
+            /**
+             * Creates a plain object from a MsgClaimCdpMintingReward message. Also converts values to other types if specified.
+             * @param message MsgClaimCdpMintingReward
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.incentive.MsgClaimCdpMintingReward, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgClaimCdpMintingReward to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgClaimCdpMintingRewardResponse. */
+        interface IMsgClaimCdpMintingRewardResponse {
+        }
+
+        /** Represents a MsgClaimCdpMintingRewardResponse. */
+        class MsgClaimCdpMintingRewardResponse implements IMsgClaimCdpMintingRewardResponse {
+
+            /**
+             * Constructs a new MsgClaimCdpMintingRewardResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.incentive.IMsgClaimCdpMintingRewardResponse);
+
+            /**
+             * Encodes the specified MsgClaimCdpMintingRewardResponse message. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingRewardResponse.verify|verify} messages.
+             * @param message MsgClaimCdpMintingRewardResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.incentive.IMsgClaimCdpMintingRewardResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgClaimCdpMintingRewardResponse message, length delimited. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingRewardResponse.verify|verify} messages.
+             * @param message MsgClaimCdpMintingRewardResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.incentive.IMsgClaimCdpMintingRewardResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgClaimCdpMintingRewardResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgClaimCdpMintingRewardResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.incentive.MsgClaimCdpMintingRewardResponse;
+
+            /**
+             * Decodes a MsgClaimCdpMintingRewardResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgClaimCdpMintingRewardResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.incentive.MsgClaimCdpMintingRewardResponse;
+
+            /**
+             * Verifies a MsgClaimCdpMintingRewardResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgClaimCdpMintingRewardResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgClaimCdpMintingRewardResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.incentive.MsgClaimCdpMintingRewardResponse;
+
+            /**
+             * Creates a plain object from a MsgClaimCdpMintingRewardResponse message. Also converts values to other types if specified.
+             * @param message MsgClaimCdpMintingRewardResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.incentive.MsgClaimCdpMintingRewardResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgClaimCdpMintingRewardResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
 
         /** Represents a Query */
         class Query extends $protobuf.rpc.Service {
@@ -5487,208 +5689,6 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Represents a Msg */
-        class Msg extends $protobuf.rpc.Service {
-
-            /**
-             * Constructs a new Msg service.
-             * @param rpcImpl RPC implementation
-             * @param [requestDelimited=false] Whether requests are length-delimited
-             * @param [responseDelimited=false] Whether responses are length-delimited
-             */
-            constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
-
-            /**
-             * Calls ClaimCdpMintingReward.
-             * @param request MsgClaimCdpMintingReward message or plain object
-             * @param callback Node-style callback called with the error, if any, and MsgClaimCdpMintingRewardResponse
-             */
-            public claimCdpMintingReward(request: ununifi.incentive.IMsgClaimCdpMintingReward, callback: ununifi.incentive.Msg.ClaimCdpMintingRewardCallback): void;
-
-            /**
-             * Calls ClaimCdpMintingReward.
-             * @param request MsgClaimCdpMintingReward message or plain object
-             * @returns Promise
-             */
-            public claimCdpMintingReward(request: ununifi.incentive.IMsgClaimCdpMintingReward): Promise<ununifi.incentive.MsgClaimCdpMintingRewardResponse>;
-        }
-
-        namespace Msg {
-
-            /**
-             * Callback as used by {@link ununifi.incentive.Msg#claimCdpMintingReward}.
-             * @param error Error, if any
-             * @param [response] MsgClaimCdpMintingRewardResponse
-             */
-            type ClaimCdpMintingRewardCallback = (error: (Error|null), response?: ununifi.incentive.MsgClaimCdpMintingRewardResponse) => void;
-        }
-
-        /** Properties of a MsgClaimCdpMintingReward. */
-        interface IMsgClaimCdpMintingReward {
-
-            /** MsgClaimCdpMintingReward sender */
-            sender?: (string|null);
-
-            /** MsgClaimCdpMintingReward multiplier_name */
-            multiplier_name?: (string|null);
-        }
-
-        /** Represents a MsgClaimCdpMintingReward. */
-        class MsgClaimCdpMintingReward implements IMsgClaimCdpMintingReward {
-
-            /**
-             * Constructs a new MsgClaimCdpMintingReward.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.incentive.IMsgClaimCdpMintingReward);
-
-            /** MsgClaimCdpMintingReward sender. */
-            public sender: string;
-
-            /** MsgClaimCdpMintingReward multiplier_name. */
-            public multiplier_name: string;
-
-            /**
-             * Encodes the specified MsgClaimCdpMintingReward message. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingReward.verify|verify} messages.
-             * @param message MsgClaimCdpMintingReward message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.incentive.IMsgClaimCdpMintingReward, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified MsgClaimCdpMintingReward message, length delimited. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingReward.verify|verify} messages.
-             * @param message MsgClaimCdpMintingReward message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.incentive.IMsgClaimCdpMintingReward, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a MsgClaimCdpMintingReward message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns MsgClaimCdpMintingReward
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.incentive.MsgClaimCdpMintingReward;
-
-            /**
-             * Decodes a MsgClaimCdpMintingReward message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns MsgClaimCdpMintingReward
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.incentive.MsgClaimCdpMintingReward;
-
-            /**
-             * Verifies a MsgClaimCdpMintingReward message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a MsgClaimCdpMintingReward message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns MsgClaimCdpMintingReward
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.incentive.MsgClaimCdpMintingReward;
-
-            /**
-             * Creates a plain object from a MsgClaimCdpMintingReward message. Also converts values to other types if specified.
-             * @param message MsgClaimCdpMintingReward
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.incentive.MsgClaimCdpMintingReward, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this MsgClaimCdpMintingReward to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a MsgClaimCdpMintingRewardResponse. */
-        interface IMsgClaimCdpMintingRewardResponse {
-        }
-
-        /** Represents a MsgClaimCdpMintingRewardResponse. */
-        class MsgClaimCdpMintingRewardResponse implements IMsgClaimCdpMintingRewardResponse {
-
-            /**
-             * Constructs a new MsgClaimCdpMintingRewardResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.incentive.IMsgClaimCdpMintingRewardResponse);
-
-            /**
-             * Encodes the specified MsgClaimCdpMintingRewardResponse message. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingRewardResponse.verify|verify} messages.
-             * @param message MsgClaimCdpMintingRewardResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.incentive.IMsgClaimCdpMintingRewardResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified MsgClaimCdpMintingRewardResponse message, length delimited. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingRewardResponse.verify|verify} messages.
-             * @param message MsgClaimCdpMintingRewardResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.incentive.IMsgClaimCdpMintingRewardResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a MsgClaimCdpMintingRewardResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns MsgClaimCdpMintingRewardResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.incentive.MsgClaimCdpMintingRewardResponse;
-
-            /**
-             * Decodes a MsgClaimCdpMintingRewardResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns MsgClaimCdpMintingRewardResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.incentive.MsgClaimCdpMintingRewardResponse;
-
-            /**
-             * Verifies a MsgClaimCdpMintingRewardResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a MsgClaimCdpMintingRewardResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns MsgClaimCdpMintingRewardResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.incentive.MsgClaimCdpMintingRewardResponse;
-
-            /**
-             * Creates a plain object from a MsgClaimCdpMintingRewardResponse message. Also converts values to other types if specified.
-             * @param message MsgClaimCdpMintingRewardResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.incentive.MsgClaimCdpMintingRewardResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this MsgClaimCdpMintingRewardResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
         /** Properties of a GenesisState. */
         interface IGenesisState {
 
@@ -5971,6 +5971,600 @@ export namespace ununifi {
 
     /** Namespace pricefeed. */
     namespace pricefeed {
+
+        /** Represents a Msg */
+        class Msg extends $protobuf.rpc.Service {
+
+            /**
+             * Constructs a new Msg service.
+             * @param rpcImpl RPC implementation
+             * @param [requestDelimited=false] Whether requests are length-delimited
+             * @param [responseDelimited=false] Whether responses are length-delimited
+             */
+            constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+            /**
+             * Calls PostPrice.
+             * @param request MsgPostPrice message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgPostPriceResponse
+             */
+            public postPrice(request: ununifi.pricefeed.IMsgPostPrice, callback: ununifi.pricefeed.Msg.PostPriceCallback): void;
+
+            /**
+             * Calls PostPrice.
+             * @param request MsgPostPrice message or plain object
+             * @returns Promise
+             */
+            public postPrice(request: ununifi.pricefeed.IMsgPostPrice): Promise<ununifi.pricefeed.MsgPostPriceResponse>;
+        }
+
+        namespace Msg {
+
+            /**
+             * Callback as used by {@link ununifi.pricefeed.Msg#postPrice}.
+             * @param error Error, if any
+             * @param [response] MsgPostPriceResponse
+             */
+            type PostPriceCallback = (error: (Error|null), response?: ununifi.pricefeed.MsgPostPriceResponse) => void;
+        }
+
+        /** Properties of a MsgPostPrice. */
+        interface IMsgPostPrice {
+
+            /** MsgPostPrice from */
+            from?: (string|null);
+
+            /** MsgPostPrice market_id */
+            market_id?: (string|null);
+
+            /** MsgPostPrice price */
+            price?: (string|null);
+
+            /** MsgPostPrice expiry */
+            expiry?: (google.protobuf.ITimestamp|null);
+        }
+
+        /** Represents a MsgPostPrice. */
+        class MsgPostPrice implements IMsgPostPrice {
+
+            /**
+             * Constructs a new MsgPostPrice.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.pricefeed.IMsgPostPrice);
+
+            /** MsgPostPrice from. */
+            public from: string;
+
+            /** MsgPostPrice market_id. */
+            public market_id: string;
+
+            /** MsgPostPrice price. */
+            public price: string;
+
+            /** MsgPostPrice expiry. */
+            public expiry?: (google.protobuf.ITimestamp|null);
+
+            /**
+             * Encodes the specified MsgPostPrice message. Does not implicitly {@link ununifi.pricefeed.MsgPostPrice.verify|verify} messages.
+             * @param message MsgPostPrice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.pricefeed.IMsgPostPrice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgPostPrice message, length delimited. Does not implicitly {@link ununifi.pricefeed.MsgPostPrice.verify|verify} messages.
+             * @param message MsgPostPrice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.pricefeed.IMsgPostPrice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgPostPrice message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgPostPrice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.pricefeed.MsgPostPrice;
+
+            /**
+             * Decodes a MsgPostPrice message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgPostPrice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.pricefeed.MsgPostPrice;
+
+            /**
+             * Verifies a MsgPostPrice message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgPostPrice message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgPostPrice
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.pricefeed.MsgPostPrice;
+
+            /**
+             * Creates a plain object from a MsgPostPrice message. Also converts values to other types if specified.
+             * @param message MsgPostPrice
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.pricefeed.MsgPostPrice, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgPostPrice to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgPostPriceResponse. */
+        interface IMsgPostPriceResponse {
+        }
+
+        /** Represents a MsgPostPriceResponse. */
+        class MsgPostPriceResponse implements IMsgPostPriceResponse {
+
+            /**
+             * Constructs a new MsgPostPriceResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.pricefeed.IMsgPostPriceResponse);
+
+            /**
+             * Encodes the specified MsgPostPriceResponse message. Does not implicitly {@link ununifi.pricefeed.MsgPostPriceResponse.verify|verify} messages.
+             * @param message MsgPostPriceResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.pricefeed.IMsgPostPriceResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgPostPriceResponse message, length delimited. Does not implicitly {@link ununifi.pricefeed.MsgPostPriceResponse.verify|verify} messages.
+             * @param message MsgPostPriceResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.pricefeed.IMsgPostPriceResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgPostPriceResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgPostPriceResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.pricefeed.MsgPostPriceResponse;
+
+            /**
+             * Decodes a MsgPostPriceResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgPostPriceResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.pricefeed.MsgPostPriceResponse;
+
+            /**
+             * Verifies a MsgPostPriceResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgPostPriceResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgPostPriceResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.pricefeed.MsgPostPriceResponse;
+
+            /**
+             * Creates a plain object from a MsgPostPriceResponse message. Also converts values to other types if specified.
+             * @param message MsgPostPriceResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.pricefeed.MsgPostPriceResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgPostPriceResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a Market. */
+        interface IMarket {
+
+            /** Market market_id */
+            market_id?: (string|null);
+
+            /** Market base_asset */
+            base_asset?: (string|null);
+
+            /** Market quote_asset */
+            quote_asset?: (string|null);
+
+            /** Market oracles */
+            oracles?: (string[]|null);
+
+            /** Market active */
+            active?: (boolean|null);
+        }
+
+        /** Represents a Market. */
+        class Market implements IMarket {
+
+            /**
+             * Constructs a new Market.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.pricefeed.IMarket);
+
+            /** Market market_id. */
+            public market_id: string;
+
+            /** Market base_asset. */
+            public base_asset: string;
+
+            /** Market quote_asset. */
+            public quote_asset: string;
+
+            /** Market oracles. */
+            public oracles: string[];
+
+            /** Market active. */
+            public active: boolean;
+
+            /**
+             * Encodes the specified Market message. Does not implicitly {@link ununifi.pricefeed.Market.verify|verify} messages.
+             * @param message Market message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.pricefeed.IMarket, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Market message, length delimited. Does not implicitly {@link ununifi.pricefeed.Market.verify|verify} messages.
+             * @param message Market message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.pricefeed.IMarket, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a Market message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Market
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.pricefeed.Market;
+
+            /**
+             * Decodes a Market message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Market
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.pricefeed.Market;
+
+            /**
+             * Verifies a Market message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a Market message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Market
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.pricefeed.Market;
+
+            /**
+             * Creates a plain object from a Market message. Also converts values to other types if specified.
+             * @param message Market
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.pricefeed.Market, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Market to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a CurrentPrice. */
+        interface ICurrentPrice {
+
+            /** CurrentPrice market_id */
+            market_id?: (string|null);
+
+            /** CurrentPrice price */
+            price?: (string|null);
+        }
+
+        /** Represents a CurrentPrice. */
+        class CurrentPrice implements ICurrentPrice {
+
+            /**
+             * Constructs a new CurrentPrice.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.pricefeed.ICurrentPrice);
+
+            /** CurrentPrice market_id. */
+            public market_id: string;
+
+            /** CurrentPrice price. */
+            public price: string;
+
+            /**
+             * Encodes the specified CurrentPrice message. Does not implicitly {@link ununifi.pricefeed.CurrentPrice.verify|verify} messages.
+             * @param message CurrentPrice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.pricefeed.ICurrentPrice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified CurrentPrice message, length delimited. Does not implicitly {@link ununifi.pricefeed.CurrentPrice.verify|verify} messages.
+             * @param message CurrentPrice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.pricefeed.ICurrentPrice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a CurrentPrice message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns CurrentPrice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.pricefeed.CurrentPrice;
+
+            /**
+             * Decodes a CurrentPrice message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns CurrentPrice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.pricefeed.CurrentPrice;
+
+            /**
+             * Verifies a CurrentPrice message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a CurrentPrice message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns CurrentPrice
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.pricefeed.CurrentPrice;
+
+            /**
+             * Creates a plain object from a CurrentPrice message. Also converts values to other types if specified.
+             * @param message CurrentPrice
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.pricefeed.CurrentPrice, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this CurrentPrice to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a PostedPrice. */
+        interface IPostedPrice {
+
+            /** PostedPrice market_id */
+            market_id?: (string|null);
+
+            /** PostedPrice oracle_address */
+            oracle_address?: (string|null);
+
+            /** PostedPrice price */
+            price?: (string|null);
+
+            /** PostedPrice expiry */
+            expiry?: (google.protobuf.ITimestamp|null);
+        }
+
+        /** Represents a PostedPrice. */
+        class PostedPrice implements IPostedPrice {
+
+            /**
+             * Constructs a new PostedPrice.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.pricefeed.IPostedPrice);
+
+            /** PostedPrice market_id. */
+            public market_id: string;
+
+            /** PostedPrice oracle_address. */
+            public oracle_address: string;
+
+            /** PostedPrice price. */
+            public price: string;
+
+            /** PostedPrice expiry. */
+            public expiry?: (google.protobuf.ITimestamp|null);
+
+            /**
+             * Encodes the specified PostedPrice message. Does not implicitly {@link ununifi.pricefeed.PostedPrice.verify|verify} messages.
+             * @param message PostedPrice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.pricefeed.IPostedPrice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified PostedPrice message, length delimited. Does not implicitly {@link ununifi.pricefeed.PostedPrice.verify|verify} messages.
+             * @param message PostedPrice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.pricefeed.IPostedPrice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a PostedPrice message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns PostedPrice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.pricefeed.PostedPrice;
+
+            /**
+             * Decodes a PostedPrice message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns PostedPrice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.pricefeed.PostedPrice;
+
+            /**
+             * Verifies a PostedPrice message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a PostedPrice message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns PostedPrice
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.pricefeed.PostedPrice;
+
+            /**
+             * Creates a plain object from a PostedPrice message. Also converts values to other types if specified.
+             * @param message PostedPrice
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.pricefeed.PostedPrice, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this PostedPrice to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a Params. */
+        interface IParams {
+
+            /** Params markets */
+            markets?: (ununifi.pricefeed.IMarket[]|null);
+        }
+
+        /** Represents a Params. */
+        class Params implements IParams {
+
+            /**
+             * Constructs a new Params.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.pricefeed.IParams);
+
+            /** Params markets. */
+            public markets: ununifi.pricefeed.IMarket[];
+
+            /**
+             * Encodes the specified Params message. Does not implicitly {@link ununifi.pricefeed.Params.verify|verify} messages.
+             * @param message Params message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.pricefeed.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.pricefeed.Params.verify|verify} messages.
+             * @param message Params message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.pricefeed.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a Params message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.pricefeed.Params;
+
+            /**
+             * Decodes a Params message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.pricefeed.Params;
+
+            /**
+             * Verifies a Params message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a Params message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Params
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.pricefeed.Params;
+
+            /**
+             * Creates a plain object from a Params message. Also converts values to other types if specified.
+             * @param message Params
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.pricefeed.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Params to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
 
         /** Represents a Query */
         class Query extends $protobuf.rpc.Service {
@@ -7139,600 +7733,6 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a Market. */
-        interface IMarket {
-
-            /** Market market_id */
-            market_id?: (string|null);
-
-            /** Market base_asset */
-            base_asset?: (string|null);
-
-            /** Market quote_asset */
-            quote_asset?: (string|null);
-
-            /** Market oracles */
-            oracles?: (string[]|null);
-
-            /** Market active */
-            active?: (boolean|null);
-        }
-
-        /** Represents a Market. */
-        class Market implements IMarket {
-
-            /**
-             * Constructs a new Market.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.pricefeed.IMarket);
-
-            /** Market market_id. */
-            public market_id: string;
-
-            /** Market base_asset. */
-            public base_asset: string;
-
-            /** Market quote_asset. */
-            public quote_asset: string;
-
-            /** Market oracles. */
-            public oracles: string[];
-
-            /** Market active. */
-            public active: boolean;
-
-            /**
-             * Encodes the specified Market message. Does not implicitly {@link ununifi.pricefeed.Market.verify|verify} messages.
-             * @param message Market message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.pricefeed.IMarket, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified Market message, length delimited. Does not implicitly {@link ununifi.pricefeed.Market.verify|verify} messages.
-             * @param message Market message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.pricefeed.IMarket, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a Market message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns Market
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.pricefeed.Market;
-
-            /**
-             * Decodes a Market message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns Market
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.pricefeed.Market;
-
-            /**
-             * Verifies a Market message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a Market message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns Market
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.pricefeed.Market;
-
-            /**
-             * Creates a plain object from a Market message. Also converts values to other types if specified.
-             * @param message Market
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.pricefeed.Market, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this Market to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a CurrentPrice. */
-        interface ICurrentPrice {
-
-            /** CurrentPrice market_id */
-            market_id?: (string|null);
-
-            /** CurrentPrice price */
-            price?: (string|null);
-        }
-
-        /** Represents a CurrentPrice. */
-        class CurrentPrice implements ICurrentPrice {
-
-            /**
-             * Constructs a new CurrentPrice.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.pricefeed.ICurrentPrice);
-
-            /** CurrentPrice market_id. */
-            public market_id: string;
-
-            /** CurrentPrice price. */
-            public price: string;
-
-            /**
-             * Encodes the specified CurrentPrice message. Does not implicitly {@link ununifi.pricefeed.CurrentPrice.verify|verify} messages.
-             * @param message CurrentPrice message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.pricefeed.ICurrentPrice, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified CurrentPrice message, length delimited. Does not implicitly {@link ununifi.pricefeed.CurrentPrice.verify|verify} messages.
-             * @param message CurrentPrice message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.pricefeed.ICurrentPrice, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a CurrentPrice message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns CurrentPrice
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.pricefeed.CurrentPrice;
-
-            /**
-             * Decodes a CurrentPrice message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns CurrentPrice
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.pricefeed.CurrentPrice;
-
-            /**
-             * Verifies a CurrentPrice message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a CurrentPrice message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns CurrentPrice
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.pricefeed.CurrentPrice;
-
-            /**
-             * Creates a plain object from a CurrentPrice message. Also converts values to other types if specified.
-             * @param message CurrentPrice
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.pricefeed.CurrentPrice, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this CurrentPrice to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a PostedPrice. */
-        interface IPostedPrice {
-
-            /** PostedPrice market_id */
-            market_id?: (string|null);
-
-            /** PostedPrice oracle_address */
-            oracle_address?: (string|null);
-
-            /** PostedPrice price */
-            price?: (string|null);
-
-            /** PostedPrice expiry */
-            expiry?: (google.protobuf.ITimestamp|null);
-        }
-
-        /** Represents a PostedPrice. */
-        class PostedPrice implements IPostedPrice {
-
-            /**
-             * Constructs a new PostedPrice.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.pricefeed.IPostedPrice);
-
-            /** PostedPrice market_id. */
-            public market_id: string;
-
-            /** PostedPrice oracle_address. */
-            public oracle_address: string;
-
-            /** PostedPrice price. */
-            public price: string;
-
-            /** PostedPrice expiry. */
-            public expiry?: (google.protobuf.ITimestamp|null);
-
-            /**
-             * Encodes the specified PostedPrice message. Does not implicitly {@link ununifi.pricefeed.PostedPrice.verify|verify} messages.
-             * @param message PostedPrice message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.pricefeed.IPostedPrice, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified PostedPrice message, length delimited. Does not implicitly {@link ununifi.pricefeed.PostedPrice.verify|verify} messages.
-             * @param message PostedPrice message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.pricefeed.IPostedPrice, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a PostedPrice message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns PostedPrice
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.pricefeed.PostedPrice;
-
-            /**
-             * Decodes a PostedPrice message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns PostedPrice
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.pricefeed.PostedPrice;
-
-            /**
-             * Verifies a PostedPrice message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a PostedPrice message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns PostedPrice
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.pricefeed.PostedPrice;
-
-            /**
-             * Creates a plain object from a PostedPrice message. Also converts values to other types if specified.
-             * @param message PostedPrice
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.pricefeed.PostedPrice, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this PostedPrice to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a Params. */
-        interface IParams {
-
-            /** Params markets */
-            markets?: (ununifi.pricefeed.IMarket[]|null);
-        }
-
-        /** Represents a Params. */
-        class Params implements IParams {
-
-            /**
-             * Constructs a new Params.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.pricefeed.IParams);
-
-            /** Params markets. */
-            public markets: ununifi.pricefeed.IMarket[];
-
-            /**
-             * Encodes the specified Params message. Does not implicitly {@link ununifi.pricefeed.Params.verify|verify} messages.
-             * @param message Params message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.pricefeed.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.pricefeed.Params.verify|verify} messages.
-             * @param message Params message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.pricefeed.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a Params message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns Params
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.pricefeed.Params;
-
-            /**
-             * Decodes a Params message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns Params
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.pricefeed.Params;
-
-            /**
-             * Verifies a Params message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a Params message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns Params
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.pricefeed.Params;
-
-            /**
-             * Creates a plain object from a Params message. Also converts values to other types if specified.
-             * @param message Params
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.pricefeed.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this Params to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Represents a Msg */
-        class Msg extends $protobuf.rpc.Service {
-
-            /**
-             * Constructs a new Msg service.
-             * @param rpcImpl RPC implementation
-             * @param [requestDelimited=false] Whether requests are length-delimited
-             * @param [responseDelimited=false] Whether responses are length-delimited
-             */
-            constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
-
-            /**
-             * Calls PostPrice.
-             * @param request MsgPostPrice message or plain object
-             * @param callback Node-style callback called with the error, if any, and MsgPostPriceResponse
-             */
-            public postPrice(request: ununifi.pricefeed.IMsgPostPrice, callback: ununifi.pricefeed.Msg.PostPriceCallback): void;
-
-            /**
-             * Calls PostPrice.
-             * @param request MsgPostPrice message or plain object
-             * @returns Promise
-             */
-            public postPrice(request: ununifi.pricefeed.IMsgPostPrice): Promise<ununifi.pricefeed.MsgPostPriceResponse>;
-        }
-
-        namespace Msg {
-
-            /**
-             * Callback as used by {@link ununifi.pricefeed.Msg#postPrice}.
-             * @param error Error, if any
-             * @param [response] MsgPostPriceResponse
-             */
-            type PostPriceCallback = (error: (Error|null), response?: ununifi.pricefeed.MsgPostPriceResponse) => void;
-        }
-
-        /** Properties of a MsgPostPrice. */
-        interface IMsgPostPrice {
-
-            /** MsgPostPrice from */
-            from?: (string|null);
-
-            /** MsgPostPrice market_id */
-            market_id?: (string|null);
-
-            /** MsgPostPrice price */
-            price?: (string|null);
-
-            /** MsgPostPrice expiry */
-            expiry?: (google.protobuf.ITimestamp|null);
-        }
-
-        /** Represents a MsgPostPrice. */
-        class MsgPostPrice implements IMsgPostPrice {
-
-            /**
-             * Constructs a new MsgPostPrice.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.pricefeed.IMsgPostPrice);
-
-            /** MsgPostPrice from. */
-            public from: string;
-
-            /** MsgPostPrice market_id. */
-            public market_id: string;
-
-            /** MsgPostPrice price. */
-            public price: string;
-
-            /** MsgPostPrice expiry. */
-            public expiry?: (google.protobuf.ITimestamp|null);
-
-            /**
-             * Encodes the specified MsgPostPrice message. Does not implicitly {@link ununifi.pricefeed.MsgPostPrice.verify|verify} messages.
-             * @param message MsgPostPrice message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.pricefeed.IMsgPostPrice, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified MsgPostPrice message, length delimited. Does not implicitly {@link ununifi.pricefeed.MsgPostPrice.verify|verify} messages.
-             * @param message MsgPostPrice message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.pricefeed.IMsgPostPrice, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a MsgPostPrice message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns MsgPostPrice
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.pricefeed.MsgPostPrice;
-
-            /**
-             * Decodes a MsgPostPrice message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns MsgPostPrice
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.pricefeed.MsgPostPrice;
-
-            /**
-             * Verifies a MsgPostPrice message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a MsgPostPrice message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns MsgPostPrice
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.pricefeed.MsgPostPrice;
-
-            /**
-             * Creates a plain object from a MsgPostPrice message. Also converts values to other types if specified.
-             * @param message MsgPostPrice
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.pricefeed.MsgPostPrice, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this MsgPostPrice to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a MsgPostPriceResponse. */
-        interface IMsgPostPriceResponse {
-        }
-
-        /** Represents a MsgPostPriceResponse. */
-        class MsgPostPriceResponse implements IMsgPostPriceResponse {
-
-            /**
-             * Constructs a new MsgPostPriceResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.pricefeed.IMsgPostPriceResponse);
-
-            /**
-             * Encodes the specified MsgPostPriceResponse message. Does not implicitly {@link ununifi.pricefeed.MsgPostPriceResponse.verify|verify} messages.
-             * @param message MsgPostPriceResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.pricefeed.IMsgPostPriceResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified MsgPostPriceResponse message, length delimited. Does not implicitly {@link ununifi.pricefeed.MsgPostPriceResponse.verify|verify} messages.
-             * @param message MsgPostPriceResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.pricefeed.IMsgPostPriceResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a MsgPostPriceResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns MsgPostPriceResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.pricefeed.MsgPostPriceResponse;
-
-            /**
-             * Decodes a MsgPostPriceResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns MsgPostPriceResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.pricefeed.MsgPostPriceResponse;
-
-            /**
-             * Verifies a MsgPostPriceResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a MsgPostPriceResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns MsgPostPriceResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.pricefeed.MsgPostPriceResponse;
-
-            /**
-             * Creates a plain object from a MsgPostPriceResponse message. Also converts values to other types if specified.
-             * @param message MsgPostPriceResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.pricefeed.MsgPostPriceResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this MsgPostPriceResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
         /** Properties of a GenesisState. */
         interface IGenesisState {
 
@@ -8490,204 +8490,6 @@ export namespace cosmos {
     /** Namespace base. */
     namespace base {
 
-        /** Namespace query. */
-        namespace query {
-
-            /** Namespace v1beta1. */
-            namespace v1beta1 {
-
-                /** Properties of a PageRequest. */
-                interface IPageRequest {
-
-                    /** PageRequest key */
-                    key?: (Uint8Array|null);
-
-                    /** PageRequest offset */
-                    offset?: (Long|null);
-
-                    /** PageRequest limit */
-                    limit?: (Long|null);
-
-                    /** PageRequest count_total */
-                    count_total?: (boolean|null);
-                }
-
-                /** Represents a PageRequest. */
-                class PageRequest implements IPageRequest {
-
-                    /**
-                     * Constructs a new PageRequest.
-                     * @param [properties] Properties to set
-                     */
-                    constructor(properties?: cosmos.base.query.v1beta1.IPageRequest);
-
-                    /** PageRequest key. */
-                    public key: Uint8Array;
-
-                    /** PageRequest offset. */
-                    public offset: Long;
-
-                    /** PageRequest limit. */
-                    public limit: Long;
-
-                    /** PageRequest count_total. */
-                    public count_total: boolean;
-
-                    /**
-                     * Encodes the specified PageRequest message. Does not implicitly {@link cosmos.base.query.v1beta1.PageRequest.verify|verify} messages.
-                     * @param message PageRequest message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encode(message: cosmos.base.query.v1beta1.IPageRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Encodes the specified PageRequest message, length delimited. Does not implicitly {@link cosmos.base.query.v1beta1.PageRequest.verify|verify} messages.
-                     * @param message PageRequest message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encodeDelimited(message: cosmos.base.query.v1beta1.IPageRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Decodes a PageRequest message from the specified reader or buffer.
-                     * @param reader Reader or buffer to decode from
-                     * @param [length] Message length if known beforehand
-                     * @returns PageRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.base.query.v1beta1.PageRequest;
-
-                    /**
-                     * Decodes a PageRequest message from the specified reader or buffer, length delimited.
-                     * @param reader Reader or buffer to decode from
-                     * @returns PageRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.base.query.v1beta1.PageRequest;
-
-                    /**
-                     * Verifies a PageRequest message.
-                     * @param message Plain object to verify
-                     * @returns `null` if valid, otherwise the reason why it is not
-                     */
-                    public static verify(message: { [k: string]: any }): (string|null);
-
-                    /**
-                     * Creates a PageRequest message from a plain object. Also converts values to their respective internal types.
-                     * @param object Plain object
-                     * @returns PageRequest
-                     */
-                    public static fromObject(object: { [k: string]: any }): cosmos.base.query.v1beta1.PageRequest;
-
-                    /**
-                     * Creates a plain object from a PageRequest message. Also converts values to other types if specified.
-                     * @param message PageRequest
-                     * @param [options] Conversion options
-                     * @returns Plain object
-                     */
-                    public static toObject(message: cosmos.base.query.v1beta1.PageRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                    /**
-                     * Converts this PageRequest to JSON.
-                     * @returns JSON object
-                     */
-                    public toJSON(): { [k: string]: any };
-                }
-
-                /** Properties of a PageResponse. */
-                interface IPageResponse {
-
-                    /** PageResponse next_key */
-                    next_key?: (Uint8Array|null);
-
-                    /** PageResponse total */
-                    total?: (Long|null);
-                }
-
-                /** Represents a PageResponse. */
-                class PageResponse implements IPageResponse {
-
-                    /**
-                     * Constructs a new PageResponse.
-                     * @param [properties] Properties to set
-                     */
-                    constructor(properties?: cosmos.base.query.v1beta1.IPageResponse);
-
-                    /** PageResponse next_key. */
-                    public next_key: Uint8Array;
-
-                    /** PageResponse total. */
-                    public total: Long;
-
-                    /**
-                     * Encodes the specified PageResponse message. Does not implicitly {@link cosmos.base.query.v1beta1.PageResponse.verify|verify} messages.
-                     * @param message PageResponse message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encode(message: cosmos.base.query.v1beta1.IPageResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Encodes the specified PageResponse message, length delimited. Does not implicitly {@link cosmos.base.query.v1beta1.PageResponse.verify|verify} messages.
-                     * @param message PageResponse message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encodeDelimited(message: cosmos.base.query.v1beta1.IPageResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Decodes a PageResponse message from the specified reader or buffer.
-                     * @param reader Reader or buffer to decode from
-                     * @param [length] Message length if known beforehand
-                     * @returns PageResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.base.query.v1beta1.PageResponse;
-
-                    /**
-                     * Decodes a PageResponse message from the specified reader or buffer, length delimited.
-                     * @param reader Reader or buffer to decode from
-                     * @returns PageResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.base.query.v1beta1.PageResponse;
-
-                    /**
-                     * Verifies a PageResponse message.
-                     * @param message Plain object to verify
-                     * @returns `null` if valid, otherwise the reason why it is not
-                     */
-                    public static verify(message: { [k: string]: any }): (string|null);
-
-                    /**
-                     * Creates a PageResponse message from a plain object. Also converts values to their respective internal types.
-                     * @param object Plain object
-                     * @returns PageResponse
-                     */
-                    public static fromObject(object: { [k: string]: any }): cosmos.base.query.v1beta1.PageResponse;
-
-                    /**
-                     * Creates a plain object from a PageResponse message. Also converts values to other types if specified.
-                     * @param message PageResponse
-                     * @param [options] Conversion options
-                     * @returns Plain object
-                     */
-                    public static toObject(message: cosmos.base.query.v1beta1.PageResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                    /**
-                     * Converts this PageResponse to JSON.
-                     * @returns JSON object
-                     */
-                    public toJSON(): { [k: string]: any };
-                }
-            }
-        }
-
         /** Namespace v1beta1. */
         namespace v1beta1 {
 
@@ -9035,333 +8837,209 @@ export namespace cosmos {
                 public toJSON(): { [k: string]: any };
             }
         }
+
+        /** Namespace query. */
+        namespace query {
+
+            /** Namespace v1beta1. */
+            namespace v1beta1 {
+
+                /** Properties of a PageRequest. */
+                interface IPageRequest {
+
+                    /** PageRequest key */
+                    key?: (Uint8Array|null);
+
+                    /** PageRequest offset */
+                    offset?: (Long|null);
+
+                    /** PageRequest limit */
+                    limit?: (Long|null);
+
+                    /** PageRequest count_total */
+                    count_total?: (boolean|null);
+                }
+
+                /** Represents a PageRequest. */
+                class PageRequest implements IPageRequest {
+
+                    /**
+                     * Constructs a new PageRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: cosmos.base.query.v1beta1.IPageRequest);
+
+                    /** PageRequest key. */
+                    public key: Uint8Array;
+
+                    /** PageRequest offset. */
+                    public offset: Long;
+
+                    /** PageRequest limit. */
+                    public limit: Long;
+
+                    /** PageRequest count_total. */
+                    public count_total: boolean;
+
+                    /**
+                     * Encodes the specified PageRequest message. Does not implicitly {@link cosmos.base.query.v1beta1.PageRequest.verify|verify} messages.
+                     * @param message PageRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: cosmos.base.query.v1beta1.IPageRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PageRequest message, length delimited. Does not implicitly {@link cosmos.base.query.v1beta1.PageRequest.verify|verify} messages.
+                     * @param message PageRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: cosmos.base.query.v1beta1.IPageRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PageRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PageRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.base.query.v1beta1.PageRequest;
+
+                    /**
+                     * Decodes a PageRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PageRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.base.query.v1beta1.PageRequest;
+
+                    /**
+                     * Verifies a PageRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PageRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PageRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): cosmos.base.query.v1beta1.PageRequest;
+
+                    /**
+                     * Creates a plain object from a PageRequest message. Also converts values to other types if specified.
+                     * @param message PageRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: cosmos.base.query.v1beta1.PageRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PageRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PageResponse. */
+                interface IPageResponse {
+
+                    /** PageResponse next_key */
+                    next_key?: (Uint8Array|null);
+
+                    /** PageResponse total */
+                    total?: (Long|null);
+                }
+
+                /** Represents a PageResponse. */
+                class PageResponse implements IPageResponse {
+
+                    /**
+                     * Constructs a new PageResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: cosmos.base.query.v1beta1.IPageResponse);
+
+                    /** PageResponse next_key. */
+                    public next_key: Uint8Array;
+
+                    /** PageResponse total. */
+                    public total: Long;
+
+                    /**
+                     * Encodes the specified PageResponse message. Does not implicitly {@link cosmos.base.query.v1beta1.PageResponse.verify|verify} messages.
+                     * @param message PageResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: cosmos.base.query.v1beta1.IPageResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PageResponse message, length delimited. Does not implicitly {@link cosmos.base.query.v1beta1.PageResponse.verify|verify} messages.
+                     * @param message PageResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: cosmos.base.query.v1beta1.IPageResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PageResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PageResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.base.query.v1beta1.PageResponse;
+
+                    /**
+                     * Decodes a PageResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PageResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.base.query.v1beta1.PageResponse;
+
+                    /**
+                     * Verifies a PageResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PageResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PageResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): cosmos.base.query.v1beta1.PageResponse;
+
+                    /**
+                     * Creates a plain object from a PageResponse message. Also converts values to other types if specified.
+                     * @param message PageResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: cosmos.base.query.v1beta1.PageResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PageResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+            }
+        }
     }
 }
 
 /** Namespace google. */
 export namespace google {
-
-    /** Namespace api. */
-    namespace api {
-
-        /** Properties of a Http. */
-        interface IHttp {
-
-            /** Http rules */
-            rules?: (google.api.IHttpRule[]|null);
-
-            /** Http fully_decode_reserved_expansion */
-            fully_decode_reserved_expansion?: (boolean|null);
-        }
-
-        /** Represents a Http. */
-        class Http implements IHttp {
-
-            /**
-             * Constructs a new Http.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: google.api.IHttp);
-
-            /** Http rules. */
-            public rules: google.api.IHttpRule[];
-
-            /** Http fully_decode_reserved_expansion. */
-            public fully_decode_reserved_expansion: boolean;
-
-            /**
-             * Encodes the specified Http message. Does not implicitly {@link google.api.Http.verify|verify} messages.
-             * @param message Http message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: google.api.IHttp, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified Http message, length delimited. Does not implicitly {@link google.api.Http.verify|verify} messages.
-             * @param message Http message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: google.api.IHttp, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a Http message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns Http
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.api.Http;
-
-            /**
-             * Decodes a Http message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns Http
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.api.Http;
-
-            /**
-             * Verifies a Http message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a Http message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns Http
-             */
-            public static fromObject(object: { [k: string]: any }): google.api.Http;
-
-            /**
-             * Creates a plain object from a Http message. Also converts values to other types if specified.
-             * @param message Http
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: google.api.Http, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this Http to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a HttpRule. */
-        interface IHttpRule {
-
-            /** HttpRule selector */
-            selector?: (string|null);
-
-            /** HttpRule get */
-            get?: (string|null);
-
-            /** HttpRule put */
-            put?: (string|null);
-
-            /** HttpRule post */
-            post?: (string|null);
-
-            /** HttpRule delete */
-            "delete"?: (string|null);
-
-            /** HttpRule patch */
-            patch?: (string|null);
-
-            /** HttpRule custom */
-            custom?: (google.api.ICustomHttpPattern|null);
-
-            /** HttpRule body */
-            body?: (string|null);
-
-            /** HttpRule response_body */
-            response_body?: (string|null);
-
-            /** HttpRule additional_bindings */
-            additional_bindings?: (google.api.IHttpRule[]|null);
-        }
-
-        /** Represents a HttpRule. */
-        class HttpRule implements IHttpRule {
-
-            /**
-             * Constructs a new HttpRule.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: google.api.IHttpRule);
-
-            /** HttpRule selector. */
-            public selector: string;
-
-            /** HttpRule get. */
-            public get?: (string|null);
-
-            /** HttpRule put. */
-            public put?: (string|null);
-
-            /** HttpRule post. */
-            public post?: (string|null);
-
-            /** HttpRule delete. */
-            public delete?: (string|null);
-
-            /** HttpRule patch. */
-            public patch?: (string|null);
-
-            /** HttpRule custom. */
-            public custom?: (google.api.ICustomHttpPattern|null);
-
-            /** HttpRule body. */
-            public body: string;
-
-            /** HttpRule response_body. */
-            public response_body: string;
-
-            /** HttpRule additional_bindings. */
-            public additional_bindings: google.api.IHttpRule[];
-
-            /** HttpRule pattern. */
-            public pattern?: ("get"|"put"|"post"|"delete"|"patch"|"custom");
-
-            /**
-             * Encodes the specified HttpRule message. Does not implicitly {@link google.api.HttpRule.verify|verify} messages.
-             * @param message HttpRule message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: google.api.IHttpRule, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified HttpRule message, length delimited. Does not implicitly {@link google.api.HttpRule.verify|verify} messages.
-             * @param message HttpRule message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: google.api.IHttpRule, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a HttpRule message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns HttpRule
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.api.HttpRule;
-
-            /**
-             * Decodes a HttpRule message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns HttpRule
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.api.HttpRule;
-
-            /**
-             * Verifies a HttpRule message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a HttpRule message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns HttpRule
-             */
-            public static fromObject(object: { [k: string]: any }): google.api.HttpRule;
-
-            /**
-             * Creates a plain object from a HttpRule message. Also converts values to other types if specified.
-             * @param message HttpRule
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: google.api.HttpRule, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this HttpRule to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a CustomHttpPattern. */
-        interface ICustomHttpPattern {
-
-            /** CustomHttpPattern kind */
-            kind?: (string|null);
-
-            /** CustomHttpPattern path */
-            path?: (string|null);
-        }
-
-        /** Represents a CustomHttpPattern. */
-        class CustomHttpPattern implements ICustomHttpPattern {
-
-            /**
-             * Constructs a new CustomHttpPattern.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: google.api.ICustomHttpPattern);
-
-            /** CustomHttpPattern kind. */
-            public kind: string;
-
-            /** CustomHttpPattern path. */
-            public path: string;
-
-            /**
-             * Encodes the specified CustomHttpPattern message. Does not implicitly {@link google.api.CustomHttpPattern.verify|verify} messages.
-             * @param message CustomHttpPattern message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: google.api.ICustomHttpPattern, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified CustomHttpPattern message, length delimited. Does not implicitly {@link google.api.CustomHttpPattern.verify|verify} messages.
-             * @param message CustomHttpPattern message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: google.api.ICustomHttpPattern, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a CustomHttpPattern message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns CustomHttpPattern
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.api.CustomHttpPattern;
-
-            /**
-             * Decodes a CustomHttpPattern message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns CustomHttpPattern
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.api.CustomHttpPattern;
-
-            /**
-             * Verifies a CustomHttpPattern message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a CustomHttpPattern message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns CustomHttpPattern
-             */
-            public static fromObject(object: { [k: string]: any }): google.api.CustomHttpPattern;
-
-            /**
-             * Creates a plain object from a CustomHttpPattern message. Also converts values to other types if specified.
-             * @param message CustomHttpPattern
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: google.api.CustomHttpPattern, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this CustomHttpPattern to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-    }
 
     /** Namespace protobuf. */
     namespace protobuf {
@@ -10863,12 +10541,6 @@ export namespace google {
             /** MessageOptions uninterpreted_option */
             uninterpreted_option?: (google.protobuf.IUninterpretedOption[]|null);
 
-            /** MessageOptions .cosmos_proto.interface_type */
-            ".cosmos_proto.interface_type"?: (string|null);
-
-            /** MessageOptions .cosmos_proto.implements_interface */
-            ".cosmos_proto.implements_interface"?: (string|null);
-
             /** MessageOptions .gogoproto.goproto_getters */
             ".gogoproto.goproto_getters"?: (boolean|null);
 
@@ -10946,6 +10618,12 @@ export namespace google {
 
             /** MessageOptions .gogoproto.goproto_unkeyed */
             ".gogoproto.goproto_unkeyed"?: (boolean|null);
+
+            /** MessageOptions .cosmos_proto.interface_type */
+            ".cosmos_proto.interface_type"?: (string|null);
+
+            /** MessageOptions .cosmos_proto.implements_interface */
+            ".cosmos_proto.implements_interface"?: (string|null);
         }
 
         /** Represents a MessageOptions. */
@@ -11060,9 +10738,6 @@ export namespace google {
             /** FieldOptions uninterpreted_option */
             uninterpreted_option?: (google.protobuf.IUninterpretedOption[]|null);
 
-            /** FieldOptions .cosmos_proto.accepts_interface */
-            ".cosmos_proto.accepts_interface"?: (string|null);
-
             /** FieldOptions .gogoproto.nullable */
             ".gogoproto.nullable"?: (boolean|null);
 
@@ -11101,6 +10776,9 @@ export namespace google {
 
             /** FieldOptions .gogoproto.castrepeated */
             ".gogoproto.castrepeated"?: (string|null);
+
+            /** FieldOptions .cosmos_proto.accepts_interface */
+            ".cosmos_proto.accepts_interface"?: (string|null);
         }
 
         /** Represents a FieldOptions. */
@@ -12271,95 +11949,6 @@ export namespace google {
             }
         }
 
-        /** Properties of an Any. */
-        interface IAny {
-
-            /** Any type_url */
-            type_url?: (string|null);
-
-            /** Any value */
-            value?: (Uint8Array|null);
-        }
-
-        /** Represents an Any. */
-        class Any implements IAny {
-
-            /**
-             * Constructs a new Any.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: google.protobuf.IAny);
-
-            /** Any type_url. */
-            public type_url: string;
-
-            /** Any value. */
-            public value: Uint8Array;
-
-            /**
-             * Encodes the specified Any message. Does not implicitly {@link google.protobuf.Any.verify|verify} messages.
-             * @param message Any message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: google.protobuf.IAny, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified Any message, length delimited. Does not implicitly {@link google.protobuf.Any.verify|verify} messages.
-             * @param message Any message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: google.protobuf.IAny, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes an Any message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns Any
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.protobuf.Any;
-
-            /**
-             * Decodes an Any message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns Any
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.protobuf.Any;
-
-            /**
-             * Verifies an Any message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates an Any message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns Any
-             */
-            public static fromObject(object: { [k: string]: any }): google.protobuf.Any;
-
-            /**
-             * Creates a plain object from an Any message. Also converts values to other types if specified.
-             * @param message Any
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: google.protobuf.Any, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this Any to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
         /** Properties of a Timestamp. */
         interface ITimestamp {
 
@@ -12533,6 +12122,417 @@ export namespace google {
 
             /**
              * Converts this Duration to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of an Any. */
+        interface IAny {
+
+            /** Any type_url */
+            type_url?: (string|null);
+
+            /** Any value */
+            value?: (Uint8Array|null);
+        }
+
+        /** Represents an Any. */
+        class Any implements IAny {
+
+            /**
+             * Constructs a new Any.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: google.protobuf.IAny);
+
+            /** Any type_url. */
+            public type_url: string;
+
+            /** Any value. */
+            public value: Uint8Array;
+
+            /**
+             * Encodes the specified Any message. Does not implicitly {@link google.protobuf.Any.verify|verify} messages.
+             * @param message Any message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: google.protobuf.IAny, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Any message, length delimited. Does not implicitly {@link google.protobuf.Any.verify|verify} messages.
+             * @param message Any message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: google.protobuf.IAny, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an Any message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Any
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.protobuf.Any;
+
+            /**
+             * Decodes an Any message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Any
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.protobuf.Any;
+
+            /**
+             * Verifies an Any message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an Any message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Any
+             */
+            public static fromObject(object: { [k: string]: any }): google.protobuf.Any;
+
+            /**
+             * Creates a plain object from an Any message. Also converts values to other types if specified.
+             * @param message Any
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: google.protobuf.Any, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Any to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+    }
+
+    /** Namespace api. */
+    namespace api {
+
+        /** Properties of a Http. */
+        interface IHttp {
+
+            /** Http rules */
+            rules?: (google.api.IHttpRule[]|null);
+
+            /** Http fully_decode_reserved_expansion */
+            fully_decode_reserved_expansion?: (boolean|null);
+        }
+
+        /** Represents a Http. */
+        class Http implements IHttp {
+
+            /**
+             * Constructs a new Http.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: google.api.IHttp);
+
+            /** Http rules. */
+            public rules: google.api.IHttpRule[];
+
+            /** Http fully_decode_reserved_expansion. */
+            public fully_decode_reserved_expansion: boolean;
+
+            /**
+             * Encodes the specified Http message. Does not implicitly {@link google.api.Http.verify|verify} messages.
+             * @param message Http message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: google.api.IHttp, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Http message, length delimited. Does not implicitly {@link google.api.Http.verify|verify} messages.
+             * @param message Http message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: google.api.IHttp, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a Http message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Http
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.api.Http;
+
+            /**
+             * Decodes a Http message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Http
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.api.Http;
+
+            /**
+             * Verifies a Http message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a Http message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Http
+             */
+            public static fromObject(object: { [k: string]: any }): google.api.Http;
+
+            /**
+             * Creates a plain object from a Http message. Also converts values to other types if specified.
+             * @param message Http
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: google.api.Http, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Http to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a HttpRule. */
+        interface IHttpRule {
+
+            /** HttpRule selector */
+            selector?: (string|null);
+
+            /** HttpRule get */
+            get?: (string|null);
+
+            /** HttpRule put */
+            put?: (string|null);
+
+            /** HttpRule post */
+            post?: (string|null);
+
+            /** HttpRule delete */
+            "delete"?: (string|null);
+
+            /** HttpRule patch */
+            patch?: (string|null);
+
+            /** HttpRule custom */
+            custom?: (google.api.ICustomHttpPattern|null);
+
+            /** HttpRule body */
+            body?: (string|null);
+
+            /** HttpRule response_body */
+            response_body?: (string|null);
+
+            /** HttpRule additional_bindings */
+            additional_bindings?: (google.api.IHttpRule[]|null);
+        }
+
+        /** Represents a HttpRule. */
+        class HttpRule implements IHttpRule {
+
+            /**
+             * Constructs a new HttpRule.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: google.api.IHttpRule);
+
+            /** HttpRule selector. */
+            public selector: string;
+
+            /** HttpRule get. */
+            public get?: (string|null);
+
+            /** HttpRule put. */
+            public put?: (string|null);
+
+            /** HttpRule post. */
+            public post?: (string|null);
+
+            /** HttpRule delete. */
+            public delete?: (string|null);
+
+            /** HttpRule patch. */
+            public patch?: (string|null);
+
+            /** HttpRule custom. */
+            public custom?: (google.api.ICustomHttpPattern|null);
+
+            /** HttpRule body. */
+            public body: string;
+
+            /** HttpRule response_body. */
+            public response_body: string;
+
+            /** HttpRule additional_bindings. */
+            public additional_bindings: google.api.IHttpRule[];
+
+            /** HttpRule pattern. */
+            public pattern?: ("get"|"put"|"post"|"delete"|"patch"|"custom");
+
+            /**
+             * Encodes the specified HttpRule message. Does not implicitly {@link google.api.HttpRule.verify|verify} messages.
+             * @param message HttpRule message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: google.api.IHttpRule, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified HttpRule message, length delimited. Does not implicitly {@link google.api.HttpRule.verify|verify} messages.
+             * @param message HttpRule message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: google.api.IHttpRule, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a HttpRule message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns HttpRule
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.api.HttpRule;
+
+            /**
+             * Decodes a HttpRule message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns HttpRule
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.api.HttpRule;
+
+            /**
+             * Verifies a HttpRule message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a HttpRule message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns HttpRule
+             */
+            public static fromObject(object: { [k: string]: any }): google.api.HttpRule;
+
+            /**
+             * Creates a plain object from a HttpRule message. Also converts values to other types if specified.
+             * @param message HttpRule
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: google.api.HttpRule, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this HttpRule to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a CustomHttpPattern. */
+        interface ICustomHttpPattern {
+
+            /** CustomHttpPattern kind */
+            kind?: (string|null);
+
+            /** CustomHttpPattern path */
+            path?: (string|null);
+        }
+
+        /** Represents a CustomHttpPattern. */
+        class CustomHttpPattern implements ICustomHttpPattern {
+
+            /**
+             * Constructs a new CustomHttpPattern.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: google.api.ICustomHttpPattern);
+
+            /** CustomHttpPattern kind. */
+            public kind: string;
+
+            /** CustomHttpPattern path. */
+            public path: string;
+
+            /**
+             * Encodes the specified CustomHttpPattern message. Does not implicitly {@link google.api.CustomHttpPattern.verify|verify} messages.
+             * @param message CustomHttpPattern message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: google.api.ICustomHttpPattern, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified CustomHttpPattern message, length delimited. Does not implicitly {@link google.api.CustomHttpPattern.verify|verify} messages.
+             * @param message CustomHttpPattern message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: google.api.ICustomHttpPattern, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a CustomHttpPattern message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns CustomHttpPattern
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.api.CustomHttpPattern;
+
+            /**
+             * Decodes a CustomHttpPattern message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns CustomHttpPattern
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.api.CustomHttpPattern;
+
+            /**
+             * Verifies a CustomHttpPattern message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a CustomHttpPattern message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns CustomHttpPattern
+             */
+            public static fromObject(object: { [k: string]: any }): google.api.CustomHttpPattern;
+
+            /**
+             * Creates a plain object from a CustomHttpPattern message. Also converts values to other types if specified.
+             * @param message CustomHttpPattern
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: google.api.CustomHttpPattern, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this CustomHttpPattern to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };

@@ -25,143 +25,80 @@ export const ununifi = $root.ununifi = (() => {
          */
         const auction = {};
 
-        auction.Query = (function() {
+        auction.Msg = (function() {
 
             /**
-             * Constructs a new Query service.
+             * Constructs a new Msg service.
              * @memberof ununifi.auction
-             * @classdesc Represents a Query
+             * @classdesc Represents a Msg
              * @extends $protobuf.rpc.Service
              * @constructor
              * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
              * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
              * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
              */
-            function Query(rpcImpl, requestDelimited, responseDelimited) {
+            function Msg(rpcImpl, requestDelimited, responseDelimited) {
                 $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
             }
 
-            (Query.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Query;
+            (Msg.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Msg;
 
             /**
-             * Callback as used by {@link ununifi.auction.Query#params}.
-             * @memberof ununifi.auction.Query
-             * @typedef ParamsCallback
+             * Callback as used by {@link ununifi.auction.Msg#placeBid}.
+             * @memberof ununifi.auction.Msg
+             * @typedef PlaceBidCallback
              * @type {function}
              * @param {Error|null} error Error, if any
-             * @param {ununifi.auction.QueryParamsResponse} [response] QueryParamsResponse
+             * @param {ununifi.auction.MsgPlaceBidResponse} [response] MsgPlaceBidResponse
              */
 
             /**
-             * Calls Params.
-             * @function params
-             * @memberof ununifi.auction.Query
+             * Calls PlaceBid.
+             * @function placeBid
+             * @memberof ununifi.auction.Msg
              * @instance
-             * @param {ununifi.auction.IQueryParamsRequest} request QueryParamsRequest message or plain object
-             * @param {ununifi.auction.Query.ParamsCallback} callback Node-style callback called with the error, if any, and QueryParamsResponse
+             * @param {ununifi.auction.IMsgPlaceBid} request MsgPlaceBid message or plain object
+             * @param {ununifi.auction.Msg.PlaceBidCallback} callback Node-style callback called with the error, if any, and MsgPlaceBidResponse
              * @returns {undefined}
              * @variation 1
              */
-            Object.defineProperty(Query.prototype.params = function params(request, callback) {
-                return this.rpcCall(params, $root.ununifi.auction.QueryParamsRequest, $root.ununifi.auction.QueryParamsResponse, request, callback);
-            }, "name", { value: "Params" });
+            Object.defineProperty(Msg.prototype.placeBid = function placeBid(request, callback) {
+                return this.rpcCall(placeBid, $root.ununifi.auction.MsgPlaceBid, $root.ununifi.auction.MsgPlaceBidResponse, request, callback);
+            }, "name", { value: "PlaceBid" });
 
             /**
-             * Calls Params.
-             * @function params
-             * @memberof ununifi.auction.Query
+             * Calls PlaceBid.
+             * @function placeBid
+             * @memberof ununifi.auction.Msg
              * @instance
-             * @param {ununifi.auction.IQueryParamsRequest} request QueryParamsRequest message or plain object
-             * @returns {Promise<ununifi.auction.QueryParamsResponse>} Promise
+             * @param {ununifi.auction.IMsgPlaceBid} request MsgPlaceBid message or plain object
+             * @returns {Promise<ununifi.auction.MsgPlaceBidResponse>} Promise
              * @variation 2
              */
 
-            /**
-             * Callback as used by {@link ununifi.auction.Query#auction}.
-             * @memberof ununifi.auction.Query
-             * @typedef AuctionCallback
-             * @type {function}
-             * @param {Error|null} error Error, if any
-             * @param {ununifi.auction.QueryGetAuctionResponse} [response] QueryGetAuctionResponse
-             */
-
-            /**
-             * Calls Auction.
-             * @function auction
-             * @memberof ununifi.auction.Query
-             * @instance
-             * @param {ununifi.auction.IQueryGetAuctionRequest} request QueryGetAuctionRequest message or plain object
-             * @param {ununifi.auction.Query.AuctionCallback} callback Node-style callback called with the error, if any, and QueryGetAuctionResponse
-             * @returns {undefined}
-             * @variation 1
-             */
-            Object.defineProperty(Query.prototype.auction = function auction(request, callback) {
-                return this.rpcCall(auction, $root.ununifi.auction.QueryGetAuctionRequest, $root.ununifi.auction.QueryGetAuctionResponse, request, callback);
-            }, "name", { value: "Auction" });
-
-            /**
-             * Calls Auction.
-             * @function auction
-             * @memberof ununifi.auction.Query
-             * @instance
-             * @param {ununifi.auction.IQueryGetAuctionRequest} request QueryGetAuctionRequest message or plain object
-             * @returns {Promise<ununifi.auction.QueryGetAuctionResponse>} Promise
-             * @variation 2
-             */
-
-            /**
-             * Callback as used by {@link ununifi.auction.Query#auctionAll}.
-             * @memberof ununifi.auction.Query
-             * @typedef AuctionAllCallback
-             * @type {function}
-             * @param {Error|null} error Error, if any
-             * @param {ununifi.auction.QueryAllAuctionResponse} [response] QueryAllAuctionResponse
-             */
-
-            /**
-             * Calls AuctionAll.
-             * @function auctionAll
-             * @memberof ununifi.auction.Query
-             * @instance
-             * @param {ununifi.auction.IQueryAllAuctionRequest} request QueryAllAuctionRequest message or plain object
-             * @param {ununifi.auction.Query.AuctionAllCallback} callback Node-style callback called with the error, if any, and QueryAllAuctionResponse
-             * @returns {undefined}
-             * @variation 1
-             */
-            Object.defineProperty(Query.prototype.auctionAll = function auctionAll(request, callback) {
-                return this.rpcCall(auctionAll, $root.ununifi.auction.QueryAllAuctionRequest, $root.ununifi.auction.QueryAllAuctionResponse, request, callback);
-            }, "name", { value: "AuctionAll" });
-
-            /**
-             * Calls AuctionAll.
-             * @function auctionAll
-             * @memberof ununifi.auction.Query
-             * @instance
-             * @param {ununifi.auction.IQueryAllAuctionRequest} request QueryAllAuctionRequest message or plain object
-             * @returns {Promise<ununifi.auction.QueryAllAuctionResponse>} Promise
-             * @variation 2
-             */
-
-            return Query;
+            return Msg;
         })();
 
-        auction.QueryParamsRequest = (function() {
+        auction.MsgPlaceBid = (function() {
 
             /**
-             * Properties of a QueryParamsRequest.
+             * Properties of a MsgPlaceBid.
              * @memberof ununifi.auction
-             * @interface IQueryParamsRequest
+             * @interface IMsgPlaceBid
+             * @property {Long|null} [auction_id] MsgPlaceBid auction_id
+             * @property {string|null} [bidder] MsgPlaceBid bidder
+             * @property {cosmos.base.v1beta1.ICoin|null} [amount] MsgPlaceBid amount
              */
 
             /**
-             * Constructs a new QueryParamsRequest.
+             * Constructs a new MsgPlaceBid.
              * @memberof ununifi.auction
-             * @classdesc Represents a QueryParamsRequest.
-             * @implements IQueryParamsRequest
+             * @classdesc Represents a MsgPlaceBid.
+             * @implements IMsgPlaceBid
              * @constructor
-             * @param {ununifi.auction.IQueryParamsRequest=} [properties] Properties to set
+             * @param {ununifi.auction.IMsgPlaceBid=} [properties] Properties to set
              */
-            function QueryParamsRequest(properties) {
+            function MsgPlaceBid(properties) {
                 if (properties)
                     for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                         if (properties[keys[i]] != null)
@@ -169,48 +106,284 @@ export const ununifi = $root.ununifi = (() => {
             }
 
             /**
-             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.auction.QueryParamsRequest.verify|verify} messages.
+             * MsgPlaceBid auction_id.
+             * @member {Long} auction_id
+             * @memberof ununifi.auction.MsgPlaceBid
+             * @instance
+             */
+            MsgPlaceBid.prototype.auction_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+
+            /**
+             * MsgPlaceBid bidder.
+             * @member {string} bidder
+             * @memberof ununifi.auction.MsgPlaceBid
+             * @instance
+             */
+            MsgPlaceBid.prototype.bidder = "";
+
+            /**
+             * MsgPlaceBid amount.
+             * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+             * @memberof ununifi.auction.MsgPlaceBid
+             * @instance
+             */
+            MsgPlaceBid.prototype.amount = null;
+
+            /**
+             * Encodes the specified MsgPlaceBid message. Does not implicitly {@link ununifi.auction.MsgPlaceBid.verify|verify} messages.
              * @function encode
-             * @memberof ununifi.auction.QueryParamsRequest
+             * @memberof ununifi.auction.MsgPlaceBid
              * @static
-             * @param {ununifi.auction.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
+             * @param {ununifi.auction.IMsgPlaceBid} message MsgPlaceBid message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
-            QueryParamsRequest.encode = function encode(message, writer) {
+            MsgPlaceBid.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.auction_id != null && Object.hasOwnProperty.call(message, "auction_id"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.auction_id);
+                if (message.bidder != null && Object.hasOwnProperty.call(message, "bidder"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.bidder);
+                if (message.amount != null && Object.hasOwnProperty.call(message, "amount"))
+                    $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified MsgPlaceBid message, length delimited. Does not implicitly {@link ununifi.auction.MsgPlaceBid.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.auction.MsgPlaceBid
+             * @static
+             * @param {ununifi.auction.IMsgPlaceBid} message MsgPlaceBid message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            MsgPlaceBid.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a MsgPlaceBid message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.auction.MsgPlaceBid
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.auction.MsgPlaceBid} MsgPlaceBid
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            MsgPlaceBid.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.MsgPlaceBid();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.auction_id = reader.uint64();
+                        break;
+                    case 2:
+                        message.bidder = reader.string();
+                        break;
+                    case 3:
+                        message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a MsgPlaceBid message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.auction.MsgPlaceBid
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.auction.MsgPlaceBid} MsgPlaceBid
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            MsgPlaceBid.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a MsgPlaceBid message.
+             * @function verify
+             * @memberof ununifi.auction.MsgPlaceBid
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            MsgPlaceBid.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.auction_id != null && message.hasOwnProperty("auction_id"))
+                    if (!$util.isInteger(message.auction_id) && !(message.auction_id && $util.isInteger(message.auction_id.low) && $util.isInteger(message.auction_id.high)))
+                        return "auction_id: integer|Long expected";
+                if (message.bidder != null && message.hasOwnProperty("bidder"))
+                    if (!$util.isString(message.bidder))
+                        return "bidder: string expected";
+                if (message.amount != null && message.hasOwnProperty("amount")) {
+                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
+                    if (error)
+                        return "amount." + error;
+                }
+                return null;
+            };
+
+            /**
+             * Creates a MsgPlaceBid message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.auction.MsgPlaceBid
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.auction.MsgPlaceBid} MsgPlaceBid
+             */
+            MsgPlaceBid.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.auction.MsgPlaceBid)
+                    return object;
+                let message = new $root.ununifi.auction.MsgPlaceBid();
+                if (object.auction_id != null)
+                    if ($util.Long)
+                        (message.auction_id = $util.Long.fromValue(object.auction_id)).unsigned = true;
+                    else if (typeof object.auction_id === "string")
+                        message.auction_id = parseInt(object.auction_id, 10);
+                    else if (typeof object.auction_id === "number")
+                        message.auction_id = object.auction_id;
+                    else if (typeof object.auction_id === "object")
+                        message.auction_id = new $util.LongBits(object.auction_id.low >>> 0, object.auction_id.high >>> 0).toNumber(true);
+                if (object.bidder != null)
+                    message.bidder = String(object.bidder);
+                if (object.amount != null) {
+                    if (typeof object.amount !== "object")
+                        throw TypeError(".ununifi.auction.MsgPlaceBid.amount: object expected");
+                    message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a MsgPlaceBid message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.auction.MsgPlaceBid
+             * @static
+             * @param {ununifi.auction.MsgPlaceBid} message MsgPlaceBid
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            MsgPlaceBid.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    if ($util.Long) {
+                        let long = new $util.Long(0, 0, true);
+                        object.auction_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.auction_id = options.longs === String ? "0" : 0;
+                    object.bidder = "";
+                    object.amount = null;
+                }
+                if (message.auction_id != null && message.hasOwnProperty("auction_id"))
+                    if (typeof message.auction_id === "number")
+                        object.auction_id = options.longs === String ? String(message.auction_id) : message.auction_id;
+                    else
+                        object.auction_id = options.longs === String ? $util.Long.prototype.toString.call(message.auction_id) : options.longs === Number ? new $util.LongBits(message.auction_id.low >>> 0, message.auction_id.high >>> 0).toNumber(true) : message.auction_id;
+                if (message.bidder != null && message.hasOwnProperty("bidder"))
+                    object.bidder = message.bidder;
+                if (message.amount != null && message.hasOwnProperty("amount"))
+                    object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+                return object;
+            };
+
+            /**
+             * Converts this MsgPlaceBid to JSON.
+             * @function toJSON
+             * @memberof ununifi.auction.MsgPlaceBid
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            MsgPlaceBid.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return MsgPlaceBid;
+        })();
+
+        auction.MsgPlaceBidResponse = (function() {
+
+            /**
+             * Properties of a MsgPlaceBidResponse.
+             * @memberof ununifi.auction
+             * @interface IMsgPlaceBidResponse
+             */
+
+            /**
+             * Constructs a new MsgPlaceBidResponse.
+             * @memberof ununifi.auction
+             * @classdesc Represents a MsgPlaceBidResponse.
+             * @implements IMsgPlaceBidResponse
+             * @constructor
+             * @param {ununifi.auction.IMsgPlaceBidResponse=} [properties] Properties to set
+             */
+            function MsgPlaceBidResponse(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Encodes the specified MsgPlaceBidResponse message. Does not implicitly {@link ununifi.auction.MsgPlaceBidResponse.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.auction.MsgPlaceBidResponse
+             * @static
+             * @param {ununifi.auction.IMsgPlaceBidResponse} message MsgPlaceBidResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            MsgPlaceBidResponse.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
                 return writer;
             };
 
             /**
-             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.auction.QueryParamsRequest.verify|verify} messages.
+             * Encodes the specified MsgPlaceBidResponse message, length delimited. Does not implicitly {@link ununifi.auction.MsgPlaceBidResponse.verify|verify} messages.
              * @function encodeDelimited
-             * @memberof ununifi.auction.QueryParamsRequest
+             * @memberof ununifi.auction.MsgPlaceBidResponse
              * @static
-             * @param {ununifi.auction.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
+             * @param {ununifi.auction.IMsgPlaceBidResponse} message MsgPlaceBidResponse message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
-            QueryParamsRequest.encodeDelimited = function encodeDelimited(message, writer) {
+            MsgPlaceBidResponse.encodeDelimited = function encodeDelimited(message, writer) {
                 return this.encode(message, writer).ldelim();
             };
 
             /**
-             * Decodes a QueryParamsRequest message from the specified reader or buffer.
+             * Decodes a MsgPlaceBidResponse message from the specified reader or buffer.
              * @function decode
-             * @memberof ununifi.auction.QueryParamsRequest
+             * @memberof ununifi.auction.MsgPlaceBidResponse
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.auction.QueryParamsRequest} QueryParamsRequest
+             * @returns {ununifi.auction.MsgPlaceBidResponse} MsgPlaceBidResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            QueryParamsRequest.decode = function decode(reader, length) {
+            MsgPlaceBidResponse.decode = function decode(reader, length) {
                 if (!(reader instanceof $Reader))
                     reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.QueryParamsRequest();
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.MsgPlaceBidResponse();
                 while (reader.pos < end) {
                     let tag = reader.uint32();
                     switch (tag >>> 3) {
@@ -223,1027 +396,74 @@ export const ununifi = $root.ununifi = (() => {
             };
 
             /**
-             * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
+             * Decodes a MsgPlaceBidResponse message from the specified reader or buffer, length delimited.
              * @function decodeDelimited
-             * @memberof ununifi.auction.QueryParamsRequest
+             * @memberof ununifi.auction.MsgPlaceBidResponse
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.auction.QueryParamsRequest} QueryParamsRequest
+             * @returns {ununifi.auction.MsgPlaceBidResponse} MsgPlaceBidResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            QueryParamsRequest.decodeDelimited = function decodeDelimited(reader) {
+            MsgPlaceBidResponse.decodeDelimited = function decodeDelimited(reader) {
                 if (!(reader instanceof $Reader))
                     reader = new $Reader(reader);
                 return this.decode(reader, reader.uint32());
             };
 
             /**
-             * Verifies a QueryParamsRequest message.
+             * Verifies a MsgPlaceBidResponse message.
              * @function verify
-             * @memberof ununifi.auction.QueryParamsRequest
+             * @memberof ununifi.auction.MsgPlaceBidResponse
              * @static
              * @param {Object.<string,*>} message Plain object to verify
              * @returns {string|null} `null` if valid, otherwise the reason why it is not
              */
-            QueryParamsRequest.verify = function verify(message) {
+            MsgPlaceBidResponse.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
                 return null;
             };
 
             /**
-             * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
+             * Creates a MsgPlaceBidResponse message from a plain object. Also converts values to their respective internal types.
              * @function fromObject
-             * @memberof ununifi.auction.QueryParamsRequest
+             * @memberof ununifi.auction.MsgPlaceBidResponse
              * @static
              * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.auction.QueryParamsRequest} QueryParamsRequest
+             * @returns {ununifi.auction.MsgPlaceBidResponse} MsgPlaceBidResponse
              */
-            QueryParamsRequest.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.auction.QueryParamsRequest)
+            MsgPlaceBidResponse.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.auction.MsgPlaceBidResponse)
                     return object;
-                return new $root.ununifi.auction.QueryParamsRequest();
+                return new $root.ununifi.auction.MsgPlaceBidResponse();
             };
 
             /**
-             * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
+             * Creates a plain object from a MsgPlaceBidResponse message. Also converts values to other types if specified.
              * @function toObject
-             * @memberof ununifi.auction.QueryParamsRequest
+             * @memberof ununifi.auction.MsgPlaceBidResponse
              * @static
-             * @param {ununifi.auction.QueryParamsRequest} message QueryParamsRequest
+             * @param {ununifi.auction.MsgPlaceBidResponse} message MsgPlaceBidResponse
              * @param {$protobuf.IConversionOptions} [options] Conversion options
              * @returns {Object.<string,*>} Plain object
              */
-            QueryParamsRequest.toObject = function toObject() {
+            MsgPlaceBidResponse.toObject = function toObject() {
                 return {};
             };
 
             /**
-             * Converts this QueryParamsRequest to JSON.
+             * Converts this MsgPlaceBidResponse to JSON.
              * @function toJSON
-             * @memberof ununifi.auction.QueryParamsRequest
+             * @memberof ununifi.auction.MsgPlaceBidResponse
              * @instance
              * @returns {Object.<string,*>} JSON object
              */
-            QueryParamsRequest.prototype.toJSON = function toJSON() {
+            MsgPlaceBidResponse.prototype.toJSON = function toJSON() {
                 return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
             };
 
-            return QueryParamsRequest;
-        })();
-
-        auction.QueryParamsResponse = (function() {
-
-            /**
-             * Properties of a QueryParamsResponse.
-             * @memberof ununifi.auction
-             * @interface IQueryParamsResponse
-             * @property {ununifi.auction.IParams|null} [params] QueryParamsResponse params
-             */
-
-            /**
-             * Constructs a new QueryParamsResponse.
-             * @memberof ununifi.auction
-             * @classdesc Represents a QueryParamsResponse.
-             * @implements IQueryParamsResponse
-             * @constructor
-             * @param {ununifi.auction.IQueryParamsResponse=} [properties] Properties to set
-             */
-            function QueryParamsResponse(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * QueryParamsResponse params.
-             * @member {ununifi.auction.IParams|null|undefined} params
-             * @memberof ununifi.auction.QueryParamsResponse
-             * @instance
-             */
-            QueryParamsResponse.prototype.params = null;
-
-            /**
-             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.auction.QueryParamsResponse.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.auction.QueryParamsResponse
-             * @static
-             * @param {ununifi.auction.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryParamsResponse.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.params != null && Object.hasOwnProperty.call(message, "params"))
-                    $root.ununifi.auction.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.auction.QueryParamsResponse.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.auction.QueryParamsResponse
-             * @static
-             * @param {ununifi.auction.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryParamsResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryParamsResponse message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.auction.QueryParamsResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.auction.QueryParamsResponse} QueryParamsResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryParamsResponse.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.QueryParamsResponse();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.params = $root.ununifi.auction.Params.decode(reader, reader.uint32());
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.auction.QueryParamsResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.auction.QueryParamsResponse} QueryParamsResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryParamsResponse.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryParamsResponse message.
-             * @function verify
-             * @memberof ununifi.auction.QueryParamsResponse
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryParamsResponse.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.params != null && message.hasOwnProperty("params")) {
-                    let error = $root.ununifi.auction.Params.verify(message.params);
-                    if (error)
-                        return "params." + error;
-                }
-                return null;
-            };
-
-            /**
-             * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.auction.QueryParamsResponse
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.auction.QueryParamsResponse} QueryParamsResponse
-             */
-            QueryParamsResponse.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.auction.QueryParamsResponse)
-                    return object;
-                let message = new $root.ununifi.auction.QueryParamsResponse();
-                if (object.params != null) {
-                    if (typeof object.params !== "object")
-                        throw TypeError(".ununifi.auction.QueryParamsResponse.params: object expected");
-                    message.params = $root.ununifi.auction.Params.fromObject(object.params);
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.auction.QueryParamsResponse
-             * @static
-             * @param {ununifi.auction.QueryParamsResponse} message QueryParamsResponse
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryParamsResponse.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults)
-                    object.params = null;
-                if (message.params != null && message.hasOwnProperty("params"))
-                    object.params = $root.ununifi.auction.Params.toObject(message.params, options);
-                return object;
-            };
-
-            /**
-             * Converts this QueryParamsResponse to JSON.
-             * @function toJSON
-             * @memberof ununifi.auction.QueryParamsResponse
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryParamsResponse.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryParamsResponse;
-        })();
-
-        auction.QueryGetAuctionRequest = (function() {
-
-            /**
-             * Properties of a QueryGetAuctionRequest.
-             * @memberof ununifi.auction
-             * @interface IQueryGetAuctionRequest
-             * @property {Long|null} [id] QueryGetAuctionRequest id
-             */
-
-            /**
-             * Constructs a new QueryGetAuctionRequest.
-             * @memberof ununifi.auction
-             * @classdesc Represents a QueryGetAuctionRequest.
-             * @implements IQueryGetAuctionRequest
-             * @constructor
-             * @param {ununifi.auction.IQueryGetAuctionRequest=} [properties] Properties to set
-             */
-            function QueryGetAuctionRequest(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * QueryGetAuctionRequest id.
-             * @member {Long} id
-             * @memberof ununifi.auction.QueryGetAuctionRequest
-             * @instance
-             */
-            QueryGetAuctionRequest.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-
-            /**
-             * Encodes the specified QueryGetAuctionRequest message. Does not implicitly {@link ununifi.auction.QueryGetAuctionRequest.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.auction.QueryGetAuctionRequest
-             * @static
-             * @param {ununifi.auction.IQueryGetAuctionRequest} message QueryGetAuctionRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryGetAuctionRequest.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.id != null && Object.hasOwnProperty.call(message, "id"))
-                    writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryGetAuctionRequest message, length delimited. Does not implicitly {@link ununifi.auction.QueryGetAuctionRequest.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.auction.QueryGetAuctionRequest
-             * @static
-             * @param {ununifi.auction.IQueryGetAuctionRequest} message QueryGetAuctionRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryGetAuctionRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryGetAuctionRequest message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.auction.QueryGetAuctionRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.auction.QueryGetAuctionRequest} QueryGetAuctionRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryGetAuctionRequest.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.QueryGetAuctionRequest();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.id = reader.uint64();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryGetAuctionRequest message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.auction.QueryGetAuctionRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.auction.QueryGetAuctionRequest} QueryGetAuctionRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryGetAuctionRequest.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryGetAuctionRequest message.
-             * @function verify
-             * @memberof ununifi.auction.QueryGetAuctionRequest
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryGetAuctionRequest.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.id != null && message.hasOwnProperty("id"))
-                    if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
-                        return "id: integer|Long expected";
-                return null;
-            };
-
-            /**
-             * Creates a QueryGetAuctionRequest message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.auction.QueryGetAuctionRequest
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.auction.QueryGetAuctionRequest} QueryGetAuctionRequest
-             */
-            QueryGetAuctionRequest.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.auction.QueryGetAuctionRequest)
-                    return object;
-                let message = new $root.ununifi.auction.QueryGetAuctionRequest();
-                if (object.id != null)
-                    if ($util.Long)
-                        (message.id = $util.Long.fromValue(object.id)).unsigned = true;
-                    else if (typeof object.id === "string")
-                        message.id = parseInt(object.id, 10);
-                    else if (typeof object.id === "number")
-                        message.id = object.id;
-                    else if (typeof object.id === "object")
-                        message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a QueryGetAuctionRequest message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.auction.QueryGetAuctionRequest
-             * @static
-             * @param {ununifi.auction.QueryGetAuctionRequest} message QueryGetAuctionRequest
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryGetAuctionRequest.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults)
-                    if ($util.Long) {
-                        let long = new $util.Long(0, 0, true);
-                        object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.id = options.longs === String ? "0" : 0;
-                if (message.id != null && message.hasOwnProperty("id"))
-                    if (typeof message.id === "number")
-                        object.id = options.longs === String ? String(message.id) : message.id;
-                    else
-                        object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
-                return object;
-            };
-
-            /**
-             * Converts this QueryGetAuctionRequest to JSON.
-             * @function toJSON
-             * @memberof ununifi.auction.QueryGetAuctionRequest
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryGetAuctionRequest.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryGetAuctionRequest;
-        })();
-
-        auction.QueryGetAuctionResponse = (function() {
-
-            /**
-             * Properties of a QueryGetAuctionResponse.
-             * @memberof ununifi.auction
-             * @interface IQueryGetAuctionResponse
-             * @property {google.protobuf.IAny|null} [auction] QueryGetAuctionResponse auction
-             */
-
-            /**
-             * Constructs a new QueryGetAuctionResponse.
-             * @memberof ununifi.auction
-             * @classdesc Represents a QueryGetAuctionResponse.
-             * @implements IQueryGetAuctionResponse
-             * @constructor
-             * @param {ununifi.auction.IQueryGetAuctionResponse=} [properties] Properties to set
-             */
-            function QueryGetAuctionResponse(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * QueryGetAuctionResponse auction.
-             * @member {google.protobuf.IAny|null|undefined} auction
-             * @memberof ununifi.auction.QueryGetAuctionResponse
-             * @instance
-             */
-            QueryGetAuctionResponse.prototype.auction = null;
-
-            /**
-             * Encodes the specified QueryGetAuctionResponse message. Does not implicitly {@link ununifi.auction.QueryGetAuctionResponse.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.auction.QueryGetAuctionResponse
-             * @static
-             * @param {ununifi.auction.IQueryGetAuctionResponse} message QueryGetAuctionResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryGetAuctionResponse.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.auction != null && Object.hasOwnProperty.call(message, "auction"))
-                    $root.google.protobuf.Any.encode(message.auction, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryGetAuctionResponse message, length delimited. Does not implicitly {@link ununifi.auction.QueryGetAuctionResponse.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.auction.QueryGetAuctionResponse
-             * @static
-             * @param {ununifi.auction.IQueryGetAuctionResponse} message QueryGetAuctionResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryGetAuctionResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryGetAuctionResponse message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.auction.QueryGetAuctionResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.auction.QueryGetAuctionResponse} QueryGetAuctionResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryGetAuctionResponse.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.QueryGetAuctionResponse();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.auction = $root.google.protobuf.Any.decode(reader, reader.uint32());
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryGetAuctionResponse message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.auction.QueryGetAuctionResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.auction.QueryGetAuctionResponse} QueryGetAuctionResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryGetAuctionResponse.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryGetAuctionResponse message.
-             * @function verify
-             * @memberof ununifi.auction.QueryGetAuctionResponse
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryGetAuctionResponse.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.auction != null && message.hasOwnProperty("auction")) {
-                    let error = $root.google.protobuf.Any.verify(message.auction);
-                    if (error)
-                        return "auction." + error;
-                }
-                return null;
-            };
-
-            /**
-             * Creates a QueryGetAuctionResponse message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.auction.QueryGetAuctionResponse
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.auction.QueryGetAuctionResponse} QueryGetAuctionResponse
-             */
-            QueryGetAuctionResponse.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.auction.QueryGetAuctionResponse)
-                    return object;
-                let message = new $root.ununifi.auction.QueryGetAuctionResponse();
-                if (object.auction != null) {
-                    if (typeof object.auction !== "object")
-                        throw TypeError(".ununifi.auction.QueryGetAuctionResponse.auction: object expected");
-                    message.auction = $root.google.protobuf.Any.fromObject(object.auction);
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a QueryGetAuctionResponse message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.auction.QueryGetAuctionResponse
-             * @static
-             * @param {ununifi.auction.QueryGetAuctionResponse} message QueryGetAuctionResponse
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryGetAuctionResponse.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults)
-                    object.auction = null;
-                if (message.auction != null && message.hasOwnProperty("auction"))
-                    object.auction = $root.google.protobuf.Any.toObject(message.auction, options);
-                return object;
-            };
-
-            /**
-             * Converts this QueryGetAuctionResponse to JSON.
-             * @function toJSON
-             * @memberof ununifi.auction.QueryGetAuctionResponse
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryGetAuctionResponse.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryGetAuctionResponse;
-        })();
-
-        auction.QueryAllAuctionRequest = (function() {
-
-            /**
-             * Properties of a QueryAllAuctionRequest.
-             * @memberof ununifi.auction
-             * @interface IQueryAllAuctionRequest
-             * @property {cosmos.base.query.v1beta1.IPageRequest|null} [pagination] QueryAllAuctionRequest pagination
-             */
-
-            /**
-             * Constructs a new QueryAllAuctionRequest.
-             * @memberof ununifi.auction
-             * @classdesc Represents a QueryAllAuctionRequest.
-             * @implements IQueryAllAuctionRequest
-             * @constructor
-             * @param {ununifi.auction.IQueryAllAuctionRequest=} [properties] Properties to set
-             */
-            function QueryAllAuctionRequest(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * QueryAllAuctionRequest pagination.
-             * @member {cosmos.base.query.v1beta1.IPageRequest|null|undefined} pagination
-             * @memberof ununifi.auction.QueryAllAuctionRequest
-             * @instance
-             */
-            QueryAllAuctionRequest.prototype.pagination = null;
-
-            /**
-             * Encodes the specified QueryAllAuctionRequest message. Does not implicitly {@link ununifi.auction.QueryAllAuctionRequest.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.auction.QueryAllAuctionRequest
-             * @static
-             * @param {ununifi.auction.IQueryAllAuctionRequest} message QueryAllAuctionRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllAuctionRequest.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
-                    $root.cosmos.base.query.v1beta1.PageRequest.encode(message.pagination, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryAllAuctionRequest message, length delimited. Does not implicitly {@link ununifi.auction.QueryAllAuctionRequest.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.auction.QueryAllAuctionRequest
-             * @static
-             * @param {ununifi.auction.IQueryAllAuctionRequest} message QueryAllAuctionRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllAuctionRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryAllAuctionRequest message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.auction.QueryAllAuctionRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.auction.QueryAllAuctionRequest} QueryAllAuctionRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllAuctionRequest.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.QueryAllAuctionRequest();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.decode(reader, reader.uint32());
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryAllAuctionRequest message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.auction.QueryAllAuctionRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.auction.QueryAllAuctionRequest} QueryAllAuctionRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllAuctionRequest.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryAllAuctionRequest message.
-             * @function verify
-             * @memberof ununifi.auction.QueryAllAuctionRequest
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryAllAuctionRequest.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.pagination != null && message.hasOwnProperty("pagination")) {
-                    let error = $root.cosmos.base.query.v1beta1.PageRequest.verify(message.pagination);
-                    if (error)
-                        return "pagination." + error;
-                }
-                return null;
-            };
-
-            /**
-             * Creates a QueryAllAuctionRequest message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.auction.QueryAllAuctionRequest
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.auction.QueryAllAuctionRequest} QueryAllAuctionRequest
-             */
-            QueryAllAuctionRequest.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.auction.QueryAllAuctionRequest)
-                    return object;
-                let message = new $root.ununifi.auction.QueryAllAuctionRequest();
-                if (object.pagination != null) {
-                    if (typeof object.pagination !== "object")
-                        throw TypeError(".ununifi.auction.QueryAllAuctionRequest.pagination: object expected");
-                    message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.fromObject(object.pagination);
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a QueryAllAuctionRequest message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.auction.QueryAllAuctionRequest
-             * @static
-             * @param {ununifi.auction.QueryAllAuctionRequest} message QueryAllAuctionRequest
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryAllAuctionRequest.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults)
-                    object.pagination = null;
-                if (message.pagination != null && message.hasOwnProperty("pagination"))
-                    object.pagination = $root.cosmos.base.query.v1beta1.PageRequest.toObject(message.pagination, options);
-                return object;
-            };
-
-            /**
-             * Converts this QueryAllAuctionRequest to JSON.
-             * @function toJSON
-             * @memberof ununifi.auction.QueryAllAuctionRequest
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryAllAuctionRequest.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryAllAuctionRequest;
-        })();
-
-        auction.QueryAllAuctionResponse = (function() {
-
-            /**
-             * Properties of a QueryAllAuctionResponse.
-             * @memberof ununifi.auction
-             * @interface IQueryAllAuctionResponse
-             * @property {Array.<google.protobuf.IAny>|null} [auctions] QueryAllAuctionResponse auctions
-             * @property {cosmos.base.query.v1beta1.IPageResponse|null} [pagination] QueryAllAuctionResponse pagination
-             */
-
-            /**
-             * Constructs a new QueryAllAuctionResponse.
-             * @memberof ununifi.auction
-             * @classdesc Represents a QueryAllAuctionResponse.
-             * @implements IQueryAllAuctionResponse
-             * @constructor
-             * @param {ununifi.auction.IQueryAllAuctionResponse=} [properties] Properties to set
-             */
-            function QueryAllAuctionResponse(properties) {
-                this.auctions = [];
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * QueryAllAuctionResponse auctions.
-             * @member {Array.<google.protobuf.IAny>} auctions
-             * @memberof ununifi.auction.QueryAllAuctionResponse
-             * @instance
-             */
-            QueryAllAuctionResponse.prototype.auctions = $util.emptyArray;
-
-            /**
-             * QueryAllAuctionResponse pagination.
-             * @member {cosmos.base.query.v1beta1.IPageResponse|null|undefined} pagination
-             * @memberof ununifi.auction.QueryAllAuctionResponse
-             * @instance
-             */
-            QueryAllAuctionResponse.prototype.pagination = null;
-
-            /**
-             * Encodes the specified QueryAllAuctionResponse message. Does not implicitly {@link ununifi.auction.QueryAllAuctionResponse.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.auction.QueryAllAuctionResponse
-             * @static
-             * @param {ununifi.auction.IQueryAllAuctionResponse} message QueryAllAuctionResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllAuctionResponse.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.auctions != null && message.auctions.length)
-                    for (let i = 0; i < message.auctions.length; ++i)
-                        $root.google.protobuf.Any.encode(message.auctions[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
-                    $root.cosmos.base.query.v1beta1.PageResponse.encode(message.pagination, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryAllAuctionResponse message, length delimited. Does not implicitly {@link ununifi.auction.QueryAllAuctionResponse.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.auction.QueryAllAuctionResponse
-             * @static
-             * @param {ununifi.auction.IQueryAllAuctionResponse} message QueryAllAuctionResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllAuctionResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryAllAuctionResponse message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.auction.QueryAllAuctionResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.auction.QueryAllAuctionResponse} QueryAllAuctionResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllAuctionResponse.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.QueryAllAuctionResponse();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        if (!(message.auctions && message.auctions.length))
-                            message.auctions = [];
-                        message.auctions.push($root.google.protobuf.Any.decode(reader, reader.uint32()));
-                        break;
-                    case 2:
-                        message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.decode(reader, reader.uint32());
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryAllAuctionResponse message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.auction.QueryAllAuctionResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.auction.QueryAllAuctionResponse} QueryAllAuctionResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllAuctionResponse.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryAllAuctionResponse message.
-             * @function verify
-             * @memberof ununifi.auction.QueryAllAuctionResponse
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryAllAuctionResponse.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.auctions != null && message.hasOwnProperty("auctions")) {
-                    if (!Array.isArray(message.auctions))
-                        return "auctions: array expected";
-                    for (let i = 0; i < message.auctions.length; ++i) {
-                        let error = $root.google.protobuf.Any.verify(message.auctions[i]);
-                        if (error)
-                            return "auctions." + error;
-                    }
-                }
-                if (message.pagination != null && message.hasOwnProperty("pagination")) {
-                    let error = $root.cosmos.base.query.v1beta1.PageResponse.verify(message.pagination);
-                    if (error)
-                        return "pagination." + error;
-                }
-                return null;
-            };
-
-            /**
-             * Creates a QueryAllAuctionResponse message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.auction.QueryAllAuctionResponse
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.auction.QueryAllAuctionResponse} QueryAllAuctionResponse
-             */
-            QueryAllAuctionResponse.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.auction.QueryAllAuctionResponse)
-                    return object;
-                let message = new $root.ununifi.auction.QueryAllAuctionResponse();
-                if (object.auctions) {
-                    if (!Array.isArray(object.auctions))
-                        throw TypeError(".ununifi.auction.QueryAllAuctionResponse.auctions: array expected");
-                    message.auctions = [];
-                    for (let i = 0; i < object.auctions.length; ++i) {
-                        if (typeof object.auctions[i] !== "object")
-                            throw TypeError(".ununifi.auction.QueryAllAuctionResponse.auctions: object expected");
-                        message.auctions[i] = $root.google.protobuf.Any.fromObject(object.auctions[i]);
-                    }
-                }
-                if (object.pagination != null) {
-                    if (typeof object.pagination !== "object")
-                        throw TypeError(".ununifi.auction.QueryAllAuctionResponse.pagination: object expected");
-                    message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.fromObject(object.pagination);
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a QueryAllAuctionResponse message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.auction.QueryAllAuctionResponse
-             * @static
-             * @param {ununifi.auction.QueryAllAuctionResponse} message QueryAllAuctionResponse
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryAllAuctionResponse.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.arrays || options.defaults)
-                    object.auctions = [];
-                if (options.defaults)
-                    object.pagination = null;
-                if (message.auctions && message.auctions.length) {
-                    object.auctions = [];
-                    for (let j = 0; j < message.auctions.length; ++j)
-                        object.auctions[j] = $root.google.protobuf.Any.toObject(message.auctions[j], options);
-                }
-                if (message.pagination != null && message.hasOwnProperty("pagination"))
-                    object.pagination = $root.cosmos.base.query.v1beta1.PageResponse.toObject(message.pagination, options);
-                return object;
-            };
-
-            /**
-             * Converts this QueryAllAuctionResponse to JSON.
-             * @function toJSON
-             * @memberof ununifi.auction.QueryAllAuctionResponse
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryAllAuctionResponse.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryAllAuctionResponse;
+            return MsgPlaceBidResponse;
         })();
 
         auction.BaseAuction = (function() {
@@ -2749,80 +1969,143 @@ export const ununifi = $root.ununifi = (() => {
             return Params;
         })();
 
-        auction.Msg = (function() {
+        auction.Query = (function() {
 
             /**
-             * Constructs a new Msg service.
+             * Constructs a new Query service.
              * @memberof ununifi.auction
-             * @classdesc Represents a Msg
+             * @classdesc Represents a Query
              * @extends $protobuf.rpc.Service
              * @constructor
              * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
              * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
              * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
              */
-            function Msg(rpcImpl, requestDelimited, responseDelimited) {
+            function Query(rpcImpl, requestDelimited, responseDelimited) {
                 $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
             }
 
-            (Msg.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Msg;
+            (Query.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Query;
 
             /**
-             * Callback as used by {@link ununifi.auction.Msg#placeBid}.
-             * @memberof ununifi.auction.Msg
-             * @typedef PlaceBidCallback
+             * Callback as used by {@link ununifi.auction.Query#params}.
+             * @memberof ununifi.auction.Query
+             * @typedef ParamsCallback
              * @type {function}
              * @param {Error|null} error Error, if any
-             * @param {ununifi.auction.MsgPlaceBidResponse} [response] MsgPlaceBidResponse
+             * @param {ununifi.auction.QueryParamsResponse} [response] QueryParamsResponse
              */
 
             /**
-             * Calls PlaceBid.
-             * @function placeBid
-             * @memberof ununifi.auction.Msg
+             * Calls Params.
+             * @function params
+             * @memberof ununifi.auction.Query
              * @instance
-             * @param {ununifi.auction.IMsgPlaceBid} request MsgPlaceBid message or plain object
-             * @param {ununifi.auction.Msg.PlaceBidCallback} callback Node-style callback called with the error, if any, and MsgPlaceBidResponse
+             * @param {ununifi.auction.IQueryParamsRequest} request QueryParamsRequest message or plain object
+             * @param {ununifi.auction.Query.ParamsCallback} callback Node-style callback called with the error, if any, and QueryParamsResponse
              * @returns {undefined}
              * @variation 1
              */
-            Object.defineProperty(Msg.prototype.placeBid = function placeBid(request, callback) {
-                return this.rpcCall(placeBid, $root.ununifi.auction.MsgPlaceBid, $root.ununifi.auction.MsgPlaceBidResponse, request, callback);
-            }, "name", { value: "PlaceBid" });
+            Object.defineProperty(Query.prototype.params = function params(request, callback) {
+                return this.rpcCall(params, $root.ununifi.auction.QueryParamsRequest, $root.ununifi.auction.QueryParamsResponse, request, callback);
+            }, "name", { value: "Params" });
 
             /**
-             * Calls PlaceBid.
-             * @function placeBid
-             * @memberof ununifi.auction.Msg
+             * Calls Params.
+             * @function params
+             * @memberof ununifi.auction.Query
              * @instance
-             * @param {ununifi.auction.IMsgPlaceBid} request MsgPlaceBid message or plain object
-             * @returns {Promise<ununifi.auction.MsgPlaceBidResponse>} Promise
+             * @param {ununifi.auction.IQueryParamsRequest} request QueryParamsRequest message or plain object
+             * @returns {Promise<ununifi.auction.QueryParamsResponse>} Promise
              * @variation 2
              */
 
-            return Msg;
+            /**
+             * Callback as used by {@link ununifi.auction.Query#auction}.
+             * @memberof ununifi.auction.Query
+             * @typedef AuctionCallback
+             * @type {function}
+             * @param {Error|null} error Error, if any
+             * @param {ununifi.auction.QueryGetAuctionResponse} [response] QueryGetAuctionResponse
+             */
+
+            /**
+             * Calls Auction.
+             * @function auction
+             * @memberof ununifi.auction.Query
+             * @instance
+             * @param {ununifi.auction.IQueryGetAuctionRequest} request QueryGetAuctionRequest message or plain object
+             * @param {ununifi.auction.Query.AuctionCallback} callback Node-style callback called with the error, if any, and QueryGetAuctionResponse
+             * @returns {undefined}
+             * @variation 1
+             */
+            Object.defineProperty(Query.prototype.auction = function auction(request, callback) {
+                return this.rpcCall(auction, $root.ununifi.auction.QueryGetAuctionRequest, $root.ununifi.auction.QueryGetAuctionResponse, request, callback);
+            }, "name", { value: "Auction" });
+
+            /**
+             * Calls Auction.
+             * @function auction
+             * @memberof ununifi.auction.Query
+             * @instance
+             * @param {ununifi.auction.IQueryGetAuctionRequest} request QueryGetAuctionRequest message or plain object
+             * @returns {Promise<ununifi.auction.QueryGetAuctionResponse>} Promise
+             * @variation 2
+             */
+
+            /**
+             * Callback as used by {@link ununifi.auction.Query#auctionAll}.
+             * @memberof ununifi.auction.Query
+             * @typedef AuctionAllCallback
+             * @type {function}
+             * @param {Error|null} error Error, if any
+             * @param {ununifi.auction.QueryAllAuctionResponse} [response] QueryAllAuctionResponse
+             */
+
+            /**
+             * Calls AuctionAll.
+             * @function auctionAll
+             * @memberof ununifi.auction.Query
+             * @instance
+             * @param {ununifi.auction.IQueryAllAuctionRequest} request QueryAllAuctionRequest message or plain object
+             * @param {ununifi.auction.Query.AuctionAllCallback} callback Node-style callback called with the error, if any, and QueryAllAuctionResponse
+             * @returns {undefined}
+             * @variation 1
+             */
+            Object.defineProperty(Query.prototype.auctionAll = function auctionAll(request, callback) {
+                return this.rpcCall(auctionAll, $root.ununifi.auction.QueryAllAuctionRequest, $root.ununifi.auction.QueryAllAuctionResponse, request, callback);
+            }, "name", { value: "AuctionAll" });
+
+            /**
+             * Calls AuctionAll.
+             * @function auctionAll
+             * @memberof ununifi.auction.Query
+             * @instance
+             * @param {ununifi.auction.IQueryAllAuctionRequest} request QueryAllAuctionRequest message or plain object
+             * @returns {Promise<ununifi.auction.QueryAllAuctionResponse>} Promise
+             * @variation 2
+             */
+
+            return Query;
         })();
 
-        auction.MsgPlaceBid = (function() {
+        auction.QueryParamsRequest = (function() {
 
             /**
-             * Properties of a MsgPlaceBid.
+             * Properties of a QueryParamsRequest.
              * @memberof ununifi.auction
-             * @interface IMsgPlaceBid
-             * @property {Long|null} [auction_id] MsgPlaceBid auction_id
-             * @property {string|null} [bidder] MsgPlaceBid bidder
-             * @property {cosmos.base.v1beta1.ICoin|null} [amount] MsgPlaceBid amount
+             * @interface IQueryParamsRequest
              */
 
             /**
-             * Constructs a new MsgPlaceBid.
+             * Constructs a new QueryParamsRequest.
              * @memberof ununifi.auction
-             * @classdesc Represents a MsgPlaceBid.
-             * @implements IMsgPlaceBid
+             * @classdesc Represents a QueryParamsRequest.
+             * @implements IQueryParamsRequest
              * @constructor
-             * @param {ununifi.auction.IMsgPlaceBid=} [properties] Properties to set
+             * @param {ununifi.auction.IQueryParamsRequest=} [properties] Properties to set
              */
-            function MsgPlaceBid(properties) {
+            function QueryParamsRequest(properties) {
                 if (properties)
                     for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                         if (properties[keys[i]] != null)
@@ -2830,284 +2113,48 @@ export const ununifi = $root.ununifi = (() => {
             }
 
             /**
-             * MsgPlaceBid auction_id.
-             * @member {Long} auction_id
-             * @memberof ununifi.auction.MsgPlaceBid
-             * @instance
-             */
-            MsgPlaceBid.prototype.auction_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-
-            /**
-             * MsgPlaceBid bidder.
-             * @member {string} bidder
-             * @memberof ununifi.auction.MsgPlaceBid
-             * @instance
-             */
-            MsgPlaceBid.prototype.bidder = "";
-
-            /**
-             * MsgPlaceBid amount.
-             * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
-             * @memberof ununifi.auction.MsgPlaceBid
-             * @instance
-             */
-            MsgPlaceBid.prototype.amount = null;
-
-            /**
-             * Encodes the specified MsgPlaceBid message. Does not implicitly {@link ununifi.auction.MsgPlaceBid.verify|verify} messages.
+             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.auction.QueryParamsRequest.verify|verify} messages.
              * @function encode
-             * @memberof ununifi.auction.MsgPlaceBid
+             * @memberof ununifi.auction.QueryParamsRequest
              * @static
-             * @param {ununifi.auction.IMsgPlaceBid} message MsgPlaceBid message or plain object to encode
+             * @param {ununifi.auction.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
-            MsgPlaceBid.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.auction_id != null && Object.hasOwnProperty.call(message, "auction_id"))
-                    writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.auction_id);
-                if (message.bidder != null && Object.hasOwnProperty.call(message, "bidder"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.bidder);
-                if (message.amount != null && Object.hasOwnProperty.call(message, "amount"))
-                    $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified MsgPlaceBid message, length delimited. Does not implicitly {@link ununifi.auction.MsgPlaceBid.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.auction.MsgPlaceBid
-             * @static
-             * @param {ununifi.auction.IMsgPlaceBid} message MsgPlaceBid message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            MsgPlaceBid.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a MsgPlaceBid message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.auction.MsgPlaceBid
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.auction.MsgPlaceBid} MsgPlaceBid
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            MsgPlaceBid.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.MsgPlaceBid();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.auction_id = reader.uint64();
-                        break;
-                    case 2:
-                        message.bidder = reader.string();
-                        break;
-                    case 3:
-                        message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a MsgPlaceBid message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.auction.MsgPlaceBid
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.auction.MsgPlaceBid} MsgPlaceBid
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            MsgPlaceBid.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a MsgPlaceBid message.
-             * @function verify
-             * @memberof ununifi.auction.MsgPlaceBid
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            MsgPlaceBid.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.auction_id != null && message.hasOwnProperty("auction_id"))
-                    if (!$util.isInteger(message.auction_id) && !(message.auction_id && $util.isInteger(message.auction_id.low) && $util.isInteger(message.auction_id.high)))
-                        return "auction_id: integer|Long expected";
-                if (message.bidder != null && message.hasOwnProperty("bidder"))
-                    if (!$util.isString(message.bidder))
-                        return "bidder: string expected";
-                if (message.amount != null && message.hasOwnProperty("amount")) {
-                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
-                    if (error)
-                        return "amount." + error;
-                }
-                return null;
-            };
-
-            /**
-             * Creates a MsgPlaceBid message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.auction.MsgPlaceBid
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.auction.MsgPlaceBid} MsgPlaceBid
-             */
-            MsgPlaceBid.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.auction.MsgPlaceBid)
-                    return object;
-                let message = new $root.ununifi.auction.MsgPlaceBid();
-                if (object.auction_id != null)
-                    if ($util.Long)
-                        (message.auction_id = $util.Long.fromValue(object.auction_id)).unsigned = true;
-                    else if (typeof object.auction_id === "string")
-                        message.auction_id = parseInt(object.auction_id, 10);
-                    else if (typeof object.auction_id === "number")
-                        message.auction_id = object.auction_id;
-                    else if (typeof object.auction_id === "object")
-                        message.auction_id = new $util.LongBits(object.auction_id.low >>> 0, object.auction_id.high >>> 0).toNumber(true);
-                if (object.bidder != null)
-                    message.bidder = String(object.bidder);
-                if (object.amount != null) {
-                    if (typeof object.amount !== "object")
-                        throw TypeError(".ununifi.auction.MsgPlaceBid.amount: object expected");
-                    message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a MsgPlaceBid message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.auction.MsgPlaceBid
-             * @static
-             * @param {ununifi.auction.MsgPlaceBid} message MsgPlaceBid
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            MsgPlaceBid.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    if ($util.Long) {
-                        let long = new $util.Long(0, 0, true);
-                        object.auction_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.auction_id = options.longs === String ? "0" : 0;
-                    object.bidder = "";
-                    object.amount = null;
-                }
-                if (message.auction_id != null && message.hasOwnProperty("auction_id"))
-                    if (typeof message.auction_id === "number")
-                        object.auction_id = options.longs === String ? String(message.auction_id) : message.auction_id;
-                    else
-                        object.auction_id = options.longs === String ? $util.Long.prototype.toString.call(message.auction_id) : options.longs === Number ? new $util.LongBits(message.auction_id.low >>> 0, message.auction_id.high >>> 0).toNumber(true) : message.auction_id;
-                if (message.bidder != null && message.hasOwnProperty("bidder"))
-                    object.bidder = message.bidder;
-                if (message.amount != null && message.hasOwnProperty("amount"))
-                    object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
-                return object;
-            };
-
-            /**
-             * Converts this MsgPlaceBid to JSON.
-             * @function toJSON
-             * @memberof ununifi.auction.MsgPlaceBid
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            MsgPlaceBid.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return MsgPlaceBid;
-        })();
-
-        auction.MsgPlaceBidResponse = (function() {
-
-            /**
-             * Properties of a MsgPlaceBidResponse.
-             * @memberof ununifi.auction
-             * @interface IMsgPlaceBidResponse
-             */
-
-            /**
-             * Constructs a new MsgPlaceBidResponse.
-             * @memberof ununifi.auction
-             * @classdesc Represents a MsgPlaceBidResponse.
-             * @implements IMsgPlaceBidResponse
-             * @constructor
-             * @param {ununifi.auction.IMsgPlaceBidResponse=} [properties] Properties to set
-             */
-            function MsgPlaceBidResponse(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * Encodes the specified MsgPlaceBidResponse message. Does not implicitly {@link ununifi.auction.MsgPlaceBidResponse.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.auction.MsgPlaceBidResponse
-             * @static
-             * @param {ununifi.auction.IMsgPlaceBidResponse} message MsgPlaceBidResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            MsgPlaceBidResponse.encode = function encode(message, writer) {
+            QueryParamsRequest.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
                 return writer;
             };
 
             /**
-             * Encodes the specified MsgPlaceBidResponse message, length delimited. Does not implicitly {@link ununifi.auction.MsgPlaceBidResponse.verify|verify} messages.
+             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.auction.QueryParamsRequest.verify|verify} messages.
              * @function encodeDelimited
-             * @memberof ununifi.auction.MsgPlaceBidResponse
+             * @memberof ununifi.auction.QueryParamsRequest
              * @static
-             * @param {ununifi.auction.IMsgPlaceBidResponse} message MsgPlaceBidResponse message or plain object to encode
+             * @param {ununifi.auction.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
-            MsgPlaceBidResponse.encodeDelimited = function encodeDelimited(message, writer) {
+            QueryParamsRequest.encodeDelimited = function encodeDelimited(message, writer) {
                 return this.encode(message, writer).ldelim();
             };
 
             /**
-             * Decodes a MsgPlaceBidResponse message from the specified reader or buffer.
+             * Decodes a QueryParamsRequest message from the specified reader or buffer.
              * @function decode
-             * @memberof ununifi.auction.MsgPlaceBidResponse
+             * @memberof ununifi.auction.QueryParamsRequest
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.auction.MsgPlaceBidResponse} MsgPlaceBidResponse
+             * @returns {ununifi.auction.QueryParamsRequest} QueryParamsRequest
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            MsgPlaceBidResponse.decode = function decode(reader, length) {
+            QueryParamsRequest.decode = function decode(reader, length) {
                 if (!(reader instanceof $Reader))
                     reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.MsgPlaceBidResponse();
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.QueryParamsRequest();
                 while (reader.pos < end) {
                     let tag = reader.uint32();
                     switch (tag >>> 3) {
@@ -3120,74 +2167,1027 @@ export const ununifi = $root.ununifi = (() => {
             };
 
             /**
-             * Decodes a MsgPlaceBidResponse message from the specified reader or buffer, length delimited.
+             * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
              * @function decodeDelimited
-             * @memberof ununifi.auction.MsgPlaceBidResponse
+             * @memberof ununifi.auction.QueryParamsRequest
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.auction.MsgPlaceBidResponse} MsgPlaceBidResponse
+             * @returns {ununifi.auction.QueryParamsRequest} QueryParamsRequest
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            MsgPlaceBidResponse.decodeDelimited = function decodeDelimited(reader) {
+            QueryParamsRequest.decodeDelimited = function decodeDelimited(reader) {
                 if (!(reader instanceof $Reader))
                     reader = new $Reader(reader);
                 return this.decode(reader, reader.uint32());
             };
 
             /**
-             * Verifies a MsgPlaceBidResponse message.
+             * Verifies a QueryParamsRequest message.
              * @function verify
-             * @memberof ununifi.auction.MsgPlaceBidResponse
+             * @memberof ununifi.auction.QueryParamsRequest
              * @static
              * @param {Object.<string,*>} message Plain object to verify
              * @returns {string|null} `null` if valid, otherwise the reason why it is not
              */
-            MsgPlaceBidResponse.verify = function verify(message) {
+            QueryParamsRequest.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
                 return null;
             };
 
             /**
-             * Creates a MsgPlaceBidResponse message from a plain object. Also converts values to their respective internal types.
+             * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
              * @function fromObject
-             * @memberof ununifi.auction.MsgPlaceBidResponse
+             * @memberof ununifi.auction.QueryParamsRequest
              * @static
              * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.auction.MsgPlaceBidResponse} MsgPlaceBidResponse
+             * @returns {ununifi.auction.QueryParamsRequest} QueryParamsRequest
              */
-            MsgPlaceBidResponse.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.auction.MsgPlaceBidResponse)
+            QueryParamsRequest.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.auction.QueryParamsRequest)
                     return object;
-                return new $root.ununifi.auction.MsgPlaceBidResponse();
+                return new $root.ununifi.auction.QueryParamsRequest();
             };
 
             /**
-             * Creates a plain object from a MsgPlaceBidResponse message. Also converts values to other types if specified.
+             * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
              * @function toObject
-             * @memberof ununifi.auction.MsgPlaceBidResponse
+             * @memberof ununifi.auction.QueryParamsRequest
              * @static
-             * @param {ununifi.auction.MsgPlaceBidResponse} message MsgPlaceBidResponse
+             * @param {ununifi.auction.QueryParamsRequest} message QueryParamsRequest
              * @param {$protobuf.IConversionOptions} [options] Conversion options
              * @returns {Object.<string,*>} Plain object
              */
-            MsgPlaceBidResponse.toObject = function toObject() {
+            QueryParamsRequest.toObject = function toObject() {
                 return {};
             };
 
             /**
-             * Converts this MsgPlaceBidResponse to JSON.
+             * Converts this QueryParamsRequest to JSON.
              * @function toJSON
-             * @memberof ununifi.auction.MsgPlaceBidResponse
+             * @memberof ununifi.auction.QueryParamsRequest
              * @instance
              * @returns {Object.<string,*>} JSON object
              */
-            MsgPlaceBidResponse.prototype.toJSON = function toJSON() {
+            QueryParamsRequest.prototype.toJSON = function toJSON() {
                 return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
             };
 
-            return MsgPlaceBidResponse;
+            return QueryParamsRequest;
+        })();
+
+        auction.QueryParamsResponse = (function() {
+
+            /**
+             * Properties of a QueryParamsResponse.
+             * @memberof ununifi.auction
+             * @interface IQueryParamsResponse
+             * @property {ununifi.auction.IParams|null} [params] QueryParamsResponse params
+             */
+
+            /**
+             * Constructs a new QueryParamsResponse.
+             * @memberof ununifi.auction
+             * @classdesc Represents a QueryParamsResponse.
+             * @implements IQueryParamsResponse
+             * @constructor
+             * @param {ununifi.auction.IQueryParamsResponse=} [properties] Properties to set
+             */
+            function QueryParamsResponse(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * QueryParamsResponse params.
+             * @member {ununifi.auction.IParams|null|undefined} params
+             * @memberof ununifi.auction.QueryParamsResponse
+             * @instance
+             */
+            QueryParamsResponse.prototype.params = null;
+
+            /**
+             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.auction.QueryParamsResponse.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.auction.QueryParamsResponse
+             * @static
+             * @param {ununifi.auction.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryParamsResponse.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.params != null && Object.hasOwnProperty.call(message, "params"))
+                    $root.ununifi.auction.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.auction.QueryParamsResponse.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.auction.QueryParamsResponse
+             * @static
+             * @param {ununifi.auction.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryParamsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryParamsResponse message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.auction.QueryParamsResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.auction.QueryParamsResponse} QueryParamsResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryParamsResponse.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.QueryParamsResponse();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.params = $root.ununifi.auction.Params.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.auction.QueryParamsResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.auction.QueryParamsResponse} QueryParamsResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryParamsResponse.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryParamsResponse message.
+             * @function verify
+             * @memberof ununifi.auction.QueryParamsResponse
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryParamsResponse.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.params != null && message.hasOwnProperty("params")) {
+                    let error = $root.ununifi.auction.Params.verify(message.params);
+                    if (error)
+                        return "params." + error;
+                }
+                return null;
+            };
+
+            /**
+             * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.auction.QueryParamsResponse
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.auction.QueryParamsResponse} QueryParamsResponse
+             */
+            QueryParamsResponse.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.auction.QueryParamsResponse)
+                    return object;
+                let message = new $root.ununifi.auction.QueryParamsResponse();
+                if (object.params != null) {
+                    if (typeof object.params !== "object")
+                        throw TypeError(".ununifi.auction.QueryParamsResponse.params: object expected");
+                    message.params = $root.ununifi.auction.Params.fromObject(object.params);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.auction.QueryParamsResponse
+             * @static
+             * @param {ununifi.auction.QueryParamsResponse} message QueryParamsResponse
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryParamsResponse.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults)
+                    object.params = null;
+                if (message.params != null && message.hasOwnProperty("params"))
+                    object.params = $root.ununifi.auction.Params.toObject(message.params, options);
+                return object;
+            };
+
+            /**
+             * Converts this QueryParamsResponse to JSON.
+             * @function toJSON
+             * @memberof ununifi.auction.QueryParamsResponse
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryParamsResponse.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryParamsResponse;
+        })();
+
+        auction.QueryGetAuctionRequest = (function() {
+
+            /**
+             * Properties of a QueryGetAuctionRequest.
+             * @memberof ununifi.auction
+             * @interface IQueryGetAuctionRequest
+             * @property {Long|null} [id] QueryGetAuctionRequest id
+             */
+
+            /**
+             * Constructs a new QueryGetAuctionRequest.
+             * @memberof ununifi.auction
+             * @classdesc Represents a QueryGetAuctionRequest.
+             * @implements IQueryGetAuctionRequest
+             * @constructor
+             * @param {ununifi.auction.IQueryGetAuctionRequest=} [properties] Properties to set
+             */
+            function QueryGetAuctionRequest(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * QueryGetAuctionRequest id.
+             * @member {Long} id
+             * @memberof ununifi.auction.QueryGetAuctionRequest
+             * @instance
+             */
+            QueryGetAuctionRequest.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+
+            /**
+             * Encodes the specified QueryGetAuctionRequest message. Does not implicitly {@link ununifi.auction.QueryGetAuctionRequest.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.auction.QueryGetAuctionRequest
+             * @static
+             * @param {ununifi.auction.IQueryGetAuctionRequest} message QueryGetAuctionRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryGetAuctionRequest.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryGetAuctionRequest message, length delimited. Does not implicitly {@link ununifi.auction.QueryGetAuctionRequest.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.auction.QueryGetAuctionRequest
+             * @static
+             * @param {ununifi.auction.IQueryGetAuctionRequest} message QueryGetAuctionRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryGetAuctionRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryGetAuctionRequest message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.auction.QueryGetAuctionRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.auction.QueryGetAuctionRequest} QueryGetAuctionRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryGetAuctionRequest.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.QueryGetAuctionRequest();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.id = reader.uint64();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryGetAuctionRequest message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.auction.QueryGetAuctionRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.auction.QueryGetAuctionRequest} QueryGetAuctionRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryGetAuctionRequest.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryGetAuctionRequest message.
+             * @function verify
+             * @memberof ununifi.auction.QueryGetAuctionRequest
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryGetAuctionRequest.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.id != null && message.hasOwnProperty("id"))
+                    if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
+                        return "id: integer|Long expected";
+                return null;
+            };
+
+            /**
+             * Creates a QueryGetAuctionRequest message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.auction.QueryGetAuctionRequest
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.auction.QueryGetAuctionRequest} QueryGetAuctionRequest
+             */
+            QueryGetAuctionRequest.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.auction.QueryGetAuctionRequest)
+                    return object;
+                let message = new $root.ununifi.auction.QueryGetAuctionRequest();
+                if (object.id != null)
+                    if ($util.Long)
+                        (message.id = $util.Long.fromValue(object.id)).unsigned = true;
+                    else if (typeof object.id === "string")
+                        message.id = parseInt(object.id, 10);
+                    else if (typeof object.id === "number")
+                        message.id = object.id;
+                    else if (typeof object.id === "object")
+                        message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a QueryGetAuctionRequest message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.auction.QueryGetAuctionRequest
+             * @static
+             * @param {ununifi.auction.QueryGetAuctionRequest} message QueryGetAuctionRequest
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryGetAuctionRequest.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults)
+                    if ($util.Long) {
+                        let long = new $util.Long(0, 0, true);
+                        object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.id = options.longs === String ? "0" : 0;
+                if (message.id != null && message.hasOwnProperty("id"))
+                    if (typeof message.id === "number")
+                        object.id = options.longs === String ? String(message.id) : message.id;
+                    else
+                        object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
+                return object;
+            };
+
+            /**
+             * Converts this QueryGetAuctionRequest to JSON.
+             * @function toJSON
+             * @memberof ununifi.auction.QueryGetAuctionRequest
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryGetAuctionRequest.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryGetAuctionRequest;
+        })();
+
+        auction.QueryGetAuctionResponse = (function() {
+
+            /**
+             * Properties of a QueryGetAuctionResponse.
+             * @memberof ununifi.auction
+             * @interface IQueryGetAuctionResponse
+             * @property {google.protobuf.IAny|null} [auction] QueryGetAuctionResponse auction
+             */
+
+            /**
+             * Constructs a new QueryGetAuctionResponse.
+             * @memberof ununifi.auction
+             * @classdesc Represents a QueryGetAuctionResponse.
+             * @implements IQueryGetAuctionResponse
+             * @constructor
+             * @param {ununifi.auction.IQueryGetAuctionResponse=} [properties] Properties to set
+             */
+            function QueryGetAuctionResponse(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * QueryGetAuctionResponse auction.
+             * @member {google.protobuf.IAny|null|undefined} auction
+             * @memberof ununifi.auction.QueryGetAuctionResponse
+             * @instance
+             */
+            QueryGetAuctionResponse.prototype.auction = null;
+
+            /**
+             * Encodes the specified QueryGetAuctionResponse message. Does not implicitly {@link ununifi.auction.QueryGetAuctionResponse.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.auction.QueryGetAuctionResponse
+             * @static
+             * @param {ununifi.auction.IQueryGetAuctionResponse} message QueryGetAuctionResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryGetAuctionResponse.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.auction != null && Object.hasOwnProperty.call(message, "auction"))
+                    $root.google.protobuf.Any.encode(message.auction, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryGetAuctionResponse message, length delimited. Does not implicitly {@link ununifi.auction.QueryGetAuctionResponse.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.auction.QueryGetAuctionResponse
+             * @static
+             * @param {ununifi.auction.IQueryGetAuctionResponse} message QueryGetAuctionResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryGetAuctionResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryGetAuctionResponse message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.auction.QueryGetAuctionResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.auction.QueryGetAuctionResponse} QueryGetAuctionResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryGetAuctionResponse.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.QueryGetAuctionResponse();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.auction = $root.google.protobuf.Any.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryGetAuctionResponse message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.auction.QueryGetAuctionResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.auction.QueryGetAuctionResponse} QueryGetAuctionResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryGetAuctionResponse.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryGetAuctionResponse message.
+             * @function verify
+             * @memberof ununifi.auction.QueryGetAuctionResponse
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryGetAuctionResponse.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.auction != null && message.hasOwnProperty("auction")) {
+                    let error = $root.google.protobuf.Any.verify(message.auction);
+                    if (error)
+                        return "auction." + error;
+                }
+                return null;
+            };
+
+            /**
+             * Creates a QueryGetAuctionResponse message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.auction.QueryGetAuctionResponse
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.auction.QueryGetAuctionResponse} QueryGetAuctionResponse
+             */
+            QueryGetAuctionResponse.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.auction.QueryGetAuctionResponse)
+                    return object;
+                let message = new $root.ununifi.auction.QueryGetAuctionResponse();
+                if (object.auction != null) {
+                    if (typeof object.auction !== "object")
+                        throw TypeError(".ununifi.auction.QueryGetAuctionResponse.auction: object expected");
+                    message.auction = $root.google.protobuf.Any.fromObject(object.auction);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a QueryGetAuctionResponse message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.auction.QueryGetAuctionResponse
+             * @static
+             * @param {ununifi.auction.QueryGetAuctionResponse} message QueryGetAuctionResponse
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryGetAuctionResponse.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults)
+                    object.auction = null;
+                if (message.auction != null && message.hasOwnProperty("auction"))
+                    object.auction = $root.google.protobuf.Any.toObject(message.auction, options);
+                return object;
+            };
+
+            /**
+             * Converts this QueryGetAuctionResponse to JSON.
+             * @function toJSON
+             * @memberof ununifi.auction.QueryGetAuctionResponse
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryGetAuctionResponse.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryGetAuctionResponse;
+        })();
+
+        auction.QueryAllAuctionRequest = (function() {
+
+            /**
+             * Properties of a QueryAllAuctionRequest.
+             * @memberof ununifi.auction
+             * @interface IQueryAllAuctionRequest
+             * @property {cosmos.base.query.v1beta1.IPageRequest|null} [pagination] QueryAllAuctionRequest pagination
+             */
+
+            /**
+             * Constructs a new QueryAllAuctionRequest.
+             * @memberof ununifi.auction
+             * @classdesc Represents a QueryAllAuctionRequest.
+             * @implements IQueryAllAuctionRequest
+             * @constructor
+             * @param {ununifi.auction.IQueryAllAuctionRequest=} [properties] Properties to set
+             */
+            function QueryAllAuctionRequest(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * QueryAllAuctionRequest pagination.
+             * @member {cosmos.base.query.v1beta1.IPageRequest|null|undefined} pagination
+             * @memberof ununifi.auction.QueryAllAuctionRequest
+             * @instance
+             */
+            QueryAllAuctionRequest.prototype.pagination = null;
+
+            /**
+             * Encodes the specified QueryAllAuctionRequest message. Does not implicitly {@link ununifi.auction.QueryAllAuctionRequest.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.auction.QueryAllAuctionRequest
+             * @static
+             * @param {ununifi.auction.IQueryAllAuctionRequest} message QueryAllAuctionRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllAuctionRequest.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
+                    $root.cosmos.base.query.v1beta1.PageRequest.encode(message.pagination, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryAllAuctionRequest message, length delimited. Does not implicitly {@link ununifi.auction.QueryAllAuctionRequest.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.auction.QueryAllAuctionRequest
+             * @static
+             * @param {ununifi.auction.IQueryAllAuctionRequest} message QueryAllAuctionRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllAuctionRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryAllAuctionRequest message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.auction.QueryAllAuctionRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.auction.QueryAllAuctionRequest} QueryAllAuctionRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllAuctionRequest.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.QueryAllAuctionRequest();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryAllAuctionRequest message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.auction.QueryAllAuctionRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.auction.QueryAllAuctionRequest} QueryAllAuctionRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllAuctionRequest.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryAllAuctionRequest message.
+             * @function verify
+             * @memberof ununifi.auction.QueryAllAuctionRequest
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryAllAuctionRequest.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.pagination != null && message.hasOwnProperty("pagination")) {
+                    let error = $root.cosmos.base.query.v1beta1.PageRequest.verify(message.pagination);
+                    if (error)
+                        return "pagination." + error;
+                }
+                return null;
+            };
+
+            /**
+             * Creates a QueryAllAuctionRequest message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.auction.QueryAllAuctionRequest
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.auction.QueryAllAuctionRequest} QueryAllAuctionRequest
+             */
+            QueryAllAuctionRequest.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.auction.QueryAllAuctionRequest)
+                    return object;
+                let message = new $root.ununifi.auction.QueryAllAuctionRequest();
+                if (object.pagination != null) {
+                    if (typeof object.pagination !== "object")
+                        throw TypeError(".ununifi.auction.QueryAllAuctionRequest.pagination: object expected");
+                    message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.fromObject(object.pagination);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a QueryAllAuctionRequest message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.auction.QueryAllAuctionRequest
+             * @static
+             * @param {ununifi.auction.QueryAllAuctionRequest} message QueryAllAuctionRequest
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryAllAuctionRequest.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults)
+                    object.pagination = null;
+                if (message.pagination != null && message.hasOwnProperty("pagination"))
+                    object.pagination = $root.cosmos.base.query.v1beta1.PageRequest.toObject(message.pagination, options);
+                return object;
+            };
+
+            /**
+             * Converts this QueryAllAuctionRequest to JSON.
+             * @function toJSON
+             * @memberof ununifi.auction.QueryAllAuctionRequest
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryAllAuctionRequest.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryAllAuctionRequest;
+        })();
+
+        auction.QueryAllAuctionResponse = (function() {
+
+            /**
+             * Properties of a QueryAllAuctionResponse.
+             * @memberof ununifi.auction
+             * @interface IQueryAllAuctionResponse
+             * @property {Array.<google.protobuf.IAny>|null} [auctions] QueryAllAuctionResponse auctions
+             * @property {cosmos.base.query.v1beta1.IPageResponse|null} [pagination] QueryAllAuctionResponse pagination
+             */
+
+            /**
+             * Constructs a new QueryAllAuctionResponse.
+             * @memberof ununifi.auction
+             * @classdesc Represents a QueryAllAuctionResponse.
+             * @implements IQueryAllAuctionResponse
+             * @constructor
+             * @param {ununifi.auction.IQueryAllAuctionResponse=} [properties] Properties to set
+             */
+            function QueryAllAuctionResponse(properties) {
+                this.auctions = [];
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * QueryAllAuctionResponse auctions.
+             * @member {Array.<google.protobuf.IAny>} auctions
+             * @memberof ununifi.auction.QueryAllAuctionResponse
+             * @instance
+             */
+            QueryAllAuctionResponse.prototype.auctions = $util.emptyArray;
+
+            /**
+             * QueryAllAuctionResponse pagination.
+             * @member {cosmos.base.query.v1beta1.IPageResponse|null|undefined} pagination
+             * @memberof ununifi.auction.QueryAllAuctionResponse
+             * @instance
+             */
+            QueryAllAuctionResponse.prototype.pagination = null;
+
+            /**
+             * Encodes the specified QueryAllAuctionResponse message. Does not implicitly {@link ununifi.auction.QueryAllAuctionResponse.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.auction.QueryAllAuctionResponse
+             * @static
+             * @param {ununifi.auction.IQueryAllAuctionResponse} message QueryAllAuctionResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllAuctionResponse.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.auctions != null && message.auctions.length)
+                    for (let i = 0; i < message.auctions.length; ++i)
+                        $root.google.protobuf.Any.encode(message.auctions[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
+                    $root.cosmos.base.query.v1beta1.PageResponse.encode(message.pagination, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryAllAuctionResponse message, length delimited. Does not implicitly {@link ununifi.auction.QueryAllAuctionResponse.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.auction.QueryAllAuctionResponse
+             * @static
+             * @param {ununifi.auction.IQueryAllAuctionResponse} message QueryAllAuctionResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllAuctionResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryAllAuctionResponse message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.auction.QueryAllAuctionResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.auction.QueryAllAuctionResponse} QueryAllAuctionResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllAuctionResponse.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.auction.QueryAllAuctionResponse();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        if (!(message.auctions && message.auctions.length))
+                            message.auctions = [];
+                        message.auctions.push($root.google.protobuf.Any.decode(reader, reader.uint32()));
+                        break;
+                    case 2:
+                        message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryAllAuctionResponse message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.auction.QueryAllAuctionResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.auction.QueryAllAuctionResponse} QueryAllAuctionResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllAuctionResponse.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryAllAuctionResponse message.
+             * @function verify
+             * @memberof ununifi.auction.QueryAllAuctionResponse
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryAllAuctionResponse.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.auctions != null && message.hasOwnProperty("auctions")) {
+                    if (!Array.isArray(message.auctions))
+                        return "auctions: array expected";
+                    for (let i = 0; i < message.auctions.length; ++i) {
+                        let error = $root.google.protobuf.Any.verify(message.auctions[i]);
+                        if (error)
+                            return "auctions." + error;
+                    }
+                }
+                if (message.pagination != null && message.hasOwnProperty("pagination")) {
+                    let error = $root.cosmos.base.query.v1beta1.PageResponse.verify(message.pagination);
+                    if (error)
+                        return "pagination." + error;
+                }
+                return null;
+            };
+
+            /**
+             * Creates a QueryAllAuctionResponse message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.auction.QueryAllAuctionResponse
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.auction.QueryAllAuctionResponse} QueryAllAuctionResponse
+             */
+            QueryAllAuctionResponse.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.auction.QueryAllAuctionResponse)
+                    return object;
+                let message = new $root.ununifi.auction.QueryAllAuctionResponse();
+                if (object.auctions) {
+                    if (!Array.isArray(object.auctions))
+                        throw TypeError(".ununifi.auction.QueryAllAuctionResponse.auctions: array expected");
+                    message.auctions = [];
+                    for (let i = 0; i < object.auctions.length; ++i) {
+                        if (typeof object.auctions[i] !== "object")
+                            throw TypeError(".ununifi.auction.QueryAllAuctionResponse.auctions: object expected");
+                        message.auctions[i] = $root.google.protobuf.Any.fromObject(object.auctions[i]);
+                    }
+                }
+                if (object.pagination != null) {
+                    if (typeof object.pagination !== "object")
+                        throw TypeError(".ununifi.auction.QueryAllAuctionResponse.pagination: object expected");
+                    message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.fromObject(object.pagination);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a QueryAllAuctionResponse message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.auction.QueryAllAuctionResponse
+             * @static
+             * @param {ununifi.auction.QueryAllAuctionResponse} message QueryAllAuctionResponse
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryAllAuctionResponse.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.arrays || options.defaults)
+                    object.auctions = [];
+                if (options.defaults)
+                    object.pagination = null;
+                if (message.auctions && message.auctions.length) {
+                    object.auctions = [];
+                    for (let j = 0; j < message.auctions.length; ++j)
+                        object.auctions[j] = $root.google.protobuf.Any.toObject(message.auctions[j], options);
+                }
+                if (message.pagination != null && message.hasOwnProperty("pagination"))
+                    object.pagination = $root.cosmos.base.query.v1beta1.PageResponse.toObject(message.pagination, options);
+                return object;
+            };
+
+            /**
+             * Converts this QueryAllAuctionResponse to JSON.
+             * @function toJSON
+             * @memberof ununifi.auction.QueryAllAuctionResponse
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryAllAuctionResponse.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryAllAuctionResponse;
         })();
 
         auction.GenesisState = (function() {
@@ -3462,3922 +3462,6 @@ export const ununifi = $root.ununifi = (() => {
          * @namespace
          */
         const cdp = {};
-
-        cdp.Query = (function() {
-
-            /**
-             * Constructs a new Query service.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a Query
-             * @extends $protobuf.rpc.Service
-             * @constructor
-             * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
-             * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
-             * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
-             */
-            function Query(rpcImpl, requestDelimited, responseDelimited) {
-                $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
-            }
-
-            (Query.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Query;
-
-            /**
-             * Callback as used by {@link ununifi.cdp.Query#params}.
-             * @memberof ununifi.cdp.Query
-             * @typedef ParamsCallback
-             * @type {function}
-             * @param {Error|null} error Error, if any
-             * @param {ununifi.cdp.QueryParamsResponse} [response] QueryParamsResponse
-             */
-
-            /**
-             * Calls Params.
-             * @function params
-             * @memberof ununifi.cdp.Query
-             * @instance
-             * @param {ununifi.cdp.IQueryParamsRequest} request QueryParamsRequest message or plain object
-             * @param {ununifi.cdp.Query.ParamsCallback} callback Node-style callback called with the error, if any, and QueryParamsResponse
-             * @returns {undefined}
-             * @variation 1
-             */
-            Object.defineProperty(Query.prototype.params = function params(request, callback) {
-                return this.rpcCall(params, $root.ununifi.cdp.QueryParamsRequest, $root.ununifi.cdp.QueryParamsResponse, request, callback);
-            }, "name", { value: "Params" });
-
-            /**
-             * Calls Params.
-             * @function params
-             * @memberof ununifi.cdp.Query
-             * @instance
-             * @param {ununifi.cdp.IQueryParamsRequest} request QueryParamsRequest message or plain object
-             * @returns {Promise<ununifi.cdp.QueryParamsResponse>} Promise
-             * @variation 2
-             */
-
-            /**
-             * Callback as used by {@link ununifi.cdp.Query#cdp}.
-             * @memberof ununifi.cdp.Query
-             * @typedef CdpCallback
-             * @type {function}
-             * @param {Error|null} error Error, if any
-             * @param {ununifi.cdp.QueryGetCdpResponse} [response] QueryGetCdpResponse
-             */
-
-            /**
-             * Calls Cdp.
-             * @function cdp
-             * @memberof ununifi.cdp.Query
-             * @instance
-             * @param {ununifi.cdp.IQueryGetCdpRequest} request QueryGetCdpRequest message or plain object
-             * @param {ununifi.cdp.Query.CdpCallback} callback Node-style callback called with the error, if any, and QueryGetCdpResponse
-             * @returns {undefined}
-             * @variation 1
-             */
-            Object.defineProperty(Query.prototype.cdp = function cdp(request, callback) {
-                return this.rpcCall(cdp, $root.ununifi.cdp.QueryGetCdpRequest, $root.ununifi.cdp.QueryGetCdpResponse, request, callback);
-            }, "name", { value: "Cdp" });
-
-            /**
-             * Calls Cdp.
-             * @function cdp
-             * @memberof ununifi.cdp.Query
-             * @instance
-             * @param {ununifi.cdp.IQueryGetCdpRequest} request QueryGetCdpRequest message or plain object
-             * @returns {Promise<ununifi.cdp.QueryGetCdpResponse>} Promise
-             * @variation 2
-             */
-
-            /**
-             * Callback as used by {@link ununifi.cdp.Query#cdpAll}.
-             * @memberof ununifi.cdp.Query
-             * @typedef CdpAllCallback
-             * @type {function}
-             * @param {Error|null} error Error, if any
-             * @param {ununifi.cdp.QueryAllCdpResponse} [response] QueryAllCdpResponse
-             */
-
-            /**
-             * Calls CdpAll.
-             * @function cdpAll
-             * @memberof ununifi.cdp.Query
-             * @instance
-             * @param {ununifi.cdp.IQueryAllCdpRequest} request QueryAllCdpRequest message or plain object
-             * @param {ununifi.cdp.Query.CdpAllCallback} callback Node-style callback called with the error, if any, and QueryAllCdpResponse
-             * @returns {undefined}
-             * @variation 1
-             */
-            Object.defineProperty(Query.prototype.cdpAll = function cdpAll(request, callback) {
-                return this.rpcCall(cdpAll, $root.ununifi.cdp.QueryAllCdpRequest, $root.ununifi.cdp.QueryAllCdpResponse, request, callback);
-            }, "name", { value: "CdpAll" });
-
-            /**
-             * Calls CdpAll.
-             * @function cdpAll
-             * @memberof ununifi.cdp.Query
-             * @instance
-             * @param {ununifi.cdp.IQueryAllCdpRequest} request QueryAllCdpRequest message or plain object
-             * @returns {Promise<ununifi.cdp.QueryAllCdpResponse>} Promise
-             * @variation 2
-             */
-
-            /**
-             * Callback as used by {@link ununifi.cdp.Query#accountAll}.
-             * @memberof ununifi.cdp.Query
-             * @typedef AccountAllCallback
-             * @type {function}
-             * @param {Error|null} error Error, if any
-             * @param {ununifi.cdp.QueryAllAccountResponse} [response] QueryAllAccountResponse
-             */
-
-            /**
-             * Calls AccountAll.
-             * @function accountAll
-             * @memberof ununifi.cdp.Query
-             * @instance
-             * @param {ununifi.cdp.IQueryAllAccountRequest} request QueryAllAccountRequest message or plain object
-             * @param {ununifi.cdp.Query.AccountAllCallback} callback Node-style callback called with the error, if any, and QueryAllAccountResponse
-             * @returns {undefined}
-             * @variation 1
-             */
-            Object.defineProperty(Query.prototype.accountAll = function accountAll(request, callback) {
-                return this.rpcCall(accountAll, $root.ununifi.cdp.QueryAllAccountRequest, $root.ununifi.cdp.QueryAllAccountResponse, request, callback);
-            }, "name", { value: "AccountAll" });
-
-            /**
-             * Calls AccountAll.
-             * @function accountAll
-             * @memberof ununifi.cdp.Query
-             * @instance
-             * @param {ununifi.cdp.IQueryAllAccountRequest} request QueryAllAccountRequest message or plain object
-             * @returns {Promise<ununifi.cdp.QueryAllAccountResponse>} Promise
-             * @variation 2
-             */
-
-            /**
-             * Callback as used by {@link ununifi.cdp.Query#depositAll}.
-             * @memberof ununifi.cdp.Query
-             * @typedef DepositAllCallback
-             * @type {function}
-             * @param {Error|null} error Error, if any
-             * @param {ununifi.cdp.QueryAllDepositResponse} [response] QueryAllDepositResponse
-             */
-
-            /**
-             * Calls DepositAll.
-             * @function depositAll
-             * @memberof ununifi.cdp.Query
-             * @instance
-             * @param {ununifi.cdp.IQueryAllDepositRequest} request QueryAllDepositRequest message or plain object
-             * @param {ununifi.cdp.Query.DepositAllCallback} callback Node-style callback called with the error, if any, and QueryAllDepositResponse
-             * @returns {undefined}
-             * @variation 1
-             */
-            Object.defineProperty(Query.prototype.depositAll = function depositAll(request, callback) {
-                return this.rpcCall(depositAll, $root.ununifi.cdp.QueryAllDepositRequest, $root.ununifi.cdp.QueryAllDepositResponse, request, callback);
-            }, "name", { value: "DepositAll" });
-
-            /**
-             * Calls DepositAll.
-             * @function depositAll
-             * @memberof ununifi.cdp.Query
-             * @instance
-             * @param {ununifi.cdp.IQueryAllDepositRequest} request QueryAllDepositRequest message or plain object
-             * @returns {Promise<ununifi.cdp.QueryAllDepositResponse>} Promise
-             * @variation 2
-             */
-
-            return Query;
-        })();
-
-        cdp.QueryParamsRequest = (function() {
-
-            /**
-             * Properties of a QueryParamsRequest.
-             * @memberof ununifi.cdp
-             * @interface IQueryParamsRequest
-             */
-
-            /**
-             * Constructs a new QueryParamsRequest.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a QueryParamsRequest.
-             * @implements IQueryParamsRequest
-             * @constructor
-             * @param {ununifi.cdp.IQueryParamsRequest=} [properties] Properties to set
-             */
-            function QueryParamsRequest(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.cdp.QueryParamsRequest.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.QueryParamsRequest
-             * @static
-             * @param {ununifi.cdp.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryParamsRequest.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryParamsRequest.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.QueryParamsRequest
-             * @static
-             * @param {ununifi.cdp.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryParamsRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryParamsRequest message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.QueryParamsRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.QueryParamsRequest} QueryParamsRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryParamsRequest.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryParamsRequest();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.QueryParamsRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.QueryParamsRequest} QueryParamsRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryParamsRequest.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryParamsRequest message.
-             * @function verify
-             * @memberof ununifi.cdp.QueryParamsRequest
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryParamsRequest.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                return null;
-            };
-
-            /**
-             * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.QueryParamsRequest
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.QueryParamsRequest} QueryParamsRequest
-             */
-            QueryParamsRequest.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.QueryParamsRequest)
-                    return object;
-                return new $root.ununifi.cdp.QueryParamsRequest();
-            };
-
-            /**
-             * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.QueryParamsRequest
-             * @static
-             * @param {ununifi.cdp.QueryParamsRequest} message QueryParamsRequest
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryParamsRequest.toObject = function toObject() {
-                return {};
-            };
-
-            /**
-             * Converts this QueryParamsRequest to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.QueryParamsRequest
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryParamsRequest.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryParamsRequest;
-        })();
-
-        cdp.QueryParamsResponse = (function() {
-
-            /**
-             * Properties of a QueryParamsResponse.
-             * @memberof ununifi.cdp
-             * @interface IQueryParamsResponse
-             * @property {ununifi.cdp.IParams|null} [params] QueryParamsResponse params
-             */
-
-            /**
-             * Constructs a new QueryParamsResponse.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a QueryParamsResponse.
-             * @implements IQueryParamsResponse
-             * @constructor
-             * @param {ununifi.cdp.IQueryParamsResponse=} [properties] Properties to set
-             */
-            function QueryParamsResponse(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * QueryParamsResponse params.
-             * @member {ununifi.cdp.IParams|null|undefined} params
-             * @memberof ununifi.cdp.QueryParamsResponse
-             * @instance
-             */
-            QueryParamsResponse.prototype.params = null;
-
-            /**
-             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.cdp.QueryParamsResponse.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.QueryParamsResponse
-             * @static
-             * @param {ununifi.cdp.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryParamsResponse.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.params != null && Object.hasOwnProperty.call(message, "params"))
-                    $root.ununifi.cdp.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryParamsResponse.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.QueryParamsResponse
-             * @static
-             * @param {ununifi.cdp.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryParamsResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryParamsResponse message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.QueryParamsResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.QueryParamsResponse} QueryParamsResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryParamsResponse.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryParamsResponse();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.params = $root.ununifi.cdp.Params.decode(reader, reader.uint32());
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.QueryParamsResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.QueryParamsResponse} QueryParamsResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryParamsResponse.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryParamsResponse message.
-             * @function verify
-             * @memberof ununifi.cdp.QueryParamsResponse
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryParamsResponse.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.params != null && message.hasOwnProperty("params")) {
-                    let error = $root.ununifi.cdp.Params.verify(message.params);
-                    if (error)
-                        return "params." + error;
-                }
-                return null;
-            };
-
-            /**
-             * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.QueryParamsResponse
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.QueryParamsResponse} QueryParamsResponse
-             */
-            QueryParamsResponse.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.QueryParamsResponse)
-                    return object;
-                let message = new $root.ununifi.cdp.QueryParamsResponse();
-                if (object.params != null) {
-                    if (typeof object.params !== "object")
-                        throw TypeError(".ununifi.cdp.QueryParamsResponse.params: object expected");
-                    message.params = $root.ununifi.cdp.Params.fromObject(object.params);
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.QueryParamsResponse
-             * @static
-             * @param {ununifi.cdp.QueryParamsResponse} message QueryParamsResponse
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryParamsResponse.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults)
-                    object.params = null;
-                if (message.params != null && message.hasOwnProperty("params"))
-                    object.params = $root.ununifi.cdp.Params.toObject(message.params, options);
-                return object;
-            };
-
-            /**
-             * Converts this QueryParamsResponse to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.QueryParamsResponse
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryParamsResponse.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryParamsResponse;
-        })();
-
-        cdp.QueryGetCdpRequest = (function() {
-
-            /**
-             * Properties of a QueryGetCdpRequest.
-             * @memberof ununifi.cdp
-             * @interface IQueryGetCdpRequest
-             * @property {string|null} [owner] QueryGetCdpRequest owner
-             * @property {string|null} [collateral_type] QueryGetCdpRequest collateral_type
-             */
-
-            /**
-             * Constructs a new QueryGetCdpRequest.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a QueryGetCdpRequest.
-             * @implements IQueryGetCdpRequest
-             * @constructor
-             * @param {ununifi.cdp.IQueryGetCdpRequest=} [properties] Properties to set
-             */
-            function QueryGetCdpRequest(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * QueryGetCdpRequest owner.
-             * @member {string} owner
-             * @memberof ununifi.cdp.QueryGetCdpRequest
-             * @instance
-             */
-            QueryGetCdpRequest.prototype.owner = "";
-
-            /**
-             * QueryGetCdpRequest collateral_type.
-             * @member {string} collateral_type
-             * @memberof ununifi.cdp.QueryGetCdpRequest
-             * @instance
-             */
-            QueryGetCdpRequest.prototype.collateral_type = "";
-
-            /**
-             * Encodes the specified QueryGetCdpRequest message. Does not implicitly {@link ununifi.cdp.QueryGetCdpRequest.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.QueryGetCdpRequest
-             * @static
-             * @param {ununifi.cdp.IQueryGetCdpRequest} message QueryGetCdpRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryGetCdpRequest.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.owner != null && Object.hasOwnProperty.call(message, "owner"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.owner);
-                if (message.collateral_type != null && Object.hasOwnProperty.call(message, "collateral_type"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.collateral_type);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryGetCdpRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryGetCdpRequest.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.QueryGetCdpRequest
-             * @static
-             * @param {ununifi.cdp.IQueryGetCdpRequest} message QueryGetCdpRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryGetCdpRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryGetCdpRequest message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.QueryGetCdpRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.QueryGetCdpRequest} QueryGetCdpRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryGetCdpRequest.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryGetCdpRequest();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.owner = reader.string();
-                        break;
-                    case 2:
-                        message.collateral_type = reader.string();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryGetCdpRequest message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.QueryGetCdpRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.QueryGetCdpRequest} QueryGetCdpRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryGetCdpRequest.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryGetCdpRequest message.
-             * @function verify
-             * @memberof ununifi.cdp.QueryGetCdpRequest
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryGetCdpRequest.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.owner != null && message.hasOwnProperty("owner"))
-                    if (!$util.isString(message.owner))
-                        return "owner: string expected";
-                if (message.collateral_type != null && message.hasOwnProperty("collateral_type"))
-                    if (!$util.isString(message.collateral_type))
-                        return "collateral_type: string expected";
-                return null;
-            };
-
-            /**
-             * Creates a QueryGetCdpRequest message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.QueryGetCdpRequest
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.QueryGetCdpRequest} QueryGetCdpRequest
-             */
-            QueryGetCdpRequest.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.QueryGetCdpRequest)
-                    return object;
-                let message = new $root.ununifi.cdp.QueryGetCdpRequest();
-                if (object.owner != null)
-                    message.owner = String(object.owner);
-                if (object.collateral_type != null)
-                    message.collateral_type = String(object.collateral_type);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a QueryGetCdpRequest message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.QueryGetCdpRequest
-             * @static
-             * @param {ununifi.cdp.QueryGetCdpRequest} message QueryGetCdpRequest
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryGetCdpRequest.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.owner = "";
-                    object.collateral_type = "";
-                }
-                if (message.owner != null && message.hasOwnProperty("owner"))
-                    object.owner = message.owner;
-                if (message.collateral_type != null && message.hasOwnProperty("collateral_type"))
-                    object.collateral_type = message.collateral_type;
-                return object;
-            };
-
-            /**
-             * Converts this QueryGetCdpRequest to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.QueryGetCdpRequest
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryGetCdpRequest.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryGetCdpRequest;
-        })();
-
-        cdp.QueryGetCdpResponse = (function() {
-
-            /**
-             * Properties of a QueryGetCdpResponse.
-             * @memberof ununifi.cdp
-             * @interface IQueryGetCdpResponse
-             * @property {ununifi.cdp.IAugmentedCdp|null} [cdp] QueryGetCdpResponse cdp
-             */
-
-            /**
-             * Constructs a new QueryGetCdpResponse.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a QueryGetCdpResponse.
-             * @implements IQueryGetCdpResponse
-             * @constructor
-             * @param {ununifi.cdp.IQueryGetCdpResponse=} [properties] Properties to set
-             */
-            function QueryGetCdpResponse(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * QueryGetCdpResponse cdp.
-             * @member {ununifi.cdp.IAugmentedCdp|null|undefined} cdp
-             * @memberof ununifi.cdp.QueryGetCdpResponse
-             * @instance
-             */
-            QueryGetCdpResponse.prototype.cdp = null;
-
-            /**
-             * Encodes the specified QueryGetCdpResponse message. Does not implicitly {@link ununifi.cdp.QueryGetCdpResponse.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.QueryGetCdpResponse
-             * @static
-             * @param {ununifi.cdp.IQueryGetCdpResponse} message QueryGetCdpResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryGetCdpResponse.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.cdp != null && Object.hasOwnProperty.call(message, "cdp"))
-                    $root.ununifi.cdp.AugmentedCdp.encode(message.cdp, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryGetCdpResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryGetCdpResponse.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.QueryGetCdpResponse
-             * @static
-             * @param {ununifi.cdp.IQueryGetCdpResponse} message QueryGetCdpResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryGetCdpResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryGetCdpResponse message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.QueryGetCdpResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.QueryGetCdpResponse} QueryGetCdpResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryGetCdpResponse.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryGetCdpResponse();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.cdp = $root.ununifi.cdp.AugmentedCdp.decode(reader, reader.uint32());
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryGetCdpResponse message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.QueryGetCdpResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.QueryGetCdpResponse} QueryGetCdpResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryGetCdpResponse.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryGetCdpResponse message.
-             * @function verify
-             * @memberof ununifi.cdp.QueryGetCdpResponse
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryGetCdpResponse.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.cdp != null && message.hasOwnProperty("cdp")) {
-                    let error = $root.ununifi.cdp.AugmentedCdp.verify(message.cdp);
-                    if (error)
-                        return "cdp." + error;
-                }
-                return null;
-            };
-
-            /**
-             * Creates a QueryGetCdpResponse message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.QueryGetCdpResponse
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.QueryGetCdpResponse} QueryGetCdpResponse
-             */
-            QueryGetCdpResponse.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.QueryGetCdpResponse)
-                    return object;
-                let message = new $root.ununifi.cdp.QueryGetCdpResponse();
-                if (object.cdp != null) {
-                    if (typeof object.cdp !== "object")
-                        throw TypeError(".ununifi.cdp.QueryGetCdpResponse.cdp: object expected");
-                    message.cdp = $root.ununifi.cdp.AugmentedCdp.fromObject(object.cdp);
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a QueryGetCdpResponse message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.QueryGetCdpResponse
-             * @static
-             * @param {ununifi.cdp.QueryGetCdpResponse} message QueryGetCdpResponse
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryGetCdpResponse.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults)
-                    object.cdp = null;
-                if (message.cdp != null && message.hasOwnProperty("cdp"))
-                    object.cdp = $root.ununifi.cdp.AugmentedCdp.toObject(message.cdp, options);
-                return object;
-            };
-
-            /**
-             * Converts this QueryGetCdpResponse to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.QueryGetCdpResponse
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryGetCdpResponse.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryGetCdpResponse;
-        })();
-
-        cdp.QueryAllCdpRequest = (function() {
-
-            /**
-             * Properties of a QueryAllCdpRequest.
-             * @memberof ununifi.cdp
-             * @interface IQueryAllCdpRequest
-             * @property {cosmos.base.query.v1beta1.IPageRequest|null} [pagination] QueryAllCdpRequest pagination
-             */
-
-            /**
-             * Constructs a new QueryAllCdpRequest.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a QueryAllCdpRequest.
-             * @implements IQueryAllCdpRequest
-             * @constructor
-             * @param {ununifi.cdp.IQueryAllCdpRequest=} [properties] Properties to set
-             */
-            function QueryAllCdpRequest(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * QueryAllCdpRequest pagination.
-             * @member {cosmos.base.query.v1beta1.IPageRequest|null|undefined} pagination
-             * @memberof ununifi.cdp.QueryAllCdpRequest
-             * @instance
-             */
-            QueryAllCdpRequest.prototype.pagination = null;
-
-            /**
-             * Encodes the specified QueryAllCdpRequest message. Does not implicitly {@link ununifi.cdp.QueryAllCdpRequest.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.QueryAllCdpRequest
-             * @static
-             * @param {ununifi.cdp.IQueryAllCdpRequest} message QueryAllCdpRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllCdpRequest.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
-                    $root.cosmos.base.query.v1beta1.PageRequest.encode(message.pagination, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryAllCdpRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllCdpRequest.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.QueryAllCdpRequest
-             * @static
-             * @param {ununifi.cdp.IQueryAllCdpRequest} message QueryAllCdpRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllCdpRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryAllCdpRequest message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.QueryAllCdpRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.QueryAllCdpRequest} QueryAllCdpRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllCdpRequest.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryAllCdpRequest();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.decode(reader, reader.uint32());
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryAllCdpRequest message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.QueryAllCdpRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.QueryAllCdpRequest} QueryAllCdpRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllCdpRequest.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryAllCdpRequest message.
-             * @function verify
-             * @memberof ununifi.cdp.QueryAllCdpRequest
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryAllCdpRequest.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.pagination != null && message.hasOwnProperty("pagination")) {
-                    let error = $root.cosmos.base.query.v1beta1.PageRequest.verify(message.pagination);
-                    if (error)
-                        return "pagination." + error;
-                }
-                return null;
-            };
-
-            /**
-             * Creates a QueryAllCdpRequest message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.QueryAllCdpRequest
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.QueryAllCdpRequest} QueryAllCdpRequest
-             */
-            QueryAllCdpRequest.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.QueryAllCdpRequest)
-                    return object;
-                let message = new $root.ununifi.cdp.QueryAllCdpRequest();
-                if (object.pagination != null) {
-                    if (typeof object.pagination !== "object")
-                        throw TypeError(".ununifi.cdp.QueryAllCdpRequest.pagination: object expected");
-                    message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.fromObject(object.pagination);
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a QueryAllCdpRequest message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.QueryAllCdpRequest
-             * @static
-             * @param {ununifi.cdp.QueryAllCdpRequest} message QueryAllCdpRequest
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryAllCdpRequest.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults)
-                    object.pagination = null;
-                if (message.pagination != null && message.hasOwnProperty("pagination"))
-                    object.pagination = $root.cosmos.base.query.v1beta1.PageRequest.toObject(message.pagination, options);
-                return object;
-            };
-
-            /**
-             * Converts this QueryAllCdpRequest to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.QueryAllCdpRequest
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryAllCdpRequest.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryAllCdpRequest;
-        })();
-
-        cdp.QueryAllCdpResponse = (function() {
-
-            /**
-             * Properties of a QueryAllCdpResponse.
-             * @memberof ununifi.cdp
-             * @interface IQueryAllCdpResponse
-             * @property {Array.<ununifi.cdp.IAugmentedCdp>|null} [cdp] QueryAllCdpResponse cdp
-             * @property {cosmos.base.query.v1beta1.IPageResponse|null} [pagination] QueryAllCdpResponse pagination
-             */
-
-            /**
-             * Constructs a new QueryAllCdpResponse.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a QueryAllCdpResponse.
-             * @implements IQueryAllCdpResponse
-             * @constructor
-             * @param {ununifi.cdp.IQueryAllCdpResponse=} [properties] Properties to set
-             */
-            function QueryAllCdpResponse(properties) {
-                this.cdp = [];
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * QueryAllCdpResponse cdp.
-             * @member {Array.<ununifi.cdp.IAugmentedCdp>} cdp
-             * @memberof ununifi.cdp.QueryAllCdpResponse
-             * @instance
-             */
-            QueryAllCdpResponse.prototype.cdp = $util.emptyArray;
-
-            /**
-             * QueryAllCdpResponse pagination.
-             * @member {cosmos.base.query.v1beta1.IPageResponse|null|undefined} pagination
-             * @memberof ununifi.cdp.QueryAllCdpResponse
-             * @instance
-             */
-            QueryAllCdpResponse.prototype.pagination = null;
-
-            /**
-             * Encodes the specified QueryAllCdpResponse message. Does not implicitly {@link ununifi.cdp.QueryAllCdpResponse.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.QueryAllCdpResponse
-             * @static
-             * @param {ununifi.cdp.IQueryAllCdpResponse} message QueryAllCdpResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllCdpResponse.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.cdp != null && message.cdp.length)
-                    for (let i = 0; i < message.cdp.length; ++i)
-                        $root.ununifi.cdp.AugmentedCdp.encode(message.cdp[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
-                    $root.cosmos.base.query.v1beta1.PageResponse.encode(message.pagination, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryAllCdpResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllCdpResponse.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.QueryAllCdpResponse
-             * @static
-             * @param {ununifi.cdp.IQueryAllCdpResponse} message QueryAllCdpResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllCdpResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryAllCdpResponse message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.QueryAllCdpResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.QueryAllCdpResponse} QueryAllCdpResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllCdpResponse.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryAllCdpResponse();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        if (!(message.cdp && message.cdp.length))
-                            message.cdp = [];
-                        message.cdp.push($root.ununifi.cdp.AugmentedCdp.decode(reader, reader.uint32()));
-                        break;
-                    case 2:
-                        message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.decode(reader, reader.uint32());
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryAllCdpResponse message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.QueryAllCdpResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.QueryAllCdpResponse} QueryAllCdpResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllCdpResponse.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryAllCdpResponse message.
-             * @function verify
-             * @memberof ununifi.cdp.QueryAllCdpResponse
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryAllCdpResponse.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.cdp != null && message.hasOwnProperty("cdp")) {
-                    if (!Array.isArray(message.cdp))
-                        return "cdp: array expected";
-                    for (let i = 0; i < message.cdp.length; ++i) {
-                        let error = $root.ununifi.cdp.AugmentedCdp.verify(message.cdp[i]);
-                        if (error)
-                            return "cdp." + error;
-                    }
-                }
-                if (message.pagination != null && message.hasOwnProperty("pagination")) {
-                    let error = $root.cosmos.base.query.v1beta1.PageResponse.verify(message.pagination);
-                    if (error)
-                        return "pagination." + error;
-                }
-                return null;
-            };
-
-            /**
-             * Creates a QueryAllCdpResponse message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.QueryAllCdpResponse
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.QueryAllCdpResponse} QueryAllCdpResponse
-             */
-            QueryAllCdpResponse.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.QueryAllCdpResponse)
-                    return object;
-                let message = new $root.ununifi.cdp.QueryAllCdpResponse();
-                if (object.cdp) {
-                    if (!Array.isArray(object.cdp))
-                        throw TypeError(".ununifi.cdp.QueryAllCdpResponse.cdp: array expected");
-                    message.cdp = [];
-                    for (let i = 0; i < object.cdp.length; ++i) {
-                        if (typeof object.cdp[i] !== "object")
-                            throw TypeError(".ununifi.cdp.QueryAllCdpResponse.cdp: object expected");
-                        message.cdp[i] = $root.ununifi.cdp.AugmentedCdp.fromObject(object.cdp[i]);
-                    }
-                }
-                if (object.pagination != null) {
-                    if (typeof object.pagination !== "object")
-                        throw TypeError(".ununifi.cdp.QueryAllCdpResponse.pagination: object expected");
-                    message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.fromObject(object.pagination);
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a QueryAllCdpResponse message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.QueryAllCdpResponse
-             * @static
-             * @param {ununifi.cdp.QueryAllCdpResponse} message QueryAllCdpResponse
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryAllCdpResponse.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.arrays || options.defaults)
-                    object.cdp = [];
-                if (options.defaults)
-                    object.pagination = null;
-                if (message.cdp && message.cdp.length) {
-                    object.cdp = [];
-                    for (let j = 0; j < message.cdp.length; ++j)
-                        object.cdp[j] = $root.ununifi.cdp.AugmentedCdp.toObject(message.cdp[j], options);
-                }
-                if (message.pagination != null && message.hasOwnProperty("pagination"))
-                    object.pagination = $root.cosmos.base.query.v1beta1.PageResponse.toObject(message.pagination, options);
-                return object;
-            };
-
-            /**
-             * Converts this QueryAllCdpResponse to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.QueryAllCdpResponse
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryAllCdpResponse.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryAllCdpResponse;
-        })();
-
-        cdp.QueryAllAccountRequest = (function() {
-
-            /**
-             * Properties of a QueryAllAccountRequest.
-             * @memberof ununifi.cdp
-             * @interface IQueryAllAccountRequest
-             */
-
-            /**
-             * Constructs a new QueryAllAccountRequest.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a QueryAllAccountRequest.
-             * @implements IQueryAllAccountRequest
-             * @constructor
-             * @param {ununifi.cdp.IQueryAllAccountRequest=} [properties] Properties to set
-             */
-            function QueryAllAccountRequest(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * Encodes the specified QueryAllAccountRequest message. Does not implicitly {@link ununifi.cdp.QueryAllAccountRequest.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.QueryAllAccountRequest
-             * @static
-             * @param {ununifi.cdp.IQueryAllAccountRequest} message QueryAllAccountRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllAccountRequest.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryAllAccountRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllAccountRequest.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.QueryAllAccountRequest
-             * @static
-             * @param {ununifi.cdp.IQueryAllAccountRequest} message QueryAllAccountRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllAccountRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryAllAccountRequest message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.QueryAllAccountRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.QueryAllAccountRequest} QueryAllAccountRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllAccountRequest.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryAllAccountRequest();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryAllAccountRequest message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.QueryAllAccountRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.QueryAllAccountRequest} QueryAllAccountRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllAccountRequest.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryAllAccountRequest message.
-             * @function verify
-             * @memberof ununifi.cdp.QueryAllAccountRequest
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryAllAccountRequest.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                return null;
-            };
-
-            /**
-             * Creates a QueryAllAccountRequest message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.QueryAllAccountRequest
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.QueryAllAccountRequest} QueryAllAccountRequest
-             */
-            QueryAllAccountRequest.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.QueryAllAccountRequest)
-                    return object;
-                return new $root.ununifi.cdp.QueryAllAccountRequest();
-            };
-
-            /**
-             * Creates a plain object from a QueryAllAccountRequest message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.QueryAllAccountRequest
-             * @static
-             * @param {ununifi.cdp.QueryAllAccountRequest} message QueryAllAccountRequest
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryAllAccountRequest.toObject = function toObject() {
-                return {};
-            };
-
-            /**
-             * Converts this QueryAllAccountRequest to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.QueryAllAccountRequest
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryAllAccountRequest.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryAllAccountRequest;
-        })();
-
-        cdp.QueryAllAccountResponse = (function() {
-
-            /**
-             * Properties of a QueryAllAccountResponse.
-             * @memberof ununifi.cdp
-             * @interface IQueryAllAccountResponse
-             * @property {Array.<google.protobuf.IAny>|null} [accounts] QueryAllAccountResponse accounts
-             */
-
-            /**
-             * Constructs a new QueryAllAccountResponse.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a QueryAllAccountResponse.
-             * @implements IQueryAllAccountResponse
-             * @constructor
-             * @param {ununifi.cdp.IQueryAllAccountResponse=} [properties] Properties to set
-             */
-            function QueryAllAccountResponse(properties) {
-                this.accounts = [];
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * QueryAllAccountResponse accounts.
-             * @member {Array.<google.protobuf.IAny>} accounts
-             * @memberof ununifi.cdp.QueryAllAccountResponse
-             * @instance
-             */
-            QueryAllAccountResponse.prototype.accounts = $util.emptyArray;
-
-            /**
-             * Encodes the specified QueryAllAccountResponse message. Does not implicitly {@link ununifi.cdp.QueryAllAccountResponse.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.QueryAllAccountResponse
-             * @static
-             * @param {ununifi.cdp.IQueryAllAccountResponse} message QueryAllAccountResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllAccountResponse.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.accounts != null && message.accounts.length)
-                    for (let i = 0; i < message.accounts.length; ++i)
-                        $root.google.protobuf.Any.encode(message.accounts[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryAllAccountResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllAccountResponse.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.QueryAllAccountResponse
-             * @static
-             * @param {ununifi.cdp.IQueryAllAccountResponse} message QueryAllAccountResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllAccountResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryAllAccountResponse message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.QueryAllAccountResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.QueryAllAccountResponse} QueryAllAccountResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllAccountResponse.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryAllAccountResponse();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        if (!(message.accounts && message.accounts.length))
-                            message.accounts = [];
-                        message.accounts.push($root.google.protobuf.Any.decode(reader, reader.uint32()));
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryAllAccountResponse message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.QueryAllAccountResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.QueryAllAccountResponse} QueryAllAccountResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllAccountResponse.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryAllAccountResponse message.
-             * @function verify
-             * @memberof ununifi.cdp.QueryAllAccountResponse
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryAllAccountResponse.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.accounts != null && message.hasOwnProperty("accounts")) {
-                    if (!Array.isArray(message.accounts))
-                        return "accounts: array expected";
-                    for (let i = 0; i < message.accounts.length; ++i) {
-                        let error = $root.google.protobuf.Any.verify(message.accounts[i]);
-                        if (error)
-                            return "accounts." + error;
-                    }
-                }
-                return null;
-            };
-
-            /**
-             * Creates a QueryAllAccountResponse message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.QueryAllAccountResponse
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.QueryAllAccountResponse} QueryAllAccountResponse
-             */
-            QueryAllAccountResponse.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.QueryAllAccountResponse)
-                    return object;
-                let message = new $root.ununifi.cdp.QueryAllAccountResponse();
-                if (object.accounts) {
-                    if (!Array.isArray(object.accounts))
-                        throw TypeError(".ununifi.cdp.QueryAllAccountResponse.accounts: array expected");
-                    message.accounts = [];
-                    for (let i = 0; i < object.accounts.length; ++i) {
-                        if (typeof object.accounts[i] !== "object")
-                            throw TypeError(".ununifi.cdp.QueryAllAccountResponse.accounts: object expected");
-                        message.accounts[i] = $root.google.protobuf.Any.fromObject(object.accounts[i]);
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a QueryAllAccountResponse message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.QueryAllAccountResponse
-             * @static
-             * @param {ununifi.cdp.QueryAllAccountResponse} message QueryAllAccountResponse
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryAllAccountResponse.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.arrays || options.defaults)
-                    object.accounts = [];
-                if (message.accounts && message.accounts.length) {
-                    object.accounts = [];
-                    for (let j = 0; j < message.accounts.length; ++j)
-                        object.accounts[j] = $root.google.protobuf.Any.toObject(message.accounts[j], options);
-                }
-                return object;
-            };
-
-            /**
-             * Converts this QueryAllAccountResponse to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.QueryAllAccountResponse
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryAllAccountResponse.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryAllAccountResponse;
-        })();
-
-        cdp.QueryAllDepositRequest = (function() {
-
-            /**
-             * Properties of a QueryAllDepositRequest.
-             * @memberof ununifi.cdp
-             * @interface IQueryAllDepositRequest
-             * @property {string|null} [owner] QueryAllDepositRequest owner
-             * @property {string|null} [collateral_type] QueryAllDepositRequest collateral_type
-             */
-
-            /**
-             * Constructs a new QueryAllDepositRequest.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a QueryAllDepositRequest.
-             * @implements IQueryAllDepositRequest
-             * @constructor
-             * @param {ununifi.cdp.IQueryAllDepositRequest=} [properties] Properties to set
-             */
-            function QueryAllDepositRequest(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * QueryAllDepositRequest owner.
-             * @member {string} owner
-             * @memberof ununifi.cdp.QueryAllDepositRequest
-             * @instance
-             */
-            QueryAllDepositRequest.prototype.owner = "";
-
-            /**
-             * QueryAllDepositRequest collateral_type.
-             * @member {string} collateral_type
-             * @memberof ununifi.cdp.QueryAllDepositRequest
-             * @instance
-             */
-            QueryAllDepositRequest.prototype.collateral_type = "";
-
-            /**
-             * Encodes the specified QueryAllDepositRequest message. Does not implicitly {@link ununifi.cdp.QueryAllDepositRequest.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.QueryAllDepositRequest
-             * @static
-             * @param {ununifi.cdp.IQueryAllDepositRequest} message QueryAllDepositRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllDepositRequest.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.owner != null && Object.hasOwnProperty.call(message, "owner"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.owner);
-                if (message.collateral_type != null && Object.hasOwnProperty.call(message, "collateral_type"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.collateral_type);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryAllDepositRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllDepositRequest.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.QueryAllDepositRequest
-             * @static
-             * @param {ununifi.cdp.IQueryAllDepositRequest} message QueryAllDepositRequest message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllDepositRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryAllDepositRequest message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.QueryAllDepositRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.QueryAllDepositRequest} QueryAllDepositRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllDepositRequest.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryAllDepositRequest();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.owner = reader.string();
-                        break;
-                    case 2:
-                        message.collateral_type = reader.string();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryAllDepositRequest message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.QueryAllDepositRequest
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.QueryAllDepositRequest} QueryAllDepositRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllDepositRequest.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryAllDepositRequest message.
-             * @function verify
-             * @memberof ununifi.cdp.QueryAllDepositRequest
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryAllDepositRequest.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.owner != null && message.hasOwnProperty("owner"))
-                    if (!$util.isString(message.owner))
-                        return "owner: string expected";
-                if (message.collateral_type != null && message.hasOwnProperty("collateral_type"))
-                    if (!$util.isString(message.collateral_type))
-                        return "collateral_type: string expected";
-                return null;
-            };
-
-            /**
-             * Creates a QueryAllDepositRequest message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.QueryAllDepositRequest
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.QueryAllDepositRequest} QueryAllDepositRequest
-             */
-            QueryAllDepositRequest.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.QueryAllDepositRequest)
-                    return object;
-                let message = new $root.ununifi.cdp.QueryAllDepositRequest();
-                if (object.owner != null)
-                    message.owner = String(object.owner);
-                if (object.collateral_type != null)
-                    message.collateral_type = String(object.collateral_type);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a QueryAllDepositRequest message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.QueryAllDepositRequest
-             * @static
-             * @param {ununifi.cdp.QueryAllDepositRequest} message QueryAllDepositRequest
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryAllDepositRequest.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.owner = "";
-                    object.collateral_type = "";
-                }
-                if (message.owner != null && message.hasOwnProperty("owner"))
-                    object.owner = message.owner;
-                if (message.collateral_type != null && message.hasOwnProperty("collateral_type"))
-                    object.collateral_type = message.collateral_type;
-                return object;
-            };
-
-            /**
-             * Converts this QueryAllDepositRequest to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.QueryAllDepositRequest
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryAllDepositRequest.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryAllDepositRequest;
-        })();
-
-        cdp.QueryAllDepositResponse = (function() {
-
-            /**
-             * Properties of a QueryAllDepositResponse.
-             * @memberof ununifi.cdp
-             * @interface IQueryAllDepositResponse
-             * @property {Array.<ununifi.cdp.IDeposit>|null} [deposits] QueryAllDepositResponse deposits
-             */
-
-            /**
-             * Constructs a new QueryAllDepositResponse.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a QueryAllDepositResponse.
-             * @implements IQueryAllDepositResponse
-             * @constructor
-             * @param {ununifi.cdp.IQueryAllDepositResponse=} [properties] Properties to set
-             */
-            function QueryAllDepositResponse(properties) {
-                this.deposits = [];
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * QueryAllDepositResponse deposits.
-             * @member {Array.<ununifi.cdp.IDeposit>} deposits
-             * @memberof ununifi.cdp.QueryAllDepositResponse
-             * @instance
-             */
-            QueryAllDepositResponse.prototype.deposits = $util.emptyArray;
-
-            /**
-             * Encodes the specified QueryAllDepositResponse message. Does not implicitly {@link ununifi.cdp.QueryAllDepositResponse.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.QueryAllDepositResponse
-             * @static
-             * @param {ununifi.cdp.IQueryAllDepositResponse} message QueryAllDepositResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllDepositResponse.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.deposits != null && message.deposits.length)
-                    for (let i = 0; i < message.deposits.length; ++i)
-                        $root.ununifi.cdp.Deposit.encode(message.deposits[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified QueryAllDepositResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllDepositResponse.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.QueryAllDepositResponse
-             * @static
-             * @param {ununifi.cdp.IQueryAllDepositResponse} message QueryAllDepositResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            QueryAllDepositResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a QueryAllDepositResponse message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.QueryAllDepositResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.QueryAllDepositResponse} QueryAllDepositResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllDepositResponse.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryAllDepositResponse();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        if (!(message.deposits && message.deposits.length))
-                            message.deposits = [];
-                        message.deposits.push($root.ununifi.cdp.Deposit.decode(reader, reader.uint32()));
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a QueryAllDepositResponse message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.QueryAllDepositResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.QueryAllDepositResponse} QueryAllDepositResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            QueryAllDepositResponse.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a QueryAllDepositResponse message.
-             * @function verify
-             * @memberof ununifi.cdp.QueryAllDepositResponse
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            QueryAllDepositResponse.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.deposits != null && message.hasOwnProperty("deposits")) {
-                    if (!Array.isArray(message.deposits))
-                        return "deposits: array expected";
-                    for (let i = 0; i < message.deposits.length; ++i) {
-                        let error = $root.ununifi.cdp.Deposit.verify(message.deposits[i]);
-                        if (error)
-                            return "deposits." + error;
-                    }
-                }
-                return null;
-            };
-
-            /**
-             * Creates a QueryAllDepositResponse message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.QueryAllDepositResponse
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.QueryAllDepositResponse} QueryAllDepositResponse
-             */
-            QueryAllDepositResponse.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.QueryAllDepositResponse)
-                    return object;
-                let message = new $root.ununifi.cdp.QueryAllDepositResponse();
-                if (object.deposits) {
-                    if (!Array.isArray(object.deposits))
-                        throw TypeError(".ununifi.cdp.QueryAllDepositResponse.deposits: array expected");
-                    message.deposits = [];
-                    for (let i = 0; i < object.deposits.length; ++i) {
-                        if (typeof object.deposits[i] !== "object")
-                            throw TypeError(".ununifi.cdp.QueryAllDepositResponse.deposits: object expected");
-                        message.deposits[i] = $root.ununifi.cdp.Deposit.fromObject(object.deposits[i]);
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a QueryAllDepositResponse message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.QueryAllDepositResponse
-             * @static
-             * @param {ununifi.cdp.QueryAllDepositResponse} message QueryAllDepositResponse
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            QueryAllDepositResponse.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.arrays || options.defaults)
-                    object.deposits = [];
-                if (message.deposits && message.deposits.length) {
-                    object.deposits = [];
-                    for (let j = 0; j < message.deposits.length; ++j)
-                        object.deposits[j] = $root.ununifi.cdp.Deposit.toObject(message.deposits[j], options);
-                }
-                return object;
-            };
-
-            /**
-             * Converts this QueryAllDepositResponse to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.QueryAllDepositResponse
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            QueryAllDepositResponse.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return QueryAllDepositResponse;
-        })();
-
-        cdp.Cdp = (function() {
-
-            /**
-             * Properties of a Cdp.
-             * @memberof ununifi.cdp
-             * @interface ICdp
-             * @property {Long|null} [id] Cdp id
-             * @property {string|null} [owner] Cdp owner
-             * @property {string|null} [type] Cdp type
-             * @property {cosmos.base.v1beta1.ICoin|null} [collateral] Cdp collateral
-             * @property {cosmos.base.v1beta1.ICoin|null} [principal] Cdp principal
-             * @property {cosmos.base.v1beta1.ICoin|null} [accumulated_fees] Cdp accumulated_fees
-             * @property {google.protobuf.ITimestamp|null} [fees_updated] Cdp fees_updated
-             * @property {string|null} [interest_factor] Cdp interest_factor
-             */
-
-            /**
-             * Constructs a new Cdp.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a Cdp.
-             * @implements ICdp
-             * @constructor
-             * @param {ununifi.cdp.ICdp=} [properties] Properties to set
-             */
-            function Cdp(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * Cdp id.
-             * @member {Long} id
-             * @memberof ununifi.cdp.Cdp
-             * @instance
-             */
-            Cdp.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-
-            /**
-             * Cdp owner.
-             * @member {string} owner
-             * @memberof ununifi.cdp.Cdp
-             * @instance
-             */
-            Cdp.prototype.owner = "";
-
-            /**
-             * Cdp type.
-             * @member {string} type
-             * @memberof ununifi.cdp.Cdp
-             * @instance
-             */
-            Cdp.prototype.type = "";
-
-            /**
-             * Cdp collateral.
-             * @member {cosmos.base.v1beta1.ICoin|null|undefined} collateral
-             * @memberof ununifi.cdp.Cdp
-             * @instance
-             */
-            Cdp.prototype.collateral = null;
-
-            /**
-             * Cdp principal.
-             * @member {cosmos.base.v1beta1.ICoin|null|undefined} principal
-             * @memberof ununifi.cdp.Cdp
-             * @instance
-             */
-            Cdp.prototype.principal = null;
-
-            /**
-             * Cdp accumulated_fees.
-             * @member {cosmos.base.v1beta1.ICoin|null|undefined} accumulated_fees
-             * @memberof ununifi.cdp.Cdp
-             * @instance
-             */
-            Cdp.prototype.accumulated_fees = null;
-
-            /**
-             * Cdp fees_updated.
-             * @member {google.protobuf.ITimestamp|null|undefined} fees_updated
-             * @memberof ununifi.cdp.Cdp
-             * @instance
-             */
-            Cdp.prototype.fees_updated = null;
-
-            /**
-             * Cdp interest_factor.
-             * @member {string} interest_factor
-             * @memberof ununifi.cdp.Cdp
-             * @instance
-             */
-            Cdp.prototype.interest_factor = "";
-
-            /**
-             * Encodes the specified Cdp message. Does not implicitly {@link ununifi.cdp.Cdp.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.Cdp
-             * @static
-             * @param {ununifi.cdp.ICdp} message Cdp message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Cdp.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.id != null && Object.hasOwnProperty.call(message, "id"))
-                    writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
-                if (message.owner != null && Object.hasOwnProperty.call(message, "owner"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.owner);
-                if (message.type != null && Object.hasOwnProperty.call(message, "type"))
-                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.type);
-                if (message.collateral != null && Object.hasOwnProperty.call(message, "collateral"))
-                    $root.cosmos.base.v1beta1.Coin.encode(message.collateral, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-                if (message.principal != null && Object.hasOwnProperty.call(message, "principal"))
-                    $root.cosmos.base.v1beta1.Coin.encode(message.principal, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
-                if (message.accumulated_fees != null && Object.hasOwnProperty.call(message, "accumulated_fees"))
-                    $root.cosmos.base.v1beta1.Coin.encode(message.accumulated_fees, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
-                if (message.fees_updated != null && Object.hasOwnProperty.call(message, "fees_updated"))
-                    $root.google.protobuf.Timestamp.encode(message.fees_updated, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
-                if (message.interest_factor != null && Object.hasOwnProperty.call(message, "interest_factor"))
-                    writer.uint32(/* id 8, wireType 2 =*/66).string(message.interest_factor);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified Cdp message, length delimited. Does not implicitly {@link ununifi.cdp.Cdp.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.Cdp
-             * @static
-             * @param {ununifi.cdp.ICdp} message Cdp message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Cdp.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a Cdp message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.Cdp
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.Cdp} Cdp
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Cdp.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.Cdp();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.id = reader.uint64();
-                        break;
-                    case 2:
-                        message.owner = reader.string();
-                        break;
-                    case 3:
-                        message.type = reader.string();
-                        break;
-                    case 4:
-                        message.collateral = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                        break;
-                    case 5:
-                        message.principal = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                        break;
-                    case 6:
-                        message.accumulated_fees = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                        break;
-                    case 7:
-                        message.fees_updated = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
-                        break;
-                    case 8:
-                        message.interest_factor = reader.string();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a Cdp message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.Cdp
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.Cdp} Cdp
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Cdp.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a Cdp message.
-             * @function verify
-             * @memberof ununifi.cdp.Cdp
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            Cdp.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.id != null && message.hasOwnProperty("id"))
-                    if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
-                        return "id: integer|Long expected";
-                if (message.owner != null && message.hasOwnProperty("owner"))
-                    if (!$util.isString(message.owner))
-                        return "owner: string expected";
-                if (message.type != null && message.hasOwnProperty("type"))
-                    if (!$util.isString(message.type))
-                        return "type: string expected";
-                if (message.collateral != null && message.hasOwnProperty("collateral")) {
-                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.collateral);
-                    if (error)
-                        return "collateral." + error;
-                }
-                if (message.principal != null && message.hasOwnProperty("principal")) {
-                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.principal);
-                    if (error)
-                        return "principal." + error;
-                }
-                if (message.accumulated_fees != null && message.hasOwnProperty("accumulated_fees")) {
-                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.accumulated_fees);
-                    if (error)
-                        return "accumulated_fees." + error;
-                }
-                if (message.fees_updated != null && message.hasOwnProperty("fees_updated")) {
-                    let error = $root.google.protobuf.Timestamp.verify(message.fees_updated);
-                    if (error)
-                        return "fees_updated." + error;
-                }
-                if (message.interest_factor != null && message.hasOwnProperty("interest_factor"))
-                    if (!$util.isString(message.interest_factor))
-                        return "interest_factor: string expected";
-                return null;
-            };
-
-            /**
-             * Creates a Cdp message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.Cdp
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.Cdp} Cdp
-             */
-            Cdp.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.Cdp)
-                    return object;
-                let message = new $root.ununifi.cdp.Cdp();
-                if (object.id != null)
-                    if ($util.Long)
-                        (message.id = $util.Long.fromValue(object.id)).unsigned = true;
-                    else if (typeof object.id === "string")
-                        message.id = parseInt(object.id, 10);
-                    else if (typeof object.id === "number")
-                        message.id = object.id;
-                    else if (typeof object.id === "object")
-                        message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
-                if (object.owner != null)
-                    message.owner = String(object.owner);
-                if (object.type != null)
-                    message.type = String(object.type);
-                if (object.collateral != null) {
-                    if (typeof object.collateral !== "object")
-                        throw TypeError(".ununifi.cdp.Cdp.collateral: object expected");
-                    message.collateral = $root.cosmos.base.v1beta1.Coin.fromObject(object.collateral);
-                }
-                if (object.principal != null) {
-                    if (typeof object.principal !== "object")
-                        throw TypeError(".ununifi.cdp.Cdp.principal: object expected");
-                    message.principal = $root.cosmos.base.v1beta1.Coin.fromObject(object.principal);
-                }
-                if (object.accumulated_fees != null) {
-                    if (typeof object.accumulated_fees !== "object")
-                        throw TypeError(".ununifi.cdp.Cdp.accumulated_fees: object expected");
-                    message.accumulated_fees = $root.cosmos.base.v1beta1.Coin.fromObject(object.accumulated_fees);
-                }
-                if (object.fees_updated != null) {
-                    if (typeof object.fees_updated !== "object")
-                        throw TypeError(".ununifi.cdp.Cdp.fees_updated: object expected");
-                    message.fees_updated = $root.google.protobuf.Timestamp.fromObject(object.fees_updated);
-                }
-                if (object.interest_factor != null)
-                    message.interest_factor = String(object.interest_factor);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a Cdp message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.Cdp
-             * @static
-             * @param {ununifi.cdp.Cdp} message Cdp
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            Cdp.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    if ($util.Long) {
-                        let long = new $util.Long(0, 0, true);
-                        object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.id = options.longs === String ? "0" : 0;
-                    object.owner = "";
-                    object.type = "";
-                    object.collateral = null;
-                    object.principal = null;
-                    object.accumulated_fees = null;
-                    object.fees_updated = null;
-                    object.interest_factor = "";
-                }
-                if (message.id != null && message.hasOwnProperty("id"))
-                    if (typeof message.id === "number")
-                        object.id = options.longs === String ? String(message.id) : message.id;
-                    else
-                        object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
-                if (message.owner != null && message.hasOwnProperty("owner"))
-                    object.owner = message.owner;
-                if (message.type != null && message.hasOwnProperty("type"))
-                    object.type = message.type;
-                if (message.collateral != null && message.hasOwnProperty("collateral"))
-                    object.collateral = $root.cosmos.base.v1beta1.Coin.toObject(message.collateral, options);
-                if (message.principal != null && message.hasOwnProperty("principal"))
-                    object.principal = $root.cosmos.base.v1beta1.Coin.toObject(message.principal, options);
-                if (message.accumulated_fees != null && message.hasOwnProperty("accumulated_fees"))
-                    object.accumulated_fees = $root.cosmos.base.v1beta1.Coin.toObject(message.accumulated_fees, options);
-                if (message.fees_updated != null && message.hasOwnProperty("fees_updated"))
-                    object.fees_updated = $root.google.protobuf.Timestamp.toObject(message.fees_updated, options);
-                if (message.interest_factor != null && message.hasOwnProperty("interest_factor"))
-                    object.interest_factor = message.interest_factor;
-                return object;
-            };
-
-            /**
-             * Converts this Cdp to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.Cdp
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            Cdp.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return Cdp;
-        })();
-
-        cdp.Deposit = (function() {
-
-            /**
-             * Properties of a Deposit.
-             * @memberof ununifi.cdp
-             * @interface IDeposit
-             * @property {Long|null} [cdp_id] Deposit cdp_id
-             * @property {string|null} [depositor] Deposit depositor
-             * @property {cosmos.base.v1beta1.ICoin|null} [amount] Deposit amount
-             */
-
-            /**
-             * Constructs a new Deposit.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a Deposit.
-             * @implements IDeposit
-             * @constructor
-             * @param {ununifi.cdp.IDeposit=} [properties] Properties to set
-             */
-            function Deposit(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * Deposit cdp_id.
-             * @member {Long} cdp_id
-             * @memberof ununifi.cdp.Deposit
-             * @instance
-             */
-            Deposit.prototype.cdp_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-
-            /**
-             * Deposit depositor.
-             * @member {string} depositor
-             * @memberof ununifi.cdp.Deposit
-             * @instance
-             */
-            Deposit.prototype.depositor = "";
-
-            /**
-             * Deposit amount.
-             * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
-             * @memberof ununifi.cdp.Deposit
-             * @instance
-             */
-            Deposit.prototype.amount = null;
-
-            /**
-             * Encodes the specified Deposit message. Does not implicitly {@link ununifi.cdp.Deposit.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.Deposit
-             * @static
-             * @param {ununifi.cdp.IDeposit} message Deposit message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Deposit.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.cdp_id != null && Object.hasOwnProperty.call(message, "cdp_id"))
-                    writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.cdp_id);
-                if (message.depositor != null && Object.hasOwnProperty.call(message, "depositor"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.depositor);
-                if (message.amount != null && Object.hasOwnProperty.call(message, "amount"))
-                    $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified Deposit message, length delimited. Does not implicitly {@link ununifi.cdp.Deposit.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.Deposit
-             * @static
-             * @param {ununifi.cdp.IDeposit} message Deposit message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Deposit.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a Deposit message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.Deposit
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.Deposit} Deposit
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Deposit.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.Deposit();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.cdp_id = reader.uint64();
-                        break;
-                    case 2:
-                        message.depositor = reader.string();
-                        break;
-                    case 3:
-                        message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a Deposit message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.Deposit
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.Deposit} Deposit
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Deposit.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a Deposit message.
-             * @function verify
-             * @memberof ununifi.cdp.Deposit
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            Deposit.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.cdp_id != null && message.hasOwnProperty("cdp_id"))
-                    if (!$util.isInteger(message.cdp_id) && !(message.cdp_id && $util.isInteger(message.cdp_id.low) && $util.isInteger(message.cdp_id.high)))
-                        return "cdp_id: integer|Long expected";
-                if (message.depositor != null && message.hasOwnProperty("depositor"))
-                    if (!$util.isString(message.depositor))
-                        return "depositor: string expected";
-                if (message.amount != null && message.hasOwnProperty("amount")) {
-                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
-                    if (error)
-                        return "amount." + error;
-                }
-                return null;
-            };
-
-            /**
-             * Creates a Deposit message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.Deposit
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.Deposit} Deposit
-             */
-            Deposit.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.Deposit)
-                    return object;
-                let message = new $root.ununifi.cdp.Deposit();
-                if (object.cdp_id != null)
-                    if ($util.Long)
-                        (message.cdp_id = $util.Long.fromValue(object.cdp_id)).unsigned = true;
-                    else if (typeof object.cdp_id === "string")
-                        message.cdp_id = parseInt(object.cdp_id, 10);
-                    else if (typeof object.cdp_id === "number")
-                        message.cdp_id = object.cdp_id;
-                    else if (typeof object.cdp_id === "object")
-                        message.cdp_id = new $util.LongBits(object.cdp_id.low >>> 0, object.cdp_id.high >>> 0).toNumber(true);
-                if (object.depositor != null)
-                    message.depositor = String(object.depositor);
-                if (object.amount != null) {
-                    if (typeof object.amount !== "object")
-                        throw TypeError(".ununifi.cdp.Deposit.amount: object expected");
-                    message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a Deposit message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.Deposit
-             * @static
-             * @param {ununifi.cdp.Deposit} message Deposit
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            Deposit.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    if ($util.Long) {
-                        let long = new $util.Long(0, 0, true);
-                        object.cdp_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.cdp_id = options.longs === String ? "0" : 0;
-                    object.depositor = "";
-                    object.amount = null;
-                }
-                if (message.cdp_id != null && message.hasOwnProperty("cdp_id"))
-                    if (typeof message.cdp_id === "number")
-                        object.cdp_id = options.longs === String ? String(message.cdp_id) : message.cdp_id;
-                    else
-                        object.cdp_id = options.longs === String ? $util.Long.prototype.toString.call(message.cdp_id) : options.longs === Number ? new $util.LongBits(message.cdp_id.low >>> 0, message.cdp_id.high >>> 0).toNumber(true) : message.cdp_id;
-                if (message.depositor != null && message.hasOwnProperty("depositor"))
-                    object.depositor = message.depositor;
-                if (message.amount != null && message.hasOwnProperty("amount"))
-                    object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
-                return object;
-            };
-
-            /**
-             * Converts this Deposit to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.Deposit
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            Deposit.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return Deposit;
-        })();
-
-        cdp.AugmentedCdp = (function() {
-
-            /**
-             * Properties of an AugmentedCdp.
-             * @memberof ununifi.cdp
-             * @interface IAugmentedCdp
-             * @property {ununifi.cdp.ICdp|null} [cdp] AugmentedCdp cdp
-             * @property {cosmos.base.v1beta1.ICoin|null} [collateral_value] AugmentedCdp collateral_value
-             * @property {string|null} [collateralization_ratio] AugmentedCdp collateralization_ratio
-             */
-
-            /**
-             * Constructs a new AugmentedCdp.
-             * @memberof ununifi.cdp
-             * @classdesc Represents an AugmentedCdp.
-             * @implements IAugmentedCdp
-             * @constructor
-             * @param {ununifi.cdp.IAugmentedCdp=} [properties] Properties to set
-             */
-            function AugmentedCdp(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * AugmentedCdp cdp.
-             * @member {ununifi.cdp.ICdp|null|undefined} cdp
-             * @memberof ununifi.cdp.AugmentedCdp
-             * @instance
-             */
-            AugmentedCdp.prototype.cdp = null;
-
-            /**
-             * AugmentedCdp collateral_value.
-             * @member {cosmos.base.v1beta1.ICoin|null|undefined} collateral_value
-             * @memberof ununifi.cdp.AugmentedCdp
-             * @instance
-             */
-            AugmentedCdp.prototype.collateral_value = null;
-
-            /**
-             * AugmentedCdp collateralization_ratio.
-             * @member {string} collateralization_ratio
-             * @memberof ununifi.cdp.AugmentedCdp
-             * @instance
-             */
-            AugmentedCdp.prototype.collateralization_ratio = "";
-
-            /**
-             * Encodes the specified AugmentedCdp message. Does not implicitly {@link ununifi.cdp.AugmentedCdp.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.AugmentedCdp
-             * @static
-             * @param {ununifi.cdp.IAugmentedCdp} message AugmentedCdp message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            AugmentedCdp.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.cdp != null && Object.hasOwnProperty.call(message, "cdp"))
-                    $root.ununifi.cdp.Cdp.encode(message.cdp, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                if (message.collateral_value != null && Object.hasOwnProperty.call(message, "collateral_value"))
-                    $root.cosmos.base.v1beta1.Coin.encode(message.collateral_value, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                if (message.collateralization_ratio != null && Object.hasOwnProperty.call(message, "collateralization_ratio"))
-                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.collateralization_ratio);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified AugmentedCdp message, length delimited. Does not implicitly {@link ununifi.cdp.AugmentedCdp.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.AugmentedCdp
-             * @static
-             * @param {ununifi.cdp.IAugmentedCdp} message AugmentedCdp message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            AugmentedCdp.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes an AugmentedCdp message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.AugmentedCdp
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.AugmentedCdp} AugmentedCdp
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            AugmentedCdp.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.AugmentedCdp();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.cdp = $root.ununifi.cdp.Cdp.decode(reader, reader.uint32());
-                        break;
-                    case 2:
-                        message.collateral_value = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                        break;
-                    case 3:
-                        message.collateralization_ratio = reader.string();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes an AugmentedCdp message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.AugmentedCdp
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.AugmentedCdp} AugmentedCdp
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            AugmentedCdp.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies an AugmentedCdp message.
-             * @function verify
-             * @memberof ununifi.cdp.AugmentedCdp
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            AugmentedCdp.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.cdp != null && message.hasOwnProperty("cdp")) {
-                    let error = $root.ununifi.cdp.Cdp.verify(message.cdp);
-                    if (error)
-                        return "cdp." + error;
-                }
-                if (message.collateral_value != null && message.hasOwnProperty("collateral_value")) {
-                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.collateral_value);
-                    if (error)
-                        return "collateral_value." + error;
-                }
-                if (message.collateralization_ratio != null && message.hasOwnProperty("collateralization_ratio"))
-                    if (!$util.isString(message.collateralization_ratio))
-                        return "collateralization_ratio: string expected";
-                return null;
-            };
-
-            /**
-             * Creates an AugmentedCdp message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.AugmentedCdp
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.AugmentedCdp} AugmentedCdp
-             */
-            AugmentedCdp.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.AugmentedCdp)
-                    return object;
-                let message = new $root.ununifi.cdp.AugmentedCdp();
-                if (object.cdp != null) {
-                    if (typeof object.cdp !== "object")
-                        throw TypeError(".ununifi.cdp.AugmentedCdp.cdp: object expected");
-                    message.cdp = $root.ununifi.cdp.Cdp.fromObject(object.cdp);
-                }
-                if (object.collateral_value != null) {
-                    if (typeof object.collateral_value !== "object")
-                        throw TypeError(".ununifi.cdp.AugmentedCdp.collateral_value: object expected");
-                    message.collateral_value = $root.cosmos.base.v1beta1.Coin.fromObject(object.collateral_value);
-                }
-                if (object.collateralization_ratio != null)
-                    message.collateralization_ratio = String(object.collateralization_ratio);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from an AugmentedCdp message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.AugmentedCdp
-             * @static
-             * @param {ununifi.cdp.AugmentedCdp} message AugmentedCdp
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            AugmentedCdp.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.cdp = null;
-                    object.collateral_value = null;
-                    object.collateralization_ratio = "";
-                }
-                if (message.cdp != null && message.hasOwnProperty("cdp"))
-                    object.cdp = $root.ununifi.cdp.Cdp.toObject(message.cdp, options);
-                if (message.collateral_value != null && message.hasOwnProperty("collateral_value"))
-                    object.collateral_value = $root.cosmos.base.v1beta1.Coin.toObject(message.collateral_value, options);
-                if (message.collateralization_ratio != null && message.hasOwnProperty("collateralization_ratio"))
-                    object.collateralization_ratio = message.collateralization_ratio;
-                return object;
-            };
-
-            /**
-             * Converts this AugmentedCdp to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.AugmentedCdp
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            AugmentedCdp.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return AugmentedCdp;
-        })();
-
-        cdp.Params = (function() {
-
-            /**
-             * Properties of a Params.
-             * @memberof ununifi.cdp
-             * @interface IParams
-             * @property {Array.<ununifi.cdp.ICollateralParam>|null} [collateral_params] Params collateral_params
-             * @property {ununifi.cdp.IDebtParam|null} [debt_param] Params debt_param
-             * @property {cosmos.base.v1beta1.ICoin|null} [global_debt_limit] Params global_debt_limit
-             * @property {string|null} [surplus_auction_threshold] Params surplus_auction_threshold
-             * @property {string|null} [surplus_auction_lot] Params surplus_auction_lot
-             * @property {string|null} [debt_auction_threshold] Params debt_auction_threshold
-             * @property {string|null} [debt_auction_lot] Params debt_auction_lot
-             * @property {boolean|null} [circuit_breaker] Params circuit_breaker
-             */
-
-            /**
-             * Constructs a new Params.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a Params.
-             * @implements IParams
-             * @constructor
-             * @param {ununifi.cdp.IParams=} [properties] Properties to set
-             */
-            function Params(properties) {
-                this.collateral_params = [];
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * Params collateral_params.
-             * @member {Array.<ununifi.cdp.ICollateralParam>} collateral_params
-             * @memberof ununifi.cdp.Params
-             * @instance
-             */
-            Params.prototype.collateral_params = $util.emptyArray;
-
-            /**
-             * Params debt_param.
-             * @member {ununifi.cdp.IDebtParam|null|undefined} debt_param
-             * @memberof ununifi.cdp.Params
-             * @instance
-             */
-            Params.prototype.debt_param = null;
-
-            /**
-             * Params global_debt_limit.
-             * @member {cosmos.base.v1beta1.ICoin|null|undefined} global_debt_limit
-             * @memberof ununifi.cdp.Params
-             * @instance
-             */
-            Params.prototype.global_debt_limit = null;
-
-            /**
-             * Params surplus_auction_threshold.
-             * @member {string} surplus_auction_threshold
-             * @memberof ununifi.cdp.Params
-             * @instance
-             */
-            Params.prototype.surplus_auction_threshold = "";
-
-            /**
-             * Params surplus_auction_lot.
-             * @member {string} surplus_auction_lot
-             * @memberof ununifi.cdp.Params
-             * @instance
-             */
-            Params.prototype.surplus_auction_lot = "";
-
-            /**
-             * Params debt_auction_threshold.
-             * @member {string} debt_auction_threshold
-             * @memberof ununifi.cdp.Params
-             * @instance
-             */
-            Params.prototype.debt_auction_threshold = "";
-
-            /**
-             * Params debt_auction_lot.
-             * @member {string} debt_auction_lot
-             * @memberof ununifi.cdp.Params
-             * @instance
-             */
-            Params.prototype.debt_auction_lot = "";
-
-            /**
-             * Params circuit_breaker.
-             * @member {boolean} circuit_breaker
-             * @memberof ununifi.cdp.Params
-             * @instance
-             */
-            Params.prototype.circuit_breaker = false;
-
-            /**
-             * Encodes the specified Params message. Does not implicitly {@link ununifi.cdp.Params.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.Params
-             * @static
-             * @param {ununifi.cdp.IParams} message Params message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Params.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.collateral_params != null && message.collateral_params.length)
-                    for (let i = 0; i < message.collateral_params.length; ++i)
-                        $root.ununifi.cdp.CollateralParam.encode(message.collateral_params[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                if (message.debt_param != null && Object.hasOwnProperty.call(message, "debt_param"))
-                    $root.ununifi.cdp.DebtParam.encode(message.debt_param, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                if (message.global_debt_limit != null && Object.hasOwnProperty.call(message, "global_debt_limit"))
-                    $root.cosmos.base.v1beta1.Coin.encode(message.global_debt_limit, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-                if (message.surplus_auction_threshold != null && Object.hasOwnProperty.call(message, "surplus_auction_threshold"))
-                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.surplus_auction_threshold);
-                if (message.surplus_auction_lot != null && Object.hasOwnProperty.call(message, "surplus_auction_lot"))
-                    writer.uint32(/* id 5, wireType 2 =*/42).string(message.surplus_auction_lot);
-                if (message.debt_auction_threshold != null && Object.hasOwnProperty.call(message, "debt_auction_threshold"))
-                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.debt_auction_threshold);
-                if (message.debt_auction_lot != null && Object.hasOwnProperty.call(message, "debt_auction_lot"))
-                    writer.uint32(/* id 7, wireType 2 =*/58).string(message.debt_auction_lot);
-                if (message.circuit_breaker != null && Object.hasOwnProperty.call(message, "circuit_breaker"))
-                    writer.uint32(/* id 8, wireType 0 =*/64).bool(message.circuit_breaker);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.cdp.Params.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.Params
-             * @static
-             * @param {ununifi.cdp.IParams} message Params message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Params.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a Params message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.Params
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.Params} Params
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Params.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.Params();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        if (!(message.collateral_params && message.collateral_params.length))
-                            message.collateral_params = [];
-                        message.collateral_params.push($root.ununifi.cdp.CollateralParam.decode(reader, reader.uint32()));
-                        break;
-                    case 2:
-                        message.debt_param = $root.ununifi.cdp.DebtParam.decode(reader, reader.uint32());
-                        break;
-                    case 3:
-                        message.global_debt_limit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                        break;
-                    case 4:
-                        message.surplus_auction_threshold = reader.string();
-                        break;
-                    case 5:
-                        message.surplus_auction_lot = reader.string();
-                        break;
-                    case 6:
-                        message.debt_auction_threshold = reader.string();
-                        break;
-                    case 7:
-                        message.debt_auction_lot = reader.string();
-                        break;
-                    case 8:
-                        message.circuit_breaker = reader.bool();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a Params message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.Params
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.Params} Params
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Params.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a Params message.
-             * @function verify
-             * @memberof ununifi.cdp.Params
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            Params.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.collateral_params != null && message.hasOwnProperty("collateral_params")) {
-                    if (!Array.isArray(message.collateral_params))
-                        return "collateral_params: array expected";
-                    for (let i = 0; i < message.collateral_params.length; ++i) {
-                        let error = $root.ununifi.cdp.CollateralParam.verify(message.collateral_params[i]);
-                        if (error)
-                            return "collateral_params." + error;
-                    }
-                }
-                if (message.debt_param != null && message.hasOwnProperty("debt_param")) {
-                    let error = $root.ununifi.cdp.DebtParam.verify(message.debt_param);
-                    if (error)
-                        return "debt_param." + error;
-                }
-                if (message.global_debt_limit != null && message.hasOwnProperty("global_debt_limit")) {
-                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.global_debt_limit);
-                    if (error)
-                        return "global_debt_limit." + error;
-                }
-                if (message.surplus_auction_threshold != null && message.hasOwnProperty("surplus_auction_threshold"))
-                    if (!$util.isString(message.surplus_auction_threshold))
-                        return "surplus_auction_threshold: string expected";
-                if (message.surplus_auction_lot != null && message.hasOwnProperty("surplus_auction_lot"))
-                    if (!$util.isString(message.surplus_auction_lot))
-                        return "surplus_auction_lot: string expected";
-                if (message.debt_auction_threshold != null && message.hasOwnProperty("debt_auction_threshold"))
-                    if (!$util.isString(message.debt_auction_threshold))
-                        return "debt_auction_threshold: string expected";
-                if (message.debt_auction_lot != null && message.hasOwnProperty("debt_auction_lot"))
-                    if (!$util.isString(message.debt_auction_lot))
-                        return "debt_auction_lot: string expected";
-                if (message.circuit_breaker != null && message.hasOwnProperty("circuit_breaker"))
-                    if (typeof message.circuit_breaker !== "boolean")
-                        return "circuit_breaker: boolean expected";
-                return null;
-            };
-
-            /**
-             * Creates a Params message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.Params
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.Params} Params
-             */
-            Params.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.Params)
-                    return object;
-                let message = new $root.ununifi.cdp.Params();
-                if (object.collateral_params) {
-                    if (!Array.isArray(object.collateral_params))
-                        throw TypeError(".ununifi.cdp.Params.collateral_params: array expected");
-                    message.collateral_params = [];
-                    for (let i = 0; i < object.collateral_params.length; ++i) {
-                        if (typeof object.collateral_params[i] !== "object")
-                            throw TypeError(".ununifi.cdp.Params.collateral_params: object expected");
-                        message.collateral_params[i] = $root.ununifi.cdp.CollateralParam.fromObject(object.collateral_params[i]);
-                    }
-                }
-                if (object.debt_param != null) {
-                    if (typeof object.debt_param !== "object")
-                        throw TypeError(".ununifi.cdp.Params.debt_param: object expected");
-                    message.debt_param = $root.ununifi.cdp.DebtParam.fromObject(object.debt_param);
-                }
-                if (object.global_debt_limit != null) {
-                    if (typeof object.global_debt_limit !== "object")
-                        throw TypeError(".ununifi.cdp.Params.global_debt_limit: object expected");
-                    message.global_debt_limit = $root.cosmos.base.v1beta1.Coin.fromObject(object.global_debt_limit);
-                }
-                if (object.surplus_auction_threshold != null)
-                    message.surplus_auction_threshold = String(object.surplus_auction_threshold);
-                if (object.surplus_auction_lot != null)
-                    message.surplus_auction_lot = String(object.surplus_auction_lot);
-                if (object.debt_auction_threshold != null)
-                    message.debt_auction_threshold = String(object.debt_auction_threshold);
-                if (object.debt_auction_lot != null)
-                    message.debt_auction_lot = String(object.debt_auction_lot);
-                if (object.circuit_breaker != null)
-                    message.circuit_breaker = Boolean(object.circuit_breaker);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a Params message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.Params
-             * @static
-             * @param {ununifi.cdp.Params} message Params
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            Params.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.arrays || options.defaults)
-                    object.collateral_params = [];
-                if (options.defaults) {
-                    object.debt_param = null;
-                    object.global_debt_limit = null;
-                    object.surplus_auction_threshold = "";
-                    object.surplus_auction_lot = "";
-                    object.debt_auction_threshold = "";
-                    object.debt_auction_lot = "";
-                    object.circuit_breaker = false;
-                }
-                if (message.collateral_params && message.collateral_params.length) {
-                    object.collateral_params = [];
-                    for (let j = 0; j < message.collateral_params.length; ++j)
-                        object.collateral_params[j] = $root.ununifi.cdp.CollateralParam.toObject(message.collateral_params[j], options);
-                }
-                if (message.debt_param != null && message.hasOwnProperty("debt_param"))
-                    object.debt_param = $root.ununifi.cdp.DebtParam.toObject(message.debt_param, options);
-                if (message.global_debt_limit != null && message.hasOwnProperty("global_debt_limit"))
-                    object.global_debt_limit = $root.cosmos.base.v1beta1.Coin.toObject(message.global_debt_limit, options);
-                if (message.surplus_auction_threshold != null && message.hasOwnProperty("surplus_auction_threshold"))
-                    object.surplus_auction_threshold = message.surplus_auction_threshold;
-                if (message.surplus_auction_lot != null && message.hasOwnProperty("surplus_auction_lot"))
-                    object.surplus_auction_lot = message.surplus_auction_lot;
-                if (message.debt_auction_threshold != null && message.hasOwnProperty("debt_auction_threshold"))
-                    object.debt_auction_threshold = message.debt_auction_threshold;
-                if (message.debt_auction_lot != null && message.hasOwnProperty("debt_auction_lot"))
-                    object.debt_auction_lot = message.debt_auction_lot;
-                if (message.circuit_breaker != null && message.hasOwnProperty("circuit_breaker"))
-                    object.circuit_breaker = message.circuit_breaker;
-                return object;
-            };
-
-            /**
-             * Converts this Params to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.Params
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            Params.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return Params;
-        })();
-
-        cdp.CollateralParam = (function() {
-
-            /**
-             * Properties of a CollateralParam.
-             * @memberof ununifi.cdp
-             * @interface ICollateralParam
-             * @property {string|null} [denom] CollateralParam denom
-             * @property {string|null} [type] CollateralParam type
-             * @property {string|null} [liquidation_ratio] CollateralParam liquidation_ratio
-             * @property {cosmos.base.v1beta1.ICoin|null} [debt_limit] CollateralParam debt_limit
-             * @property {string|null} [stability_fee] CollateralParam stability_fee
-             * @property {string|null} [auction_size] CollateralParam auction_size
-             * @property {string|null} [liquidation_penalty] CollateralParam liquidation_penalty
-             * @property {number|null} [prefix] CollateralParam prefix
-             * @property {string|null} [spot_market_id] CollateralParam spot_market_id
-             * @property {string|null} [liquidation_market_id] CollateralParam liquidation_market_id
-             * @property {string|null} [keeper_reward_percentage] CollateralParam keeper_reward_percentage
-             * @property {string|null} [check_collateralization_index_count] CollateralParam check_collateralization_index_count
-             * @property {string|null} [conversion_factor] CollateralParam conversion_factor
-             */
-
-            /**
-             * Constructs a new CollateralParam.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a CollateralParam.
-             * @implements ICollateralParam
-             * @constructor
-             * @param {ununifi.cdp.ICollateralParam=} [properties] Properties to set
-             */
-            function CollateralParam(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * CollateralParam denom.
-             * @member {string} denom
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             */
-            CollateralParam.prototype.denom = "";
-
-            /**
-             * CollateralParam type.
-             * @member {string} type
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             */
-            CollateralParam.prototype.type = "";
-
-            /**
-             * CollateralParam liquidation_ratio.
-             * @member {string} liquidation_ratio
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             */
-            CollateralParam.prototype.liquidation_ratio = "";
-
-            /**
-             * CollateralParam debt_limit.
-             * @member {cosmos.base.v1beta1.ICoin|null|undefined} debt_limit
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             */
-            CollateralParam.prototype.debt_limit = null;
-
-            /**
-             * CollateralParam stability_fee.
-             * @member {string} stability_fee
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             */
-            CollateralParam.prototype.stability_fee = "";
-
-            /**
-             * CollateralParam auction_size.
-             * @member {string} auction_size
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             */
-            CollateralParam.prototype.auction_size = "";
-
-            /**
-             * CollateralParam liquidation_penalty.
-             * @member {string} liquidation_penalty
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             */
-            CollateralParam.prototype.liquidation_penalty = "";
-
-            /**
-             * CollateralParam prefix.
-             * @member {number} prefix
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             */
-            CollateralParam.prototype.prefix = 0;
-
-            /**
-             * CollateralParam spot_market_id.
-             * @member {string} spot_market_id
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             */
-            CollateralParam.prototype.spot_market_id = "";
-
-            /**
-             * CollateralParam liquidation_market_id.
-             * @member {string} liquidation_market_id
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             */
-            CollateralParam.prototype.liquidation_market_id = "";
-
-            /**
-             * CollateralParam keeper_reward_percentage.
-             * @member {string} keeper_reward_percentage
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             */
-            CollateralParam.prototype.keeper_reward_percentage = "";
-
-            /**
-             * CollateralParam check_collateralization_index_count.
-             * @member {string} check_collateralization_index_count
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             */
-            CollateralParam.prototype.check_collateralization_index_count = "";
-
-            /**
-             * CollateralParam conversion_factor.
-             * @member {string} conversion_factor
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             */
-            CollateralParam.prototype.conversion_factor = "";
-
-            /**
-             * Encodes the specified CollateralParam message. Does not implicitly {@link ununifi.cdp.CollateralParam.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.CollateralParam
-             * @static
-             * @param {ununifi.cdp.ICollateralParam} message CollateralParam message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            CollateralParam.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.denom);
-                if (message.type != null && Object.hasOwnProperty.call(message, "type"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.type);
-                if (message.liquidation_ratio != null && Object.hasOwnProperty.call(message, "liquidation_ratio"))
-                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.liquidation_ratio);
-                if (message.debt_limit != null && Object.hasOwnProperty.call(message, "debt_limit"))
-                    $root.cosmos.base.v1beta1.Coin.encode(message.debt_limit, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-                if (message.stability_fee != null && Object.hasOwnProperty.call(message, "stability_fee"))
-                    writer.uint32(/* id 5, wireType 2 =*/42).string(message.stability_fee);
-                if (message.auction_size != null && Object.hasOwnProperty.call(message, "auction_size"))
-                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.auction_size);
-                if (message.liquidation_penalty != null && Object.hasOwnProperty.call(message, "liquidation_penalty"))
-                    writer.uint32(/* id 7, wireType 2 =*/58).string(message.liquidation_penalty);
-                if (message.prefix != null && Object.hasOwnProperty.call(message, "prefix"))
-                    writer.uint32(/* id 8, wireType 0 =*/64).uint32(message.prefix);
-                if (message.spot_market_id != null && Object.hasOwnProperty.call(message, "spot_market_id"))
-                    writer.uint32(/* id 9, wireType 2 =*/74).string(message.spot_market_id);
-                if (message.liquidation_market_id != null && Object.hasOwnProperty.call(message, "liquidation_market_id"))
-                    writer.uint32(/* id 10, wireType 2 =*/82).string(message.liquidation_market_id);
-                if (message.keeper_reward_percentage != null && Object.hasOwnProperty.call(message, "keeper_reward_percentage"))
-                    writer.uint32(/* id 11, wireType 2 =*/90).string(message.keeper_reward_percentage);
-                if (message.check_collateralization_index_count != null && Object.hasOwnProperty.call(message, "check_collateralization_index_count"))
-                    writer.uint32(/* id 12, wireType 2 =*/98).string(message.check_collateralization_index_count);
-                if (message.conversion_factor != null && Object.hasOwnProperty.call(message, "conversion_factor"))
-                    writer.uint32(/* id 13, wireType 2 =*/106).string(message.conversion_factor);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified CollateralParam message, length delimited. Does not implicitly {@link ununifi.cdp.CollateralParam.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.CollateralParam
-             * @static
-             * @param {ununifi.cdp.ICollateralParam} message CollateralParam message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            CollateralParam.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a CollateralParam message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.CollateralParam
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.CollateralParam} CollateralParam
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            CollateralParam.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.CollateralParam();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.denom = reader.string();
-                        break;
-                    case 2:
-                        message.type = reader.string();
-                        break;
-                    case 3:
-                        message.liquidation_ratio = reader.string();
-                        break;
-                    case 4:
-                        message.debt_limit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                        break;
-                    case 5:
-                        message.stability_fee = reader.string();
-                        break;
-                    case 6:
-                        message.auction_size = reader.string();
-                        break;
-                    case 7:
-                        message.liquidation_penalty = reader.string();
-                        break;
-                    case 8:
-                        message.prefix = reader.uint32();
-                        break;
-                    case 9:
-                        message.spot_market_id = reader.string();
-                        break;
-                    case 10:
-                        message.liquidation_market_id = reader.string();
-                        break;
-                    case 11:
-                        message.keeper_reward_percentage = reader.string();
-                        break;
-                    case 12:
-                        message.check_collateralization_index_count = reader.string();
-                        break;
-                    case 13:
-                        message.conversion_factor = reader.string();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a CollateralParam message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.CollateralParam
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.CollateralParam} CollateralParam
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            CollateralParam.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a CollateralParam message.
-             * @function verify
-             * @memberof ununifi.cdp.CollateralParam
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            CollateralParam.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.denom != null && message.hasOwnProperty("denom"))
-                    if (!$util.isString(message.denom))
-                        return "denom: string expected";
-                if (message.type != null && message.hasOwnProperty("type"))
-                    if (!$util.isString(message.type))
-                        return "type: string expected";
-                if (message.liquidation_ratio != null && message.hasOwnProperty("liquidation_ratio"))
-                    if (!$util.isString(message.liquidation_ratio))
-                        return "liquidation_ratio: string expected";
-                if (message.debt_limit != null && message.hasOwnProperty("debt_limit")) {
-                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.debt_limit);
-                    if (error)
-                        return "debt_limit." + error;
-                }
-                if (message.stability_fee != null && message.hasOwnProperty("stability_fee"))
-                    if (!$util.isString(message.stability_fee))
-                        return "stability_fee: string expected";
-                if (message.auction_size != null && message.hasOwnProperty("auction_size"))
-                    if (!$util.isString(message.auction_size))
-                        return "auction_size: string expected";
-                if (message.liquidation_penalty != null && message.hasOwnProperty("liquidation_penalty"))
-                    if (!$util.isString(message.liquidation_penalty))
-                        return "liquidation_penalty: string expected";
-                if (message.prefix != null && message.hasOwnProperty("prefix"))
-                    if (!$util.isInteger(message.prefix))
-                        return "prefix: integer expected";
-                if (message.spot_market_id != null && message.hasOwnProperty("spot_market_id"))
-                    if (!$util.isString(message.spot_market_id))
-                        return "spot_market_id: string expected";
-                if (message.liquidation_market_id != null && message.hasOwnProperty("liquidation_market_id"))
-                    if (!$util.isString(message.liquidation_market_id))
-                        return "liquidation_market_id: string expected";
-                if (message.keeper_reward_percentage != null && message.hasOwnProperty("keeper_reward_percentage"))
-                    if (!$util.isString(message.keeper_reward_percentage))
-                        return "keeper_reward_percentage: string expected";
-                if (message.check_collateralization_index_count != null && message.hasOwnProperty("check_collateralization_index_count"))
-                    if (!$util.isString(message.check_collateralization_index_count))
-                        return "check_collateralization_index_count: string expected";
-                if (message.conversion_factor != null && message.hasOwnProperty("conversion_factor"))
-                    if (!$util.isString(message.conversion_factor))
-                        return "conversion_factor: string expected";
-                return null;
-            };
-
-            /**
-             * Creates a CollateralParam message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.CollateralParam
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.CollateralParam} CollateralParam
-             */
-            CollateralParam.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.CollateralParam)
-                    return object;
-                let message = new $root.ununifi.cdp.CollateralParam();
-                if (object.denom != null)
-                    message.denom = String(object.denom);
-                if (object.type != null)
-                    message.type = String(object.type);
-                if (object.liquidation_ratio != null)
-                    message.liquidation_ratio = String(object.liquidation_ratio);
-                if (object.debt_limit != null) {
-                    if (typeof object.debt_limit !== "object")
-                        throw TypeError(".ununifi.cdp.CollateralParam.debt_limit: object expected");
-                    message.debt_limit = $root.cosmos.base.v1beta1.Coin.fromObject(object.debt_limit);
-                }
-                if (object.stability_fee != null)
-                    message.stability_fee = String(object.stability_fee);
-                if (object.auction_size != null)
-                    message.auction_size = String(object.auction_size);
-                if (object.liquidation_penalty != null)
-                    message.liquidation_penalty = String(object.liquidation_penalty);
-                if (object.prefix != null)
-                    message.prefix = object.prefix >>> 0;
-                if (object.spot_market_id != null)
-                    message.spot_market_id = String(object.spot_market_id);
-                if (object.liquidation_market_id != null)
-                    message.liquidation_market_id = String(object.liquidation_market_id);
-                if (object.keeper_reward_percentage != null)
-                    message.keeper_reward_percentage = String(object.keeper_reward_percentage);
-                if (object.check_collateralization_index_count != null)
-                    message.check_collateralization_index_count = String(object.check_collateralization_index_count);
-                if (object.conversion_factor != null)
-                    message.conversion_factor = String(object.conversion_factor);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a CollateralParam message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.CollateralParam
-             * @static
-             * @param {ununifi.cdp.CollateralParam} message CollateralParam
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            CollateralParam.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.denom = "";
-                    object.type = "";
-                    object.liquidation_ratio = "";
-                    object.debt_limit = null;
-                    object.stability_fee = "";
-                    object.auction_size = "";
-                    object.liquidation_penalty = "";
-                    object.prefix = 0;
-                    object.spot_market_id = "";
-                    object.liquidation_market_id = "";
-                    object.keeper_reward_percentage = "";
-                    object.check_collateralization_index_count = "";
-                    object.conversion_factor = "";
-                }
-                if (message.denom != null && message.hasOwnProperty("denom"))
-                    object.denom = message.denom;
-                if (message.type != null && message.hasOwnProperty("type"))
-                    object.type = message.type;
-                if (message.liquidation_ratio != null && message.hasOwnProperty("liquidation_ratio"))
-                    object.liquidation_ratio = message.liquidation_ratio;
-                if (message.debt_limit != null && message.hasOwnProperty("debt_limit"))
-                    object.debt_limit = $root.cosmos.base.v1beta1.Coin.toObject(message.debt_limit, options);
-                if (message.stability_fee != null && message.hasOwnProperty("stability_fee"))
-                    object.stability_fee = message.stability_fee;
-                if (message.auction_size != null && message.hasOwnProperty("auction_size"))
-                    object.auction_size = message.auction_size;
-                if (message.liquidation_penalty != null && message.hasOwnProperty("liquidation_penalty"))
-                    object.liquidation_penalty = message.liquidation_penalty;
-                if (message.prefix != null && message.hasOwnProperty("prefix"))
-                    object.prefix = message.prefix;
-                if (message.spot_market_id != null && message.hasOwnProperty("spot_market_id"))
-                    object.spot_market_id = message.spot_market_id;
-                if (message.liquidation_market_id != null && message.hasOwnProperty("liquidation_market_id"))
-                    object.liquidation_market_id = message.liquidation_market_id;
-                if (message.keeper_reward_percentage != null && message.hasOwnProperty("keeper_reward_percentage"))
-                    object.keeper_reward_percentage = message.keeper_reward_percentage;
-                if (message.check_collateralization_index_count != null && message.hasOwnProperty("check_collateralization_index_count"))
-                    object.check_collateralization_index_count = message.check_collateralization_index_count;
-                if (message.conversion_factor != null && message.hasOwnProperty("conversion_factor"))
-                    object.conversion_factor = message.conversion_factor;
-                return object;
-            };
-
-            /**
-             * Converts this CollateralParam to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.CollateralParam
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            CollateralParam.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return CollateralParam;
-        })();
-
-        cdp.DebtParam = (function() {
-
-            /**
-             * Properties of a DebtParam.
-             * @memberof ununifi.cdp
-             * @interface IDebtParam
-             * @property {string|null} [denom] DebtParam denom
-             * @property {string|null} [reference_asset] DebtParam reference_asset
-             * @property {string|null} [conversion_factor] DebtParam conversion_factor
-             * @property {string|null} [debt_floor] DebtParam debt_floor
-             */
-
-            /**
-             * Constructs a new DebtParam.
-             * @memberof ununifi.cdp
-             * @classdesc Represents a DebtParam.
-             * @implements IDebtParam
-             * @constructor
-             * @param {ununifi.cdp.IDebtParam=} [properties] Properties to set
-             */
-            function DebtParam(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * DebtParam denom.
-             * @member {string} denom
-             * @memberof ununifi.cdp.DebtParam
-             * @instance
-             */
-            DebtParam.prototype.denom = "";
-
-            /**
-             * DebtParam reference_asset.
-             * @member {string} reference_asset
-             * @memberof ununifi.cdp.DebtParam
-             * @instance
-             */
-            DebtParam.prototype.reference_asset = "";
-
-            /**
-             * DebtParam conversion_factor.
-             * @member {string} conversion_factor
-             * @memberof ununifi.cdp.DebtParam
-             * @instance
-             */
-            DebtParam.prototype.conversion_factor = "";
-
-            /**
-             * DebtParam debt_floor.
-             * @member {string} debt_floor
-             * @memberof ununifi.cdp.DebtParam
-             * @instance
-             */
-            DebtParam.prototype.debt_floor = "";
-
-            /**
-             * Encodes the specified DebtParam message. Does not implicitly {@link ununifi.cdp.DebtParam.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.cdp.DebtParam
-             * @static
-             * @param {ununifi.cdp.IDebtParam} message DebtParam message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            DebtParam.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.denom);
-                if (message.reference_asset != null && Object.hasOwnProperty.call(message, "reference_asset"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.reference_asset);
-                if (message.conversion_factor != null && Object.hasOwnProperty.call(message, "conversion_factor"))
-                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.conversion_factor);
-                if (message.debt_floor != null && Object.hasOwnProperty.call(message, "debt_floor"))
-                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.debt_floor);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified DebtParam message, length delimited. Does not implicitly {@link ununifi.cdp.DebtParam.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.cdp.DebtParam
-             * @static
-             * @param {ununifi.cdp.IDebtParam} message DebtParam message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            DebtParam.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a DebtParam message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.cdp.DebtParam
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.cdp.DebtParam} DebtParam
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            DebtParam.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.DebtParam();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.denom = reader.string();
-                        break;
-                    case 2:
-                        message.reference_asset = reader.string();
-                        break;
-                    case 3:
-                        message.conversion_factor = reader.string();
-                        break;
-                    case 4:
-                        message.debt_floor = reader.string();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a DebtParam message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.cdp.DebtParam
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.cdp.DebtParam} DebtParam
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            DebtParam.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a DebtParam message.
-             * @function verify
-             * @memberof ununifi.cdp.DebtParam
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            DebtParam.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.denom != null && message.hasOwnProperty("denom"))
-                    if (!$util.isString(message.denom))
-                        return "denom: string expected";
-                if (message.reference_asset != null && message.hasOwnProperty("reference_asset"))
-                    if (!$util.isString(message.reference_asset))
-                        return "reference_asset: string expected";
-                if (message.conversion_factor != null && message.hasOwnProperty("conversion_factor"))
-                    if (!$util.isString(message.conversion_factor))
-                        return "conversion_factor: string expected";
-                if (message.debt_floor != null && message.hasOwnProperty("debt_floor"))
-                    if (!$util.isString(message.debt_floor))
-                        return "debt_floor: string expected";
-                return null;
-            };
-
-            /**
-             * Creates a DebtParam message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.cdp.DebtParam
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.cdp.DebtParam} DebtParam
-             */
-            DebtParam.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.cdp.DebtParam)
-                    return object;
-                let message = new $root.ununifi.cdp.DebtParam();
-                if (object.denom != null)
-                    message.denom = String(object.denom);
-                if (object.reference_asset != null)
-                    message.reference_asset = String(object.reference_asset);
-                if (object.conversion_factor != null)
-                    message.conversion_factor = String(object.conversion_factor);
-                if (object.debt_floor != null)
-                    message.debt_floor = String(object.debt_floor);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a DebtParam message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.cdp.DebtParam
-             * @static
-             * @param {ununifi.cdp.DebtParam} message DebtParam
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            DebtParam.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.denom = "";
-                    object.reference_asset = "";
-                    object.conversion_factor = "";
-                    object.debt_floor = "";
-                }
-                if (message.denom != null && message.hasOwnProperty("denom"))
-                    object.denom = message.denom;
-                if (message.reference_asset != null && message.hasOwnProperty("reference_asset"))
-                    object.reference_asset = message.reference_asset;
-                if (message.conversion_factor != null && message.hasOwnProperty("conversion_factor"))
-                    object.conversion_factor = message.conversion_factor;
-                if (message.debt_floor != null && message.hasOwnProperty("debt_floor"))
-                    object.debt_floor = message.debt_floor;
-                return object;
-            };
-
-            /**
-             * Converts this DebtParam to JSON.
-             * @function toJSON
-             * @memberof ununifi.cdp.DebtParam
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            DebtParam.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return DebtParam;
-        })();
 
         cdp.Msg = (function() {
 
@@ -9902,6 +5986,3959 @@ export const ununifi = $root.ununifi = (() => {
             return MsgLiquidateResponse;
         })();
 
+        cdp.Cdp = (function() {
+
+            /**
+             * Properties of a Cdp.
+             * @memberof ununifi.cdp
+             * @interface ICdp
+             * @property {Long|null} [id] Cdp id
+             * @property {string|null} [owner] Cdp owner
+             * @property {string|null} [type] Cdp type
+             * @property {cosmos.base.v1beta1.ICoin|null} [collateral] Cdp collateral
+             * @property {cosmos.base.v1beta1.ICoin|null} [principal] Cdp principal
+             * @property {cosmos.base.v1beta1.ICoin|null} [accumulated_fees] Cdp accumulated_fees
+             * @property {google.protobuf.ITimestamp|null} [fees_updated] Cdp fees_updated
+             * @property {string|null} [interest_factor] Cdp interest_factor
+             */
+
+            /**
+             * Constructs a new Cdp.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a Cdp.
+             * @implements ICdp
+             * @constructor
+             * @param {ununifi.cdp.ICdp=} [properties] Properties to set
+             */
+            function Cdp(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Cdp id.
+             * @member {Long} id
+             * @memberof ununifi.cdp.Cdp
+             * @instance
+             */
+            Cdp.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+
+            /**
+             * Cdp owner.
+             * @member {string} owner
+             * @memberof ununifi.cdp.Cdp
+             * @instance
+             */
+            Cdp.prototype.owner = "";
+
+            /**
+             * Cdp type.
+             * @member {string} type
+             * @memberof ununifi.cdp.Cdp
+             * @instance
+             */
+            Cdp.prototype.type = "";
+
+            /**
+             * Cdp collateral.
+             * @member {cosmos.base.v1beta1.ICoin|null|undefined} collateral
+             * @memberof ununifi.cdp.Cdp
+             * @instance
+             */
+            Cdp.prototype.collateral = null;
+
+            /**
+             * Cdp principal.
+             * @member {cosmos.base.v1beta1.ICoin|null|undefined} principal
+             * @memberof ununifi.cdp.Cdp
+             * @instance
+             */
+            Cdp.prototype.principal = null;
+
+            /**
+             * Cdp accumulated_fees.
+             * @member {cosmos.base.v1beta1.ICoin|null|undefined} accumulated_fees
+             * @memberof ununifi.cdp.Cdp
+             * @instance
+             */
+            Cdp.prototype.accumulated_fees = null;
+
+            /**
+             * Cdp fees_updated.
+             * @member {google.protobuf.ITimestamp|null|undefined} fees_updated
+             * @memberof ununifi.cdp.Cdp
+             * @instance
+             */
+            Cdp.prototype.fees_updated = null;
+
+            /**
+             * Cdp interest_factor.
+             * @member {string} interest_factor
+             * @memberof ununifi.cdp.Cdp
+             * @instance
+             */
+            Cdp.prototype.interest_factor = "";
+
+            /**
+             * Encodes the specified Cdp message. Does not implicitly {@link ununifi.cdp.Cdp.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.Cdp
+             * @static
+             * @param {ununifi.cdp.ICdp} message Cdp message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Cdp.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
+                if (message.owner != null && Object.hasOwnProperty.call(message, "owner"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.owner);
+                if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.type);
+                if (message.collateral != null && Object.hasOwnProperty.call(message, "collateral"))
+                    $root.cosmos.base.v1beta1.Coin.encode(message.collateral, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+                if (message.principal != null && Object.hasOwnProperty.call(message, "principal"))
+                    $root.cosmos.base.v1beta1.Coin.encode(message.principal, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+                if (message.accumulated_fees != null && Object.hasOwnProperty.call(message, "accumulated_fees"))
+                    $root.cosmos.base.v1beta1.Coin.encode(message.accumulated_fees, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
+                if (message.fees_updated != null && Object.hasOwnProperty.call(message, "fees_updated"))
+                    $root.google.protobuf.Timestamp.encode(message.fees_updated, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
+                if (message.interest_factor != null && Object.hasOwnProperty.call(message, "interest_factor"))
+                    writer.uint32(/* id 8, wireType 2 =*/66).string(message.interest_factor);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified Cdp message, length delimited. Does not implicitly {@link ununifi.cdp.Cdp.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.Cdp
+             * @static
+             * @param {ununifi.cdp.ICdp} message Cdp message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Cdp.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a Cdp message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.Cdp
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.Cdp} Cdp
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Cdp.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.Cdp();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.id = reader.uint64();
+                        break;
+                    case 2:
+                        message.owner = reader.string();
+                        break;
+                    case 3:
+                        message.type = reader.string();
+                        break;
+                    case 4:
+                        message.collateral = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                        break;
+                    case 5:
+                        message.principal = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                        break;
+                    case 6:
+                        message.accumulated_fees = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                        break;
+                    case 7:
+                        message.fees_updated = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                        break;
+                    case 8:
+                        message.interest_factor = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a Cdp message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.Cdp
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.Cdp} Cdp
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Cdp.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a Cdp message.
+             * @function verify
+             * @memberof ununifi.cdp.Cdp
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            Cdp.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.id != null && message.hasOwnProperty("id"))
+                    if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
+                        return "id: integer|Long expected";
+                if (message.owner != null && message.hasOwnProperty("owner"))
+                    if (!$util.isString(message.owner))
+                        return "owner: string expected";
+                if (message.type != null && message.hasOwnProperty("type"))
+                    if (!$util.isString(message.type))
+                        return "type: string expected";
+                if (message.collateral != null && message.hasOwnProperty("collateral")) {
+                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.collateral);
+                    if (error)
+                        return "collateral." + error;
+                }
+                if (message.principal != null && message.hasOwnProperty("principal")) {
+                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.principal);
+                    if (error)
+                        return "principal." + error;
+                }
+                if (message.accumulated_fees != null && message.hasOwnProperty("accumulated_fees")) {
+                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.accumulated_fees);
+                    if (error)
+                        return "accumulated_fees." + error;
+                }
+                if (message.fees_updated != null && message.hasOwnProperty("fees_updated")) {
+                    let error = $root.google.protobuf.Timestamp.verify(message.fees_updated);
+                    if (error)
+                        return "fees_updated." + error;
+                }
+                if (message.interest_factor != null && message.hasOwnProperty("interest_factor"))
+                    if (!$util.isString(message.interest_factor))
+                        return "interest_factor: string expected";
+                return null;
+            };
+
+            /**
+             * Creates a Cdp message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.Cdp
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.Cdp} Cdp
+             */
+            Cdp.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.Cdp)
+                    return object;
+                let message = new $root.ununifi.cdp.Cdp();
+                if (object.id != null)
+                    if ($util.Long)
+                        (message.id = $util.Long.fromValue(object.id)).unsigned = true;
+                    else if (typeof object.id === "string")
+                        message.id = parseInt(object.id, 10);
+                    else if (typeof object.id === "number")
+                        message.id = object.id;
+                    else if (typeof object.id === "object")
+                        message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
+                if (object.owner != null)
+                    message.owner = String(object.owner);
+                if (object.type != null)
+                    message.type = String(object.type);
+                if (object.collateral != null) {
+                    if (typeof object.collateral !== "object")
+                        throw TypeError(".ununifi.cdp.Cdp.collateral: object expected");
+                    message.collateral = $root.cosmos.base.v1beta1.Coin.fromObject(object.collateral);
+                }
+                if (object.principal != null) {
+                    if (typeof object.principal !== "object")
+                        throw TypeError(".ununifi.cdp.Cdp.principal: object expected");
+                    message.principal = $root.cosmos.base.v1beta1.Coin.fromObject(object.principal);
+                }
+                if (object.accumulated_fees != null) {
+                    if (typeof object.accumulated_fees !== "object")
+                        throw TypeError(".ununifi.cdp.Cdp.accumulated_fees: object expected");
+                    message.accumulated_fees = $root.cosmos.base.v1beta1.Coin.fromObject(object.accumulated_fees);
+                }
+                if (object.fees_updated != null) {
+                    if (typeof object.fees_updated !== "object")
+                        throw TypeError(".ununifi.cdp.Cdp.fees_updated: object expected");
+                    message.fees_updated = $root.google.protobuf.Timestamp.fromObject(object.fees_updated);
+                }
+                if (object.interest_factor != null)
+                    message.interest_factor = String(object.interest_factor);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a Cdp message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.Cdp
+             * @static
+             * @param {ununifi.cdp.Cdp} message Cdp
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            Cdp.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    if ($util.Long) {
+                        let long = new $util.Long(0, 0, true);
+                        object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.id = options.longs === String ? "0" : 0;
+                    object.owner = "";
+                    object.type = "";
+                    object.collateral = null;
+                    object.principal = null;
+                    object.accumulated_fees = null;
+                    object.fees_updated = null;
+                    object.interest_factor = "";
+                }
+                if (message.id != null && message.hasOwnProperty("id"))
+                    if (typeof message.id === "number")
+                        object.id = options.longs === String ? String(message.id) : message.id;
+                    else
+                        object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
+                if (message.owner != null && message.hasOwnProperty("owner"))
+                    object.owner = message.owner;
+                if (message.type != null && message.hasOwnProperty("type"))
+                    object.type = message.type;
+                if (message.collateral != null && message.hasOwnProperty("collateral"))
+                    object.collateral = $root.cosmos.base.v1beta1.Coin.toObject(message.collateral, options);
+                if (message.principal != null && message.hasOwnProperty("principal"))
+                    object.principal = $root.cosmos.base.v1beta1.Coin.toObject(message.principal, options);
+                if (message.accumulated_fees != null && message.hasOwnProperty("accumulated_fees"))
+                    object.accumulated_fees = $root.cosmos.base.v1beta1.Coin.toObject(message.accumulated_fees, options);
+                if (message.fees_updated != null && message.hasOwnProperty("fees_updated"))
+                    object.fees_updated = $root.google.protobuf.Timestamp.toObject(message.fees_updated, options);
+                if (message.interest_factor != null && message.hasOwnProperty("interest_factor"))
+                    object.interest_factor = message.interest_factor;
+                return object;
+            };
+
+            /**
+             * Converts this Cdp to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.Cdp
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            Cdp.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return Cdp;
+        })();
+
+        cdp.Deposit = (function() {
+
+            /**
+             * Properties of a Deposit.
+             * @memberof ununifi.cdp
+             * @interface IDeposit
+             * @property {Long|null} [cdp_id] Deposit cdp_id
+             * @property {string|null} [depositor] Deposit depositor
+             * @property {cosmos.base.v1beta1.ICoin|null} [amount] Deposit amount
+             */
+
+            /**
+             * Constructs a new Deposit.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a Deposit.
+             * @implements IDeposit
+             * @constructor
+             * @param {ununifi.cdp.IDeposit=} [properties] Properties to set
+             */
+            function Deposit(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Deposit cdp_id.
+             * @member {Long} cdp_id
+             * @memberof ununifi.cdp.Deposit
+             * @instance
+             */
+            Deposit.prototype.cdp_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+
+            /**
+             * Deposit depositor.
+             * @member {string} depositor
+             * @memberof ununifi.cdp.Deposit
+             * @instance
+             */
+            Deposit.prototype.depositor = "";
+
+            /**
+             * Deposit amount.
+             * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+             * @memberof ununifi.cdp.Deposit
+             * @instance
+             */
+            Deposit.prototype.amount = null;
+
+            /**
+             * Encodes the specified Deposit message. Does not implicitly {@link ununifi.cdp.Deposit.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.Deposit
+             * @static
+             * @param {ununifi.cdp.IDeposit} message Deposit message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Deposit.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.cdp_id != null && Object.hasOwnProperty.call(message, "cdp_id"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.cdp_id);
+                if (message.depositor != null && Object.hasOwnProperty.call(message, "depositor"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.depositor);
+                if (message.amount != null && Object.hasOwnProperty.call(message, "amount"))
+                    $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified Deposit message, length delimited. Does not implicitly {@link ununifi.cdp.Deposit.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.Deposit
+             * @static
+             * @param {ununifi.cdp.IDeposit} message Deposit message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Deposit.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a Deposit message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.Deposit
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.Deposit} Deposit
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Deposit.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.Deposit();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.cdp_id = reader.uint64();
+                        break;
+                    case 2:
+                        message.depositor = reader.string();
+                        break;
+                    case 3:
+                        message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a Deposit message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.Deposit
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.Deposit} Deposit
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Deposit.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a Deposit message.
+             * @function verify
+             * @memberof ununifi.cdp.Deposit
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            Deposit.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.cdp_id != null && message.hasOwnProperty("cdp_id"))
+                    if (!$util.isInteger(message.cdp_id) && !(message.cdp_id && $util.isInteger(message.cdp_id.low) && $util.isInteger(message.cdp_id.high)))
+                        return "cdp_id: integer|Long expected";
+                if (message.depositor != null && message.hasOwnProperty("depositor"))
+                    if (!$util.isString(message.depositor))
+                        return "depositor: string expected";
+                if (message.amount != null && message.hasOwnProperty("amount")) {
+                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
+                    if (error)
+                        return "amount." + error;
+                }
+                return null;
+            };
+
+            /**
+             * Creates a Deposit message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.Deposit
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.Deposit} Deposit
+             */
+            Deposit.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.Deposit)
+                    return object;
+                let message = new $root.ununifi.cdp.Deposit();
+                if (object.cdp_id != null)
+                    if ($util.Long)
+                        (message.cdp_id = $util.Long.fromValue(object.cdp_id)).unsigned = true;
+                    else if (typeof object.cdp_id === "string")
+                        message.cdp_id = parseInt(object.cdp_id, 10);
+                    else if (typeof object.cdp_id === "number")
+                        message.cdp_id = object.cdp_id;
+                    else if (typeof object.cdp_id === "object")
+                        message.cdp_id = new $util.LongBits(object.cdp_id.low >>> 0, object.cdp_id.high >>> 0).toNumber(true);
+                if (object.depositor != null)
+                    message.depositor = String(object.depositor);
+                if (object.amount != null) {
+                    if (typeof object.amount !== "object")
+                        throw TypeError(".ununifi.cdp.Deposit.amount: object expected");
+                    message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a Deposit message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.Deposit
+             * @static
+             * @param {ununifi.cdp.Deposit} message Deposit
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            Deposit.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    if ($util.Long) {
+                        let long = new $util.Long(0, 0, true);
+                        object.cdp_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.cdp_id = options.longs === String ? "0" : 0;
+                    object.depositor = "";
+                    object.amount = null;
+                }
+                if (message.cdp_id != null && message.hasOwnProperty("cdp_id"))
+                    if (typeof message.cdp_id === "number")
+                        object.cdp_id = options.longs === String ? String(message.cdp_id) : message.cdp_id;
+                    else
+                        object.cdp_id = options.longs === String ? $util.Long.prototype.toString.call(message.cdp_id) : options.longs === Number ? new $util.LongBits(message.cdp_id.low >>> 0, message.cdp_id.high >>> 0).toNumber(true) : message.cdp_id;
+                if (message.depositor != null && message.hasOwnProperty("depositor"))
+                    object.depositor = message.depositor;
+                if (message.amount != null && message.hasOwnProperty("amount"))
+                    object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+                return object;
+            };
+
+            /**
+             * Converts this Deposit to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.Deposit
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            Deposit.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return Deposit;
+        })();
+
+        cdp.AugmentedCdp = (function() {
+
+            /**
+             * Properties of an AugmentedCdp.
+             * @memberof ununifi.cdp
+             * @interface IAugmentedCdp
+             * @property {ununifi.cdp.ICdp|null} [cdp] AugmentedCdp cdp
+             * @property {cosmos.base.v1beta1.ICoin|null} [collateral_value] AugmentedCdp collateral_value
+             * @property {string|null} [collateralization_ratio] AugmentedCdp collateralization_ratio
+             */
+
+            /**
+             * Constructs a new AugmentedCdp.
+             * @memberof ununifi.cdp
+             * @classdesc Represents an AugmentedCdp.
+             * @implements IAugmentedCdp
+             * @constructor
+             * @param {ununifi.cdp.IAugmentedCdp=} [properties] Properties to set
+             */
+            function AugmentedCdp(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * AugmentedCdp cdp.
+             * @member {ununifi.cdp.ICdp|null|undefined} cdp
+             * @memberof ununifi.cdp.AugmentedCdp
+             * @instance
+             */
+            AugmentedCdp.prototype.cdp = null;
+
+            /**
+             * AugmentedCdp collateral_value.
+             * @member {cosmos.base.v1beta1.ICoin|null|undefined} collateral_value
+             * @memberof ununifi.cdp.AugmentedCdp
+             * @instance
+             */
+            AugmentedCdp.prototype.collateral_value = null;
+
+            /**
+             * AugmentedCdp collateralization_ratio.
+             * @member {string} collateralization_ratio
+             * @memberof ununifi.cdp.AugmentedCdp
+             * @instance
+             */
+            AugmentedCdp.prototype.collateralization_ratio = "";
+
+            /**
+             * Encodes the specified AugmentedCdp message. Does not implicitly {@link ununifi.cdp.AugmentedCdp.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.AugmentedCdp
+             * @static
+             * @param {ununifi.cdp.IAugmentedCdp} message AugmentedCdp message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AugmentedCdp.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.cdp != null && Object.hasOwnProperty.call(message, "cdp"))
+                    $root.ununifi.cdp.Cdp.encode(message.cdp, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                if (message.collateral_value != null && Object.hasOwnProperty.call(message, "collateral_value"))
+                    $root.cosmos.base.v1beta1.Coin.encode(message.collateral_value, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                if (message.collateralization_ratio != null && Object.hasOwnProperty.call(message, "collateralization_ratio"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.collateralization_ratio);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified AugmentedCdp message, length delimited. Does not implicitly {@link ununifi.cdp.AugmentedCdp.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.AugmentedCdp
+             * @static
+             * @param {ununifi.cdp.IAugmentedCdp} message AugmentedCdp message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AugmentedCdp.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an AugmentedCdp message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.AugmentedCdp
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.AugmentedCdp} AugmentedCdp
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AugmentedCdp.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.AugmentedCdp();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.cdp = $root.ununifi.cdp.Cdp.decode(reader, reader.uint32());
+                        break;
+                    case 2:
+                        message.collateral_value = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                        break;
+                    case 3:
+                        message.collateralization_ratio = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an AugmentedCdp message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.AugmentedCdp
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.AugmentedCdp} AugmentedCdp
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AugmentedCdp.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an AugmentedCdp message.
+             * @function verify
+             * @memberof ununifi.cdp.AugmentedCdp
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            AugmentedCdp.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.cdp != null && message.hasOwnProperty("cdp")) {
+                    let error = $root.ununifi.cdp.Cdp.verify(message.cdp);
+                    if (error)
+                        return "cdp." + error;
+                }
+                if (message.collateral_value != null && message.hasOwnProperty("collateral_value")) {
+                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.collateral_value);
+                    if (error)
+                        return "collateral_value." + error;
+                }
+                if (message.collateralization_ratio != null && message.hasOwnProperty("collateralization_ratio"))
+                    if (!$util.isString(message.collateralization_ratio))
+                        return "collateralization_ratio: string expected";
+                return null;
+            };
+
+            /**
+             * Creates an AugmentedCdp message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.AugmentedCdp
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.AugmentedCdp} AugmentedCdp
+             */
+            AugmentedCdp.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.AugmentedCdp)
+                    return object;
+                let message = new $root.ununifi.cdp.AugmentedCdp();
+                if (object.cdp != null) {
+                    if (typeof object.cdp !== "object")
+                        throw TypeError(".ununifi.cdp.AugmentedCdp.cdp: object expected");
+                    message.cdp = $root.ununifi.cdp.Cdp.fromObject(object.cdp);
+                }
+                if (object.collateral_value != null) {
+                    if (typeof object.collateral_value !== "object")
+                        throw TypeError(".ununifi.cdp.AugmentedCdp.collateral_value: object expected");
+                    message.collateral_value = $root.cosmos.base.v1beta1.Coin.fromObject(object.collateral_value);
+                }
+                if (object.collateralization_ratio != null)
+                    message.collateralization_ratio = String(object.collateralization_ratio);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an AugmentedCdp message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.AugmentedCdp
+             * @static
+             * @param {ununifi.cdp.AugmentedCdp} message AugmentedCdp
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            AugmentedCdp.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.cdp = null;
+                    object.collateral_value = null;
+                    object.collateralization_ratio = "";
+                }
+                if (message.cdp != null && message.hasOwnProperty("cdp"))
+                    object.cdp = $root.ununifi.cdp.Cdp.toObject(message.cdp, options);
+                if (message.collateral_value != null && message.hasOwnProperty("collateral_value"))
+                    object.collateral_value = $root.cosmos.base.v1beta1.Coin.toObject(message.collateral_value, options);
+                if (message.collateralization_ratio != null && message.hasOwnProperty("collateralization_ratio"))
+                    object.collateralization_ratio = message.collateralization_ratio;
+                return object;
+            };
+
+            /**
+             * Converts this AugmentedCdp to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.AugmentedCdp
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            AugmentedCdp.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return AugmentedCdp;
+        })();
+
+        cdp.Params = (function() {
+
+            /**
+             * Properties of a Params.
+             * @memberof ununifi.cdp
+             * @interface IParams
+             * @property {Array.<ununifi.cdp.ICollateralParam>|null} [collateral_params] Params collateral_params
+             * @property {Array.<ununifi.cdp.IDebtParam>|null} [debt_params] Params debt_params
+             */
+
+            /**
+             * Constructs a new Params.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a Params.
+             * @implements IParams
+             * @constructor
+             * @param {ununifi.cdp.IParams=} [properties] Properties to set
+             */
+            function Params(properties) {
+                this.collateral_params = [];
+                this.debt_params = [];
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Params collateral_params.
+             * @member {Array.<ununifi.cdp.ICollateralParam>} collateral_params
+             * @memberof ununifi.cdp.Params
+             * @instance
+             */
+            Params.prototype.collateral_params = $util.emptyArray;
+
+            /**
+             * Params debt_params.
+             * @member {Array.<ununifi.cdp.IDebtParam>} debt_params
+             * @memberof ununifi.cdp.Params
+             * @instance
+             */
+            Params.prototype.debt_params = $util.emptyArray;
+
+            /**
+             * Encodes the specified Params message. Does not implicitly {@link ununifi.cdp.Params.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.Params
+             * @static
+             * @param {ununifi.cdp.IParams} message Params message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Params.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.collateral_params != null && message.collateral_params.length)
+                    for (let i = 0; i < message.collateral_params.length; ++i)
+                        $root.ununifi.cdp.CollateralParam.encode(message.collateral_params[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                if (message.debt_params != null && message.debt_params.length)
+                    for (let i = 0; i < message.debt_params.length; ++i)
+                        $root.ununifi.cdp.DebtParam.encode(message.debt_params[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.cdp.Params.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.Params
+             * @static
+             * @param {ununifi.cdp.IParams} message Params message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Params.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a Params message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.Params
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.Params} Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Params.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.Params();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        if (!(message.collateral_params && message.collateral_params.length))
+                            message.collateral_params = [];
+                        message.collateral_params.push($root.ununifi.cdp.CollateralParam.decode(reader, reader.uint32()));
+                        break;
+                    case 2:
+                        if (!(message.debt_params && message.debt_params.length))
+                            message.debt_params = [];
+                        message.debt_params.push($root.ununifi.cdp.DebtParam.decode(reader, reader.uint32()));
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a Params message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.Params
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.Params} Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Params.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a Params message.
+             * @function verify
+             * @memberof ununifi.cdp.Params
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            Params.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.collateral_params != null && message.hasOwnProperty("collateral_params")) {
+                    if (!Array.isArray(message.collateral_params))
+                        return "collateral_params: array expected";
+                    for (let i = 0; i < message.collateral_params.length; ++i) {
+                        let error = $root.ununifi.cdp.CollateralParam.verify(message.collateral_params[i]);
+                        if (error)
+                            return "collateral_params." + error;
+                    }
+                }
+                if (message.debt_params != null && message.hasOwnProperty("debt_params")) {
+                    if (!Array.isArray(message.debt_params))
+                        return "debt_params: array expected";
+                    for (let i = 0; i < message.debt_params.length; ++i) {
+                        let error = $root.ununifi.cdp.DebtParam.verify(message.debt_params[i]);
+                        if (error)
+                            return "debt_params." + error;
+                    }
+                }
+                return null;
+            };
+
+            /**
+             * Creates a Params message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.Params
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.Params} Params
+             */
+            Params.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.Params)
+                    return object;
+                let message = new $root.ununifi.cdp.Params();
+                if (object.collateral_params) {
+                    if (!Array.isArray(object.collateral_params))
+                        throw TypeError(".ununifi.cdp.Params.collateral_params: array expected");
+                    message.collateral_params = [];
+                    for (let i = 0; i < object.collateral_params.length; ++i) {
+                        if (typeof object.collateral_params[i] !== "object")
+                            throw TypeError(".ununifi.cdp.Params.collateral_params: object expected");
+                        message.collateral_params[i] = $root.ununifi.cdp.CollateralParam.fromObject(object.collateral_params[i]);
+                    }
+                }
+                if (object.debt_params) {
+                    if (!Array.isArray(object.debt_params))
+                        throw TypeError(".ununifi.cdp.Params.debt_params: array expected");
+                    message.debt_params = [];
+                    for (let i = 0; i < object.debt_params.length; ++i) {
+                        if (typeof object.debt_params[i] !== "object")
+                            throw TypeError(".ununifi.cdp.Params.debt_params: object expected");
+                        message.debt_params[i] = $root.ununifi.cdp.DebtParam.fromObject(object.debt_params[i]);
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a Params message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.Params
+             * @static
+             * @param {ununifi.cdp.Params} message Params
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            Params.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.arrays || options.defaults) {
+                    object.collateral_params = [];
+                    object.debt_params = [];
+                }
+                if (message.collateral_params && message.collateral_params.length) {
+                    object.collateral_params = [];
+                    for (let j = 0; j < message.collateral_params.length; ++j)
+                        object.collateral_params[j] = $root.ununifi.cdp.CollateralParam.toObject(message.collateral_params[j], options);
+                }
+                if (message.debt_params && message.debt_params.length) {
+                    object.debt_params = [];
+                    for (let j = 0; j < message.debt_params.length; ++j)
+                        object.debt_params[j] = $root.ununifi.cdp.DebtParam.toObject(message.debt_params[j], options);
+                }
+                return object;
+            };
+
+            /**
+             * Converts this Params to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.Params
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            Params.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return Params;
+        })();
+
+        cdp.CollateralParam = (function() {
+
+            /**
+             * Properties of a CollateralParam.
+             * @memberof ununifi.cdp
+             * @interface ICollateralParam
+             * @property {string|null} [denom] CollateralParam denom
+             * @property {string|null} [type] CollateralParam type
+             * @property {string|null} [liquidation_ratio] CollateralParam liquidation_ratio
+             * @property {cosmos.base.v1beta1.ICoin|null} [debt_limit] CollateralParam debt_limit
+             * @property {string|null} [stability_fee] CollateralParam stability_fee
+             * @property {string|null} [auction_size] CollateralParam auction_size
+             * @property {string|null} [liquidation_penalty] CollateralParam liquidation_penalty
+             * @property {number|null} [prefix] CollateralParam prefix
+             * @property {string|null} [spot_market_id] CollateralParam spot_market_id
+             * @property {string|null} [liquidation_market_id] CollateralParam liquidation_market_id
+             * @property {string|null} [keeper_reward_percentage] CollateralParam keeper_reward_percentage
+             * @property {string|null} [check_collateralization_index_count] CollateralParam check_collateralization_index_count
+             * @property {string|null} [conversion_factor] CollateralParam conversion_factor
+             */
+
+            /**
+             * Constructs a new CollateralParam.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a CollateralParam.
+             * @implements ICollateralParam
+             * @constructor
+             * @param {ununifi.cdp.ICollateralParam=} [properties] Properties to set
+             */
+            function CollateralParam(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * CollateralParam denom.
+             * @member {string} denom
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             */
+            CollateralParam.prototype.denom = "";
+
+            /**
+             * CollateralParam type.
+             * @member {string} type
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             */
+            CollateralParam.prototype.type = "";
+
+            /**
+             * CollateralParam liquidation_ratio.
+             * @member {string} liquidation_ratio
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             */
+            CollateralParam.prototype.liquidation_ratio = "";
+
+            /**
+             * CollateralParam debt_limit.
+             * @member {cosmos.base.v1beta1.ICoin|null|undefined} debt_limit
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             */
+            CollateralParam.prototype.debt_limit = null;
+
+            /**
+             * CollateralParam stability_fee.
+             * @member {string} stability_fee
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             */
+            CollateralParam.prototype.stability_fee = "";
+
+            /**
+             * CollateralParam auction_size.
+             * @member {string} auction_size
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             */
+            CollateralParam.prototype.auction_size = "";
+
+            /**
+             * CollateralParam liquidation_penalty.
+             * @member {string} liquidation_penalty
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             */
+            CollateralParam.prototype.liquidation_penalty = "";
+
+            /**
+             * CollateralParam prefix.
+             * @member {number} prefix
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             */
+            CollateralParam.prototype.prefix = 0;
+
+            /**
+             * CollateralParam spot_market_id.
+             * @member {string} spot_market_id
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             */
+            CollateralParam.prototype.spot_market_id = "";
+
+            /**
+             * CollateralParam liquidation_market_id.
+             * @member {string} liquidation_market_id
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             */
+            CollateralParam.prototype.liquidation_market_id = "";
+
+            /**
+             * CollateralParam keeper_reward_percentage.
+             * @member {string} keeper_reward_percentage
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             */
+            CollateralParam.prototype.keeper_reward_percentage = "";
+
+            /**
+             * CollateralParam check_collateralization_index_count.
+             * @member {string} check_collateralization_index_count
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             */
+            CollateralParam.prototype.check_collateralization_index_count = "";
+
+            /**
+             * CollateralParam conversion_factor.
+             * @member {string} conversion_factor
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             */
+            CollateralParam.prototype.conversion_factor = "";
+
+            /**
+             * Encodes the specified CollateralParam message. Does not implicitly {@link ununifi.cdp.CollateralParam.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.CollateralParam
+             * @static
+             * @param {ununifi.cdp.ICollateralParam} message CollateralParam message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            CollateralParam.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.denom);
+                if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.type);
+                if (message.liquidation_ratio != null && Object.hasOwnProperty.call(message, "liquidation_ratio"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.liquidation_ratio);
+                if (message.debt_limit != null && Object.hasOwnProperty.call(message, "debt_limit"))
+                    $root.cosmos.base.v1beta1.Coin.encode(message.debt_limit, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+                if (message.stability_fee != null && Object.hasOwnProperty.call(message, "stability_fee"))
+                    writer.uint32(/* id 5, wireType 2 =*/42).string(message.stability_fee);
+                if (message.auction_size != null && Object.hasOwnProperty.call(message, "auction_size"))
+                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.auction_size);
+                if (message.liquidation_penalty != null && Object.hasOwnProperty.call(message, "liquidation_penalty"))
+                    writer.uint32(/* id 7, wireType 2 =*/58).string(message.liquidation_penalty);
+                if (message.prefix != null && Object.hasOwnProperty.call(message, "prefix"))
+                    writer.uint32(/* id 8, wireType 0 =*/64).uint32(message.prefix);
+                if (message.spot_market_id != null && Object.hasOwnProperty.call(message, "spot_market_id"))
+                    writer.uint32(/* id 9, wireType 2 =*/74).string(message.spot_market_id);
+                if (message.liquidation_market_id != null && Object.hasOwnProperty.call(message, "liquidation_market_id"))
+                    writer.uint32(/* id 10, wireType 2 =*/82).string(message.liquidation_market_id);
+                if (message.keeper_reward_percentage != null && Object.hasOwnProperty.call(message, "keeper_reward_percentage"))
+                    writer.uint32(/* id 11, wireType 2 =*/90).string(message.keeper_reward_percentage);
+                if (message.check_collateralization_index_count != null && Object.hasOwnProperty.call(message, "check_collateralization_index_count"))
+                    writer.uint32(/* id 12, wireType 2 =*/98).string(message.check_collateralization_index_count);
+                if (message.conversion_factor != null && Object.hasOwnProperty.call(message, "conversion_factor"))
+                    writer.uint32(/* id 13, wireType 2 =*/106).string(message.conversion_factor);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified CollateralParam message, length delimited. Does not implicitly {@link ununifi.cdp.CollateralParam.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.CollateralParam
+             * @static
+             * @param {ununifi.cdp.ICollateralParam} message CollateralParam message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            CollateralParam.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a CollateralParam message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.CollateralParam
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.CollateralParam} CollateralParam
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            CollateralParam.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.CollateralParam();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.denom = reader.string();
+                        break;
+                    case 2:
+                        message.type = reader.string();
+                        break;
+                    case 3:
+                        message.liquidation_ratio = reader.string();
+                        break;
+                    case 4:
+                        message.debt_limit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                        break;
+                    case 5:
+                        message.stability_fee = reader.string();
+                        break;
+                    case 6:
+                        message.auction_size = reader.string();
+                        break;
+                    case 7:
+                        message.liquidation_penalty = reader.string();
+                        break;
+                    case 8:
+                        message.prefix = reader.uint32();
+                        break;
+                    case 9:
+                        message.spot_market_id = reader.string();
+                        break;
+                    case 10:
+                        message.liquidation_market_id = reader.string();
+                        break;
+                    case 11:
+                        message.keeper_reward_percentage = reader.string();
+                        break;
+                    case 12:
+                        message.check_collateralization_index_count = reader.string();
+                        break;
+                    case 13:
+                        message.conversion_factor = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a CollateralParam message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.CollateralParam
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.CollateralParam} CollateralParam
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            CollateralParam.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a CollateralParam message.
+             * @function verify
+             * @memberof ununifi.cdp.CollateralParam
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            CollateralParam.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.denom != null && message.hasOwnProperty("denom"))
+                    if (!$util.isString(message.denom))
+                        return "denom: string expected";
+                if (message.type != null && message.hasOwnProperty("type"))
+                    if (!$util.isString(message.type))
+                        return "type: string expected";
+                if (message.liquidation_ratio != null && message.hasOwnProperty("liquidation_ratio"))
+                    if (!$util.isString(message.liquidation_ratio))
+                        return "liquidation_ratio: string expected";
+                if (message.debt_limit != null && message.hasOwnProperty("debt_limit")) {
+                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.debt_limit);
+                    if (error)
+                        return "debt_limit." + error;
+                }
+                if (message.stability_fee != null && message.hasOwnProperty("stability_fee"))
+                    if (!$util.isString(message.stability_fee))
+                        return "stability_fee: string expected";
+                if (message.auction_size != null && message.hasOwnProperty("auction_size"))
+                    if (!$util.isString(message.auction_size))
+                        return "auction_size: string expected";
+                if (message.liquidation_penalty != null && message.hasOwnProperty("liquidation_penalty"))
+                    if (!$util.isString(message.liquidation_penalty))
+                        return "liquidation_penalty: string expected";
+                if (message.prefix != null && message.hasOwnProperty("prefix"))
+                    if (!$util.isInteger(message.prefix))
+                        return "prefix: integer expected";
+                if (message.spot_market_id != null && message.hasOwnProperty("spot_market_id"))
+                    if (!$util.isString(message.spot_market_id))
+                        return "spot_market_id: string expected";
+                if (message.liquidation_market_id != null && message.hasOwnProperty("liquidation_market_id"))
+                    if (!$util.isString(message.liquidation_market_id))
+                        return "liquidation_market_id: string expected";
+                if (message.keeper_reward_percentage != null && message.hasOwnProperty("keeper_reward_percentage"))
+                    if (!$util.isString(message.keeper_reward_percentage))
+                        return "keeper_reward_percentage: string expected";
+                if (message.check_collateralization_index_count != null && message.hasOwnProperty("check_collateralization_index_count"))
+                    if (!$util.isString(message.check_collateralization_index_count))
+                        return "check_collateralization_index_count: string expected";
+                if (message.conversion_factor != null && message.hasOwnProperty("conversion_factor"))
+                    if (!$util.isString(message.conversion_factor))
+                        return "conversion_factor: string expected";
+                return null;
+            };
+
+            /**
+             * Creates a CollateralParam message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.CollateralParam
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.CollateralParam} CollateralParam
+             */
+            CollateralParam.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.CollateralParam)
+                    return object;
+                let message = new $root.ununifi.cdp.CollateralParam();
+                if (object.denom != null)
+                    message.denom = String(object.denom);
+                if (object.type != null)
+                    message.type = String(object.type);
+                if (object.liquidation_ratio != null)
+                    message.liquidation_ratio = String(object.liquidation_ratio);
+                if (object.debt_limit != null) {
+                    if (typeof object.debt_limit !== "object")
+                        throw TypeError(".ununifi.cdp.CollateralParam.debt_limit: object expected");
+                    message.debt_limit = $root.cosmos.base.v1beta1.Coin.fromObject(object.debt_limit);
+                }
+                if (object.stability_fee != null)
+                    message.stability_fee = String(object.stability_fee);
+                if (object.auction_size != null)
+                    message.auction_size = String(object.auction_size);
+                if (object.liquidation_penalty != null)
+                    message.liquidation_penalty = String(object.liquidation_penalty);
+                if (object.prefix != null)
+                    message.prefix = object.prefix >>> 0;
+                if (object.spot_market_id != null)
+                    message.spot_market_id = String(object.spot_market_id);
+                if (object.liquidation_market_id != null)
+                    message.liquidation_market_id = String(object.liquidation_market_id);
+                if (object.keeper_reward_percentage != null)
+                    message.keeper_reward_percentage = String(object.keeper_reward_percentage);
+                if (object.check_collateralization_index_count != null)
+                    message.check_collateralization_index_count = String(object.check_collateralization_index_count);
+                if (object.conversion_factor != null)
+                    message.conversion_factor = String(object.conversion_factor);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a CollateralParam message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.CollateralParam
+             * @static
+             * @param {ununifi.cdp.CollateralParam} message CollateralParam
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            CollateralParam.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.denom = "";
+                    object.type = "";
+                    object.liquidation_ratio = "";
+                    object.debt_limit = null;
+                    object.stability_fee = "";
+                    object.auction_size = "";
+                    object.liquidation_penalty = "";
+                    object.prefix = 0;
+                    object.spot_market_id = "";
+                    object.liquidation_market_id = "";
+                    object.keeper_reward_percentage = "";
+                    object.check_collateralization_index_count = "";
+                    object.conversion_factor = "";
+                }
+                if (message.denom != null && message.hasOwnProperty("denom"))
+                    object.denom = message.denom;
+                if (message.type != null && message.hasOwnProperty("type"))
+                    object.type = message.type;
+                if (message.liquidation_ratio != null && message.hasOwnProperty("liquidation_ratio"))
+                    object.liquidation_ratio = message.liquidation_ratio;
+                if (message.debt_limit != null && message.hasOwnProperty("debt_limit"))
+                    object.debt_limit = $root.cosmos.base.v1beta1.Coin.toObject(message.debt_limit, options);
+                if (message.stability_fee != null && message.hasOwnProperty("stability_fee"))
+                    object.stability_fee = message.stability_fee;
+                if (message.auction_size != null && message.hasOwnProperty("auction_size"))
+                    object.auction_size = message.auction_size;
+                if (message.liquidation_penalty != null && message.hasOwnProperty("liquidation_penalty"))
+                    object.liquidation_penalty = message.liquidation_penalty;
+                if (message.prefix != null && message.hasOwnProperty("prefix"))
+                    object.prefix = message.prefix;
+                if (message.spot_market_id != null && message.hasOwnProperty("spot_market_id"))
+                    object.spot_market_id = message.spot_market_id;
+                if (message.liquidation_market_id != null && message.hasOwnProperty("liquidation_market_id"))
+                    object.liquidation_market_id = message.liquidation_market_id;
+                if (message.keeper_reward_percentage != null && message.hasOwnProperty("keeper_reward_percentage"))
+                    object.keeper_reward_percentage = message.keeper_reward_percentage;
+                if (message.check_collateralization_index_count != null && message.hasOwnProperty("check_collateralization_index_count"))
+                    object.check_collateralization_index_count = message.check_collateralization_index_count;
+                if (message.conversion_factor != null && message.hasOwnProperty("conversion_factor"))
+                    object.conversion_factor = message.conversion_factor;
+                return object;
+            };
+
+            /**
+             * Converts this CollateralParam to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.CollateralParam
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            CollateralParam.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return CollateralParam;
+        })();
+
+        cdp.DebtParam = (function() {
+
+            /**
+             * Properties of a DebtParam.
+             * @memberof ununifi.cdp
+             * @interface IDebtParam
+             * @property {string|null} [denom] DebtParam denom
+             * @property {string|null} [reference_asset] DebtParam reference_asset
+             * @property {string|null} [conversion_factor] DebtParam conversion_factor
+             * @property {string|null} [debt_floor] DebtParam debt_floor
+             * @property {cosmos.base.v1beta1.ICoin|null} [global_debt_limit] DebtParam global_debt_limit
+             * @property {string|null} [debt_denom] DebtParam debt_denom
+             * @property {string|null} [surplus_auction_threshold] DebtParam surplus_auction_threshold
+             * @property {string|null} [surplus_auction_lot] DebtParam surplus_auction_lot
+             * @property {string|null} [debt_auction_threshold] DebtParam debt_auction_threshold
+             * @property {string|null} [debt_auction_lot] DebtParam debt_auction_lot
+             * @property {boolean|null} [circuit_breaker] DebtParam circuit_breaker
+             */
+
+            /**
+             * Constructs a new DebtParam.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a DebtParam.
+             * @implements IDebtParam
+             * @constructor
+             * @param {ununifi.cdp.IDebtParam=} [properties] Properties to set
+             */
+            function DebtParam(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * DebtParam denom.
+             * @member {string} denom
+             * @memberof ununifi.cdp.DebtParam
+             * @instance
+             */
+            DebtParam.prototype.denom = "";
+
+            /**
+             * DebtParam reference_asset.
+             * @member {string} reference_asset
+             * @memberof ununifi.cdp.DebtParam
+             * @instance
+             */
+            DebtParam.prototype.reference_asset = "";
+
+            /**
+             * DebtParam conversion_factor.
+             * @member {string} conversion_factor
+             * @memberof ununifi.cdp.DebtParam
+             * @instance
+             */
+            DebtParam.prototype.conversion_factor = "";
+
+            /**
+             * DebtParam debt_floor.
+             * @member {string} debt_floor
+             * @memberof ununifi.cdp.DebtParam
+             * @instance
+             */
+            DebtParam.prototype.debt_floor = "";
+
+            /**
+             * DebtParam global_debt_limit.
+             * @member {cosmos.base.v1beta1.ICoin|null|undefined} global_debt_limit
+             * @memberof ununifi.cdp.DebtParam
+             * @instance
+             */
+            DebtParam.prototype.global_debt_limit = null;
+
+            /**
+             * DebtParam debt_denom.
+             * @member {string} debt_denom
+             * @memberof ununifi.cdp.DebtParam
+             * @instance
+             */
+            DebtParam.prototype.debt_denom = "";
+
+            /**
+             * DebtParam surplus_auction_threshold.
+             * @member {string} surplus_auction_threshold
+             * @memberof ununifi.cdp.DebtParam
+             * @instance
+             */
+            DebtParam.prototype.surplus_auction_threshold = "";
+
+            /**
+             * DebtParam surplus_auction_lot.
+             * @member {string} surplus_auction_lot
+             * @memberof ununifi.cdp.DebtParam
+             * @instance
+             */
+            DebtParam.prototype.surplus_auction_lot = "";
+
+            /**
+             * DebtParam debt_auction_threshold.
+             * @member {string} debt_auction_threshold
+             * @memberof ununifi.cdp.DebtParam
+             * @instance
+             */
+            DebtParam.prototype.debt_auction_threshold = "";
+
+            /**
+             * DebtParam debt_auction_lot.
+             * @member {string} debt_auction_lot
+             * @memberof ununifi.cdp.DebtParam
+             * @instance
+             */
+            DebtParam.prototype.debt_auction_lot = "";
+
+            /**
+             * DebtParam circuit_breaker.
+             * @member {boolean} circuit_breaker
+             * @memberof ununifi.cdp.DebtParam
+             * @instance
+             */
+            DebtParam.prototype.circuit_breaker = false;
+
+            /**
+             * Encodes the specified DebtParam message. Does not implicitly {@link ununifi.cdp.DebtParam.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.DebtParam
+             * @static
+             * @param {ununifi.cdp.IDebtParam} message DebtParam message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            DebtParam.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.denom);
+                if (message.reference_asset != null && Object.hasOwnProperty.call(message, "reference_asset"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.reference_asset);
+                if (message.conversion_factor != null && Object.hasOwnProperty.call(message, "conversion_factor"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.conversion_factor);
+                if (message.debt_floor != null && Object.hasOwnProperty.call(message, "debt_floor"))
+                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.debt_floor);
+                if (message.global_debt_limit != null && Object.hasOwnProperty.call(message, "global_debt_limit"))
+                    $root.cosmos.base.v1beta1.Coin.encode(message.global_debt_limit, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+                if (message.debt_denom != null && Object.hasOwnProperty.call(message, "debt_denom"))
+                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.debt_denom);
+                if (message.surplus_auction_threshold != null && Object.hasOwnProperty.call(message, "surplus_auction_threshold"))
+                    writer.uint32(/* id 7, wireType 2 =*/58).string(message.surplus_auction_threshold);
+                if (message.surplus_auction_lot != null && Object.hasOwnProperty.call(message, "surplus_auction_lot"))
+                    writer.uint32(/* id 8, wireType 2 =*/66).string(message.surplus_auction_lot);
+                if (message.debt_auction_threshold != null && Object.hasOwnProperty.call(message, "debt_auction_threshold"))
+                    writer.uint32(/* id 9, wireType 2 =*/74).string(message.debt_auction_threshold);
+                if (message.debt_auction_lot != null && Object.hasOwnProperty.call(message, "debt_auction_lot"))
+                    writer.uint32(/* id 10, wireType 2 =*/82).string(message.debt_auction_lot);
+                if (message.circuit_breaker != null && Object.hasOwnProperty.call(message, "circuit_breaker"))
+                    writer.uint32(/* id 11, wireType 0 =*/88).bool(message.circuit_breaker);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified DebtParam message, length delimited. Does not implicitly {@link ununifi.cdp.DebtParam.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.DebtParam
+             * @static
+             * @param {ununifi.cdp.IDebtParam} message DebtParam message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            DebtParam.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a DebtParam message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.DebtParam
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.DebtParam} DebtParam
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            DebtParam.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.DebtParam();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.denom = reader.string();
+                        break;
+                    case 2:
+                        message.reference_asset = reader.string();
+                        break;
+                    case 3:
+                        message.conversion_factor = reader.string();
+                        break;
+                    case 4:
+                        message.debt_floor = reader.string();
+                        break;
+                    case 5:
+                        message.global_debt_limit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                        break;
+                    case 6:
+                        message.debt_denom = reader.string();
+                        break;
+                    case 7:
+                        message.surplus_auction_threshold = reader.string();
+                        break;
+                    case 8:
+                        message.surplus_auction_lot = reader.string();
+                        break;
+                    case 9:
+                        message.debt_auction_threshold = reader.string();
+                        break;
+                    case 10:
+                        message.debt_auction_lot = reader.string();
+                        break;
+                    case 11:
+                        message.circuit_breaker = reader.bool();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a DebtParam message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.DebtParam
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.DebtParam} DebtParam
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            DebtParam.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a DebtParam message.
+             * @function verify
+             * @memberof ununifi.cdp.DebtParam
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            DebtParam.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.denom != null && message.hasOwnProperty("denom"))
+                    if (!$util.isString(message.denom))
+                        return "denom: string expected";
+                if (message.reference_asset != null && message.hasOwnProperty("reference_asset"))
+                    if (!$util.isString(message.reference_asset))
+                        return "reference_asset: string expected";
+                if (message.conversion_factor != null && message.hasOwnProperty("conversion_factor"))
+                    if (!$util.isString(message.conversion_factor))
+                        return "conversion_factor: string expected";
+                if (message.debt_floor != null && message.hasOwnProperty("debt_floor"))
+                    if (!$util.isString(message.debt_floor))
+                        return "debt_floor: string expected";
+                if (message.global_debt_limit != null && message.hasOwnProperty("global_debt_limit")) {
+                    let error = $root.cosmos.base.v1beta1.Coin.verify(message.global_debt_limit);
+                    if (error)
+                        return "global_debt_limit." + error;
+                }
+                if (message.debt_denom != null && message.hasOwnProperty("debt_denom"))
+                    if (!$util.isString(message.debt_denom))
+                        return "debt_denom: string expected";
+                if (message.surplus_auction_threshold != null && message.hasOwnProperty("surplus_auction_threshold"))
+                    if (!$util.isString(message.surplus_auction_threshold))
+                        return "surplus_auction_threshold: string expected";
+                if (message.surplus_auction_lot != null && message.hasOwnProperty("surplus_auction_lot"))
+                    if (!$util.isString(message.surplus_auction_lot))
+                        return "surplus_auction_lot: string expected";
+                if (message.debt_auction_threshold != null && message.hasOwnProperty("debt_auction_threshold"))
+                    if (!$util.isString(message.debt_auction_threshold))
+                        return "debt_auction_threshold: string expected";
+                if (message.debt_auction_lot != null && message.hasOwnProperty("debt_auction_lot"))
+                    if (!$util.isString(message.debt_auction_lot))
+                        return "debt_auction_lot: string expected";
+                if (message.circuit_breaker != null && message.hasOwnProperty("circuit_breaker"))
+                    if (typeof message.circuit_breaker !== "boolean")
+                        return "circuit_breaker: boolean expected";
+                return null;
+            };
+
+            /**
+             * Creates a DebtParam message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.DebtParam
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.DebtParam} DebtParam
+             */
+            DebtParam.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.DebtParam)
+                    return object;
+                let message = new $root.ununifi.cdp.DebtParam();
+                if (object.denom != null)
+                    message.denom = String(object.denom);
+                if (object.reference_asset != null)
+                    message.reference_asset = String(object.reference_asset);
+                if (object.conversion_factor != null)
+                    message.conversion_factor = String(object.conversion_factor);
+                if (object.debt_floor != null)
+                    message.debt_floor = String(object.debt_floor);
+                if (object.global_debt_limit != null) {
+                    if (typeof object.global_debt_limit !== "object")
+                        throw TypeError(".ununifi.cdp.DebtParam.global_debt_limit: object expected");
+                    message.global_debt_limit = $root.cosmos.base.v1beta1.Coin.fromObject(object.global_debt_limit);
+                }
+                if (object.debt_denom != null)
+                    message.debt_denom = String(object.debt_denom);
+                if (object.surplus_auction_threshold != null)
+                    message.surplus_auction_threshold = String(object.surplus_auction_threshold);
+                if (object.surplus_auction_lot != null)
+                    message.surplus_auction_lot = String(object.surplus_auction_lot);
+                if (object.debt_auction_threshold != null)
+                    message.debt_auction_threshold = String(object.debt_auction_threshold);
+                if (object.debt_auction_lot != null)
+                    message.debt_auction_lot = String(object.debt_auction_lot);
+                if (object.circuit_breaker != null)
+                    message.circuit_breaker = Boolean(object.circuit_breaker);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a DebtParam message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.DebtParam
+             * @static
+             * @param {ununifi.cdp.DebtParam} message DebtParam
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            DebtParam.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.denom = "";
+                    object.reference_asset = "";
+                    object.conversion_factor = "";
+                    object.debt_floor = "";
+                    object.global_debt_limit = null;
+                    object.debt_denom = "";
+                    object.surplus_auction_threshold = "";
+                    object.surplus_auction_lot = "";
+                    object.debt_auction_threshold = "";
+                    object.debt_auction_lot = "";
+                    object.circuit_breaker = false;
+                }
+                if (message.denom != null && message.hasOwnProperty("denom"))
+                    object.denom = message.denom;
+                if (message.reference_asset != null && message.hasOwnProperty("reference_asset"))
+                    object.reference_asset = message.reference_asset;
+                if (message.conversion_factor != null && message.hasOwnProperty("conversion_factor"))
+                    object.conversion_factor = message.conversion_factor;
+                if (message.debt_floor != null && message.hasOwnProperty("debt_floor"))
+                    object.debt_floor = message.debt_floor;
+                if (message.global_debt_limit != null && message.hasOwnProperty("global_debt_limit"))
+                    object.global_debt_limit = $root.cosmos.base.v1beta1.Coin.toObject(message.global_debt_limit, options);
+                if (message.debt_denom != null && message.hasOwnProperty("debt_denom"))
+                    object.debt_denom = message.debt_denom;
+                if (message.surplus_auction_threshold != null && message.hasOwnProperty("surplus_auction_threshold"))
+                    object.surplus_auction_threshold = message.surplus_auction_threshold;
+                if (message.surplus_auction_lot != null && message.hasOwnProperty("surplus_auction_lot"))
+                    object.surplus_auction_lot = message.surplus_auction_lot;
+                if (message.debt_auction_threshold != null && message.hasOwnProperty("debt_auction_threshold"))
+                    object.debt_auction_threshold = message.debt_auction_threshold;
+                if (message.debt_auction_lot != null && message.hasOwnProperty("debt_auction_lot"))
+                    object.debt_auction_lot = message.debt_auction_lot;
+                if (message.circuit_breaker != null && message.hasOwnProperty("circuit_breaker"))
+                    object.circuit_breaker = message.circuit_breaker;
+                return object;
+            };
+
+            /**
+             * Converts this DebtParam to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.DebtParam
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            DebtParam.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return DebtParam;
+        })();
+
+        cdp.Query = (function() {
+
+            /**
+             * Constructs a new Query service.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a Query
+             * @extends $protobuf.rpc.Service
+             * @constructor
+             * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+             * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+             * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+             */
+            function Query(rpcImpl, requestDelimited, responseDelimited) {
+                $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+            }
+
+            (Query.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Query;
+
+            /**
+             * Callback as used by {@link ununifi.cdp.Query#params}.
+             * @memberof ununifi.cdp.Query
+             * @typedef ParamsCallback
+             * @type {function}
+             * @param {Error|null} error Error, if any
+             * @param {ununifi.cdp.QueryParamsResponse} [response] QueryParamsResponse
+             */
+
+            /**
+             * Calls Params.
+             * @function params
+             * @memberof ununifi.cdp.Query
+             * @instance
+             * @param {ununifi.cdp.IQueryParamsRequest} request QueryParamsRequest message or plain object
+             * @param {ununifi.cdp.Query.ParamsCallback} callback Node-style callback called with the error, if any, and QueryParamsResponse
+             * @returns {undefined}
+             * @variation 1
+             */
+            Object.defineProperty(Query.prototype.params = function params(request, callback) {
+                return this.rpcCall(params, $root.ununifi.cdp.QueryParamsRequest, $root.ununifi.cdp.QueryParamsResponse, request, callback);
+            }, "name", { value: "Params" });
+
+            /**
+             * Calls Params.
+             * @function params
+             * @memberof ununifi.cdp.Query
+             * @instance
+             * @param {ununifi.cdp.IQueryParamsRequest} request QueryParamsRequest message or plain object
+             * @returns {Promise<ununifi.cdp.QueryParamsResponse>} Promise
+             * @variation 2
+             */
+
+            /**
+             * Callback as used by {@link ununifi.cdp.Query#cdp}.
+             * @memberof ununifi.cdp.Query
+             * @typedef CdpCallback
+             * @type {function}
+             * @param {Error|null} error Error, if any
+             * @param {ununifi.cdp.QueryGetCdpResponse} [response] QueryGetCdpResponse
+             */
+
+            /**
+             * Calls Cdp.
+             * @function cdp
+             * @memberof ununifi.cdp.Query
+             * @instance
+             * @param {ununifi.cdp.IQueryGetCdpRequest} request QueryGetCdpRequest message or plain object
+             * @param {ununifi.cdp.Query.CdpCallback} callback Node-style callback called with the error, if any, and QueryGetCdpResponse
+             * @returns {undefined}
+             * @variation 1
+             */
+            Object.defineProperty(Query.prototype.cdp = function cdp(request, callback) {
+                return this.rpcCall(cdp, $root.ununifi.cdp.QueryGetCdpRequest, $root.ununifi.cdp.QueryGetCdpResponse, request, callback);
+            }, "name", { value: "Cdp" });
+
+            /**
+             * Calls Cdp.
+             * @function cdp
+             * @memberof ununifi.cdp.Query
+             * @instance
+             * @param {ununifi.cdp.IQueryGetCdpRequest} request QueryGetCdpRequest message or plain object
+             * @returns {Promise<ununifi.cdp.QueryGetCdpResponse>} Promise
+             * @variation 2
+             */
+
+            /**
+             * Callback as used by {@link ununifi.cdp.Query#cdpAll}.
+             * @memberof ununifi.cdp.Query
+             * @typedef CdpAllCallback
+             * @type {function}
+             * @param {Error|null} error Error, if any
+             * @param {ununifi.cdp.QueryAllCdpResponse} [response] QueryAllCdpResponse
+             */
+
+            /**
+             * Calls CdpAll.
+             * @function cdpAll
+             * @memberof ununifi.cdp.Query
+             * @instance
+             * @param {ununifi.cdp.IQueryAllCdpRequest} request QueryAllCdpRequest message or plain object
+             * @param {ununifi.cdp.Query.CdpAllCallback} callback Node-style callback called with the error, if any, and QueryAllCdpResponse
+             * @returns {undefined}
+             * @variation 1
+             */
+            Object.defineProperty(Query.prototype.cdpAll = function cdpAll(request, callback) {
+                return this.rpcCall(cdpAll, $root.ununifi.cdp.QueryAllCdpRequest, $root.ununifi.cdp.QueryAllCdpResponse, request, callback);
+            }, "name", { value: "CdpAll" });
+
+            /**
+             * Calls CdpAll.
+             * @function cdpAll
+             * @memberof ununifi.cdp.Query
+             * @instance
+             * @param {ununifi.cdp.IQueryAllCdpRequest} request QueryAllCdpRequest message or plain object
+             * @returns {Promise<ununifi.cdp.QueryAllCdpResponse>} Promise
+             * @variation 2
+             */
+
+            /**
+             * Callback as used by {@link ununifi.cdp.Query#accountAll}.
+             * @memberof ununifi.cdp.Query
+             * @typedef AccountAllCallback
+             * @type {function}
+             * @param {Error|null} error Error, if any
+             * @param {ununifi.cdp.QueryAllAccountResponse} [response] QueryAllAccountResponse
+             */
+
+            /**
+             * Calls AccountAll.
+             * @function accountAll
+             * @memberof ununifi.cdp.Query
+             * @instance
+             * @param {ununifi.cdp.IQueryAllAccountRequest} request QueryAllAccountRequest message or plain object
+             * @param {ununifi.cdp.Query.AccountAllCallback} callback Node-style callback called with the error, if any, and QueryAllAccountResponse
+             * @returns {undefined}
+             * @variation 1
+             */
+            Object.defineProperty(Query.prototype.accountAll = function accountAll(request, callback) {
+                return this.rpcCall(accountAll, $root.ununifi.cdp.QueryAllAccountRequest, $root.ununifi.cdp.QueryAllAccountResponse, request, callback);
+            }, "name", { value: "AccountAll" });
+
+            /**
+             * Calls AccountAll.
+             * @function accountAll
+             * @memberof ununifi.cdp.Query
+             * @instance
+             * @param {ununifi.cdp.IQueryAllAccountRequest} request QueryAllAccountRequest message or plain object
+             * @returns {Promise<ununifi.cdp.QueryAllAccountResponse>} Promise
+             * @variation 2
+             */
+
+            /**
+             * Callback as used by {@link ununifi.cdp.Query#depositAll}.
+             * @memberof ununifi.cdp.Query
+             * @typedef DepositAllCallback
+             * @type {function}
+             * @param {Error|null} error Error, if any
+             * @param {ununifi.cdp.QueryAllDepositResponse} [response] QueryAllDepositResponse
+             */
+
+            /**
+             * Calls DepositAll.
+             * @function depositAll
+             * @memberof ununifi.cdp.Query
+             * @instance
+             * @param {ununifi.cdp.IQueryAllDepositRequest} request QueryAllDepositRequest message or plain object
+             * @param {ununifi.cdp.Query.DepositAllCallback} callback Node-style callback called with the error, if any, and QueryAllDepositResponse
+             * @returns {undefined}
+             * @variation 1
+             */
+            Object.defineProperty(Query.prototype.depositAll = function depositAll(request, callback) {
+                return this.rpcCall(depositAll, $root.ununifi.cdp.QueryAllDepositRequest, $root.ununifi.cdp.QueryAllDepositResponse, request, callback);
+            }, "name", { value: "DepositAll" });
+
+            /**
+             * Calls DepositAll.
+             * @function depositAll
+             * @memberof ununifi.cdp.Query
+             * @instance
+             * @param {ununifi.cdp.IQueryAllDepositRequest} request QueryAllDepositRequest message or plain object
+             * @returns {Promise<ununifi.cdp.QueryAllDepositResponse>} Promise
+             * @variation 2
+             */
+
+            return Query;
+        })();
+
+        cdp.QueryParamsRequest = (function() {
+
+            /**
+             * Properties of a QueryParamsRequest.
+             * @memberof ununifi.cdp
+             * @interface IQueryParamsRequest
+             */
+
+            /**
+             * Constructs a new QueryParamsRequest.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a QueryParamsRequest.
+             * @implements IQueryParamsRequest
+             * @constructor
+             * @param {ununifi.cdp.IQueryParamsRequest=} [properties] Properties to set
+             */
+            function QueryParamsRequest(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.cdp.QueryParamsRequest.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.QueryParamsRequest
+             * @static
+             * @param {ununifi.cdp.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryParamsRequest.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryParamsRequest.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.QueryParamsRequest
+             * @static
+             * @param {ununifi.cdp.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryParamsRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryParamsRequest message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.QueryParamsRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.QueryParamsRequest} QueryParamsRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryParamsRequest.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryParamsRequest();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.QueryParamsRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.QueryParamsRequest} QueryParamsRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryParamsRequest.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryParamsRequest message.
+             * @function verify
+             * @memberof ununifi.cdp.QueryParamsRequest
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryParamsRequest.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                return null;
+            };
+
+            /**
+             * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.QueryParamsRequest
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.QueryParamsRequest} QueryParamsRequest
+             */
+            QueryParamsRequest.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.QueryParamsRequest)
+                    return object;
+                return new $root.ununifi.cdp.QueryParamsRequest();
+            };
+
+            /**
+             * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.QueryParamsRequest
+             * @static
+             * @param {ununifi.cdp.QueryParamsRequest} message QueryParamsRequest
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryParamsRequest.toObject = function toObject() {
+                return {};
+            };
+
+            /**
+             * Converts this QueryParamsRequest to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.QueryParamsRequest
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryParamsRequest.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryParamsRequest;
+        })();
+
+        cdp.QueryParamsResponse = (function() {
+
+            /**
+             * Properties of a QueryParamsResponse.
+             * @memberof ununifi.cdp
+             * @interface IQueryParamsResponse
+             * @property {ununifi.cdp.IParams|null} [params] QueryParamsResponse params
+             */
+
+            /**
+             * Constructs a new QueryParamsResponse.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a QueryParamsResponse.
+             * @implements IQueryParamsResponse
+             * @constructor
+             * @param {ununifi.cdp.IQueryParamsResponse=} [properties] Properties to set
+             */
+            function QueryParamsResponse(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * QueryParamsResponse params.
+             * @member {ununifi.cdp.IParams|null|undefined} params
+             * @memberof ununifi.cdp.QueryParamsResponse
+             * @instance
+             */
+            QueryParamsResponse.prototype.params = null;
+
+            /**
+             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.cdp.QueryParamsResponse.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.QueryParamsResponse
+             * @static
+             * @param {ununifi.cdp.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryParamsResponse.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.params != null && Object.hasOwnProperty.call(message, "params"))
+                    $root.ununifi.cdp.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryParamsResponse.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.QueryParamsResponse
+             * @static
+             * @param {ununifi.cdp.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryParamsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryParamsResponse message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.QueryParamsResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.QueryParamsResponse} QueryParamsResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryParamsResponse.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryParamsResponse();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.params = $root.ununifi.cdp.Params.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.QueryParamsResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.QueryParamsResponse} QueryParamsResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryParamsResponse.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryParamsResponse message.
+             * @function verify
+             * @memberof ununifi.cdp.QueryParamsResponse
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryParamsResponse.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.params != null && message.hasOwnProperty("params")) {
+                    let error = $root.ununifi.cdp.Params.verify(message.params);
+                    if (error)
+                        return "params." + error;
+                }
+                return null;
+            };
+
+            /**
+             * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.QueryParamsResponse
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.QueryParamsResponse} QueryParamsResponse
+             */
+            QueryParamsResponse.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.QueryParamsResponse)
+                    return object;
+                let message = new $root.ununifi.cdp.QueryParamsResponse();
+                if (object.params != null) {
+                    if (typeof object.params !== "object")
+                        throw TypeError(".ununifi.cdp.QueryParamsResponse.params: object expected");
+                    message.params = $root.ununifi.cdp.Params.fromObject(object.params);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.QueryParamsResponse
+             * @static
+             * @param {ununifi.cdp.QueryParamsResponse} message QueryParamsResponse
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryParamsResponse.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults)
+                    object.params = null;
+                if (message.params != null && message.hasOwnProperty("params"))
+                    object.params = $root.ununifi.cdp.Params.toObject(message.params, options);
+                return object;
+            };
+
+            /**
+             * Converts this QueryParamsResponse to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.QueryParamsResponse
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryParamsResponse.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryParamsResponse;
+        })();
+
+        cdp.QueryGetCdpRequest = (function() {
+
+            /**
+             * Properties of a QueryGetCdpRequest.
+             * @memberof ununifi.cdp
+             * @interface IQueryGetCdpRequest
+             * @property {string|null} [owner] QueryGetCdpRequest owner
+             * @property {string|null} [collateral_type] QueryGetCdpRequest collateral_type
+             */
+
+            /**
+             * Constructs a new QueryGetCdpRequest.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a QueryGetCdpRequest.
+             * @implements IQueryGetCdpRequest
+             * @constructor
+             * @param {ununifi.cdp.IQueryGetCdpRequest=} [properties] Properties to set
+             */
+            function QueryGetCdpRequest(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * QueryGetCdpRequest owner.
+             * @member {string} owner
+             * @memberof ununifi.cdp.QueryGetCdpRequest
+             * @instance
+             */
+            QueryGetCdpRequest.prototype.owner = "";
+
+            /**
+             * QueryGetCdpRequest collateral_type.
+             * @member {string} collateral_type
+             * @memberof ununifi.cdp.QueryGetCdpRequest
+             * @instance
+             */
+            QueryGetCdpRequest.prototype.collateral_type = "";
+
+            /**
+             * Encodes the specified QueryGetCdpRequest message. Does not implicitly {@link ununifi.cdp.QueryGetCdpRequest.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.QueryGetCdpRequest
+             * @static
+             * @param {ununifi.cdp.IQueryGetCdpRequest} message QueryGetCdpRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryGetCdpRequest.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.owner != null && Object.hasOwnProperty.call(message, "owner"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.owner);
+                if (message.collateral_type != null && Object.hasOwnProperty.call(message, "collateral_type"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.collateral_type);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryGetCdpRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryGetCdpRequest.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.QueryGetCdpRequest
+             * @static
+             * @param {ununifi.cdp.IQueryGetCdpRequest} message QueryGetCdpRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryGetCdpRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryGetCdpRequest message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.QueryGetCdpRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.QueryGetCdpRequest} QueryGetCdpRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryGetCdpRequest.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryGetCdpRequest();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.owner = reader.string();
+                        break;
+                    case 2:
+                        message.collateral_type = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryGetCdpRequest message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.QueryGetCdpRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.QueryGetCdpRequest} QueryGetCdpRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryGetCdpRequest.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryGetCdpRequest message.
+             * @function verify
+             * @memberof ununifi.cdp.QueryGetCdpRequest
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryGetCdpRequest.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.owner != null && message.hasOwnProperty("owner"))
+                    if (!$util.isString(message.owner))
+                        return "owner: string expected";
+                if (message.collateral_type != null && message.hasOwnProperty("collateral_type"))
+                    if (!$util.isString(message.collateral_type))
+                        return "collateral_type: string expected";
+                return null;
+            };
+
+            /**
+             * Creates a QueryGetCdpRequest message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.QueryGetCdpRequest
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.QueryGetCdpRequest} QueryGetCdpRequest
+             */
+            QueryGetCdpRequest.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.QueryGetCdpRequest)
+                    return object;
+                let message = new $root.ununifi.cdp.QueryGetCdpRequest();
+                if (object.owner != null)
+                    message.owner = String(object.owner);
+                if (object.collateral_type != null)
+                    message.collateral_type = String(object.collateral_type);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a QueryGetCdpRequest message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.QueryGetCdpRequest
+             * @static
+             * @param {ununifi.cdp.QueryGetCdpRequest} message QueryGetCdpRequest
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryGetCdpRequest.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.owner = "";
+                    object.collateral_type = "";
+                }
+                if (message.owner != null && message.hasOwnProperty("owner"))
+                    object.owner = message.owner;
+                if (message.collateral_type != null && message.hasOwnProperty("collateral_type"))
+                    object.collateral_type = message.collateral_type;
+                return object;
+            };
+
+            /**
+             * Converts this QueryGetCdpRequest to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.QueryGetCdpRequest
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryGetCdpRequest.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryGetCdpRequest;
+        })();
+
+        cdp.QueryGetCdpResponse = (function() {
+
+            /**
+             * Properties of a QueryGetCdpResponse.
+             * @memberof ununifi.cdp
+             * @interface IQueryGetCdpResponse
+             * @property {ununifi.cdp.IAugmentedCdp|null} [cdp] QueryGetCdpResponse cdp
+             */
+
+            /**
+             * Constructs a new QueryGetCdpResponse.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a QueryGetCdpResponse.
+             * @implements IQueryGetCdpResponse
+             * @constructor
+             * @param {ununifi.cdp.IQueryGetCdpResponse=} [properties] Properties to set
+             */
+            function QueryGetCdpResponse(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * QueryGetCdpResponse cdp.
+             * @member {ununifi.cdp.IAugmentedCdp|null|undefined} cdp
+             * @memberof ununifi.cdp.QueryGetCdpResponse
+             * @instance
+             */
+            QueryGetCdpResponse.prototype.cdp = null;
+
+            /**
+             * Encodes the specified QueryGetCdpResponse message. Does not implicitly {@link ununifi.cdp.QueryGetCdpResponse.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.QueryGetCdpResponse
+             * @static
+             * @param {ununifi.cdp.IQueryGetCdpResponse} message QueryGetCdpResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryGetCdpResponse.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.cdp != null && Object.hasOwnProperty.call(message, "cdp"))
+                    $root.ununifi.cdp.AugmentedCdp.encode(message.cdp, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryGetCdpResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryGetCdpResponse.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.QueryGetCdpResponse
+             * @static
+             * @param {ununifi.cdp.IQueryGetCdpResponse} message QueryGetCdpResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryGetCdpResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryGetCdpResponse message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.QueryGetCdpResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.QueryGetCdpResponse} QueryGetCdpResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryGetCdpResponse.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryGetCdpResponse();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.cdp = $root.ununifi.cdp.AugmentedCdp.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryGetCdpResponse message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.QueryGetCdpResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.QueryGetCdpResponse} QueryGetCdpResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryGetCdpResponse.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryGetCdpResponse message.
+             * @function verify
+             * @memberof ununifi.cdp.QueryGetCdpResponse
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryGetCdpResponse.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.cdp != null && message.hasOwnProperty("cdp")) {
+                    let error = $root.ununifi.cdp.AugmentedCdp.verify(message.cdp);
+                    if (error)
+                        return "cdp." + error;
+                }
+                return null;
+            };
+
+            /**
+             * Creates a QueryGetCdpResponse message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.QueryGetCdpResponse
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.QueryGetCdpResponse} QueryGetCdpResponse
+             */
+            QueryGetCdpResponse.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.QueryGetCdpResponse)
+                    return object;
+                let message = new $root.ununifi.cdp.QueryGetCdpResponse();
+                if (object.cdp != null) {
+                    if (typeof object.cdp !== "object")
+                        throw TypeError(".ununifi.cdp.QueryGetCdpResponse.cdp: object expected");
+                    message.cdp = $root.ununifi.cdp.AugmentedCdp.fromObject(object.cdp);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a QueryGetCdpResponse message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.QueryGetCdpResponse
+             * @static
+             * @param {ununifi.cdp.QueryGetCdpResponse} message QueryGetCdpResponse
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryGetCdpResponse.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults)
+                    object.cdp = null;
+                if (message.cdp != null && message.hasOwnProperty("cdp"))
+                    object.cdp = $root.ununifi.cdp.AugmentedCdp.toObject(message.cdp, options);
+                return object;
+            };
+
+            /**
+             * Converts this QueryGetCdpResponse to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.QueryGetCdpResponse
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryGetCdpResponse.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryGetCdpResponse;
+        })();
+
+        cdp.QueryAllCdpRequest = (function() {
+
+            /**
+             * Properties of a QueryAllCdpRequest.
+             * @memberof ununifi.cdp
+             * @interface IQueryAllCdpRequest
+             * @property {cosmos.base.query.v1beta1.IPageRequest|null} [pagination] QueryAllCdpRequest pagination
+             */
+
+            /**
+             * Constructs a new QueryAllCdpRequest.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a QueryAllCdpRequest.
+             * @implements IQueryAllCdpRequest
+             * @constructor
+             * @param {ununifi.cdp.IQueryAllCdpRequest=} [properties] Properties to set
+             */
+            function QueryAllCdpRequest(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * QueryAllCdpRequest pagination.
+             * @member {cosmos.base.query.v1beta1.IPageRequest|null|undefined} pagination
+             * @memberof ununifi.cdp.QueryAllCdpRequest
+             * @instance
+             */
+            QueryAllCdpRequest.prototype.pagination = null;
+
+            /**
+             * Encodes the specified QueryAllCdpRequest message. Does not implicitly {@link ununifi.cdp.QueryAllCdpRequest.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.QueryAllCdpRequest
+             * @static
+             * @param {ununifi.cdp.IQueryAllCdpRequest} message QueryAllCdpRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllCdpRequest.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
+                    $root.cosmos.base.query.v1beta1.PageRequest.encode(message.pagination, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryAllCdpRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllCdpRequest.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.QueryAllCdpRequest
+             * @static
+             * @param {ununifi.cdp.IQueryAllCdpRequest} message QueryAllCdpRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllCdpRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryAllCdpRequest message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.QueryAllCdpRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.QueryAllCdpRequest} QueryAllCdpRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllCdpRequest.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryAllCdpRequest();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryAllCdpRequest message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.QueryAllCdpRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.QueryAllCdpRequest} QueryAllCdpRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllCdpRequest.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryAllCdpRequest message.
+             * @function verify
+             * @memberof ununifi.cdp.QueryAllCdpRequest
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryAllCdpRequest.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.pagination != null && message.hasOwnProperty("pagination")) {
+                    let error = $root.cosmos.base.query.v1beta1.PageRequest.verify(message.pagination);
+                    if (error)
+                        return "pagination." + error;
+                }
+                return null;
+            };
+
+            /**
+             * Creates a QueryAllCdpRequest message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.QueryAllCdpRequest
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.QueryAllCdpRequest} QueryAllCdpRequest
+             */
+            QueryAllCdpRequest.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.QueryAllCdpRequest)
+                    return object;
+                let message = new $root.ununifi.cdp.QueryAllCdpRequest();
+                if (object.pagination != null) {
+                    if (typeof object.pagination !== "object")
+                        throw TypeError(".ununifi.cdp.QueryAllCdpRequest.pagination: object expected");
+                    message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.fromObject(object.pagination);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a QueryAllCdpRequest message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.QueryAllCdpRequest
+             * @static
+             * @param {ununifi.cdp.QueryAllCdpRequest} message QueryAllCdpRequest
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryAllCdpRequest.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults)
+                    object.pagination = null;
+                if (message.pagination != null && message.hasOwnProperty("pagination"))
+                    object.pagination = $root.cosmos.base.query.v1beta1.PageRequest.toObject(message.pagination, options);
+                return object;
+            };
+
+            /**
+             * Converts this QueryAllCdpRequest to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.QueryAllCdpRequest
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryAllCdpRequest.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryAllCdpRequest;
+        })();
+
+        cdp.QueryAllCdpResponse = (function() {
+
+            /**
+             * Properties of a QueryAllCdpResponse.
+             * @memberof ununifi.cdp
+             * @interface IQueryAllCdpResponse
+             * @property {Array.<ununifi.cdp.IAugmentedCdp>|null} [cdp] QueryAllCdpResponse cdp
+             * @property {cosmos.base.query.v1beta1.IPageResponse|null} [pagination] QueryAllCdpResponse pagination
+             */
+
+            /**
+             * Constructs a new QueryAllCdpResponse.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a QueryAllCdpResponse.
+             * @implements IQueryAllCdpResponse
+             * @constructor
+             * @param {ununifi.cdp.IQueryAllCdpResponse=} [properties] Properties to set
+             */
+            function QueryAllCdpResponse(properties) {
+                this.cdp = [];
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * QueryAllCdpResponse cdp.
+             * @member {Array.<ununifi.cdp.IAugmentedCdp>} cdp
+             * @memberof ununifi.cdp.QueryAllCdpResponse
+             * @instance
+             */
+            QueryAllCdpResponse.prototype.cdp = $util.emptyArray;
+
+            /**
+             * QueryAllCdpResponse pagination.
+             * @member {cosmos.base.query.v1beta1.IPageResponse|null|undefined} pagination
+             * @memberof ununifi.cdp.QueryAllCdpResponse
+             * @instance
+             */
+            QueryAllCdpResponse.prototype.pagination = null;
+
+            /**
+             * Encodes the specified QueryAllCdpResponse message. Does not implicitly {@link ununifi.cdp.QueryAllCdpResponse.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.QueryAllCdpResponse
+             * @static
+             * @param {ununifi.cdp.IQueryAllCdpResponse} message QueryAllCdpResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllCdpResponse.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.cdp != null && message.cdp.length)
+                    for (let i = 0; i < message.cdp.length; ++i)
+                        $root.ununifi.cdp.AugmentedCdp.encode(message.cdp[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
+                    $root.cosmos.base.query.v1beta1.PageResponse.encode(message.pagination, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryAllCdpResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllCdpResponse.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.QueryAllCdpResponse
+             * @static
+             * @param {ununifi.cdp.IQueryAllCdpResponse} message QueryAllCdpResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllCdpResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryAllCdpResponse message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.QueryAllCdpResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.QueryAllCdpResponse} QueryAllCdpResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllCdpResponse.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryAllCdpResponse();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        if (!(message.cdp && message.cdp.length))
+                            message.cdp = [];
+                        message.cdp.push($root.ununifi.cdp.AugmentedCdp.decode(reader, reader.uint32()));
+                        break;
+                    case 2:
+                        message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryAllCdpResponse message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.QueryAllCdpResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.QueryAllCdpResponse} QueryAllCdpResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllCdpResponse.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryAllCdpResponse message.
+             * @function verify
+             * @memberof ununifi.cdp.QueryAllCdpResponse
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryAllCdpResponse.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.cdp != null && message.hasOwnProperty("cdp")) {
+                    if (!Array.isArray(message.cdp))
+                        return "cdp: array expected";
+                    for (let i = 0; i < message.cdp.length; ++i) {
+                        let error = $root.ununifi.cdp.AugmentedCdp.verify(message.cdp[i]);
+                        if (error)
+                            return "cdp." + error;
+                    }
+                }
+                if (message.pagination != null && message.hasOwnProperty("pagination")) {
+                    let error = $root.cosmos.base.query.v1beta1.PageResponse.verify(message.pagination);
+                    if (error)
+                        return "pagination." + error;
+                }
+                return null;
+            };
+
+            /**
+             * Creates a QueryAllCdpResponse message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.QueryAllCdpResponse
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.QueryAllCdpResponse} QueryAllCdpResponse
+             */
+            QueryAllCdpResponse.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.QueryAllCdpResponse)
+                    return object;
+                let message = new $root.ununifi.cdp.QueryAllCdpResponse();
+                if (object.cdp) {
+                    if (!Array.isArray(object.cdp))
+                        throw TypeError(".ununifi.cdp.QueryAllCdpResponse.cdp: array expected");
+                    message.cdp = [];
+                    for (let i = 0; i < object.cdp.length; ++i) {
+                        if (typeof object.cdp[i] !== "object")
+                            throw TypeError(".ununifi.cdp.QueryAllCdpResponse.cdp: object expected");
+                        message.cdp[i] = $root.ununifi.cdp.AugmentedCdp.fromObject(object.cdp[i]);
+                    }
+                }
+                if (object.pagination != null) {
+                    if (typeof object.pagination !== "object")
+                        throw TypeError(".ununifi.cdp.QueryAllCdpResponse.pagination: object expected");
+                    message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.fromObject(object.pagination);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a QueryAllCdpResponse message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.QueryAllCdpResponse
+             * @static
+             * @param {ununifi.cdp.QueryAllCdpResponse} message QueryAllCdpResponse
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryAllCdpResponse.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.arrays || options.defaults)
+                    object.cdp = [];
+                if (options.defaults)
+                    object.pagination = null;
+                if (message.cdp && message.cdp.length) {
+                    object.cdp = [];
+                    for (let j = 0; j < message.cdp.length; ++j)
+                        object.cdp[j] = $root.ununifi.cdp.AugmentedCdp.toObject(message.cdp[j], options);
+                }
+                if (message.pagination != null && message.hasOwnProperty("pagination"))
+                    object.pagination = $root.cosmos.base.query.v1beta1.PageResponse.toObject(message.pagination, options);
+                return object;
+            };
+
+            /**
+             * Converts this QueryAllCdpResponse to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.QueryAllCdpResponse
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryAllCdpResponse.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryAllCdpResponse;
+        })();
+
+        cdp.QueryAllAccountRequest = (function() {
+
+            /**
+             * Properties of a QueryAllAccountRequest.
+             * @memberof ununifi.cdp
+             * @interface IQueryAllAccountRequest
+             */
+
+            /**
+             * Constructs a new QueryAllAccountRequest.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a QueryAllAccountRequest.
+             * @implements IQueryAllAccountRequest
+             * @constructor
+             * @param {ununifi.cdp.IQueryAllAccountRequest=} [properties] Properties to set
+             */
+            function QueryAllAccountRequest(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Encodes the specified QueryAllAccountRequest message. Does not implicitly {@link ununifi.cdp.QueryAllAccountRequest.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.QueryAllAccountRequest
+             * @static
+             * @param {ununifi.cdp.IQueryAllAccountRequest} message QueryAllAccountRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllAccountRequest.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryAllAccountRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllAccountRequest.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.QueryAllAccountRequest
+             * @static
+             * @param {ununifi.cdp.IQueryAllAccountRequest} message QueryAllAccountRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllAccountRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryAllAccountRequest message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.QueryAllAccountRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.QueryAllAccountRequest} QueryAllAccountRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllAccountRequest.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryAllAccountRequest();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryAllAccountRequest message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.QueryAllAccountRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.QueryAllAccountRequest} QueryAllAccountRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllAccountRequest.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryAllAccountRequest message.
+             * @function verify
+             * @memberof ununifi.cdp.QueryAllAccountRequest
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryAllAccountRequest.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                return null;
+            };
+
+            /**
+             * Creates a QueryAllAccountRequest message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.QueryAllAccountRequest
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.QueryAllAccountRequest} QueryAllAccountRequest
+             */
+            QueryAllAccountRequest.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.QueryAllAccountRequest)
+                    return object;
+                return new $root.ununifi.cdp.QueryAllAccountRequest();
+            };
+
+            /**
+             * Creates a plain object from a QueryAllAccountRequest message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.QueryAllAccountRequest
+             * @static
+             * @param {ununifi.cdp.QueryAllAccountRequest} message QueryAllAccountRequest
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryAllAccountRequest.toObject = function toObject() {
+                return {};
+            };
+
+            /**
+             * Converts this QueryAllAccountRequest to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.QueryAllAccountRequest
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryAllAccountRequest.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryAllAccountRequest;
+        })();
+
+        cdp.QueryAllAccountResponse = (function() {
+
+            /**
+             * Properties of a QueryAllAccountResponse.
+             * @memberof ununifi.cdp
+             * @interface IQueryAllAccountResponse
+             * @property {Array.<google.protobuf.IAny>|null} [accounts] QueryAllAccountResponse accounts
+             */
+
+            /**
+             * Constructs a new QueryAllAccountResponse.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a QueryAllAccountResponse.
+             * @implements IQueryAllAccountResponse
+             * @constructor
+             * @param {ununifi.cdp.IQueryAllAccountResponse=} [properties] Properties to set
+             */
+            function QueryAllAccountResponse(properties) {
+                this.accounts = [];
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * QueryAllAccountResponse accounts.
+             * @member {Array.<google.protobuf.IAny>} accounts
+             * @memberof ununifi.cdp.QueryAllAccountResponse
+             * @instance
+             */
+            QueryAllAccountResponse.prototype.accounts = $util.emptyArray;
+
+            /**
+             * Encodes the specified QueryAllAccountResponse message. Does not implicitly {@link ununifi.cdp.QueryAllAccountResponse.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.QueryAllAccountResponse
+             * @static
+             * @param {ununifi.cdp.IQueryAllAccountResponse} message QueryAllAccountResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllAccountResponse.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.accounts != null && message.accounts.length)
+                    for (let i = 0; i < message.accounts.length; ++i)
+                        $root.google.protobuf.Any.encode(message.accounts[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryAllAccountResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllAccountResponse.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.QueryAllAccountResponse
+             * @static
+             * @param {ununifi.cdp.IQueryAllAccountResponse} message QueryAllAccountResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllAccountResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryAllAccountResponse message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.QueryAllAccountResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.QueryAllAccountResponse} QueryAllAccountResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllAccountResponse.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryAllAccountResponse();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        if (!(message.accounts && message.accounts.length))
+                            message.accounts = [];
+                        message.accounts.push($root.google.protobuf.Any.decode(reader, reader.uint32()));
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryAllAccountResponse message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.QueryAllAccountResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.QueryAllAccountResponse} QueryAllAccountResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllAccountResponse.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryAllAccountResponse message.
+             * @function verify
+             * @memberof ununifi.cdp.QueryAllAccountResponse
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryAllAccountResponse.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.accounts != null && message.hasOwnProperty("accounts")) {
+                    if (!Array.isArray(message.accounts))
+                        return "accounts: array expected";
+                    for (let i = 0; i < message.accounts.length; ++i) {
+                        let error = $root.google.protobuf.Any.verify(message.accounts[i]);
+                        if (error)
+                            return "accounts." + error;
+                    }
+                }
+                return null;
+            };
+
+            /**
+             * Creates a QueryAllAccountResponse message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.QueryAllAccountResponse
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.QueryAllAccountResponse} QueryAllAccountResponse
+             */
+            QueryAllAccountResponse.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.QueryAllAccountResponse)
+                    return object;
+                let message = new $root.ununifi.cdp.QueryAllAccountResponse();
+                if (object.accounts) {
+                    if (!Array.isArray(object.accounts))
+                        throw TypeError(".ununifi.cdp.QueryAllAccountResponse.accounts: array expected");
+                    message.accounts = [];
+                    for (let i = 0; i < object.accounts.length; ++i) {
+                        if (typeof object.accounts[i] !== "object")
+                            throw TypeError(".ununifi.cdp.QueryAllAccountResponse.accounts: object expected");
+                        message.accounts[i] = $root.google.protobuf.Any.fromObject(object.accounts[i]);
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a QueryAllAccountResponse message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.QueryAllAccountResponse
+             * @static
+             * @param {ununifi.cdp.QueryAllAccountResponse} message QueryAllAccountResponse
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryAllAccountResponse.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.arrays || options.defaults)
+                    object.accounts = [];
+                if (message.accounts && message.accounts.length) {
+                    object.accounts = [];
+                    for (let j = 0; j < message.accounts.length; ++j)
+                        object.accounts[j] = $root.google.protobuf.Any.toObject(message.accounts[j], options);
+                }
+                return object;
+            };
+
+            /**
+             * Converts this QueryAllAccountResponse to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.QueryAllAccountResponse
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryAllAccountResponse.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryAllAccountResponse;
+        })();
+
+        cdp.QueryAllDepositRequest = (function() {
+
+            /**
+             * Properties of a QueryAllDepositRequest.
+             * @memberof ununifi.cdp
+             * @interface IQueryAllDepositRequest
+             * @property {string|null} [owner] QueryAllDepositRequest owner
+             * @property {string|null} [collateral_type] QueryAllDepositRequest collateral_type
+             */
+
+            /**
+             * Constructs a new QueryAllDepositRequest.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a QueryAllDepositRequest.
+             * @implements IQueryAllDepositRequest
+             * @constructor
+             * @param {ununifi.cdp.IQueryAllDepositRequest=} [properties] Properties to set
+             */
+            function QueryAllDepositRequest(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * QueryAllDepositRequest owner.
+             * @member {string} owner
+             * @memberof ununifi.cdp.QueryAllDepositRequest
+             * @instance
+             */
+            QueryAllDepositRequest.prototype.owner = "";
+
+            /**
+             * QueryAllDepositRequest collateral_type.
+             * @member {string} collateral_type
+             * @memberof ununifi.cdp.QueryAllDepositRequest
+             * @instance
+             */
+            QueryAllDepositRequest.prototype.collateral_type = "";
+
+            /**
+             * Encodes the specified QueryAllDepositRequest message. Does not implicitly {@link ununifi.cdp.QueryAllDepositRequest.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.QueryAllDepositRequest
+             * @static
+             * @param {ununifi.cdp.IQueryAllDepositRequest} message QueryAllDepositRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllDepositRequest.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.owner != null && Object.hasOwnProperty.call(message, "owner"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.owner);
+                if (message.collateral_type != null && Object.hasOwnProperty.call(message, "collateral_type"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.collateral_type);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryAllDepositRequest message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllDepositRequest.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.QueryAllDepositRequest
+             * @static
+             * @param {ununifi.cdp.IQueryAllDepositRequest} message QueryAllDepositRequest message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllDepositRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryAllDepositRequest message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.QueryAllDepositRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.QueryAllDepositRequest} QueryAllDepositRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllDepositRequest.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryAllDepositRequest();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.owner = reader.string();
+                        break;
+                    case 2:
+                        message.collateral_type = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryAllDepositRequest message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.QueryAllDepositRequest
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.QueryAllDepositRequest} QueryAllDepositRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllDepositRequest.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryAllDepositRequest message.
+             * @function verify
+             * @memberof ununifi.cdp.QueryAllDepositRequest
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryAllDepositRequest.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.owner != null && message.hasOwnProperty("owner"))
+                    if (!$util.isString(message.owner))
+                        return "owner: string expected";
+                if (message.collateral_type != null && message.hasOwnProperty("collateral_type"))
+                    if (!$util.isString(message.collateral_type))
+                        return "collateral_type: string expected";
+                return null;
+            };
+
+            /**
+             * Creates a QueryAllDepositRequest message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.QueryAllDepositRequest
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.QueryAllDepositRequest} QueryAllDepositRequest
+             */
+            QueryAllDepositRequest.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.QueryAllDepositRequest)
+                    return object;
+                let message = new $root.ununifi.cdp.QueryAllDepositRequest();
+                if (object.owner != null)
+                    message.owner = String(object.owner);
+                if (object.collateral_type != null)
+                    message.collateral_type = String(object.collateral_type);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a QueryAllDepositRequest message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.QueryAllDepositRequest
+             * @static
+             * @param {ununifi.cdp.QueryAllDepositRequest} message QueryAllDepositRequest
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryAllDepositRequest.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.owner = "";
+                    object.collateral_type = "";
+                }
+                if (message.owner != null && message.hasOwnProperty("owner"))
+                    object.owner = message.owner;
+                if (message.collateral_type != null && message.hasOwnProperty("collateral_type"))
+                    object.collateral_type = message.collateral_type;
+                return object;
+            };
+
+            /**
+             * Converts this QueryAllDepositRequest to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.QueryAllDepositRequest
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryAllDepositRequest.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryAllDepositRequest;
+        })();
+
+        cdp.QueryAllDepositResponse = (function() {
+
+            /**
+             * Properties of a QueryAllDepositResponse.
+             * @memberof ununifi.cdp
+             * @interface IQueryAllDepositResponse
+             * @property {Array.<ununifi.cdp.IDeposit>|null} [deposits] QueryAllDepositResponse deposits
+             */
+
+            /**
+             * Constructs a new QueryAllDepositResponse.
+             * @memberof ununifi.cdp
+             * @classdesc Represents a QueryAllDepositResponse.
+             * @implements IQueryAllDepositResponse
+             * @constructor
+             * @param {ununifi.cdp.IQueryAllDepositResponse=} [properties] Properties to set
+             */
+            function QueryAllDepositResponse(properties) {
+                this.deposits = [];
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * QueryAllDepositResponse deposits.
+             * @member {Array.<ununifi.cdp.IDeposit>} deposits
+             * @memberof ununifi.cdp.QueryAllDepositResponse
+             * @instance
+             */
+            QueryAllDepositResponse.prototype.deposits = $util.emptyArray;
+
+            /**
+             * Encodes the specified QueryAllDepositResponse message. Does not implicitly {@link ununifi.cdp.QueryAllDepositResponse.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.cdp.QueryAllDepositResponse
+             * @static
+             * @param {ununifi.cdp.IQueryAllDepositResponse} message QueryAllDepositResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllDepositResponse.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.deposits != null && message.deposits.length)
+                    for (let i = 0; i < message.deposits.length; ++i)
+                        $root.ununifi.cdp.Deposit.encode(message.deposits[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified QueryAllDepositResponse message, length delimited. Does not implicitly {@link ununifi.cdp.QueryAllDepositResponse.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.cdp.QueryAllDepositResponse
+             * @static
+             * @param {ununifi.cdp.IQueryAllDepositResponse} message QueryAllDepositResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            QueryAllDepositResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a QueryAllDepositResponse message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.cdp.QueryAllDepositResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.cdp.QueryAllDepositResponse} QueryAllDepositResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllDepositResponse.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.cdp.QueryAllDepositResponse();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        if (!(message.deposits && message.deposits.length))
+                            message.deposits = [];
+                        message.deposits.push($root.ununifi.cdp.Deposit.decode(reader, reader.uint32()));
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a QueryAllDepositResponse message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.cdp.QueryAllDepositResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.cdp.QueryAllDepositResponse} QueryAllDepositResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            QueryAllDepositResponse.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a QueryAllDepositResponse message.
+             * @function verify
+             * @memberof ununifi.cdp.QueryAllDepositResponse
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            QueryAllDepositResponse.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.deposits != null && message.hasOwnProperty("deposits")) {
+                    if (!Array.isArray(message.deposits))
+                        return "deposits: array expected";
+                    for (let i = 0; i < message.deposits.length; ++i) {
+                        let error = $root.ununifi.cdp.Deposit.verify(message.deposits[i]);
+                        if (error)
+                            return "deposits." + error;
+                    }
+                }
+                return null;
+            };
+
+            /**
+             * Creates a QueryAllDepositResponse message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.cdp.QueryAllDepositResponse
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.cdp.QueryAllDepositResponse} QueryAllDepositResponse
+             */
+            QueryAllDepositResponse.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.cdp.QueryAllDepositResponse)
+                    return object;
+                let message = new $root.ununifi.cdp.QueryAllDepositResponse();
+                if (object.deposits) {
+                    if (!Array.isArray(object.deposits))
+                        throw TypeError(".ununifi.cdp.QueryAllDepositResponse.deposits: array expected");
+                    message.deposits = [];
+                    for (let i = 0; i < object.deposits.length; ++i) {
+                        if (typeof object.deposits[i] !== "object")
+                            throw TypeError(".ununifi.cdp.QueryAllDepositResponse.deposits: object expected");
+                        message.deposits[i] = $root.ununifi.cdp.Deposit.fromObject(object.deposits[i]);
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a QueryAllDepositResponse message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.cdp.QueryAllDepositResponse
+             * @static
+             * @param {ununifi.cdp.QueryAllDepositResponse} message QueryAllDepositResponse
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            QueryAllDepositResponse.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.arrays || options.defaults)
+                    object.deposits = [];
+                if (message.deposits && message.deposits.length) {
+                    object.deposits = [];
+                    for (let j = 0; j < message.deposits.length; ++j)
+                        object.deposits[j] = $root.ununifi.cdp.Deposit.toObject(message.deposits[j], options);
+                }
+                return object;
+            };
+
+            /**
+             * Converts this QueryAllDepositResponse to JSON.
+             * @function toJSON
+             * @memberof ununifi.cdp.QueryAllDepositResponse
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            QueryAllDepositResponse.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return QueryAllDepositResponse;
+        })();
+
         cdp.GenesisState = (function() {
 
             /**
@@ -9912,7 +9949,6 @@ export const ununifi = $root.ununifi = (() => {
              * @property {Array.<ununifi.cdp.ICdp>|null} [cdps] GenesisState cdps
              * @property {Array.<ununifi.cdp.IDeposit>|null} [deposits] GenesisState deposits
              * @property {Long|null} [starting_cdp_id] GenesisState starting_cdp_id
-             * @property {string|null} [debt_denom] GenesisState debt_denom
              * @property {string|null} [gov_denom] GenesisState gov_denom
              * @property {Array.<ununifi.cdp.IGenesisAccumulationTime>|null} [previous_accumulation_times] GenesisState previous_accumulation_times
              * @property {Array.<ununifi.cdp.IGenesisTotalPrincipal>|null} [total_principals] GenesisState total_principals
@@ -9970,14 +10006,6 @@ export const ununifi = $root.ununifi = (() => {
             GenesisState.prototype.starting_cdp_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
 
             /**
-             * GenesisState debt_denom.
-             * @member {string} debt_denom
-             * @memberof ununifi.cdp.GenesisState
-             * @instance
-             */
-            GenesisState.prototype.debt_denom = "";
-
-            /**
              * GenesisState gov_denom.
              * @member {string} gov_denom
              * @memberof ununifi.cdp.GenesisState
@@ -10023,16 +10051,14 @@ export const ununifi = $root.ununifi = (() => {
                         $root.ununifi.cdp.Deposit.encode(message.deposits[i], writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
                 if (message.starting_cdp_id != null && Object.hasOwnProperty.call(message, "starting_cdp_id"))
                     writer.uint32(/* id 4, wireType 0 =*/32).uint64(message.starting_cdp_id);
-                if (message.debt_denom != null && Object.hasOwnProperty.call(message, "debt_denom"))
-                    writer.uint32(/* id 5, wireType 2 =*/42).string(message.debt_denom);
                 if (message.gov_denom != null && Object.hasOwnProperty.call(message, "gov_denom"))
-                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.gov_denom);
+                    writer.uint32(/* id 5, wireType 2 =*/42).string(message.gov_denom);
                 if (message.previous_accumulation_times != null && message.previous_accumulation_times.length)
                     for (let i = 0; i < message.previous_accumulation_times.length; ++i)
-                        $root.ununifi.cdp.GenesisAccumulationTime.encode(message.previous_accumulation_times[i], writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
+                        $root.ununifi.cdp.GenesisAccumulationTime.encode(message.previous_accumulation_times[i], writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
                 if (message.total_principals != null && message.total_principals.length)
                     for (let i = 0; i < message.total_principals.length; ++i)
-                        $root.ununifi.cdp.GenesisTotalPrincipal.encode(message.total_principals[i], writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
+                        $root.ununifi.cdp.GenesisTotalPrincipal.encode(message.total_principals[i], writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
                 return writer;
             };
 
@@ -10084,17 +10110,14 @@ export const ununifi = $root.ununifi = (() => {
                         message.starting_cdp_id = reader.uint64();
                         break;
                     case 5:
-                        message.debt_denom = reader.string();
-                        break;
-                    case 6:
                         message.gov_denom = reader.string();
                         break;
-                    case 7:
+                    case 6:
                         if (!(message.previous_accumulation_times && message.previous_accumulation_times.length))
                             message.previous_accumulation_times = [];
                         message.previous_accumulation_times.push($root.ununifi.cdp.GenesisAccumulationTime.decode(reader, reader.uint32()));
                         break;
-                    case 8:
+                    case 7:
                         if (!(message.total_principals && message.total_principals.length))
                             message.total_principals = [];
                         message.total_principals.push($root.ununifi.cdp.GenesisTotalPrincipal.decode(reader, reader.uint32()));
@@ -10160,9 +10183,6 @@ export const ununifi = $root.ununifi = (() => {
                 if (message.starting_cdp_id != null && message.hasOwnProperty("starting_cdp_id"))
                     if (!$util.isInteger(message.starting_cdp_id) && !(message.starting_cdp_id && $util.isInteger(message.starting_cdp_id.low) && $util.isInteger(message.starting_cdp_id.high)))
                         return "starting_cdp_id: integer|Long expected";
-                if (message.debt_denom != null && message.hasOwnProperty("debt_denom"))
-                    if (!$util.isString(message.debt_denom))
-                        return "debt_denom: string expected";
                 if (message.gov_denom != null && message.hasOwnProperty("gov_denom"))
                     if (!$util.isString(message.gov_denom))
                         return "gov_denom: string expected";
@@ -10233,8 +10253,6 @@ export const ununifi = $root.ununifi = (() => {
                         message.starting_cdp_id = object.starting_cdp_id;
                     else if (typeof object.starting_cdp_id === "object")
                         message.starting_cdp_id = new $util.LongBits(object.starting_cdp_id.low >>> 0, object.starting_cdp_id.high >>> 0).toNumber(true);
-                if (object.debt_denom != null)
-                    message.debt_denom = String(object.debt_denom);
                 if (object.gov_denom != null)
                     message.gov_denom = String(object.gov_denom);
                 if (object.previous_accumulation_times) {
@@ -10286,7 +10304,6 @@ export const ununifi = $root.ununifi = (() => {
                         object.starting_cdp_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
                     } else
                         object.starting_cdp_id = options.longs === String ? "0" : 0;
-                    object.debt_denom = "";
                     object.gov_denom = "";
                 }
                 if (message.params != null && message.hasOwnProperty("params"))
@@ -10306,8 +10323,6 @@ export const ununifi = $root.ununifi = (() => {
                         object.starting_cdp_id = options.longs === String ? String(message.starting_cdp_id) : message.starting_cdp_id;
                     else
                         object.starting_cdp_id = options.longs === String ? $util.Long.prototype.toString.call(message.starting_cdp_id) : options.longs === Number ? new $util.LongBits(message.starting_cdp_id.low >>> 0, message.starting_cdp_id.high >>> 0).toNumber(true) : message.starting_cdp_id;
-                if (message.debt_denom != null && message.hasOwnProperty("debt_denom"))
-                    object.debt_denom = message.debt_denom;
                 if (message.gov_denom != null && message.hasOwnProperty("gov_denom"))
                     object.gov_denom = message.gov_denom;
                 if (message.previous_accumulation_times && message.previous_accumulation_times.length) {
@@ -10771,6 +10786,406 @@ export const ununifi = $root.ununifi = (() => {
          * @namespace
          */
         const incentive = {};
+
+        incentive.Msg = (function() {
+
+            /**
+             * Constructs a new Msg service.
+             * @memberof ununifi.incentive
+             * @classdesc Represents a Msg
+             * @extends $protobuf.rpc.Service
+             * @constructor
+             * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+             * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+             * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+             */
+            function Msg(rpcImpl, requestDelimited, responseDelimited) {
+                $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+            }
+
+            (Msg.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Msg;
+
+            /**
+             * Callback as used by {@link ununifi.incentive.Msg#claimCdpMintingReward}.
+             * @memberof ununifi.incentive.Msg
+             * @typedef ClaimCdpMintingRewardCallback
+             * @type {function}
+             * @param {Error|null} error Error, if any
+             * @param {ununifi.incentive.MsgClaimCdpMintingRewardResponse} [response] MsgClaimCdpMintingRewardResponse
+             */
+
+            /**
+             * Calls ClaimCdpMintingReward.
+             * @function claimCdpMintingReward
+             * @memberof ununifi.incentive.Msg
+             * @instance
+             * @param {ununifi.incentive.IMsgClaimCdpMintingReward} request MsgClaimCdpMintingReward message or plain object
+             * @param {ununifi.incentive.Msg.ClaimCdpMintingRewardCallback} callback Node-style callback called with the error, if any, and MsgClaimCdpMintingRewardResponse
+             * @returns {undefined}
+             * @variation 1
+             */
+            Object.defineProperty(Msg.prototype.claimCdpMintingReward = function claimCdpMintingReward(request, callback) {
+                return this.rpcCall(claimCdpMintingReward, $root.ununifi.incentive.MsgClaimCdpMintingReward, $root.ununifi.incentive.MsgClaimCdpMintingRewardResponse, request, callback);
+            }, "name", { value: "ClaimCdpMintingReward" });
+
+            /**
+             * Calls ClaimCdpMintingReward.
+             * @function claimCdpMintingReward
+             * @memberof ununifi.incentive.Msg
+             * @instance
+             * @param {ununifi.incentive.IMsgClaimCdpMintingReward} request MsgClaimCdpMintingReward message or plain object
+             * @returns {Promise<ununifi.incentive.MsgClaimCdpMintingRewardResponse>} Promise
+             * @variation 2
+             */
+
+            return Msg;
+        })();
+
+        incentive.MsgClaimCdpMintingReward = (function() {
+
+            /**
+             * Properties of a MsgClaimCdpMintingReward.
+             * @memberof ununifi.incentive
+             * @interface IMsgClaimCdpMintingReward
+             * @property {string|null} [sender] MsgClaimCdpMintingReward sender
+             * @property {string|null} [multiplier_name] MsgClaimCdpMintingReward multiplier_name
+             */
+
+            /**
+             * Constructs a new MsgClaimCdpMintingReward.
+             * @memberof ununifi.incentive
+             * @classdesc Represents a MsgClaimCdpMintingReward.
+             * @implements IMsgClaimCdpMintingReward
+             * @constructor
+             * @param {ununifi.incentive.IMsgClaimCdpMintingReward=} [properties] Properties to set
+             */
+            function MsgClaimCdpMintingReward(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * MsgClaimCdpMintingReward sender.
+             * @member {string} sender
+             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
+             * @instance
+             */
+            MsgClaimCdpMintingReward.prototype.sender = "";
+
+            /**
+             * MsgClaimCdpMintingReward multiplier_name.
+             * @member {string} multiplier_name
+             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
+             * @instance
+             */
+            MsgClaimCdpMintingReward.prototype.multiplier_name = "";
+
+            /**
+             * Encodes the specified MsgClaimCdpMintingReward message. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingReward.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
+             * @static
+             * @param {ununifi.incentive.IMsgClaimCdpMintingReward} message MsgClaimCdpMintingReward message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            MsgClaimCdpMintingReward.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                if (message.multiplier_name != null && Object.hasOwnProperty.call(message, "multiplier_name"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.multiplier_name);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified MsgClaimCdpMintingReward message, length delimited. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingReward.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
+             * @static
+             * @param {ununifi.incentive.IMsgClaimCdpMintingReward} message MsgClaimCdpMintingReward message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            MsgClaimCdpMintingReward.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a MsgClaimCdpMintingReward message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.incentive.MsgClaimCdpMintingReward} MsgClaimCdpMintingReward
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            MsgClaimCdpMintingReward.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.incentive.MsgClaimCdpMintingReward();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.sender = reader.string();
+                        break;
+                    case 2:
+                        message.multiplier_name = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a MsgClaimCdpMintingReward message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.incentive.MsgClaimCdpMintingReward} MsgClaimCdpMintingReward
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            MsgClaimCdpMintingReward.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a MsgClaimCdpMintingReward message.
+             * @function verify
+             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            MsgClaimCdpMintingReward.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.sender != null && message.hasOwnProperty("sender"))
+                    if (!$util.isString(message.sender))
+                        return "sender: string expected";
+                if (message.multiplier_name != null && message.hasOwnProperty("multiplier_name"))
+                    if (!$util.isString(message.multiplier_name))
+                        return "multiplier_name: string expected";
+                return null;
+            };
+
+            /**
+             * Creates a MsgClaimCdpMintingReward message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.incentive.MsgClaimCdpMintingReward} MsgClaimCdpMintingReward
+             */
+            MsgClaimCdpMintingReward.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.incentive.MsgClaimCdpMintingReward)
+                    return object;
+                let message = new $root.ununifi.incentive.MsgClaimCdpMintingReward();
+                if (object.sender != null)
+                    message.sender = String(object.sender);
+                if (object.multiplier_name != null)
+                    message.multiplier_name = String(object.multiplier_name);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a MsgClaimCdpMintingReward message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
+             * @static
+             * @param {ununifi.incentive.MsgClaimCdpMintingReward} message MsgClaimCdpMintingReward
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            MsgClaimCdpMintingReward.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.sender = "";
+                    object.multiplier_name = "";
+                }
+                if (message.sender != null && message.hasOwnProperty("sender"))
+                    object.sender = message.sender;
+                if (message.multiplier_name != null && message.hasOwnProperty("multiplier_name"))
+                    object.multiplier_name = message.multiplier_name;
+                return object;
+            };
+
+            /**
+             * Converts this MsgClaimCdpMintingReward to JSON.
+             * @function toJSON
+             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            MsgClaimCdpMintingReward.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return MsgClaimCdpMintingReward;
+        })();
+
+        incentive.MsgClaimCdpMintingRewardResponse = (function() {
+
+            /**
+             * Properties of a MsgClaimCdpMintingRewardResponse.
+             * @memberof ununifi.incentive
+             * @interface IMsgClaimCdpMintingRewardResponse
+             */
+
+            /**
+             * Constructs a new MsgClaimCdpMintingRewardResponse.
+             * @memberof ununifi.incentive
+             * @classdesc Represents a MsgClaimCdpMintingRewardResponse.
+             * @implements IMsgClaimCdpMintingRewardResponse
+             * @constructor
+             * @param {ununifi.incentive.IMsgClaimCdpMintingRewardResponse=} [properties] Properties to set
+             */
+            function MsgClaimCdpMintingRewardResponse(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Encodes the specified MsgClaimCdpMintingRewardResponse message. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingRewardResponse.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
+             * @static
+             * @param {ununifi.incentive.IMsgClaimCdpMintingRewardResponse} message MsgClaimCdpMintingRewardResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            MsgClaimCdpMintingRewardResponse.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified MsgClaimCdpMintingRewardResponse message, length delimited. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingRewardResponse.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
+             * @static
+             * @param {ununifi.incentive.IMsgClaimCdpMintingRewardResponse} message MsgClaimCdpMintingRewardResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            MsgClaimCdpMintingRewardResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a MsgClaimCdpMintingRewardResponse message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.incentive.MsgClaimCdpMintingRewardResponse} MsgClaimCdpMintingRewardResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            MsgClaimCdpMintingRewardResponse.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.incentive.MsgClaimCdpMintingRewardResponse();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a MsgClaimCdpMintingRewardResponse message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.incentive.MsgClaimCdpMintingRewardResponse} MsgClaimCdpMintingRewardResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            MsgClaimCdpMintingRewardResponse.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a MsgClaimCdpMintingRewardResponse message.
+             * @function verify
+             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            MsgClaimCdpMintingRewardResponse.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                return null;
+            };
+
+            /**
+             * Creates a MsgClaimCdpMintingRewardResponse message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.incentive.MsgClaimCdpMintingRewardResponse} MsgClaimCdpMintingRewardResponse
+             */
+            MsgClaimCdpMintingRewardResponse.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.incentive.MsgClaimCdpMintingRewardResponse)
+                    return object;
+                return new $root.ununifi.incentive.MsgClaimCdpMintingRewardResponse();
+            };
+
+            /**
+             * Creates a plain object from a MsgClaimCdpMintingRewardResponse message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
+             * @static
+             * @param {ununifi.incentive.MsgClaimCdpMintingRewardResponse} message MsgClaimCdpMintingRewardResponse
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            MsgClaimCdpMintingRewardResponse.toObject = function toObject() {
+                return {};
+            };
+
+            /**
+             * Converts this MsgClaimCdpMintingRewardResponse to JSON.
+             * @function toJSON
+             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            MsgClaimCdpMintingRewardResponse.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return MsgClaimCdpMintingRewardResponse;
+        })();
 
         incentive.Query = (function() {
 
@@ -12779,406 +13194,6 @@ export const ununifi = $root.ununifi = (() => {
             return Multiplier;
         })();
 
-        incentive.Msg = (function() {
-
-            /**
-             * Constructs a new Msg service.
-             * @memberof ununifi.incentive
-             * @classdesc Represents a Msg
-             * @extends $protobuf.rpc.Service
-             * @constructor
-             * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
-             * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
-             * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
-             */
-            function Msg(rpcImpl, requestDelimited, responseDelimited) {
-                $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
-            }
-
-            (Msg.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Msg;
-
-            /**
-             * Callback as used by {@link ununifi.incentive.Msg#claimCdpMintingReward}.
-             * @memberof ununifi.incentive.Msg
-             * @typedef ClaimCdpMintingRewardCallback
-             * @type {function}
-             * @param {Error|null} error Error, if any
-             * @param {ununifi.incentive.MsgClaimCdpMintingRewardResponse} [response] MsgClaimCdpMintingRewardResponse
-             */
-
-            /**
-             * Calls ClaimCdpMintingReward.
-             * @function claimCdpMintingReward
-             * @memberof ununifi.incentive.Msg
-             * @instance
-             * @param {ununifi.incentive.IMsgClaimCdpMintingReward} request MsgClaimCdpMintingReward message or plain object
-             * @param {ununifi.incentive.Msg.ClaimCdpMintingRewardCallback} callback Node-style callback called with the error, if any, and MsgClaimCdpMintingRewardResponse
-             * @returns {undefined}
-             * @variation 1
-             */
-            Object.defineProperty(Msg.prototype.claimCdpMintingReward = function claimCdpMintingReward(request, callback) {
-                return this.rpcCall(claimCdpMintingReward, $root.ununifi.incentive.MsgClaimCdpMintingReward, $root.ununifi.incentive.MsgClaimCdpMintingRewardResponse, request, callback);
-            }, "name", { value: "ClaimCdpMintingReward" });
-
-            /**
-             * Calls ClaimCdpMintingReward.
-             * @function claimCdpMintingReward
-             * @memberof ununifi.incentive.Msg
-             * @instance
-             * @param {ununifi.incentive.IMsgClaimCdpMintingReward} request MsgClaimCdpMintingReward message or plain object
-             * @returns {Promise<ununifi.incentive.MsgClaimCdpMintingRewardResponse>} Promise
-             * @variation 2
-             */
-
-            return Msg;
-        })();
-
-        incentive.MsgClaimCdpMintingReward = (function() {
-
-            /**
-             * Properties of a MsgClaimCdpMintingReward.
-             * @memberof ununifi.incentive
-             * @interface IMsgClaimCdpMintingReward
-             * @property {string|null} [sender] MsgClaimCdpMintingReward sender
-             * @property {string|null} [multiplier_name] MsgClaimCdpMintingReward multiplier_name
-             */
-
-            /**
-             * Constructs a new MsgClaimCdpMintingReward.
-             * @memberof ununifi.incentive
-             * @classdesc Represents a MsgClaimCdpMintingReward.
-             * @implements IMsgClaimCdpMintingReward
-             * @constructor
-             * @param {ununifi.incentive.IMsgClaimCdpMintingReward=} [properties] Properties to set
-             */
-            function MsgClaimCdpMintingReward(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * MsgClaimCdpMintingReward sender.
-             * @member {string} sender
-             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
-             * @instance
-             */
-            MsgClaimCdpMintingReward.prototype.sender = "";
-
-            /**
-             * MsgClaimCdpMintingReward multiplier_name.
-             * @member {string} multiplier_name
-             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
-             * @instance
-             */
-            MsgClaimCdpMintingReward.prototype.multiplier_name = "";
-
-            /**
-             * Encodes the specified MsgClaimCdpMintingReward message. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingReward.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
-             * @static
-             * @param {ununifi.incentive.IMsgClaimCdpMintingReward} message MsgClaimCdpMintingReward message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            MsgClaimCdpMintingReward.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
-                if (message.multiplier_name != null && Object.hasOwnProperty.call(message, "multiplier_name"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.multiplier_name);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified MsgClaimCdpMintingReward message, length delimited. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingReward.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
-             * @static
-             * @param {ununifi.incentive.IMsgClaimCdpMintingReward} message MsgClaimCdpMintingReward message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            MsgClaimCdpMintingReward.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a MsgClaimCdpMintingReward message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.incentive.MsgClaimCdpMintingReward} MsgClaimCdpMintingReward
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            MsgClaimCdpMintingReward.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.incentive.MsgClaimCdpMintingReward();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.sender = reader.string();
-                        break;
-                    case 2:
-                        message.multiplier_name = reader.string();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a MsgClaimCdpMintingReward message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.incentive.MsgClaimCdpMintingReward} MsgClaimCdpMintingReward
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            MsgClaimCdpMintingReward.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a MsgClaimCdpMintingReward message.
-             * @function verify
-             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            MsgClaimCdpMintingReward.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.sender != null && message.hasOwnProperty("sender"))
-                    if (!$util.isString(message.sender))
-                        return "sender: string expected";
-                if (message.multiplier_name != null && message.hasOwnProperty("multiplier_name"))
-                    if (!$util.isString(message.multiplier_name))
-                        return "multiplier_name: string expected";
-                return null;
-            };
-
-            /**
-             * Creates a MsgClaimCdpMintingReward message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.incentive.MsgClaimCdpMintingReward} MsgClaimCdpMintingReward
-             */
-            MsgClaimCdpMintingReward.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.incentive.MsgClaimCdpMintingReward)
-                    return object;
-                let message = new $root.ununifi.incentive.MsgClaimCdpMintingReward();
-                if (object.sender != null)
-                    message.sender = String(object.sender);
-                if (object.multiplier_name != null)
-                    message.multiplier_name = String(object.multiplier_name);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a MsgClaimCdpMintingReward message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
-             * @static
-             * @param {ununifi.incentive.MsgClaimCdpMintingReward} message MsgClaimCdpMintingReward
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            MsgClaimCdpMintingReward.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.sender = "";
-                    object.multiplier_name = "";
-                }
-                if (message.sender != null && message.hasOwnProperty("sender"))
-                    object.sender = message.sender;
-                if (message.multiplier_name != null && message.hasOwnProperty("multiplier_name"))
-                    object.multiplier_name = message.multiplier_name;
-                return object;
-            };
-
-            /**
-             * Converts this MsgClaimCdpMintingReward to JSON.
-             * @function toJSON
-             * @memberof ununifi.incentive.MsgClaimCdpMintingReward
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            MsgClaimCdpMintingReward.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return MsgClaimCdpMintingReward;
-        })();
-
-        incentive.MsgClaimCdpMintingRewardResponse = (function() {
-
-            /**
-             * Properties of a MsgClaimCdpMintingRewardResponse.
-             * @memberof ununifi.incentive
-             * @interface IMsgClaimCdpMintingRewardResponse
-             */
-
-            /**
-             * Constructs a new MsgClaimCdpMintingRewardResponse.
-             * @memberof ununifi.incentive
-             * @classdesc Represents a MsgClaimCdpMintingRewardResponse.
-             * @implements IMsgClaimCdpMintingRewardResponse
-             * @constructor
-             * @param {ununifi.incentive.IMsgClaimCdpMintingRewardResponse=} [properties] Properties to set
-             */
-            function MsgClaimCdpMintingRewardResponse(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * Encodes the specified MsgClaimCdpMintingRewardResponse message. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingRewardResponse.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
-             * @static
-             * @param {ununifi.incentive.IMsgClaimCdpMintingRewardResponse} message MsgClaimCdpMintingRewardResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            MsgClaimCdpMintingRewardResponse.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified MsgClaimCdpMintingRewardResponse message, length delimited. Does not implicitly {@link ununifi.incentive.MsgClaimCdpMintingRewardResponse.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
-             * @static
-             * @param {ununifi.incentive.IMsgClaimCdpMintingRewardResponse} message MsgClaimCdpMintingRewardResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            MsgClaimCdpMintingRewardResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a MsgClaimCdpMintingRewardResponse message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.incentive.MsgClaimCdpMintingRewardResponse} MsgClaimCdpMintingRewardResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            MsgClaimCdpMintingRewardResponse.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.incentive.MsgClaimCdpMintingRewardResponse();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a MsgClaimCdpMintingRewardResponse message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.incentive.MsgClaimCdpMintingRewardResponse} MsgClaimCdpMintingRewardResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            MsgClaimCdpMintingRewardResponse.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a MsgClaimCdpMintingRewardResponse message.
-             * @function verify
-             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            MsgClaimCdpMintingRewardResponse.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                return null;
-            };
-
-            /**
-             * Creates a MsgClaimCdpMintingRewardResponse message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.incentive.MsgClaimCdpMintingRewardResponse} MsgClaimCdpMintingRewardResponse
-             */
-            MsgClaimCdpMintingRewardResponse.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.incentive.MsgClaimCdpMintingRewardResponse)
-                    return object;
-                return new $root.ununifi.incentive.MsgClaimCdpMintingRewardResponse();
-            };
-
-            /**
-             * Creates a plain object from a MsgClaimCdpMintingRewardResponse message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
-             * @static
-             * @param {ununifi.incentive.MsgClaimCdpMintingRewardResponse} message MsgClaimCdpMintingRewardResponse
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            MsgClaimCdpMintingRewardResponse.toObject = function toObject() {
-                return {};
-            };
-
-            /**
-             * Converts this MsgClaimCdpMintingRewardResponse to JSON.
-             * @function toJSON
-             * @memberof ununifi.incentive.MsgClaimCdpMintingRewardResponse
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            MsgClaimCdpMintingRewardResponse.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return MsgClaimCdpMintingRewardResponse;
-        })();
-
         incentive.GenesisState = (function() {
 
             /**
@@ -13887,6 +13902,1377 @@ export const ununifi = $root.ununifi = (() => {
          * @namespace
          */
         const pricefeed = {};
+
+        pricefeed.Msg = (function() {
+
+            /**
+             * Constructs a new Msg service.
+             * @memberof ununifi.pricefeed
+             * @classdesc Represents a Msg
+             * @extends $protobuf.rpc.Service
+             * @constructor
+             * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+             * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+             * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+             */
+            function Msg(rpcImpl, requestDelimited, responseDelimited) {
+                $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+            }
+
+            (Msg.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Msg;
+
+            /**
+             * Callback as used by {@link ununifi.pricefeed.Msg#postPrice}.
+             * @memberof ununifi.pricefeed.Msg
+             * @typedef PostPriceCallback
+             * @type {function}
+             * @param {Error|null} error Error, if any
+             * @param {ununifi.pricefeed.MsgPostPriceResponse} [response] MsgPostPriceResponse
+             */
+
+            /**
+             * Calls PostPrice.
+             * @function postPrice
+             * @memberof ununifi.pricefeed.Msg
+             * @instance
+             * @param {ununifi.pricefeed.IMsgPostPrice} request MsgPostPrice message or plain object
+             * @param {ununifi.pricefeed.Msg.PostPriceCallback} callback Node-style callback called with the error, if any, and MsgPostPriceResponse
+             * @returns {undefined}
+             * @variation 1
+             */
+            Object.defineProperty(Msg.prototype.postPrice = function postPrice(request, callback) {
+                return this.rpcCall(postPrice, $root.ununifi.pricefeed.MsgPostPrice, $root.ununifi.pricefeed.MsgPostPriceResponse, request, callback);
+            }, "name", { value: "PostPrice" });
+
+            /**
+             * Calls PostPrice.
+             * @function postPrice
+             * @memberof ununifi.pricefeed.Msg
+             * @instance
+             * @param {ununifi.pricefeed.IMsgPostPrice} request MsgPostPrice message or plain object
+             * @returns {Promise<ununifi.pricefeed.MsgPostPriceResponse>} Promise
+             * @variation 2
+             */
+
+            return Msg;
+        })();
+
+        pricefeed.MsgPostPrice = (function() {
+
+            /**
+             * Properties of a MsgPostPrice.
+             * @memberof ununifi.pricefeed
+             * @interface IMsgPostPrice
+             * @property {string|null} [from] MsgPostPrice from
+             * @property {string|null} [market_id] MsgPostPrice market_id
+             * @property {string|null} [price] MsgPostPrice price
+             * @property {google.protobuf.ITimestamp|null} [expiry] MsgPostPrice expiry
+             */
+
+            /**
+             * Constructs a new MsgPostPrice.
+             * @memberof ununifi.pricefeed
+             * @classdesc Represents a MsgPostPrice.
+             * @implements IMsgPostPrice
+             * @constructor
+             * @param {ununifi.pricefeed.IMsgPostPrice=} [properties] Properties to set
+             */
+            function MsgPostPrice(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * MsgPostPrice from.
+             * @member {string} from
+             * @memberof ununifi.pricefeed.MsgPostPrice
+             * @instance
+             */
+            MsgPostPrice.prototype.from = "";
+
+            /**
+             * MsgPostPrice market_id.
+             * @member {string} market_id
+             * @memberof ununifi.pricefeed.MsgPostPrice
+             * @instance
+             */
+            MsgPostPrice.prototype.market_id = "";
+
+            /**
+             * MsgPostPrice price.
+             * @member {string} price
+             * @memberof ununifi.pricefeed.MsgPostPrice
+             * @instance
+             */
+            MsgPostPrice.prototype.price = "";
+
+            /**
+             * MsgPostPrice expiry.
+             * @member {google.protobuf.ITimestamp|null|undefined} expiry
+             * @memberof ununifi.pricefeed.MsgPostPrice
+             * @instance
+             */
+            MsgPostPrice.prototype.expiry = null;
+
+            /**
+             * Encodes the specified MsgPostPrice message. Does not implicitly {@link ununifi.pricefeed.MsgPostPrice.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.pricefeed.MsgPostPrice
+             * @static
+             * @param {ununifi.pricefeed.IMsgPostPrice} message MsgPostPrice message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            MsgPostPrice.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.from != null && Object.hasOwnProperty.call(message, "from"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.from);
+                if (message.market_id != null && Object.hasOwnProperty.call(message, "market_id"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.market_id);
+                if (message.price != null && Object.hasOwnProperty.call(message, "price"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.price);
+                if (message.expiry != null && Object.hasOwnProperty.call(message, "expiry"))
+                    $root.google.protobuf.Timestamp.encode(message.expiry, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified MsgPostPrice message, length delimited. Does not implicitly {@link ununifi.pricefeed.MsgPostPrice.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.pricefeed.MsgPostPrice
+             * @static
+             * @param {ununifi.pricefeed.IMsgPostPrice} message MsgPostPrice message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            MsgPostPrice.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a MsgPostPrice message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.pricefeed.MsgPostPrice
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.pricefeed.MsgPostPrice} MsgPostPrice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            MsgPostPrice.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.pricefeed.MsgPostPrice();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.from = reader.string();
+                        break;
+                    case 2:
+                        message.market_id = reader.string();
+                        break;
+                    case 3:
+                        message.price = reader.string();
+                        break;
+                    case 4:
+                        message.expiry = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a MsgPostPrice message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.pricefeed.MsgPostPrice
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.pricefeed.MsgPostPrice} MsgPostPrice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            MsgPostPrice.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a MsgPostPrice message.
+             * @function verify
+             * @memberof ununifi.pricefeed.MsgPostPrice
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            MsgPostPrice.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.from != null && message.hasOwnProperty("from"))
+                    if (!$util.isString(message.from))
+                        return "from: string expected";
+                if (message.market_id != null && message.hasOwnProperty("market_id"))
+                    if (!$util.isString(message.market_id))
+                        return "market_id: string expected";
+                if (message.price != null && message.hasOwnProperty("price"))
+                    if (!$util.isString(message.price))
+                        return "price: string expected";
+                if (message.expiry != null && message.hasOwnProperty("expiry")) {
+                    let error = $root.google.protobuf.Timestamp.verify(message.expiry);
+                    if (error)
+                        return "expiry." + error;
+                }
+                return null;
+            };
+
+            /**
+             * Creates a MsgPostPrice message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.pricefeed.MsgPostPrice
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.pricefeed.MsgPostPrice} MsgPostPrice
+             */
+            MsgPostPrice.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.pricefeed.MsgPostPrice)
+                    return object;
+                let message = new $root.ununifi.pricefeed.MsgPostPrice();
+                if (object.from != null)
+                    message.from = String(object.from);
+                if (object.market_id != null)
+                    message.market_id = String(object.market_id);
+                if (object.price != null)
+                    message.price = String(object.price);
+                if (object.expiry != null) {
+                    if (typeof object.expiry !== "object")
+                        throw TypeError(".ununifi.pricefeed.MsgPostPrice.expiry: object expected");
+                    message.expiry = $root.google.protobuf.Timestamp.fromObject(object.expiry);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a MsgPostPrice message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.pricefeed.MsgPostPrice
+             * @static
+             * @param {ununifi.pricefeed.MsgPostPrice} message MsgPostPrice
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            MsgPostPrice.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.from = "";
+                    object.market_id = "";
+                    object.price = "";
+                    object.expiry = null;
+                }
+                if (message.from != null && message.hasOwnProperty("from"))
+                    object.from = message.from;
+                if (message.market_id != null && message.hasOwnProperty("market_id"))
+                    object.market_id = message.market_id;
+                if (message.price != null && message.hasOwnProperty("price"))
+                    object.price = message.price;
+                if (message.expiry != null && message.hasOwnProperty("expiry"))
+                    object.expiry = $root.google.protobuf.Timestamp.toObject(message.expiry, options);
+                return object;
+            };
+
+            /**
+             * Converts this MsgPostPrice to JSON.
+             * @function toJSON
+             * @memberof ununifi.pricefeed.MsgPostPrice
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            MsgPostPrice.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return MsgPostPrice;
+        })();
+
+        pricefeed.MsgPostPriceResponse = (function() {
+
+            /**
+             * Properties of a MsgPostPriceResponse.
+             * @memberof ununifi.pricefeed
+             * @interface IMsgPostPriceResponse
+             */
+
+            /**
+             * Constructs a new MsgPostPriceResponse.
+             * @memberof ununifi.pricefeed
+             * @classdesc Represents a MsgPostPriceResponse.
+             * @implements IMsgPostPriceResponse
+             * @constructor
+             * @param {ununifi.pricefeed.IMsgPostPriceResponse=} [properties] Properties to set
+             */
+            function MsgPostPriceResponse(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Encodes the specified MsgPostPriceResponse message. Does not implicitly {@link ununifi.pricefeed.MsgPostPriceResponse.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.pricefeed.MsgPostPriceResponse
+             * @static
+             * @param {ununifi.pricefeed.IMsgPostPriceResponse} message MsgPostPriceResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            MsgPostPriceResponse.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified MsgPostPriceResponse message, length delimited. Does not implicitly {@link ununifi.pricefeed.MsgPostPriceResponse.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.pricefeed.MsgPostPriceResponse
+             * @static
+             * @param {ununifi.pricefeed.IMsgPostPriceResponse} message MsgPostPriceResponse message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            MsgPostPriceResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a MsgPostPriceResponse message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.pricefeed.MsgPostPriceResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.pricefeed.MsgPostPriceResponse} MsgPostPriceResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            MsgPostPriceResponse.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.pricefeed.MsgPostPriceResponse();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a MsgPostPriceResponse message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.pricefeed.MsgPostPriceResponse
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.pricefeed.MsgPostPriceResponse} MsgPostPriceResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            MsgPostPriceResponse.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a MsgPostPriceResponse message.
+             * @function verify
+             * @memberof ununifi.pricefeed.MsgPostPriceResponse
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            MsgPostPriceResponse.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                return null;
+            };
+
+            /**
+             * Creates a MsgPostPriceResponse message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.pricefeed.MsgPostPriceResponse
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.pricefeed.MsgPostPriceResponse} MsgPostPriceResponse
+             */
+            MsgPostPriceResponse.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.pricefeed.MsgPostPriceResponse)
+                    return object;
+                return new $root.ununifi.pricefeed.MsgPostPriceResponse();
+            };
+
+            /**
+             * Creates a plain object from a MsgPostPriceResponse message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.pricefeed.MsgPostPriceResponse
+             * @static
+             * @param {ununifi.pricefeed.MsgPostPriceResponse} message MsgPostPriceResponse
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            MsgPostPriceResponse.toObject = function toObject() {
+                return {};
+            };
+
+            /**
+             * Converts this MsgPostPriceResponse to JSON.
+             * @function toJSON
+             * @memberof ununifi.pricefeed.MsgPostPriceResponse
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            MsgPostPriceResponse.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return MsgPostPriceResponse;
+        })();
+
+        pricefeed.Market = (function() {
+
+            /**
+             * Properties of a Market.
+             * @memberof ununifi.pricefeed
+             * @interface IMarket
+             * @property {string|null} [market_id] Market market_id
+             * @property {string|null} [base_asset] Market base_asset
+             * @property {string|null} [quote_asset] Market quote_asset
+             * @property {Array.<string>|null} [oracles] Market oracles
+             * @property {boolean|null} [active] Market active
+             */
+
+            /**
+             * Constructs a new Market.
+             * @memberof ununifi.pricefeed
+             * @classdesc Represents a Market.
+             * @implements IMarket
+             * @constructor
+             * @param {ununifi.pricefeed.IMarket=} [properties] Properties to set
+             */
+            function Market(properties) {
+                this.oracles = [];
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Market market_id.
+             * @member {string} market_id
+             * @memberof ununifi.pricefeed.Market
+             * @instance
+             */
+            Market.prototype.market_id = "";
+
+            /**
+             * Market base_asset.
+             * @member {string} base_asset
+             * @memberof ununifi.pricefeed.Market
+             * @instance
+             */
+            Market.prototype.base_asset = "";
+
+            /**
+             * Market quote_asset.
+             * @member {string} quote_asset
+             * @memberof ununifi.pricefeed.Market
+             * @instance
+             */
+            Market.prototype.quote_asset = "";
+
+            /**
+             * Market oracles.
+             * @member {Array.<string>} oracles
+             * @memberof ununifi.pricefeed.Market
+             * @instance
+             */
+            Market.prototype.oracles = $util.emptyArray;
+
+            /**
+             * Market active.
+             * @member {boolean} active
+             * @memberof ununifi.pricefeed.Market
+             * @instance
+             */
+            Market.prototype.active = false;
+
+            /**
+             * Encodes the specified Market message. Does not implicitly {@link ununifi.pricefeed.Market.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.pricefeed.Market
+             * @static
+             * @param {ununifi.pricefeed.IMarket} message Market message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Market.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.market_id != null && Object.hasOwnProperty.call(message, "market_id"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.market_id);
+                if (message.base_asset != null && Object.hasOwnProperty.call(message, "base_asset"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.base_asset);
+                if (message.quote_asset != null && Object.hasOwnProperty.call(message, "quote_asset"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.quote_asset);
+                if (message.oracles != null && message.oracles.length)
+                    for (let i = 0; i < message.oracles.length; ++i)
+                        writer.uint32(/* id 4, wireType 2 =*/34).string(message.oracles[i]);
+                if (message.active != null && Object.hasOwnProperty.call(message, "active"))
+                    writer.uint32(/* id 5, wireType 0 =*/40).bool(message.active);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified Market message, length delimited. Does not implicitly {@link ununifi.pricefeed.Market.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.pricefeed.Market
+             * @static
+             * @param {ununifi.pricefeed.IMarket} message Market message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Market.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a Market message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.pricefeed.Market
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.pricefeed.Market} Market
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Market.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.pricefeed.Market();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.market_id = reader.string();
+                        break;
+                    case 2:
+                        message.base_asset = reader.string();
+                        break;
+                    case 3:
+                        message.quote_asset = reader.string();
+                        break;
+                    case 4:
+                        if (!(message.oracles && message.oracles.length))
+                            message.oracles = [];
+                        message.oracles.push(reader.string());
+                        break;
+                    case 5:
+                        message.active = reader.bool();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a Market message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.pricefeed.Market
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.pricefeed.Market} Market
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Market.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a Market message.
+             * @function verify
+             * @memberof ununifi.pricefeed.Market
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            Market.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.market_id != null && message.hasOwnProperty("market_id"))
+                    if (!$util.isString(message.market_id))
+                        return "market_id: string expected";
+                if (message.base_asset != null && message.hasOwnProperty("base_asset"))
+                    if (!$util.isString(message.base_asset))
+                        return "base_asset: string expected";
+                if (message.quote_asset != null && message.hasOwnProperty("quote_asset"))
+                    if (!$util.isString(message.quote_asset))
+                        return "quote_asset: string expected";
+                if (message.oracles != null && message.hasOwnProperty("oracles")) {
+                    if (!Array.isArray(message.oracles))
+                        return "oracles: array expected";
+                    for (let i = 0; i < message.oracles.length; ++i)
+                        if (!$util.isString(message.oracles[i]))
+                            return "oracles: string[] expected";
+                }
+                if (message.active != null && message.hasOwnProperty("active"))
+                    if (typeof message.active !== "boolean")
+                        return "active: boolean expected";
+                return null;
+            };
+
+            /**
+             * Creates a Market message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.pricefeed.Market
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.pricefeed.Market} Market
+             */
+            Market.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.pricefeed.Market)
+                    return object;
+                let message = new $root.ununifi.pricefeed.Market();
+                if (object.market_id != null)
+                    message.market_id = String(object.market_id);
+                if (object.base_asset != null)
+                    message.base_asset = String(object.base_asset);
+                if (object.quote_asset != null)
+                    message.quote_asset = String(object.quote_asset);
+                if (object.oracles) {
+                    if (!Array.isArray(object.oracles))
+                        throw TypeError(".ununifi.pricefeed.Market.oracles: array expected");
+                    message.oracles = [];
+                    for (let i = 0; i < object.oracles.length; ++i)
+                        message.oracles[i] = String(object.oracles[i]);
+                }
+                if (object.active != null)
+                    message.active = Boolean(object.active);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a Market message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.pricefeed.Market
+             * @static
+             * @param {ununifi.pricefeed.Market} message Market
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            Market.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.arrays || options.defaults)
+                    object.oracles = [];
+                if (options.defaults) {
+                    object.market_id = "";
+                    object.base_asset = "";
+                    object.quote_asset = "";
+                    object.active = false;
+                }
+                if (message.market_id != null && message.hasOwnProperty("market_id"))
+                    object.market_id = message.market_id;
+                if (message.base_asset != null && message.hasOwnProperty("base_asset"))
+                    object.base_asset = message.base_asset;
+                if (message.quote_asset != null && message.hasOwnProperty("quote_asset"))
+                    object.quote_asset = message.quote_asset;
+                if (message.oracles && message.oracles.length) {
+                    object.oracles = [];
+                    for (let j = 0; j < message.oracles.length; ++j)
+                        object.oracles[j] = message.oracles[j];
+                }
+                if (message.active != null && message.hasOwnProperty("active"))
+                    object.active = message.active;
+                return object;
+            };
+
+            /**
+             * Converts this Market to JSON.
+             * @function toJSON
+             * @memberof ununifi.pricefeed.Market
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            Market.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return Market;
+        })();
+
+        pricefeed.CurrentPrice = (function() {
+
+            /**
+             * Properties of a CurrentPrice.
+             * @memberof ununifi.pricefeed
+             * @interface ICurrentPrice
+             * @property {string|null} [market_id] CurrentPrice market_id
+             * @property {string|null} [price] CurrentPrice price
+             */
+
+            /**
+             * Constructs a new CurrentPrice.
+             * @memberof ununifi.pricefeed
+             * @classdesc Represents a CurrentPrice.
+             * @implements ICurrentPrice
+             * @constructor
+             * @param {ununifi.pricefeed.ICurrentPrice=} [properties] Properties to set
+             */
+            function CurrentPrice(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * CurrentPrice market_id.
+             * @member {string} market_id
+             * @memberof ununifi.pricefeed.CurrentPrice
+             * @instance
+             */
+            CurrentPrice.prototype.market_id = "";
+
+            /**
+             * CurrentPrice price.
+             * @member {string} price
+             * @memberof ununifi.pricefeed.CurrentPrice
+             * @instance
+             */
+            CurrentPrice.prototype.price = "";
+
+            /**
+             * Encodes the specified CurrentPrice message. Does not implicitly {@link ununifi.pricefeed.CurrentPrice.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.pricefeed.CurrentPrice
+             * @static
+             * @param {ununifi.pricefeed.ICurrentPrice} message CurrentPrice message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            CurrentPrice.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.market_id != null && Object.hasOwnProperty.call(message, "market_id"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.market_id);
+                if (message.price != null && Object.hasOwnProperty.call(message, "price"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.price);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified CurrentPrice message, length delimited. Does not implicitly {@link ununifi.pricefeed.CurrentPrice.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.pricefeed.CurrentPrice
+             * @static
+             * @param {ununifi.pricefeed.ICurrentPrice} message CurrentPrice message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            CurrentPrice.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a CurrentPrice message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.pricefeed.CurrentPrice
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.pricefeed.CurrentPrice} CurrentPrice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            CurrentPrice.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.pricefeed.CurrentPrice();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.market_id = reader.string();
+                        break;
+                    case 2:
+                        message.price = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a CurrentPrice message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.pricefeed.CurrentPrice
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.pricefeed.CurrentPrice} CurrentPrice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            CurrentPrice.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a CurrentPrice message.
+             * @function verify
+             * @memberof ununifi.pricefeed.CurrentPrice
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            CurrentPrice.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.market_id != null && message.hasOwnProperty("market_id"))
+                    if (!$util.isString(message.market_id))
+                        return "market_id: string expected";
+                if (message.price != null && message.hasOwnProperty("price"))
+                    if (!$util.isString(message.price))
+                        return "price: string expected";
+                return null;
+            };
+
+            /**
+             * Creates a CurrentPrice message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.pricefeed.CurrentPrice
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.pricefeed.CurrentPrice} CurrentPrice
+             */
+            CurrentPrice.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.pricefeed.CurrentPrice)
+                    return object;
+                let message = new $root.ununifi.pricefeed.CurrentPrice();
+                if (object.market_id != null)
+                    message.market_id = String(object.market_id);
+                if (object.price != null)
+                    message.price = String(object.price);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a CurrentPrice message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.pricefeed.CurrentPrice
+             * @static
+             * @param {ununifi.pricefeed.CurrentPrice} message CurrentPrice
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            CurrentPrice.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.market_id = "";
+                    object.price = "";
+                }
+                if (message.market_id != null && message.hasOwnProperty("market_id"))
+                    object.market_id = message.market_id;
+                if (message.price != null && message.hasOwnProperty("price"))
+                    object.price = message.price;
+                return object;
+            };
+
+            /**
+             * Converts this CurrentPrice to JSON.
+             * @function toJSON
+             * @memberof ununifi.pricefeed.CurrentPrice
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            CurrentPrice.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return CurrentPrice;
+        })();
+
+        pricefeed.PostedPrice = (function() {
+
+            /**
+             * Properties of a PostedPrice.
+             * @memberof ununifi.pricefeed
+             * @interface IPostedPrice
+             * @property {string|null} [market_id] PostedPrice market_id
+             * @property {string|null} [oracle_address] PostedPrice oracle_address
+             * @property {string|null} [price] PostedPrice price
+             * @property {google.protobuf.ITimestamp|null} [expiry] PostedPrice expiry
+             */
+
+            /**
+             * Constructs a new PostedPrice.
+             * @memberof ununifi.pricefeed
+             * @classdesc Represents a PostedPrice.
+             * @implements IPostedPrice
+             * @constructor
+             * @param {ununifi.pricefeed.IPostedPrice=} [properties] Properties to set
+             */
+            function PostedPrice(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * PostedPrice market_id.
+             * @member {string} market_id
+             * @memberof ununifi.pricefeed.PostedPrice
+             * @instance
+             */
+            PostedPrice.prototype.market_id = "";
+
+            /**
+             * PostedPrice oracle_address.
+             * @member {string} oracle_address
+             * @memberof ununifi.pricefeed.PostedPrice
+             * @instance
+             */
+            PostedPrice.prototype.oracle_address = "";
+
+            /**
+             * PostedPrice price.
+             * @member {string} price
+             * @memberof ununifi.pricefeed.PostedPrice
+             * @instance
+             */
+            PostedPrice.prototype.price = "";
+
+            /**
+             * PostedPrice expiry.
+             * @member {google.protobuf.ITimestamp|null|undefined} expiry
+             * @memberof ununifi.pricefeed.PostedPrice
+             * @instance
+             */
+            PostedPrice.prototype.expiry = null;
+
+            /**
+             * Encodes the specified PostedPrice message. Does not implicitly {@link ununifi.pricefeed.PostedPrice.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.pricefeed.PostedPrice
+             * @static
+             * @param {ununifi.pricefeed.IPostedPrice} message PostedPrice message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            PostedPrice.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.market_id != null && Object.hasOwnProperty.call(message, "market_id"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.market_id);
+                if (message.oracle_address != null && Object.hasOwnProperty.call(message, "oracle_address"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.oracle_address);
+                if (message.price != null && Object.hasOwnProperty.call(message, "price"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.price);
+                if (message.expiry != null && Object.hasOwnProperty.call(message, "expiry"))
+                    $root.google.protobuf.Timestamp.encode(message.expiry, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified PostedPrice message, length delimited. Does not implicitly {@link ununifi.pricefeed.PostedPrice.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.pricefeed.PostedPrice
+             * @static
+             * @param {ununifi.pricefeed.IPostedPrice} message PostedPrice message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            PostedPrice.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a PostedPrice message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.pricefeed.PostedPrice
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.pricefeed.PostedPrice} PostedPrice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            PostedPrice.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.pricefeed.PostedPrice();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.market_id = reader.string();
+                        break;
+                    case 2:
+                        message.oracle_address = reader.string();
+                        break;
+                    case 3:
+                        message.price = reader.string();
+                        break;
+                    case 4:
+                        message.expiry = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a PostedPrice message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.pricefeed.PostedPrice
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.pricefeed.PostedPrice} PostedPrice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            PostedPrice.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a PostedPrice message.
+             * @function verify
+             * @memberof ununifi.pricefeed.PostedPrice
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            PostedPrice.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.market_id != null && message.hasOwnProperty("market_id"))
+                    if (!$util.isString(message.market_id))
+                        return "market_id: string expected";
+                if (message.oracle_address != null && message.hasOwnProperty("oracle_address"))
+                    if (!$util.isString(message.oracle_address))
+                        return "oracle_address: string expected";
+                if (message.price != null && message.hasOwnProperty("price"))
+                    if (!$util.isString(message.price))
+                        return "price: string expected";
+                if (message.expiry != null && message.hasOwnProperty("expiry")) {
+                    let error = $root.google.protobuf.Timestamp.verify(message.expiry);
+                    if (error)
+                        return "expiry." + error;
+                }
+                return null;
+            };
+
+            /**
+             * Creates a PostedPrice message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.pricefeed.PostedPrice
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.pricefeed.PostedPrice} PostedPrice
+             */
+            PostedPrice.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.pricefeed.PostedPrice)
+                    return object;
+                let message = new $root.ununifi.pricefeed.PostedPrice();
+                if (object.market_id != null)
+                    message.market_id = String(object.market_id);
+                if (object.oracle_address != null)
+                    message.oracle_address = String(object.oracle_address);
+                if (object.price != null)
+                    message.price = String(object.price);
+                if (object.expiry != null) {
+                    if (typeof object.expiry !== "object")
+                        throw TypeError(".ununifi.pricefeed.PostedPrice.expiry: object expected");
+                    message.expiry = $root.google.protobuf.Timestamp.fromObject(object.expiry);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a PostedPrice message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.pricefeed.PostedPrice
+             * @static
+             * @param {ununifi.pricefeed.PostedPrice} message PostedPrice
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            PostedPrice.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.market_id = "";
+                    object.oracle_address = "";
+                    object.price = "";
+                    object.expiry = null;
+                }
+                if (message.market_id != null && message.hasOwnProperty("market_id"))
+                    object.market_id = message.market_id;
+                if (message.oracle_address != null && message.hasOwnProperty("oracle_address"))
+                    object.oracle_address = message.oracle_address;
+                if (message.price != null && message.hasOwnProperty("price"))
+                    object.price = message.price;
+                if (message.expiry != null && message.hasOwnProperty("expiry"))
+                    object.expiry = $root.google.protobuf.Timestamp.toObject(message.expiry, options);
+                return object;
+            };
+
+            /**
+             * Converts this PostedPrice to JSON.
+             * @function toJSON
+             * @memberof ununifi.pricefeed.PostedPrice
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            PostedPrice.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return PostedPrice;
+        })();
+
+        pricefeed.Params = (function() {
+
+            /**
+             * Properties of a Params.
+             * @memberof ununifi.pricefeed
+             * @interface IParams
+             * @property {Array.<ununifi.pricefeed.IMarket>|null} [markets] Params markets
+             */
+
+            /**
+             * Constructs a new Params.
+             * @memberof ununifi.pricefeed
+             * @classdesc Represents a Params.
+             * @implements IParams
+             * @constructor
+             * @param {ununifi.pricefeed.IParams=} [properties] Properties to set
+             */
+            function Params(properties) {
+                this.markets = [];
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Params markets.
+             * @member {Array.<ununifi.pricefeed.IMarket>} markets
+             * @memberof ununifi.pricefeed.Params
+             * @instance
+             */
+            Params.prototype.markets = $util.emptyArray;
+
+            /**
+             * Encodes the specified Params message. Does not implicitly {@link ununifi.pricefeed.Params.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.pricefeed.Params
+             * @static
+             * @param {ununifi.pricefeed.IParams} message Params message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Params.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.markets != null && message.markets.length)
+                    for (let i = 0; i < message.markets.length; ++i)
+                        $root.ununifi.pricefeed.Market.encode(message.markets[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.pricefeed.Params.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.pricefeed.Params
+             * @static
+             * @param {ununifi.pricefeed.IParams} message Params message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Params.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a Params message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.pricefeed.Params
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.pricefeed.Params} Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Params.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.pricefeed.Params();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        if (!(message.markets && message.markets.length))
+                            message.markets = [];
+                        message.markets.push($root.ununifi.pricefeed.Market.decode(reader, reader.uint32()));
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a Params message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.pricefeed.Params
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.pricefeed.Params} Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Params.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a Params message.
+             * @function verify
+             * @memberof ununifi.pricefeed.Params
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            Params.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.markets != null && message.hasOwnProperty("markets")) {
+                    if (!Array.isArray(message.markets))
+                        return "markets: array expected";
+                    for (let i = 0; i < message.markets.length; ++i) {
+                        let error = $root.ununifi.pricefeed.Market.verify(message.markets[i]);
+                        if (error)
+                            return "markets." + error;
+                    }
+                }
+                return null;
+            };
+
+            /**
+             * Creates a Params message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.pricefeed.Params
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.pricefeed.Params} Params
+             */
+            Params.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.pricefeed.Params)
+                    return object;
+                let message = new $root.ununifi.pricefeed.Params();
+                if (object.markets) {
+                    if (!Array.isArray(object.markets))
+                        throw TypeError(".ununifi.pricefeed.Params.markets: array expected");
+                    message.markets = [];
+                    for (let i = 0; i < object.markets.length; ++i) {
+                        if (typeof object.markets[i] !== "object")
+                            throw TypeError(".ununifi.pricefeed.Params.markets: object expected");
+                        message.markets[i] = $root.ununifi.pricefeed.Market.fromObject(object.markets[i]);
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a Params message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.pricefeed.Params
+             * @static
+             * @param {ununifi.pricefeed.Params} message Params
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            Params.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.arrays || options.defaults)
+                    object.markets = [];
+                if (message.markets && message.markets.length) {
+                    object.markets = [];
+                    for (let j = 0; j < message.markets.length; ++j)
+                        object.markets[j] = $root.ununifi.pricefeed.Market.toObject(message.markets[j], options);
+                }
+                return object;
+            };
+
+            /**
+             * Converts this Params to JSON.
+             * @function toJSON
+             * @memberof ununifi.pricefeed.Params
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            Params.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return Params;
+        })();
 
         pricefeed.Query = (function() {
 
@@ -16447,1377 +17833,6 @@ export const ununifi = $root.ununifi = (() => {
             return QueryAllRawPriceResponse;
         })();
 
-        pricefeed.Market = (function() {
-
-            /**
-             * Properties of a Market.
-             * @memberof ununifi.pricefeed
-             * @interface IMarket
-             * @property {string|null} [market_id] Market market_id
-             * @property {string|null} [base_asset] Market base_asset
-             * @property {string|null} [quote_asset] Market quote_asset
-             * @property {Array.<string>|null} [oracles] Market oracles
-             * @property {boolean|null} [active] Market active
-             */
-
-            /**
-             * Constructs a new Market.
-             * @memberof ununifi.pricefeed
-             * @classdesc Represents a Market.
-             * @implements IMarket
-             * @constructor
-             * @param {ununifi.pricefeed.IMarket=} [properties] Properties to set
-             */
-            function Market(properties) {
-                this.oracles = [];
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * Market market_id.
-             * @member {string} market_id
-             * @memberof ununifi.pricefeed.Market
-             * @instance
-             */
-            Market.prototype.market_id = "";
-
-            /**
-             * Market base_asset.
-             * @member {string} base_asset
-             * @memberof ununifi.pricefeed.Market
-             * @instance
-             */
-            Market.prototype.base_asset = "";
-
-            /**
-             * Market quote_asset.
-             * @member {string} quote_asset
-             * @memberof ununifi.pricefeed.Market
-             * @instance
-             */
-            Market.prototype.quote_asset = "";
-
-            /**
-             * Market oracles.
-             * @member {Array.<string>} oracles
-             * @memberof ununifi.pricefeed.Market
-             * @instance
-             */
-            Market.prototype.oracles = $util.emptyArray;
-
-            /**
-             * Market active.
-             * @member {boolean} active
-             * @memberof ununifi.pricefeed.Market
-             * @instance
-             */
-            Market.prototype.active = false;
-
-            /**
-             * Encodes the specified Market message. Does not implicitly {@link ununifi.pricefeed.Market.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.pricefeed.Market
-             * @static
-             * @param {ununifi.pricefeed.IMarket} message Market message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Market.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.market_id != null && Object.hasOwnProperty.call(message, "market_id"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.market_id);
-                if (message.base_asset != null && Object.hasOwnProperty.call(message, "base_asset"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.base_asset);
-                if (message.quote_asset != null && Object.hasOwnProperty.call(message, "quote_asset"))
-                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.quote_asset);
-                if (message.oracles != null && message.oracles.length)
-                    for (let i = 0; i < message.oracles.length; ++i)
-                        writer.uint32(/* id 4, wireType 2 =*/34).string(message.oracles[i]);
-                if (message.active != null && Object.hasOwnProperty.call(message, "active"))
-                    writer.uint32(/* id 5, wireType 0 =*/40).bool(message.active);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified Market message, length delimited. Does not implicitly {@link ununifi.pricefeed.Market.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.pricefeed.Market
-             * @static
-             * @param {ununifi.pricefeed.IMarket} message Market message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Market.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a Market message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.pricefeed.Market
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.pricefeed.Market} Market
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Market.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.pricefeed.Market();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.market_id = reader.string();
-                        break;
-                    case 2:
-                        message.base_asset = reader.string();
-                        break;
-                    case 3:
-                        message.quote_asset = reader.string();
-                        break;
-                    case 4:
-                        if (!(message.oracles && message.oracles.length))
-                            message.oracles = [];
-                        message.oracles.push(reader.string());
-                        break;
-                    case 5:
-                        message.active = reader.bool();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a Market message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.pricefeed.Market
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.pricefeed.Market} Market
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Market.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a Market message.
-             * @function verify
-             * @memberof ununifi.pricefeed.Market
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            Market.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.market_id != null && message.hasOwnProperty("market_id"))
-                    if (!$util.isString(message.market_id))
-                        return "market_id: string expected";
-                if (message.base_asset != null && message.hasOwnProperty("base_asset"))
-                    if (!$util.isString(message.base_asset))
-                        return "base_asset: string expected";
-                if (message.quote_asset != null && message.hasOwnProperty("quote_asset"))
-                    if (!$util.isString(message.quote_asset))
-                        return "quote_asset: string expected";
-                if (message.oracles != null && message.hasOwnProperty("oracles")) {
-                    if (!Array.isArray(message.oracles))
-                        return "oracles: array expected";
-                    for (let i = 0; i < message.oracles.length; ++i)
-                        if (!$util.isString(message.oracles[i]))
-                            return "oracles: string[] expected";
-                }
-                if (message.active != null && message.hasOwnProperty("active"))
-                    if (typeof message.active !== "boolean")
-                        return "active: boolean expected";
-                return null;
-            };
-
-            /**
-             * Creates a Market message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.pricefeed.Market
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.pricefeed.Market} Market
-             */
-            Market.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.pricefeed.Market)
-                    return object;
-                let message = new $root.ununifi.pricefeed.Market();
-                if (object.market_id != null)
-                    message.market_id = String(object.market_id);
-                if (object.base_asset != null)
-                    message.base_asset = String(object.base_asset);
-                if (object.quote_asset != null)
-                    message.quote_asset = String(object.quote_asset);
-                if (object.oracles) {
-                    if (!Array.isArray(object.oracles))
-                        throw TypeError(".ununifi.pricefeed.Market.oracles: array expected");
-                    message.oracles = [];
-                    for (let i = 0; i < object.oracles.length; ++i)
-                        message.oracles[i] = String(object.oracles[i]);
-                }
-                if (object.active != null)
-                    message.active = Boolean(object.active);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a Market message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.pricefeed.Market
-             * @static
-             * @param {ununifi.pricefeed.Market} message Market
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            Market.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.arrays || options.defaults)
-                    object.oracles = [];
-                if (options.defaults) {
-                    object.market_id = "";
-                    object.base_asset = "";
-                    object.quote_asset = "";
-                    object.active = false;
-                }
-                if (message.market_id != null && message.hasOwnProperty("market_id"))
-                    object.market_id = message.market_id;
-                if (message.base_asset != null && message.hasOwnProperty("base_asset"))
-                    object.base_asset = message.base_asset;
-                if (message.quote_asset != null && message.hasOwnProperty("quote_asset"))
-                    object.quote_asset = message.quote_asset;
-                if (message.oracles && message.oracles.length) {
-                    object.oracles = [];
-                    for (let j = 0; j < message.oracles.length; ++j)
-                        object.oracles[j] = message.oracles[j];
-                }
-                if (message.active != null && message.hasOwnProperty("active"))
-                    object.active = message.active;
-                return object;
-            };
-
-            /**
-             * Converts this Market to JSON.
-             * @function toJSON
-             * @memberof ununifi.pricefeed.Market
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            Market.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return Market;
-        })();
-
-        pricefeed.CurrentPrice = (function() {
-
-            /**
-             * Properties of a CurrentPrice.
-             * @memberof ununifi.pricefeed
-             * @interface ICurrentPrice
-             * @property {string|null} [market_id] CurrentPrice market_id
-             * @property {string|null} [price] CurrentPrice price
-             */
-
-            /**
-             * Constructs a new CurrentPrice.
-             * @memberof ununifi.pricefeed
-             * @classdesc Represents a CurrentPrice.
-             * @implements ICurrentPrice
-             * @constructor
-             * @param {ununifi.pricefeed.ICurrentPrice=} [properties] Properties to set
-             */
-            function CurrentPrice(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * CurrentPrice market_id.
-             * @member {string} market_id
-             * @memberof ununifi.pricefeed.CurrentPrice
-             * @instance
-             */
-            CurrentPrice.prototype.market_id = "";
-
-            /**
-             * CurrentPrice price.
-             * @member {string} price
-             * @memberof ununifi.pricefeed.CurrentPrice
-             * @instance
-             */
-            CurrentPrice.prototype.price = "";
-
-            /**
-             * Encodes the specified CurrentPrice message. Does not implicitly {@link ununifi.pricefeed.CurrentPrice.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.pricefeed.CurrentPrice
-             * @static
-             * @param {ununifi.pricefeed.ICurrentPrice} message CurrentPrice message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            CurrentPrice.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.market_id != null && Object.hasOwnProperty.call(message, "market_id"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.market_id);
-                if (message.price != null && Object.hasOwnProperty.call(message, "price"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.price);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified CurrentPrice message, length delimited. Does not implicitly {@link ununifi.pricefeed.CurrentPrice.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.pricefeed.CurrentPrice
-             * @static
-             * @param {ununifi.pricefeed.ICurrentPrice} message CurrentPrice message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            CurrentPrice.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a CurrentPrice message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.pricefeed.CurrentPrice
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.pricefeed.CurrentPrice} CurrentPrice
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            CurrentPrice.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.pricefeed.CurrentPrice();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.market_id = reader.string();
-                        break;
-                    case 2:
-                        message.price = reader.string();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a CurrentPrice message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.pricefeed.CurrentPrice
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.pricefeed.CurrentPrice} CurrentPrice
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            CurrentPrice.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a CurrentPrice message.
-             * @function verify
-             * @memberof ununifi.pricefeed.CurrentPrice
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            CurrentPrice.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.market_id != null && message.hasOwnProperty("market_id"))
-                    if (!$util.isString(message.market_id))
-                        return "market_id: string expected";
-                if (message.price != null && message.hasOwnProperty("price"))
-                    if (!$util.isString(message.price))
-                        return "price: string expected";
-                return null;
-            };
-
-            /**
-             * Creates a CurrentPrice message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.pricefeed.CurrentPrice
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.pricefeed.CurrentPrice} CurrentPrice
-             */
-            CurrentPrice.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.pricefeed.CurrentPrice)
-                    return object;
-                let message = new $root.ununifi.pricefeed.CurrentPrice();
-                if (object.market_id != null)
-                    message.market_id = String(object.market_id);
-                if (object.price != null)
-                    message.price = String(object.price);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a CurrentPrice message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.pricefeed.CurrentPrice
-             * @static
-             * @param {ununifi.pricefeed.CurrentPrice} message CurrentPrice
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            CurrentPrice.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.market_id = "";
-                    object.price = "";
-                }
-                if (message.market_id != null && message.hasOwnProperty("market_id"))
-                    object.market_id = message.market_id;
-                if (message.price != null && message.hasOwnProperty("price"))
-                    object.price = message.price;
-                return object;
-            };
-
-            /**
-             * Converts this CurrentPrice to JSON.
-             * @function toJSON
-             * @memberof ununifi.pricefeed.CurrentPrice
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            CurrentPrice.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return CurrentPrice;
-        })();
-
-        pricefeed.PostedPrice = (function() {
-
-            /**
-             * Properties of a PostedPrice.
-             * @memberof ununifi.pricefeed
-             * @interface IPostedPrice
-             * @property {string|null} [market_id] PostedPrice market_id
-             * @property {string|null} [oracle_address] PostedPrice oracle_address
-             * @property {string|null} [price] PostedPrice price
-             * @property {google.protobuf.ITimestamp|null} [expiry] PostedPrice expiry
-             */
-
-            /**
-             * Constructs a new PostedPrice.
-             * @memberof ununifi.pricefeed
-             * @classdesc Represents a PostedPrice.
-             * @implements IPostedPrice
-             * @constructor
-             * @param {ununifi.pricefeed.IPostedPrice=} [properties] Properties to set
-             */
-            function PostedPrice(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * PostedPrice market_id.
-             * @member {string} market_id
-             * @memberof ununifi.pricefeed.PostedPrice
-             * @instance
-             */
-            PostedPrice.prototype.market_id = "";
-
-            /**
-             * PostedPrice oracle_address.
-             * @member {string} oracle_address
-             * @memberof ununifi.pricefeed.PostedPrice
-             * @instance
-             */
-            PostedPrice.prototype.oracle_address = "";
-
-            /**
-             * PostedPrice price.
-             * @member {string} price
-             * @memberof ununifi.pricefeed.PostedPrice
-             * @instance
-             */
-            PostedPrice.prototype.price = "";
-
-            /**
-             * PostedPrice expiry.
-             * @member {google.protobuf.ITimestamp|null|undefined} expiry
-             * @memberof ununifi.pricefeed.PostedPrice
-             * @instance
-             */
-            PostedPrice.prototype.expiry = null;
-
-            /**
-             * Encodes the specified PostedPrice message. Does not implicitly {@link ununifi.pricefeed.PostedPrice.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.pricefeed.PostedPrice
-             * @static
-             * @param {ununifi.pricefeed.IPostedPrice} message PostedPrice message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            PostedPrice.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.market_id != null && Object.hasOwnProperty.call(message, "market_id"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.market_id);
-                if (message.oracle_address != null && Object.hasOwnProperty.call(message, "oracle_address"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.oracle_address);
-                if (message.price != null && Object.hasOwnProperty.call(message, "price"))
-                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.price);
-                if (message.expiry != null && Object.hasOwnProperty.call(message, "expiry"))
-                    $root.google.protobuf.Timestamp.encode(message.expiry, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified PostedPrice message, length delimited. Does not implicitly {@link ununifi.pricefeed.PostedPrice.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.pricefeed.PostedPrice
-             * @static
-             * @param {ununifi.pricefeed.IPostedPrice} message PostedPrice message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            PostedPrice.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a PostedPrice message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.pricefeed.PostedPrice
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.pricefeed.PostedPrice} PostedPrice
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            PostedPrice.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.pricefeed.PostedPrice();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.market_id = reader.string();
-                        break;
-                    case 2:
-                        message.oracle_address = reader.string();
-                        break;
-                    case 3:
-                        message.price = reader.string();
-                        break;
-                    case 4:
-                        message.expiry = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a PostedPrice message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.pricefeed.PostedPrice
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.pricefeed.PostedPrice} PostedPrice
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            PostedPrice.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a PostedPrice message.
-             * @function verify
-             * @memberof ununifi.pricefeed.PostedPrice
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            PostedPrice.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.market_id != null && message.hasOwnProperty("market_id"))
-                    if (!$util.isString(message.market_id))
-                        return "market_id: string expected";
-                if (message.oracle_address != null && message.hasOwnProperty("oracle_address"))
-                    if (!$util.isString(message.oracle_address))
-                        return "oracle_address: string expected";
-                if (message.price != null && message.hasOwnProperty("price"))
-                    if (!$util.isString(message.price))
-                        return "price: string expected";
-                if (message.expiry != null && message.hasOwnProperty("expiry")) {
-                    let error = $root.google.protobuf.Timestamp.verify(message.expiry);
-                    if (error)
-                        return "expiry." + error;
-                }
-                return null;
-            };
-
-            /**
-             * Creates a PostedPrice message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.pricefeed.PostedPrice
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.pricefeed.PostedPrice} PostedPrice
-             */
-            PostedPrice.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.pricefeed.PostedPrice)
-                    return object;
-                let message = new $root.ununifi.pricefeed.PostedPrice();
-                if (object.market_id != null)
-                    message.market_id = String(object.market_id);
-                if (object.oracle_address != null)
-                    message.oracle_address = String(object.oracle_address);
-                if (object.price != null)
-                    message.price = String(object.price);
-                if (object.expiry != null) {
-                    if (typeof object.expiry !== "object")
-                        throw TypeError(".ununifi.pricefeed.PostedPrice.expiry: object expected");
-                    message.expiry = $root.google.protobuf.Timestamp.fromObject(object.expiry);
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a PostedPrice message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.pricefeed.PostedPrice
-             * @static
-             * @param {ununifi.pricefeed.PostedPrice} message PostedPrice
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            PostedPrice.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.market_id = "";
-                    object.oracle_address = "";
-                    object.price = "";
-                    object.expiry = null;
-                }
-                if (message.market_id != null && message.hasOwnProperty("market_id"))
-                    object.market_id = message.market_id;
-                if (message.oracle_address != null && message.hasOwnProperty("oracle_address"))
-                    object.oracle_address = message.oracle_address;
-                if (message.price != null && message.hasOwnProperty("price"))
-                    object.price = message.price;
-                if (message.expiry != null && message.hasOwnProperty("expiry"))
-                    object.expiry = $root.google.protobuf.Timestamp.toObject(message.expiry, options);
-                return object;
-            };
-
-            /**
-             * Converts this PostedPrice to JSON.
-             * @function toJSON
-             * @memberof ununifi.pricefeed.PostedPrice
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            PostedPrice.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return PostedPrice;
-        })();
-
-        pricefeed.Params = (function() {
-
-            /**
-             * Properties of a Params.
-             * @memberof ununifi.pricefeed
-             * @interface IParams
-             * @property {Array.<ununifi.pricefeed.IMarket>|null} [markets] Params markets
-             */
-
-            /**
-             * Constructs a new Params.
-             * @memberof ununifi.pricefeed
-             * @classdesc Represents a Params.
-             * @implements IParams
-             * @constructor
-             * @param {ununifi.pricefeed.IParams=} [properties] Properties to set
-             */
-            function Params(properties) {
-                this.markets = [];
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * Params markets.
-             * @member {Array.<ununifi.pricefeed.IMarket>} markets
-             * @memberof ununifi.pricefeed.Params
-             * @instance
-             */
-            Params.prototype.markets = $util.emptyArray;
-
-            /**
-             * Encodes the specified Params message. Does not implicitly {@link ununifi.pricefeed.Params.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.pricefeed.Params
-             * @static
-             * @param {ununifi.pricefeed.IParams} message Params message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Params.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.markets != null && message.markets.length)
-                    for (let i = 0; i < message.markets.length; ++i)
-                        $root.ununifi.pricefeed.Market.encode(message.markets[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.pricefeed.Params.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.pricefeed.Params
-             * @static
-             * @param {ununifi.pricefeed.IParams} message Params message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Params.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a Params message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.pricefeed.Params
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.pricefeed.Params} Params
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Params.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.pricefeed.Params();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        if (!(message.markets && message.markets.length))
-                            message.markets = [];
-                        message.markets.push($root.ununifi.pricefeed.Market.decode(reader, reader.uint32()));
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a Params message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.pricefeed.Params
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.pricefeed.Params} Params
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Params.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a Params message.
-             * @function verify
-             * @memberof ununifi.pricefeed.Params
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            Params.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.markets != null && message.hasOwnProperty("markets")) {
-                    if (!Array.isArray(message.markets))
-                        return "markets: array expected";
-                    for (let i = 0; i < message.markets.length; ++i) {
-                        let error = $root.ununifi.pricefeed.Market.verify(message.markets[i]);
-                        if (error)
-                            return "markets." + error;
-                    }
-                }
-                return null;
-            };
-
-            /**
-             * Creates a Params message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.pricefeed.Params
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.pricefeed.Params} Params
-             */
-            Params.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.pricefeed.Params)
-                    return object;
-                let message = new $root.ununifi.pricefeed.Params();
-                if (object.markets) {
-                    if (!Array.isArray(object.markets))
-                        throw TypeError(".ununifi.pricefeed.Params.markets: array expected");
-                    message.markets = [];
-                    for (let i = 0; i < object.markets.length; ++i) {
-                        if (typeof object.markets[i] !== "object")
-                            throw TypeError(".ununifi.pricefeed.Params.markets: object expected");
-                        message.markets[i] = $root.ununifi.pricefeed.Market.fromObject(object.markets[i]);
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a Params message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.pricefeed.Params
-             * @static
-             * @param {ununifi.pricefeed.Params} message Params
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            Params.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.arrays || options.defaults)
-                    object.markets = [];
-                if (message.markets && message.markets.length) {
-                    object.markets = [];
-                    for (let j = 0; j < message.markets.length; ++j)
-                        object.markets[j] = $root.ununifi.pricefeed.Market.toObject(message.markets[j], options);
-                }
-                return object;
-            };
-
-            /**
-             * Converts this Params to JSON.
-             * @function toJSON
-             * @memberof ununifi.pricefeed.Params
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            Params.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return Params;
-        })();
-
-        pricefeed.Msg = (function() {
-
-            /**
-             * Constructs a new Msg service.
-             * @memberof ununifi.pricefeed
-             * @classdesc Represents a Msg
-             * @extends $protobuf.rpc.Service
-             * @constructor
-             * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
-             * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
-             * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
-             */
-            function Msg(rpcImpl, requestDelimited, responseDelimited) {
-                $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
-            }
-
-            (Msg.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Msg;
-
-            /**
-             * Callback as used by {@link ununifi.pricefeed.Msg#postPrice}.
-             * @memberof ununifi.pricefeed.Msg
-             * @typedef PostPriceCallback
-             * @type {function}
-             * @param {Error|null} error Error, if any
-             * @param {ununifi.pricefeed.MsgPostPriceResponse} [response] MsgPostPriceResponse
-             */
-
-            /**
-             * Calls PostPrice.
-             * @function postPrice
-             * @memberof ununifi.pricefeed.Msg
-             * @instance
-             * @param {ununifi.pricefeed.IMsgPostPrice} request MsgPostPrice message or plain object
-             * @param {ununifi.pricefeed.Msg.PostPriceCallback} callback Node-style callback called with the error, if any, and MsgPostPriceResponse
-             * @returns {undefined}
-             * @variation 1
-             */
-            Object.defineProperty(Msg.prototype.postPrice = function postPrice(request, callback) {
-                return this.rpcCall(postPrice, $root.ununifi.pricefeed.MsgPostPrice, $root.ununifi.pricefeed.MsgPostPriceResponse, request, callback);
-            }, "name", { value: "PostPrice" });
-
-            /**
-             * Calls PostPrice.
-             * @function postPrice
-             * @memberof ununifi.pricefeed.Msg
-             * @instance
-             * @param {ununifi.pricefeed.IMsgPostPrice} request MsgPostPrice message or plain object
-             * @returns {Promise<ununifi.pricefeed.MsgPostPriceResponse>} Promise
-             * @variation 2
-             */
-
-            return Msg;
-        })();
-
-        pricefeed.MsgPostPrice = (function() {
-
-            /**
-             * Properties of a MsgPostPrice.
-             * @memberof ununifi.pricefeed
-             * @interface IMsgPostPrice
-             * @property {string|null} [from] MsgPostPrice from
-             * @property {string|null} [market_id] MsgPostPrice market_id
-             * @property {string|null} [price] MsgPostPrice price
-             * @property {google.protobuf.ITimestamp|null} [expiry] MsgPostPrice expiry
-             */
-
-            /**
-             * Constructs a new MsgPostPrice.
-             * @memberof ununifi.pricefeed
-             * @classdesc Represents a MsgPostPrice.
-             * @implements IMsgPostPrice
-             * @constructor
-             * @param {ununifi.pricefeed.IMsgPostPrice=} [properties] Properties to set
-             */
-            function MsgPostPrice(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * MsgPostPrice from.
-             * @member {string} from
-             * @memberof ununifi.pricefeed.MsgPostPrice
-             * @instance
-             */
-            MsgPostPrice.prototype.from = "";
-
-            /**
-             * MsgPostPrice market_id.
-             * @member {string} market_id
-             * @memberof ununifi.pricefeed.MsgPostPrice
-             * @instance
-             */
-            MsgPostPrice.prototype.market_id = "";
-
-            /**
-             * MsgPostPrice price.
-             * @member {string} price
-             * @memberof ununifi.pricefeed.MsgPostPrice
-             * @instance
-             */
-            MsgPostPrice.prototype.price = "";
-
-            /**
-             * MsgPostPrice expiry.
-             * @member {google.protobuf.ITimestamp|null|undefined} expiry
-             * @memberof ununifi.pricefeed.MsgPostPrice
-             * @instance
-             */
-            MsgPostPrice.prototype.expiry = null;
-
-            /**
-             * Encodes the specified MsgPostPrice message. Does not implicitly {@link ununifi.pricefeed.MsgPostPrice.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.pricefeed.MsgPostPrice
-             * @static
-             * @param {ununifi.pricefeed.IMsgPostPrice} message MsgPostPrice message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            MsgPostPrice.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.from != null && Object.hasOwnProperty.call(message, "from"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.from);
-                if (message.market_id != null && Object.hasOwnProperty.call(message, "market_id"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.market_id);
-                if (message.price != null && Object.hasOwnProperty.call(message, "price"))
-                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.price);
-                if (message.expiry != null && Object.hasOwnProperty.call(message, "expiry"))
-                    $root.google.protobuf.Timestamp.encode(message.expiry, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified MsgPostPrice message, length delimited. Does not implicitly {@link ununifi.pricefeed.MsgPostPrice.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.pricefeed.MsgPostPrice
-             * @static
-             * @param {ununifi.pricefeed.IMsgPostPrice} message MsgPostPrice message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            MsgPostPrice.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a MsgPostPrice message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.pricefeed.MsgPostPrice
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.pricefeed.MsgPostPrice} MsgPostPrice
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            MsgPostPrice.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.pricefeed.MsgPostPrice();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.from = reader.string();
-                        break;
-                    case 2:
-                        message.market_id = reader.string();
-                        break;
-                    case 3:
-                        message.price = reader.string();
-                        break;
-                    case 4:
-                        message.expiry = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a MsgPostPrice message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.pricefeed.MsgPostPrice
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.pricefeed.MsgPostPrice} MsgPostPrice
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            MsgPostPrice.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a MsgPostPrice message.
-             * @function verify
-             * @memberof ununifi.pricefeed.MsgPostPrice
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            MsgPostPrice.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.from != null && message.hasOwnProperty("from"))
-                    if (!$util.isString(message.from))
-                        return "from: string expected";
-                if (message.market_id != null && message.hasOwnProperty("market_id"))
-                    if (!$util.isString(message.market_id))
-                        return "market_id: string expected";
-                if (message.price != null && message.hasOwnProperty("price"))
-                    if (!$util.isString(message.price))
-                        return "price: string expected";
-                if (message.expiry != null && message.hasOwnProperty("expiry")) {
-                    let error = $root.google.protobuf.Timestamp.verify(message.expiry);
-                    if (error)
-                        return "expiry." + error;
-                }
-                return null;
-            };
-
-            /**
-             * Creates a MsgPostPrice message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.pricefeed.MsgPostPrice
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.pricefeed.MsgPostPrice} MsgPostPrice
-             */
-            MsgPostPrice.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.pricefeed.MsgPostPrice)
-                    return object;
-                let message = new $root.ununifi.pricefeed.MsgPostPrice();
-                if (object.from != null)
-                    message.from = String(object.from);
-                if (object.market_id != null)
-                    message.market_id = String(object.market_id);
-                if (object.price != null)
-                    message.price = String(object.price);
-                if (object.expiry != null) {
-                    if (typeof object.expiry !== "object")
-                        throw TypeError(".ununifi.pricefeed.MsgPostPrice.expiry: object expected");
-                    message.expiry = $root.google.protobuf.Timestamp.fromObject(object.expiry);
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a MsgPostPrice message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.pricefeed.MsgPostPrice
-             * @static
-             * @param {ununifi.pricefeed.MsgPostPrice} message MsgPostPrice
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            MsgPostPrice.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.from = "";
-                    object.market_id = "";
-                    object.price = "";
-                    object.expiry = null;
-                }
-                if (message.from != null && message.hasOwnProperty("from"))
-                    object.from = message.from;
-                if (message.market_id != null && message.hasOwnProperty("market_id"))
-                    object.market_id = message.market_id;
-                if (message.price != null && message.hasOwnProperty("price"))
-                    object.price = message.price;
-                if (message.expiry != null && message.hasOwnProperty("expiry"))
-                    object.expiry = $root.google.protobuf.Timestamp.toObject(message.expiry, options);
-                return object;
-            };
-
-            /**
-             * Converts this MsgPostPrice to JSON.
-             * @function toJSON
-             * @memberof ununifi.pricefeed.MsgPostPrice
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            MsgPostPrice.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return MsgPostPrice;
-        })();
-
-        pricefeed.MsgPostPriceResponse = (function() {
-
-            /**
-             * Properties of a MsgPostPriceResponse.
-             * @memberof ununifi.pricefeed
-             * @interface IMsgPostPriceResponse
-             */
-
-            /**
-             * Constructs a new MsgPostPriceResponse.
-             * @memberof ununifi.pricefeed
-             * @classdesc Represents a MsgPostPriceResponse.
-             * @implements IMsgPostPriceResponse
-             * @constructor
-             * @param {ununifi.pricefeed.IMsgPostPriceResponse=} [properties] Properties to set
-             */
-            function MsgPostPriceResponse(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * Encodes the specified MsgPostPriceResponse message. Does not implicitly {@link ununifi.pricefeed.MsgPostPriceResponse.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.pricefeed.MsgPostPriceResponse
-             * @static
-             * @param {ununifi.pricefeed.IMsgPostPriceResponse} message MsgPostPriceResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            MsgPostPriceResponse.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified MsgPostPriceResponse message, length delimited. Does not implicitly {@link ununifi.pricefeed.MsgPostPriceResponse.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.pricefeed.MsgPostPriceResponse
-             * @static
-             * @param {ununifi.pricefeed.IMsgPostPriceResponse} message MsgPostPriceResponse message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            MsgPostPriceResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a MsgPostPriceResponse message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.pricefeed.MsgPostPriceResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.pricefeed.MsgPostPriceResponse} MsgPostPriceResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            MsgPostPriceResponse.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.pricefeed.MsgPostPriceResponse();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a MsgPostPriceResponse message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.pricefeed.MsgPostPriceResponse
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.pricefeed.MsgPostPriceResponse} MsgPostPriceResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            MsgPostPriceResponse.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a MsgPostPriceResponse message.
-             * @function verify
-             * @memberof ununifi.pricefeed.MsgPostPriceResponse
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            MsgPostPriceResponse.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                return null;
-            };
-
-            /**
-             * Creates a MsgPostPriceResponse message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.pricefeed.MsgPostPriceResponse
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.pricefeed.MsgPostPriceResponse} MsgPostPriceResponse
-             */
-            MsgPostPriceResponse.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.pricefeed.MsgPostPriceResponse)
-                    return object;
-                return new $root.ununifi.pricefeed.MsgPostPriceResponse();
-            };
-
-            /**
-             * Creates a plain object from a MsgPostPriceResponse message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.pricefeed.MsgPostPriceResponse
-             * @static
-             * @param {ununifi.pricefeed.MsgPostPriceResponse} message MsgPostPriceResponse
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            MsgPostPriceResponse.toObject = function toObject() {
-                return {};
-            };
-
-            /**
-             * Converts this MsgPostPriceResponse to JSON.
-             * @function toJSON
-             * @memberof ununifi.pricefeed.MsgPostPriceResponse
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            MsgPostPriceResponse.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return MsgPostPriceResponse;
-        })();
-
         pricefeed.GenesisState = (function() {
 
             /**
@@ -19498,6 +19513,18 @@ export const ununifi = $root.ununifi = (() => {
     return ununifi;
 })();
 
+export const gogoproto = $root.gogoproto = (() => {
+
+    /**
+     * Namespace gogoproto.
+     * @exports gogoproto
+     * @namespace
+     */
+    const gogoproto = {};
+
+    return gogoproto;
+})();
+
 export const cosmos = $root.cosmos = (() => {
 
     /**
@@ -19515,530 +19542,6 @@ export const cosmos = $root.cosmos = (() => {
          * @namespace
          */
         const base = {};
-
-        base.query = (function() {
-
-            /**
-             * Namespace query.
-             * @memberof cosmos.base
-             * @namespace
-             */
-            const query = {};
-
-            query.v1beta1 = (function() {
-
-                /**
-                 * Namespace v1beta1.
-                 * @memberof cosmos.base.query
-                 * @namespace
-                 */
-                const v1beta1 = {};
-
-                v1beta1.PageRequest = (function() {
-
-                    /**
-                     * Properties of a PageRequest.
-                     * @memberof cosmos.base.query.v1beta1
-                     * @interface IPageRequest
-                     * @property {Uint8Array|null} [key] PageRequest key
-                     * @property {Long|null} [offset] PageRequest offset
-                     * @property {Long|null} [limit] PageRequest limit
-                     * @property {boolean|null} [count_total] PageRequest count_total
-                     */
-
-                    /**
-                     * Constructs a new PageRequest.
-                     * @memberof cosmos.base.query.v1beta1
-                     * @classdesc Represents a PageRequest.
-                     * @implements IPageRequest
-                     * @constructor
-                     * @param {cosmos.base.query.v1beta1.IPageRequest=} [properties] Properties to set
-                     */
-                    function PageRequest(properties) {
-                        if (properties)
-                            for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-
-                    /**
-                     * PageRequest key.
-                     * @member {Uint8Array} key
-                     * @memberof cosmos.base.query.v1beta1.PageRequest
-                     * @instance
-                     */
-                    PageRequest.prototype.key = $util.newBuffer([]);
-
-                    /**
-                     * PageRequest offset.
-                     * @member {Long} offset
-                     * @memberof cosmos.base.query.v1beta1.PageRequest
-                     * @instance
-                     */
-                    PageRequest.prototype.offset = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-
-                    /**
-                     * PageRequest limit.
-                     * @member {Long} limit
-                     * @memberof cosmos.base.query.v1beta1.PageRequest
-                     * @instance
-                     */
-                    PageRequest.prototype.limit = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-
-                    /**
-                     * PageRequest count_total.
-                     * @member {boolean} count_total
-                     * @memberof cosmos.base.query.v1beta1.PageRequest
-                     * @instance
-                     */
-                    PageRequest.prototype.count_total = false;
-
-                    /**
-                     * Encodes the specified PageRequest message. Does not implicitly {@link cosmos.base.query.v1beta1.PageRequest.verify|verify} messages.
-                     * @function encode
-                     * @memberof cosmos.base.query.v1beta1.PageRequest
-                     * @static
-                     * @param {cosmos.base.query.v1beta1.IPageRequest} message PageRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    PageRequest.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.key != null && Object.hasOwnProperty.call(message, "key"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.key);
-                        if (message.offset != null && Object.hasOwnProperty.call(message, "offset"))
-                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.offset);
-                        if (message.limit != null && Object.hasOwnProperty.call(message, "limit"))
-                            writer.uint32(/* id 3, wireType 0 =*/24).uint64(message.limit);
-                        if (message.count_total != null && Object.hasOwnProperty.call(message, "count_total"))
-                            writer.uint32(/* id 4, wireType 0 =*/32).bool(message.count_total);
-                        return writer;
-                    };
-
-                    /**
-                     * Encodes the specified PageRequest message, length delimited. Does not implicitly {@link cosmos.base.query.v1beta1.PageRequest.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof cosmos.base.query.v1beta1.PageRequest
-                     * @static
-                     * @param {cosmos.base.query.v1beta1.IPageRequest} message PageRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    PageRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-
-                    /**
-                     * Decodes a PageRequest message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof cosmos.base.query.v1beta1.PageRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {cosmos.base.query.v1beta1.PageRequest} PageRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    PageRequest.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        let end = length === undefined ? reader.len : reader.pos + length, message = new $root.cosmos.base.query.v1beta1.PageRequest();
-                        while (reader.pos < end) {
-                            let tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.key = reader.bytes();
-                                break;
-                            case 2:
-                                message.offset = reader.uint64();
-                                break;
-                            case 3:
-                                message.limit = reader.uint64();
-                                break;
-                            case 4:
-                                message.count_total = reader.bool();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-
-                    /**
-                     * Decodes a PageRequest message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof cosmos.base.query.v1beta1.PageRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {cosmos.base.query.v1beta1.PageRequest} PageRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    PageRequest.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-
-                    /**
-                     * Verifies a PageRequest message.
-                     * @function verify
-                     * @memberof cosmos.base.query.v1beta1.PageRequest
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    PageRequest.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.key != null && message.hasOwnProperty("key"))
-                            if (!(message.key && typeof message.key.length === "number" || $util.isString(message.key)))
-                                return "key: buffer expected";
-                        if (message.offset != null && message.hasOwnProperty("offset"))
-                            if (!$util.isInteger(message.offset) && !(message.offset && $util.isInteger(message.offset.low) && $util.isInteger(message.offset.high)))
-                                return "offset: integer|Long expected";
-                        if (message.limit != null && message.hasOwnProperty("limit"))
-                            if (!$util.isInteger(message.limit) && !(message.limit && $util.isInteger(message.limit.low) && $util.isInteger(message.limit.high)))
-                                return "limit: integer|Long expected";
-                        if (message.count_total != null && message.hasOwnProperty("count_total"))
-                            if (typeof message.count_total !== "boolean")
-                                return "count_total: boolean expected";
-                        return null;
-                    };
-
-                    /**
-                     * Creates a PageRequest message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof cosmos.base.query.v1beta1.PageRequest
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {cosmos.base.query.v1beta1.PageRequest} PageRequest
-                     */
-                    PageRequest.fromObject = function fromObject(object) {
-                        if (object instanceof $root.cosmos.base.query.v1beta1.PageRequest)
-                            return object;
-                        let message = new $root.cosmos.base.query.v1beta1.PageRequest();
-                        if (object.key != null)
-                            if (typeof object.key === "string")
-                                $util.base64.decode(object.key, message.key = $util.newBuffer($util.base64.length(object.key)), 0);
-                            else if (object.key.length)
-                                message.key = object.key;
-                        if (object.offset != null)
-                            if ($util.Long)
-                                (message.offset = $util.Long.fromValue(object.offset)).unsigned = true;
-                            else if (typeof object.offset === "string")
-                                message.offset = parseInt(object.offset, 10);
-                            else if (typeof object.offset === "number")
-                                message.offset = object.offset;
-                            else if (typeof object.offset === "object")
-                                message.offset = new $util.LongBits(object.offset.low >>> 0, object.offset.high >>> 0).toNumber(true);
-                        if (object.limit != null)
-                            if ($util.Long)
-                                (message.limit = $util.Long.fromValue(object.limit)).unsigned = true;
-                            else if (typeof object.limit === "string")
-                                message.limit = parseInt(object.limit, 10);
-                            else if (typeof object.limit === "number")
-                                message.limit = object.limit;
-                            else if (typeof object.limit === "object")
-                                message.limit = new $util.LongBits(object.limit.low >>> 0, object.limit.high >>> 0).toNumber(true);
-                        if (object.count_total != null)
-                            message.count_total = Boolean(object.count_total);
-                        return message;
-                    };
-
-                    /**
-                     * Creates a plain object from a PageRequest message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof cosmos.base.query.v1beta1.PageRequest
-                     * @static
-                     * @param {cosmos.base.query.v1beta1.PageRequest} message PageRequest
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    PageRequest.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        let object = {};
-                        if (options.defaults) {
-                            if (options.bytes === String)
-                                object.key = "";
-                            else {
-                                object.key = [];
-                                if (options.bytes !== Array)
-                                    object.key = $util.newBuffer(object.key);
-                            }
-                            if ($util.Long) {
-                                let long = new $util.Long(0, 0, true);
-                                object.offset = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.offset = options.longs === String ? "0" : 0;
-                            if ($util.Long) {
-                                let long = new $util.Long(0, 0, true);
-                                object.limit = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.limit = options.longs === String ? "0" : 0;
-                            object.count_total = false;
-                        }
-                        if (message.key != null && message.hasOwnProperty("key"))
-                            object.key = options.bytes === String ? $util.base64.encode(message.key, 0, message.key.length) : options.bytes === Array ? Array.prototype.slice.call(message.key) : message.key;
-                        if (message.offset != null && message.hasOwnProperty("offset"))
-                            if (typeof message.offset === "number")
-                                object.offset = options.longs === String ? String(message.offset) : message.offset;
-                            else
-                                object.offset = options.longs === String ? $util.Long.prototype.toString.call(message.offset) : options.longs === Number ? new $util.LongBits(message.offset.low >>> 0, message.offset.high >>> 0).toNumber(true) : message.offset;
-                        if (message.limit != null && message.hasOwnProperty("limit"))
-                            if (typeof message.limit === "number")
-                                object.limit = options.longs === String ? String(message.limit) : message.limit;
-                            else
-                                object.limit = options.longs === String ? $util.Long.prototype.toString.call(message.limit) : options.longs === Number ? new $util.LongBits(message.limit.low >>> 0, message.limit.high >>> 0).toNumber(true) : message.limit;
-                        if (message.count_total != null && message.hasOwnProperty("count_total"))
-                            object.count_total = message.count_total;
-                        return object;
-                    };
-
-                    /**
-                     * Converts this PageRequest to JSON.
-                     * @function toJSON
-                     * @memberof cosmos.base.query.v1beta1.PageRequest
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    PageRequest.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-
-                    return PageRequest;
-                })();
-
-                v1beta1.PageResponse = (function() {
-
-                    /**
-                     * Properties of a PageResponse.
-                     * @memberof cosmos.base.query.v1beta1
-                     * @interface IPageResponse
-                     * @property {Uint8Array|null} [next_key] PageResponse next_key
-                     * @property {Long|null} [total] PageResponse total
-                     */
-
-                    /**
-                     * Constructs a new PageResponse.
-                     * @memberof cosmos.base.query.v1beta1
-                     * @classdesc Represents a PageResponse.
-                     * @implements IPageResponse
-                     * @constructor
-                     * @param {cosmos.base.query.v1beta1.IPageResponse=} [properties] Properties to set
-                     */
-                    function PageResponse(properties) {
-                        if (properties)
-                            for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-
-                    /**
-                     * PageResponse next_key.
-                     * @member {Uint8Array} next_key
-                     * @memberof cosmos.base.query.v1beta1.PageResponse
-                     * @instance
-                     */
-                    PageResponse.prototype.next_key = $util.newBuffer([]);
-
-                    /**
-                     * PageResponse total.
-                     * @member {Long} total
-                     * @memberof cosmos.base.query.v1beta1.PageResponse
-                     * @instance
-                     */
-                    PageResponse.prototype.total = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-
-                    /**
-                     * Encodes the specified PageResponse message. Does not implicitly {@link cosmos.base.query.v1beta1.PageResponse.verify|verify} messages.
-                     * @function encode
-                     * @memberof cosmos.base.query.v1beta1.PageResponse
-                     * @static
-                     * @param {cosmos.base.query.v1beta1.IPageResponse} message PageResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    PageResponse.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.next_key != null && Object.hasOwnProperty.call(message, "next_key"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.next_key);
-                        if (message.total != null && Object.hasOwnProperty.call(message, "total"))
-                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.total);
-                        return writer;
-                    };
-
-                    /**
-                     * Encodes the specified PageResponse message, length delimited. Does not implicitly {@link cosmos.base.query.v1beta1.PageResponse.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof cosmos.base.query.v1beta1.PageResponse
-                     * @static
-                     * @param {cosmos.base.query.v1beta1.IPageResponse} message PageResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    PageResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-
-                    /**
-                     * Decodes a PageResponse message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof cosmos.base.query.v1beta1.PageResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {cosmos.base.query.v1beta1.PageResponse} PageResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    PageResponse.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        let end = length === undefined ? reader.len : reader.pos + length, message = new $root.cosmos.base.query.v1beta1.PageResponse();
-                        while (reader.pos < end) {
-                            let tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.next_key = reader.bytes();
-                                break;
-                            case 2:
-                                message.total = reader.uint64();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-
-                    /**
-                     * Decodes a PageResponse message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof cosmos.base.query.v1beta1.PageResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {cosmos.base.query.v1beta1.PageResponse} PageResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    PageResponse.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-
-                    /**
-                     * Verifies a PageResponse message.
-                     * @function verify
-                     * @memberof cosmos.base.query.v1beta1.PageResponse
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    PageResponse.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.next_key != null && message.hasOwnProperty("next_key"))
-                            if (!(message.next_key && typeof message.next_key.length === "number" || $util.isString(message.next_key)))
-                                return "next_key: buffer expected";
-                        if (message.total != null && message.hasOwnProperty("total"))
-                            if (!$util.isInteger(message.total) && !(message.total && $util.isInteger(message.total.low) && $util.isInteger(message.total.high)))
-                                return "total: integer|Long expected";
-                        return null;
-                    };
-
-                    /**
-                     * Creates a PageResponse message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof cosmos.base.query.v1beta1.PageResponse
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {cosmos.base.query.v1beta1.PageResponse} PageResponse
-                     */
-                    PageResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.cosmos.base.query.v1beta1.PageResponse)
-                            return object;
-                        let message = new $root.cosmos.base.query.v1beta1.PageResponse();
-                        if (object.next_key != null)
-                            if (typeof object.next_key === "string")
-                                $util.base64.decode(object.next_key, message.next_key = $util.newBuffer($util.base64.length(object.next_key)), 0);
-                            else if (object.next_key.length)
-                                message.next_key = object.next_key;
-                        if (object.total != null)
-                            if ($util.Long)
-                                (message.total = $util.Long.fromValue(object.total)).unsigned = true;
-                            else if (typeof object.total === "string")
-                                message.total = parseInt(object.total, 10);
-                            else if (typeof object.total === "number")
-                                message.total = object.total;
-                            else if (typeof object.total === "object")
-                                message.total = new $util.LongBits(object.total.low >>> 0, object.total.high >>> 0).toNumber(true);
-                        return message;
-                    };
-
-                    /**
-                     * Creates a plain object from a PageResponse message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof cosmos.base.query.v1beta1.PageResponse
-                     * @static
-                     * @param {cosmos.base.query.v1beta1.PageResponse} message PageResponse
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    PageResponse.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        let object = {};
-                        if (options.defaults) {
-                            if (options.bytes === String)
-                                object.next_key = "";
-                            else {
-                                object.next_key = [];
-                                if (options.bytes !== Array)
-                                    object.next_key = $util.newBuffer(object.next_key);
-                            }
-                            if ($util.Long) {
-                                let long = new $util.Long(0, 0, true);
-                                object.total = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.total = options.longs === String ? "0" : 0;
-                        }
-                        if (message.next_key != null && message.hasOwnProperty("next_key"))
-                            object.next_key = options.bytes === String ? $util.base64.encode(message.next_key, 0, message.next_key.length) : options.bytes === Array ? Array.prototype.slice.call(message.next_key) : message.next_key;
-                        if (message.total != null && message.hasOwnProperty("total"))
-                            if (typeof message.total === "number")
-                                object.total = options.longs === String ? String(message.total) : message.total;
-                            else
-                                object.total = options.longs === String ? $util.Long.prototype.toString.call(message.total) : options.longs === Number ? new $util.LongBits(message.total.low >>> 0, message.total.high >>> 0).toNumber(true) : message.total;
-                        return object;
-                    };
-
-                    /**
-                     * Converts this PageResponse to JSON.
-                     * @function toJSON
-                     * @memberof cosmos.base.query.v1beta1.PageResponse
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    PageResponse.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-
-                    return PageResponse;
-                })();
-
-                return v1beta1;
-            })();
-
-            return query;
-        })();
 
         base.v1beta1 = (function() {
 
@@ -20798,34 +20301,534 @@ export const cosmos = $root.cosmos = (() => {
             return v1beta1;
         })();
 
+        base.query = (function() {
+
+            /**
+             * Namespace query.
+             * @memberof cosmos.base
+             * @namespace
+             */
+            const query = {};
+
+            query.v1beta1 = (function() {
+
+                /**
+                 * Namespace v1beta1.
+                 * @memberof cosmos.base.query
+                 * @namespace
+                 */
+                const v1beta1 = {};
+
+                v1beta1.PageRequest = (function() {
+
+                    /**
+                     * Properties of a PageRequest.
+                     * @memberof cosmos.base.query.v1beta1
+                     * @interface IPageRequest
+                     * @property {Uint8Array|null} [key] PageRequest key
+                     * @property {Long|null} [offset] PageRequest offset
+                     * @property {Long|null} [limit] PageRequest limit
+                     * @property {boolean|null} [count_total] PageRequest count_total
+                     */
+
+                    /**
+                     * Constructs a new PageRequest.
+                     * @memberof cosmos.base.query.v1beta1
+                     * @classdesc Represents a PageRequest.
+                     * @implements IPageRequest
+                     * @constructor
+                     * @param {cosmos.base.query.v1beta1.IPageRequest=} [properties] Properties to set
+                     */
+                    function PageRequest(properties) {
+                        if (properties)
+                            for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PageRequest key.
+                     * @member {Uint8Array} key
+                     * @memberof cosmos.base.query.v1beta1.PageRequest
+                     * @instance
+                     */
+                    PageRequest.prototype.key = $util.newBuffer([]);
+
+                    /**
+                     * PageRequest offset.
+                     * @member {Long} offset
+                     * @memberof cosmos.base.query.v1beta1.PageRequest
+                     * @instance
+                     */
+                    PageRequest.prototype.offset = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+
+                    /**
+                     * PageRequest limit.
+                     * @member {Long} limit
+                     * @memberof cosmos.base.query.v1beta1.PageRequest
+                     * @instance
+                     */
+                    PageRequest.prototype.limit = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+
+                    /**
+                     * PageRequest count_total.
+                     * @member {boolean} count_total
+                     * @memberof cosmos.base.query.v1beta1.PageRequest
+                     * @instance
+                     */
+                    PageRequest.prototype.count_total = false;
+
+                    /**
+                     * Encodes the specified PageRequest message. Does not implicitly {@link cosmos.base.query.v1beta1.PageRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof cosmos.base.query.v1beta1.PageRequest
+                     * @static
+                     * @param {cosmos.base.query.v1beta1.IPageRequest} message PageRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PageRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.key != null && Object.hasOwnProperty.call(message, "key"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.key);
+                        if (message.offset != null && Object.hasOwnProperty.call(message, "offset"))
+                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.offset);
+                        if (message.limit != null && Object.hasOwnProperty.call(message, "limit"))
+                            writer.uint32(/* id 3, wireType 0 =*/24).uint64(message.limit);
+                        if (message.count_total != null && Object.hasOwnProperty.call(message, "count_total"))
+                            writer.uint32(/* id 4, wireType 0 =*/32).bool(message.count_total);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PageRequest message, length delimited. Does not implicitly {@link cosmos.base.query.v1beta1.PageRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof cosmos.base.query.v1beta1.PageRequest
+                     * @static
+                     * @param {cosmos.base.query.v1beta1.IPageRequest} message PageRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PageRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PageRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof cosmos.base.query.v1beta1.PageRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {cosmos.base.query.v1beta1.PageRequest} PageRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PageRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        let end = length === undefined ? reader.len : reader.pos + length, message = new $root.cosmos.base.query.v1beta1.PageRequest();
+                        while (reader.pos < end) {
+                            let tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.key = reader.bytes();
+                                break;
+                            case 2:
+                                message.offset = reader.uint64();
+                                break;
+                            case 3:
+                                message.limit = reader.uint64();
+                                break;
+                            case 4:
+                                message.count_total = reader.bool();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PageRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof cosmos.base.query.v1beta1.PageRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {cosmos.base.query.v1beta1.PageRequest} PageRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PageRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PageRequest message.
+                     * @function verify
+                     * @memberof cosmos.base.query.v1beta1.PageRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PageRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.key != null && message.hasOwnProperty("key"))
+                            if (!(message.key && typeof message.key.length === "number" || $util.isString(message.key)))
+                                return "key: buffer expected";
+                        if (message.offset != null && message.hasOwnProperty("offset"))
+                            if (!$util.isInteger(message.offset) && !(message.offset && $util.isInteger(message.offset.low) && $util.isInteger(message.offset.high)))
+                                return "offset: integer|Long expected";
+                        if (message.limit != null && message.hasOwnProperty("limit"))
+                            if (!$util.isInteger(message.limit) && !(message.limit && $util.isInteger(message.limit.low) && $util.isInteger(message.limit.high)))
+                                return "limit: integer|Long expected";
+                        if (message.count_total != null && message.hasOwnProperty("count_total"))
+                            if (typeof message.count_total !== "boolean")
+                                return "count_total: boolean expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PageRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof cosmos.base.query.v1beta1.PageRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {cosmos.base.query.v1beta1.PageRequest} PageRequest
+                     */
+                    PageRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.cosmos.base.query.v1beta1.PageRequest)
+                            return object;
+                        let message = new $root.cosmos.base.query.v1beta1.PageRequest();
+                        if (object.key != null)
+                            if (typeof object.key === "string")
+                                $util.base64.decode(object.key, message.key = $util.newBuffer($util.base64.length(object.key)), 0);
+                            else if (object.key.length)
+                                message.key = object.key;
+                        if (object.offset != null)
+                            if ($util.Long)
+                                (message.offset = $util.Long.fromValue(object.offset)).unsigned = true;
+                            else if (typeof object.offset === "string")
+                                message.offset = parseInt(object.offset, 10);
+                            else if (typeof object.offset === "number")
+                                message.offset = object.offset;
+                            else if (typeof object.offset === "object")
+                                message.offset = new $util.LongBits(object.offset.low >>> 0, object.offset.high >>> 0).toNumber(true);
+                        if (object.limit != null)
+                            if ($util.Long)
+                                (message.limit = $util.Long.fromValue(object.limit)).unsigned = true;
+                            else if (typeof object.limit === "string")
+                                message.limit = parseInt(object.limit, 10);
+                            else if (typeof object.limit === "number")
+                                message.limit = object.limit;
+                            else if (typeof object.limit === "object")
+                                message.limit = new $util.LongBits(object.limit.low >>> 0, object.limit.high >>> 0).toNumber(true);
+                        if (object.count_total != null)
+                            message.count_total = Boolean(object.count_total);
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PageRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof cosmos.base.query.v1beta1.PageRequest
+                     * @static
+                     * @param {cosmos.base.query.v1beta1.PageRequest} message PageRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PageRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        let object = {};
+                        if (options.defaults) {
+                            if (options.bytes === String)
+                                object.key = "";
+                            else {
+                                object.key = [];
+                                if (options.bytes !== Array)
+                                    object.key = $util.newBuffer(object.key);
+                            }
+                            if ($util.Long) {
+                                let long = new $util.Long(0, 0, true);
+                                object.offset = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.offset = options.longs === String ? "0" : 0;
+                            if ($util.Long) {
+                                let long = new $util.Long(0, 0, true);
+                                object.limit = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.limit = options.longs === String ? "0" : 0;
+                            object.count_total = false;
+                        }
+                        if (message.key != null && message.hasOwnProperty("key"))
+                            object.key = options.bytes === String ? $util.base64.encode(message.key, 0, message.key.length) : options.bytes === Array ? Array.prototype.slice.call(message.key) : message.key;
+                        if (message.offset != null && message.hasOwnProperty("offset"))
+                            if (typeof message.offset === "number")
+                                object.offset = options.longs === String ? String(message.offset) : message.offset;
+                            else
+                                object.offset = options.longs === String ? $util.Long.prototype.toString.call(message.offset) : options.longs === Number ? new $util.LongBits(message.offset.low >>> 0, message.offset.high >>> 0).toNumber(true) : message.offset;
+                        if (message.limit != null && message.hasOwnProperty("limit"))
+                            if (typeof message.limit === "number")
+                                object.limit = options.longs === String ? String(message.limit) : message.limit;
+                            else
+                                object.limit = options.longs === String ? $util.Long.prototype.toString.call(message.limit) : options.longs === Number ? new $util.LongBits(message.limit.low >>> 0, message.limit.high >>> 0).toNumber(true) : message.limit;
+                        if (message.count_total != null && message.hasOwnProperty("count_total"))
+                            object.count_total = message.count_total;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PageRequest to JSON.
+                     * @function toJSON
+                     * @memberof cosmos.base.query.v1beta1.PageRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PageRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PageRequest;
+                })();
+
+                v1beta1.PageResponse = (function() {
+
+                    /**
+                     * Properties of a PageResponse.
+                     * @memberof cosmos.base.query.v1beta1
+                     * @interface IPageResponse
+                     * @property {Uint8Array|null} [next_key] PageResponse next_key
+                     * @property {Long|null} [total] PageResponse total
+                     */
+
+                    /**
+                     * Constructs a new PageResponse.
+                     * @memberof cosmos.base.query.v1beta1
+                     * @classdesc Represents a PageResponse.
+                     * @implements IPageResponse
+                     * @constructor
+                     * @param {cosmos.base.query.v1beta1.IPageResponse=} [properties] Properties to set
+                     */
+                    function PageResponse(properties) {
+                        if (properties)
+                            for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PageResponse next_key.
+                     * @member {Uint8Array} next_key
+                     * @memberof cosmos.base.query.v1beta1.PageResponse
+                     * @instance
+                     */
+                    PageResponse.prototype.next_key = $util.newBuffer([]);
+
+                    /**
+                     * PageResponse total.
+                     * @member {Long} total
+                     * @memberof cosmos.base.query.v1beta1.PageResponse
+                     * @instance
+                     */
+                    PageResponse.prototype.total = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+
+                    /**
+                     * Encodes the specified PageResponse message. Does not implicitly {@link cosmos.base.query.v1beta1.PageResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof cosmos.base.query.v1beta1.PageResponse
+                     * @static
+                     * @param {cosmos.base.query.v1beta1.IPageResponse} message PageResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PageResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.next_key != null && Object.hasOwnProperty.call(message, "next_key"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.next_key);
+                        if (message.total != null && Object.hasOwnProperty.call(message, "total"))
+                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.total);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PageResponse message, length delimited. Does not implicitly {@link cosmos.base.query.v1beta1.PageResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof cosmos.base.query.v1beta1.PageResponse
+                     * @static
+                     * @param {cosmos.base.query.v1beta1.IPageResponse} message PageResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PageResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PageResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof cosmos.base.query.v1beta1.PageResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {cosmos.base.query.v1beta1.PageResponse} PageResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PageResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        let end = length === undefined ? reader.len : reader.pos + length, message = new $root.cosmos.base.query.v1beta1.PageResponse();
+                        while (reader.pos < end) {
+                            let tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.next_key = reader.bytes();
+                                break;
+                            case 2:
+                                message.total = reader.uint64();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PageResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof cosmos.base.query.v1beta1.PageResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {cosmos.base.query.v1beta1.PageResponse} PageResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PageResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PageResponse message.
+                     * @function verify
+                     * @memberof cosmos.base.query.v1beta1.PageResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PageResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.next_key != null && message.hasOwnProperty("next_key"))
+                            if (!(message.next_key && typeof message.next_key.length === "number" || $util.isString(message.next_key)))
+                                return "next_key: buffer expected";
+                        if (message.total != null && message.hasOwnProperty("total"))
+                            if (!$util.isInteger(message.total) && !(message.total && $util.isInteger(message.total.low) && $util.isInteger(message.total.high)))
+                                return "total: integer|Long expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PageResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof cosmos.base.query.v1beta1.PageResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {cosmos.base.query.v1beta1.PageResponse} PageResponse
+                     */
+                    PageResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.cosmos.base.query.v1beta1.PageResponse)
+                            return object;
+                        let message = new $root.cosmos.base.query.v1beta1.PageResponse();
+                        if (object.next_key != null)
+                            if (typeof object.next_key === "string")
+                                $util.base64.decode(object.next_key, message.next_key = $util.newBuffer($util.base64.length(object.next_key)), 0);
+                            else if (object.next_key.length)
+                                message.next_key = object.next_key;
+                        if (object.total != null)
+                            if ($util.Long)
+                                (message.total = $util.Long.fromValue(object.total)).unsigned = true;
+                            else if (typeof object.total === "string")
+                                message.total = parseInt(object.total, 10);
+                            else if (typeof object.total === "number")
+                                message.total = object.total;
+                            else if (typeof object.total === "object")
+                                message.total = new $util.LongBits(object.total.low >>> 0, object.total.high >>> 0).toNumber(true);
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PageResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof cosmos.base.query.v1beta1.PageResponse
+                     * @static
+                     * @param {cosmos.base.query.v1beta1.PageResponse} message PageResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PageResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        let object = {};
+                        if (options.defaults) {
+                            if (options.bytes === String)
+                                object.next_key = "";
+                            else {
+                                object.next_key = [];
+                                if (options.bytes !== Array)
+                                    object.next_key = $util.newBuffer(object.next_key);
+                            }
+                            if ($util.Long) {
+                                let long = new $util.Long(0, 0, true);
+                                object.total = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.total = options.longs === String ? "0" : 0;
+                        }
+                        if (message.next_key != null && message.hasOwnProperty("next_key"))
+                            object.next_key = options.bytes === String ? $util.base64.encode(message.next_key, 0, message.next_key.length) : options.bytes === Array ? Array.prototype.slice.call(message.next_key) : message.next_key;
+                        if (message.total != null && message.hasOwnProperty("total"))
+                            if (typeof message.total === "number")
+                                object.total = options.longs === String ? String(message.total) : message.total;
+                            else
+                                object.total = options.longs === String ? $util.Long.prototype.toString.call(message.total) : options.longs === Number ? new $util.LongBits(message.total.low >>> 0, message.total.high >>> 0).toNumber(true) : message.total;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PageResponse to JSON.
+                     * @function toJSON
+                     * @memberof cosmos.base.query.v1beta1.PageResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PageResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PageResponse;
+                })();
+
+                return v1beta1;
+            })();
+
+            return query;
+        })();
+
         return base;
     })();
 
     return cosmos;
-})();
-
-export const cosmos_proto = $root.cosmos_proto = (() => {
-
-    /**
-     * Namespace cosmos_proto.
-     * @exports cosmos_proto
-     * @namespace
-     */
-    const cosmos_proto = {};
-
-    return cosmos_proto;
-})();
-
-export const gogoproto = $root.gogoproto = (() => {
-
-    /**
-     * Namespace gogoproto.
-     * @exports gogoproto
-     * @namespace
-     */
-    const gogoproto = {};
-
-    return gogoproto;
 })();
 
 export const google = $root.google = (() => {
@@ -20836,886 +20839,6 @@ export const google = $root.google = (() => {
      * @namespace
      */
     const google = {};
-
-    google.api = (function() {
-
-        /**
-         * Namespace api.
-         * @memberof google
-         * @namespace
-         */
-        const api = {};
-
-        api.Http = (function() {
-
-            /**
-             * Properties of a Http.
-             * @memberof google.api
-             * @interface IHttp
-             * @property {Array.<google.api.IHttpRule>|null} [rules] Http rules
-             * @property {boolean|null} [fully_decode_reserved_expansion] Http fully_decode_reserved_expansion
-             */
-
-            /**
-             * Constructs a new Http.
-             * @memberof google.api
-             * @classdesc Represents a Http.
-             * @implements IHttp
-             * @constructor
-             * @param {google.api.IHttp=} [properties] Properties to set
-             */
-            function Http(properties) {
-                this.rules = [];
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * Http rules.
-             * @member {Array.<google.api.IHttpRule>} rules
-             * @memberof google.api.Http
-             * @instance
-             */
-            Http.prototype.rules = $util.emptyArray;
-
-            /**
-             * Http fully_decode_reserved_expansion.
-             * @member {boolean} fully_decode_reserved_expansion
-             * @memberof google.api.Http
-             * @instance
-             */
-            Http.prototype.fully_decode_reserved_expansion = false;
-
-            /**
-             * Encodes the specified Http message. Does not implicitly {@link google.api.Http.verify|verify} messages.
-             * @function encode
-             * @memberof google.api.Http
-             * @static
-             * @param {google.api.IHttp} message Http message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Http.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.rules != null && message.rules.length)
-                    for (let i = 0; i < message.rules.length; ++i)
-                        $root.google.api.HttpRule.encode(message.rules[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                if (message.fully_decode_reserved_expansion != null && Object.hasOwnProperty.call(message, "fully_decode_reserved_expansion"))
-                    writer.uint32(/* id 2, wireType 0 =*/16).bool(message.fully_decode_reserved_expansion);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified Http message, length delimited. Does not implicitly {@link google.api.Http.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof google.api.Http
-             * @static
-             * @param {google.api.IHttp} message Http message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Http.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a Http message from the specified reader or buffer.
-             * @function decode
-             * @memberof google.api.Http
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {google.api.Http} Http
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Http.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.api.Http();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        if (!(message.rules && message.rules.length))
-                            message.rules = [];
-                        message.rules.push($root.google.api.HttpRule.decode(reader, reader.uint32()));
-                        break;
-                    case 2:
-                        message.fully_decode_reserved_expansion = reader.bool();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a Http message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof google.api.Http
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.api.Http} Http
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Http.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a Http message.
-             * @function verify
-             * @memberof google.api.Http
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            Http.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.rules != null && message.hasOwnProperty("rules")) {
-                    if (!Array.isArray(message.rules))
-                        return "rules: array expected";
-                    for (let i = 0; i < message.rules.length; ++i) {
-                        let error = $root.google.api.HttpRule.verify(message.rules[i]);
-                        if (error)
-                            return "rules." + error;
-                    }
-                }
-                if (message.fully_decode_reserved_expansion != null && message.hasOwnProperty("fully_decode_reserved_expansion"))
-                    if (typeof message.fully_decode_reserved_expansion !== "boolean")
-                        return "fully_decode_reserved_expansion: boolean expected";
-                return null;
-            };
-
-            /**
-             * Creates a Http message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof google.api.Http
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {google.api.Http} Http
-             */
-            Http.fromObject = function fromObject(object) {
-                if (object instanceof $root.google.api.Http)
-                    return object;
-                let message = new $root.google.api.Http();
-                if (object.rules) {
-                    if (!Array.isArray(object.rules))
-                        throw TypeError(".google.api.Http.rules: array expected");
-                    message.rules = [];
-                    for (let i = 0; i < object.rules.length; ++i) {
-                        if (typeof object.rules[i] !== "object")
-                            throw TypeError(".google.api.Http.rules: object expected");
-                        message.rules[i] = $root.google.api.HttpRule.fromObject(object.rules[i]);
-                    }
-                }
-                if (object.fully_decode_reserved_expansion != null)
-                    message.fully_decode_reserved_expansion = Boolean(object.fully_decode_reserved_expansion);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a Http message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof google.api.Http
-             * @static
-             * @param {google.api.Http} message Http
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            Http.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.arrays || options.defaults)
-                    object.rules = [];
-                if (options.defaults)
-                    object.fully_decode_reserved_expansion = false;
-                if (message.rules && message.rules.length) {
-                    object.rules = [];
-                    for (let j = 0; j < message.rules.length; ++j)
-                        object.rules[j] = $root.google.api.HttpRule.toObject(message.rules[j], options);
-                }
-                if (message.fully_decode_reserved_expansion != null && message.hasOwnProperty("fully_decode_reserved_expansion"))
-                    object.fully_decode_reserved_expansion = message.fully_decode_reserved_expansion;
-                return object;
-            };
-
-            /**
-             * Converts this Http to JSON.
-             * @function toJSON
-             * @memberof google.api.Http
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            Http.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return Http;
-        })();
-
-        api.HttpRule = (function() {
-
-            /**
-             * Properties of a HttpRule.
-             * @memberof google.api
-             * @interface IHttpRule
-             * @property {string|null} [selector] HttpRule selector
-             * @property {string|null} [get] HttpRule get
-             * @property {string|null} [put] HttpRule put
-             * @property {string|null} [post] HttpRule post
-             * @property {string|null} ["delete"] HttpRule delete
-             * @property {string|null} [patch] HttpRule patch
-             * @property {google.api.ICustomHttpPattern|null} [custom] HttpRule custom
-             * @property {string|null} [body] HttpRule body
-             * @property {string|null} [response_body] HttpRule response_body
-             * @property {Array.<google.api.IHttpRule>|null} [additional_bindings] HttpRule additional_bindings
-             */
-
-            /**
-             * Constructs a new HttpRule.
-             * @memberof google.api
-             * @classdesc Represents a HttpRule.
-             * @implements IHttpRule
-             * @constructor
-             * @param {google.api.IHttpRule=} [properties] Properties to set
-             */
-            function HttpRule(properties) {
-                this.additional_bindings = [];
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * HttpRule selector.
-             * @member {string} selector
-             * @memberof google.api.HttpRule
-             * @instance
-             */
-            HttpRule.prototype.selector = "";
-
-            /**
-             * HttpRule get.
-             * @member {string|null|undefined} get
-             * @memberof google.api.HttpRule
-             * @instance
-             */
-            HttpRule.prototype.get = null;
-
-            /**
-             * HttpRule put.
-             * @member {string|null|undefined} put
-             * @memberof google.api.HttpRule
-             * @instance
-             */
-            HttpRule.prototype.put = null;
-
-            /**
-             * HttpRule post.
-             * @member {string|null|undefined} post
-             * @memberof google.api.HttpRule
-             * @instance
-             */
-            HttpRule.prototype.post = null;
-
-            /**
-             * HttpRule delete.
-             * @member {string|null|undefined} delete
-             * @memberof google.api.HttpRule
-             * @instance
-             */
-            HttpRule.prototype["delete"] = null;
-
-            /**
-             * HttpRule patch.
-             * @member {string|null|undefined} patch
-             * @memberof google.api.HttpRule
-             * @instance
-             */
-            HttpRule.prototype.patch = null;
-
-            /**
-             * HttpRule custom.
-             * @member {google.api.ICustomHttpPattern|null|undefined} custom
-             * @memberof google.api.HttpRule
-             * @instance
-             */
-            HttpRule.prototype.custom = null;
-
-            /**
-             * HttpRule body.
-             * @member {string} body
-             * @memberof google.api.HttpRule
-             * @instance
-             */
-            HttpRule.prototype.body = "";
-
-            /**
-             * HttpRule response_body.
-             * @member {string} response_body
-             * @memberof google.api.HttpRule
-             * @instance
-             */
-            HttpRule.prototype.response_body = "";
-
-            /**
-             * HttpRule additional_bindings.
-             * @member {Array.<google.api.IHttpRule>} additional_bindings
-             * @memberof google.api.HttpRule
-             * @instance
-             */
-            HttpRule.prototype.additional_bindings = $util.emptyArray;
-
-            // OneOf field names bound to virtual getters and setters
-            let $oneOfFields;
-
-            /**
-             * HttpRule pattern.
-             * @member {"get"|"put"|"post"|"delete"|"patch"|"custom"|undefined} pattern
-             * @memberof google.api.HttpRule
-             * @instance
-             */
-            Object.defineProperty(HttpRule.prototype, "pattern", {
-                get: $util.oneOfGetter($oneOfFields = ["get", "put", "post", "delete", "patch", "custom"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            /**
-             * Encodes the specified HttpRule message. Does not implicitly {@link google.api.HttpRule.verify|verify} messages.
-             * @function encode
-             * @memberof google.api.HttpRule
-             * @static
-             * @param {google.api.IHttpRule} message HttpRule message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            HttpRule.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.selector != null && Object.hasOwnProperty.call(message, "selector"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.selector);
-                if (message.get != null && Object.hasOwnProperty.call(message, "get"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.get);
-                if (message.put != null && Object.hasOwnProperty.call(message, "put"))
-                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.put);
-                if (message.post != null && Object.hasOwnProperty.call(message, "post"))
-                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.post);
-                if (message["delete"] != null && Object.hasOwnProperty.call(message, "delete"))
-                    writer.uint32(/* id 5, wireType 2 =*/42).string(message["delete"]);
-                if (message.patch != null && Object.hasOwnProperty.call(message, "patch"))
-                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.patch);
-                if (message.body != null && Object.hasOwnProperty.call(message, "body"))
-                    writer.uint32(/* id 7, wireType 2 =*/58).string(message.body);
-                if (message.custom != null && Object.hasOwnProperty.call(message, "custom"))
-                    $root.google.api.CustomHttpPattern.encode(message.custom, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
-                if (message.additional_bindings != null && message.additional_bindings.length)
-                    for (let i = 0; i < message.additional_bindings.length; ++i)
-                        $root.google.api.HttpRule.encode(message.additional_bindings[i], writer.uint32(/* id 11, wireType 2 =*/90).fork()).ldelim();
-                if (message.response_body != null && Object.hasOwnProperty.call(message, "response_body"))
-                    writer.uint32(/* id 12, wireType 2 =*/98).string(message.response_body);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified HttpRule message, length delimited. Does not implicitly {@link google.api.HttpRule.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof google.api.HttpRule
-             * @static
-             * @param {google.api.IHttpRule} message HttpRule message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            HttpRule.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a HttpRule message from the specified reader or buffer.
-             * @function decode
-             * @memberof google.api.HttpRule
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {google.api.HttpRule} HttpRule
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            HttpRule.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.api.HttpRule();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.selector = reader.string();
-                        break;
-                    case 2:
-                        message.get = reader.string();
-                        break;
-                    case 3:
-                        message.put = reader.string();
-                        break;
-                    case 4:
-                        message.post = reader.string();
-                        break;
-                    case 5:
-                        message["delete"] = reader.string();
-                        break;
-                    case 6:
-                        message.patch = reader.string();
-                        break;
-                    case 8:
-                        message.custom = $root.google.api.CustomHttpPattern.decode(reader, reader.uint32());
-                        break;
-                    case 7:
-                        message.body = reader.string();
-                        break;
-                    case 12:
-                        message.response_body = reader.string();
-                        break;
-                    case 11:
-                        if (!(message.additional_bindings && message.additional_bindings.length))
-                            message.additional_bindings = [];
-                        message.additional_bindings.push($root.google.api.HttpRule.decode(reader, reader.uint32()));
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a HttpRule message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof google.api.HttpRule
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.api.HttpRule} HttpRule
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            HttpRule.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a HttpRule message.
-             * @function verify
-             * @memberof google.api.HttpRule
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            HttpRule.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                let properties = {};
-                if (message.selector != null && message.hasOwnProperty("selector"))
-                    if (!$util.isString(message.selector))
-                        return "selector: string expected";
-                if (message.get != null && message.hasOwnProperty("get")) {
-                    properties.pattern = 1;
-                    if (!$util.isString(message.get))
-                        return "get: string expected";
-                }
-                if (message.put != null && message.hasOwnProperty("put")) {
-                    if (properties.pattern === 1)
-                        return "pattern: multiple values";
-                    properties.pattern = 1;
-                    if (!$util.isString(message.put))
-                        return "put: string expected";
-                }
-                if (message.post != null && message.hasOwnProperty("post")) {
-                    if (properties.pattern === 1)
-                        return "pattern: multiple values";
-                    properties.pattern = 1;
-                    if (!$util.isString(message.post))
-                        return "post: string expected";
-                }
-                if (message["delete"] != null && message.hasOwnProperty("delete")) {
-                    if (properties.pattern === 1)
-                        return "pattern: multiple values";
-                    properties.pattern = 1;
-                    if (!$util.isString(message["delete"]))
-                        return "delete: string expected";
-                }
-                if (message.patch != null && message.hasOwnProperty("patch")) {
-                    if (properties.pattern === 1)
-                        return "pattern: multiple values";
-                    properties.pattern = 1;
-                    if (!$util.isString(message.patch))
-                        return "patch: string expected";
-                }
-                if (message.custom != null && message.hasOwnProperty("custom")) {
-                    if (properties.pattern === 1)
-                        return "pattern: multiple values";
-                    properties.pattern = 1;
-                    {
-                        let error = $root.google.api.CustomHttpPattern.verify(message.custom);
-                        if (error)
-                            return "custom." + error;
-                    }
-                }
-                if (message.body != null && message.hasOwnProperty("body"))
-                    if (!$util.isString(message.body))
-                        return "body: string expected";
-                if (message.response_body != null && message.hasOwnProperty("response_body"))
-                    if (!$util.isString(message.response_body))
-                        return "response_body: string expected";
-                if (message.additional_bindings != null && message.hasOwnProperty("additional_bindings")) {
-                    if (!Array.isArray(message.additional_bindings))
-                        return "additional_bindings: array expected";
-                    for (let i = 0; i < message.additional_bindings.length; ++i) {
-                        let error = $root.google.api.HttpRule.verify(message.additional_bindings[i]);
-                        if (error)
-                            return "additional_bindings." + error;
-                    }
-                }
-                return null;
-            };
-
-            /**
-             * Creates a HttpRule message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof google.api.HttpRule
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {google.api.HttpRule} HttpRule
-             */
-            HttpRule.fromObject = function fromObject(object) {
-                if (object instanceof $root.google.api.HttpRule)
-                    return object;
-                let message = new $root.google.api.HttpRule();
-                if (object.selector != null)
-                    message.selector = String(object.selector);
-                if (object.get != null)
-                    message.get = String(object.get);
-                if (object.put != null)
-                    message.put = String(object.put);
-                if (object.post != null)
-                    message.post = String(object.post);
-                if (object["delete"] != null)
-                    message["delete"] = String(object["delete"]);
-                if (object.patch != null)
-                    message.patch = String(object.patch);
-                if (object.custom != null) {
-                    if (typeof object.custom !== "object")
-                        throw TypeError(".google.api.HttpRule.custom: object expected");
-                    message.custom = $root.google.api.CustomHttpPattern.fromObject(object.custom);
-                }
-                if (object.body != null)
-                    message.body = String(object.body);
-                if (object.response_body != null)
-                    message.response_body = String(object.response_body);
-                if (object.additional_bindings) {
-                    if (!Array.isArray(object.additional_bindings))
-                        throw TypeError(".google.api.HttpRule.additional_bindings: array expected");
-                    message.additional_bindings = [];
-                    for (let i = 0; i < object.additional_bindings.length; ++i) {
-                        if (typeof object.additional_bindings[i] !== "object")
-                            throw TypeError(".google.api.HttpRule.additional_bindings: object expected");
-                        message.additional_bindings[i] = $root.google.api.HttpRule.fromObject(object.additional_bindings[i]);
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a HttpRule message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof google.api.HttpRule
-             * @static
-             * @param {google.api.HttpRule} message HttpRule
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            HttpRule.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.arrays || options.defaults)
-                    object.additional_bindings = [];
-                if (options.defaults) {
-                    object.selector = "";
-                    object.body = "";
-                    object.response_body = "";
-                }
-                if (message.selector != null && message.hasOwnProperty("selector"))
-                    object.selector = message.selector;
-                if (message.get != null && message.hasOwnProperty("get")) {
-                    object.get = message.get;
-                    if (options.oneofs)
-                        object.pattern = "get";
-                }
-                if (message.put != null && message.hasOwnProperty("put")) {
-                    object.put = message.put;
-                    if (options.oneofs)
-                        object.pattern = "put";
-                }
-                if (message.post != null && message.hasOwnProperty("post")) {
-                    object.post = message.post;
-                    if (options.oneofs)
-                        object.pattern = "post";
-                }
-                if (message["delete"] != null && message.hasOwnProperty("delete")) {
-                    object["delete"] = message["delete"];
-                    if (options.oneofs)
-                        object.pattern = "delete";
-                }
-                if (message.patch != null && message.hasOwnProperty("patch")) {
-                    object.patch = message.patch;
-                    if (options.oneofs)
-                        object.pattern = "patch";
-                }
-                if (message.body != null && message.hasOwnProperty("body"))
-                    object.body = message.body;
-                if (message.custom != null && message.hasOwnProperty("custom")) {
-                    object.custom = $root.google.api.CustomHttpPattern.toObject(message.custom, options);
-                    if (options.oneofs)
-                        object.pattern = "custom";
-                }
-                if (message.additional_bindings && message.additional_bindings.length) {
-                    object.additional_bindings = [];
-                    for (let j = 0; j < message.additional_bindings.length; ++j)
-                        object.additional_bindings[j] = $root.google.api.HttpRule.toObject(message.additional_bindings[j], options);
-                }
-                if (message.response_body != null && message.hasOwnProperty("response_body"))
-                    object.response_body = message.response_body;
-                return object;
-            };
-
-            /**
-             * Converts this HttpRule to JSON.
-             * @function toJSON
-             * @memberof google.api.HttpRule
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            HttpRule.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return HttpRule;
-        })();
-
-        api.CustomHttpPattern = (function() {
-
-            /**
-             * Properties of a CustomHttpPattern.
-             * @memberof google.api
-             * @interface ICustomHttpPattern
-             * @property {string|null} [kind] CustomHttpPattern kind
-             * @property {string|null} [path] CustomHttpPattern path
-             */
-
-            /**
-             * Constructs a new CustomHttpPattern.
-             * @memberof google.api
-             * @classdesc Represents a CustomHttpPattern.
-             * @implements ICustomHttpPattern
-             * @constructor
-             * @param {google.api.ICustomHttpPattern=} [properties] Properties to set
-             */
-            function CustomHttpPattern(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * CustomHttpPattern kind.
-             * @member {string} kind
-             * @memberof google.api.CustomHttpPattern
-             * @instance
-             */
-            CustomHttpPattern.prototype.kind = "";
-
-            /**
-             * CustomHttpPattern path.
-             * @member {string} path
-             * @memberof google.api.CustomHttpPattern
-             * @instance
-             */
-            CustomHttpPattern.prototype.path = "";
-
-            /**
-             * Encodes the specified CustomHttpPattern message. Does not implicitly {@link google.api.CustomHttpPattern.verify|verify} messages.
-             * @function encode
-             * @memberof google.api.CustomHttpPattern
-             * @static
-             * @param {google.api.ICustomHttpPattern} message CustomHttpPattern message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            CustomHttpPattern.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.kind);
-                if (message.path != null && Object.hasOwnProperty.call(message, "path"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.path);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified CustomHttpPattern message, length delimited. Does not implicitly {@link google.api.CustomHttpPattern.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof google.api.CustomHttpPattern
-             * @static
-             * @param {google.api.ICustomHttpPattern} message CustomHttpPattern message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            CustomHttpPattern.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a CustomHttpPattern message from the specified reader or buffer.
-             * @function decode
-             * @memberof google.api.CustomHttpPattern
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {google.api.CustomHttpPattern} CustomHttpPattern
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            CustomHttpPattern.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.api.CustomHttpPattern();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.kind = reader.string();
-                        break;
-                    case 2:
-                        message.path = reader.string();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a CustomHttpPattern message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof google.api.CustomHttpPattern
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.api.CustomHttpPattern} CustomHttpPattern
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            CustomHttpPattern.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a CustomHttpPattern message.
-             * @function verify
-             * @memberof google.api.CustomHttpPattern
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            CustomHttpPattern.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.kind != null && message.hasOwnProperty("kind"))
-                    if (!$util.isString(message.kind))
-                        return "kind: string expected";
-                if (message.path != null && message.hasOwnProperty("path"))
-                    if (!$util.isString(message.path))
-                        return "path: string expected";
-                return null;
-            };
-
-            /**
-             * Creates a CustomHttpPattern message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof google.api.CustomHttpPattern
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {google.api.CustomHttpPattern} CustomHttpPattern
-             */
-            CustomHttpPattern.fromObject = function fromObject(object) {
-                if (object instanceof $root.google.api.CustomHttpPattern)
-                    return object;
-                let message = new $root.google.api.CustomHttpPattern();
-                if (object.kind != null)
-                    message.kind = String(object.kind);
-                if (object.path != null)
-                    message.path = String(object.path);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a CustomHttpPattern message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof google.api.CustomHttpPattern
-             * @static
-             * @param {google.api.CustomHttpPattern} message CustomHttpPattern
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            CustomHttpPattern.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.kind = "";
-                    object.path = "";
-                }
-                if (message.kind != null && message.hasOwnProperty("kind"))
-                    object.kind = message.kind;
-                if (message.path != null && message.hasOwnProperty("path"))
-                    object.path = message.path;
-                return object;
-            };
-
-            /**
-             * Converts this CustomHttpPattern to JSON.
-             * @function toJSON
-             * @memberof google.api.CustomHttpPattern
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            CustomHttpPattern.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return CustomHttpPattern;
-        })();
-
-        return api;
-    })();
 
     google.protobuf = (function() {
 
@@ -26454,8 +25577,6 @@ export const google = $root.google = (() => {
              * @property {boolean|null} [deprecated] MessageOptions deprecated
              * @property {boolean|null} [map_entry] MessageOptions map_entry
              * @property {Array.<google.protobuf.IUninterpretedOption>|null} [uninterpreted_option] MessageOptions uninterpreted_option
-             * @property {string|null} [".cosmos_proto.interface_type"] MessageOptions .cosmos_proto.interface_type
-             * @property {string|null} [".cosmos_proto.implements_interface"] MessageOptions .cosmos_proto.implements_interface
              * @property {boolean|null} [".gogoproto.goproto_getters"] MessageOptions .gogoproto.goproto_getters
              * @property {boolean|null} [".gogoproto.goproto_stringer"] MessageOptions .gogoproto.goproto_stringer
              * @property {boolean|null} [".gogoproto.verbose_equal"] MessageOptions .gogoproto.verbose_equal
@@ -26482,6 +25603,8 @@ export const google = $root.google = (() => {
              * @property {boolean|null} [".gogoproto.messagename"] MessageOptions .gogoproto.messagename
              * @property {boolean|null} [".gogoproto.goproto_sizecache"] MessageOptions .gogoproto.goproto_sizecache
              * @property {boolean|null} [".gogoproto.goproto_unkeyed"] MessageOptions .gogoproto.goproto_unkeyed
+             * @property {string|null} [".cosmos_proto.interface_type"] MessageOptions .cosmos_proto.interface_type
+             * @property {string|null} [".cosmos_proto.implements_interface"] MessageOptions .cosmos_proto.implements_interface
              */
 
             /**
@@ -26539,22 +25662,6 @@ export const google = $root.google = (() => {
              * @instance
              */
             MessageOptions.prototype.uninterpreted_option = $util.emptyArray;
-
-            /**
-             * MessageOptions .cosmos_proto.interface_type.
-             * @member {string} .cosmos_proto.interface_type
-             * @memberof google.protobuf.MessageOptions
-             * @instance
-             */
-            MessageOptions.prototype[".cosmos_proto.interface_type"] = "";
-
-            /**
-             * MessageOptions .cosmos_proto.implements_interface.
-             * @member {string} .cosmos_proto.implements_interface
-             * @memberof google.protobuf.MessageOptions
-             * @instance
-             */
-            MessageOptions.prototype[".cosmos_proto.implements_interface"] = "";
 
             /**
              * MessageOptions .gogoproto.goproto_getters.
@@ -26765,6 +25872,22 @@ export const google = $root.google = (() => {
             MessageOptions.prototype[".gogoproto.goproto_unkeyed"] = false;
 
             /**
+             * MessageOptions .cosmos_proto.interface_type.
+             * @member {string} .cosmos_proto.interface_type
+             * @memberof google.protobuf.MessageOptions
+             * @instance
+             */
+            MessageOptions.prototype[".cosmos_proto.interface_type"] = "";
+
+            /**
+             * MessageOptions .cosmos_proto.implements_interface.
+             * @member {string} .cosmos_proto.implements_interface
+             * @memberof google.protobuf.MessageOptions
+             * @instance
+             */
+            MessageOptions.prototype[".cosmos_proto.implements_interface"] = "";
+
+            /**
              * Encodes the specified MessageOptions message. Does not implicitly {@link google.protobuf.MessageOptions.verify|verify} messages.
              * @function encode
              * @memberof google.protobuf.MessageOptions
@@ -26894,12 +26017,6 @@ export const google = $root.google = (() => {
                             message.uninterpreted_option = [];
                         message.uninterpreted_option.push($root.google.protobuf.UninterpretedOption.decode(reader, reader.uint32()));
                         break;
-                    case 93001:
-                        message[".cosmos_proto.interface_type"] = reader.string();
-                        break;
-                    case 93002:
-                        message[".cosmos_proto.implements_interface"] = reader.string();
-                        break;
                     case 64001:
                         message[".gogoproto.goproto_getters"] = reader.bool();
                         break;
@@ -26978,6 +26095,12 @@ export const google = $root.google = (() => {
                     case 64035:
                         message[".gogoproto.goproto_unkeyed"] = reader.bool();
                         break;
+                    case 93001:
+                        message[".cosmos_proto.interface_type"] = reader.string();
+                        break;
+                    case 93002:
+                        message[".cosmos_proto.implements_interface"] = reader.string();
+                        break;
                     default:
                         reader.skipType(tag & 7);
                         break;
@@ -27034,12 +26157,6 @@ export const google = $root.google = (() => {
                             return "uninterpreted_option." + error;
                     }
                 }
-                if (message[".cosmos_proto.interface_type"] != null && message.hasOwnProperty(".cosmos_proto.interface_type"))
-                    if (!$util.isString(message[".cosmos_proto.interface_type"]))
-                        return ".cosmos_proto.interface_type: string expected";
-                if (message[".cosmos_proto.implements_interface"] != null && message.hasOwnProperty(".cosmos_proto.implements_interface"))
-                    if (!$util.isString(message[".cosmos_proto.implements_interface"]))
-                        return ".cosmos_proto.implements_interface: string expected";
                 if (message[".gogoproto.goproto_getters"] != null && message.hasOwnProperty(".gogoproto.goproto_getters"))
                     if (typeof message[".gogoproto.goproto_getters"] !== "boolean")
                         return ".gogoproto.goproto_getters: boolean expected";
@@ -27118,6 +26235,12 @@ export const google = $root.google = (() => {
                 if (message[".gogoproto.goproto_unkeyed"] != null && message.hasOwnProperty(".gogoproto.goproto_unkeyed"))
                     if (typeof message[".gogoproto.goproto_unkeyed"] !== "boolean")
                         return ".gogoproto.goproto_unkeyed: boolean expected";
+                if (message[".cosmos_proto.interface_type"] != null && message.hasOwnProperty(".cosmos_proto.interface_type"))
+                    if (!$util.isString(message[".cosmos_proto.interface_type"]))
+                        return ".cosmos_proto.interface_type: string expected";
+                if (message[".cosmos_proto.implements_interface"] != null && message.hasOwnProperty(".cosmos_proto.implements_interface"))
+                    if (!$util.isString(message[".cosmos_proto.implements_interface"]))
+                        return ".cosmos_proto.implements_interface: string expected";
                 return null;
             };
 
@@ -27151,10 +26274,6 @@ export const google = $root.google = (() => {
                         message.uninterpreted_option[i] = $root.google.protobuf.UninterpretedOption.fromObject(object.uninterpreted_option[i]);
                     }
                 }
-                if (object[".cosmos_proto.interface_type"] != null)
-                    message[".cosmos_proto.interface_type"] = String(object[".cosmos_proto.interface_type"]);
-                if (object[".cosmos_proto.implements_interface"] != null)
-                    message[".cosmos_proto.implements_interface"] = String(object[".cosmos_proto.implements_interface"]);
                 if (object[".gogoproto.goproto_getters"] != null)
                     message[".gogoproto.goproto_getters"] = Boolean(object[".gogoproto.goproto_getters"]);
                 if (object[".gogoproto.goproto_stringer"] != null)
@@ -27207,6 +26326,10 @@ export const google = $root.google = (() => {
                     message[".gogoproto.goproto_sizecache"] = Boolean(object[".gogoproto.goproto_sizecache"]);
                 if (object[".gogoproto.goproto_unkeyed"] != null)
                     message[".gogoproto.goproto_unkeyed"] = Boolean(object[".gogoproto.goproto_unkeyed"]);
+                if (object[".cosmos_proto.interface_type"] != null)
+                    message[".cosmos_proto.interface_type"] = String(object[".cosmos_proto.interface_type"]);
+                if (object[".cosmos_proto.implements_interface"] != null)
+                    message[".cosmos_proto.implements_interface"] = String(object[".cosmos_proto.implements_interface"]);
                 return message;
             };
 
@@ -27358,7 +26481,6 @@ export const google = $root.google = (() => {
              * @property {boolean|null} [deprecated] FieldOptions deprecated
              * @property {boolean|null} [weak] FieldOptions weak
              * @property {Array.<google.protobuf.IUninterpretedOption>|null} [uninterpreted_option] FieldOptions uninterpreted_option
-             * @property {string|null} [".cosmos_proto.accepts_interface"] FieldOptions .cosmos_proto.accepts_interface
              * @property {boolean|null} [".gogoproto.nullable"] FieldOptions .gogoproto.nullable
              * @property {boolean|null} [".gogoproto.embed"] FieldOptions .gogoproto.embed
              * @property {string|null} [".gogoproto.customtype"] FieldOptions .gogoproto.customtype
@@ -27372,6 +26494,7 @@ export const google = $root.google = (() => {
              * @property {boolean|null} [".gogoproto.stdduration"] FieldOptions .gogoproto.stdduration
              * @property {boolean|null} [".gogoproto.wktpointer"] FieldOptions .gogoproto.wktpointer
              * @property {string|null} [".gogoproto.castrepeated"] FieldOptions .gogoproto.castrepeated
+             * @property {string|null} [".cosmos_proto.accepts_interface"] FieldOptions .cosmos_proto.accepts_interface
              */
 
             /**
@@ -27445,14 +26568,6 @@ export const google = $root.google = (() => {
              * @instance
              */
             FieldOptions.prototype.uninterpreted_option = $util.emptyArray;
-
-            /**
-             * FieldOptions .cosmos_proto.accepts_interface.
-             * @member {string} .cosmos_proto.accepts_interface
-             * @memberof google.protobuf.FieldOptions
-             * @instance
-             */
-            FieldOptions.prototype[".cosmos_proto.accepts_interface"] = "";
 
             /**
              * FieldOptions .gogoproto.nullable.
@@ -27557,6 +26672,14 @@ export const google = $root.google = (() => {
              * @instance
              */
             FieldOptions.prototype[".gogoproto.castrepeated"] = "";
+
+            /**
+             * FieldOptions .cosmos_proto.accepts_interface.
+             * @member {string} .cosmos_proto.accepts_interface
+             * @memberof google.protobuf.FieldOptions
+             * @instance
+             */
+            FieldOptions.prototype[".cosmos_proto.accepts_interface"] = "";
 
             /**
              * Encodes the specified FieldOptions message. Does not implicitly {@link google.protobuf.FieldOptions.verify|verify} messages.
@@ -27670,9 +26793,6 @@ export const google = $root.google = (() => {
                             message.uninterpreted_option = [];
                         message.uninterpreted_option.push($root.google.protobuf.UninterpretedOption.decode(reader, reader.uint32()));
                         break;
-                    case 93001:
-                        message[".cosmos_proto.accepts_interface"] = reader.string();
-                        break;
                     case 65001:
                         message[".gogoproto.nullable"] = reader.bool();
                         break;
@@ -27711,6 +26831,9 @@ export const google = $root.google = (() => {
                         break;
                     case 65013:
                         message[".gogoproto.castrepeated"] = reader.string();
+                        break;
+                    case 93001:
+                        message[".cosmos_proto.accepts_interface"] = reader.string();
                         break;
                     default:
                         reader.skipType(tag & 7);
@@ -27786,9 +26909,6 @@ export const google = $root.google = (() => {
                             return "uninterpreted_option." + error;
                     }
                 }
-                if (message[".cosmos_proto.accepts_interface"] != null && message.hasOwnProperty(".cosmos_proto.accepts_interface"))
-                    if (!$util.isString(message[".cosmos_proto.accepts_interface"]))
-                        return ".cosmos_proto.accepts_interface: string expected";
                 if (message[".gogoproto.nullable"] != null && message.hasOwnProperty(".gogoproto.nullable"))
                     if (typeof message[".gogoproto.nullable"] !== "boolean")
                         return ".gogoproto.nullable: boolean expected";
@@ -27828,6 +26948,9 @@ export const google = $root.google = (() => {
                 if (message[".gogoproto.castrepeated"] != null && message.hasOwnProperty(".gogoproto.castrepeated"))
                     if (!$util.isString(message[".gogoproto.castrepeated"]))
                         return ".gogoproto.castrepeated: string expected";
+                if (message[".cosmos_proto.accepts_interface"] != null && message.hasOwnProperty(".cosmos_proto.accepts_interface"))
+                    if (!$util.isString(message[".cosmos_proto.accepts_interface"]))
+                        return ".cosmos_proto.accepts_interface: string expected";
                 return null;
             };
 
@@ -27889,8 +27012,6 @@ export const google = $root.google = (() => {
                         message.uninterpreted_option[i] = $root.google.protobuf.UninterpretedOption.fromObject(object.uninterpreted_option[i]);
                     }
                 }
-                if (object[".cosmos_proto.accepts_interface"] != null)
-                    message[".cosmos_proto.accepts_interface"] = String(object[".cosmos_proto.accepts_interface"]);
                 if (object[".gogoproto.nullable"] != null)
                     message[".gogoproto.nullable"] = Boolean(object[".gogoproto.nullable"]);
                 if (object[".gogoproto.embed"] != null)
@@ -27917,6 +27038,8 @@ export const google = $root.google = (() => {
                     message[".gogoproto.wktpointer"] = Boolean(object[".gogoproto.wktpointer"]);
                 if (object[".gogoproto.castrepeated"] != null)
                     message[".gogoproto.castrepeated"] = String(object[".gogoproto.castrepeated"]);
+                if (object[".cosmos_proto.accepts_interface"] != null)
+                    message[".cosmos_proto.accepts_interface"] = String(object[".cosmos_proto.accepts_interface"]);
                 return message;
             };
 
@@ -30861,213 +29984,6 @@ export const google = $root.google = (() => {
             return GeneratedCodeInfo;
         })();
 
-        protobuf.Any = (function() {
-
-            /**
-             * Properties of an Any.
-             * @memberof google.protobuf
-             * @interface IAny
-             * @property {string|null} [type_url] Any type_url
-             * @property {Uint8Array|null} [value] Any value
-             */
-
-            /**
-             * Constructs a new Any.
-             * @memberof google.protobuf
-             * @classdesc Represents an Any.
-             * @implements IAny
-             * @constructor
-             * @param {google.protobuf.IAny=} [properties] Properties to set
-             */
-            function Any(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * Any type_url.
-             * @member {string} type_url
-             * @memberof google.protobuf.Any
-             * @instance
-             */
-            Any.prototype.type_url = "";
-
-            /**
-             * Any value.
-             * @member {Uint8Array} value
-             * @memberof google.protobuf.Any
-             * @instance
-             */
-            Any.prototype.value = $util.newBuffer([]);
-
-            /**
-             * Encodes the specified Any message. Does not implicitly {@link google.protobuf.Any.verify|verify} messages.
-             * @function encode
-             * @memberof google.protobuf.Any
-             * @static
-             * @param {google.protobuf.IAny} message Any message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Any.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.type_url != null && Object.hasOwnProperty.call(message, "type_url"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.type_url);
-                if (message.value != null && Object.hasOwnProperty.call(message, "value"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.value);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified Any message, length delimited. Does not implicitly {@link google.protobuf.Any.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof google.protobuf.Any
-             * @static
-             * @param {google.protobuf.IAny} message Any message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Any.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes an Any message from the specified reader or buffer.
-             * @function decode
-             * @memberof google.protobuf.Any
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.Any} Any
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Any.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.protobuf.Any();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.type_url = reader.string();
-                        break;
-                    case 2:
-                        message.value = reader.bytes();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes an Any message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof google.protobuf.Any
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.Any} Any
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Any.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies an Any message.
-             * @function verify
-             * @memberof google.protobuf.Any
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            Any.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.type_url != null && message.hasOwnProperty("type_url"))
-                    if (!$util.isString(message.type_url))
-                        return "type_url: string expected";
-                if (message.value != null && message.hasOwnProperty("value"))
-                    if (!(message.value && typeof message.value.length === "number" || $util.isString(message.value)))
-                        return "value: buffer expected";
-                return null;
-            };
-
-            /**
-             * Creates an Any message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof google.protobuf.Any
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {google.protobuf.Any} Any
-             */
-            Any.fromObject = function fromObject(object) {
-                if (object instanceof $root.google.protobuf.Any)
-                    return object;
-                let message = new $root.google.protobuf.Any();
-                if (object.type_url != null)
-                    message.type_url = String(object.type_url);
-                if (object.value != null)
-                    if (typeof object.value === "string")
-                        $util.base64.decode(object.value, message.value = $util.newBuffer($util.base64.length(object.value)), 0);
-                    else if (object.value.length)
-                        message.value = object.value;
-                return message;
-            };
-
-            /**
-             * Creates a plain object from an Any message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof google.protobuf.Any
-             * @static
-             * @param {google.protobuf.Any} message Any
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            Any.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.type_url = "";
-                    if (options.bytes === String)
-                        object.value = "";
-                    else {
-                        object.value = [];
-                        if (options.bytes !== Array)
-                            object.value = $util.newBuffer(object.value);
-                    }
-                }
-                if (message.type_url != null && message.hasOwnProperty("type_url"))
-                    object.type_url = message.type_url;
-                if (message.value != null && message.hasOwnProperty("value"))
-                    object.value = options.bytes === String ? $util.base64.encode(message.value, 0, message.value.length) : options.bytes === Array ? Array.prototype.slice.call(message.value) : message.value;
-                return object;
-            };
-
-            /**
-             * Converts this Any to JSON.
-             * @function toJSON
-             * @memberof google.protobuf.Any
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            Any.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return Any;
-        })();
-
         protobuf.Timestamp = (function() {
 
             /**
@@ -31492,10 +30408,1109 @@ export const google = $root.google = (() => {
             return Duration;
         })();
 
+        protobuf.Any = (function() {
+
+            /**
+             * Properties of an Any.
+             * @memberof google.protobuf
+             * @interface IAny
+             * @property {string|null} [type_url] Any type_url
+             * @property {Uint8Array|null} [value] Any value
+             */
+
+            /**
+             * Constructs a new Any.
+             * @memberof google.protobuf
+             * @classdesc Represents an Any.
+             * @implements IAny
+             * @constructor
+             * @param {google.protobuf.IAny=} [properties] Properties to set
+             */
+            function Any(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Any type_url.
+             * @member {string} type_url
+             * @memberof google.protobuf.Any
+             * @instance
+             */
+            Any.prototype.type_url = "";
+
+            /**
+             * Any value.
+             * @member {Uint8Array} value
+             * @memberof google.protobuf.Any
+             * @instance
+             */
+            Any.prototype.value = $util.newBuffer([]);
+
+            /**
+             * Encodes the specified Any message. Does not implicitly {@link google.protobuf.Any.verify|verify} messages.
+             * @function encode
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {google.protobuf.IAny} message Any message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Any.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.type_url != null && Object.hasOwnProperty.call(message, "type_url"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.type_url);
+                if (message.value != null && Object.hasOwnProperty.call(message, "value"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.value);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified Any message, length delimited. Does not implicitly {@link google.protobuf.Any.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {google.protobuf.IAny} message Any message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Any.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an Any message from the specified reader or buffer.
+             * @function decode
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {google.protobuf.Any} Any
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Any.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.protobuf.Any();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.type_url = reader.string();
+                        break;
+                    case 2:
+                        message.value = reader.bytes();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an Any message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {google.protobuf.Any} Any
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Any.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an Any message.
+             * @function verify
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            Any.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.type_url != null && message.hasOwnProperty("type_url"))
+                    if (!$util.isString(message.type_url))
+                        return "type_url: string expected";
+                if (message.value != null && message.hasOwnProperty("value"))
+                    if (!(message.value && typeof message.value.length === "number" || $util.isString(message.value)))
+                        return "value: buffer expected";
+                return null;
+            };
+
+            /**
+             * Creates an Any message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {google.protobuf.Any} Any
+             */
+            Any.fromObject = function fromObject(object) {
+                if (object instanceof $root.google.protobuf.Any)
+                    return object;
+                let message = new $root.google.protobuf.Any();
+                if (object.type_url != null)
+                    message.type_url = String(object.type_url);
+                if (object.value != null)
+                    if (typeof object.value === "string")
+                        $util.base64.decode(object.value, message.value = $util.newBuffer($util.base64.length(object.value)), 0);
+                    else if (object.value.length)
+                        message.value = object.value;
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an Any message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {google.protobuf.Any} message Any
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            Any.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.type_url = "";
+                    if (options.bytes === String)
+                        object.value = "";
+                    else {
+                        object.value = [];
+                        if (options.bytes !== Array)
+                            object.value = $util.newBuffer(object.value);
+                    }
+                }
+                if (message.type_url != null && message.hasOwnProperty("type_url"))
+                    object.type_url = message.type_url;
+                if (message.value != null && message.hasOwnProperty("value"))
+                    object.value = options.bytes === String ? $util.base64.encode(message.value, 0, message.value.length) : options.bytes === Array ? Array.prototype.slice.call(message.value) : message.value;
+                return object;
+            };
+
+            /**
+             * Converts this Any to JSON.
+             * @function toJSON
+             * @memberof google.protobuf.Any
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            Any.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return Any;
+        })();
+
         return protobuf;
     })();
 
+    google.api = (function() {
+
+        /**
+         * Namespace api.
+         * @memberof google
+         * @namespace
+         */
+        const api = {};
+
+        api.Http = (function() {
+
+            /**
+             * Properties of a Http.
+             * @memberof google.api
+             * @interface IHttp
+             * @property {Array.<google.api.IHttpRule>|null} [rules] Http rules
+             * @property {boolean|null} [fully_decode_reserved_expansion] Http fully_decode_reserved_expansion
+             */
+
+            /**
+             * Constructs a new Http.
+             * @memberof google.api
+             * @classdesc Represents a Http.
+             * @implements IHttp
+             * @constructor
+             * @param {google.api.IHttp=} [properties] Properties to set
+             */
+            function Http(properties) {
+                this.rules = [];
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Http rules.
+             * @member {Array.<google.api.IHttpRule>} rules
+             * @memberof google.api.Http
+             * @instance
+             */
+            Http.prototype.rules = $util.emptyArray;
+
+            /**
+             * Http fully_decode_reserved_expansion.
+             * @member {boolean} fully_decode_reserved_expansion
+             * @memberof google.api.Http
+             * @instance
+             */
+            Http.prototype.fully_decode_reserved_expansion = false;
+
+            /**
+             * Encodes the specified Http message. Does not implicitly {@link google.api.Http.verify|verify} messages.
+             * @function encode
+             * @memberof google.api.Http
+             * @static
+             * @param {google.api.IHttp} message Http message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Http.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.rules != null && message.rules.length)
+                    for (let i = 0; i < message.rules.length; ++i)
+                        $root.google.api.HttpRule.encode(message.rules[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                if (message.fully_decode_reserved_expansion != null && Object.hasOwnProperty.call(message, "fully_decode_reserved_expansion"))
+                    writer.uint32(/* id 2, wireType 0 =*/16).bool(message.fully_decode_reserved_expansion);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified Http message, length delimited. Does not implicitly {@link google.api.Http.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof google.api.Http
+             * @static
+             * @param {google.api.IHttp} message Http message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Http.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a Http message from the specified reader or buffer.
+             * @function decode
+             * @memberof google.api.Http
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {google.api.Http} Http
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Http.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.api.Http();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        if (!(message.rules && message.rules.length))
+                            message.rules = [];
+                        message.rules.push($root.google.api.HttpRule.decode(reader, reader.uint32()));
+                        break;
+                    case 2:
+                        message.fully_decode_reserved_expansion = reader.bool();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a Http message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof google.api.Http
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {google.api.Http} Http
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Http.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a Http message.
+             * @function verify
+             * @memberof google.api.Http
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            Http.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.rules != null && message.hasOwnProperty("rules")) {
+                    if (!Array.isArray(message.rules))
+                        return "rules: array expected";
+                    for (let i = 0; i < message.rules.length; ++i) {
+                        let error = $root.google.api.HttpRule.verify(message.rules[i]);
+                        if (error)
+                            return "rules." + error;
+                    }
+                }
+                if (message.fully_decode_reserved_expansion != null && message.hasOwnProperty("fully_decode_reserved_expansion"))
+                    if (typeof message.fully_decode_reserved_expansion !== "boolean")
+                        return "fully_decode_reserved_expansion: boolean expected";
+                return null;
+            };
+
+            /**
+             * Creates a Http message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof google.api.Http
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {google.api.Http} Http
+             */
+            Http.fromObject = function fromObject(object) {
+                if (object instanceof $root.google.api.Http)
+                    return object;
+                let message = new $root.google.api.Http();
+                if (object.rules) {
+                    if (!Array.isArray(object.rules))
+                        throw TypeError(".google.api.Http.rules: array expected");
+                    message.rules = [];
+                    for (let i = 0; i < object.rules.length; ++i) {
+                        if (typeof object.rules[i] !== "object")
+                            throw TypeError(".google.api.Http.rules: object expected");
+                        message.rules[i] = $root.google.api.HttpRule.fromObject(object.rules[i]);
+                    }
+                }
+                if (object.fully_decode_reserved_expansion != null)
+                    message.fully_decode_reserved_expansion = Boolean(object.fully_decode_reserved_expansion);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a Http message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof google.api.Http
+             * @static
+             * @param {google.api.Http} message Http
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            Http.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.arrays || options.defaults)
+                    object.rules = [];
+                if (options.defaults)
+                    object.fully_decode_reserved_expansion = false;
+                if (message.rules && message.rules.length) {
+                    object.rules = [];
+                    for (let j = 0; j < message.rules.length; ++j)
+                        object.rules[j] = $root.google.api.HttpRule.toObject(message.rules[j], options);
+                }
+                if (message.fully_decode_reserved_expansion != null && message.hasOwnProperty("fully_decode_reserved_expansion"))
+                    object.fully_decode_reserved_expansion = message.fully_decode_reserved_expansion;
+                return object;
+            };
+
+            /**
+             * Converts this Http to JSON.
+             * @function toJSON
+             * @memberof google.api.Http
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            Http.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return Http;
+        })();
+
+        api.HttpRule = (function() {
+
+            /**
+             * Properties of a HttpRule.
+             * @memberof google.api
+             * @interface IHttpRule
+             * @property {string|null} [selector] HttpRule selector
+             * @property {string|null} [get] HttpRule get
+             * @property {string|null} [put] HttpRule put
+             * @property {string|null} [post] HttpRule post
+             * @property {string|null} ["delete"] HttpRule delete
+             * @property {string|null} [patch] HttpRule patch
+             * @property {google.api.ICustomHttpPattern|null} [custom] HttpRule custom
+             * @property {string|null} [body] HttpRule body
+             * @property {string|null} [response_body] HttpRule response_body
+             * @property {Array.<google.api.IHttpRule>|null} [additional_bindings] HttpRule additional_bindings
+             */
+
+            /**
+             * Constructs a new HttpRule.
+             * @memberof google.api
+             * @classdesc Represents a HttpRule.
+             * @implements IHttpRule
+             * @constructor
+             * @param {google.api.IHttpRule=} [properties] Properties to set
+             */
+            function HttpRule(properties) {
+                this.additional_bindings = [];
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * HttpRule selector.
+             * @member {string} selector
+             * @memberof google.api.HttpRule
+             * @instance
+             */
+            HttpRule.prototype.selector = "";
+
+            /**
+             * HttpRule get.
+             * @member {string|null|undefined} get
+             * @memberof google.api.HttpRule
+             * @instance
+             */
+            HttpRule.prototype.get = null;
+
+            /**
+             * HttpRule put.
+             * @member {string|null|undefined} put
+             * @memberof google.api.HttpRule
+             * @instance
+             */
+            HttpRule.prototype.put = null;
+
+            /**
+             * HttpRule post.
+             * @member {string|null|undefined} post
+             * @memberof google.api.HttpRule
+             * @instance
+             */
+            HttpRule.prototype.post = null;
+
+            /**
+             * HttpRule delete.
+             * @member {string|null|undefined} delete
+             * @memberof google.api.HttpRule
+             * @instance
+             */
+            HttpRule.prototype["delete"] = null;
+
+            /**
+             * HttpRule patch.
+             * @member {string|null|undefined} patch
+             * @memberof google.api.HttpRule
+             * @instance
+             */
+            HttpRule.prototype.patch = null;
+
+            /**
+             * HttpRule custom.
+             * @member {google.api.ICustomHttpPattern|null|undefined} custom
+             * @memberof google.api.HttpRule
+             * @instance
+             */
+            HttpRule.prototype.custom = null;
+
+            /**
+             * HttpRule body.
+             * @member {string} body
+             * @memberof google.api.HttpRule
+             * @instance
+             */
+            HttpRule.prototype.body = "";
+
+            /**
+             * HttpRule response_body.
+             * @member {string} response_body
+             * @memberof google.api.HttpRule
+             * @instance
+             */
+            HttpRule.prototype.response_body = "";
+
+            /**
+             * HttpRule additional_bindings.
+             * @member {Array.<google.api.IHttpRule>} additional_bindings
+             * @memberof google.api.HttpRule
+             * @instance
+             */
+            HttpRule.prototype.additional_bindings = $util.emptyArray;
+
+            // OneOf field names bound to virtual getters and setters
+            let $oneOfFields;
+
+            /**
+             * HttpRule pattern.
+             * @member {"get"|"put"|"post"|"delete"|"patch"|"custom"|undefined} pattern
+             * @memberof google.api.HttpRule
+             * @instance
+             */
+            Object.defineProperty(HttpRule.prototype, "pattern", {
+                get: $util.oneOfGetter($oneOfFields = ["get", "put", "post", "delete", "patch", "custom"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Encodes the specified HttpRule message. Does not implicitly {@link google.api.HttpRule.verify|verify} messages.
+             * @function encode
+             * @memberof google.api.HttpRule
+             * @static
+             * @param {google.api.IHttpRule} message HttpRule message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            HttpRule.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.selector != null && Object.hasOwnProperty.call(message, "selector"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.selector);
+                if (message.get != null && Object.hasOwnProperty.call(message, "get"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.get);
+                if (message.put != null && Object.hasOwnProperty.call(message, "put"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.put);
+                if (message.post != null && Object.hasOwnProperty.call(message, "post"))
+                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.post);
+                if (message["delete"] != null && Object.hasOwnProperty.call(message, "delete"))
+                    writer.uint32(/* id 5, wireType 2 =*/42).string(message["delete"]);
+                if (message.patch != null && Object.hasOwnProperty.call(message, "patch"))
+                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.patch);
+                if (message.body != null && Object.hasOwnProperty.call(message, "body"))
+                    writer.uint32(/* id 7, wireType 2 =*/58).string(message.body);
+                if (message.custom != null && Object.hasOwnProperty.call(message, "custom"))
+                    $root.google.api.CustomHttpPattern.encode(message.custom, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
+                if (message.additional_bindings != null && message.additional_bindings.length)
+                    for (let i = 0; i < message.additional_bindings.length; ++i)
+                        $root.google.api.HttpRule.encode(message.additional_bindings[i], writer.uint32(/* id 11, wireType 2 =*/90).fork()).ldelim();
+                if (message.response_body != null && Object.hasOwnProperty.call(message, "response_body"))
+                    writer.uint32(/* id 12, wireType 2 =*/98).string(message.response_body);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified HttpRule message, length delimited. Does not implicitly {@link google.api.HttpRule.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof google.api.HttpRule
+             * @static
+             * @param {google.api.IHttpRule} message HttpRule message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            HttpRule.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a HttpRule message from the specified reader or buffer.
+             * @function decode
+             * @memberof google.api.HttpRule
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {google.api.HttpRule} HttpRule
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            HttpRule.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.api.HttpRule();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.selector = reader.string();
+                        break;
+                    case 2:
+                        message.get = reader.string();
+                        break;
+                    case 3:
+                        message.put = reader.string();
+                        break;
+                    case 4:
+                        message.post = reader.string();
+                        break;
+                    case 5:
+                        message["delete"] = reader.string();
+                        break;
+                    case 6:
+                        message.patch = reader.string();
+                        break;
+                    case 8:
+                        message.custom = $root.google.api.CustomHttpPattern.decode(reader, reader.uint32());
+                        break;
+                    case 7:
+                        message.body = reader.string();
+                        break;
+                    case 12:
+                        message.response_body = reader.string();
+                        break;
+                    case 11:
+                        if (!(message.additional_bindings && message.additional_bindings.length))
+                            message.additional_bindings = [];
+                        message.additional_bindings.push($root.google.api.HttpRule.decode(reader, reader.uint32()));
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a HttpRule message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof google.api.HttpRule
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {google.api.HttpRule} HttpRule
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            HttpRule.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a HttpRule message.
+             * @function verify
+             * @memberof google.api.HttpRule
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            HttpRule.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                let properties = {};
+                if (message.selector != null && message.hasOwnProperty("selector"))
+                    if (!$util.isString(message.selector))
+                        return "selector: string expected";
+                if (message.get != null && message.hasOwnProperty("get")) {
+                    properties.pattern = 1;
+                    if (!$util.isString(message.get))
+                        return "get: string expected";
+                }
+                if (message.put != null && message.hasOwnProperty("put")) {
+                    if (properties.pattern === 1)
+                        return "pattern: multiple values";
+                    properties.pattern = 1;
+                    if (!$util.isString(message.put))
+                        return "put: string expected";
+                }
+                if (message.post != null && message.hasOwnProperty("post")) {
+                    if (properties.pattern === 1)
+                        return "pattern: multiple values";
+                    properties.pattern = 1;
+                    if (!$util.isString(message.post))
+                        return "post: string expected";
+                }
+                if (message["delete"] != null && message.hasOwnProperty("delete")) {
+                    if (properties.pattern === 1)
+                        return "pattern: multiple values";
+                    properties.pattern = 1;
+                    if (!$util.isString(message["delete"]))
+                        return "delete: string expected";
+                }
+                if (message.patch != null && message.hasOwnProperty("patch")) {
+                    if (properties.pattern === 1)
+                        return "pattern: multiple values";
+                    properties.pattern = 1;
+                    if (!$util.isString(message.patch))
+                        return "patch: string expected";
+                }
+                if (message.custom != null && message.hasOwnProperty("custom")) {
+                    if (properties.pattern === 1)
+                        return "pattern: multiple values";
+                    properties.pattern = 1;
+                    {
+                        let error = $root.google.api.CustomHttpPattern.verify(message.custom);
+                        if (error)
+                            return "custom." + error;
+                    }
+                }
+                if (message.body != null && message.hasOwnProperty("body"))
+                    if (!$util.isString(message.body))
+                        return "body: string expected";
+                if (message.response_body != null && message.hasOwnProperty("response_body"))
+                    if (!$util.isString(message.response_body))
+                        return "response_body: string expected";
+                if (message.additional_bindings != null && message.hasOwnProperty("additional_bindings")) {
+                    if (!Array.isArray(message.additional_bindings))
+                        return "additional_bindings: array expected";
+                    for (let i = 0; i < message.additional_bindings.length; ++i) {
+                        let error = $root.google.api.HttpRule.verify(message.additional_bindings[i]);
+                        if (error)
+                            return "additional_bindings." + error;
+                    }
+                }
+                return null;
+            };
+
+            /**
+             * Creates a HttpRule message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof google.api.HttpRule
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {google.api.HttpRule} HttpRule
+             */
+            HttpRule.fromObject = function fromObject(object) {
+                if (object instanceof $root.google.api.HttpRule)
+                    return object;
+                let message = new $root.google.api.HttpRule();
+                if (object.selector != null)
+                    message.selector = String(object.selector);
+                if (object.get != null)
+                    message.get = String(object.get);
+                if (object.put != null)
+                    message.put = String(object.put);
+                if (object.post != null)
+                    message.post = String(object.post);
+                if (object["delete"] != null)
+                    message["delete"] = String(object["delete"]);
+                if (object.patch != null)
+                    message.patch = String(object.patch);
+                if (object.custom != null) {
+                    if (typeof object.custom !== "object")
+                        throw TypeError(".google.api.HttpRule.custom: object expected");
+                    message.custom = $root.google.api.CustomHttpPattern.fromObject(object.custom);
+                }
+                if (object.body != null)
+                    message.body = String(object.body);
+                if (object.response_body != null)
+                    message.response_body = String(object.response_body);
+                if (object.additional_bindings) {
+                    if (!Array.isArray(object.additional_bindings))
+                        throw TypeError(".google.api.HttpRule.additional_bindings: array expected");
+                    message.additional_bindings = [];
+                    for (let i = 0; i < object.additional_bindings.length; ++i) {
+                        if (typeof object.additional_bindings[i] !== "object")
+                            throw TypeError(".google.api.HttpRule.additional_bindings: object expected");
+                        message.additional_bindings[i] = $root.google.api.HttpRule.fromObject(object.additional_bindings[i]);
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a HttpRule message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof google.api.HttpRule
+             * @static
+             * @param {google.api.HttpRule} message HttpRule
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            HttpRule.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.arrays || options.defaults)
+                    object.additional_bindings = [];
+                if (options.defaults) {
+                    object.selector = "";
+                    object.body = "";
+                    object.response_body = "";
+                }
+                if (message.selector != null && message.hasOwnProperty("selector"))
+                    object.selector = message.selector;
+                if (message.get != null && message.hasOwnProperty("get")) {
+                    object.get = message.get;
+                    if (options.oneofs)
+                        object.pattern = "get";
+                }
+                if (message.put != null && message.hasOwnProperty("put")) {
+                    object.put = message.put;
+                    if (options.oneofs)
+                        object.pattern = "put";
+                }
+                if (message.post != null && message.hasOwnProperty("post")) {
+                    object.post = message.post;
+                    if (options.oneofs)
+                        object.pattern = "post";
+                }
+                if (message["delete"] != null && message.hasOwnProperty("delete")) {
+                    object["delete"] = message["delete"];
+                    if (options.oneofs)
+                        object.pattern = "delete";
+                }
+                if (message.patch != null && message.hasOwnProperty("patch")) {
+                    object.patch = message.patch;
+                    if (options.oneofs)
+                        object.pattern = "patch";
+                }
+                if (message.body != null && message.hasOwnProperty("body"))
+                    object.body = message.body;
+                if (message.custom != null && message.hasOwnProperty("custom")) {
+                    object.custom = $root.google.api.CustomHttpPattern.toObject(message.custom, options);
+                    if (options.oneofs)
+                        object.pattern = "custom";
+                }
+                if (message.additional_bindings && message.additional_bindings.length) {
+                    object.additional_bindings = [];
+                    for (let j = 0; j < message.additional_bindings.length; ++j)
+                        object.additional_bindings[j] = $root.google.api.HttpRule.toObject(message.additional_bindings[j], options);
+                }
+                if (message.response_body != null && message.hasOwnProperty("response_body"))
+                    object.response_body = message.response_body;
+                return object;
+            };
+
+            /**
+             * Converts this HttpRule to JSON.
+             * @function toJSON
+             * @memberof google.api.HttpRule
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            HttpRule.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return HttpRule;
+        })();
+
+        api.CustomHttpPattern = (function() {
+
+            /**
+             * Properties of a CustomHttpPattern.
+             * @memberof google.api
+             * @interface ICustomHttpPattern
+             * @property {string|null} [kind] CustomHttpPattern kind
+             * @property {string|null} [path] CustomHttpPattern path
+             */
+
+            /**
+             * Constructs a new CustomHttpPattern.
+             * @memberof google.api
+             * @classdesc Represents a CustomHttpPattern.
+             * @implements ICustomHttpPattern
+             * @constructor
+             * @param {google.api.ICustomHttpPattern=} [properties] Properties to set
+             */
+            function CustomHttpPattern(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * CustomHttpPattern kind.
+             * @member {string} kind
+             * @memberof google.api.CustomHttpPattern
+             * @instance
+             */
+            CustomHttpPattern.prototype.kind = "";
+
+            /**
+             * CustomHttpPattern path.
+             * @member {string} path
+             * @memberof google.api.CustomHttpPattern
+             * @instance
+             */
+            CustomHttpPattern.prototype.path = "";
+
+            /**
+             * Encodes the specified CustomHttpPattern message. Does not implicitly {@link google.api.CustomHttpPattern.verify|verify} messages.
+             * @function encode
+             * @memberof google.api.CustomHttpPattern
+             * @static
+             * @param {google.api.ICustomHttpPattern} message CustomHttpPattern message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            CustomHttpPattern.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.kind);
+                if (message.path != null && Object.hasOwnProperty.call(message, "path"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.path);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified CustomHttpPattern message, length delimited. Does not implicitly {@link google.api.CustomHttpPattern.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof google.api.CustomHttpPattern
+             * @static
+             * @param {google.api.ICustomHttpPattern} message CustomHttpPattern message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            CustomHttpPattern.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a CustomHttpPattern message from the specified reader or buffer.
+             * @function decode
+             * @memberof google.api.CustomHttpPattern
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {google.api.CustomHttpPattern} CustomHttpPattern
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            CustomHttpPattern.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.api.CustomHttpPattern();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.kind = reader.string();
+                        break;
+                    case 2:
+                        message.path = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a CustomHttpPattern message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof google.api.CustomHttpPattern
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {google.api.CustomHttpPattern} CustomHttpPattern
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            CustomHttpPattern.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a CustomHttpPattern message.
+             * @function verify
+             * @memberof google.api.CustomHttpPattern
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            CustomHttpPattern.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.kind != null && message.hasOwnProperty("kind"))
+                    if (!$util.isString(message.kind))
+                        return "kind: string expected";
+                if (message.path != null && message.hasOwnProperty("path"))
+                    if (!$util.isString(message.path))
+                        return "path: string expected";
+                return null;
+            };
+
+            /**
+             * Creates a CustomHttpPattern message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof google.api.CustomHttpPattern
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {google.api.CustomHttpPattern} CustomHttpPattern
+             */
+            CustomHttpPattern.fromObject = function fromObject(object) {
+                if (object instanceof $root.google.api.CustomHttpPattern)
+                    return object;
+                let message = new $root.google.api.CustomHttpPattern();
+                if (object.kind != null)
+                    message.kind = String(object.kind);
+                if (object.path != null)
+                    message.path = String(object.path);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a CustomHttpPattern message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof google.api.CustomHttpPattern
+             * @static
+             * @param {google.api.CustomHttpPattern} message CustomHttpPattern
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            CustomHttpPattern.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.kind = "";
+                    object.path = "";
+                }
+                if (message.kind != null && message.hasOwnProperty("kind"))
+                    object.kind = message.kind;
+                if (message.path != null && message.hasOwnProperty("path"))
+                    object.path = message.path;
+                return object;
+            };
+
+            /**
+             * Converts this CustomHttpPattern to JSON.
+             * @function toJSON
+             * @memberof google.api.CustomHttpPattern
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            CustomHttpPattern.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return CustomHttpPattern;
+        })();
+
+        return api;
+    })();
+
     return google;
+})();
+
+export const cosmos_proto = $root.cosmos_proto = (() => {
+
+    /**
+     * Namespace cosmos_proto.
+     * @exports cosmos_proto
+     * @namespace
+     */
+    const cosmos_proto = {};
+
+    return cosmos_proto;
 })();
 
 export { $root as default };
