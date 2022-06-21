@@ -32,7 +32,7 @@
     "protobufjs": "^6.11.2"
   },
   "devDependencies": {
-    "@cosmos-client/core": "^0.45.1",
+    "@cosmos-client/core": "^0.46.0-rc1",
     "@types/axios": "^0.14.0",
     "@types/jest": "^27.0.2",
     "@types/long": "^4.0.1",
@@ -41,6 +41,6 @@
     "typescript": "^4.4.4"
   },
   "peerDependencies": {
-    "@cosmos-client/core": "^0.45.1"
+    "@cosmos-client/core": "^0.46.0-rc1"
   }
 }
