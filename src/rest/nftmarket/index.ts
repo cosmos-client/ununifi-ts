@@ -1,4 +1,4 @@
-import { ununifi } from '../../../proto';
+import { ununifi } from '../../proto';
 import cosmosclient from '@cosmos-client/core';
 
 // Todo: after swagger.yml change, create module.ts and implement and enable next line.

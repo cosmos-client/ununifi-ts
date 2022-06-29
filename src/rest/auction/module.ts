@@ -1,4 +1,4 @@
-import { QueryApi } from '../../../openapi';
+import { QueryApi } from '../../openapi';
 import cosmosclient from '@cosmos-client/core';
 
 export function auction(sdk: cosmosclient.CosmosSDK, id: string) {
