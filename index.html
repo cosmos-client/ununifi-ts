@@ -108,13 +108,13 @@
         console.log(account);
 
         // build MsgListNft
-        const msgListNft = new ununifi.default.proto.ununifi.nftmarket.MsgListNft({
+        const msgListNft = new ununifi.nftmarket.MsgListNft({
           sender: senderAccAddressString,
           nft_id: {
             class_id: 'a10',
             nft_id: 'a10',
           },
-          listing_type: ununifi.default.proto.ununifi.nftmarket.ListingType.DIRECT_ASSET_BORROW,
+          listing_type: ununifi.nftmarket.ListingType.DIRECT_ASSET_BORROW,
           bid_token: 'uguu',
           min_bid: '1',
           bid_active_rank: Long.fromString('2'),
