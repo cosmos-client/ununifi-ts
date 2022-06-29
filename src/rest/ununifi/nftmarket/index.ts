@@ -2,7 +2,7 @@ import { ununifi } from '../../../proto';
 import cosmosclient from '@cosmos-client/core';
 
 // Todo: after swagger.yml change, create module.ts and implement and enable next line.
-// export * as nftmarket from "./module";
+export * as nftmarket from './module';
 
 cosmosclient.codec.register('/ununifi.nftmarket.MsgListNft', ununifi.nftmarket.MsgListNft);
 cosmosclient.codec.register('/ununifi.nftmarket.MsgCancelNftListing', ununifi.nftmarket.MsgCancelNftListing);
