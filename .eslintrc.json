@@ -13,9 +13,5 @@
     ".eslintrc.jest.json",
     ".eslintrc.typescript.json",
     "prettier"
-  ],
-  "parserOptions": {
-    "project": "projects/ununifi-client/tsconfig.json",
-    "sourceType": "module"
-  }
+  ]
 }
