@@ -120,6 +120,9 @@
           bid_active_rank: Long.fromString('2'),
         });
 
+        console.log('cosmosclient.codec.instanceToProtoAny(msgListNft)');
+        console.log(cosmosclient.codec.instanceToProtoAny(msgListNft));
+
         // build TxBody
         const txBody = new cosmosclient.proto.cosmos.tx.v1beta1.TxBody({
           messages: [msgListNft],
