@@ -3,3 +3,4 @@ export * from './ununifidist';
 export * from './cdp';
 export * from './incentive';
 export * from './pricefeed';
+export * from './nftmarket';
