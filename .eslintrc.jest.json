@@ -2,15 +2,11 @@
   "env": {
     "jest/globals": true
   },
-  "plugins": [
-    "jest"
-  ],
+  "plugins": ["jest"],
   "settings": {
     "jest": {
       "version": 26
     }
   },
-  "extends": [
-    "plugin:jest/all"
-  ]
+  "extends": ["plugin:jest/all"]
 }

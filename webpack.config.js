@@ -22,8 +22,10 @@ module.exports = {
       stream: require.resolve('stream-browserify'),
     },
   },
-  plugins: [new webpack.ProvidePlugin({
-    process: 'process/browser',
-    Buffer: ['buffer', 'Buffer'],
-  })]
+  plugins: [
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+      Buffer: ['buffer', 'Buffer'],
+    }),
+  ],
 };
