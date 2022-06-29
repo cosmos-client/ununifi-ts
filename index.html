@@ -107,6 +107,8 @@
         const account = convertUnknownAccountToBaseAccount(unknownAccount);
         console.log(account);
 
+        cosmosclient.codec.register('/ununifi.nftmarket.MsgListNft', ununifi.nftmarket.MsgListNft);
+
         // build MsgListNft
         const msgListNft = new ununifi.nftmarket.MsgListNft({
           sender: senderAccAddressString,
