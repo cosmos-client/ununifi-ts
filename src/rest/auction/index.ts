@@ -1,4 +1,4 @@
-import { ununifi } from '../../../proto';
+import { ununifi } from '../../proto';
 import cosmosclient from '@cosmos-client/core';
 
 export * as auction from './module';
