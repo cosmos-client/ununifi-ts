@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@cosmos-client/core@0.46.0-rc5/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@cosmos-client/core@0.46.0-rc7/index.min.js"></script>
     <script src="dist/index.min.js"></script>
   </head>
   <body>
@@ -107,16 +107,14 @@
         const account = convertUnknownAccountToBaseAccount(unknownAccount);
         console.log(account);
 
-        cosmosclient.codec.register('/ununifi.nftmarket.MsgListNft', ununifi.nftmarket.MsgListNft);
-
         // build MsgListNft
-        const msgListNft = new ununifi.nftmarket.MsgListNft({
+        const msgListNft = new ununificlient.proto.ununifi.nftmarket.MsgListNft({
           sender: senderAccAddressString,
           nft_id: {
             class_id: 'a10',
             nft_id: 'a10',
           },
-          listing_type: ununifi.nftmarket.ListingType.DIRECT_ASSET_BORROW,
+          listing_type: ununificlient.proto.ununifi.nftmarket.ListingType.DIRECT_ASSET_BORROW,
           bid_token: 'uguu',
           min_bid: '1',
           bid_active_rank: Long.fromString('2'),
