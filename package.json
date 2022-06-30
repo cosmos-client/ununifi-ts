@@ -34,7 +34,7 @@
     "protobufjs": "^6.11.2"
   },
   "devDependencies": {
-    "@cosmos-client/core": "^0.46.0-rc6",
+    "@cosmos-client/core": "^0.46.0-rc7",
     "@types/axios": "^0.14.0",
     "@types/jest": "^27.0.2",
     "@types/long": "^4.0.1",
@@ -57,6 +57,6 @@
     "webpack-cli": "^4.10.0"
   },
   "peerDependencies": {
-    "@cosmos-client/core": "^0.46.0-rc6"
+    "@cosmos-client/core": "^0.46.0-rc7"
   }
 }
