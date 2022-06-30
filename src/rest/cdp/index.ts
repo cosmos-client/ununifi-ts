@@ -1,5 +1,5 @@
-import { ununifi } from '../../../proto';
-import { cosmosclient } from '@cosmos-client/core';
+import { ununifi } from '../../proto';
+import cosmosclient from '@cosmos-client/core';
 
 export * as cdp from './module';
 

@@ -1,6 +1,6 @@
 {
   "name": "ununifi-client",
-  "version": "0.46.0-rc2",
+  "version": "0.46.0-rc3",
   "description": "REST API Client for UnUniFi Blockchain",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
@@ -17,11 +17,13 @@
   },
   "scripts": {
     "lint": "eslint \"src/**/*\"",
+    "lint:fix": "prettier --write .",
     "test": "jest",
     "test:watch": "jest --watch",
-    "build": "rm -r dist ; mkdir dist && npm run build:cjs && npm run build:esm && node bundle",
+    "build": "rm -r dist ; mkdir dist && npm run build:cjs && npm run build:esm && npm run build:cdn && node bundle",
     "build:cjs": "tsc --build --clean && tsc --target es5 --module commonjs && mv lib dist/cjs",
     "build:esm": "tsc --build --clean && tsc --target esnext --module esnext && mv lib dist/esm",
+    "build:cdn": "tsc --build --clean && tsc --target esnext --module esnext && webpack && cp cdn/main.js dist/index.min.js",
     "gen:openapi": "bash ./gen-openapi.sh",
     "gen:proto": "bash ./gen-proto.sh"
   },
@@ -32,15 +34,29 @@
     "protobufjs": "^6.11.2"
   },
   "devDependencies": {
-    "@cosmos-client/core": "^0.46.0-rc2",
+    "@cosmos-client/core": "^0.46.0-rc7",
     "@types/axios": "^0.14.0",
     "@types/jest": "^27.0.2",
     "@types/long": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.5.3",
     "jest": "^27.2.5",
+    "prettier": "^2.7.1",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
     "ts-jest": "^27.0.7",
-    "typescript": "^4.4.4"
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.4.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
   },
   "peerDependencies": {
-    "@cosmos-client/core": "^0.46.0-rc2"
+    "@cosmos-client/core": "^0.46.0-rc7"
   }
 }

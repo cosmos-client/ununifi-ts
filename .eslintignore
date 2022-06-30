@@ -1,0 +1,6 @@
+.history/
+coverage/
+cdn/
+dist/
+lib/
+node_modules/

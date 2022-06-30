@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@cosmos-client/core@0.46.0-rc7/index.min.js"></script>
+    <script src="dist/index.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      (async () => {
+        const chainID = 'ununifi-alpha-test-v2';
+        const restURL = 'http://ununifi-alpha-test-v2.cauchye.net:1317';
+        const websocketURL = 'ws://ununifi-alpha-test-v2.cauchye.net:26657';
+        const restApi = new cosmosclient.CosmosSDK(restURL, chainID);
+        const websocketApi = new cosmosclient.CosmosSDK(websocketURL, chainID);
+        const sdk = { rest: restApi, websocket: websocketApi };
+        const response = await cosmosclient.rest.tendermint.getNodeInfo(sdk.rest);
+        console.log(response.data);
+
+        // set bech32prefix to client
+        const bech32Prefix = 'ununifi';
+        const accAddr = bech32Prefix;
+        const accPub = bech32Prefix + cosmosclient.AddressPrefix.Public;
+        const valAddr = bech32Prefix + cosmosclient.AddressPrefix.Validator + cosmosclient.AddressPrefix.Operator;
+        const valPub =
+          bech32Prefix + cosmosclient.AddressPrefix.Validator + cosmosclient.AddressPrefix.Operator + cosmosclient.AddressPrefix.Public;
+        const consAddr = bech32Prefix + cosmosclient.AddressPrefix.Validator + cosmosclient.AddressPrefix.Consensus;
+        const consPub =
+          bech32Prefix + cosmosclient.AddressPrefix.Validator + cosmosclient.AddressPrefix.Consensus + cosmosclient.AddressPrefix.Public;
+        const bech32PrefixConfig = {
+          accAddr,
+          accPub,
+          valAddr,
+          valPub,
+          consAddr,
+          consPub,
+        };
+        cosmosclient.config.setBech32Prefix(bech32PrefixConfig);
+
+        // prepare sender's account info
+        const senderMnemonic = 'month radio spell indicate eight treat expire ordinary buzz ten spray mad';
+
+        const senderPrivateKeyUint8Array = await cosmosclient.generatePrivKeyFromMnemonic(senderMnemonic);
+        const senderPrivateKey = new cosmosclient.proto.cosmos.crypto.secp256k1.PrivKey({
+          key: senderPrivateKeyUint8Array,
+        });
+
+        const senderPublicKey = senderPrivateKey.pubKey();
+
+        const senderAccAddress = cosmosclient.AccAddress.fromPublicKey(senderPublicKey);
+        const senderAccAddressString = senderAccAddress.toString();
+
+        const accountResponse = await cosmosclient.rest.auth.account(sdk.rest, senderAccAddress);
+        console.log(accountResponse.data?.account);
+        const unknownAccount = cosmosclient.codec.protoJSONToInstance(
+          cosmosclient.codec.castProtoJSONOfProtoAny(accountResponse.data?.account),
+        );
+        console.log(unknownAccount);
+
+        const convertUnknownAccountToBaseAccount = (unknownAccount) => {
+          if (unknownAccount === undefined) {
+            return unknownAccount;
+          } else if (unknownAccount === null) {
+            return unknownAccount;
+          } else if (unknownAccount instanceof cosmosclient.proto.cosmos.auth.v1beta1.BaseAccount) {
+            return unknownAccount;
+          } else if (unknownAccount instanceof cosmosclient.proto.cosmos.vesting.v1beta1.BaseVestingAccount) {
+            if (unknownAccount.base_account === null) {
+              return undefined;
+            }
+            return new cosmosclient.proto.cosmos.auth.v1beta1.BaseAccount(unknownAccount.base_account);
+          } else if (unknownAccount instanceof cosmosclient.proto.cosmos.vesting.v1beta1.ContinuousVestingAccount) {
+            if (unknownAccount.base_vesting_account?.base_account === null) {
+              return undefined;
+            }
+            return new cosmosclient.proto.cosmos.auth.v1beta1.BaseAccount(unknownAccount.base_vesting_account?.base_account);
+          } else if (unknownAccount instanceof cosmosclient.proto.cosmos.vesting.v1beta1.DelayedVestingAccount) {
+            if (unknownAccount.base_vesting_account?.base_account === null) {
+              return undefined;
+            }
+            return new cosmosclient.proto.cosmos.auth.v1beta1.BaseAccount(unknownAccount.base_vesting_account?.base_account);
+          } else if (unknownAccount instanceof cosmosclient.proto.cosmos.vesting.v1beta1.PeriodicVestingAccount) {
+            if (unknownAccount.base_vesting_account?.base_account === null) {
+              return undefined;
+            }
+            return new cosmosclient.proto.cosmos.auth.v1beta1.BaseAccount(unknownAccount.base_vesting_account?.base_account);
+          } else if (unknownAccount instanceof cosmosclient.proto.cosmos.vesting.v1beta1.PermanentLockedAccount) {
+            if (unknownAccount.base_vesting_account?.base_account === null) {
+              return undefined;
+            }
+            return new cosmosclient.proto.cosmos.auth.v1beta1.BaseAccount(unknownAccount.base_vesting_account?.base_account);
+          } else if (unknownAccount instanceof cosmosclient.proto.cosmos.auth.v1beta1.ModuleAccount) {
+            if (unknownAccount.base_account === null) {
+              return undefined;
+            }
+            return new cosmosclient.proto.cosmos.auth.v1beta1.BaseAccount(unknownAccount.base_account);
+          } else {
+            console.error('Unsupported Account!');
+            console.error(unknownAccount);
+            return undefined;
+          }
+        };
+
+        const account = convertUnknownAccountToBaseAccount(unknownAccount);
+        console.log(account);
+
+        // build MsgListNft
+        const msgListNft = new ununificlient.proto.ununifi.nftmarket.MsgListNft({
+          sender: senderAccAddressString,
+          nft_id: {
+            class_id: 'a10',
+            nft_id: 'a10',
+          },
+          listing_type: ununificlient.proto.ununifi.nftmarket.ListingType.DIRECT_ASSET_BORROW,
+          bid_token: 'uguu',
+          min_bid: '1',
+          bid_active_rank: Long.fromString('2'),
+        });
+
+        // build TxBody
+        const txBody = new cosmosclient.proto.cosmos.tx.v1beta1.TxBody({
+          messages: [cosmosclient.codec.instanceToProtoAny(msgListNft)],
+          memo: '',
+        });
+
+        // build AuthInfo
+        const authInfo = new cosmosclient.proto.cosmos.tx.v1beta1.AuthInfo({
+          signer_infos: [
+            {
+              public_key: cosmosclient.codec.instanceToProtoAny(senderPublicKey),
+              mode_info: {
+                single: {
+                  mode: cosmosclient.proto.cosmos.tx.signing.v1beta1.SignMode.SIGN_MODE_DIRECT,
+                },
+              },
+              sequence: account.sequence,
+            },
+          ],
+          fee: {
+            gas_limit: Long.fromString('200000'),
+          },
+        });
+        console.log(authInfo);
+
+        // prepare target bytes data to be signed
+        const txBuilder = new cosmosclient.TxBuilder(sdk.rest, txBody, authInfo);
+        const signDocBytes = txBuilder.signDocBytes(account.account_number);
+
+        // sign and add signature to tx data
+        const signature = senderPrivateKey.sign(signDocBytes);
+        txBuilder.addSignature(signature);
+
+        const txResponse = await cosmosclient.rest.tx.broadcastTx(sdk.rest, {
+          tx_bytes: txBuilder.txBytes(),
+          mode: cosmosclient.rest.tx.BroadcastTxMode.Block,
+        });
+        console.log(txResponse.data);
+      })();
+    </script>
+  </body>
+</html>

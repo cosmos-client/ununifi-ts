@@ -10,12 +10,8 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
-    "../../.eslintrc.jest.json",
-    "../../.eslintrc.prettier.json",
-    "../../.eslintrc.typescript.json"
-  ],
-  "parserOptions": {
-    "project": "projects/ununifi-client/tsconfig.json",
-    "sourceType": "module"
-  }
+    ".eslintrc.jest.json",
+    ".eslintrc.typescript.json",
+    "prettier"
+  ]
 }

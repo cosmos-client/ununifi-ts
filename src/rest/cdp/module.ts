@@ -1,11 +1,7 @@
-import { QueryApi } from '../../../openapi';
-import { cosmosclient } from '@cosmos-client/core';
+import { QueryApi } from '../../openapi';
+import cosmosclient from '@cosmos-client/core';
 
-export function cdp(
-  sdk: cosmosclient.CosmosSDK,
-  owner: cosmosclient.AccAddress,
-  collateralType: string,
-) {
+export function cdp(sdk: cosmosclient.CosmosSDK, owner: cosmosclient.AccAddress, collateralType: string) {
   return new QueryApi(undefined, sdk.url).cdp(owner.toString(), collateralType);
 }
 
@@ -32,10 +28,6 @@ export function allAccounts(sdk: cosmosclient.CosmosSDK) {
   return new QueryApi(undefined, sdk.url).accountAll();
 }
 
-export function allDeposits(
-  sdk: cosmosclient.CosmosSDK,
-  owner: cosmosclient.AccAddress,
-  collateralType: string,
-) {
+export function allDeposits(sdk: cosmosclient.CosmosSDK, owner: cosmosclient.AccAddress, collateralType: string) {
   return new QueryApi(undefined, sdk.url).depositAll(owner.toString(), collateralType);
 }
