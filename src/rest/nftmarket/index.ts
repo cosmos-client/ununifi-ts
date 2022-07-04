@@ -6,8 +6,8 @@ export * as nftmarket from './module';
 
 cosmosclient.codec.register('/ununifi.nftmarket.MsgListNft', ununifi.nftmarket.MsgListNft);
 cosmosclient.codec.register('/ununifi.nftmarket.MsgCancelNftListing', ununifi.nftmarket.MsgCancelNftListing);
-cosmosclient.codec.register('/ununifi.nftmarket.MsgExpandListingPeriodResponse', ununifi.nftmarket.MsgExpandListingPeriodResponse);
-cosmosclient.codec.register('/ununifi.nftmarket.MsgPlaceBidResponse', ununifi.nftmarket.MsgPlaceBidResponse);
+cosmosclient.codec.register('/ununifi.nftmarket.MsgExpandListingPeriod', ununifi.nftmarket.MsgExpandListingPeriod);
+cosmosclient.codec.register('/ununifi.nftmarket.MsgPlaceBid', ununifi.nftmarket.MsgPlaceBid);
 cosmosclient.codec.register('/ununifi.nftmarket.MsgCancelBid', ununifi.nftmarket.MsgCancelBid);
 cosmosclient.codec.register('/ununifi.nftmarket.MsgEndNftListing', ununifi.nftmarket.MsgEndNftListing);
 cosmosclient.codec.register('/ununifi.nftmarket.MsgPayFullBid', ununifi.nftmarket.MsgPayFullBid);
