@@ -3634,12 +3634,15 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} [classId] 
+         * @param {string} classId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        classAttributes: async (classId?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftmint/class_owner`;
+        classAttributes: async (classId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'classId' is not null or undefined
+            assertParamExists('classAttributes', 'classId', classId)
+            const localVarPath = `/ununifi/nftmint/class_owner/{class_id}`
+                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3650,10 +3653,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            if (classId !== undefined) {
-                localVarQueryParameter['class_id'] = classId;
-            }
 
 
     
@@ -3668,12 +3667,15 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} [className] 
+         * @param {string} className 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        classIdsByName: async (className?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftmint/class_ids_by_name`;
+        classIdsByName: async (className: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'className' is not null or undefined
+            assertParamExists('classIdsByName', 'className', className)
+            const localVarPath = `/ununifi/nftmint/class_ids_by_name/{class_name}`
+                .replace(`{${"class_name"}}`, encodeURIComponent(String(className)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3684,10 +3686,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            if (className !== undefined) {
-                localVarQueryParameter['class_name'] = className;
-            }
 
 
     
@@ -3702,12 +3700,15 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} [owner] 
+         * @param {string} owner 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        classIdsByOwner: async (owner?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftmint/class_ids_by_owner`;
+        classIdsByOwner: async (owner: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'owner' is not null or undefined
+            assertParamExists('classIdsByOwner', 'owner', owner)
+            const localVarPath = `/ununifi/nftmint/class_ids_by_owner/{owner}`
+                .replace(`{${"owner"}}`, encodeURIComponent(String(owner)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3718,10 +3719,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            if (owner !== undefined) {
-                localVarQueryParameter['owner'] = owner;
-            }
 
 
     
@@ -3981,13 +3978,19 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} [classId] 
-         * @param {string} [nftId] 
+         * @param {string} classId 
+         * @param {string} nftId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        nFTMinter: async (classId?: string, nftId?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftmint/nft_minter`;
+        nFTMinter: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'classId' is not null or undefined
+            assertParamExists('nFTMinter', 'classId', classId)
+            // verify required parameter 'nftId' is not null or undefined
+            assertParamExists('nFTMinter', 'nftId', nftId)
+            const localVarPath = `/ununifi/nftmint/nft_minter/{class_id}/{nft_id}`
+                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
+                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3998,14 +4001,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            if (classId !== undefined) {
-                localVarQueryParameter['class_id'] = classId;
-            }
-
-            if (nftId !== undefined) {
-                localVarQueryParameter['nft_id'] = nftId;
-            }
 
 
     
@@ -4546,31 +4541,31 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} [classId] 
+         * @param {string} classId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async classAttributes(classId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClassAttributes200Response>> {
+        async classAttributes(classId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClassAttributes200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.classAttributes(classId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {string} [className] 
+         * @param {string} className 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async classIdsByName(className?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClassIdsByName200Response>> {
+        async classIdsByName(className: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClassIdsByName200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.classIdsByName(className, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {string} [owner] 
+         * @param {string} owner 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async classIdsByOwner(owner?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClassIdsByOwner200Response>> {
+        async classIdsByOwner(owner: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClassIdsByOwner200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.classIdsByOwner(owner, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4649,12 +4644,12 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} [classId] 
-         * @param {string} [nftId] 
+         * @param {string} classId 
+         * @param {string} nftId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async nFTMinter(classId?: string, nftId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NFTMinter200Response>> {
+        async nFTMinter(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NFTMinter200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.nFTMinter(classId, nftId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4884,29 +4879,29 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} [classId] 
+         * @param {string} classId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        classAttributes(classId?: string, options?: any): AxiosPromise<ClassAttributes200Response> {
+        classAttributes(classId: string, options?: any): AxiosPromise<ClassAttributes200Response> {
             return localVarFp.classAttributes(classId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [className] 
+         * @param {string} className 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        classIdsByName(className?: string, options?: any): AxiosPromise<ClassIdsByName200Response> {
+        classIdsByName(className: string, options?: any): AxiosPromise<ClassIdsByName200Response> {
             return localVarFp.classIdsByName(className, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [owner] 
+         * @param {string} owner 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        classIdsByOwner(owner?: string, options?: any): AxiosPromise<ClassIdsByOwner200Response> {
+        classIdsByOwner(owner: string, options?: any): AxiosPromise<ClassIdsByOwner200Response> {
             return localVarFp.classIdsByOwner(owner, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4977,12 +4972,12 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} [classId] 
-         * @param {string} [nftId] 
+         * @param {string} classId 
+         * @param {string} nftId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        nFTMinter(classId?: string, nftId?: string, options?: any): AxiosPromise<NFTMinter200Response> {
+        nFTMinter(classId: string, nftId: string, options?: any): AxiosPromise<NFTMinter200Response> {
             return localVarFp.nFTMinter(classId, nftId, options).then((request) => request(axios, basePath));
         },
         /**
@@ -5220,34 +5215,34 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} [classId] 
+     * @param {string} classId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public classAttributes(classId?: string, options?: AxiosRequestConfig) {
+    public classAttributes(classId: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).classAttributes(classId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [className] 
+     * @param {string} className 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public classIdsByName(className?: string, options?: AxiosRequestConfig) {
+    public classIdsByName(className: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).classIdsByName(className, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [owner] 
+     * @param {string} owner 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public classIdsByOwner(owner?: string, options?: AxiosRequestConfig) {
+    public classIdsByOwner(owner: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).classIdsByOwner(owner, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -5333,13 +5328,13 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} [classId] 
-     * @param {string} [nftId] 
+     * @param {string} classId 
+     * @param {string} nftId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public nFTMinter(classId?: string, nftId?: string, options?: AxiosRequestConfig) {
+    public nFTMinter(classId: string, nftId: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).nFTMinter(classId, nftId, options).then((request) => request(this.axios, this.basePath));
     }
 
