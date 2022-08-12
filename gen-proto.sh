@@ -42,3 +42,6 @@ npx pbts \
 
 rm -r proto
 rm -r proto-thirdparty
+
+# prettier
+npm run lint:fix

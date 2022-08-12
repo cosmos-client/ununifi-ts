@@ -8,3 +8,6 @@ docker run --rm \
   -g typescript-axios -i /local/swagger.yaml -o /local/src/openapi/
 
 rm swagger.yaml
+
+# prettier
+npm run lint:fix
