@@ -24,8 +24,8 @@
     "build:cjs": "tsc --build --clean && tsc --target es5 --module commonjs && mv lib dist/cjs",
     "build:esm": "tsc --build --clean && tsc --target esnext --module esnext && mv lib dist/esm",
     "build:cdn": "tsc --build --clean && tsc --target esnext --module esnext && webpack && cp cdn/main.js dist/index.min.js",
-    "gen:openapi": "bash ./gen-openapi.sh",
-    "gen:proto": "bash ./gen-proto.sh"
+    "gen:openapi": "bash ./gen-openapi.sh && npm run lint:fix",
+    "gen:proto": "bash ./gen-proto.sh && npm run lint:fix"
   },
   "author": "",
   "license": "ISC",
