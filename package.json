@@ -1,6 +1,6 @@
 {
   "name": "ununifi-client",
-  "version": "0.46.0-rc4",
+  "version": "0.46.0",
   "description": "REST API Client for UnUniFi Blockchain",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
@@ -24,8 +24,8 @@
     "build:cjs": "tsc --build --clean && tsc --target es5 --module commonjs && mv lib dist/cjs",
     "build:esm": "tsc --build --clean && tsc --target esnext --module esnext && mv lib dist/esm",
     "build:cdn": "tsc --build --clean && tsc --target esnext --module esnext && webpack && cp cdn/main.js dist/index.min.js",
-    "gen:openapi": "bash ./gen-openapi.sh",
-    "gen:proto": "bash ./gen-proto.sh"
+    "gen:openapi": "bash ./gen-openapi.sh && npm run lint:fix",
+    "gen:proto": "bash ./gen-proto.sh && npm run lint:fix"
   },
   "author": "",
   "license": "ISC",
@@ -34,7 +34,7 @@
     "protobufjs": "^6.11.2"
   },
   "devDependencies": {
-    "@cosmos-client/core": "^0.46.0-rc7",
+    "@cosmos-client/core": "^0.46.0",
     "@types/axios": "^0.14.0",
     "@types/jest": "^27.0.2",
     "@types/long": "^4.0.1",
@@ -57,6 +57,6 @@
     "webpack-cli": "^4.10.0"
   },
   "peerDependencies": {
-    "@cosmos-client/core": "^0.46.0-rc7"
+    "@cosmos-client/core": "^0.46.0"
   }
 }
