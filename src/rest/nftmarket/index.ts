@@ -16,3 +16,4 @@ cosmosclient.codec.register('/ununifi.nftmarket.MsgRepay', ununifi.nftmarket.Msg
 cosmosclient.codec.register('/ununifi.nftmarket.MsgMintStableCoin', ununifi.nftmarket.MsgMintStableCoin);
 cosmosclient.codec.register('/ununifi.nftmarket.MsgBurnStableCoin', ununifi.nftmarket.MsgBurnStableCoin);
 cosmosclient.codec.register('/ununifi.nftmarket.MsgLiquidate', ununifi.nftmarket.MsgLiquidate);
+cosmosclient.codec.register('/ununifi.nftmarket.MsgSellingDecision', ununifi.nftmarket.MsgSellingDecision);
