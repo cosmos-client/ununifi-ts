@@ -10787,6 +10787,7157 @@
             return cdp;
         })();
     
+        ununifi.ecosystemincentive = (function() {
+    
+            /**
+             * Namespace ecosystemincentive.
+             * @memberof ununifi
+             * @namespace
+             */
+            var ecosystemincentive = {};
+    
+            ecosystemincentive.Query = (function() {
+    
+                /**
+                 * Constructs a new Query service.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a Query
+                 * @extends $protobuf.rpc.Service
+                 * @constructor
+                 * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+                 * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+                 * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+                 */
+                function Query(rpcImpl, requestDelimited, responseDelimited) {
+                    $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+                }
+    
+                (Query.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Query;
+    
+                /**
+                 * Callback as used by {@link ununifi.ecosystemincentive.Query#params}.
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @typedef ParamsCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.ecosystemincentive.QueryParamsResponse} [response] QueryParamsResponse
+                 */
+    
+                /**
+                 * Calls Params.
+                 * @function params
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IQueryParamsRequest} request QueryParamsRequest message or plain object
+                 * @param {ununifi.ecosystemincentive.Query.ParamsCallback} callback Node-style callback called with the error, if any, and QueryParamsResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.params = function params(request, callback) {
+                    return this.rpcCall(params, $root.ununifi.ecosystemincentive.QueryParamsRequest, $root.ununifi.ecosystemincentive.QueryParamsResponse, request, callback);
+                }, "name", { value: "Params" });
+    
+                /**
+                 * Calls Params.
+                 * @function params
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IQueryParamsRequest} request QueryParamsRequest message or plain object
+                 * @returns {Promise<ununifi.ecosystemincentive.QueryParamsResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.ecosystemincentive.Query#incentiveUnit}.
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @typedef IncentiveUnitCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.ecosystemincentive.QueryIncentiveUnitResponse} [response] QueryIncentiveUnitResponse
+                 */
+    
+                /**
+                 * Calls IncentiveUnit.
+                 * @function incentiveUnit
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitRequest} request QueryIncentiveUnitRequest message or plain object
+                 * @param {ununifi.ecosystemincentive.Query.IncentiveUnitCallback} callback Node-style callback called with the error, if any, and QueryIncentiveUnitResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.incentiveUnit = function incentiveUnit(request, callback) {
+                    return this.rpcCall(incentiveUnit, $root.ununifi.ecosystemincentive.QueryIncentiveUnitRequest, $root.ununifi.ecosystemincentive.QueryIncentiveUnitResponse, request, callback);
+                }, "name", { value: "IncentiveUnit" });
+    
+                /**
+                 * Calls IncentiveUnit.
+                 * @function incentiveUnit
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitRequest} request QueryIncentiveUnitRequest message or plain object
+                 * @returns {Promise<ununifi.ecosystemincentive.QueryIncentiveUnitResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.ecosystemincentive.Query#allRewards}.
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @typedef AllRewardsCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.ecosystemincentive.QueryAllRewardsResponse} [response] QueryAllRewardsResponse
+                 */
+    
+                /**
+                 * Calls AllRewards.
+                 * @function allRewards
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsRequest} request QueryAllRewardsRequest message or plain object
+                 * @param {ununifi.ecosystemincentive.Query.AllRewardsCallback} callback Node-style callback called with the error, if any, and QueryAllRewardsResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.allRewards = function allRewards(request, callback) {
+                    return this.rpcCall(allRewards, $root.ununifi.ecosystemincentive.QueryAllRewardsRequest, $root.ununifi.ecosystemincentive.QueryAllRewardsResponse, request, callback);
+                }, "name", { value: "AllRewards" });
+    
+                /**
+                 * Calls AllRewards.
+                 * @function allRewards
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsRequest} request QueryAllRewardsRequest message or plain object
+                 * @returns {Promise<ununifi.ecosystemincentive.QueryAllRewardsResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.ecosystemincentive.Query#reward}.
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @typedef RewardCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.ecosystemincentive.QueryRewardResponse} [response] QueryRewardResponse
+                 */
+    
+                /**
+                 * Calls Reward.
+                 * @function reward
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IQueryRewardRequest} request QueryRewardRequest message or plain object
+                 * @param {ununifi.ecosystemincentive.Query.RewardCallback} callback Node-style callback called with the error, if any, and QueryRewardResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.reward = function reward(request, callback) {
+                    return this.rpcCall(reward, $root.ununifi.ecosystemincentive.QueryRewardRequest, $root.ununifi.ecosystemincentive.QueryRewardResponse, request, callback);
+                }, "name", { value: "Reward" });
+    
+                /**
+                 * Calls Reward.
+                 * @function reward
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IQueryRewardRequest} request QueryRewardRequest message or plain object
+                 * @returns {Promise<ununifi.ecosystemincentive.QueryRewardResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.ecosystemincentive.Query#recordedIncentiveUnitId}.
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @typedef RecordedIncentiveUnitIdCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse} [response] QueryRecordedIncentiveUnitIdResponse
+                 */
+    
+                /**
+                 * Calls RecordedIncentiveUnitId.
+                 * @function recordedIncentiveUnitId
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdRequest} request QueryRecordedIncentiveUnitIdRequest message or plain object
+                 * @param {ununifi.ecosystemincentive.Query.RecordedIncentiveUnitIdCallback} callback Node-style callback called with the error, if any, and QueryRecordedIncentiveUnitIdResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.recordedIncentiveUnitId = function recordedIncentiveUnitId(request, callback) {
+                    return this.rpcCall(recordedIncentiveUnitId, $root.ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest, $root.ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse, request, callback);
+                }, "name", { value: "RecordedIncentiveUnitId" });
+    
+                /**
+                 * Calls RecordedIncentiveUnitId.
+                 * @function recordedIncentiveUnitId
+                 * @memberof ununifi.ecosystemincentive.Query
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdRequest} request QueryRecordedIncentiveUnitIdRequest message or plain object
+                 * @returns {Promise<ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse>} Promise
+                 * @variation 2
+                 */
+    
+                return Query;
+            })();
+    
+            ecosystemincentive.QueryParamsRequest = (function() {
+    
+                /**
+                 * Properties of a QueryParamsRequest.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IQueryParamsRequest
+                 */
+    
+                /**
+                 * Constructs a new QueryParamsRequest.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a QueryParamsRequest.
+                 * @implements IQueryParamsRequest
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IQueryParamsRequest=} [properties] Properties to set
+                 */
+                function QueryParamsRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryParamsRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.QueryParamsRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryParamsRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryParamsRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryParamsRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryParamsRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryParamsRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.QueryParamsRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.QueryParamsRequest} QueryParamsRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryParamsRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryParamsRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryParamsRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.QueryParamsRequest} QueryParamsRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryParamsRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryParamsRequest message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.QueryParamsRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryParamsRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.QueryParamsRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.QueryParamsRequest} QueryParamsRequest
+                 */
+                QueryParamsRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryParamsRequest)
+                        return object;
+                    return new $root.ununifi.ecosystemincentive.QueryParamsRequest();
+                };
+    
+                /**
+                 * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.QueryParamsRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.QueryParamsRequest} message QueryParamsRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryParamsRequest.toObject = function toObject() {
+                    return {};
+                };
+    
+                /**
+                 * Converts this QueryParamsRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.QueryParamsRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryParamsRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryParamsRequest;
+            })();
+    
+            ecosystemincentive.QueryParamsResponse = (function() {
+    
+                /**
+                 * Properties of a QueryParamsResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IQueryParamsResponse
+                 * @property {ununifi.ecosystemincentive.IParams|null} [params] QueryParamsResponse params
+                 */
+    
+                /**
+                 * Constructs a new QueryParamsResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a QueryParamsResponse.
+                 * @implements IQueryParamsResponse
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IQueryParamsResponse=} [properties] Properties to set
+                 */
+                function QueryParamsResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryParamsResponse params.
+                 * @member {ununifi.ecosystemincentive.IParams|null|undefined} params
+                 * @memberof ununifi.ecosystemincentive.QueryParamsResponse
+                 * @instance
+                 */
+                QueryParamsResponse.prototype.params = null;
+    
+                /**
+                 * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryParamsResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.QueryParamsResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryParamsResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.params != null && Object.hasOwnProperty.call(message, "params"))
+                        $root.ununifi.ecosystemincentive.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryParamsResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryParamsResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryParamsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryParamsResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.QueryParamsResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.QueryParamsResponse} QueryParamsResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryParamsResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryParamsResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.params = $root.ununifi.ecosystemincentive.Params.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryParamsResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.QueryParamsResponse} QueryParamsResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryParamsResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryParamsResponse message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.QueryParamsResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryParamsResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.params != null && message.hasOwnProperty("params")) {
+                        var error = $root.ununifi.ecosystemincentive.Params.verify(message.params);
+                        if (error)
+                            return "params." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.QueryParamsResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.QueryParamsResponse} QueryParamsResponse
+                 */
+                QueryParamsResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryParamsResponse)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.QueryParamsResponse();
+                    if (object.params != null) {
+                        if (typeof object.params !== "object")
+                            throw TypeError(".ununifi.ecosystemincentive.QueryParamsResponse.params: object expected");
+                        message.params = $root.ununifi.ecosystemincentive.Params.fromObject(object.params);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.QueryParamsResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.QueryParamsResponse} message QueryParamsResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryParamsResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.params = null;
+                    if (message.params != null && message.hasOwnProperty("params"))
+                        object.params = $root.ununifi.ecosystemincentive.Params.toObject(message.params, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryParamsResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.QueryParamsResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryParamsResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryParamsResponse;
+            })();
+    
+            ecosystemincentive.QueryIncentiveUnitRequest = (function() {
+    
+                /**
+                 * Properties of a QueryIncentiveUnitRequest.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IQueryIncentiveUnitRequest
+                 * @property {string|null} [incentive_unit_id] QueryIncentiveUnitRequest incentive_unit_id
+                 */
+    
+                /**
+                 * Constructs a new QueryIncentiveUnitRequest.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a QueryIncentiveUnitRequest.
+                 * @implements IQueryIncentiveUnitRequest
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitRequest=} [properties] Properties to set
+                 */
+                function QueryIncentiveUnitRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryIncentiveUnitRequest incentive_unit_id.
+                 * @member {string} incentive_unit_id
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitRequest
+                 * @instance
+                 */
+                QueryIncentiveUnitRequest.prototype.incentive_unit_id = "";
+    
+                /**
+                 * Encodes the specified QueryIncentiveUnitRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitRequest} message QueryIncentiveUnitRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryIncentiveUnitRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.incentive_unit_id != null && Object.hasOwnProperty.call(message, "incentive_unit_id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.incentive_unit_id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryIncentiveUnitRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitRequest} message QueryIncentiveUnitRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryIncentiveUnitRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryIncentiveUnitRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitRequest} QueryIncentiveUnitRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryIncentiveUnitRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryIncentiveUnitRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.incentive_unit_id = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryIncentiveUnitRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitRequest} QueryIncentiveUnitRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryIncentiveUnitRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryIncentiveUnitRequest message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryIncentiveUnitRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        if (!$util.isString(message.incentive_unit_id))
+                            return "incentive_unit_id: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryIncentiveUnitRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitRequest} QueryIncentiveUnitRequest
+                 */
+                QueryIncentiveUnitRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryIncentiveUnitRequest)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.QueryIncentiveUnitRequest();
+                    if (object.incentive_unit_id != null)
+                        message.incentive_unit_id = String(object.incentive_unit_id);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryIncentiveUnitRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.QueryIncentiveUnitRequest} message QueryIncentiveUnitRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryIncentiveUnitRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.incentive_unit_id = "";
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        object.incentive_unit_id = message.incentive_unit_id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryIncentiveUnitRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryIncentiveUnitRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryIncentiveUnitRequest;
+            })();
+    
+            ecosystemincentive.QueryIncentiveUnitResponse = (function() {
+    
+                /**
+                 * Properties of a QueryIncentiveUnitResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IQueryIncentiveUnitResponse
+                 * @property {ununifi.ecosystemincentive.IIncentiveUnit|null} [incentive_unit] QueryIncentiveUnitResponse incentive_unit
+                 */
+    
+                /**
+                 * Constructs a new QueryIncentiveUnitResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a QueryIncentiveUnitResponse.
+                 * @implements IQueryIncentiveUnitResponse
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitResponse=} [properties] Properties to set
+                 */
+                function QueryIncentiveUnitResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryIncentiveUnitResponse incentive_unit.
+                 * @member {ununifi.ecosystemincentive.IIncentiveUnit|null|undefined} incentive_unit
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitResponse
+                 * @instance
+                 */
+                QueryIncentiveUnitResponse.prototype.incentive_unit = null;
+    
+                /**
+                 * Encodes the specified QueryIncentiveUnitResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitResponse} message QueryIncentiveUnitResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryIncentiveUnitResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.incentive_unit != null && Object.hasOwnProperty.call(message, "incentive_unit"))
+                        $root.ununifi.ecosystemincentive.IncentiveUnit.encode(message.incentive_unit, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryIncentiveUnitResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitResponse} message QueryIncentiveUnitResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryIncentiveUnitResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryIncentiveUnitResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitResponse} QueryIncentiveUnitResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryIncentiveUnitResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryIncentiveUnitResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.incentive_unit = $root.ununifi.ecosystemincentive.IncentiveUnit.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryIncentiveUnitResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitResponse} QueryIncentiveUnitResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryIncentiveUnitResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryIncentiveUnitResponse message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryIncentiveUnitResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.incentive_unit != null && message.hasOwnProperty("incentive_unit")) {
+                        var error = $root.ununifi.ecosystemincentive.IncentiveUnit.verify(message.incentive_unit);
+                        if (error)
+                            return "incentive_unit." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryIncentiveUnitResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitResponse} QueryIncentiveUnitResponse
+                 */
+                QueryIncentiveUnitResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryIncentiveUnitResponse)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.QueryIncentiveUnitResponse();
+                    if (object.incentive_unit != null) {
+                        if (typeof object.incentive_unit !== "object")
+                            throw TypeError(".ununifi.ecosystemincentive.QueryIncentiveUnitResponse.incentive_unit: object expected");
+                        message.incentive_unit = $root.ununifi.ecosystemincentive.IncentiveUnit.fromObject(object.incentive_unit);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryIncentiveUnitResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.QueryIncentiveUnitResponse} message QueryIncentiveUnitResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryIncentiveUnitResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.incentive_unit = null;
+                    if (message.incentive_unit != null && message.hasOwnProperty("incentive_unit"))
+                        object.incentive_unit = $root.ununifi.ecosystemincentive.IncentiveUnit.toObject(message.incentive_unit, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryIncentiveUnitResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryIncentiveUnitResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryIncentiveUnitResponse;
+            })();
+    
+            ecosystemincentive.QueryAllRewardsRequest = (function() {
+    
+                /**
+                 * Properties of a QueryAllRewardsRequest.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IQueryAllRewardsRequest
+                 * @property {string|null} [subject_addr] QueryAllRewardsRequest subject_addr
+                 */
+    
+                /**
+                 * Constructs a new QueryAllRewardsRequest.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a QueryAllRewardsRequest.
+                 * @implements IQueryAllRewardsRequest
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsRequest=} [properties] Properties to set
+                 */
+                function QueryAllRewardsRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryAllRewardsRequest subject_addr.
+                 * @member {string} subject_addr
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
+                 * @instance
+                 */
+                QueryAllRewardsRequest.prototype.subject_addr = "";
+    
+                /**
+                 * Encodes the specified QueryAllRewardsRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryAllRewardsRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsRequest} message QueryAllRewardsRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryAllRewardsRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.subject_addr != null && Object.hasOwnProperty.call(message, "subject_addr"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.subject_addr);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryAllRewardsRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryAllRewardsRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsRequest} message QueryAllRewardsRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryAllRewardsRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryAllRewardsRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.QueryAllRewardsRequest} QueryAllRewardsRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryAllRewardsRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryAllRewardsRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.subject_addr = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryAllRewardsRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.QueryAllRewardsRequest} QueryAllRewardsRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryAllRewardsRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryAllRewardsRequest message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryAllRewardsRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.subject_addr != null && message.hasOwnProperty("subject_addr"))
+                        if (!$util.isString(message.subject_addr))
+                            return "subject_addr: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryAllRewardsRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.QueryAllRewardsRequest} QueryAllRewardsRequest
+                 */
+                QueryAllRewardsRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryAllRewardsRequest)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.QueryAllRewardsRequest();
+                    if (object.subject_addr != null)
+                        message.subject_addr = String(object.subject_addr);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryAllRewardsRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.QueryAllRewardsRequest} message QueryAllRewardsRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryAllRewardsRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.subject_addr = "";
+                    if (message.subject_addr != null && message.hasOwnProperty("subject_addr"))
+                        object.subject_addr = message.subject_addr;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryAllRewardsRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryAllRewardsRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryAllRewardsRequest;
+            })();
+    
+            ecosystemincentive.QueryAllRewardsResponse = (function() {
+    
+                /**
+                 * Properties of a QueryAllRewardsResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IQueryAllRewardsResponse
+                 * @property {ununifi.ecosystemincentive.IRewardStore|null} [rewards] QueryAllRewardsResponse rewards
+                 */
+    
+                /**
+                 * Constructs a new QueryAllRewardsResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a QueryAllRewardsResponse.
+                 * @implements IQueryAllRewardsResponse
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsResponse=} [properties] Properties to set
+                 */
+                function QueryAllRewardsResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryAllRewardsResponse rewards.
+                 * @member {ununifi.ecosystemincentive.IRewardStore|null|undefined} rewards
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
+                 * @instance
+                 */
+                QueryAllRewardsResponse.prototype.rewards = null;
+    
+                /**
+                 * Encodes the specified QueryAllRewardsResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryAllRewardsResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsResponse} message QueryAllRewardsResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryAllRewardsResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.rewards != null && Object.hasOwnProperty.call(message, "rewards"))
+                        $root.ununifi.ecosystemincentive.RewardStore.encode(message.rewards, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryAllRewardsResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryAllRewardsResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsResponse} message QueryAllRewardsResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryAllRewardsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryAllRewardsResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.QueryAllRewardsResponse} QueryAllRewardsResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryAllRewardsResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryAllRewardsResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.rewards = $root.ununifi.ecosystemincentive.RewardStore.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryAllRewardsResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.QueryAllRewardsResponse} QueryAllRewardsResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryAllRewardsResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryAllRewardsResponse message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryAllRewardsResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.rewards != null && message.hasOwnProperty("rewards")) {
+                        var error = $root.ununifi.ecosystemincentive.RewardStore.verify(message.rewards);
+                        if (error)
+                            return "rewards." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryAllRewardsResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.QueryAllRewardsResponse} QueryAllRewardsResponse
+                 */
+                QueryAllRewardsResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryAllRewardsResponse)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.QueryAllRewardsResponse();
+                    if (object.rewards != null) {
+                        if (typeof object.rewards !== "object")
+                            throw TypeError(".ununifi.ecosystemincentive.QueryAllRewardsResponse.rewards: object expected");
+                        message.rewards = $root.ununifi.ecosystemincentive.RewardStore.fromObject(object.rewards);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryAllRewardsResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.QueryAllRewardsResponse} message QueryAllRewardsResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryAllRewardsResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.rewards = null;
+                    if (message.rewards != null && message.hasOwnProperty("rewards"))
+                        object.rewards = $root.ununifi.ecosystemincentive.RewardStore.toObject(message.rewards, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryAllRewardsResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryAllRewardsResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryAllRewardsResponse;
+            })();
+    
+            ecosystemincentive.QueryRewardRequest = (function() {
+    
+                /**
+                 * Properties of a QueryRewardRequest.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IQueryRewardRequest
+                 * @property {string|null} [subject_addr] QueryRewardRequest subject_addr
+                 * @property {string|null} [denom] QueryRewardRequest denom
+                 */
+    
+                /**
+                 * Constructs a new QueryRewardRequest.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a QueryRewardRequest.
+                 * @implements IQueryRewardRequest
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IQueryRewardRequest=} [properties] Properties to set
+                 */
+                function QueryRewardRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryRewardRequest subject_addr.
+                 * @member {string} subject_addr
+                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @instance
+                 */
+                QueryRewardRequest.prototype.subject_addr = "";
+    
+                /**
+                 * QueryRewardRequest denom.
+                 * @member {string} denom
+                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @instance
+                 */
+                QueryRewardRequest.prototype.denom = "";
+    
+                /**
+                 * Encodes the specified QueryRewardRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRewardRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryRewardRequest} message QueryRewardRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryRewardRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.subject_addr != null && Object.hasOwnProperty.call(message, "subject_addr"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.subject_addr);
+                    if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.denom);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryRewardRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRewardRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryRewardRequest} message QueryRewardRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryRewardRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryRewardRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.QueryRewardRequest} QueryRewardRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryRewardRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryRewardRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.subject_addr = reader.string();
+                            break;
+                        case 2:
+                            message.denom = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryRewardRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.QueryRewardRequest} QueryRewardRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryRewardRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryRewardRequest message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryRewardRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.subject_addr != null && message.hasOwnProperty("subject_addr"))
+                        if (!$util.isString(message.subject_addr))
+                            return "subject_addr: string expected";
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        if (!$util.isString(message.denom))
+                            return "denom: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryRewardRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.QueryRewardRequest} QueryRewardRequest
+                 */
+                QueryRewardRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryRewardRequest)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.QueryRewardRequest();
+                    if (object.subject_addr != null)
+                        message.subject_addr = String(object.subject_addr);
+                    if (object.denom != null)
+                        message.denom = String(object.denom);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryRewardRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.QueryRewardRequest} message QueryRewardRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryRewardRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.subject_addr = "";
+                        object.denom = "";
+                    }
+                    if (message.subject_addr != null && message.hasOwnProperty("subject_addr"))
+                        object.subject_addr = message.subject_addr;
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        object.denom = message.denom;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryRewardRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryRewardRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryRewardRequest;
+            })();
+    
+            ecosystemincentive.QueryRewardResponse = (function() {
+    
+                /**
+                 * Properties of a QueryRewardResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IQueryRewardResponse
+                 * @property {cosmos.base.v1beta1.ICoin|null} [reward] QueryRewardResponse reward
+                 */
+    
+                /**
+                 * Constructs a new QueryRewardResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a QueryRewardResponse.
+                 * @implements IQueryRewardResponse
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IQueryRewardResponse=} [properties] Properties to set
+                 */
+                function QueryRewardResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryRewardResponse reward.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} reward
+                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @instance
+                 */
+                QueryRewardResponse.prototype.reward = null;
+    
+                /**
+                 * Encodes the specified QueryRewardResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRewardResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryRewardResponse} message QueryRewardResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryRewardResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.reward != null && Object.hasOwnProperty.call(message, "reward"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.reward, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryRewardResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRewardResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryRewardResponse} message QueryRewardResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryRewardResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryRewardResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.QueryRewardResponse} QueryRewardResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryRewardResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryRewardResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.reward = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryRewardResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.QueryRewardResponse} QueryRewardResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryRewardResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryRewardResponse message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryRewardResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.reward != null && message.hasOwnProperty("reward")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.reward);
+                        if (error)
+                            return "reward." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryRewardResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.QueryRewardResponse} QueryRewardResponse
+                 */
+                QueryRewardResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryRewardResponse)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.QueryRewardResponse();
+                    if (object.reward != null) {
+                        if (typeof object.reward !== "object")
+                            throw TypeError(".ununifi.ecosystemincentive.QueryRewardResponse.reward: object expected");
+                        message.reward = $root.cosmos.base.v1beta1.Coin.fromObject(object.reward);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryRewardResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.QueryRewardResponse} message QueryRewardResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryRewardResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.reward = null;
+                    if (message.reward != null && message.hasOwnProperty("reward"))
+                        object.reward = $root.cosmos.base.v1beta1.Coin.toObject(message.reward, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryRewardResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryRewardResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryRewardResponse;
+            })();
+    
+            ecosystemincentive.QueryRecordedIncentiveUnitIdRequest = (function() {
+    
+                /**
+                 * Properties of a QueryRecordedIncentiveUnitIdRequest.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IQueryRecordedIncentiveUnitIdRequest
+                 * @property {string|null} [class_id] QueryRecordedIncentiveUnitIdRequest class_id
+                 * @property {string|null} [nft_id] QueryRecordedIncentiveUnitIdRequest nft_id
+                 */
+    
+                /**
+                 * Constructs a new QueryRecordedIncentiveUnitIdRequest.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a QueryRecordedIncentiveUnitIdRequest.
+                 * @implements IQueryRecordedIncentiveUnitIdRequest
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdRequest=} [properties] Properties to set
+                 */
+                function QueryRecordedIncentiveUnitIdRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryRecordedIncentiveUnitIdRequest class_id.
+                 * @member {string} class_id
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest
+                 * @instance
+                 */
+                QueryRecordedIncentiveUnitIdRequest.prototype.class_id = "";
+    
+                /**
+                 * QueryRecordedIncentiveUnitIdRequest nft_id.
+                 * @member {string} nft_id
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest
+                 * @instance
+                 */
+                QueryRecordedIncentiveUnitIdRequest.prototype.nft_id = "";
+    
+                /**
+                 * Encodes the specified QueryRecordedIncentiveUnitIdRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdRequest} message QueryRecordedIncentiveUnitIdRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryRecordedIncentiveUnitIdRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.class_id);
+                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.nft_id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryRecordedIncentiveUnitIdRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdRequest} message QueryRecordedIncentiveUnitIdRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryRecordedIncentiveUnitIdRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryRecordedIncentiveUnitIdRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest} QueryRecordedIncentiveUnitIdRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryRecordedIncentiveUnitIdRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.class_id = reader.string();
+                            break;
+                        case 2:
+                            message.nft_id = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryRecordedIncentiveUnitIdRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest} QueryRecordedIncentiveUnitIdRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryRecordedIncentiveUnitIdRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryRecordedIncentiveUnitIdRequest message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryRecordedIncentiveUnitIdRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        if (!$util.isString(message.class_id))
+                            return "class_id: string expected";
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        if (!$util.isString(message.nft_id))
+                            return "nft_id: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryRecordedIncentiveUnitIdRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest} QueryRecordedIncentiveUnitIdRequest
+                 */
+                QueryRecordedIncentiveUnitIdRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest();
+                    if (object.class_id != null)
+                        message.class_id = String(object.class_id);
+                    if (object.nft_id != null)
+                        message.nft_id = String(object.nft_id);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryRecordedIncentiveUnitIdRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest} message QueryRecordedIncentiveUnitIdRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryRecordedIncentiveUnitIdRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.class_id = "";
+                        object.nft_id = "";
+                    }
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        object.class_id = message.class_id;
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        object.nft_id = message.nft_id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryRecordedIncentiveUnitIdRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryRecordedIncentiveUnitIdRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryRecordedIncentiveUnitIdRequest;
+            })();
+    
+            ecosystemincentive.QueryRecordedIncentiveUnitIdResponse = (function() {
+    
+                /**
+                 * Properties of a QueryRecordedIncentiveUnitIdResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IQueryRecordedIncentiveUnitIdResponse
+                 * @property {string|null} [incentive_unit_id] QueryRecordedIncentiveUnitIdResponse incentive_unit_id
+                 */
+    
+                /**
+                 * Constructs a new QueryRecordedIncentiveUnitIdResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a QueryRecordedIncentiveUnitIdResponse.
+                 * @implements IQueryRecordedIncentiveUnitIdResponse
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdResponse=} [properties] Properties to set
+                 */
+                function QueryRecordedIncentiveUnitIdResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryRecordedIncentiveUnitIdResponse incentive_unit_id.
+                 * @member {string} incentive_unit_id
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse
+                 * @instance
+                 */
+                QueryRecordedIncentiveUnitIdResponse.prototype.incentive_unit_id = "";
+    
+                /**
+                 * Encodes the specified QueryRecordedIncentiveUnitIdResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdResponse} message QueryRecordedIncentiveUnitIdResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryRecordedIncentiveUnitIdResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.incentive_unit_id != null && Object.hasOwnProperty.call(message, "incentive_unit_id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.incentive_unit_id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryRecordedIncentiveUnitIdResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdResponse} message QueryRecordedIncentiveUnitIdResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryRecordedIncentiveUnitIdResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryRecordedIncentiveUnitIdResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse} QueryRecordedIncentiveUnitIdResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryRecordedIncentiveUnitIdResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.incentive_unit_id = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryRecordedIncentiveUnitIdResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse} QueryRecordedIncentiveUnitIdResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryRecordedIncentiveUnitIdResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryRecordedIncentiveUnitIdResponse message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryRecordedIncentiveUnitIdResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        if (!$util.isString(message.incentive_unit_id))
+                            return "incentive_unit_id: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryRecordedIncentiveUnitIdResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse} QueryRecordedIncentiveUnitIdResponse
+                 */
+                QueryRecordedIncentiveUnitIdResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse();
+                    if (object.incentive_unit_id != null)
+                        message.incentive_unit_id = String(object.incentive_unit_id);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryRecordedIncentiveUnitIdResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse} message QueryRecordedIncentiveUnitIdResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryRecordedIncentiveUnitIdResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.incentive_unit_id = "";
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        object.incentive_unit_id = message.incentive_unit_id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryRecordedIncentiveUnitIdResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryRecordedIncentiveUnitIdResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryRecordedIncentiveUnitIdResponse;
+            })();
+    
+            ecosystemincentive.Params = (function() {
+    
+                /**
+                 * Properties of a Params.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IParams
+                 * @property {Array.<ununifi.ecosystemincentive.IRewardParams>|null} [reward_params] Params reward_params
+                 * @property {Long|null} [max_incentive_unit_id_len] Params max_incentive_unit_id_len
+                 * @property {Long|null} [max_subject_info_num_in_unit] Params max_subject_info_num_in_unit
+                 */
+    
+                /**
+                 * Constructs a new Params.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a Params.
+                 * @implements IParams
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IParams=} [properties] Properties to set
+                 */
+                function Params(properties) {
+                    this.reward_params = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Params reward_params.
+                 * @member {Array.<ununifi.ecosystemincentive.IRewardParams>} reward_params
+                 * @memberof ununifi.ecosystemincentive.Params
+                 * @instance
+                 */
+                Params.prototype.reward_params = $util.emptyArray;
+    
+                /**
+                 * Params max_incentive_unit_id_len.
+                 * @member {Long} max_incentive_unit_id_len
+                 * @memberof ununifi.ecosystemincentive.Params
+                 * @instance
+                 */
+                Params.prototype.max_incentive_unit_id_len = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * Params max_subject_info_num_in_unit.
+                 * @member {Long} max_subject_info_num_in_unit
+                 * @memberof ununifi.ecosystemincentive.Params
+                 * @instance
+                 */
+                Params.prototype.max_subject_info_num_in_unit = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * Encodes the specified Params message. Does not implicitly {@link ununifi.ecosystemincentive.Params.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.Params
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IParams} message Params message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                Params.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.reward_params != null && message.reward_params.length)
+                        for (var i = 0; i < message.reward_params.length; ++i)
+                            $root.ununifi.ecosystemincentive.RewardParams.encode(message.reward_params[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.max_incentive_unit_id_len != null && Object.hasOwnProperty.call(message, "max_incentive_unit_id_len"))
+                        writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.max_incentive_unit_id_len);
+                    if (message.max_subject_info_num_in_unit != null && Object.hasOwnProperty.call(message, "max_subject_info_num_in_unit"))
+                        writer.uint32(/* id 3, wireType 0 =*/24).uint64(message.max_subject_info_num_in_unit);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.Params.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.Params
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IParams} message Params message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                Params.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a Params message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.Params
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.Params} Params
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                Params.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.Params();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            if (!(message.reward_params && message.reward_params.length))
+                                message.reward_params = [];
+                            message.reward_params.push($root.ununifi.ecosystemincentive.RewardParams.decode(reader, reader.uint32()));
+                            break;
+                        case 2:
+                            message.max_incentive_unit_id_len = reader.uint64();
+                            break;
+                        case 3:
+                            message.max_subject_info_num_in_unit = reader.uint64();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a Params message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.Params
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.Params} Params
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                Params.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a Params message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.Params
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                Params.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.reward_params != null && message.hasOwnProperty("reward_params")) {
+                        if (!Array.isArray(message.reward_params))
+                            return "reward_params: array expected";
+                        for (var i = 0; i < message.reward_params.length; ++i) {
+                            var error = $root.ununifi.ecosystemincentive.RewardParams.verify(message.reward_params[i]);
+                            if (error)
+                                return "reward_params." + error;
+                        }
+                    }
+                    if (message.max_incentive_unit_id_len != null && message.hasOwnProperty("max_incentive_unit_id_len"))
+                        if (!$util.isInteger(message.max_incentive_unit_id_len) && !(message.max_incentive_unit_id_len && $util.isInteger(message.max_incentive_unit_id_len.low) && $util.isInteger(message.max_incentive_unit_id_len.high)))
+                            return "max_incentive_unit_id_len: integer|Long expected";
+                    if (message.max_subject_info_num_in_unit != null && message.hasOwnProperty("max_subject_info_num_in_unit"))
+                        if (!$util.isInteger(message.max_subject_info_num_in_unit) && !(message.max_subject_info_num_in_unit && $util.isInteger(message.max_subject_info_num_in_unit.low) && $util.isInteger(message.max_subject_info_num_in_unit.high)))
+                            return "max_subject_info_num_in_unit: integer|Long expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a Params message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.Params
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.Params} Params
+                 */
+                Params.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.Params)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.Params();
+                    if (object.reward_params) {
+                        if (!Array.isArray(object.reward_params))
+                            throw TypeError(".ununifi.ecosystemincentive.Params.reward_params: array expected");
+                        message.reward_params = [];
+                        for (var i = 0; i < object.reward_params.length; ++i) {
+                            if (typeof object.reward_params[i] !== "object")
+                                throw TypeError(".ununifi.ecosystemincentive.Params.reward_params: object expected");
+                            message.reward_params[i] = $root.ununifi.ecosystemincentive.RewardParams.fromObject(object.reward_params[i]);
+                        }
+                    }
+                    if (object.max_incentive_unit_id_len != null)
+                        if ($util.Long)
+                            (message.max_incentive_unit_id_len = $util.Long.fromValue(object.max_incentive_unit_id_len)).unsigned = true;
+                        else if (typeof object.max_incentive_unit_id_len === "string")
+                            message.max_incentive_unit_id_len = parseInt(object.max_incentive_unit_id_len, 10);
+                        else if (typeof object.max_incentive_unit_id_len === "number")
+                            message.max_incentive_unit_id_len = object.max_incentive_unit_id_len;
+                        else if (typeof object.max_incentive_unit_id_len === "object")
+                            message.max_incentive_unit_id_len = new $util.LongBits(object.max_incentive_unit_id_len.low >>> 0, object.max_incentive_unit_id_len.high >>> 0).toNumber(true);
+                    if (object.max_subject_info_num_in_unit != null)
+                        if ($util.Long)
+                            (message.max_subject_info_num_in_unit = $util.Long.fromValue(object.max_subject_info_num_in_unit)).unsigned = true;
+                        else if (typeof object.max_subject_info_num_in_unit === "string")
+                            message.max_subject_info_num_in_unit = parseInt(object.max_subject_info_num_in_unit, 10);
+                        else if (typeof object.max_subject_info_num_in_unit === "number")
+                            message.max_subject_info_num_in_unit = object.max_subject_info_num_in_unit;
+                        else if (typeof object.max_subject_info_num_in_unit === "object")
+                            message.max_subject_info_num_in_unit = new $util.LongBits(object.max_subject_info_num_in_unit.low >>> 0, object.max_subject_info_num_in_unit.high >>> 0).toNumber(true);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a Params message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.Params
+                 * @static
+                 * @param {ununifi.ecosystemincentive.Params} message Params
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                Params.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults)
+                        object.reward_params = [];
+                    if (options.defaults) {
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.max_incentive_unit_id_len = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.max_incentive_unit_id_len = options.longs === String ? "0" : 0;
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.max_subject_info_num_in_unit = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.max_subject_info_num_in_unit = options.longs === String ? "0" : 0;
+                    }
+                    if (message.reward_params && message.reward_params.length) {
+                        object.reward_params = [];
+                        for (var j = 0; j < message.reward_params.length; ++j)
+                            object.reward_params[j] = $root.ununifi.ecosystemincentive.RewardParams.toObject(message.reward_params[j], options);
+                    }
+                    if (message.max_incentive_unit_id_len != null && message.hasOwnProperty("max_incentive_unit_id_len"))
+                        if (typeof message.max_incentive_unit_id_len === "number")
+                            object.max_incentive_unit_id_len = options.longs === String ? String(message.max_incentive_unit_id_len) : message.max_incentive_unit_id_len;
+                        else
+                            object.max_incentive_unit_id_len = options.longs === String ? $util.Long.prototype.toString.call(message.max_incentive_unit_id_len) : options.longs === Number ? new $util.LongBits(message.max_incentive_unit_id_len.low >>> 0, message.max_incentive_unit_id_len.high >>> 0).toNumber(true) : message.max_incentive_unit_id_len;
+                    if (message.max_subject_info_num_in_unit != null && message.hasOwnProperty("max_subject_info_num_in_unit"))
+                        if (typeof message.max_subject_info_num_in_unit === "number")
+                            object.max_subject_info_num_in_unit = options.longs === String ? String(message.max_subject_info_num_in_unit) : message.max_subject_info_num_in_unit;
+                        else
+                            object.max_subject_info_num_in_unit = options.longs === String ? $util.Long.prototype.toString.call(message.max_subject_info_num_in_unit) : options.longs === Number ? new $util.LongBits(message.max_subject_info_num_in_unit.low >>> 0, message.max_subject_info_num_in_unit.high >>> 0).toNumber(true) : message.max_subject_info_num_in_unit;
+                    return object;
+                };
+    
+                /**
+                 * Converts this Params to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.Params
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                Params.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return Params;
+            })();
+    
+            ecosystemincentive.RewardParams = (function() {
+    
+                /**
+                 * Properties of a RewardParams.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IRewardParams
+                 * @property {string|null} [module_name] RewardParams module_name
+                 * @property {Array.<ununifi.ecosystemincentive.IRewardRate>|null} [reward_rate] RewardParams reward_rate
+                 */
+    
+                /**
+                 * Constructs a new RewardParams.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a RewardParams.
+                 * @implements IRewardParams
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IRewardParams=} [properties] Properties to set
+                 */
+                function RewardParams(properties) {
+                    this.reward_rate = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * RewardParams module_name.
+                 * @member {string} module_name
+                 * @memberof ununifi.ecosystemincentive.RewardParams
+                 * @instance
+                 */
+                RewardParams.prototype.module_name = "";
+    
+                /**
+                 * RewardParams reward_rate.
+                 * @member {Array.<ununifi.ecosystemincentive.IRewardRate>} reward_rate
+                 * @memberof ununifi.ecosystemincentive.RewardParams
+                 * @instance
+                 */
+                RewardParams.prototype.reward_rate = $util.emptyArray;
+    
+                /**
+                 * Encodes the specified RewardParams message. Does not implicitly {@link ununifi.ecosystemincentive.RewardParams.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.RewardParams
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IRewardParams} message RewardParams message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                RewardParams.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.module_name != null && Object.hasOwnProperty.call(message, "module_name"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.module_name);
+                    if (message.reward_rate != null && message.reward_rate.length)
+                        for (var i = 0; i < message.reward_rate.length; ++i)
+                            $root.ununifi.ecosystemincentive.RewardRate.encode(message.reward_rate[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified RewardParams message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.RewardParams.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.RewardParams
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IRewardParams} message RewardParams message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                RewardParams.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a RewardParams message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.RewardParams
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.RewardParams} RewardParams
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                RewardParams.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.RewardParams();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.module_name = reader.string();
+                            break;
+                        case 2:
+                            if (!(message.reward_rate && message.reward_rate.length))
+                                message.reward_rate = [];
+                            message.reward_rate.push($root.ununifi.ecosystemincentive.RewardRate.decode(reader, reader.uint32()));
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a RewardParams message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.RewardParams
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.RewardParams} RewardParams
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                RewardParams.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a RewardParams message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.RewardParams
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                RewardParams.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.module_name != null && message.hasOwnProperty("module_name"))
+                        if (!$util.isString(message.module_name))
+                            return "module_name: string expected";
+                    if (message.reward_rate != null && message.hasOwnProperty("reward_rate")) {
+                        if (!Array.isArray(message.reward_rate))
+                            return "reward_rate: array expected";
+                        for (var i = 0; i < message.reward_rate.length; ++i) {
+                            var error = $root.ununifi.ecosystemincentive.RewardRate.verify(message.reward_rate[i]);
+                            if (error)
+                                return "reward_rate." + error;
+                        }
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a RewardParams message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.RewardParams
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.RewardParams} RewardParams
+                 */
+                RewardParams.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.RewardParams)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.RewardParams();
+                    if (object.module_name != null)
+                        message.module_name = String(object.module_name);
+                    if (object.reward_rate) {
+                        if (!Array.isArray(object.reward_rate))
+                            throw TypeError(".ununifi.ecosystemincentive.RewardParams.reward_rate: array expected");
+                        message.reward_rate = [];
+                        for (var i = 0; i < object.reward_rate.length; ++i) {
+                            if (typeof object.reward_rate[i] !== "object")
+                                throw TypeError(".ununifi.ecosystemincentive.RewardParams.reward_rate: object expected");
+                            message.reward_rate[i] = $root.ununifi.ecosystemincentive.RewardRate.fromObject(object.reward_rate[i]);
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a RewardParams message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.RewardParams
+                 * @static
+                 * @param {ununifi.ecosystemincentive.RewardParams} message RewardParams
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                RewardParams.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults)
+                        object.reward_rate = [];
+                    if (options.defaults)
+                        object.module_name = "";
+                    if (message.module_name != null && message.hasOwnProperty("module_name"))
+                        object.module_name = message.module_name;
+                    if (message.reward_rate && message.reward_rate.length) {
+                        object.reward_rate = [];
+                        for (var j = 0; j < message.reward_rate.length; ++j)
+                            object.reward_rate[j] = $root.ununifi.ecosystemincentive.RewardRate.toObject(message.reward_rate[j], options);
+                    }
+                    return object;
+                };
+    
+                /**
+                 * Converts this RewardParams to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.RewardParams
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                RewardParams.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return RewardParams;
+            })();
+    
+            ecosystemincentive.RewardRate = (function() {
+    
+                /**
+                 * Properties of a RewardRate.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IRewardRate
+                 * @property {ununifi.ecosystemincentive.RewardType|null} [reward_type] RewardRate reward_type
+                 * @property {string|null} [rate] RewardRate rate
+                 */
+    
+                /**
+                 * Constructs a new RewardRate.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a RewardRate.
+                 * @implements IRewardRate
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IRewardRate=} [properties] Properties to set
+                 */
+                function RewardRate(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * RewardRate reward_type.
+                 * @member {ununifi.ecosystemincentive.RewardType} reward_type
+                 * @memberof ununifi.ecosystemincentive.RewardRate
+                 * @instance
+                 */
+                RewardRate.prototype.reward_type = 0;
+    
+                /**
+                 * RewardRate rate.
+                 * @member {string} rate
+                 * @memberof ununifi.ecosystemincentive.RewardRate
+                 * @instance
+                 */
+                RewardRate.prototype.rate = "";
+    
+                /**
+                 * Encodes the specified RewardRate message. Does not implicitly {@link ununifi.ecosystemincentive.RewardRate.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.RewardRate
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IRewardRate} message RewardRate message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                RewardRate.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.reward_type != null && Object.hasOwnProperty.call(message, "reward_type"))
+                        writer.uint32(/* id 1, wireType 0 =*/8).int32(message.reward_type);
+                    if (message.rate != null && Object.hasOwnProperty.call(message, "rate"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.rate);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified RewardRate message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.RewardRate.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.RewardRate
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IRewardRate} message RewardRate message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                RewardRate.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a RewardRate message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.RewardRate
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.RewardRate} RewardRate
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                RewardRate.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.RewardRate();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.reward_type = reader.int32();
+                            break;
+                        case 2:
+                            message.rate = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a RewardRate message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.RewardRate
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.RewardRate} RewardRate
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                RewardRate.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a RewardRate message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.RewardRate
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                RewardRate.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.reward_type != null && message.hasOwnProperty("reward_type"))
+                        switch (message.reward_type) {
+                        default:
+                            return "reward_type: enum value expected";
+                        case 0:
+                            break;
+                        }
+                    if (message.rate != null && message.hasOwnProperty("rate"))
+                        if (!$util.isString(message.rate))
+                            return "rate: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a RewardRate message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.RewardRate
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.RewardRate} RewardRate
+                 */
+                RewardRate.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.RewardRate)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.RewardRate();
+                    switch (object.reward_type) {
+                    case "NFTMARKET_FRONTEND":
+                    case 0:
+                        message.reward_type = 0;
+                        break;
+                    }
+                    if (object.rate != null)
+                        message.rate = String(object.rate);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a RewardRate message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.RewardRate
+                 * @static
+                 * @param {ununifi.ecosystemincentive.RewardRate} message RewardRate
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                RewardRate.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.reward_type = options.enums === String ? "NFTMARKET_FRONTEND" : 0;
+                        object.rate = "";
+                    }
+                    if (message.reward_type != null && message.hasOwnProperty("reward_type"))
+                        object.reward_type = options.enums === String ? $root.ununifi.ecosystemincentive.RewardType[message.reward_type] : message.reward_type;
+                    if (message.rate != null && message.hasOwnProperty("rate"))
+                        object.rate = message.rate;
+                    return object;
+                };
+    
+                /**
+                 * Converts this RewardRate to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.RewardRate
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                RewardRate.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return RewardRate;
+            })();
+    
+            /**
+             * RewardType enum.
+             * @name ununifi.ecosystemincentive.RewardType
+             * @enum {number}
+             * @property {number} NFTMARKET_FRONTEND=0 NFTMARKET_FRONTEND value
+             */
+            ecosystemincentive.RewardType = (function() {
+                var valuesById = {}, values = Object.create(valuesById);
+                values[valuesById[0] = "NFTMARKET_FRONTEND"] = 0;
+                return values;
+            })();
+    
+            ecosystemincentive.IncentiveUnit = (function() {
+    
+                /**
+                 * Properties of an IncentiveUnit.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IIncentiveUnit
+                 * @property {string|null} [id] IncentiveUnit id
+                 * @property {Array.<ununifi.ecosystemincentive.ISubjectInfo>|null} [subject_info_lists] IncentiveUnit subject_info_lists
+                 */
+    
+                /**
+                 * Constructs a new IncentiveUnit.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents an IncentiveUnit.
+                 * @implements IIncentiveUnit
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IIncentiveUnit=} [properties] Properties to set
+                 */
+                function IncentiveUnit(properties) {
+                    this.subject_info_lists = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * IncentiveUnit id.
+                 * @member {string} id
+                 * @memberof ununifi.ecosystemincentive.IncentiveUnit
+                 * @instance
+                 */
+                IncentiveUnit.prototype.id = "";
+    
+                /**
+                 * IncentiveUnit subject_info_lists.
+                 * @member {Array.<ununifi.ecosystemincentive.ISubjectInfo>} subject_info_lists
+                 * @memberof ununifi.ecosystemincentive.IncentiveUnit
+                 * @instance
+                 */
+                IncentiveUnit.prototype.subject_info_lists = $util.emptyArray;
+    
+                /**
+                 * Encodes the specified IncentiveUnit message. Does not implicitly {@link ununifi.ecosystemincentive.IncentiveUnit.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.IncentiveUnit
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IIncentiveUnit} message IncentiveUnit message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                IncentiveUnit.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
+                    if (message.subject_info_lists != null && message.subject_info_lists.length)
+                        for (var i = 0; i < message.subject_info_lists.length; ++i)
+                            $root.ununifi.ecosystemincentive.SubjectInfo.encode(message.subject_info_lists[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified IncentiveUnit message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.IncentiveUnit.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.IncentiveUnit
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IIncentiveUnit} message IncentiveUnit message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                IncentiveUnit.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an IncentiveUnit message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.IncentiveUnit
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.IncentiveUnit} IncentiveUnit
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                IncentiveUnit.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.IncentiveUnit();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.id = reader.string();
+                            break;
+                        case 2:
+                            if (!(message.subject_info_lists && message.subject_info_lists.length))
+                                message.subject_info_lists = [];
+                            message.subject_info_lists.push($root.ununifi.ecosystemincentive.SubjectInfo.decode(reader, reader.uint32()));
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an IncentiveUnit message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.IncentiveUnit
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.IncentiveUnit} IncentiveUnit
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                IncentiveUnit.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an IncentiveUnit message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.IncentiveUnit
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                IncentiveUnit.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        if (!$util.isString(message.id))
+                            return "id: string expected";
+                    if (message.subject_info_lists != null && message.hasOwnProperty("subject_info_lists")) {
+                        if (!Array.isArray(message.subject_info_lists))
+                            return "subject_info_lists: array expected";
+                        for (var i = 0; i < message.subject_info_lists.length; ++i) {
+                            var error = $root.ununifi.ecosystemincentive.SubjectInfo.verify(message.subject_info_lists[i]);
+                            if (error)
+                                return "subject_info_lists." + error;
+                        }
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates an IncentiveUnit message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.IncentiveUnit
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.IncentiveUnit} IncentiveUnit
+                 */
+                IncentiveUnit.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.IncentiveUnit)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.IncentiveUnit();
+                    if (object.id != null)
+                        message.id = String(object.id);
+                    if (object.subject_info_lists) {
+                        if (!Array.isArray(object.subject_info_lists))
+                            throw TypeError(".ununifi.ecosystemincentive.IncentiveUnit.subject_info_lists: array expected");
+                        message.subject_info_lists = [];
+                        for (var i = 0; i < object.subject_info_lists.length; ++i) {
+                            if (typeof object.subject_info_lists[i] !== "object")
+                                throw TypeError(".ununifi.ecosystemincentive.IncentiveUnit.subject_info_lists: object expected");
+                            message.subject_info_lists[i] = $root.ununifi.ecosystemincentive.SubjectInfo.fromObject(object.subject_info_lists[i]);
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an IncentiveUnit message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.IncentiveUnit
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IncentiveUnit} message IncentiveUnit
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                IncentiveUnit.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults)
+                        object.subject_info_lists = [];
+                    if (options.defaults)
+                        object.id = "";
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        object.id = message.id;
+                    if (message.subject_info_lists && message.subject_info_lists.length) {
+                        object.subject_info_lists = [];
+                        for (var j = 0; j < message.subject_info_lists.length; ++j)
+                            object.subject_info_lists[j] = $root.ununifi.ecosystemincentive.SubjectInfo.toObject(message.subject_info_lists[j], options);
+                    }
+                    return object;
+                };
+    
+                /**
+                 * Converts this IncentiveUnit to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.IncentiveUnit
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                IncentiveUnit.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return IncentiveUnit;
+            })();
+    
+            ecosystemincentive.SubjectInfo = (function() {
+    
+                /**
+                 * Properties of a SubjectInfo.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface ISubjectInfo
+                 * @property {string|null} [subject_addr] SubjectInfo subject_addr
+                 * @property {string|null} [weight] SubjectInfo weight
+                 */
+    
+                /**
+                 * Constructs a new SubjectInfo.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a SubjectInfo.
+                 * @implements ISubjectInfo
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.ISubjectInfo=} [properties] Properties to set
+                 */
+                function SubjectInfo(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * SubjectInfo subject_addr.
+                 * @member {string} subject_addr
+                 * @memberof ununifi.ecosystemincentive.SubjectInfo
+                 * @instance
+                 */
+                SubjectInfo.prototype.subject_addr = "";
+    
+                /**
+                 * SubjectInfo weight.
+                 * @member {string} weight
+                 * @memberof ununifi.ecosystemincentive.SubjectInfo
+                 * @instance
+                 */
+                SubjectInfo.prototype.weight = "";
+    
+                /**
+                 * Encodes the specified SubjectInfo message. Does not implicitly {@link ununifi.ecosystemincentive.SubjectInfo.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.SubjectInfo
+                 * @static
+                 * @param {ununifi.ecosystemincentive.ISubjectInfo} message SubjectInfo message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                SubjectInfo.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.subject_addr != null && Object.hasOwnProperty.call(message, "subject_addr"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.subject_addr);
+                    if (message.weight != null && Object.hasOwnProperty.call(message, "weight"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.weight);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified SubjectInfo message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.SubjectInfo.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.SubjectInfo
+                 * @static
+                 * @param {ununifi.ecosystemincentive.ISubjectInfo} message SubjectInfo message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                SubjectInfo.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a SubjectInfo message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.SubjectInfo
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.SubjectInfo} SubjectInfo
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                SubjectInfo.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.SubjectInfo();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.subject_addr = reader.string();
+                            break;
+                        case 2:
+                            message.weight = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a SubjectInfo message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.SubjectInfo
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.SubjectInfo} SubjectInfo
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                SubjectInfo.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a SubjectInfo message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.SubjectInfo
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                SubjectInfo.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.subject_addr != null && message.hasOwnProperty("subject_addr"))
+                        if (!$util.isString(message.subject_addr))
+                            return "subject_addr: string expected";
+                    if (message.weight != null && message.hasOwnProperty("weight"))
+                        if (!$util.isString(message.weight))
+                            return "weight: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a SubjectInfo message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.SubjectInfo
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.SubjectInfo} SubjectInfo
+                 */
+                SubjectInfo.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.SubjectInfo)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.SubjectInfo();
+                    if (object.subject_addr != null)
+                        message.subject_addr = String(object.subject_addr);
+                    if (object.weight != null)
+                        message.weight = String(object.weight);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a SubjectInfo message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.SubjectInfo
+                 * @static
+                 * @param {ununifi.ecosystemincentive.SubjectInfo} message SubjectInfo
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                SubjectInfo.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.subject_addr = "";
+                        object.weight = "";
+                    }
+                    if (message.subject_addr != null && message.hasOwnProperty("subject_addr"))
+                        object.subject_addr = message.subject_addr;
+                    if (message.weight != null && message.hasOwnProperty("weight"))
+                        object.weight = message.weight;
+                    return object;
+                };
+    
+                /**
+                 * Converts this SubjectInfo to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.SubjectInfo
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                SubjectInfo.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return SubjectInfo;
+            })();
+    
+            ecosystemincentive.RewardStore = (function() {
+    
+                /**
+                 * Properties of a RewardStore.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IRewardStore
+                 * @property {string|null} [subject_addr] RewardStore subject_addr
+                 * @property {Array.<cosmos.base.v1beta1.ICoin>|null} [rewards] RewardStore rewards
+                 */
+    
+                /**
+                 * Constructs a new RewardStore.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a RewardStore.
+                 * @implements IRewardStore
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IRewardStore=} [properties] Properties to set
+                 */
+                function RewardStore(properties) {
+                    this.rewards = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * RewardStore subject_addr.
+                 * @member {string} subject_addr
+                 * @memberof ununifi.ecosystemincentive.RewardStore
+                 * @instance
+                 */
+                RewardStore.prototype.subject_addr = "";
+    
+                /**
+                 * RewardStore rewards.
+                 * @member {Array.<cosmos.base.v1beta1.ICoin>} rewards
+                 * @memberof ununifi.ecosystemincentive.RewardStore
+                 * @instance
+                 */
+                RewardStore.prototype.rewards = $util.emptyArray;
+    
+                /**
+                 * Encodes the specified RewardStore message. Does not implicitly {@link ununifi.ecosystemincentive.RewardStore.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.RewardStore
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IRewardStore} message RewardStore message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                RewardStore.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.subject_addr != null && Object.hasOwnProperty.call(message, "subject_addr"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.subject_addr);
+                    if (message.rewards != null && message.rewards.length)
+                        for (var i = 0; i < message.rewards.length; ++i)
+                            $root.cosmos.base.v1beta1.Coin.encode(message.rewards[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified RewardStore message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.RewardStore.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.RewardStore
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IRewardStore} message RewardStore message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                RewardStore.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a RewardStore message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.RewardStore
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.RewardStore} RewardStore
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                RewardStore.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.RewardStore();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.subject_addr = reader.string();
+                            break;
+                        case 2:
+                            if (!(message.rewards && message.rewards.length))
+                                message.rewards = [];
+                            message.rewards.push($root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32()));
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a RewardStore message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.RewardStore
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.RewardStore} RewardStore
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                RewardStore.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a RewardStore message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.RewardStore
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                RewardStore.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.subject_addr != null && message.hasOwnProperty("subject_addr"))
+                        if (!$util.isString(message.subject_addr))
+                            return "subject_addr: string expected";
+                    if (message.rewards != null && message.hasOwnProperty("rewards")) {
+                        if (!Array.isArray(message.rewards))
+                            return "rewards: array expected";
+                        for (var i = 0; i < message.rewards.length; ++i) {
+                            var error = $root.cosmos.base.v1beta1.Coin.verify(message.rewards[i]);
+                            if (error)
+                                return "rewards." + error;
+                        }
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a RewardStore message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.RewardStore
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.RewardStore} RewardStore
+                 */
+                RewardStore.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.RewardStore)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.RewardStore();
+                    if (object.subject_addr != null)
+                        message.subject_addr = String(object.subject_addr);
+                    if (object.rewards) {
+                        if (!Array.isArray(object.rewards))
+                            throw TypeError(".ununifi.ecosystemincentive.RewardStore.rewards: array expected");
+                        message.rewards = [];
+                        for (var i = 0; i < object.rewards.length; ++i) {
+                            if (typeof object.rewards[i] !== "object")
+                                throw TypeError(".ununifi.ecosystemincentive.RewardStore.rewards: object expected");
+                            message.rewards[i] = $root.cosmos.base.v1beta1.Coin.fromObject(object.rewards[i]);
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a RewardStore message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.RewardStore
+                 * @static
+                 * @param {ununifi.ecosystemincentive.RewardStore} message RewardStore
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                RewardStore.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults)
+                        object.rewards = [];
+                    if (options.defaults)
+                        object.subject_addr = "";
+                    if (message.subject_addr != null && message.hasOwnProperty("subject_addr"))
+                        object.subject_addr = message.subject_addr;
+                    if (message.rewards && message.rewards.length) {
+                        object.rewards = [];
+                        for (var j = 0; j < message.rewards.length; ++j)
+                            object.rewards[j] = $root.cosmos.base.v1beta1.Coin.toObject(message.rewards[j], options);
+                    }
+                    return object;
+                };
+    
+                /**
+                 * Converts this RewardStore to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.RewardStore
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                RewardStore.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return RewardStore;
+            })();
+    
+            ecosystemincentive.MemoInputs = (function() {
+    
+                /**
+                 * Properties of a MemoInputs.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IMemoInputs
+                 * @property {string|null} [version] MemoInputs version
+                 * @property {string|null} [incentive_unit_id] MemoInputs incentive_unit_id
+                 */
+    
+                /**
+                 * Constructs a new MemoInputs.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a MemoInputs.
+                 * @implements IMemoInputs
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IMemoInputs=} [properties] Properties to set
+                 */
+                function MemoInputs(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * MemoInputs version.
+                 * @member {string} version
+                 * @memberof ununifi.ecosystemincentive.MemoInputs
+                 * @instance
+                 */
+                MemoInputs.prototype.version = "";
+    
+                /**
+                 * MemoInputs incentive_unit_id.
+                 * @member {string} incentive_unit_id
+                 * @memberof ununifi.ecosystemincentive.MemoInputs
+                 * @instance
+                 */
+                MemoInputs.prototype.incentive_unit_id = "";
+    
+                /**
+                 * Encodes the specified MemoInputs message. Does not implicitly {@link ununifi.ecosystemincentive.MemoInputs.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.MemoInputs
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMemoInputs} message MemoInputs message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MemoInputs.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.version != null && Object.hasOwnProperty.call(message, "version"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.version);
+                    if (message.incentive_unit_id != null && Object.hasOwnProperty.call(message, "incentive_unit_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.incentive_unit_id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MemoInputs message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.MemoInputs.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MemoInputs
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMemoInputs} message MemoInputs message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MemoInputs.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MemoInputs message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.MemoInputs
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.MemoInputs} MemoInputs
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MemoInputs.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.MemoInputs();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.version = reader.string();
+                            break;
+                        case 2:
+                            message.incentive_unit_id = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MemoInputs message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MemoInputs
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.MemoInputs} MemoInputs
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MemoInputs.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MemoInputs message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.MemoInputs
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MemoInputs.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.version != null && message.hasOwnProperty("version"))
+                        if (!$util.isString(message.version))
+                            return "version: string expected";
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        if (!$util.isString(message.incentive_unit_id))
+                            return "incentive_unit_id: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MemoInputs message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.MemoInputs
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.MemoInputs} MemoInputs
+                 */
+                MemoInputs.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.MemoInputs)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.MemoInputs();
+                    if (object.version != null)
+                        message.version = String(object.version);
+                    if (object.incentive_unit_id != null)
+                        message.incentive_unit_id = String(object.incentive_unit_id);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a MemoInputs message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.MemoInputs
+                 * @static
+                 * @param {ununifi.ecosystemincentive.MemoInputs} message MemoInputs
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MemoInputs.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.version = "";
+                        object.incentive_unit_id = "";
+                    }
+                    if (message.version != null && message.hasOwnProperty("version"))
+                        object.version = message.version;
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        object.incentive_unit_id = message.incentive_unit_id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this MemoInputs to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.MemoInputs
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MemoInputs.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MemoInputs;
+            })();
+    
+            ecosystemincentive.Msg = (function() {
+    
+                /**
+                 * Constructs a new Msg service.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a Msg
+                 * @extends $protobuf.rpc.Service
+                 * @constructor
+                 * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+                 * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+                 * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+                 */
+                function Msg(rpcImpl, requestDelimited, responseDelimited) {
+                    $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+                }
+    
+                (Msg.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Msg;
+    
+                /**
+                 * Callback as used by {@link ununifi.ecosystemincentive.Msg#register}.
+                 * @memberof ununifi.ecosystemincentive.Msg
+                 * @typedef RegisterCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.ecosystemincentive.MsgRegisterResponse} [response] MsgRegisterResponse
+                 */
+    
+                /**
+                 * Calls Register.
+                 * @function register
+                 * @memberof ununifi.ecosystemincentive.Msg
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IMsgRegister} request MsgRegister message or plain object
+                 * @param {ununifi.ecosystemincentive.Msg.RegisterCallback} callback Node-style callback called with the error, if any, and MsgRegisterResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Msg.prototype.register = function register(request, callback) {
+                    return this.rpcCall(register, $root.ununifi.ecosystemincentive.MsgRegister, $root.ununifi.ecosystemincentive.MsgRegisterResponse, request, callback);
+                }, "name", { value: "Register" });
+    
+                /**
+                 * Calls Register.
+                 * @function register
+                 * @memberof ununifi.ecosystemincentive.Msg
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IMsgRegister} request MsgRegister message or plain object
+                 * @returns {Promise<ununifi.ecosystemincentive.MsgRegisterResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.ecosystemincentive.Msg#withdrawAllRewards}.
+                 * @memberof ununifi.ecosystemincentive.Msg
+                 * @typedef WithdrawAllRewardsCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse} [response] MsgWithdrawAllRewardsResponse
+                 */
+    
+                /**
+                 * Calls WithdrawAllRewards.
+                 * @function withdrawAllRewards
+                 * @memberof ununifi.ecosystemincentive.Msg
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawAllRewards} request MsgWithdrawAllRewards message or plain object
+                 * @param {ununifi.ecosystemincentive.Msg.WithdrawAllRewardsCallback} callback Node-style callback called with the error, if any, and MsgWithdrawAllRewardsResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Msg.prototype.withdrawAllRewards = function withdrawAllRewards(request, callback) {
+                    return this.rpcCall(withdrawAllRewards, $root.ununifi.ecosystemincentive.MsgWithdrawAllRewards, $root.ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse, request, callback);
+                }, "name", { value: "WithdrawAllRewards" });
+    
+                /**
+                 * Calls WithdrawAllRewards.
+                 * @function withdrawAllRewards
+                 * @memberof ununifi.ecosystemincentive.Msg
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawAllRewards} request MsgWithdrawAllRewards message or plain object
+                 * @returns {Promise<ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.ecosystemincentive.Msg#withdrawReward}.
+                 * @memberof ununifi.ecosystemincentive.Msg
+                 * @typedef WithdrawRewardCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.ecosystemincentive.MsgWithdrawRewardResponse} [response] MsgWithdrawRewardResponse
+                 */
+    
+                /**
+                 * Calls WithdrawReward.
+                 * @function withdrawReward
+                 * @memberof ununifi.ecosystemincentive.Msg
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawReward} request MsgWithdrawReward message or plain object
+                 * @param {ununifi.ecosystemincentive.Msg.WithdrawRewardCallback} callback Node-style callback called with the error, if any, and MsgWithdrawRewardResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Msg.prototype.withdrawReward = function withdrawReward(request, callback) {
+                    return this.rpcCall(withdrawReward, $root.ununifi.ecosystemincentive.MsgWithdrawReward, $root.ununifi.ecosystemincentive.MsgWithdrawRewardResponse, request, callback);
+                }, "name", { value: "WithdrawReward" });
+    
+                /**
+                 * Calls WithdrawReward.
+                 * @function withdrawReward
+                 * @memberof ununifi.ecosystemincentive.Msg
+                 * @instance
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawReward} request MsgWithdrawReward message or plain object
+                 * @returns {Promise<ununifi.ecosystemincentive.MsgWithdrawRewardResponse>} Promise
+                 * @variation 2
+                 */
+    
+                return Msg;
+            })();
+    
+            ecosystemincentive.MsgRegister = (function() {
+    
+                /**
+                 * Properties of a MsgRegister.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IMsgRegister
+                 * @property {string|null} [sender] MsgRegister sender
+                 * @property {string|null} [incentive_unit_id] MsgRegister incentive_unit_id
+                 * @property {Array.<string>|null} [subject_addrs] MsgRegister subject_addrs
+                 * @property {Array.<string>|null} [weights] MsgRegister weights
+                 */
+    
+                /**
+                 * Constructs a new MsgRegister.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a MsgRegister.
+                 * @implements IMsgRegister
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IMsgRegister=} [properties] Properties to set
+                 */
+                function MsgRegister(properties) {
+                    this.subject_addrs = [];
+                    this.weights = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * MsgRegister sender.
+                 * @member {string} sender
+                 * @memberof ununifi.ecosystemincentive.MsgRegister
+                 * @instance
+                 */
+                MsgRegister.prototype.sender = "";
+    
+                /**
+                 * MsgRegister incentive_unit_id.
+                 * @member {string} incentive_unit_id
+                 * @memberof ununifi.ecosystemincentive.MsgRegister
+                 * @instance
+                 */
+                MsgRegister.prototype.incentive_unit_id = "";
+    
+                /**
+                 * MsgRegister subject_addrs.
+                 * @member {Array.<string>} subject_addrs
+                 * @memberof ununifi.ecosystemincentive.MsgRegister
+                 * @instance
+                 */
+                MsgRegister.prototype.subject_addrs = $util.emptyArray;
+    
+                /**
+                 * MsgRegister weights.
+                 * @member {Array.<string>} weights
+                 * @memberof ununifi.ecosystemincentive.MsgRegister
+                 * @instance
+                 */
+                MsgRegister.prototype.weights = $util.emptyArray;
+    
+                /**
+                 * Encodes the specified MsgRegister message. Does not implicitly {@link ununifi.ecosystemincentive.MsgRegister.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.MsgRegister
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMsgRegister} message MsgRegister message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgRegister.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                    if (message.incentive_unit_id != null && Object.hasOwnProperty.call(message, "incentive_unit_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.incentive_unit_id);
+                    if (message.subject_addrs != null && message.subject_addrs.length)
+                        for (var i = 0; i < message.subject_addrs.length; ++i)
+                            writer.uint32(/* id 3, wireType 2 =*/26).string(message.subject_addrs[i]);
+                    if (message.weights != null && message.weights.length)
+                        for (var i = 0; i < message.weights.length; ++i)
+                            writer.uint32(/* id 4, wireType 2 =*/34).string(message.weights[i]);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgRegister message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.MsgRegister.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MsgRegister
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMsgRegister} message MsgRegister message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgRegister.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgRegister message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.MsgRegister
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.MsgRegister} MsgRegister
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgRegister.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.MsgRegister();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.sender = reader.string();
+                            break;
+                        case 2:
+                            message.incentive_unit_id = reader.string();
+                            break;
+                        case 3:
+                            if (!(message.subject_addrs && message.subject_addrs.length))
+                                message.subject_addrs = [];
+                            message.subject_addrs.push(reader.string());
+                            break;
+                        case 4:
+                            if (!(message.weights && message.weights.length))
+                                message.weights = [];
+                            message.weights.push(reader.string());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgRegister message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MsgRegister
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.MsgRegister} MsgRegister
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgRegister.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgRegister message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.MsgRegister
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgRegister.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        if (!$util.isString(message.sender))
+                            return "sender: string expected";
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        if (!$util.isString(message.incentive_unit_id))
+                            return "incentive_unit_id: string expected";
+                    if (message.subject_addrs != null && message.hasOwnProperty("subject_addrs")) {
+                        if (!Array.isArray(message.subject_addrs))
+                            return "subject_addrs: array expected";
+                        for (var i = 0; i < message.subject_addrs.length; ++i)
+                            if (!$util.isString(message.subject_addrs[i]))
+                                return "subject_addrs: string[] expected";
+                    }
+                    if (message.weights != null && message.hasOwnProperty("weights")) {
+                        if (!Array.isArray(message.weights))
+                            return "weights: array expected";
+                        for (var i = 0; i < message.weights.length; ++i)
+                            if (!$util.isString(message.weights[i]))
+                                return "weights: string[] expected";
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgRegister message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.MsgRegister
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.MsgRegister} MsgRegister
+                 */
+                MsgRegister.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.MsgRegister)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.MsgRegister();
+                    if (object.sender != null)
+                        message.sender = String(object.sender);
+                    if (object.incentive_unit_id != null)
+                        message.incentive_unit_id = String(object.incentive_unit_id);
+                    if (object.subject_addrs) {
+                        if (!Array.isArray(object.subject_addrs))
+                            throw TypeError(".ununifi.ecosystemincentive.MsgRegister.subject_addrs: array expected");
+                        message.subject_addrs = [];
+                        for (var i = 0; i < object.subject_addrs.length; ++i)
+                            message.subject_addrs[i] = String(object.subject_addrs[i]);
+                    }
+                    if (object.weights) {
+                        if (!Array.isArray(object.weights))
+                            throw TypeError(".ununifi.ecosystemincentive.MsgRegister.weights: array expected");
+                        message.weights = [];
+                        for (var i = 0; i < object.weights.length; ++i)
+                            message.weights[i] = String(object.weights[i]);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a MsgRegister message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.MsgRegister
+                 * @static
+                 * @param {ununifi.ecosystemincentive.MsgRegister} message MsgRegister
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgRegister.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults) {
+                        object.subject_addrs = [];
+                        object.weights = [];
+                    }
+                    if (options.defaults) {
+                        object.sender = "";
+                        object.incentive_unit_id = "";
+                    }
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        object.sender = message.sender;
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        object.incentive_unit_id = message.incentive_unit_id;
+                    if (message.subject_addrs && message.subject_addrs.length) {
+                        object.subject_addrs = [];
+                        for (var j = 0; j < message.subject_addrs.length; ++j)
+                            object.subject_addrs[j] = message.subject_addrs[j];
+                    }
+                    if (message.weights && message.weights.length) {
+                        object.weights = [];
+                        for (var j = 0; j < message.weights.length; ++j)
+                            object.weights[j] = message.weights[j];
+                    }
+                    return object;
+                };
+    
+                /**
+                 * Converts this MsgRegister to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.MsgRegister
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgRegister.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgRegister;
+            })();
+    
+            ecosystemincentive.MsgRegisterResponse = (function() {
+    
+                /**
+                 * Properties of a MsgRegisterResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IMsgRegisterResponse
+                 */
+    
+                /**
+                 * Constructs a new MsgRegisterResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a MsgRegisterResponse.
+                 * @implements IMsgRegisterResponse
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IMsgRegisterResponse=} [properties] Properties to set
+                 */
+                function MsgRegisterResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Encodes the specified MsgRegisterResponse message. Does not implicitly {@link ununifi.ecosystemincentive.MsgRegisterResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.MsgRegisterResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMsgRegisterResponse} message MsgRegisterResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgRegisterResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgRegisterResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.MsgRegisterResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MsgRegisterResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMsgRegisterResponse} message MsgRegisterResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgRegisterResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgRegisterResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.MsgRegisterResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.MsgRegisterResponse} MsgRegisterResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgRegisterResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.MsgRegisterResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgRegisterResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MsgRegisterResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.MsgRegisterResponse} MsgRegisterResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgRegisterResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgRegisterResponse message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.MsgRegisterResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgRegisterResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgRegisterResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.MsgRegisterResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.MsgRegisterResponse} MsgRegisterResponse
+                 */
+                MsgRegisterResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.MsgRegisterResponse)
+                        return object;
+                    return new $root.ununifi.ecosystemincentive.MsgRegisterResponse();
+                };
+    
+                /**
+                 * Creates a plain object from a MsgRegisterResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.MsgRegisterResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.MsgRegisterResponse} message MsgRegisterResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgRegisterResponse.toObject = function toObject() {
+                    return {};
+                };
+    
+                /**
+                 * Converts this MsgRegisterResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.MsgRegisterResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgRegisterResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgRegisterResponse;
+            })();
+    
+            ecosystemincentive.MsgWithdrawAllRewards = (function() {
+    
+                /**
+                 * Properties of a MsgWithdrawAllRewards.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IMsgWithdrawAllRewards
+                 * @property {string|null} [sender] MsgWithdrawAllRewards sender
+                 */
+    
+                /**
+                 * Constructs a new MsgWithdrawAllRewards.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a MsgWithdrawAllRewards.
+                 * @implements IMsgWithdrawAllRewards
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawAllRewards=} [properties] Properties to set
+                 */
+                function MsgWithdrawAllRewards(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * MsgWithdrawAllRewards sender.
+                 * @member {string} sender
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewards
+                 * @instance
+                 */
+                MsgWithdrawAllRewards.prototype.sender = "";
+    
+                /**
+                 * Encodes the specified MsgWithdrawAllRewards message. Does not implicitly {@link ununifi.ecosystemincentive.MsgWithdrawAllRewards.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewards
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawAllRewards} message MsgWithdrawAllRewards message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgWithdrawAllRewards.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgWithdrawAllRewards message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.MsgWithdrawAllRewards.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewards
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawAllRewards} message MsgWithdrawAllRewards message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgWithdrawAllRewards.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgWithdrawAllRewards message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewards
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.MsgWithdrawAllRewards} MsgWithdrawAllRewards
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgWithdrawAllRewards.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.MsgWithdrawAllRewards();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.sender = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgWithdrawAllRewards message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewards
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.MsgWithdrawAllRewards} MsgWithdrawAllRewards
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgWithdrawAllRewards.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgWithdrawAllRewards message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewards
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgWithdrawAllRewards.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        if (!$util.isString(message.sender))
+                            return "sender: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgWithdrawAllRewards message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewards
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.MsgWithdrawAllRewards} MsgWithdrawAllRewards
+                 */
+                MsgWithdrawAllRewards.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.MsgWithdrawAllRewards)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.MsgWithdrawAllRewards();
+                    if (object.sender != null)
+                        message.sender = String(object.sender);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a MsgWithdrawAllRewards message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewards
+                 * @static
+                 * @param {ununifi.ecosystemincentive.MsgWithdrawAllRewards} message MsgWithdrawAllRewards
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgWithdrawAllRewards.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.sender = "";
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        object.sender = message.sender;
+                    return object;
+                };
+    
+                /**
+                 * Converts this MsgWithdrawAllRewards to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewards
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgWithdrawAllRewards.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgWithdrawAllRewards;
+            })();
+    
+            ecosystemincentive.MsgWithdrawAllRewardsResponse = (function() {
+    
+                /**
+                 * Properties of a MsgWithdrawAllRewardsResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IMsgWithdrawAllRewardsResponse
+                 */
+    
+                /**
+                 * Constructs a new MsgWithdrawAllRewardsResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a MsgWithdrawAllRewardsResponse.
+                 * @implements IMsgWithdrawAllRewardsResponse
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawAllRewardsResponse=} [properties] Properties to set
+                 */
+                function MsgWithdrawAllRewardsResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Encodes the specified MsgWithdrawAllRewardsResponse message. Does not implicitly {@link ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawAllRewardsResponse} message MsgWithdrawAllRewardsResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgWithdrawAllRewardsResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgWithdrawAllRewardsResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawAllRewardsResponse} message MsgWithdrawAllRewardsResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgWithdrawAllRewardsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgWithdrawAllRewardsResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse} MsgWithdrawAllRewardsResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgWithdrawAllRewardsResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgWithdrawAllRewardsResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse} MsgWithdrawAllRewardsResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgWithdrawAllRewardsResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgWithdrawAllRewardsResponse message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgWithdrawAllRewardsResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgWithdrawAllRewardsResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse} MsgWithdrawAllRewardsResponse
+                 */
+                MsgWithdrawAllRewardsResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse)
+                        return object;
+                    return new $root.ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse();
+                };
+    
+                /**
+                 * Creates a plain object from a MsgWithdrawAllRewardsResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse} message MsgWithdrawAllRewardsResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgWithdrawAllRewardsResponse.toObject = function toObject() {
+                    return {};
+                };
+    
+                /**
+                 * Converts this MsgWithdrawAllRewardsResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawAllRewardsResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgWithdrawAllRewardsResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgWithdrawAllRewardsResponse;
+            })();
+    
+            ecosystemincentive.MsgWithdrawReward = (function() {
+    
+                /**
+                 * Properties of a MsgWithdrawReward.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IMsgWithdrawReward
+                 * @property {string|null} [sender] MsgWithdrawReward sender
+                 * @property {string|null} [denom] MsgWithdrawReward denom
+                 */
+    
+                /**
+                 * Constructs a new MsgWithdrawReward.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a MsgWithdrawReward.
+                 * @implements IMsgWithdrawReward
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawReward=} [properties] Properties to set
+                 */
+                function MsgWithdrawReward(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * MsgWithdrawReward sender.
+                 * @member {string} sender
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawReward
+                 * @instance
+                 */
+                MsgWithdrawReward.prototype.sender = "";
+    
+                /**
+                 * MsgWithdrawReward denom.
+                 * @member {string} denom
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawReward
+                 * @instance
+                 */
+                MsgWithdrawReward.prototype.denom = "";
+    
+                /**
+                 * Encodes the specified MsgWithdrawReward message. Does not implicitly {@link ununifi.ecosystemincentive.MsgWithdrawReward.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawReward
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawReward} message MsgWithdrawReward message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgWithdrawReward.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                    if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.denom);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgWithdrawReward message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.MsgWithdrawReward.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawReward
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawReward} message MsgWithdrawReward message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgWithdrawReward.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgWithdrawReward message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawReward
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.MsgWithdrawReward} MsgWithdrawReward
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgWithdrawReward.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.MsgWithdrawReward();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.sender = reader.string();
+                            break;
+                        case 2:
+                            message.denom = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgWithdrawReward message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawReward
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.MsgWithdrawReward} MsgWithdrawReward
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgWithdrawReward.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgWithdrawReward message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawReward
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgWithdrawReward.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        if (!$util.isString(message.sender))
+                            return "sender: string expected";
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        if (!$util.isString(message.denom))
+                            return "denom: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgWithdrawReward message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawReward
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.MsgWithdrawReward} MsgWithdrawReward
+                 */
+                MsgWithdrawReward.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.MsgWithdrawReward)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.MsgWithdrawReward();
+                    if (object.sender != null)
+                        message.sender = String(object.sender);
+                    if (object.denom != null)
+                        message.denom = String(object.denom);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a MsgWithdrawReward message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawReward
+                 * @static
+                 * @param {ununifi.ecosystemincentive.MsgWithdrawReward} message MsgWithdrawReward
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgWithdrawReward.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.sender = "";
+                        object.denom = "";
+                    }
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        object.sender = message.sender;
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        object.denom = message.denom;
+                    return object;
+                };
+    
+                /**
+                 * Converts this MsgWithdrawReward to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawReward
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgWithdrawReward.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgWithdrawReward;
+            })();
+    
+            ecosystemincentive.MsgWithdrawRewardResponse = (function() {
+    
+                /**
+                 * Properties of a MsgWithdrawRewardResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IMsgWithdrawRewardResponse
+                 */
+    
+                /**
+                 * Constructs a new MsgWithdrawRewardResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a MsgWithdrawRewardResponse.
+                 * @implements IMsgWithdrawRewardResponse
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawRewardResponse=} [properties] Properties to set
+                 */
+                function MsgWithdrawRewardResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Encodes the specified MsgWithdrawRewardResponse message. Does not implicitly {@link ununifi.ecosystemincentive.MsgWithdrawRewardResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawRewardResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawRewardResponse} message MsgWithdrawRewardResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgWithdrawRewardResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgWithdrawRewardResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.MsgWithdrawRewardResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawRewardResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IMsgWithdrawRewardResponse} message MsgWithdrawRewardResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgWithdrawRewardResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgWithdrawRewardResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawRewardResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.MsgWithdrawRewardResponse} MsgWithdrawRewardResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgWithdrawRewardResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.MsgWithdrawRewardResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgWithdrawRewardResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawRewardResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.MsgWithdrawRewardResponse} MsgWithdrawRewardResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgWithdrawRewardResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgWithdrawRewardResponse message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawRewardResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgWithdrawRewardResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgWithdrawRewardResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawRewardResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.MsgWithdrawRewardResponse} MsgWithdrawRewardResponse
+                 */
+                MsgWithdrawRewardResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.MsgWithdrawRewardResponse)
+                        return object;
+                    return new $root.ununifi.ecosystemincentive.MsgWithdrawRewardResponse();
+                };
+    
+                /**
+                 * Creates a plain object from a MsgWithdrawRewardResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawRewardResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.MsgWithdrawRewardResponse} message MsgWithdrawRewardResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgWithdrawRewardResponse.toObject = function toObject() {
+                    return {};
+                };
+    
+                /**
+                 * Converts this MsgWithdrawRewardResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.MsgWithdrawRewardResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgWithdrawRewardResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgWithdrawRewardResponse;
+            })();
+    
+            ecosystemincentive.GenesisState = (function() {
+    
+                /**
+                 * Properties of a GenesisState.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IGenesisState
+                 * @property {ununifi.ecosystemincentive.IParams|null} [params] GenesisState params
+                 * @property {Array.<ununifi.ecosystemincentive.IIncentiveUnit>|null} [incentive_units] GenesisState incentive_units
+                 * @property {Array.<ununifi.ecosystemincentive.IRewardStore>|null} [reward_stores] GenesisState reward_stores
+                 */
+    
+                /**
+                 * Constructs a new GenesisState.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a GenesisState.
+                 * @implements IGenesisState
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IGenesisState=} [properties] Properties to set
+                 */
+                function GenesisState(properties) {
+                    this.incentive_units = [];
+                    this.reward_stores = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * GenesisState params.
+                 * @member {ununifi.ecosystemincentive.IParams|null|undefined} params
+                 * @memberof ununifi.ecosystemincentive.GenesisState
+                 * @instance
+                 */
+                GenesisState.prototype.params = null;
+    
+                /**
+                 * GenesisState incentive_units.
+                 * @member {Array.<ununifi.ecosystemincentive.IIncentiveUnit>} incentive_units
+                 * @memberof ununifi.ecosystemincentive.GenesisState
+                 * @instance
+                 */
+                GenesisState.prototype.incentive_units = $util.emptyArray;
+    
+                /**
+                 * GenesisState reward_stores.
+                 * @member {Array.<ununifi.ecosystemincentive.IRewardStore>} reward_stores
+                 * @memberof ununifi.ecosystemincentive.GenesisState
+                 * @instance
+                 */
+                GenesisState.prototype.reward_stores = $util.emptyArray;
+    
+                /**
+                 * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.ecosystemincentive.GenesisState.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.GenesisState
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IGenesisState} message GenesisState message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                GenesisState.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.params != null && Object.hasOwnProperty.call(message, "params"))
+                        $root.ununifi.ecosystemincentive.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.incentive_units != null && message.incentive_units.length)
+                        for (var i = 0; i < message.incentive_units.length; ++i)
+                            $root.ununifi.ecosystemincentive.IncentiveUnit.encode(message.incentive_units[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    if (message.reward_stores != null && message.reward_stores.length)
+                        for (var i = 0; i < message.reward_stores.length; ++i)
+                            $root.ununifi.ecosystemincentive.RewardStore.encode(message.reward_stores[i], writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.GenesisState.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.GenesisState
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IGenesisState} message GenesisState message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                GenesisState.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a GenesisState message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.GenesisState
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.GenesisState} GenesisState
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                GenesisState.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.GenesisState();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.params = $root.ununifi.ecosystemincentive.Params.decode(reader, reader.uint32());
+                            break;
+                        case 2:
+                            if (!(message.incentive_units && message.incentive_units.length))
+                                message.incentive_units = [];
+                            message.incentive_units.push($root.ununifi.ecosystemincentive.IncentiveUnit.decode(reader, reader.uint32()));
+                            break;
+                        case 3:
+                            if (!(message.reward_stores && message.reward_stores.length))
+                                message.reward_stores = [];
+                            message.reward_stores.push($root.ununifi.ecosystemincentive.RewardStore.decode(reader, reader.uint32()));
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a GenesisState message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.GenesisState
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.GenesisState} GenesisState
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                GenesisState.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a GenesisState message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.GenesisState
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                GenesisState.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.params != null && message.hasOwnProperty("params")) {
+                        var error = $root.ununifi.ecosystemincentive.Params.verify(message.params);
+                        if (error)
+                            return "params." + error;
+                    }
+                    if (message.incentive_units != null && message.hasOwnProperty("incentive_units")) {
+                        if (!Array.isArray(message.incentive_units))
+                            return "incentive_units: array expected";
+                        for (var i = 0; i < message.incentive_units.length; ++i) {
+                            var error = $root.ununifi.ecosystemincentive.IncentiveUnit.verify(message.incentive_units[i]);
+                            if (error)
+                                return "incentive_units." + error;
+                        }
+                    }
+                    if (message.reward_stores != null && message.hasOwnProperty("reward_stores")) {
+                        if (!Array.isArray(message.reward_stores))
+                            return "reward_stores: array expected";
+                        for (var i = 0; i < message.reward_stores.length; ++i) {
+                            var error = $root.ununifi.ecosystemincentive.RewardStore.verify(message.reward_stores[i]);
+                            if (error)
+                                return "reward_stores." + error;
+                        }
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a GenesisState message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.GenesisState
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.GenesisState} GenesisState
+                 */
+                GenesisState.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.GenesisState)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.GenesisState();
+                    if (object.params != null) {
+                        if (typeof object.params !== "object")
+                            throw TypeError(".ununifi.ecosystemincentive.GenesisState.params: object expected");
+                        message.params = $root.ununifi.ecosystemincentive.Params.fromObject(object.params);
+                    }
+                    if (object.incentive_units) {
+                        if (!Array.isArray(object.incentive_units))
+                            throw TypeError(".ununifi.ecosystemincentive.GenesisState.incentive_units: array expected");
+                        message.incentive_units = [];
+                        for (var i = 0; i < object.incentive_units.length; ++i) {
+                            if (typeof object.incentive_units[i] !== "object")
+                                throw TypeError(".ununifi.ecosystemincentive.GenesisState.incentive_units: object expected");
+                            message.incentive_units[i] = $root.ununifi.ecosystemincentive.IncentiveUnit.fromObject(object.incentive_units[i]);
+                        }
+                    }
+                    if (object.reward_stores) {
+                        if (!Array.isArray(object.reward_stores))
+                            throw TypeError(".ununifi.ecosystemincentive.GenesisState.reward_stores: array expected");
+                        message.reward_stores = [];
+                        for (var i = 0; i < object.reward_stores.length; ++i) {
+                            if (typeof object.reward_stores[i] !== "object")
+                                throw TypeError(".ununifi.ecosystemincentive.GenesisState.reward_stores: object expected");
+                            message.reward_stores[i] = $root.ununifi.ecosystemincentive.RewardStore.fromObject(object.reward_stores[i]);
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a GenesisState message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.GenesisState
+                 * @static
+                 * @param {ununifi.ecosystemincentive.GenesisState} message GenesisState
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                GenesisState.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults) {
+                        object.incentive_units = [];
+                        object.reward_stores = [];
+                    }
+                    if (options.defaults)
+                        object.params = null;
+                    if (message.params != null && message.hasOwnProperty("params"))
+                        object.params = $root.ununifi.ecosystemincentive.Params.toObject(message.params, options);
+                    if (message.incentive_units && message.incentive_units.length) {
+                        object.incentive_units = [];
+                        for (var j = 0; j < message.incentive_units.length; ++j)
+                            object.incentive_units[j] = $root.ununifi.ecosystemincentive.IncentiveUnit.toObject(message.incentive_units[j], options);
+                    }
+                    if (message.reward_stores && message.reward_stores.length) {
+                        object.reward_stores = [];
+                        for (var j = 0; j < message.reward_stores.length; ++j)
+                            object.reward_stores[j] = $root.ununifi.ecosystemincentive.RewardStore.toObject(message.reward_stores[j], options);
+                    }
+                    return object;
+                };
+    
+                /**
+                 * Converts this GenesisState to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.GenesisState
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                GenesisState.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return GenesisState;
+            })();
+    
+            ecosystemincentive.EventRegister = (function() {
+    
+                /**
+                 * Properties of an EventRegister.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IEventRegister
+                 * @property {string|null} [incentive_unit_id] EventRegister incentive_unit_id
+                 * @property {Array.<ununifi.ecosystemincentive.ISubjectInfo>|null} [subject_info_lists] EventRegister subject_info_lists
+                 */
+    
+                /**
+                 * Constructs a new EventRegister.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents an EventRegister.
+                 * @implements IEventRegister
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IEventRegister=} [properties] Properties to set
+                 */
+                function EventRegister(properties) {
+                    this.subject_info_lists = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * EventRegister incentive_unit_id.
+                 * @member {string} incentive_unit_id
+                 * @memberof ununifi.ecosystemincentive.EventRegister
+                 * @instance
+                 */
+                EventRegister.prototype.incentive_unit_id = "";
+    
+                /**
+                 * EventRegister subject_info_lists.
+                 * @member {Array.<ununifi.ecosystemincentive.ISubjectInfo>} subject_info_lists
+                 * @memberof ununifi.ecosystemincentive.EventRegister
+                 * @instance
+                 */
+                EventRegister.prototype.subject_info_lists = $util.emptyArray;
+    
+                /**
+                 * Encodes the specified EventRegister message. Does not implicitly {@link ununifi.ecosystemincentive.EventRegister.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.EventRegister
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventRegister} message EventRegister message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventRegister.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.incentive_unit_id != null && Object.hasOwnProperty.call(message, "incentive_unit_id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.incentive_unit_id);
+                    if (message.subject_info_lists != null && message.subject_info_lists.length)
+                        for (var i = 0; i < message.subject_info_lists.length; ++i)
+                            $root.ununifi.ecosystemincentive.SubjectInfo.encode(message.subject_info_lists[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified EventRegister message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventRegister.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventRegister
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventRegister} message EventRegister message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventRegister.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an EventRegister message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.EventRegister
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.EventRegister} EventRegister
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventRegister.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.EventRegister();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.incentive_unit_id = reader.string();
+                            break;
+                        case 2:
+                            if (!(message.subject_info_lists && message.subject_info_lists.length))
+                                message.subject_info_lists = [];
+                            message.subject_info_lists.push($root.ununifi.ecosystemincentive.SubjectInfo.decode(reader, reader.uint32()));
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an EventRegister message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventRegister
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.EventRegister} EventRegister
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventRegister.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an EventRegister message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.EventRegister
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                EventRegister.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        if (!$util.isString(message.incentive_unit_id))
+                            return "incentive_unit_id: string expected";
+                    if (message.subject_info_lists != null && message.hasOwnProperty("subject_info_lists")) {
+                        if (!Array.isArray(message.subject_info_lists))
+                            return "subject_info_lists: array expected";
+                        for (var i = 0; i < message.subject_info_lists.length; ++i) {
+                            var error = $root.ununifi.ecosystemincentive.SubjectInfo.verify(message.subject_info_lists[i]);
+                            if (error)
+                                return "subject_info_lists." + error;
+                        }
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates an EventRegister message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.EventRegister
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.EventRegister} EventRegister
+                 */
+                EventRegister.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.EventRegister)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.EventRegister();
+                    if (object.incentive_unit_id != null)
+                        message.incentive_unit_id = String(object.incentive_unit_id);
+                    if (object.subject_info_lists) {
+                        if (!Array.isArray(object.subject_info_lists))
+                            throw TypeError(".ununifi.ecosystemincentive.EventRegister.subject_info_lists: array expected");
+                        message.subject_info_lists = [];
+                        for (var i = 0; i < object.subject_info_lists.length; ++i) {
+                            if (typeof object.subject_info_lists[i] !== "object")
+                                throw TypeError(".ununifi.ecosystemincentive.EventRegister.subject_info_lists: object expected");
+                            message.subject_info_lists[i] = $root.ununifi.ecosystemincentive.SubjectInfo.fromObject(object.subject_info_lists[i]);
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an EventRegister message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.EventRegister
+                 * @static
+                 * @param {ununifi.ecosystemincentive.EventRegister} message EventRegister
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                EventRegister.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults)
+                        object.subject_info_lists = [];
+                    if (options.defaults)
+                        object.incentive_unit_id = "";
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        object.incentive_unit_id = message.incentive_unit_id;
+                    if (message.subject_info_lists && message.subject_info_lists.length) {
+                        object.subject_info_lists = [];
+                        for (var j = 0; j < message.subject_info_lists.length; ++j)
+                            object.subject_info_lists[j] = $root.ununifi.ecosystemincentive.SubjectInfo.toObject(message.subject_info_lists[j], options);
+                    }
+                    return object;
+                };
+    
+                /**
+                 * Converts this EventRegister to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.EventRegister
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                EventRegister.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return EventRegister;
+            })();
+    
+            ecosystemincentive.EventWithdrawAllRewards = (function() {
+    
+                /**
+                 * Properties of an EventWithdrawAllRewards.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IEventWithdrawAllRewards
+                 * @property {string|null} [sender] EventWithdrawAllRewards sender
+                 * @property {Array.<cosmos.base.v1beta1.ICoin>|null} [all_withdrawn_rewards] EventWithdrawAllRewards all_withdrawn_rewards
+                 */
+    
+                /**
+                 * Constructs a new EventWithdrawAllRewards.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents an EventWithdrawAllRewards.
+                 * @implements IEventWithdrawAllRewards
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IEventWithdrawAllRewards=} [properties] Properties to set
+                 */
+                function EventWithdrawAllRewards(properties) {
+                    this.all_withdrawn_rewards = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * EventWithdrawAllRewards sender.
+                 * @member {string} sender
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawAllRewards
+                 * @instance
+                 */
+                EventWithdrawAllRewards.prototype.sender = "";
+    
+                /**
+                 * EventWithdrawAllRewards all_withdrawn_rewards.
+                 * @member {Array.<cosmos.base.v1beta1.ICoin>} all_withdrawn_rewards
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawAllRewards
+                 * @instance
+                 */
+                EventWithdrawAllRewards.prototype.all_withdrawn_rewards = $util.emptyArray;
+    
+                /**
+                 * Encodes the specified EventWithdrawAllRewards message. Does not implicitly {@link ununifi.ecosystemincentive.EventWithdrawAllRewards.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawAllRewards
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventWithdrawAllRewards} message EventWithdrawAllRewards message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventWithdrawAllRewards.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                    if (message.all_withdrawn_rewards != null && message.all_withdrawn_rewards.length)
+                        for (var i = 0; i < message.all_withdrawn_rewards.length; ++i)
+                            $root.cosmos.base.v1beta1.Coin.encode(message.all_withdrawn_rewards[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified EventWithdrawAllRewards message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventWithdrawAllRewards.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawAllRewards
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventWithdrawAllRewards} message EventWithdrawAllRewards message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventWithdrawAllRewards.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an EventWithdrawAllRewards message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawAllRewards
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.EventWithdrawAllRewards} EventWithdrawAllRewards
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventWithdrawAllRewards.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.EventWithdrawAllRewards();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.sender = reader.string();
+                            break;
+                        case 2:
+                            if (!(message.all_withdrawn_rewards && message.all_withdrawn_rewards.length))
+                                message.all_withdrawn_rewards = [];
+                            message.all_withdrawn_rewards.push($root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32()));
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an EventWithdrawAllRewards message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawAllRewards
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.EventWithdrawAllRewards} EventWithdrawAllRewards
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventWithdrawAllRewards.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an EventWithdrawAllRewards message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawAllRewards
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                EventWithdrawAllRewards.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        if (!$util.isString(message.sender))
+                            return "sender: string expected";
+                    if (message.all_withdrawn_rewards != null && message.hasOwnProperty("all_withdrawn_rewards")) {
+                        if (!Array.isArray(message.all_withdrawn_rewards))
+                            return "all_withdrawn_rewards: array expected";
+                        for (var i = 0; i < message.all_withdrawn_rewards.length; ++i) {
+                            var error = $root.cosmos.base.v1beta1.Coin.verify(message.all_withdrawn_rewards[i]);
+                            if (error)
+                                return "all_withdrawn_rewards." + error;
+                        }
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates an EventWithdrawAllRewards message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawAllRewards
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.EventWithdrawAllRewards} EventWithdrawAllRewards
+                 */
+                EventWithdrawAllRewards.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.EventWithdrawAllRewards)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.EventWithdrawAllRewards();
+                    if (object.sender != null)
+                        message.sender = String(object.sender);
+                    if (object.all_withdrawn_rewards) {
+                        if (!Array.isArray(object.all_withdrawn_rewards))
+                            throw TypeError(".ununifi.ecosystemincentive.EventWithdrawAllRewards.all_withdrawn_rewards: array expected");
+                        message.all_withdrawn_rewards = [];
+                        for (var i = 0; i < object.all_withdrawn_rewards.length; ++i) {
+                            if (typeof object.all_withdrawn_rewards[i] !== "object")
+                                throw TypeError(".ununifi.ecosystemincentive.EventWithdrawAllRewards.all_withdrawn_rewards: object expected");
+                            message.all_withdrawn_rewards[i] = $root.cosmos.base.v1beta1.Coin.fromObject(object.all_withdrawn_rewards[i]);
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an EventWithdrawAllRewards message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawAllRewards
+                 * @static
+                 * @param {ununifi.ecosystemincentive.EventWithdrawAllRewards} message EventWithdrawAllRewards
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                EventWithdrawAllRewards.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults)
+                        object.all_withdrawn_rewards = [];
+                    if (options.defaults)
+                        object.sender = "";
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        object.sender = message.sender;
+                    if (message.all_withdrawn_rewards && message.all_withdrawn_rewards.length) {
+                        object.all_withdrawn_rewards = [];
+                        for (var j = 0; j < message.all_withdrawn_rewards.length; ++j)
+                            object.all_withdrawn_rewards[j] = $root.cosmos.base.v1beta1.Coin.toObject(message.all_withdrawn_rewards[j], options);
+                    }
+                    return object;
+                };
+    
+                /**
+                 * Converts this EventWithdrawAllRewards to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawAllRewards
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                EventWithdrawAllRewards.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return EventWithdrawAllRewards;
+            })();
+    
+            ecosystemincentive.EventWithdrawReward = (function() {
+    
+                /**
+                 * Properties of an EventWithdrawReward.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IEventWithdrawReward
+                 * @property {string|null} [sender] EventWithdrawReward sender
+                 * @property {cosmos.base.v1beta1.ICoin|null} [withdrawn_reward] EventWithdrawReward withdrawn_reward
+                 */
+    
+                /**
+                 * Constructs a new EventWithdrawReward.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents an EventWithdrawReward.
+                 * @implements IEventWithdrawReward
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IEventWithdrawReward=} [properties] Properties to set
+                 */
+                function EventWithdrawReward(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * EventWithdrawReward sender.
+                 * @member {string} sender
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawReward
+                 * @instance
+                 */
+                EventWithdrawReward.prototype.sender = "";
+    
+                /**
+                 * EventWithdrawReward withdrawn_reward.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} withdrawn_reward
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawReward
+                 * @instance
+                 */
+                EventWithdrawReward.prototype.withdrawn_reward = null;
+    
+                /**
+                 * Encodes the specified EventWithdrawReward message. Does not implicitly {@link ununifi.ecosystemincentive.EventWithdrawReward.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawReward
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventWithdrawReward} message EventWithdrawReward message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventWithdrawReward.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                    if (message.withdrawn_reward != null && Object.hasOwnProperty.call(message, "withdrawn_reward"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.withdrawn_reward, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified EventWithdrawReward message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventWithdrawReward.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawReward
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventWithdrawReward} message EventWithdrawReward message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventWithdrawReward.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an EventWithdrawReward message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawReward
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.EventWithdrawReward} EventWithdrawReward
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventWithdrawReward.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.EventWithdrawReward();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.sender = reader.string();
+                            break;
+                        case 2:
+                            message.withdrawn_reward = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an EventWithdrawReward message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawReward
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.EventWithdrawReward} EventWithdrawReward
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventWithdrawReward.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an EventWithdrawReward message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawReward
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                EventWithdrawReward.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        if (!$util.isString(message.sender))
+                            return "sender: string expected";
+                    if (message.withdrawn_reward != null && message.hasOwnProperty("withdrawn_reward")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.withdrawn_reward);
+                        if (error)
+                            return "withdrawn_reward." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates an EventWithdrawReward message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawReward
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.EventWithdrawReward} EventWithdrawReward
+                 */
+                EventWithdrawReward.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.EventWithdrawReward)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.EventWithdrawReward();
+                    if (object.sender != null)
+                        message.sender = String(object.sender);
+                    if (object.withdrawn_reward != null) {
+                        if (typeof object.withdrawn_reward !== "object")
+                            throw TypeError(".ununifi.ecosystemincentive.EventWithdrawReward.withdrawn_reward: object expected");
+                        message.withdrawn_reward = $root.cosmos.base.v1beta1.Coin.fromObject(object.withdrawn_reward);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an EventWithdrawReward message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawReward
+                 * @static
+                 * @param {ununifi.ecosystemincentive.EventWithdrawReward} message EventWithdrawReward
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                EventWithdrawReward.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.sender = "";
+                        object.withdrawn_reward = null;
+                    }
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        object.sender = message.sender;
+                    if (message.withdrawn_reward != null && message.hasOwnProperty("withdrawn_reward"))
+                        object.withdrawn_reward = $root.cosmos.base.v1beta1.Coin.toObject(message.withdrawn_reward, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this EventWithdrawReward to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.EventWithdrawReward
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                EventWithdrawReward.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return EventWithdrawReward;
+            })();
+    
+            ecosystemincentive.EventFailedParsingMemoInputs = (function() {
+    
+                /**
+                 * Properties of an EventFailedParsingMemoInputs.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IEventFailedParsingMemoInputs
+                 * @property {string|null} [class_id] EventFailedParsingMemoInputs class_id
+                 * @property {string|null} [nft_id] EventFailedParsingMemoInputs nft_id
+                 * @property {string|null} [memo] EventFailedParsingMemoInputs memo
+                 */
+    
+                /**
+                 * Constructs a new EventFailedParsingMemoInputs.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents an EventFailedParsingMemoInputs.
+                 * @implements IEventFailedParsingMemoInputs
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IEventFailedParsingMemoInputs=} [properties] Properties to set
+                 */
+                function EventFailedParsingMemoInputs(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * EventFailedParsingMemoInputs class_id.
+                 * @member {string} class_id
+                 * @memberof ununifi.ecosystemincentive.EventFailedParsingMemoInputs
+                 * @instance
+                 */
+                EventFailedParsingMemoInputs.prototype.class_id = "";
+    
+                /**
+                 * EventFailedParsingMemoInputs nft_id.
+                 * @member {string} nft_id
+                 * @memberof ununifi.ecosystemincentive.EventFailedParsingMemoInputs
+                 * @instance
+                 */
+                EventFailedParsingMemoInputs.prototype.nft_id = "";
+    
+                /**
+                 * EventFailedParsingMemoInputs memo.
+                 * @member {string} memo
+                 * @memberof ununifi.ecosystemincentive.EventFailedParsingMemoInputs
+                 * @instance
+                 */
+                EventFailedParsingMemoInputs.prototype.memo = "";
+    
+                /**
+                 * Encodes the specified EventFailedParsingMemoInputs message. Does not implicitly {@link ununifi.ecosystemincentive.EventFailedParsingMemoInputs.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.EventFailedParsingMemoInputs
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventFailedParsingMemoInputs} message EventFailedParsingMemoInputs message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventFailedParsingMemoInputs.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.class_id);
+                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.nft_id);
+                    if (message.memo != null && Object.hasOwnProperty.call(message, "memo"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.memo);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified EventFailedParsingMemoInputs message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventFailedParsingMemoInputs.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventFailedParsingMemoInputs
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventFailedParsingMemoInputs} message EventFailedParsingMemoInputs message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventFailedParsingMemoInputs.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an EventFailedParsingMemoInputs message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.EventFailedParsingMemoInputs
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.EventFailedParsingMemoInputs} EventFailedParsingMemoInputs
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventFailedParsingMemoInputs.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.EventFailedParsingMemoInputs();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.class_id = reader.string();
+                            break;
+                        case 2:
+                            message.nft_id = reader.string();
+                            break;
+                        case 3:
+                            message.memo = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an EventFailedParsingMemoInputs message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventFailedParsingMemoInputs
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.EventFailedParsingMemoInputs} EventFailedParsingMemoInputs
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventFailedParsingMemoInputs.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an EventFailedParsingMemoInputs message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.EventFailedParsingMemoInputs
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                EventFailedParsingMemoInputs.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        if (!$util.isString(message.class_id))
+                            return "class_id: string expected";
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        if (!$util.isString(message.nft_id))
+                            return "nft_id: string expected";
+                    if (message.memo != null && message.hasOwnProperty("memo"))
+                        if (!$util.isString(message.memo))
+                            return "memo: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates an EventFailedParsingMemoInputs message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.EventFailedParsingMemoInputs
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.EventFailedParsingMemoInputs} EventFailedParsingMemoInputs
+                 */
+                EventFailedParsingMemoInputs.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.EventFailedParsingMemoInputs)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.EventFailedParsingMemoInputs();
+                    if (object.class_id != null)
+                        message.class_id = String(object.class_id);
+                    if (object.nft_id != null)
+                        message.nft_id = String(object.nft_id);
+                    if (object.memo != null)
+                        message.memo = String(object.memo);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an EventFailedParsingMemoInputs message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.EventFailedParsingMemoInputs
+                 * @static
+                 * @param {ununifi.ecosystemincentive.EventFailedParsingMemoInputs} message EventFailedParsingMemoInputs
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                EventFailedParsingMemoInputs.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.class_id = "";
+                        object.nft_id = "";
+                        object.memo = "";
+                    }
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        object.class_id = message.class_id;
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        object.nft_id = message.nft_id;
+                    if (message.memo != null && message.hasOwnProperty("memo"))
+                        object.memo = message.memo;
+                    return object;
+                };
+    
+                /**
+                 * Converts this EventFailedParsingMemoInputs to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.EventFailedParsingMemoInputs
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                EventFailedParsingMemoInputs.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return EventFailedParsingMemoInputs;
+            })();
+    
+            ecosystemincentive.EventRecordedIncentiveUnitId = (function() {
+    
+                /**
+                 * Properties of an EventRecordedIncentiveUnitId.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IEventRecordedIncentiveUnitId
+                 * @property {string|null} [incentive_unit_id] EventRecordedIncentiveUnitId incentive_unit_id
+                 * @property {string|null} [class_id] EventRecordedIncentiveUnitId class_id
+                 * @property {string|null} [nft_id] EventRecordedIncentiveUnitId nft_id
+                 */
+    
+                /**
+                 * Constructs a new EventRecordedIncentiveUnitId.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents an EventRecordedIncentiveUnitId.
+                 * @implements IEventRecordedIncentiveUnitId
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IEventRecordedIncentiveUnitId=} [properties] Properties to set
+                 */
+                function EventRecordedIncentiveUnitId(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * EventRecordedIncentiveUnitId incentive_unit_id.
+                 * @member {string} incentive_unit_id
+                 * @memberof ununifi.ecosystemincentive.EventRecordedIncentiveUnitId
+                 * @instance
+                 */
+                EventRecordedIncentiveUnitId.prototype.incentive_unit_id = "";
+    
+                /**
+                 * EventRecordedIncentiveUnitId class_id.
+                 * @member {string} class_id
+                 * @memberof ununifi.ecosystemincentive.EventRecordedIncentiveUnitId
+                 * @instance
+                 */
+                EventRecordedIncentiveUnitId.prototype.class_id = "";
+    
+                /**
+                 * EventRecordedIncentiveUnitId nft_id.
+                 * @member {string} nft_id
+                 * @memberof ununifi.ecosystemincentive.EventRecordedIncentiveUnitId
+                 * @instance
+                 */
+                EventRecordedIncentiveUnitId.prototype.nft_id = "";
+    
+                /**
+                 * Encodes the specified EventRecordedIncentiveUnitId message. Does not implicitly {@link ununifi.ecosystemincentive.EventRecordedIncentiveUnitId.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.EventRecordedIncentiveUnitId
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventRecordedIncentiveUnitId} message EventRecordedIncentiveUnitId message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventRecordedIncentiveUnitId.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.incentive_unit_id != null && Object.hasOwnProperty.call(message, "incentive_unit_id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.incentive_unit_id);
+                    if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.class_id);
+                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.nft_id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified EventRecordedIncentiveUnitId message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventRecordedIncentiveUnitId.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventRecordedIncentiveUnitId
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventRecordedIncentiveUnitId} message EventRecordedIncentiveUnitId message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventRecordedIncentiveUnitId.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an EventRecordedIncentiveUnitId message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.EventRecordedIncentiveUnitId
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.EventRecordedIncentiveUnitId} EventRecordedIncentiveUnitId
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventRecordedIncentiveUnitId.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.EventRecordedIncentiveUnitId();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.incentive_unit_id = reader.string();
+                            break;
+                        case 2:
+                            message.class_id = reader.string();
+                            break;
+                        case 3:
+                            message.nft_id = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an EventRecordedIncentiveUnitId message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventRecordedIncentiveUnitId
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.EventRecordedIncentiveUnitId} EventRecordedIncentiveUnitId
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventRecordedIncentiveUnitId.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an EventRecordedIncentiveUnitId message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.EventRecordedIncentiveUnitId
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                EventRecordedIncentiveUnitId.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        if (!$util.isString(message.incentive_unit_id))
+                            return "incentive_unit_id: string expected";
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        if (!$util.isString(message.class_id))
+                            return "class_id: string expected";
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        if (!$util.isString(message.nft_id))
+                            return "nft_id: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates an EventRecordedIncentiveUnitId message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.EventRecordedIncentiveUnitId
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.EventRecordedIncentiveUnitId} EventRecordedIncentiveUnitId
+                 */
+                EventRecordedIncentiveUnitId.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.EventRecordedIncentiveUnitId)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.EventRecordedIncentiveUnitId();
+                    if (object.incentive_unit_id != null)
+                        message.incentive_unit_id = String(object.incentive_unit_id);
+                    if (object.class_id != null)
+                        message.class_id = String(object.class_id);
+                    if (object.nft_id != null)
+                        message.nft_id = String(object.nft_id);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an EventRecordedIncentiveUnitId message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.EventRecordedIncentiveUnitId
+                 * @static
+                 * @param {ununifi.ecosystemincentive.EventRecordedIncentiveUnitId} message EventRecordedIncentiveUnitId
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                EventRecordedIncentiveUnitId.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.incentive_unit_id = "";
+                        object.class_id = "";
+                        object.nft_id = "";
+                    }
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        object.incentive_unit_id = message.incentive_unit_id;
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        object.class_id = message.class_id;
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        object.nft_id = message.nft_id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this EventRecordedIncentiveUnitId to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.EventRecordedIncentiveUnitId
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                EventRecordedIncentiveUnitId.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return EventRecordedIncentiveUnitId;
+            })();
+    
+            ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward = (function() {
+    
+                /**
+                 * Properties of an EventDeletedNftIdRecordedForFrontendReward.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IEventDeletedNftIdRecordedForFrontendReward
+                 * @property {string|null} [incentive_unit_id] EventDeletedNftIdRecordedForFrontendReward incentive_unit_id
+                 * @property {string|null} [class_id] EventDeletedNftIdRecordedForFrontendReward class_id
+                 * @property {string|null} [nft_id] EventDeletedNftIdRecordedForFrontendReward nft_id
+                 */
+    
+                /**
+                 * Constructs a new EventDeletedNftIdRecordedForFrontendReward.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents an EventDeletedNftIdRecordedForFrontendReward.
+                 * @implements IEventDeletedNftIdRecordedForFrontendReward
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IEventDeletedNftIdRecordedForFrontendReward=} [properties] Properties to set
+                 */
+                function EventDeletedNftIdRecordedForFrontendReward(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * EventDeletedNftIdRecordedForFrontendReward incentive_unit_id.
+                 * @member {string} incentive_unit_id
+                 * @memberof ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward
+                 * @instance
+                 */
+                EventDeletedNftIdRecordedForFrontendReward.prototype.incentive_unit_id = "";
+    
+                /**
+                 * EventDeletedNftIdRecordedForFrontendReward class_id.
+                 * @member {string} class_id
+                 * @memberof ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward
+                 * @instance
+                 */
+                EventDeletedNftIdRecordedForFrontendReward.prototype.class_id = "";
+    
+                /**
+                 * EventDeletedNftIdRecordedForFrontendReward nft_id.
+                 * @member {string} nft_id
+                 * @memberof ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward
+                 * @instance
+                 */
+                EventDeletedNftIdRecordedForFrontendReward.prototype.nft_id = "";
+    
+                /**
+                 * Encodes the specified EventDeletedNftIdRecordedForFrontendReward message. Does not implicitly {@link ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventDeletedNftIdRecordedForFrontendReward} message EventDeletedNftIdRecordedForFrontendReward message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventDeletedNftIdRecordedForFrontendReward.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.incentive_unit_id != null && Object.hasOwnProperty.call(message, "incentive_unit_id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.incentive_unit_id);
+                    if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.class_id);
+                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.nft_id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified EventDeletedNftIdRecordedForFrontendReward message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventDeletedNftIdRecordedForFrontendReward} message EventDeletedNftIdRecordedForFrontendReward message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventDeletedNftIdRecordedForFrontendReward.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an EventDeletedNftIdRecordedForFrontendReward message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward} EventDeletedNftIdRecordedForFrontendReward
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventDeletedNftIdRecordedForFrontendReward.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.incentive_unit_id = reader.string();
+                            break;
+                        case 2:
+                            message.class_id = reader.string();
+                            break;
+                        case 3:
+                            message.nft_id = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an EventDeletedNftIdRecordedForFrontendReward message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward} EventDeletedNftIdRecordedForFrontendReward
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventDeletedNftIdRecordedForFrontendReward.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an EventDeletedNftIdRecordedForFrontendReward message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                EventDeletedNftIdRecordedForFrontendReward.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        if (!$util.isString(message.incentive_unit_id))
+                            return "incentive_unit_id: string expected";
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        if (!$util.isString(message.class_id))
+                            return "class_id: string expected";
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        if (!$util.isString(message.nft_id))
+                            return "nft_id: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates an EventDeletedNftIdRecordedForFrontendReward message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward} EventDeletedNftIdRecordedForFrontendReward
+                 */
+                EventDeletedNftIdRecordedForFrontendReward.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward();
+                    if (object.incentive_unit_id != null)
+                        message.incentive_unit_id = String(object.incentive_unit_id);
+                    if (object.class_id != null)
+                        message.class_id = String(object.class_id);
+                    if (object.nft_id != null)
+                        message.nft_id = String(object.nft_id);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an EventDeletedNftIdRecordedForFrontendReward message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward
+                 * @static
+                 * @param {ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward} message EventDeletedNftIdRecordedForFrontendReward
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                EventDeletedNftIdRecordedForFrontendReward.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.incentive_unit_id = "";
+                        object.class_id = "";
+                        object.nft_id = "";
+                    }
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        object.incentive_unit_id = message.incentive_unit_id;
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        object.class_id = message.class_id;
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        object.nft_id = message.nft_id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this EventDeletedNftIdRecordedForFrontendReward to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                EventDeletedNftIdRecordedForFrontendReward.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return EventDeletedNftIdRecordedForFrontendReward;
+            })();
+    
+            ecosystemincentive.EventNotRegisteredIncentiveUnitId = (function() {
+    
+                /**
+                 * Properties of an EventNotRegisteredIncentiveUnitId.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IEventNotRegisteredIncentiveUnitId
+                 * @property {string|null} [incentive_unit_id] EventNotRegisteredIncentiveUnitId incentive_unit_id
+                 * @property {string|null} [class_id] EventNotRegisteredIncentiveUnitId class_id
+                 * @property {string|null} [nft_id] EventNotRegisteredIncentiveUnitId nft_id
+                 */
+    
+                /**
+                 * Constructs a new EventNotRegisteredIncentiveUnitId.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents an EventNotRegisteredIncentiveUnitId.
+                 * @implements IEventNotRegisteredIncentiveUnitId
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IEventNotRegisteredIncentiveUnitId=} [properties] Properties to set
+                 */
+                function EventNotRegisteredIncentiveUnitId(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * EventNotRegisteredIncentiveUnitId incentive_unit_id.
+                 * @member {string} incentive_unit_id
+                 * @memberof ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId
+                 * @instance
+                 */
+                EventNotRegisteredIncentiveUnitId.prototype.incentive_unit_id = "";
+    
+                /**
+                 * EventNotRegisteredIncentiveUnitId class_id.
+                 * @member {string} class_id
+                 * @memberof ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId
+                 * @instance
+                 */
+                EventNotRegisteredIncentiveUnitId.prototype.class_id = "";
+    
+                /**
+                 * EventNotRegisteredIncentiveUnitId nft_id.
+                 * @member {string} nft_id
+                 * @memberof ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId
+                 * @instance
+                 */
+                EventNotRegisteredIncentiveUnitId.prototype.nft_id = "";
+    
+                /**
+                 * Encodes the specified EventNotRegisteredIncentiveUnitId message. Does not implicitly {@link ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventNotRegisteredIncentiveUnitId} message EventNotRegisteredIncentiveUnitId message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventNotRegisteredIncentiveUnitId.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.incentive_unit_id != null && Object.hasOwnProperty.call(message, "incentive_unit_id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.incentive_unit_id);
+                    if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.class_id);
+                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.nft_id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified EventNotRegisteredIncentiveUnitId message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventNotRegisteredIncentiveUnitId} message EventNotRegisteredIncentiveUnitId message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventNotRegisteredIncentiveUnitId.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an EventNotRegisteredIncentiveUnitId message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId} EventNotRegisteredIncentiveUnitId
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventNotRegisteredIncentiveUnitId.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.incentive_unit_id = reader.string();
+                            break;
+                        case 2:
+                            message.class_id = reader.string();
+                            break;
+                        case 3:
+                            message.nft_id = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an EventNotRegisteredIncentiveUnitId message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId} EventNotRegisteredIncentiveUnitId
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventNotRegisteredIncentiveUnitId.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an EventNotRegisteredIncentiveUnitId message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                EventNotRegisteredIncentiveUnitId.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        if (!$util.isString(message.incentive_unit_id))
+                            return "incentive_unit_id: string expected";
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        if (!$util.isString(message.class_id))
+                            return "class_id: string expected";
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        if (!$util.isString(message.nft_id))
+                            return "nft_id: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates an EventNotRegisteredIncentiveUnitId message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId} EventNotRegisteredIncentiveUnitId
+                 */
+                EventNotRegisteredIncentiveUnitId.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId();
+                    if (object.incentive_unit_id != null)
+                        message.incentive_unit_id = String(object.incentive_unit_id);
+                    if (object.class_id != null)
+                        message.class_id = String(object.class_id);
+                    if (object.nft_id != null)
+                        message.nft_id = String(object.nft_id);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an EventNotRegisteredIncentiveUnitId message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId
+                 * @static
+                 * @param {ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId} message EventNotRegisteredIncentiveUnitId
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                EventNotRegisteredIncentiveUnitId.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.incentive_unit_id = "";
+                        object.class_id = "";
+                        object.nft_id = "";
+                    }
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        object.incentive_unit_id = message.incentive_unit_id;
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        object.class_id = message.class_id;
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        object.nft_id = message.nft_id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this EventNotRegisteredIncentiveUnitId to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                EventNotRegisteredIncentiveUnitId.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return EventNotRegisteredIncentiveUnitId;
+            })();
+    
+            ecosystemincentive.EventNotRecordedNftId = (function() {
+    
+                /**
+                 * Properties of an EventNotRecordedNftId.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IEventNotRecordedNftId
+                 * @property {string|null} [class_id] EventNotRecordedNftId class_id
+                 * @property {string|null} [nft_id] EventNotRecordedNftId nft_id
+                 */
+    
+                /**
+                 * Constructs a new EventNotRecordedNftId.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents an EventNotRecordedNftId.
+                 * @implements IEventNotRecordedNftId
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IEventNotRecordedNftId=} [properties] Properties to set
+                 */
+                function EventNotRecordedNftId(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * EventNotRecordedNftId class_id.
+                 * @member {string} class_id
+                 * @memberof ununifi.ecosystemincentive.EventNotRecordedNftId
+                 * @instance
+                 */
+                EventNotRecordedNftId.prototype.class_id = "";
+    
+                /**
+                 * EventNotRecordedNftId nft_id.
+                 * @member {string} nft_id
+                 * @memberof ununifi.ecosystemincentive.EventNotRecordedNftId
+                 * @instance
+                 */
+                EventNotRecordedNftId.prototype.nft_id = "";
+    
+                /**
+                 * Encodes the specified EventNotRecordedNftId message. Does not implicitly {@link ununifi.ecosystemincentive.EventNotRecordedNftId.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.EventNotRecordedNftId
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventNotRecordedNftId} message EventNotRecordedNftId message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventNotRecordedNftId.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.class_id);
+                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.nft_id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified EventNotRecordedNftId message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventNotRecordedNftId.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventNotRecordedNftId
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventNotRecordedNftId} message EventNotRecordedNftId message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventNotRecordedNftId.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an EventNotRecordedNftId message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.EventNotRecordedNftId
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.EventNotRecordedNftId} EventNotRecordedNftId
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventNotRecordedNftId.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.EventNotRecordedNftId();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.class_id = reader.string();
+                            break;
+                        case 2:
+                            message.nft_id = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an EventNotRecordedNftId message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventNotRecordedNftId
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.EventNotRecordedNftId} EventNotRecordedNftId
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventNotRecordedNftId.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an EventNotRecordedNftId message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.EventNotRecordedNftId
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                EventNotRecordedNftId.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        if (!$util.isString(message.class_id))
+                            return "class_id: string expected";
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        if (!$util.isString(message.nft_id))
+                            return "nft_id: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates an EventNotRecordedNftId message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.EventNotRecordedNftId
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.EventNotRecordedNftId} EventNotRecordedNftId
+                 */
+                EventNotRecordedNftId.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.EventNotRecordedNftId)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.EventNotRecordedNftId();
+                    if (object.class_id != null)
+                        message.class_id = String(object.class_id);
+                    if (object.nft_id != null)
+                        message.nft_id = String(object.nft_id);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an EventNotRecordedNftId message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.EventNotRecordedNftId
+                 * @static
+                 * @param {ununifi.ecosystemincentive.EventNotRecordedNftId} message EventNotRecordedNftId
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                EventNotRecordedNftId.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.class_id = "";
+                        object.nft_id = "";
+                    }
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        object.class_id = message.class_id;
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        object.nft_id = message.nft_id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this EventNotRecordedNftId to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.EventNotRecordedNftId
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                EventNotRecordedNftId.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return EventNotRecordedNftId;
+            })();
+    
+            ecosystemincentive.EventUpdatedReward = (function() {
+    
+                /**
+                 * Properties of an EventUpdatedReward.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IEventUpdatedReward
+                 * @property {string|null} [incentive_unit_id] EventUpdatedReward incentive_unit_id
+                 * @property {cosmos.base.v1beta1.ICoin|null} [earned_reward] EventUpdatedReward earned_reward
+                 */
+    
+                /**
+                 * Constructs a new EventUpdatedReward.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents an EventUpdatedReward.
+                 * @implements IEventUpdatedReward
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IEventUpdatedReward=} [properties] Properties to set
+                 */
+                function EventUpdatedReward(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * EventUpdatedReward incentive_unit_id.
+                 * @member {string} incentive_unit_id
+                 * @memberof ununifi.ecosystemincentive.EventUpdatedReward
+                 * @instance
+                 */
+                EventUpdatedReward.prototype.incentive_unit_id = "";
+    
+                /**
+                 * EventUpdatedReward earned_reward.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} earned_reward
+                 * @memberof ununifi.ecosystemincentive.EventUpdatedReward
+                 * @instance
+                 */
+                EventUpdatedReward.prototype.earned_reward = null;
+    
+                /**
+                 * Encodes the specified EventUpdatedReward message. Does not implicitly {@link ununifi.ecosystemincentive.EventUpdatedReward.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.EventUpdatedReward
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventUpdatedReward} message EventUpdatedReward message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventUpdatedReward.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.incentive_unit_id != null && Object.hasOwnProperty.call(message, "incentive_unit_id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.incentive_unit_id);
+                    if (message.earned_reward != null && Object.hasOwnProperty.call(message, "earned_reward"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.earned_reward, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified EventUpdatedReward message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventUpdatedReward.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventUpdatedReward
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventUpdatedReward} message EventUpdatedReward message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventUpdatedReward.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an EventUpdatedReward message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.EventUpdatedReward
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.EventUpdatedReward} EventUpdatedReward
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventUpdatedReward.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.EventUpdatedReward();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.incentive_unit_id = reader.string();
+                            break;
+                        case 2:
+                            message.earned_reward = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an EventUpdatedReward message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventUpdatedReward
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.EventUpdatedReward} EventUpdatedReward
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventUpdatedReward.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an EventUpdatedReward message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.EventUpdatedReward
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                EventUpdatedReward.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        if (!$util.isString(message.incentive_unit_id))
+                            return "incentive_unit_id: string expected";
+                    if (message.earned_reward != null && message.hasOwnProperty("earned_reward")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.earned_reward);
+                        if (error)
+                            return "earned_reward." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates an EventUpdatedReward message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.EventUpdatedReward
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.EventUpdatedReward} EventUpdatedReward
+                 */
+                EventUpdatedReward.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.EventUpdatedReward)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.EventUpdatedReward();
+                    if (object.incentive_unit_id != null)
+                        message.incentive_unit_id = String(object.incentive_unit_id);
+                    if (object.earned_reward != null) {
+                        if (typeof object.earned_reward !== "object")
+                            throw TypeError(".ununifi.ecosystemincentive.EventUpdatedReward.earned_reward: object expected");
+                        message.earned_reward = $root.cosmos.base.v1beta1.Coin.fromObject(object.earned_reward);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an EventUpdatedReward message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.EventUpdatedReward
+                 * @static
+                 * @param {ununifi.ecosystemincentive.EventUpdatedReward} message EventUpdatedReward
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                EventUpdatedReward.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.incentive_unit_id = "";
+                        object.earned_reward = null;
+                    }
+                    if (message.incentive_unit_id != null && message.hasOwnProperty("incentive_unit_id"))
+                        object.incentive_unit_id = message.incentive_unit_id;
+                    if (message.earned_reward != null && message.hasOwnProperty("earned_reward"))
+                        object.earned_reward = $root.cosmos.base.v1beta1.Coin.toObject(message.earned_reward, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this EventUpdatedReward to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.EventUpdatedReward
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                EventUpdatedReward.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return EventUpdatedReward;
+            })();
+    
+            ecosystemincentive.EventVersionUnmatched = (function() {
+    
+                /**
+                 * Properties of an EventVersionUnmatched.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IEventVersionUnmatched
+                 * @property {string|null} [unmatched_version] EventVersionUnmatched unmatched_version
+                 * @property {string|null} [class_id] EventVersionUnmatched class_id
+                 * @property {string|null} [nft_id] EventVersionUnmatched nft_id
+                 */
+    
+                /**
+                 * Constructs a new EventVersionUnmatched.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents an EventVersionUnmatched.
+                 * @implements IEventVersionUnmatched
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IEventVersionUnmatched=} [properties] Properties to set
+                 */
+                function EventVersionUnmatched(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * EventVersionUnmatched unmatched_version.
+                 * @member {string} unmatched_version
+                 * @memberof ununifi.ecosystemincentive.EventVersionUnmatched
+                 * @instance
+                 */
+                EventVersionUnmatched.prototype.unmatched_version = "";
+    
+                /**
+                 * EventVersionUnmatched class_id.
+                 * @member {string} class_id
+                 * @memberof ununifi.ecosystemincentive.EventVersionUnmatched
+                 * @instance
+                 */
+                EventVersionUnmatched.prototype.class_id = "";
+    
+                /**
+                 * EventVersionUnmatched nft_id.
+                 * @member {string} nft_id
+                 * @memberof ununifi.ecosystemincentive.EventVersionUnmatched
+                 * @instance
+                 */
+                EventVersionUnmatched.prototype.nft_id = "";
+    
+                /**
+                 * Encodes the specified EventVersionUnmatched message. Does not implicitly {@link ununifi.ecosystemincentive.EventVersionUnmatched.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.EventVersionUnmatched
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventVersionUnmatched} message EventVersionUnmatched message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventVersionUnmatched.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.unmatched_version != null && Object.hasOwnProperty.call(message, "unmatched_version"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.unmatched_version);
+                    if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.class_id);
+                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.nft_id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified EventVersionUnmatched message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventVersionUnmatched.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventVersionUnmatched
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventVersionUnmatched} message EventVersionUnmatched message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventVersionUnmatched.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an EventVersionUnmatched message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.EventVersionUnmatched
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.EventVersionUnmatched} EventVersionUnmatched
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventVersionUnmatched.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.EventVersionUnmatched();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.unmatched_version = reader.string();
+                            break;
+                        case 2:
+                            message.class_id = reader.string();
+                            break;
+                        case 3:
+                            message.nft_id = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an EventVersionUnmatched message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventVersionUnmatched
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.EventVersionUnmatched} EventVersionUnmatched
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventVersionUnmatched.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an EventVersionUnmatched message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.EventVersionUnmatched
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                EventVersionUnmatched.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.unmatched_version != null && message.hasOwnProperty("unmatched_version"))
+                        if (!$util.isString(message.unmatched_version))
+                            return "unmatched_version: string expected";
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        if (!$util.isString(message.class_id))
+                            return "class_id: string expected";
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        if (!$util.isString(message.nft_id))
+                            return "nft_id: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates an EventVersionUnmatched message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.EventVersionUnmatched
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.EventVersionUnmatched} EventVersionUnmatched
+                 */
+                EventVersionUnmatched.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.EventVersionUnmatched)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.EventVersionUnmatched();
+                    if (object.unmatched_version != null)
+                        message.unmatched_version = String(object.unmatched_version);
+                    if (object.class_id != null)
+                        message.class_id = String(object.class_id);
+                    if (object.nft_id != null)
+                        message.nft_id = String(object.nft_id);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an EventVersionUnmatched message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.EventVersionUnmatched
+                 * @static
+                 * @param {ununifi.ecosystemincentive.EventVersionUnmatched} message EventVersionUnmatched
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                EventVersionUnmatched.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.unmatched_version = "";
+                        object.class_id = "";
+                        object.nft_id = "";
+                    }
+                    if (message.unmatched_version != null && message.hasOwnProperty("unmatched_version"))
+                        object.unmatched_version = message.unmatched_version;
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        object.class_id = message.class_id;
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        object.nft_id = message.nft_id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this EventVersionUnmatched to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.EventVersionUnmatched
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                EventVersionUnmatched.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return EventVersionUnmatched;
+            })();
+    
+            return ecosystemincentive;
+        })();
+    
         ununifi.ethereum = (function() {
     
             /**
@@ -14407,6 +21558,39 @@
                  */
     
                 /**
+                 * Callback as used by {@link ununifi.nftmarket.Query#loan}.
+                 * @memberof ununifi.nftmarket.Query
+                 * @typedef LoanCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.nftmarket.QueryLoanResponse} [response] QueryLoanResponse
+                 */
+    
+                /**
+                 * Calls Loan.
+                 * @function loan
+                 * @memberof ununifi.nftmarket.Query
+                 * @instance
+                 * @param {ununifi.nftmarket.IQueryLoanRequest} request QueryLoanRequest message or plain object
+                 * @param {ununifi.nftmarket.Query.LoanCallback} callback Node-style callback called with the error, if any, and QueryLoanResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.loan = function loan(request, callback) {
+                    return this.rpcCall(loan, $root.ununifi.nftmarket.QueryLoanRequest, $root.ununifi.nftmarket.QueryLoanResponse, request, callback);
+                }, "name", { value: "Loan" });
+    
+                /**
+                 * Calls Loan.
+                 * @function loan
+                 * @memberof ununifi.nftmarket.Query
+                 * @instance
+                 * @param {ununifi.nftmarket.IQueryLoanRequest} request QueryLoanRequest message or plain object
+                 * @returns {Promise<ununifi.nftmarket.QueryLoanResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
                  * Callback as used by {@link ununifi.nftmarket.Query#cDPsList}.
                  * @memberof ununifi.nftmarket.Query
                  * @typedef CDPsListCallback
@@ -14502,6 +21686,39 @@
                  * @instance
                  * @param {ununifi.nftmarket.IQueryBidderBidsRequest} request QueryBidderBidsRequest message or plain object
                  * @returns {Promise<ununifi.nftmarket.QueryBidderBidsResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.nftmarket.Query#paymentStatus}.
+                 * @memberof ununifi.nftmarket.Query
+                 * @typedef PaymentStatusCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.nftmarket.QueryPaymentStatusResponse} [response] QueryPaymentStatusResponse
+                 */
+    
+                /**
+                 * Calls PaymentStatus.
+                 * @function paymentStatus
+                 * @memberof ununifi.nftmarket.Query
+                 * @instance
+                 * @param {ununifi.nftmarket.IQueryPaymentStatusRequest} request QueryPaymentStatusRequest message or plain object
+                 * @param {ununifi.nftmarket.Query.PaymentStatusCallback} callback Node-style callback called with the error, if any, and QueryPaymentStatusResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.paymentStatus = function paymentStatus(request, callback) {
+                    return this.rpcCall(paymentStatus, $root.ununifi.nftmarket.QueryPaymentStatusRequest, $root.ununifi.nftmarket.QueryPaymentStatusResponse, request, callback);
+                }, "name", { value: "PaymentStatus" });
+    
+                /**
+                 * Calls PaymentStatus.
+                 * @function paymentStatus
+                 * @memberof ununifi.nftmarket.Query
+                 * @instance
+                 * @param {ununifi.nftmarket.IQueryPaymentStatusRequest} request QueryPaymentStatusRequest message or plain object
+                 * @returns {Promise<ununifi.nftmarket.QueryPaymentStatusResponse>} Promise
                  * @variation 2
                  */
     
@@ -15253,6 +22470,7 @@
                  * Properties of a QueryListedNftsRequest.
                  * @memberof ununifi.nftmarket
                  * @interface IQueryListedNftsRequest
+                 * @property {string|null} [owner] QueryListedNftsRequest owner
                  */
     
                 /**
@@ -15271,6 +22489,14 @@
                 }
     
                 /**
+                 * QueryListedNftsRequest owner.
+                 * @member {string} owner
+                 * @memberof ununifi.nftmarket.QueryListedNftsRequest
+                 * @instance
+                 */
+                QueryListedNftsRequest.prototype.owner = "";
+    
+                /**
                  * Encodes the specified QueryListedNftsRequest message. Does not implicitly {@link ununifi.nftmarket.QueryListedNftsRequest.verify|verify} messages.
                  * @function encode
                  * @memberof ununifi.nftmarket.QueryListedNftsRequest
@@ -15282,6 +22508,8 @@
                 QueryListedNftsRequest.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
+                    if (message.owner != null && Object.hasOwnProperty.call(message, "owner"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.owner);
                     return writer;
                 };
     
@@ -15316,6 +22544,9 @@
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
+                        case 1:
+                            message.owner = reader.string();
+                            break;
                         default:
                             reader.skipType(tag & 7);
                             break;
@@ -15351,6 +22582,9 @@
                 QueryListedNftsRequest.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
+                    if (message.owner != null && message.hasOwnProperty("owner"))
+                        if (!$util.isString(message.owner))
+                            return "owner: string expected";
                     return null;
                 };
     
@@ -15365,7 +22599,10 @@
                 QueryListedNftsRequest.fromObject = function fromObject(object) {
                     if (object instanceof $root.ununifi.nftmarket.QueryListedNftsRequest)
                         return object;
-                    return new $root.ununifi.nftmarket.QueryListedNftsRequest();
+                    var message = new $root.ununifi.nftmarket.QueryListedNftsRequest();
+                    if (object.owner != null)
+                        message.owner = String(object.owner);
+                    return message;
                 };
     
                 /**
@@ -15377,8 +22614,15 @@
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                QueryListedNftsRequest.toObject = function toObject() {
-                    return {};
+                QueryListedNftsRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.owner = "";
+                    if (message.owner != null && message.hasOwnProperty("owner"))
+                        object.owner = message.owner;
+                    return object;
                 };
     
                 /**
@@ -16870,6 +24114,407 @@
                 return QueryLoansResponse;
             })();
     
+            nftmarket.QueryLoanRequest = (function() {
+    
+                /**
+                 * Properties of a QueryLoanRequest.
+                 * @memberof ununifi.nftmarket
+                 * @interface IQueryLoanRequest
+                 * @property {string|null} [class_id] QueryLoanRequest class_id
+                 * @property {string|null} [nft_id] QueryLoanRequest nft_id
+                 */
+    
+                /**
+                 * Constructs a new QueryLoanRequest.
+                 * @memberof ununifi.nftmarket
+                 * @classdesc Represents a QueryLoanRequest.
+                 * @implements IQueryLoanRequest
+                 * @constructor
+                 * @param {ununifi.nftmarket.IQueryLoanRequest=} [properties] Properties to set
+                 */
+                function QueryLoanRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryLoanRequest class_id.
+                 * @member {string} class_id
+                 * @memberof ununifi.nftmarket.QueryLoanRequest
+                 * @instance
+                 */
+                QueryLoanRequest.prototype.class_id = "";
+    
+                /**
+                 * QueryLoanRequest nft_id.
+                 * @member {string} nft_id
+                 * @memberof ununifi.nftmarket.QueryLoanRequest
+                 * @instance
+                 */
+                QueryLoanRequest.prototype.nft_id = "";
+    
+                /**
+                 * Encodes the specified QueryLoanRequest message. Does not implicitly {@link ununifi.nftmarket.QueryLoanRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.nftmarket.QueryLoanRequest
+                 * @static
+                 * @param {ununifi.nftmarket.IQueryLoanRequest} message QueryLoanRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryLoanRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.class_id);
+                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.nft_id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryLoanRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryLoanRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.nftmarket.QueryLoanRequest
+                 * @static
+                 * @param {ununifi.nftmarket.IQueryLoanRequest} message QueryLoanRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryLoanRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryLoanRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.nftmarket.QueryLoanRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.nftmarket.QueryLoanRequest} QueryLoanRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryLoanRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftmarket.QueryLoanRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.class_id = reader.string();
+                            break;
+                        case 2:
+                            message.nft_id = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryLoanRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.nftmarket.QueryLoanRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.nftmarket.QueryLoanRequest} QueryLoanRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryLoanRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryLoanRequest message.
+                 * @function verify
+                 * @memberof ununifi.nftmarket.QueryLoanRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryLoanRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        if (!$util.isString(message.class_id))
+                            return "class_id: string expected";
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        if (!$util.isString(message.nft_id))
+                            return "nft_id: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryLoanRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.nftmarket.QueryLoanRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.nftmarket.QueryLoanRequest} QueryLoanRequest
+                 */
+                QueryLoanRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.nftmarket.QueryLoanRequest)
+                        return object;
+                    var message = new $root.ununifi.nftmarket.QueryLoanRequest();
+                    if (object.class_id != null)
+                        message.class_id = String(object.class_id);
+                    if (object.nft_id != null)
+                        message.nft_id = String(object.nft_id);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryLoanRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.nftmarket.QueryLoanRequest
+                 * @static
+                 * @param {ununifi.nftmarket.QueryLoanRequest} message QueryLoanRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryLoanRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.class_id = "";
+                        object.nft_id = "";
+                    }
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        object.class_id = message.class_id;
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        object.nft_id = message.nft_id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryLoanRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.nftmarket.QueryLoanRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryLoanRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryLoanRequest;
+            })();
+    
+            nftmarket.QueryLoanResponse = (function() {
+    
+                /**
+                 * Properties of a QueryLoanResponse.
+                 * @memberof ununifi.nftmarket
+                 * @interface IQueryLoanResponse
+                 * @property {ununifi.nftmarket.ILoan|null} [loan] QueryLoanResponse loan
+                 * @property {string|null} [borrowing_limit] QueryLoanResponse borrowing_limit
+                 */
+    
+                /**
+                 * Constructs a new QueryLoanResponse.
+                 * @memberof ununifi.nftmarket
+                 * @classdesc Represents a QueryLoanResponse.
+                 * @implements IQueryLoanResponse
+                 * @constructor
+                 * @param {ununifi.nftmarket.IQueryLoanResponse=} [properties] Properties to set
+                 */
+                function QueryLoanResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryLoanResponse loan.
+                 * @member {ununifi.nftmarket.ILoan|null|undefined} loan
+                 * @memberof ununifi.nftmarket.QueryLoanResponse
+                 * @instance
+                 */
+                QueryLoanResponse.prototype.loan = null;
+    
+                /**
+                 * QueryLoanResponse borrowing_limit.
+                 * @member {string} borrowing_limit
+                 * @memberof ununifi.nftmarket.QueryLoanResponse
+                 * @instance
+                 */
+                QueryLoanResponse.prototype.borrowing_limit = "";
+    
+                /**
+                 * Encodes the specified QueryLoanResponse message. Does not implicitly {@link ununifi.nftmarket.QueryLoanResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.nftmarket.QueryLoanResponse
+                 * @static
+                 * @param {ununifi.nftmarket.IQueryLoanResponse} message QueryLoanResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryLoanResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.loan != null && Object.hasOwnProperty.call(message, "loan"))
+                        $root.ununifi.nftmarket.Loan.encode(message.loan, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.borrowing_limit != null && Object.hasOwnProperty.call(message, "borrowing_limit"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.borrowing_limit);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryLoanResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryLoanResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.nftmarket.QueryLoanResponse
+                 * @static
+                 * @param {ununifi.nftmarket.IQueryLoanResponse} message QueryLoanResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryLoanResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryLoanResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.nftmarket.QueryLoanResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.nftmarket.QueryLoanResponse} QueryLoanResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryLoanResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftmarket.QueryLoanResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.loan = $root.ununifi.nftmarket.Loan.decode(reader, reader.uint32());
+                            break;
+                        case 2:
+                            message.borrowing_limit = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryLoanResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.nftmarket.QueryLoanResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.nftmarket.QueryLoanResponse} QueryLoanResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryLoanResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryLoanResponse message.
+                 * @function verify
+                 * @memberof ununifi.nftmarket.QueryLoanResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryLoanResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.loan != null && message.hasOwnProperty("loan")) {
+                        var error = $root.ununifi.nftmarket.Loan.verify(message.loan);
+                        if (error)
+                            return "loan." + error;
+                    }
+                    if (message.borrowing_limit != null && message.hasOwnProperty("borrowing_limit"))
+                        if (!$util.isString(message.borrowing_limit))
+                            return "borrowing_limit: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryLoanResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.nftmarket.QueryLoanResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.nftmarket.QueryLoanResponse} QueryLoanResponse
+                 */
+                QueryLoanResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.nftmarket.QueryLoanResponse)
+                        return object;
+                    var message = new $root.ununifi.nftmarket.QueryLoanResponse();
+                    if (object.loan != null) {
+                        if (typeof object.loan !== "object")
+                            throw TypeError(".ununifi.nftmarket.QueryLoanResponse.loan: object expected");
+                        message.loan = $root.ununifi.nftmarket.Loan.fromObject(object.loan);
+                    }
+                    if (object.borrowing_limit != null)
+                        message.borrowing_limit = String(object.borrowing_limit);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryLoanResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.nftmarket.QueryLoanResponse
+                 * @static
+                 * @param {ununifi.nftmarket.QueryLoanResponse} message QueryLoanResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryLoanResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.loan = null;
+                        object.borrowing_limit = "";
+                    }
+                    if (message.loan != null && message.hasOwnProperty("loan"))
+                        object.loan = $root.ununifi.nftmarket.Loan.toObject(message.loan, options);
+                    if (message.borrowing_limit != null && message.hasOwnProperty("borrowing_limit"))
+                        object.borrowing_limit = message.borrowing_limit;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryLoanResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.nftmarket.QueryLoanResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryLoanResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryLoanResponse;
+            })();
+    
             nftmarket.QueryCDPsListRequest = (function() {
     
                 /**
@@ -17558,6 +25203,406 @@
                 };
     
                 return QueryNftBidsResponse;
+            })();
+    
+            nftmarket.QueryPaymentStatusRequest = (function() {
+    
+                /**
+                 * Properties of a QueryPaymentStatusRequest.
+                 * @memberof ununifi.nftmarket
+                 * @interface IQueryPaymentStatusRequest
+                 * @property {string|null} [class_id] QueryPaymentStatusRequest class_id
+                 * @property {string|null} [nft_id] QueryPaymentStatusRequest nft_id
+                 * @property {string|null} [bidder] QueryPaymentStatusRequest bidder
+                 */
+    
+                /**
+                 * Constructs a new QueryPaymentStatusRequest.
+                 * @memberof ununifi.nftmarket
+                 * @classdesc Represents a QueryPaymentStatusRequest.
+                 * @implements IQueryPaymentStatusRequest
+                 * @constructor
+                 * @param {ununifi.nftmarket.IQueryPaymentStatusRequest=} [properties] Properties to set
+                 */
+                function QueryPaymentStatusRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryPaymentStatusRequest class_id.
+                 * @member {string} class_id
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusRequest
+                 * @instance
+                 */
+                QueryPaymentStatusRequest.prototype.class_id = "";
+    
+                /**
+                 * QueryPaymentStatusRequest nft_id.
+                 * @member {string} nft_id
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusRequest
+                 * @instance
+                 */
+                QueryPaymentStatusRequest.prototype.nft_id = "";
+    
+                /**
+                 * QueryPaymentStatusRequest bidder.
+                 * @member {string} bidder
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusRequest
+                 * @instance
+                 */
+                QueryPaymentStatusRequest.prototype.bidder = "";
+    
+                /**
+                 * Encodes the specified QueryPaymentStatusRequest message. Does not implicitly {@link ununifi.nftmarket.QueryPaymentStatusRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusRequest
+                 * @static
+                 * @param {ununifi.nftmarket.IQueryPaymentStatusRequest} message QueryPaymentStatusRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryPaymentStatusRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.class_id);
+                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.nft_id);
+                    if (message.bidder != null && Object.hasOwnProperty.call(message, "bidder"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.bidder);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryPaymentStatusRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryPaymentStatusRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusRequest
+                 * @static
+                 * @param {ununifi.nftmarket.IQueryPaymentStatusRequest} message QueryPaymentStatusRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryPaymentStatusRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryPaymentStatusRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.nftmarket.QueryPaymentStatusRequest} QueryPaymentStatusRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryPaymentStatusRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftmarket.QueryPaymentStatusRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.class_id = reader.string();
+                            break;
+                        case 2:
+                            message.nft_id = reader.string();
+                            break;
+                        case 3:
+                            message.bidder = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryPaymentStatusRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.nftmarket.QueryPaymentStatusRequest} QueryPaymentStatusRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryPaymentStatusRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryPaymentStatusRequest message.
+                 * @function verify
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryPaymentStatusRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        if (!$util.isString(message.class_id))
+                            return "class_id: string expected";
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        if (!$util.isString(message.nft_id))
+                            return "nft_id: string expected";
+                    if (message.bidder != null && message.hasOwnProperty("bidder"))
+                        if (!$util.isString(message.bidder))
+                            return "bidder: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryPaymentStatusRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.nftmarket.QueryPaymentStatusRequest} QueryPaymentStatusRequest
+                 */
+                QueryPaymentStatusRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.nftmarket.QueryPaymentStatusRequest)
+                        return object;
+                    var message = new $root.ununifi.nftmarket.QueryPaymentStatusRequest();
+                    if (object.class_id != null)
+                        message.class_id = String(object.class_id);
+                    if (object.nft_id != null)
+                        message.nft_id = String(object.nft_id);
+                    if (object.bidder != null)
+                        message.bidder = String(object.bidder);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryPaymentStatusRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusRequest
+                 * @static
+                 * @param {ununifi.nftmarket.QueryPaymentStatusRequest} message QueryPaymentStatusRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryPaymentStatusRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.class_id = "";
+                        object.nft_id = "";
+                        object.bidder = "";
+                    }
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        object.class_id = message.class_id;
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        object.nft_id = message.nft_id;
+                    if (message.bidder != null && message.hasOwnProperty("bidder"))
+                        object.bidder = message.bidder;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryPaymentStatusRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryPaymentStatusRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryPaymentStatusRequest;
+            })();
+    
+            nftmarket.QueryPaymentStatusResponse = (function() {
+    
+                /**
+                 * Properties of a QueryPaymentStatusResponse.
+                 * @memberof ununifi.nftmarket
+                 * @interface IQueryPaymentStatusResponse
+                 * @property {ununifi.nftmarket.IPaymentStatus|null} [paymentStatus] QueryPaymentStatusResponse paymentStatus
+                 */
+    
+                /**
+                 * Constructs a new QueryPaymentStatusResponse.
+                 * @memberof ununifi.nftmarket
+                 * @classdesc Represents a QueryPaymentStatusResponse.
+                 * @implements IQueryPaymentStatusResponse
+                 * @constructor
+                 * @param {ununifi.nftmarket.IQueryPaymentStatusResponse=} [properties] Properties to set
+                 */
+                function QueryPaymentStatusResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryPaymentStatusResponse paymentStatus.
+                 * @member {ununifi.nftmarket.IPaymentStatus|null|undefined} paymentStatus
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusResponse
+                 * @instance
+                 */
+                QueryPaymentStatusResponse.prototype.paymentStatus = null;
+    
+                /**
+                 * Encodes the specified QueryPaymentStatusResponse message. Does not implicitly {@link ununifi.nftmarket.QueryPaymentStatusResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusResponse
+                 * @static
+                 * @param {ununifi.nftmarket.IQueryPaymentStatusResponse} message QueryPaymentStatusResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryPaymentStatusResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.paymentStatus != null && Object.hasOwnProperty.call(message, "paymentStatus"))
+                        $root.ununifi.nftmarket.PaymentStatus.encode(message.paymentStatus, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryPaymentStatusResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryPaymentStatusResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusResponse
+                 * @static
+                 * @param {ununifi.nftmarket.IQueryPaymentStatusResponse} message QueryPaymentStatusResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryPaymentStatusResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryPaymentStatusResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.nftmarket.QueryPaymentStatusResponse} QueryPaymentStatusResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryPaymentStatusResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftmarket.QueryPaymentStatusResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.paymentStatus = $root.ununifi.nftmarket.PaymentStatus.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryPaymentStatusResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.nftmarket.QueryPaymentStatusResponse} QueryPaymentStatusResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryPaymentStatusResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryPaymentStatusResponse message.
+                 * @function verify
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryPaymentStatusResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.paymentStatus != null && message.hasOwnProperty("paymentStatus")) {
+                        var error = $root.ununifi.nftmarket.PaymentStatus.verify(message.paymentStatus);
+                        if (error)
+                            return "paymentStatus." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryPaymentStatusResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.nftmarket.QueryPaymentStatusResponse} QueryPaymentStatusResponse
+                 */
+                QueryPaymentStatusResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.nftmarket.QueryPaymentStatusResponse)
+                        return object;
+                    var message = new $root.ununifi.nftmarket.QueryPaymentStatusResponse();
+                    if (object.paymentStatus != null) {
+                        if (typeof object.paymentStatus !== "object")
+                            throw TypeError(".ununifi.nftmarket.QueryPaymentStatusResponse.paymentStatus: object expected");
+                        message.paymentStatus = $root.ununifi.nftmarket.PaymentStatus.fromObject(object.paymentStatus);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryPaymentStatusResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusResponse
+                 * @static
+                 * @param {ununifi.nftmarket.QueryPaymentStatusResponse} message QueryPaymentStatusResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryPaymentStatusResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.paymentStatus = null;
+                    if (message.paymentStatus != null && message.hasOwnProperty("paymentStatus"))
+                        object.paymentStatus = $root.ununifi.nftmarket.PaymentStatus.toObject(message.paymentStatus, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryPaymentStatusResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.nftmarket.QueryPaymentStatusResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryPaymentStatusResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryPaymentStatusResponse;
             })();
     
             nftmarket.QueryBidderBidsRequest = (function() {
@@ -23269,6 +31314,384 @@
                 };
     
                 return EventLiquidate;
+            })();
+    
+            nftmarket.PaymentStatus = (function() {
+    
+                /**
+                 * Properties of a PaymentStatus.
+                 * @memberof ununifi.nftmarket
+                 * @interface IPaymentStatus
+                 * @property {ununifi.nftmarket.INftIdentifier|null} [nft_id] PaymentStatus nft_id
+                 * @property {string|null} [bidder] PaymentStatus bidder
+                 * @property {cosmos.base.v1beta1.ICoin|null} [amount] PaymentStatus amount
+                 * @property {boolean|null} [automatic_payment] PaymentStatus automatic_payment
+                 * @property {string|null} [paid_amount] PaymentStatus paid_amount
+                 * @property {google.protobuf.ITimestamp|null} [bid_time] PaymentStatus bid_time
+                 * @property {ununifi.nftmarket.ListingState|null} [state] PaymentStatus state
+                 * @property {boolean|null} [all_paid] PaymentStatus all_paid
+                 */
+    
+                /**
+                 * Constructs a new PaymentStatus.
+                 * @memberof ununifi.nftmarket
+                 * @classdesc Represents a PaymentStatus.
+                 * @implements IPaymentStatus
+                 * @constructor
+                 * @param {ununifi.nftmarket.IPaymentStatus=} [properties] Properties to set
+                 */
+                function PaymentStatus(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * PaymentStatus nft_id.
+                 * @member {ununifi.nftmarket.INftIdentifier|null|undefined} nft_id
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @instance
+                 */
+                PaymentStatus.prototype.nft_id = null;
+    
+                /**
+                 * PaymentStatus bidder.
+                 * @member {string} bidder
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @instance
+                 */
+                PaymentStatus.prototype.bidder = "";
+    
+                /**
+                 * PaymentStatus amount.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @instance
+                 */
+                PaymentStatus.prototype.amount = null;
+    
+                /**
+                 * PaymentStatus automatic_payment.
+                 * @member {boolean} automatic_payment
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @instance
+                 */
+                PaymentStatus.prototype.automatic_payment = false;
+    
+                /**
+                 * PaymentStatus paid_amount.
+                 * @member {string} paid_amount
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @instance
+                 */
+                PaymentStatus.prototype.paid_amount = "";
+    
+                /**
+                 * PaymentStatus bid_time.
+                 * @member {google.protobuf.ITimestamp|null|undefined} bid_time
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @instance
+                 */
+                PaymentStatus.prototype.bid_time = null;
+    
+                /**
+                 * PaymentStatus state.
+                 * @member {ununifi.nftmarket.ListingState} state
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @instance
+                 */
+                PaymentStatus.prototype.state = 0;
+    
+                /**
+                 * PaymentStatus all_paid.
+                 * @member {boolean} all_paid
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @instance
+                 */
+                PaymentStatus.prototype.all_paid = false;
+    
+                /**
+                 * Encodes the specified PaymentStatus message. Does not implicitly {@link ununifi.nftmarket.PaymentStatus.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @static
+                 * @param {ununifi.nftmarket.IPaymentStatus} message PaymentStatus message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                PaymentStatus.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
+                        $root.ununifi.nftmarket.NftIdentifier.encode(message.nft_id, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.bidder != null && Object.hasOwnProperty.call(message, "bidder"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.bidder);
+                    if (message.amount != null && Object.hasOwnProperty.call(message, "amount"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                    if (message.automatic_payment != null && Object.hasOwnProperty.call(message, "automatic_payment"))
+                        writer.uint32(/* id 4, wireType 0 =*/32).bool(message.automatic_payment);
+                    if (message.paid_amount != null && Object.hasOwnProperty.call(message, "paid_amount"))
+                        writer.uint32(/* id 5, wireType 2 =*/42).string(message.paid_amount);
+                    if (message.bid_time != null && Object.hasOwnProperty.call(message, "bid_time"))
+                        $root.google.protobuf.Timestamp.encode(message.bid_time, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
+                    if (message.state != null && Object.hasOwnProperty.call(message, "state"))
+                        writer.uint32(/* id 7, wireType 0 =*/56).int32(message.state);
+                    if (message.all_paid != null && Object.hasOwnProperty.call(message, "all_paid"))
+                        writer.uint32(/* id 8, wireType 0 =*/64).bool(message.all_paid);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified PaymentStatus message, length delimited. Does not implicitly {@link ununifi.nftmarket.PaymentStatus.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @static
+                 * @param {ununifi.nftmarket.IPaymentStatus} message PaymentStatus message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                PaymentStatus.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a PaymentStatus message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.nftmarket.PaymentStatus} PaymentStatus
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                PaymentStatus.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftmarket.PaymentStatus();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.nft_id = $root.ununifi.nftmarket.NftIdentifier.decode(reader, reader.uint32());
+                            break;
+                        case 2:
+                            message.bidder = reader.string();
+                            break;
+                        case 3:
+                            message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        case 4:
+                            message.automatic_payment = reader.bool();
+                            break;
+                        case 5:
+                            message.paid_amount = reader.string();
+                            break;
+                        case 6:
+                            message.bid_time = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                            break;
+                        case 7:
+                            message.state = reader.int32();
+                            break;
+                        case 8:
+                            message.all_paid = reader.bool();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a PaymentStatus message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.nftmarket.PaymentStatus} PaymentStatus
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                PaymentStatus.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a PaymentStatus message.
+                 * @function verify
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                PaymentStatus.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id")) {
+                        var error = $root.ununifi.nftmarket.NftIdentifier.verify(message.nft_id);
+                        if (error)
+                            return "nft_id." + error;
+                    }
+                    if (message.bidder != null && message.hasOwnProperty("bidder"))
+                        if (!$util.isString(message.bidder))
+                            return "bidder: string expected";
+                    if (message.amount != null && message.hasOwnProperty("amount")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
+                        if (error)
+                            return "amount." + error;
+                    }
+                    if (message.automatic_payment != null && message.hasOwnProperty("automatic_payment"))
+                        if (typeof message.automatic_payment !== "boolean")
+                            return "automatic_payment: boolean expected";
+                    if (message.paid_amount != null && message.hasOwnProperty("paid_amount"))
+                        if (!$util.isString(message.paid_amount))
+                            return "paid_amount: string expected";
+                    if (message.bid_time != null && message.hasOwnProperty("bid_time")) {
+                        var error = $root.google.protobuf.Timestamp.verify(message.bid_time);
+                        if (error)
+                            return "bid_time." + error;
+                    }
+                    if (message.state != null && message.hasOwnProperty("state"))
+                        switch (message.state) {
+                        default:
+                            return "state: enum value expected";
+                        case 0:
+                        case 1:
+                        case 2:
+                        case 3:
+                        case 4:
+                        case 5:
+                            break;
+                        }
+                    if (message.all_paid != null && message.hasOwnProperty("all_paid"))
+                        if (typeof message.all_paid !== "boolean")
+                            return "all_paid: boolean expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a PaymentStatus message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.nftmarket.PaymentStatus} PaymentStatus
+                 */
+                PaymentStatus.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.nftmarket.PaymentStatus)
+                        return object;
+                    var message = new $root.ununifi.nftmarket.PaymentStatus();
+                    if (object.nft_id != null) {
+                        if (typeof object.nft_id !== "object")
+                            throw TypeError(".ununifi.nftmarket.PaymentStatus.nft_id: object expected");
+                        message.nft_id = $root.ununifi.nftmarket.NftIdentifier.fromObject(object.nft_id);
+                    }
+                    if (object.bidder != null)
+                        message.bidder = String(object.bidder);
+                    if (object.amount != null) {
+                        if (typeof object.amount !== "object")
+                            throw TypeError(".ununifi.nftmarket.PaymentStatus.amount: object expected");
+                        message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
+                    }
+                    if (object.automatic_payment != null)
+                        message.automatic_payment = Boolean(object.automatic_payment);
+                    if (object.paid_amount != null)
+                        message.paid_amount = String(object.paid_amount);
+                    if (object.bid_time != null) {
+                        if (typeof object.bid_time !== "object")
+                            throw TypeError(".ununifi.nftmarket.PaymentStatus.bid_time: object expected");
+                        message.bid_time = $root.google.protobuf.Timestamp.fromObject(object.bid_time);
+                    }
+                    switch (object.state) {
+                    case "LISTING":
+                    case 0:
+                        message.state = 0;
+                        break;
+                    case "BIDDING":
+                    case 1:
+                        message.state = 1;
+                        break;
+                    case "SELLING_DECISION":
+                    case 2:
+                        message.state = 2;
+                        break;
+                    case "LIQUIDATION":
+                    case 3:
+                        message.state = 3;
+                        break;
+                    case "END_LISTING":
+                    case 4:
+                        message.state = 4;
+                        break;
+                    case "SUCCESSFUL_BID":
+                    case 5:
+                        message.state = 5;
+                        break;
+                    }
+                    if (object.all_paid != null)
+                        message.all_paid = Boolean(object.all_paid);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a PaymentStatus message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @static
+                 * @param {ununifi.nftmarket.PaymentStatus} message PaymentStatus
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                PaymentStatus.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.nft_id = null;
+                        object.bidder = "";
+                        object.amount = null;
+                        object.automatic_payment = false;
+                        object.paid_amount = "";
+                        object.bid_time = null;
+                        object.state = options.enums === String ? "LISTING" : 0;
+                        object.all_paid = false;
+                    }
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        object.nft_id = $root.ununifi.nftmarket.NftIdentifier.toObject(message.nft_id, options);
+                    if (message.bidder != null && message.hasOwnProperty("bidder"))
+                        object.bidder = message.bidder;
+                    if (message.amount != null && message.hasOwnProperty("amount"))
+                        object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+                    if (message.automatic_payment != null && message.hasOwnProperty("automatic_payment"))
+                        object.automatic_payment = message.automatic_payment;
+                    if (message.paid_amount != null && message.hasOwnProperty("paid_amount"))
+                        object.paid_amount = message.paid_amount;
+                    if (message.bid_time != null && message.hasOwnProperty("bid_time"))
+                        object.bid_time = $root.google.protobuf.Timestamp.toObject(message.bid_time, options);
+                    if (message.state != null && message.hasOwnProperty("state"))
+                        object.state = options.enums === String ? $root.ununifi.nftmarket.ListingState[message.state] : message.state;
+                    if (message.all_paid != null && message.hasOwnProperty("all_paid"))
+                        object.all_paid = message.all_paid;
+                    return object;
+                };
+    
+                /**
+                 * Converts this PaymentStatus to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.nftmarket.PaymentStatus
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                PaymentStatus.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return PaymentStatus;
             })();
     
             nftmarket.Msg = (function() {
