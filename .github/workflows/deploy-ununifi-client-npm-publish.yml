@@ -1,6 +1,10 @@
 name: CD ununifi-client npm publish
 
-on: [workflow_dispatch]
+on:
+  release:
+    types:
+      - created
+  workflow_dispatch:
 
 jobs:
   build:
@@ -23,7 +27,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: npm i -g npm
       - run: npm ci
       - run: npm run build --if-present
       - run: npm publish --access=public
