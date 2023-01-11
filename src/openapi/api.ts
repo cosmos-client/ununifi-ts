@@ -1158,6 +1158,38 @@ export interface IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner {
 /**
  *
  * @export
+ * @interface IncentiveUnitIdsByAddr200Response
+ */
+export interface IncentiveUnitIdsByAddr200Response {
+  /**
+   *
+   * @type {IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr}
+   * @memberof IncentiveUnitIdsByAddr200Response
+   */
+  incentive_unit_ids_by_addr?: IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr;
+}
+/**
+ *
+ * @export
+ * @interface IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr
+ */
+export interface IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr {
+  /**
+   *
+   * @type {string}
+   * @memberof IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr
+   */
+  address?: string;
+  /**
+   *
+   * @type {Array<string>}
+   * @memberof IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr
+   */
+  incentive_unit_ids?: Array<string>;
+}
+/**
+ *
+ * @export
  * @interface ListedClass200Response
  */
 export interface ListedClass200Response {
@@ -2451,6 +2483,25 @@ export interface UnunifiEcosystemincentiveIncentiveUnit {
   subject_info_lists?: Array<IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner>;
 }
 /**
+ *
+ * @export
+ * @interface UnunifiEcosystemincentiveIncentiveUnitIdsByAddr
+ */
+export interface UnunifiEcosystemincentiveIncentiveUnitIdsByAddr {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiEcosystemincentiveIncentiveUnitIdsByAddr
+   */
+  address?: string;
+  /**
+   *
+   * @type {Array<string>}
+   * @memberof UnunifiEcosystemincentiveIncentiveUnitIdsByAddr
+   */
+  incentive_unit_ids?: Array<string>;
+}
+/**
  * Params defines the parameters for the module.
  * @export
  * @interface UnunifiEcosystemincentiveParams
@@ -2487,6 +2538,19 @@ export interface UnunifiEcosystemincentiveQueryAllRewardsResponse {
    * @memberof UnunifiEcosystemincentiveQueryAllRewardsResponse
    */
   rewards?: AllRewards200ResponseRewards;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiEcosystemincentiveQueryIncentiveUnitIdsByAddrResponse
+ */
+export interface UnunifiEcosystemincentiveQueryIncentiveUnitIdsByAddrResponse {
+  /**
+   *
+   * @type {IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr}
+   * @memberof UnunifiEcosystemincentiveQueryIncentiveUnitIdsByAddrResponse
+   */
+  incentive_unit_ids_by_addr?: IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr;
 }
 /**
  *
@@ -4485,6 +4549,39 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
+     * @param {string} address
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    incentiveUnitIdsByAddr: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      // verify required parameter 'address' is not null or undefined
+      assertParamExists('incentiveUnitIdsByAddr', 'address', address);
+      const localVarPath = `/ununifi/ecosystem_incentive/incentive_unit_ids_by_addr/{address}`.replace(
+        `{${'address'}}`,
+        encodeURIComponent(String(address)),
+      );
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
      * @param {string} classId
      * @param {number} nftLimit
      * @param {*} [options] Override http request option.
@@ -5513,6 +5610,19 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
+     * @param {string} address
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async incentiveUnitIdsByAddr(
+      address: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IncentiveUnitIdsByAddr200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.incentiveUnitIdsByAddr(address, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
      * @param {string} classId
      * @param {number} nftLimit
      * @param {*} [options] Override http request option.
@@ -6040,6 +6150,15 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
+     * @param {string} address
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    incentiveUnitIdsByAddr(address: string, options?: any): AxiosPromise<IncentiveUnitIdsByAddr200Response> {
+      return localVarFp.incentiveUnitIdsByAddr(address, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
      * @param {string} classId
      * @param {number} nftLimit
      * @param {*} [options] Override http request option.
@@ -6538,6 +6657,19 @@ export class QueryApi extends BaseAPI {
   public incentiveUnit(incentiveUnitId: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
       .incentiveUnit(incentiveUnitId, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @param {string} address
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public incentiveUnitIdsByAddr(address: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .incentiveUnitIdsByAddr(address, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
