@@ -20,3 +20,7 @@ export function reward(sdk: cosmosclient.CosmosSDK, subjectAddr: string, denom: 
 export function allRewards(sdk: cosmosclient.CosmosSDK, subjectAddr: string) {
   return new QueryApi(undefined, sdk.url).allRewards(subjectAddr);
 }
+
+export function IncentiveUnitIdsByAddr(sdk: cosmosclient.CosmosSDK, address: string) {
+  return new QueryApi(undefined, sdk.url).incentiveUnitIdsByAddr(address);
+}
