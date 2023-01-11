@@ -10512,6 +10512,49 @@ export const ununifi = ($root.ununifi = (() => {
        * @variation 2
        */
 
+      /**
+       * Callback as used by {@link ununifi.ecosystemincentive.Query#incentiveUnitIdsByAddr}.
+       * @memberof ununifi.ecosystemincentive.Query
+       * @typedef IncentiveUnitIdsByAddrCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse} [response] QueryIncentiveUnitIdsByAddrResponse
+       */
+
+      /**
+       * Calls IncentiveUnitIdsByAddr.
+       * @function incentiveUnitIdsByAddr
+       * @memberof ununifi.ecosystemincentive.Query
+       * @instance
+       * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest} request QueryIncentiveUnitIdsByAddrRequest message or plain object
+       * @param {ununifi.ecosystemincentive.Query.IncentiveUnitIdsByAddrCallback} callback Node-style callback called with the error, if any, and QueryIncentiveUnitIdsByAddrResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.incentiveUnitIdsByAddr = function incentiveUnitIdsByAddr(request, callback) {
+          return this.rpcCall(
+            incentiveUnitIdsByAddr,
+            $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest,
+            $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'IncentiveUnitIdsByAddr' },
+      );
+
+      /**
+       * Calls IncentiveUnitIdsByAddr.
+       * @function incentiveUnitIdsByAddr
+       * @memberof ununifi.ecosystemincentive.Query
+       * @instance
+       * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest} request QueryIncentiveUnitIdsByAddrRequest message or plain object
+       * @returns {Promise<ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse>} Promise
+       * @variation 2
+       */
+
       return Query;
     })();
 
@@ -12205,6 +12248,349 @@ export const ununifi = ($root.ununifi = (() => {
       return QueryRecordedIncentiveUnitIdResponse;
     })();
 
+    ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest = (function () {
+      /**
+       * Properties of a QueryIncentiveUnitIdsByAddrRequest.
+       * @memberof ununifi.ecosystemincentive
+       * @interface IQueryIncentiveUnitIdsByAddrRequest
+       * @property {string|null} [address] QueryIncentiveUnitIdsByAddrRequest address
+       */
+
+      /**
+       * Constructs a new QueryIncentiveUnitIdsByAddrRequest.
+       * @memberof ununifi.ecosystemincentive
+       * @classdesc Represents a QueryIncentiveUnitIdsByAddrRequest.
+       * @implements IQueryIncentiveUnitIdsByAddrRequest
+       * @constructor
+       * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest=} [properties] Properties to set
+       */
+      function QueryIncentiveUnitIdsByAddrRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryIncentiveUnitIdsByAddrRequest address.
+       * @member {string} address
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+       * @instance
+       */
+      QueryIncentiveUnitIdsByAddrRequest.prototype.address = '';
+
+      /**
+       * Encodes the specified QueryIncentiveUnitIdsByAddrRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+       * @static
+       * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest} message QueryIncentiveUnitIdsByAddrRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryIncentiveUnitIdsByAddrRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.address != null && Object.hasOwnProperty.call(message, 'address'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.address);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryIncentiveUnitIdsByAddrRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+       * @static
+       * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest} message QueryIncentiveUnitIdsByAddrRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryIncentiveUnitIdsByAddrRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryIncentiveUnitIdsByAddrRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest} QueryIncentiveUnitIdsByAddrRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryIncentiveUnitIdsByAddrRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.address = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryIncentiveUnitIdsByAddrRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest} QueryIncentiveUnitIdsByAddrRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryIncentiveUnitIdsByAddrRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryIncentiveUnitIdsByAddrRequest message.
+       * @function verify
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryIncentiveUnitIdsByAddrRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.address != null && message.hasOwnProperty('address'))
+          if (!$util.isString(message.address)) return 'address: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryIncentiveUnitIdsByAddrRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest} QueryIncentiveUnitIdsByAddrRequest
+       */
+      QueryIncentiveUnitIdsByAddrRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest) return object;
+        let message = new $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest();
+        if (object.address != null) message.address = String(object.address);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryIncentiveUnitIdsByAddrRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+       * @static
+       * @param {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest} message QueryIncentiveUnitIdsByAddrRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryIncentiveUnitIdsByAddrRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.address = '';
+        if (message.address != null && message.hasOwnProperty('address')) object.address = message.address;
+        return object;
+      };
+
+      /**
+       * Converts this QueryIncentiveUnitIdsByAddrRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryIncentiveUnitIdsByAddrRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryIncentiveUnitIdsByAddrRequest;
+    })();
+
+    ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse = (function () {
+      /**
+       * Properties of a QueryIncentiveUnitIdsByAddrResponse.
+       * @memberof ununifi.ecosystemincentive
+       * @interface IQueryIncentiveUnitIdsByAddrResponse
+       * @property {ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr|null} [incentive_unit_ids_by_addr] QueryIncentiveUnitIdsByAddrResponse incentive_unit_ids_by_addr
+       */
+
+      /**
+       * Constructs a new QueryIncentiveUnitIdsByAddrResponse.
+       * @memberof ununifi.ecosystemincentive
+       * @classdesc Represents a QueryIncentiveUnitIdsByAddrResponse.
+       * @implements IQueryIncentiveUnitIdsByAddrResponse
+       * @constructor
+       * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrResponse=} [properties] Properties to set
+       */
+      function QueryIncentiveUnitIdsByAddrResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryIncentiveUnitIdsByAddrResponse incentive_unit_ids_by_addr.
+       * @member {ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr|null|undefined} incentive_unit_ids_by_addr
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+       * @instance
+       */
+      QueryIncentiveUnitIdsByAddrResponse.prototype.incentive_unit_ids_by_addr = null;
+
+      /**
+       * Encodes the specified QueryIncentiveUnitIdsByAddrResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+       * @static
+       * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrResponse} message QueryIncentiveUnitIdsByAddrResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryIncentiveUnitIdsByAddrResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.incentive_unit_ids_by_addr != null && Object.hasOwnProperty.call(message, 'incentive_unit_ids_by_addr'))
+          $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.encode(
+            message.incentive_unit_ids_by_addr,
+            writer.uint32(/* id 1, wireType 2 =*/ 10).fork(),
+          ).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryIncentiveUnitIdsByAddrResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+       * @static
+       * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrResponse} message QueryIncentiveUnitIdsByAddrResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryIncentiveUnitIdsByAddrResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryIncentiveUnitIdsByAddrResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse} QueryIncentiveUnitIdsByAddrResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryIncentiveUnitIdsByAddrResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.incentive_unit_ids_by_addr = $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryIncentiveUnitIdsByAddrResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse} QueryIncentiveUnitIdsByAddrResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryIncentiveUnitIdsByAddrResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryIncentiveUnitIdsByAddrResponse message.
+       * @function verify
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryIncentiveUnitIdsByAddrResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.incentive_unit_ids_by_addr != null && message.hasOwnProperty('incentive_unit_ids_by_addr')) {
+          let error = $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.verify(message.incentive_unit_ids_by_addr);
+          if (error) return 'incentive_unit_ids_by_addr.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryIncentiveUnitIdsByAddrResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse} QueryIncentiveUnitIdsByAddrResponse
+       */
+      QueryIncentiveUnitIdsByAddrResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse) return object;
+        let message = new $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse();
+        if (object.incentive_unit_ids_by_addr != null) {
+          if (typeof object.incentive_unit_ids_by_addr !== 'object')
+            throw TypeError('.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse.incentive_unit_ids_by_addr: object expected');
+          message.incentive_unit_ids_by_addr = $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.fromObject(
+            object.incentive_unit_ids_by_addr,
+          );
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryIncentiveUnitIdsByAddrResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+       * @static
+       * @param {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse} message QueryIncentiveUnitIdsByAddrResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryIncentiveUnitIdsByAddrResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.incentive_unit_ids_by_addr = null;
+        if (message.incentive_unit_ids_by_addr != null && message.hasOwnProperty('incentive_unit_ids_by_addr'))
+          object.incentive_unit_ids_by_addr = $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.toObject(
+            message.incentive_unit_ids_by_addr,
+            options,
+          );
+        return object;
+      };
+
+      /**
+       * Converts this QueryIncentiveUnitIdsByAddrResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryIncentiveUnitIdsByAddrResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryIncentiveUnitIdsByAddrResponse;
+    })();
+
     ecosystemincentive.Params = (function () {
       /**
        * Properties of a Params.
@@ -13507,6 +13893,203 @@ export const ununifi = ($root.ununifi = (() => {
       };
 
       return RewardStore;
+    })();
+
+    ecosystemincentive.IncentiveUnitIdsByAddr = (function () {
+      /**
+       * Properties of an IncentiveUnitIdsByAddr.
+       * @memberof ununifi.ecosystemincentive
+       * @interface IIncentiveUnitIdsByAddr
+       * @property {string|null} [address] IncentiveUnitIdsByAddr address
+       * @property {Array.<string>|null} [incentive_unit_ids] IncentiveUnitIdsByAddr incentive_unit_ids
+       */
+
+      /**
+       * Constructs a new IncentiveUnitIdsByAddr.
+       * @memberof ununifi.ecosystemincentive
+       * @classdesc Represents an IncentiveUnitIdsByAddr.
+       * @implements IIncentiveUnitIdsByAddr
+       * @constructor
+       * @param {ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr=} [properties] Properties to set
+       */
+      function IncentiveUnitIdsByAddr(properties) {
+        this.incentive_unit_ids = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * IncentiveUnitIdsByAddr address.
+       * @member {string} address
+       * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+       * @instance
+       */
+      IncentiveUnitIdsByAddr.prototype.address = '';
+
+      /**
+       * IncentiveUnitIdsByAddr incentive_unit_ids.
+       * @member {Array.<string>} incentive_unit_ids
+       * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+       * @instance
+       */
+      IncentiveUnitIdsByAddr.prototype.incentive_unit_ids = $util.emptyArray;
+
+      /**
+       * Encodes the specified IncentiveUnitIdsByAddr message. Does not implicitly {@link ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+       * @static
+       * @param {ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr} message IncentiveUnitIdsByAddr message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      IncentiveUnitIdsByAddr.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.address != null && Object.hasOwnProperty.call(message, 'address'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.address);
+        if (message.incentive_unit_ids != null && message.incentive_unit_ids.length)
+          for (let i = 0; i < message.incentive_unit_ids.length; ++i)
+            writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.incentive_unit_ids[i]);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified IncentiveUnitIdsByAddr message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+       * @static
+       * @param {ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr} message IncentiveUnitIdsByAddr message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      IncentiveUnitIdsByAddr.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes an IncentiveUnitIdsByAddr message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.ecosystemincentive.IncentiveUnitIdsByAddr} IncentiveUnitIdsByAddr
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      IncentiveUnitIdsByAddr.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.address = reader.string();
+              break;
+            case 2:
+              if (!(message.incentive_unit_ids && message.incentive_unit_ids.length)) message.incentive_unit_ids = [];
+              message.incentive_unit_ids.push(reader.string());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes an IncentiveUnitIdsByAddr message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.ecosystemincentive.IncentiveUnitIdsByAddr} IncentiveUnitIdsByAddr
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      IncentiveUnitIdsByAddr.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies an IncentiveUnitIdsByAddr message.
+       * @function verify
+       * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      IncentiveUnitIdsByAddr.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.address != null && message.hasOwnProperty('address'))
+          if (!$util.isString(message.address)) return 'address: string expected';
+        if (message.incentive_unit_ids != null && message.hasOwnProperty('incentive_unit_ids')) {
+          if (!Array.isArray(message.incentive_unit_ids)) return 'incentive_unit_ids: array expected';
+          for (let i = 0; i < message.incentive_unit_ids.length; ++i)
+            if (!$util.isString(message.incentive_unit_ids[i])) return 'incentive_unit_ids: string[] expected';
+        }
+        return null;
+      };
+
+      /**
+       * Creates an IncentiveUnitIdsByAddr message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.ecosystemincentive.IncentiveUnitIdsByAddr} IncentiveUnitIdsByAddr
+       */
+      IncentiveUnitIdsByAddr.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr) return object;
+        let message = new $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr();
+        if (object.address != null) message.address = String(object.address);
+        if (object.incentive_unit_ids) {
+          if (!Array.isArray(object.incentive_unit_ids))
+            throw TypeError('.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.incentive_unit_ids: array expected');
+          message.incentive_unit_ids = [];
+          for (let i = 0; i < object.incentive_unit_ids.length; ++i) message.incentive_unit_ids[i] = String(object.incentive_unit_ids[i]);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from an IncentiveUnitIdsByAddr message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+       * @static
+       * @param {ununifi.ecosystemincentive.IncentiveUnitIdsByAddr} message IncentiveUnitIdsByAddr
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      IncentiveUnitIdsByAddr.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) object.incentive_unit_ids = [];
+        if (options.defaults) object.address = '';
+        if (message.address != null && message.hasOwnProperty('address')) object.address = message.address;
+        if (message.incentive_unit_ids && message.incentive_unit_ids.length) {
+          object.incentive_unit_ids = [];
+          for (let j = 0; j < message.incentive_unit_ids.length; ++j) object.incentive_unit_ids[j] = message.incentive_unit_ids[j];
+        }
+        return object;
+      };
+
+      /**
+       * Converts this IncentiveUnitIdsByAddr to JSON.
+       * @function toJSON
+       * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      IncentiveUnitIdsByAddr.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return IncentiveUnitIdsByAddr;
     })();
 
     ecosystemincentive.MemoInputs = (function () {
@@ -41884,6 +42467,7 @@ export const ununifi = ($root.ununifi = (() => {
        * @memberof ununifi.nftmint
        * @interface IGenesisState
        * @property {ununifi.nftmint.IParams|null} [params] GenesisState params
+       * @property {Array.<ununifi.nftmint.IClassAttributes>|null} [class_attributes_list] GenesisState class_attributes_list
        */
 
       /**
@@ -41895,6 +42479,7 @@ export const ununifi = ($root.ununifi = (() => {
        * @param {ununifi.nftmint.IGenesisState=} [properties] Properties to set
        */
       function GenesisState(properties) {
+        this.class_attributes_list = [];
         if (properties)
           for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
             if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
@@ -41909,6 +42494,14 @@ export const ununifi = ($root.ununifi = (() => {
       GenesisState.prototype.params = null;
 
       /**
+       * GenesisState class_attributes_list.
+       * @member {Array.<ununifi.nftmint.IClassAttributes>} class_attributes_list
+       * @memberof ununifi.nftmint.GenesisState
+       * @instance
+       */
+      GenesisState.prototype.class_attributes_list = $util.emptyArray;
+
+      /**
        * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.nftmint.GenesisState.verify|verify} messages.
        * @function encode
        * @memberof ununifi.nftmint.GenesisState
@@ -41921,6 +42514,12 @@ export const ununifi = ($root.ununifi = (() => {
         if (!writer) writer = $Writer.create();
         if (message.params != null && Object.hasOwnProperty.call(message, 'params'))
           $root.ununifi.nftmint.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        if (message.class_attributes_list != null && message.class_attributes_list.length)
+          for (let i = 0; i < message.class_attributes_list.length; ++i)
+            $root.ununifi.nftmint.ClassAttributes.encode(
+              message.class_attributes_list[i],
+              writer.uint32(/* id 2, wireType 2 =*/ 18).fork(),
+            ).ldelim();
         return writer;
       };
 
@@ -41957,6 +42556,10 @@ export const ununifi = ($root.ununifi = (() => {
           switch (tag >>> 3) {
             case 1:
               message.params = $root.ununifi.nftmint.Params.decode(reader, reader.uint32());
+              break;
+            case 2:
+              if (!(message.class_attributes_list && message.class_attributes_list.length)) message.class_attributes_list = [];
+              message.class_attributes_list.push($root.ununifi.nftmint.ClassAttributes.decode(reader, reader.uint32()));
               break;
             default:
               reader.skipType(tag & 7);
@@ -41995,6 +42598,13 @@ export const ununifi = ($root.ununifi = (() => {
           let error = $root.ununifi.nftmint.Params.verify(message.params);
           if (error) return 'params.' + error;
         }
+        if (message.class_attributes_list != null && message.hasOwnProperty('class_attributes_list')) {
+          if (!Array.isArray(message.class_attributes_list)) return 'class_attributes_list: array expected';
+          for (let i = 0; i < message.class_attributes_list.length; ++i) {
+            let error = $root.ununifi.nftmint.ClassAttributes.verify(message.class_attributes_list[i]);
+            if (error) return 'class_attributes_list.' + error;
+          }
+        }
         return null;
       };
 
@@ -42013,6 +42623,16 @@ export const ununifi = ($root.ununifi = (() => {
           if (typeof object.params !== 'object') throw TypeError('.ununifi.nftmint.GenesisState.params: object expected');
           message.params = $root.ununifi.nftmint.Params.fromObject(object.params);
         }
+        if (object.class_attributes_list) {
+          if (!Array.isArray(object.class_attributes_list))
+            throw TypeError('.ununifi.nftmint.GenesisState.class_attributes_list: array expected');
+          message.class_attributes_list = [];
+          for (let i = 0; i < object.class_attributes_list.length; ++i) {
+            if (typeof object.class_attributes_list[i] !== 'object')
+              throw TypeError('.ununifi.nftmint.GenesisState.class_attributes_list: object expected');
+            message.class_attributes_list[i] = $root.ununifi.nftmint.ClassAttributes.fromObject(object.class_attributes_list[i]);
+          }
+        }
         return message;
       };
 
@@ -42028,9 +42648,15 @@ export const ununifi = ($root.ununifi = (() => {
       GenesisState.toObject = function toObject(message, options) {
         if (!options) options = {};
         let object = {};
+        if (options.arrays || options.defaults) object.class_attributes_list = [];
         if (options.defaults) object.params = null;
         if (message.params != null && message.hasOwnProperty('params'))
           object.params = $root.ununifi.nftmint.Params.toObject(message.params, options);
+        if (message.class_attributes_list && message.class_attributes_list.length) {
+          object.class_attributes_list = [];
+          for (let j = 0; j < message.class_attributes_list.length; ++j)
+            object.class_attributes_list[j] = $root.ununifi.nftmint.ClassAttributes.toObject(message.class_attributes_list[j], options);
+        }
         return object;
       };
 

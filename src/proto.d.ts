@@ -4640,6 +4640,25 @@ export namespace ununifi {
       public recordedIncentiveUnitId(
         request: ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdRequest,
       ): Promise<ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse>;
+
+      /**
+       * Calls IncentiveUnitIdsByAddr.
+       * @param request QueryIncentiveUnitIdsByAddrRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryIncentiveUnitIdsByAddrResponse
+       */
+      public incentiveUnitIdsByAddr(
+        request: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest,
+        callback: ununifi.ecosystemincentive.Query.IncentiveUnitIdsByAddrCallback,
+      ): void;
+
+      /**
+       * Calls IncentiveUnitIdsByAddr.
+       * @param request QueryIncentiveUnitIdsByAddrRequest message or plain object
+       * @returns Promise
+       */
+      public incentiveUnitIdsByAddr(
+        request: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest,
+      ): Promise<ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse>;
     }
 
     namespace Query {
@@ -4679,6 +4698,16 @@ export namespace ununifi {
       type RecordedIncentiveUnitIdCallback = (
         error: Error | null,
         response?: ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse,
+      ) => void;
+
+      /**
+       * Callback as used by {@link ununifi.ecosystemincentive.Query#incentiveUnitIdsByAddr}.
+       * @param error Error, if any
+       * @param [response] QueryIncentiveUnitIdsByAddrResponse
+       */
+      type IncentiveUnitIdsByAddrCallback = (
+        error: Error | null,
+        response?: ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse,
       ) => void;
     }
 
@@ -5558,6 +5587,192 @@ export namespace ununifi {
       public toJSON(): { [k: string]: any };
     }
 
+    /** Properties of a QueryIncentiveUnitIdsByAddrRequest. */
+    interface IQueryIncentiveUnitIdsByAddrRequest {
+      /** QueryIncentiveUnitIdsByAddrRequest address */
+      address?: string | null;
+    }
+
+    /** Represents a QueryIncentiveUnitIdsByAddrRequest. */
+    class QueryIncentiveUnitIdsByAddrRequest implements IQueryIncentiveUnitIdsByAddrRequest {
+      /**
+       * Constructs a new QueryIncentiveUnitIdsByAddrRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest);
+
+      /** QueryIncentiveUnitIdsByAddrRequest address. */
+      public address: string;
+
+      /**
+       * Encodes the specified QueryIncentiveUnitIdsByAddrRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest.verify|verify} messages.
+       * @param message QueryIncentiveUnitIdsByAddrRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(
+        message: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryIncentiveUnitIdsByAddrRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest.verify|verify} messages.
+       * @param message QueryIncentiveUnitIdsByAddrRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryIncentiveUnitIdsByAddrRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryIncentiveUnitIdsByAddrRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(
+        reader: $protobuf.Reader | Uint8Array,
+        length?: number,
+      ): ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest;
+
+      /**
+       * Decodes a QueryIncentiveUnitIdsByAddrRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryIncentiveUnitIdsByAddrRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest;
+
+      /**
+       * Verifies a QueryIncentiveUnitIdsByAddrRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryIncentiveUnitIdsByAddrRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryIncentiveUnitIdsByAddrRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest;
+
+      /**
+       * Creates a plain object from a QueryIncentiveUnitIdsByAddrRequest message. Also converts values to other types if specified.
+       * @param message QueryIncentiveUnitIdsByAddrRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryIncentiveUnitIdsByAddrRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryIncentiveUnitIdsByAddrResponse. */
+    interface IQueryIncentiveUnitIdsByAddrResponse {
+      /** QueryIncentiveUnitIdsByAddrResponse incentive_unit_ids_by_addr */
+      incentive_unit_ids_by_addr?: ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr | null;
+    }
+
+    /** Represents a QueryIncentiveUnitIdsByAddrResponse. */
+    class QueryIncentiveUnitIdsByAddrResponse implements IQueryIncentiveUnitIdsByAddrResponse {
+      /**
+       * Constructs a new QueryIncentiveUnitIdsByAddrResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrResponse);
+
+      /** QueryIncentiveUnitIdsByAddrResponse incentive_unit_ids_by_addr. */
+      public incentive_unit_ids_by_addr?: ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr | null;
+
+      /**
+       * Encodes the specified QueryIncentiveUnitIdsByAddrResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse.verify|verify} messages.
+       * @param message QueryIncentiveUnitIdsByAddrResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(
+        message: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryIncentiveUnitIdsByAddrResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse.verify|verify} messages.
+       * @param message QueryIncentiveUnitIdsByAddrResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryIncentiveUnitIdsByAddrResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryIncentiveUnitIdsByAddrResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(
+        reader: $protobuf.Reader | Uint8Array,
+        length?: number,
+      ): ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse;
+
+      /**
+       * Decodes a QueryIncentiveUnitIdsByAddrResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryIncentiveUnitIdsByAddrResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse;
+
+      /**
+       * Verifies a QueryIncentiveUnitIdsByAddrResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryIncentiveUnitIdsByAddrResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryIncentiveUnitIdsByAddrResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse;
+
+      /**
+       * Creates a plain object from a QueryIncentiveUnitIdsByAddrResponse message. Also converts values to other types if specified.
+       * @param message QueryIncentiveUnitIdsByAddrResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryIncentiveUnitIdsByAddrResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
     /** Properties of a Params. */
     interface IParams {
       /** Params reward_params */
@@ -6092,6 +6307,99 @@ export namespace ununifi {
 
       /**
        * Converts this RewardStore to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of an IncentiveUnitIdsByAddr. */
+    interface IIncentiveUnitIdsByAddr {
+      /** IncentiveUnitIdsByAddr address */
+      address?: string | null;
+
+      /** IncentiveUnitIdsByAddr incentive_unit_ids */
+      incentive_unit_ids?: string[] | null;
+    }
+
+    /** Represents an IncentiveUnitIdsByAddr. */
+    class IncentiveUnitIdsByAddr implements IIncentiveUnitIdsByAddr {
+      /**
+       * Constructs a new IncentiveUnitIdsByAddr.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr);
+
+      /** IncentiveUnitIdsByAddr address. */
+      public address: string;
+
+      /** IncentiveUnitIdsByAddr incentive_unit_ids. */
+      public incentive_unit_ids: string[];
+
+      /**
+       * Encodes the specified IncentiveUnitIdsByAddr message. Does not implicitly {@link ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.verify|verify} messages.
+       * @param message IncentiveUnitIdsByAddr message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified IncentiveUnitIdsByAddr message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.verify|verify} messages.
+       * @param message IncentiveUnitIdsByAddr message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes an IncentiveUnitIdsByAddr message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns IncentiveUnitIdsByAddr
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.ecosystemincentive.IncentiveUnitIdsByAddr;
+
+      /**
+       * Decodes an IncentiveUnitIdsByAddr message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns IncentiveUnitIdsByAddr
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.ecosystemincentive.IncentiveUnitIdsByAddr;
+
+      /**
+       * Verifies an IncentiveUnitIdsByAddr message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates an IncentiveUnitIdsByAddr message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns IncentiveUnitIdsByAddr
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.IncentiveUnitIdsByAddr;
+
+      /**
+       * Creates a plain object from an IncentiveUnitIdsByAddr message. Also converts values to other types if specified.
+       * @param message IncentiveUnitIdsByAddr
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.ecosystemincentive.IncentiveUnitIdsByAddr,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this IncentiveUnitIdsByAddr to JSON.
        * @returns JSON object
        */
       public toJSON(): { [k: string]: any };
@@ -18908,6 +19216,9 @@ export namespace ununifi {
     interface IGenesisState {
       /** GenesisState params */
       params?: ununifi.nftmint.IParams | null;
+
+      /** GenesisState class_attributes_list */
+      class_attributes_list?: ununifi.nftmint.IClassAttributes[] | null;
     }
 
     /** Represents a GenesisState. */
@@ -18920,6 +19231,9 @@ export namespace ununifi {
 
       /** GenesisState params. */
       public params?: ununifi.nftmint.IParams | null;
+
+      /** GenesisState class_attributes_list. */
+      public class_attributes_list: ununifi.nftmint.IClassAttributes[];
 
       /**
        * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.nftmint.GenesisState.verify|verify} messages.
