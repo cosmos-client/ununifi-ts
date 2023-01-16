@@ -8377,6 +8377,93 @@ export namespace ununifi {
       public toJSON(): { [k: string]: any };
     }
 
+    /** Properties of a BidId. */
+    interface IBidId {
+      /** BidId nft_id */
+      nft_id?: ununifi.nftmarket.INftIdentifier | null;
+
+      /** BidId bidder */
+      bidder?: string | null;
+    }
+
+    /** Represents a BidId. */
+    class BidId implements IBidId {
+      /**
+       * Constructs a new BidId.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.nftmarket.IBidId);
+
+      /** BidId nft_id. */
+      public nft_id?: ununifi.nftmarket.INftIdentifier | null;
+
+      /** BidId bidder. */
+      public bidder: string;
+
+      /**
+       * Encodes the specified BidId message. Does not implicitly {@link ununifi.nftmarket.BidId.verify|verify} messages.
+       * @param message BidId message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.nftmarket.IBidId, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified BidId message, length delimited. Does not implicitly {@link ununifi.nftmarket.BidId.verify|verify} messages.
+       * @param message BidId message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.nftmarket.IBidId, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a BidId message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns BidId
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.nftmarket.BidId;
+
+      /**
+       * Decodes a BidId message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns BidId
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.nftmarket.BidId;
+
+      /**
+       * Verifies a BidId message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a BidId message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns BidId
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.BidId;
+
+      /**
+       * Creates a plain object from a BidId message. Also converts values to other types if specified.
+       * @param message BidId
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.nftmarket.BidId, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this BidId to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
     /** Properties of a Loan. */
     interface ILoan {
       /** Loan nft_id */
@@ -8898,6 +8985,9 @@ export namespace ununifi {
       /** NftBid deposit_amount */
       deposit_amount?: cosmos.base.v1beta1.ICoin | null;
 
+      /** NftBid paid_amount */
+      paid_amount?: cosmos.base.v1beta1.ICoin | null;
+
       /** NftBid bidding_period */
       bidding_period?: google.protobuf.ITimestamp | null;
 
@@ -8915,6 +9005,9 @@ export namespace ununifi {
 
       /** NftBid borrowings */
       borrowings?: ununifi.nftmarket.Iborrowing[] | null;
+
+      /** NftBid id */
+      id?: ununifi.nftmarket.IBidId | null;
     }
 
     /** Represents a NftBid. */
@@ -8937,6 +9030,9 @@ export namespace ununifi {
       /** NftBid deposit_amount. */
       public deposit_amount?: cosmos.base.v1beta1.ICoin | null;
 
+      /** NftBid paid_amount. */
+      public paid_amount?: cosmos.base.v1beta1.ICoin | null;
+
       /** NftBid bidding_period. */
       public bidding_period?: google.protobuf.ITimestamp | null;
 
@@ -8954,6 +9050,9 @@ export namespace ununifi {
 
       /** NftBid borrowings. */
       public borrowings: ununifi.nftmarket.Iborrowing[];
+
+      /** NftBid id. */
+      public id?: ununifi.nftmarket.IBidId | null;
 
       /**
        * Encodes the specified NftBid message. Does not implicitly {@link ununifi.nftmarket.NftBid.verify|verify} messages.
