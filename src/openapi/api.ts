@@ -47,38 +47,6 @@ export interface AccountAll200Response {
 /**
  *
  * @export
- * @interface AllRewards200Response
- */
-export interface AllRewards200Response {
-  /**
-   *
-   * @type {AllRewards200ResponseRewards}
-   * @memberof AllRewards200Response
-   */
-  rewards?: AllRewards200ResponseRewards;
-}
-/**
- *
- * @export
- * @interface AllRewards200ResponseRewards
- */
-export interface AllRewards200ResponseRewards {
-  /**
-   *
-   * @type {string}
-   * @memberof AllRewards200ResponseRewards
-   */
-  subject_addr?: string;
-  /**
-   *
-   * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
-   * @memberof AllRewards200ResponseRewards
-   */
-  rewards?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
-}
-/**
- *
- * @export
  * @interface Auction200Response
  */
 export interface Auction200Response {
@@ -867,44 +835,6 @@ export interface DepositAll200ResponseDepositsInner {
   amount?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 /**
- *
- * @export
- * @interface EcosystemincentiveParams200Response
- */
-export interface EcosystemincentiveParams200Response {
-  /**
-   *
-   * @type {EcosystemincentiveParams200ResponseParams}
-   * @memberof EcosystemincentiveParams200Response
-   */
-  params?: EcosystemincentiveParams200ResponseParams;
-}
-/**
- * params holds all the parameters of this module.
- * @export
- * @interface EcosystemincentiveParams200ResponseParams
- */
-export interface EcosystemincentiveParams200ResponseParams {
-  /**
-   *
-   * @type {Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>}
-   * @memberof EcosystemincentiveParams200ResponseParams
-   */
-  reward_params?: Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>;
-  /**
-   *
-   * @type {string}
-   * @memberof EcosystemincentiveParams200ResponseParams
-   */
-  max_incentive_unit_id_len?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof EcosystemincentiveParams200ResponseParams
-   */
-  max_subject_info_num_in_unit?: string;
-}
-/**
  * `Any` contains an arbitrary serialized protocol buffer message along with a URL that describes the type of the serialized message.  Protobuf library provides support to pack/unpack Any values in the form of utility functions or additional generated methods of the Any type.  Example 1: Pack and unpack a message in C++.      Foo foo = ...;     Any any;     any.PackFrom(foo);     ...     if (any.UnpackTo(&foo)) {       ...     }  Example 2: Pack and unpack a message in Java.      Foo foo = ...;     Any any = Any.pack(foo);     ...     if (any.is(Foo.class)) {       foo = any.unpack(Foo.class);     }   Example 3: Pack and unpack a message in Python.      foo = Foo(...)     any = Any()     any.Pack(foo)     ...     if any.Is(Foo.DESCRIPTOR):       any.Unpack(foo)       ...   Example 4: Pack and unpack a message in Go       foo := &pb.Foo{...}      any, err := ptypes.MarshalAny(foo)      ...      foo := &pb.Foo{}      if err := ptypes.UnmarshalAny(any, foo); err != nil {        ...      }  The pack methods provided by protobuf library will by default use \'type.googleapis.com/full.type.name\' as the type URL and the unpack methods only use the fully qualified type name after the last \'/\' in the type URL, for example \"foo.bar.com/x/y.z\" will yield type name \"y.z\".   JSON ==== The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:      package google.profile;     message Person {       string first_name = 1;       string last_name = 2;     }      {       \"@type\": \"type.googleapis.com/google.profile.Person\",       \"firstName\": <string>,       \"lastName\": <string>     }  If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message [google.protobuf.Duration][]):      {       \"@type\": \"type.googleapis.com/google.protobuf.Duration\",       \"value\": \"1.212s\"     }
  * @export
  * @interface GoogleProtobufAny
@@ -1103,57 +1033,6 @@ export interface IncentiveParamsDefaultResponseDetailsInner {
    * @memberof IncentiveParamsDefaultResponseDetailsInner
    */
   value?: string;
-}
-/**
- *
- * @export
- * @interface IncentiveUnit200Response
- */
-export interface IncentiveUnit200Response {
-  /**
-   *
-   * @type {IncentiveUnit200ResponseIncentiveUnit}
-   * @memberof IncentiveUnit200Response
-   */
-  incentive_unit?: IncentiveUnit200ResponseIncentiveUnit;
-}
-/**
- *
- * @export
- * @interface IncentiveUnit200ResponseIncentiveUnit
- */
-export interface IncentiveUnit200ResponseIncentiveUnit {
-  /**
-   *
-   * @type {string}
-   * @memberof IncentiveUnit200ResponseIncentiveUnit
-   */
-  id?: string;
-  /**
-   *
-   * @type {Array<IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner>}
-   * @memberof IncentiveUnit200ResponseIncentiveUnit
-   */
-  subject_info_lists?: Array<IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner>;
-}
-/**
- *
- * @export
- * @interface IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner
- */
-export interface IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner {
-  /**
-   *
-   * @type {string}
-   * @memberof IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner
-   */
-  subject_addr?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner
-   */
-  weight?: string;
 }
 /**
  *
@@ -1361,25 +1240,6 @@ export const ListedNfts200ResponseListingsInnerStateEnum = {
 export type ListedNfts200ResponseListingsInnerStateEnum =
   typeof ListedNfts200ResponseListingsInnerStateEnum[keyof typeof ListedNfts200ResponseListingsInnerStateEnum];
 
-/**
- *
- * @export
- * @interface Loan200Response
- */
-export interface Loan200Response {
-  /**
-   *
-   * @type {Loans200ResponseLoansInner}
-   * @memberof Loan200Response
-   */
-  loan?: Loans200ResponseLoansInner;
-  /**
-   *
-   * @type {string}
-   * @memberof Loan200Response
-   */
-  borrowing_limit?: string;
-}
 /**
  *
  * @export
@@ -1706,87 +1566,6 @@ export interface OracleAll200Response {
 /**
  *
  * @export
- * @interface PaymentStatus200Response
- */
-export interface PaymentStatus200Response {
-  /**
-   *
-   * @type {PaymentStatus200ResponsePaymentStatus}
-   * @memberof PaymentStatus200Response
-   */
-  paymentStatus?: PaymentStatus200ResponsePaymentStatus;
-}
-/**
- *
- * @export
- * @interface PaymentStatus200ResponsePaymentStatus
- */
-export interface PaymentStatus200ResponsePaymentStatus {
-  /**
-   *
-   * @type {BidderBids200ResponseBidsInnerNftId}
-   * @memberof PaymentStatus200ResponsePaymentStatus
-   */
-  nft_id?: BidderBids200ResponseBidsInnerNftId;
-  /**
-   *
-   * @type {string}
-   * @memberof PaymentStatus200ResponsePaymentStatus
-   */
-  bidder?: string;
-  /**
-   *
-   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-   * @memberof PaymentStatus200ResponsePaymentStatus
-   */
-  amount?: CdpAll200ResponseCdpInnerCdpCollateral;
-  /**
-   *
-   * @type {boolean}
-   * @memberof PaymentStatus200ResponsePaymentStatus
-   */
-  automatic_payment?: boolean;
-  /**
-   *
-   * @type {string}
-   * @memberof PaymentStatus200ResponsePaymentStatus
-   */
-  paid_amount?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof PaymentStatus200ResponsePaymentStatus
-   */
-  bid_time?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof PaymentStatus200ResponsePaymentStatus
-   */
-  state?: PaymentStatus200ResponsePaymentStatusStateEnum;
-  /**
-   *
-   * @type {boolean}
-   * @memberof PaymentStatus200ResponsePaymentStatus
-   */
-  all_paid?: boolean;
-}
-
-export const PaymentStatus200ResponsePaymentStatusStateEnum = {
-  Listing: 'LISTING',
-  Bidding: 'BIDDING',
-  SellingDecision: 'SELLING_DECISION',
-  Liquidation: 'LIQUIDATION',
-  EndListing: 'END_LISTING',
-  SuccessfulBid: 'SUCCESSFUL_BID',
-} as const;
-
-export type PaymentStatus200ResponsePaymentStatusStateEnum =
-  typeof PaymentStatus200ResponsePaymentStatusStateEnum[keyof typeof PaymentStatus200ResponsePaymentStatusStateEnum];
-
-/**
- *
- * @export
  * @interface Price200Response
  */
 export interface Price200Response {
@@ -1911,78 +1690,6 @@ export interface RawPriceAll200ResponsePricesInner {
    */
   expiry?: string;
 }
-/**
- *
- * @export
- * @interface RecordedIncentiveUnitId200Response
- */
-export interface RecordedIncentiveUnitId200Response {
-  /**
-   *
-   * @type {string}
-   * @memberof RecordedIncentiveUnitId200Response
-   */
-  incentive_unit_id?: string;
-}
-/**
- *
- * @export
- * @interface Reward200Response
- */
-export interface Reward200Response {
-  /**
-   *
-   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-   * @memberof Reward200Response
-   */
-  reward?: CdpAll200ResponseCdpInnerCdpCollateral;
-}
-/**
- *
- * @export
- * @interface RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1
- */
-export interface RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1 {
-  /**
-   *
-   * @type {string}
-   * @memberof RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1
-   */
-  module_name?: string;
-  /**
-   *
-   * @type {Array<RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1>}
-   * @memberof RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1
-   */
-  reward_rate?: Array<RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1>;
-}
-/**
- *
- * @export
- * @interface RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1
- */
-export interface RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1 {
-  /**
-   * At first, we go with this one type. NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
-   * @type {string}
-   * @memberof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1
-   */
-  reward_type?: RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum;
-  /**
-   *
-   * @type {string}
-   * @memberof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1
-   */
-  rate?: string;
-}
-
-export const RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum = {
-  NftmarketFrontend: 'NFTMARKET_FRONTEND',
-} as const;
-
-export type RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum =
-  typeof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum[keyof typeof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum];
-
 /**
  *
  * @export
@@ -2430,212 +2137,6 @@ export interface UnunifiCdpQueryParamsResponse {
    * @memberof UnunifiCdpQueryParamsResponse
    */
   params?: CdpParams200ResponseParams;
-}
-/**
- *
- * @export
- * @interface UnunifiEcosystemincentiveIncentiveUnit
- */
-export interface UnunifiEcosystemincentiveIncentiveUnit {
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiEcosystemincentiveIncentiveUnit
-   */
-  id?: string;
-  /**
-   *
-   * @type {Array<IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner>}
-   * @memberof UnunifiEcosystemincentiveIncentiveUnit
-   */
-  subject_info_lists?: Array<IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner>;
-}
-/**
- * Params defines the parameters for the module.
- * @export
- * @interface UnunifiEcosystemincentiveParams
- */
-export interface UnunifiEcosystemincentiveParams {
-  /**
-   *
-   * @type {Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>}
-   * @memberof UnunifiEcosystemincentiveParams
-   */
-  reward_params?: Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiEcosystemincentiveParams
-   */
-  max_incentive_unit_id_len?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiEcosystemincentiveParams
-   */
-  max_subject_info_num_in_unit?: string;
-}
-/**
- *
- * @export
- * @interface UnunifiEcosystemincentiveQueryAllRewardsResponse
- */
-export interface UnunifiEcosystemincentiveQueryAllRewardsResponse {
-  /**
-   *
-   * @type {AllRewards200ResponseRewards}
-   * @memberof UnunifiEcosystemincentiveQueryAllRewardsResponse
-   */
-  rewards?: AllRewards200ResponseRewards;
-}
-/**
- *
- * @export
- * @interface UnunifiEcosystemincentiveQueryIncentiveUnitResponse
- */
-export interface UnunifiEcosystemincentiveQueryIncentiveUnitResponse {
-  /**
-   *
-   * @type {IncentiveUnit200ResponseIncentiveUnit}
-   * @memberof UnunifiEcosystemincentiveQueryIncentiveUnitResponse
-   */
-  incentive_unit?: IncentiveUnit200ResponseIncentiveUnit;
-}
-/**
- *
- * @export
- * @interface UnunifiEcosystemincentiveQueryParamsResponse
- */
-export interface UnunifiEcosystemincentiveQueryParamsResponse {
-  /**
-   *
-   * @type {EcosystemincentiveParams200ResponseParams}
-   * @memberof UnunifiEcosystemincentiveQueryParamsResponse
-   */
-  params?: EcosystemincentiveParams200ResponseParams;
-}
-/**
- *
- * @export
- * @interface UnunifiEcosystemincentiveQueryRecordedIncentiveUnitIdResponse
- */
-export interface UnunifiEcosystemincentiveQueryRecordedIncentiveUnitIdResponse {
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiEcosystemincentiveQueryRecordedIncentiveUnitIdResponse
-   */
-  incentive_unit_id?: string;
-}
-/**
- *
- * @export
- * @interface UnunifiEcosystemincentiveQueryRewardResponse
- */
-export interface UnunifiEcosystemincentiveQueryRewardResponse {
-  /**
-   *
-   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-   * @memberof UnunifiEcosystemincentiveQueryRewardResponse
-   */
-  reward?: CdpAll200ResponseCdpInnerCdpCollateral;
-}
-/**
- *
- * @export
- * @interface UnunifiEcosystemincentiveRewardParams
- */
-export interface UnunifiEcosystemincentiveRewardParams {
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiEcosystemincentiveRewardParams
-   */
-  module_name?: string;
-  /**
-   *
-   * @type {Array<RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1>}
-   * @memberof UnunifiEcosystemincentiveRewardParams
-   */
-  reward_rate?: Array<RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1>;
-}
-/**
- *
- * @export
- * @interface UnunifiEcosystemincentiveRewardRate
- */
-export interface UnunifiEcosystemincentiveRewardRate {
-  /**
-   * At first, we go with this one type. NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
-   * @type {string}
-   * @memberof UnunifiEcosystemincentiveRewardRate
-   */
-  reward_type?: UnunifiEcosystemincentiveRewardRateRewardTypeEnum;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiEcosystemincentiveRewardRate
-   */
-  rate?: string;
-}
-
-export const UnunifiEcosystemincentiveRewardRateRewardTypeEnum = {
-  NftmarketFrontend: 'NFTMARKET_FRONTEND',
-} as const;
-
-export type UnunifiEcosystemincentiveRewardRateRewardTypeEnum =
-  typeof UnunifiEcosystemincentiveRewardRateRewardTypeEnum[keyof typeof UnunifiEcosystemincentiveRewardRateRewardTypeEnum];
-
-/**
- *
- * @export
- * @interface UnunifiEcosystemincentiveRewardStore
- */
-export interface UnunifiEcosystemincentiveRewardStore {
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiEcosystemincentiveRewardStore
-   */
-  subject_addr?: string;
-  /**
-   *
-   * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
-   * @memberof UnunifiEcosystemincentiveRewardStore
-   */
-  rewards?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
-}
-/**
- * At first, we go with this one type. NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
- * @export
- * @enum {string}
- */
-
-export const UnunifiEcosystemincentiveRewardType = {
-  NftmarketFrontend: 'NFTMARKET_FRONTEND',
-} as const;
-
-export type UnunifiEcosystemincentiveRewardType =
-  typeof UnunifiEcosystemincentiveRewardType[keyof typeof UnunifiEcosystemincentiveRewardType];
-
-/**
- *
- * @export
- * @interface UnunifiEcosystemincentiveSubjectInfo
- */
-export interface UnunifiEcosystemincentiveSubjectInfo {
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiEcosystemincentiveSubjectInfo
-   */
-  subject_addr?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiEcosystemincentiveSubjectInfo
-   */
-  weight?: string;
 }
 /**
  *
@@ -3092,74 +2593,6 @@ export interface UnunifiNftmarketParams {
 /**
  *
  * @export
- * @interface UnunifiNftmarketPaymentStatus
- */
-export interface UnunifiNftmarketPaymentStatus {
-  /**
-   *
-   * @type {BidderBids200ResponseBidsInnerNftId}
-   * @memberof UnunifiNftmarketPaymentStatus
-   */
-  nft_id?: BidderBids200ResponseBidsInnerNftId;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiNftmarketPaymentStatus
-   */
-  bidder?: string;
-  /**
-   *
-   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-   * @memberof UnunifiNftmarketPaymentStatus
-   */
-  amount?: CdpAll200ResponseCdpInnerCdpCollateral;
-  /**
-   *
-   * @type {boolean}
-   * @memberof UnunifiNftmarketPaymentStatus
-   */
-  automatic_payment?: boolean;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiNftmarketPaymentStatus
-   */
-  paid_amount?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiNftmarketPaymentStatus
-   */
-  bid_time?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiNftmarketPaymentStatus
-   */
-  state?: UnunifiNftmarketPaymentStatusStateEnum;
-  /**
-   *
-   * @type {boolean}
-   * @memberof UnunifiNftmarketPaymentStatus
-   */
-  all_paid?: boolean;
-}
-
-export const UnunifiNftmarketPaymentStatusStateEnum = {
-  Listing: 'LISTING',
-  Bidding: 'BIDDING',
-  SellingDecision: 'SELLING_DECISION',
-  Liquidation: 'LIQUIDATION',
-  EndListing: 'END_LISTING',
-  SuccessfulBid: 'SUCCESSFUL_BID',
-} as const;
-
-export type UnunifiNftmarketPaymentStatusStateEnum =
-  typeof UnunifiNftmarketPaymentStatusStateEnum[keyof typeof UnunifiNftmarketPaymentStatusStateEnum];
-
-/**
- *
- * @export
  * @interface UnunifiNftmarketQueryBidderBidsResponse
  */
 export interface UnunifiNftmarketQueryBidderBidsResponse {
@@ -3254,25 +2687,6 @@ export interface UnunifiNftmarketQueryListedNftsResponse {
 /**
  *
  * @export
- * @interface UnunifiNftmarketQueryLoanResponse
- */
-export interface UnunifiNftmarketQueryLoanResponse {
-  /**
-   *
-   * @type {Loans200ResponseLoansInner}
-   * @memberof UnunifiNftmarketQueryLoanResponse
-   */
-  loan?: Loans200ResponseLoansInner;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiNftmarketQueryLoanResponse
-   */
-  borrowing_limit?: string;
-}
-/**
- *
- * @export
  * @interface UnunifiNftmarketQueryLoansResponse
  */
 export interface UnunifiNftmarketQueryLoansResponse {
@@ -3321,19 +2735,6 @@ export interface UnunifiNftmarketQueryParamsResponse {
    * @memberof UnunifiNftmarketQueryParamsResponse
    */
   params?: NftmarketParams200ResponseParams;
-}
-/**
- *
- * @export
- * @interface UnunifiNftmarketQueryPaymentStatusResponse
- */
-export interface UnunifiNftmarketQueryPaymentStatusResponse {
-  /**
-   *
-   * @type {PaymentStatus200ResponsePaymentStatus}
-   * @memberof UnunifiNftmarketQueryPaymentStatusResponse
-   */
-  paymentStatus?: PaymentStatus200ResponsePaymentStatus;
 }
 /**
  *
@@ -3924,39 +3325,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
-     * @param {string} subjectAddr
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    allRewards: async (subjectAddr: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-      // verify required parameter 'subjectAddr' is not null or undefined
-      assertParamExists('allRewards', 'subjectAddr', subjectAddr);
-      const localVarPath = `/ununifi/ecosystem_incentive/all_rewards/{subject_addr}`.replace(
-        `{${'subject_addr'}}`,
-        encodeURIComponent(String(subjectAddr)),
-      );
-      // use dummy base URL string because the URL constructor only accepts absolute URLs.
-      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-      let baseOptions;
-      if (configuration) {
-        baseOptions = configuration.baseOptions;
-      }
-
-      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
-      const localVarHeaderParameter = {} as any;
-      const localVarQueryParameter = {} as any;
-
-      setSearchParams(localVarUrlObj, localVarQueryParameter);
-      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
-
-      return {
-        url: toPathString(localVarUrlObj),
-        options: localVarRequestOptions,
-      };
-    },
-    /**
-     *
      * @summary this line is used by starport scaffolding # 2
      * @param {string} id
      * @param {*} [options] Override http request option.
@@ -4397,72 +3765,11 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
-     * @summary Parameters queries the parameters of the module.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    ecosystemincentiveParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-      const localVarPath = `/ununifi/ecosystem_incentive/params`;
-      // use dummy base URL string because the URL constructor only accepts absolute URLs.
-      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-      let baseOptions;
-      if (configuration) {
-        baseOptions = configuration.baseOptions;
-      }
-
-      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
-      const localVarHeaderParameter = {} as any;
-      const localVarQueryParameter = {} as any;
-
-      setSearchParams(localVarUrlObj, localVarQueryParameter);
-      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
-
-      return {
-        url: toPathString(localVarUrlObj),
-        options: localVarRequestOptions,
-      };
-    },
-    /**
-     *
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     incentiveParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       const localVarPath = `/ununifi/incentive/params`;
-      // use dummy base URL string because the URL constructor only accepts absolute URLs.
-      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-      let baseOptions;
-      if (configuration) {
-        baseOptions = configuration.baseOptions;
-      }
-
-      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
-      const localVarHeaderParameter = {} as any;
-      const localVarQueryParameter = {} as any;
-
-      setSearchParams(localVarUrlObj, localVarQueryParameter);
-      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
-
-      return {
-        url: toPathString(localVarUrlObj),
-        options: localVarRequestOptions,
-      };
-    },
-    /**
-     *
-     * @param {string} incentiveUnitId
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    incentiveUnit: async (incentiveUnitId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-      // verify required parameter 'incentiveUnitId' is not null or undefined
-      assertParamExists('incentiveUnit', 'incentiveUnitId', incentiveUnitId);
-      const localVarPath = `/ununifi/ecosystem_incentive/incentive_unit/{incentive_unit_id}`.replace(
-        `{${'incentive_unit_id'}}`,
-        encodeURIComponent(String(incentiveUnitId)),
-      );
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -4552,51 +3859,11 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
-     * @param {string} [owner]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listedNfts: async (owner?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+    listedNfts: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       const localVarPath = `/ununifi/nftmarket/listed_nfts`;
-      // use dummy base URL string because the URL constructor only accepts absolute URLs.
-      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-      let baseOptions;
-      if (configuration) {
-        baseOptions = configuration.baseOptions;
-      }
-
-      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
-      const localVarHeaderParameter = {} as any;
-      const localVarQueryParameter = {} as any;
-
-      if (owner !== undefined) {
-        localVarQueryParameter['owner'] = owner;
-      }
-
-      setSearchParams(localVarUrlObj, localVarQueryParameter);
-      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
-
-      return {
-        url: toPathString(localVarUrlObj),
-        options: localVarRequestOptions,
-      };
-    },
-    /**
-     *
-     * @param {string} classId
-     * @param {string} nftId
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    loan: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-      // verify required parameter 'classId' is not null or undefined
-      assertParamExists('loan', 'classId', classId);
-      // verify required parameter 'nftId' is not null or undefined
-      assertParamExists('loan', 'nftId', nftId);
-      const localVarPath = `/ununifi/nftmarket/loans/{class_id}/{nft_id}`
-        .replace(`{${'class_id'}}`, encodeURIComponent(String(classId)))
-        .replace(`{${'nft_id'}}`, encodeURIComponent(String(nftId)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -4919,45 +4186,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
-     * @param {string} classId
-     * @param {string} nftId
-     * @param {string} bidder
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    paymentStatus: async (classId: string, nftId: string, bidder: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-      // verify required parameter 'classId' is not null or undefined
-      assertParamExists('paymentStatus', 'classId', classId);
-      // verify required parameter 'nftId' is not null or undefined
-      assertParamExists('paymentStatus', 'nftId', nftId);
-      // verify required parameter 'bidder' is not null or undefined
-      assertParamExists('paymentStatus', 'bidder', bidder);
-      const localVarPath = `/ununifi/nftmarket/payment_status/{class_id}/{nft_id}/{bidder}`
-        .replace(`{${'class_id'}}`, encodeURIComponent(String(classId)))
-        .replace(`{${'nft_id'}}`, encodeURIComponent(String(nftId)))
-        .replace(`{${'bidder'}}`, encodeURIComponent(String(bidder)));
-      // use dummy base URL string because the URL constructor only accepts absolute URLs.
-      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-      let baseOptions;
-      if (configuration) {
-        baseOptions = configuration.baseOptions;
-      }
-
-      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
-      const localVarHeaderParameter = {} as any;
-      const localVarQueryParameter = {} as any;
-
-      setSearchParams(localVarUrlObj, localVarQueryParameter);
-      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
-
-      return {
-        url: toPathString(localVarUrlObj),
-        options: localVarRequestOptions,
-      };
-    },
-    /**
-     *
      * @param {string} marketId
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5128,76 +4356,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
-     * @param {string} classId
-     * @param {string} nftId
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    recordedIncentiveUnitId: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-      // verify required parameter 'classId' is not null or undefined
-      assertParamExists('recordedIncentiveUnitId', 'classId', classId);
-      // verify required parameter 'nftId' is not null or undefined
-      assertParamExists('recordedIncentiveUnitId', 'nftId', nftId);
-      const localVarPath = `/ununifi/ecosystem_incentive/recorded_incentive_unit_id/{class_id}/{nft_id}`
-        .replace(`{${'class_id'}}`, encodeURIComponent(String(classId)))
-        .replace(`{${'nft_id'}}`, encodeURIComponent(String(nftId)));
-      // use dummy base URL string because the URL constructor only accepts absolute URLs.
-      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-      let baseOptions;
-      if (configuration) {
-        baseOptions = configuration.baseOptions;
-      }
-
-      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
-      const localVarHeaderParameter = {} as any;
-      const localVarQueryParameter = {} as any;
-
-      setSearchParams(localVarUrlObj, localVarQueryParameter);
-      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
-
-      return {
-        url: toPathString(localVarUrlObj),
-        options: localVarRequestOptions,
-      };
-    },
-    /**
-     *
-     * @param {string} subjectAddr
-     * @param {string} denom
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    reward: async (subjectAddr: string, denom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-      // verify required parameter 'subjectAddr' is not null or undefined
-      assertParamExists('reward', 'subjectAddr', subjectAddr);
-      // verify required parameter 'denom' is not null or undefined
-      assertParamExists('reward', 'denom', denom);
-      const localVarPath = `/ununifi/ecosystem_incentive/reward/{subject_addr}/{denom}`
-        .replace(`{${'subject_addr'}}`, encodeURIComponent(String(subjectAddr)))
-        .replace(`{${'denom'}}`, encodeURIComponent(String(denom)));
-      // use dummy base URL string because the URL constructor only accepts absolute URLs.
-      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-      let baseOptions;
-      if (configuration) {
-        baseOptions = configuration.baseOptions;
-      }
-
-      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
-      const localVarHeaderParameter = {} as any;
-      const localVarQueryParameter = {} as any;
-
-      setSearchParams(localVarUrlObj, localVarQueryParameter);
-      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
-
-      return {
-        url: toPathString(localVarUrlObj),
-        options: localVarRequestOptions,
-      };
-    },
-    /**
-     *
      * @param {string} address
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5272,19 +4430,6 @@ export const QueryApiFp = function (configuration?: Configuration) {
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountAll200Response>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.accountAll(options);
-      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-    },
-    /**
-     *
-     * @param {string} subjectAddr
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    async allRewards(
-      subjectAddr: string,
-      options?: AxiosRequestConfig,
-    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllRewards200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.allRewards(subjectAddr, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -5477,18 +4622,6 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
-     * @summary Parameters queries the parameters of the module.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    async ecosystemincentiveParams(
-      options?: AxiosRequestConfig,
-    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EcosystemincentiveParams200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.ecosystemincentiveParams(options);
-      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-    },
-    /**
-     *
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -5496,19 +4629,6 @@ export const QueryApiFp = function (configuration?: Configuration) {
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IncentiveParams200Response>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.incentiveParams(options);
-      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-    },
-    /**
-     *
-     * @param {string} incentiveUnitId
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    async incentiveUnit(
-      incentiveUnitId: string,
-      options?: AxiosRequestConfig,
-    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IncentiveUnit200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.incentiveUnit(incentiveUnitId, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -5541,30 +4661,13 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
-     * @param {string} [owner]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async listedNfts(
-      owner?: string,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListedNfts200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listedNfts(owner, options);
-      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-    },
-    /**
-     *
-     * @param {string} classId
-     * @param {string} nftId
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    async loan(
-      classId: string,
-      nftId: string,
-      options?: AxiosRequestConfig,
-    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Loan200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.loan(classId, nftId, options);
+      const localVarAxiosArgs = await localVarAxiosParamCreator.listedNfts(options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -5699,23 +4802,6 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
-     * @param {string} classId
-     * @param {string} nftId
-     * @param {string} bidder
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    async paymentStatus(
-      classId: string,
-      nftId: string,
-      bidder: string,
-      options?: AxiosRequestConfig,
-    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaymentStatus200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.paymentStatus(classId, nftId, bidder, options);
-      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-    },
-    /**
-     *
      * @param {string} marketId
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5793,36 +4879,6 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
-     * @param {string} classId
-     * @param {string} nftId
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    async recordedIncentiveUnitId(
-      classId: string,
-      nftId: string,
-      options?: AxiosRequestConfig,
-    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RecordedIncentiveUnitId200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.recordedIncentiveUnitId(classId, nftId, options);
-      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-    },
-    /**
-     *
-     * @param {string} subjectAddr
-     * @param {string} denom
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    async reward(
-      subjectAddr: string,
-      denom: string,
-      options?: AxiosRequestConfig,
-    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Reward200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.reward(subjectAddr, denom, options);
-      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-    },
-    /**
-     *
      * @param {string} address
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5862,15 +4918,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
      */
     accountAll(options?: any): AxiosPromise<AccountAll200Response> {
       return localVarFp.accountAll(options).then((request) => request(axios, basePath));
-    },
-    /**
-     *
-     * @param {string} subjectAddr
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    allRewards(subjectAddr: string, options?: any): AxiosPromise<AllRewards200Response> {
-      return localVarFp.allRewards(subjectAddr, options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -6014,29 +5061,11 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
-     * @summary Parameters queries the parameters of the module.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    ecosystemincentiveParams(options?: any): AxiosPromise<EcosystemincentiveParams200Response> {
-      return localVarFp.ecosystemincentiveParams(options).then((request) => request(axios, basePath));
-    },
-    /**
-     *
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     incentiveParams(options?: any): AxiosPromise<IncentiveParams200Response> {
       return localVarFp.incentiveParams(options).then((request) => request(axios, basePath));
-    },
-    /**
-     *
-     * @param {string} incentiveUnitId
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    incentiveUnit(incentiveUnitId: string, options?: any): AxiosPromise<IncentiveUnit200Response> {
-      return localVarFp.incentiveUnit(incentiveUnitId, options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -6059,22 +5088,11 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
-     * @param {string} [owner]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listedNfts(owner?: string, options?: any): AxiosPromise<ListedNfts200Response> {
-      return localVarFp.listedNfts(owner, options).then((request) => request(axios, basePath));
-    },
-    /**
-     *
-     * @param {string} classId
-     * @param {string} nftId
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    loan(classId: string, nftId: string, options?: any): AxiosPromise<Loan200Response> {
-      return localVarFp.loan(classId, nftId, options).then((request) => request(axios, basePath));
+    listedNfts(options?: any): AxiosPromise<ListedNfts200Response> {
+      return localVarFp.listedNfts(options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -6175,17 +5193,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
-     * @param {string} classId
-     * @param {string} nftId
-     * @param {string} bidder
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    paymentStatus(classId: string, nftId: string, bidder: string, options?: any): AxiosPromise<PaymentStatus200Response> {
-      return localVarFp.paymentStatus(classId, nftId, bidder, options).then((request) => request(axios, basePath));
-    },
-    /**
-     *
      * @param {string} marketId
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -6245,26 +5252,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
-     * @param {string} classId
-     * @param {string} nftId
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    recordedIncentiveUnitId(classId: string, nftId: string, options?: any): AxiosPromise<RecordedIncentiveUnitId200Response> {
-      return localVarFp.recordedIncentiveUnitId(classId, nftId, options).then((request) => request(axios, basePath));
-    },
-    /**
-     *
-     * @param {string} subjectAddr
-     * @param {string} denom
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    reward(subjectAddr: string, denom: string, options?: any): AxiosPromise<Reward200Response> {
-      return localVarFp.reward(subjectAddr, denom, options).then((request) => request(axios, basePath));
-    },
-    /**
-     *
      * @param {string} address
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -6299,19 +5286,6 @@ export class QueryApi extends BaseAPI {
   public accountAll(options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
       .accountAll(options)
-      .then((request) => request(this.axios, this.basePath));
-  }
-
-  /**
-   *
-   * @param {string} subjectAddr
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof QueryApi
-   */
-  public allRewards(subjectAddr: string, options?: AxiosRequestConfig) {
-    return QueryApiFp(this.configuration)
-      .allRewards(subjectAddr, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -6505,19 +5479,6 @@ export class QueryApi extends BaseAPI {
 
   /**
    *
-   * @summary Parameters queries the parameters of the module.
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof QueryApi
-   */
-  public ecosystemincentiveParams(options?: AxiosRequestConfig) {
-    return QueryApiFp(this.configuration)
-      .ecosystemincentiveParams(options)
-      .then((request) => request(this.axios, this.basePath));
-  }
-
-  /**
-   *
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
@@ -6525,19 +5486,6 @@ export class QueryApi extends BaseAPI {
   public incentiveParams(options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
       .incentiveParams(options)
-      .then((request) => request(this.axios, this.basePath));
-  }
-
-  /**
-   *
-   * @param {string} incentiveUnitId
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof QueryApi
-   */
-  public incentiveUnit(incentiveUnitId: string, options?: AxiosRequestConfig) {
-    return QueryApiFp(this.configuration)
-      .incentiveUnit(incentiveUnitId, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -6570,28 +5518,13 @@ export class QueryApi extends BaseAPI {
 
   /**
    *
-   * @param {string} [owner]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public listedNfts(owner?: string, options?: AxiosRequestConfig) {
+  public listedNfts(options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .listedNfts(owner, options)
-      .then((request) => request(this.axios, this.basePath));
-  }
-
-  /**
-   *
-   * @param {string} classId
-   * @param {string} nftId
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof QueryApi
-   */
-  public loan(classId: string, nftId: string, options?: AxiosRequestConfig) {
-    return QueryApiFp(this.configuration)
-      .loan(classId, nftId, options)
+      .listedNfts(options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -6722,21 +5655,6 @@ export class QueryApi extends BaseAPI {
 
   /**
    *
-   * @param {string} classId
-   * @param {string} nftId
-   * @param {string} bidder
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof QueryApi
-   */
-  public paymentStatus(classId: string, nftId: string, bidder: string, options?: AxiosRequestConfig) {
-    return QueryApiFp(this.configuration)
-      .paymentStatus(classId, nftId, bidder, options)
-      .then((request) => request(this.axios, this.basePath));
-  }
-
-  /**
-   *
    * @param {string} marketId
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
@@ -6803,34 +5721,6 @@ export class QueryApi extends BaseAPI {
   ) {
     return QueryApiFp(this.configuration)
       .rawPriceAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options)
-      .then((request) => request(this.axios, this.basePath));
-  }
-
-  /**
-   *
-   * @param {string} classId
-   * @param {string} nftId
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof QueryApi
-   */
-  public recordedIncentiveUnitId(classId: string, nftId: string, options?: AxiosRequestConfig) {
-    return QueryApiFp(this.configuration)
-      .recordedIncentiveUnitId(classId, nftId, options)
-      .then((request) => request(this.axios, this.basePath));
-  }
-
-  /**
-   *
-   * @param {string} subjectAddr
-   * @param {string} denom
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof QueryApi
-   */
-  public reward(subjectAddr: string, denom: string, options?: AxiosRequestConfig) {
-    return QueryApiFp(this.configuration)
-      .reward(subjectAddr, denom, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
