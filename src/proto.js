@@ -14055,6 +14055,49 @@ export const ununifi = ($root.ununifi = (() => {
        * @variation 2
        */
 
+      /**
+       * Callback as used by {@link ununifi.nftmarket.Query#liquidation}.
+       * @memberof ununifi.nftmarket.Query
+       * @typedef LiquidationCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.nftmarket.QueryLiquidationResponse} [response] QueryLiquidationResponse
+       */
+
+      /**
+       * Calls Liquidation.
+       * @function liquidation
+       * @memberof ununifi.nftmarket.Query
+       * @instance
+       * @param {ununifi.nftmarket.IQueryLiquidationRequest} request QueryLiquidationRequest message or plain object
+       * @param {ununifi.nftmarket.Query.LiquidationCallback} callback Node-style callback called with the error, if any, and QueryLiquidationResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.liquidation = function liquidation(request, callback) {
+          return this.rpcCall(
+            liquidation,
+            $root.ununifi.nftmarket.QueryLiquidationRequest,
+            $root.ununifi.nftmarket.QueryLiquidationResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'Liquidation' },
+      );
+
+      /**
+       * Calls Liquidation.
+       * @function liquidation
+       * @memberof ununifi.nftmarket.Query
+       * @instance
+       * @param {ununifi.nftmarket.IQueryLiquidationRequest} request QueryLiquidationRequest message or plain object
+       * @returns {Promise<ununifi.nftmarket.QueryLiquidationResponse>} Promise
+       * @variation 2
+       */
+
       return Query;
     })();
 
@@ -18383,6 +18426,362 @@ export const ununifi = ($root.ununifi = (() => {
       };
 
       return QueryRewardsResponse;
+    })();
+
+    nftmarket.QueryLiquidationRequest = (function () {
+      /**
+       * Properties of a QueryLiquidationRequest.
+       * @memberof ununifi.nftmarket
+       * @interface IQueryLiquidationRequest
+       * @property {string|null} [class_id] QueryLiquidationRequest class_id
+       * @property {string|null} [nft_id] QueryLiquidationRequest nft_id
+       */
+
+      /**
+       * Constructs a new QueryLiquidationRequest.
+       * @memberof ununifi.nftmarket
+       * @classdesc Represents a QueryLiquidationRequest.
+       * @implements IQueryLiquidationRequest
+       * @constructor
+       * @param {ununifi.nftmarket.IQueryLiquidationRequest=} [properties] Properties to set
+       */
+      function QueryLiquidationRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryLiquidationRequest class_id.
+       * @member {string} class_id
+       * @memberof ununifi.nftmarket.QueryLiquidationRequest
+       * @instance
+       */
+      QueryLiquidationRequest.prototype.class_id = '';
+
+      /**
+       * QueryLiquidationRequest nft_id.
+       * @member {string} nft_id
+       * @memberof ununifi.nftmarket.QueryLiquidationRequest
+       * @instance
+       */
+      QueryLiquidationRequest.prototype.nft_id = '';
+
+      /**
+       * Encodes the specified QueryLiquidationRequest message. Does not implicitly {@link ununifi.nftmarket.QueryLiquidationRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.nftmarket.QueryLiquidationRequest
+       * @static
+       * @param {ununifi.nftmarket.IQueryLiquidationRequest} message QueryLiquidationRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryLiquidationRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.class_id != null && Object.hasOwnProperty.call(message, 'class_id'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.class_id);
+        if (message.nft_id != null && Object.hasOwnProperty.call(message, 'nft_id'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.nft_id);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryLiquidationRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryLiquidationRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.nftmarket.QueryLiquidationRequest
+       * @static
+       * @param {ununifi.nftmarket.IQueryLiquidationRequest} message QueryLiquidationRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryLiquidationRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryLiquidationRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.nftmarket.QueryLiquidationRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.nftmarket.QueryLiquidationRequest} QueryLiquidationRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryLiquidationRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.nftmarket.QueryLiquidationRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.class_id = reader.string();
+              break;
+            case 2:
+              message.nft_id = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryLiquidationRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.nftmarket.QueryLiquidationRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.nftmarket.QueryLiquidationRequest} QueryLiquidationRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryLiquidationRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryLiquidationRequest message.
+       * @function verify
+       * @memberof ununifi.nftmarket.QueryLiquidationRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryLiquidationRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.class_id != null && message.hasOwnProperty('class_id'))
+          if (!$util.isString(message.class_id)) return 'class_id: string expected';
+        if (message.nft_id != null && message.hasOwnProperty('nft_id'))
+          if (!$util.isString(message.nft_id)) return 'nft_id: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryLiquidationRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.nftmarket.QueryLiquidationRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.nftmarket.QueryLiquidationRequest} QueryLiquidationRequest
+       */
+      QueryLiquidationRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.nftmarket.QueryLiquidationRequest) return object;
+        let message = new $root.ununifi.nftmarket.QueryLiquidationRequest();
+        if (object.class_id != null) message.class_id = String(object.class_id);
+        if (object.nft_id != null) message.nft_id = String(object.nft_id);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryLiquidationRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.nftmarket.QueryLiquidationRequest
+       * @static
+       * @param {ununifi.nftmarket.QueryLiquidationRequest} message QueryLiquidationRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryLiquidationRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.class_id = '';
+          object.nft_id = '';
+        }
+        if (message.class_id != null && message.hasOwnProperty('class_id')) object.class_id = message.class_id;
+        if (message.nft_id != null && message.hasOwnProperty('nft_id')) object.nft_id = message.nft_id;
+        return object;
+      };
+
+      /**
+       * Converts this QueryLiquidationRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.nftmarket.QueryLiquidationRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryLiquidationRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryLiquidationRequest;
+    })();
+
+    nftmarket.QueryLiquidationResponse = (function () {
+      /**
+       * Properties of a QueryLiquidationResponse.
+       * @memberof ununifi.nftmarket
+       * @interface IQueryLiquidationResponse
+       * @property {ununifi.nftmarket.ILiquidations|null} [liquidations] QueryLiquidationResponse liquidations
+       */
+
+      /**
+       * Constructs a new QueryLiquidationResponse.
+       * @memberof ununifi.nftmarket
+       * @classdesc Represents a QueryLiquidationResponse.
+       * @implements IQueryLiquidationResponse
+       * @constructor
+       * @param {ununifi.nftmarket.IQueryLiquidationResponse=} [properties] Properties to set
+       */
+      function QueryLiquidationResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryLiquidationResponse liquidations.
+       * @member {ununifi.nftmarket.ILiquidations|null|undefined} liquidations
+       * @memberof ununifi.nftmarket.QueryLiquidationResponse
+       * @instance
+       */
+      QueryLiquidationResponse.prototype.liquidations = null;
+
+      /**
+       * Encodes the specified QueryLiquidationResponse message. Does not implicitly {@link ununifi.nftmarket.QueryLiquidationResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.nftmarket.QueryLiquidationResponse
+       * @static
+       * @param {ununifi.nftmarket.IQueryLiquidationResponse} message QueryLiquidationResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryLiquidationResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.liquidations != null && Object.hasOwnProperty.call(message, 'liquidations'))
+          $root.ununifi.nftmarket.Liquidations.encode(message.liquidations, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryLiquidationResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryLiquidationResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.nftmarket.QueryLiquidationResponse
+       * @static
+       * @param {ununifi.nftmarket.IQueryLiquidationResponse} message QueryLiquidationResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryLiquidationResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryLiquidationResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.nftmarket.QueryLiquidationResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.nftmarket.QueryLiquidationResponse} QueryLiquidationResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryLiquidationResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.nftmarket.QueryLiquidationResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.liquidations = $root.ununifi.nftmarket.Liquidations.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryLiquidationResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.nftmarket.QueryLiquidationResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.nftmarket.QueryLiquidationResponse} QueryLiquidationResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryLiquidationResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryLiquidationResponse message.
+       * @function verify
+       * @memberof ununifi.nftmarket.QueryLiquidationResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryLiquidationResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.liquidations != null && message.hasOwnProperty('liquidations')) {
+          let error = $root.ununifi.nftmarket.Liquidations.verify(message.liquidations);
+          if (error) return 'liquidations.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryLiquidationResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.nftmarket.QueryLiquidationResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.nftmarket.QueryLiquidationResponse} QueryLiquidationResponse
+       */
+      QueryLiquidationResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.nftmarket.QueryLiquidationResponse) return object;
+        let message = new $root.ununifi.nftmarket.QueryLiquidationResponse();
+        if (object.liquidations != null) {
+          if (typeof object.liquidations !== 'object')
+            throw TypeError('.ununifi.nftmarket.QueryLiquidationResponse.liquidations: object expected');
+          message.liquidations = $root.ununifi.nftmarket.Liquidations.fromObject(object.liquidations);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryLiquidationResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.nftmarket.QueryLiquidationResponse
+       * @static
+       * @param {ununifi.nftmarket.QueryLiquidationResponse} message QueryLiquidationResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryLiquidationResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.liquidations = null;
+        if (message.liquidations != null && message.hasOwnProperty('liquidations'))
+          object.liquidations = $root.ununifi.nftmarket.Liquidations.toObject(message.liquidations, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryLiquidationResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.nftmarket.QueryLiquidationResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryLiquidationResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryLiquidationResponse;
     })();
 
     /**
@@ -24203,6 +24602,416 @@ export const ununifi = ($root.ununifi = (() => {
       };
 
       return PaymentStatus;
+    })();
+
+    nftmarket.Liquidation = (function () {
+      /**
+       * Properties of a Liquidation.
+       * @memberof ununifi.nftmarket
+       * @interface ILiquidation
+       * @property {cosmos.base.v1beta1.ICoin|null} [amount] Liquidation amount
+       * @property {google.protobuf.ITimestamp|null} [liquidation_date] Liquidation liquidation_date
+       */
+
+      /**
+       * Constructs a new Liquidation.
+       * @memberof ununifi.nftmarket
+       * @classdesc Represents a Liquidation.
+       * @implements ILiquidation
+       * @constructor
+       * @param {ununifi.nftmarket.ILiquidation=} [properties] Properties to set
+       */
+      function Liquidation(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Liquidation amount.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+       * @memberof ununifi.nftmarket.Liquidation
+       * @instance
+       */
+      Liquidation.prototype.amount = null;
+
+      /**
+       * Liquidation liquidation_date.
+       * @member {google.protobuf.ITimestamp|null|undefined} liquidation_date
+       * @memberof ununifi.nftmarket.Liquidation
+       * @instance
+       */
+      Liquidation.prototype.liquidation_date = null;
+
+      /**
+       * Encodes the specified Liquidation message. Does not implicitly {@link ununifi.nftmarket.Liquidation.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.nftmarket.Liquidation
+       * @static
+       * @param {ununifi.nftmarket.ILiquidation} message Liquidation message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      Liquidation.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.amount != null && Object.hasOwnProperty.call(message, 'amount'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        if (message.liquidation_date != null && Object.hasOwnProperty.call(message, 'liquidation_date'))
+          $root.google.protobuf.Timestamp.encode(message.liquidation_date, writer.uint32(/* id 2, wireType 2 =*/ 18).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified Liquidation message, length delimited. Does not implicitly {@link ununifi.nftmarket.Liquidation.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.nftmarket.Liquidation
+       * @static
+       * @param {ununifi.nftmarket.ILiquidation} message Liquidation message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      Liquidation.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a Liquidation message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.nftmarket.Liquidation
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.nftmarket.Liquidation} Liquidation
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      Liquidation.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.nftmarket.Liquidation();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            case 2:
+              message.liquidation_date = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a Liquidation message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.nftmarket.Liquidation
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.nftmarket.Liquidation} Liquidation
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      Liquidation.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a Liquidation message.
+       * @function verify
+       * @memberof ununifi.nftmarket.Liquidation
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      Liquidation.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.amount != null && message.hasOwnProperty('amount')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
+          if (error) return 'amount.' + error;
+        }
+        if (message.liquidation_date != null && message.hasOwnProperty('liquidation_date')) {
+          let error = $root.google.protobuf.Timestamp.verify(message.liquidation_date);
+          if (error) return 'liquidation_date.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a Liquidation message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.nftmarket.Liquidation
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.nftmarket.Liquidation} Liquidation
+       */
+      Liquidation.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.nftmarket.Liquidation) return object;
+        let message = new $root.ununifi.nftmarket.Liquidation();
+        if (object.amount != null) {
+          if (typeof object.amount !== 'object') throw TypeError('.ununifi.nftmarket.Liquidation.amount: object expected');
+          message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
+        }
+        if (object.liquidation_date != null) {
+          if (typeof object.liquidation_date !== 'object')
+            throw TypeError('.ununifi.nftmarket.Liquidation.liquidation_date: object expected');
+          message.liquidation_date = $root.google.protobuf.Timestamp.fromObject(object.liquidation_date);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a Liquidation message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.nftmarket.Liquidation
+       * @static
+       * @param {ununifi.nftmarket.Liquidation} message Liquidation
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      Liquidation.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.amount = null;
+          object.liquidation_date = null;
+        }
+        if (message.amount != null && message.hasOwnProperty('amount'))
+          object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+        if (message.liquidation_date != null && message.hasOwnProperty('liquidation_date'))
+          object.liquidation_date = $root.google.protobuf.Timestamp.toObject(message.liquidation_date, options);
+        return object;
+      };
+
+      /**
+       * Converts this Liquidation to JSON.
+       * @function toJSON
+       * @memberof ununifi.nftmarket.Liquidation
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      Liquidation.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return Liquidation;
+    })();
+
+    nftmarket.Liquidations = (function () {
+      /**
+       * Properties of a Liquidations.
+       * @memberof ununifi.nftmarket
+       * @interface ILiquidations
+       * @property {ununifi.nftmarket.ILiquidation|null} [liquidation] Liquidations liquidation
+       * @property {Array.<ununifi.nftmarket.ILiquidation>|null} [next_liquidation] Liquidations next_liquidation
+       */
+
+      /**
+       * Constructs a new Liquidations.
+       * @memberof ununifi.nftmarket
+       * @classdesc Represents a Liquidations.
+       * @implements ILiquidations
+       * @constructor
+       * @param {ununifi.nftmarket.ILiquidations=} [properties] Properties to set
+       */
+      function Liquidations(properties) {
+        this.next_liquidation = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Liquidations liquidation.
+       * @member {ununifi.nftmarket.ILiquidation|null|undefined} liquidation
+       * @memberof ununifi.nftmarket.Liquidations
+       * @instance
+       */
+      Liquidations.prototype.liquidation = null;
+
+      /**
+       * Liquidations next_liquidation.
+       * @member {Array.<ununifi.nftmarket.ILiquidation>} next_liquidation
+       * @memberof ununifi.nftmarket.Liquidations
+       * @instance
+       */
+      Liquidations.prototype.next_liquidation = $util.emptyArray;
+
+      /**
+       * Encodes the specified Liquidations message. Does not implicitly {@link ununifi.nftmarket.Liquidations.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.nftmarket.Liquidations
+       * @static
+       * @param {ununifi.nftmarket.ILiquidations} message Liquidations message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      Liquidations.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.liquidation != null && Object.hasOwnProperty.call(message, 'liquidation'))
+          $root.ununifi.nftmarket.Liquidation.encode(message.liquidation, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        if (message.next_liquidation != null && message.next_liquidation.length)
+          for (let i = 0; i < message.next_liquidation.length; ++i)
+            $root.ununifi.nftmarket.Liquidation.encode(
+              message.next_liquidation[i],
+              writer.uint32(/* id 2, wireType 2 =*/ 18).fork(),
+            ).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified Liquidations message, length delimited. Does not implicitly {@link ununifi.nftmarket.Liquidations.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.nftmarket.Liquidations
+       * @static
+       * @param {ununifi.nftmarket.ILiquidations} message Liquidations message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      Liquidations.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a Liquidations message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.nftmarket.Liquidations
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.nftmarket.Liquidations} Liquidations
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      Liquidations.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.nftmarket.Liquidations();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.liquidation = $root.ununifi.nftmarket.Liquidation.decode(reader, reader.uint32());
+              break;
+            case 2:
+              if (!(message.next_liquidation && message.next_liquidation.length)) message.next_liquidation = [];
+              message.next_liquidation.push($root.ununifi.nftmarket.Liquidation.decode(reader, reader.uint32()));
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a Liquidations message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.nftmarket.Liquidations
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.nftmarket.Liquidations} Liquidations
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      Liquidations.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a Liquidations message.
+       * @function verify
+       * @memberof ununifi.nftmarket.Liquidations
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      Liquidations.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.liquidation != null && message.hasOwnProperty('liquidation')) {
+          let error = $root.ununifi.nftmarket.Liquidation.verify(message.liquidation);
+          if (error) return 'liquidation.' + error;
+        }
+        if (message.next_liquidation != null && message.hasOwnProperty('next_liquidation')) {
+          if (!Array.isArray(message.next_liquidation)) return 'next_liquidation: array expected';
+          for (let i = 0; i < message.next_liquidation.length; ++i) {
+            let error = $root.ununifi.nftmarket.Liquidation.verify(message.next_liquidation[i]);
+            if (error) return 'next_liquidation.' + error;
+          }
+        }
+        return null;
+      };
+
+      /**
+       * Creates a Liquidations message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.nftmarket.Liquidations
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.nftmarket.Liquidations} Liquidations
+       */
+      Liquidations.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.nftmarket.Liquidations) return object;
+        let message = new $root.ununifi.nftmarket.Liquidations();
+        if (object.liquidation != null) {
+          if (typeof object.liquidation !== 'object') throw TypeError('.ununifi.nftmarket.Liquidations.liquidation: object expected');
+          message.liquidation = $root.ununifi.nftmarket.Liquidation.fromObject(object.liquidation);
+        }
+        if (object.next_liquidation) {
+          if (!Array.isArray(object.next_liquidation)) throw TypeError('.ununifi.nftmarket.Liquidations.next_liquidation: array expected');
+          message.next_liquidation = [];
+          for (let i = 0; i < object.next_liquidation.length; ++i) {
+            if (typeof object.next_liquidation[i] !== 'object')
+              throw TypeError('.ununifi.nftmarket.Liquidations.next_liquidation: object expected');
+            message.next_liquidation[i] = $root.ununifi.nftmarket.Liquidation.fromObject(object.next_liquidation[i]);
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a Liquidations message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.nftmarket.Liquidations
+       * @static
+       * @param {ununifi.nftmarket.Liquidations} message Liquidations
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      Liquidations.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) object.next_liquidation = [];
+        if (options.defaults) object.liquidation = null;
+        if (message.liquidation != null && message.hasOwnProperty('liquidation'))
+          object.liquidation = $root.ununifi.nftmarket.Liquidation.toObject(message.liquidation, options);
+        if (message.next_liquidation && message.next_liquidation.length) {
+          object.next_liquidation = [];
+          for (let j = 0; j < message.next_liquidation.length; ++j)
+            object.next_liquidation[j] = $root.ununifi.nftmarket.Liquidation.toObject(message.next_liquidation[j], options);
+        }
+        return object;
+      };
+
+      /**
+       * Converts this Liquidations to JSON.
+       * @function toJSON
+       * @memberof ununifi.nftmarket.Liquidations
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      Liquidations.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return Liquidations;
     })();
 
     nftmarket.Msg = (function () {

@@ -244,7 +244,31 @@ export interface BidderBids200ResponseBidsInner {
    * @type {CdpAll200ResponseCdpInnerCdpCollateral}
    * @memberof BidderBids200ResponseBidsInner
    */
-  amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  bid_amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+   * @memberof BidderBids200ResponseBidsInner
+   */
+  deposit_amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+   * @memberof BidderBids200ResponseBidsInner
+   */
+  paid_amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {string}
+   * @memberof BidderBids200ResponseBidsInner
+   */
+  bidding_period?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof BidderBids200ResponseBidsInner
+   */
+  deposit_lending_rate?: string;
   /**
    *
    * @type {boolean}
@@ -256,13 +280,25 @@ export interface BidderBids200ResponseBidsInner {
    * @type {string}
    * @memberof BidderBids200ResponseBidsInner
    */
-  paid_amount?: string;
+  bid_time?: string;
   /**
    *
-   * @type {string}
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
    * @memberof BidderBids200ResponseBidsInner
    */
-  bid_time?: string;
+  interest_amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {Array<ListerBorrowingBidderInfoInner>}
+   * @memberof BidderBids200ResponseBidsInner
+   */
+  borrowings?: Array<ListerBorrowingBidderInfoInner>;
+  /**
+   *
+   * @type {TodoRemoveNftIdBidderThenUseIt}
+   * @memberof BidderBids200ResponseBidsInner
+   */
+  id?: TodoRemoveNftIdBidderThenUseIt;
 }
 /**
  *
@@ -1037,6 +1073,57 @@ export interface IncentiveParamsDefaultResponseDetailsInner {
 /**
  *
  * @export
+ * @interface Liquidation200Response
+ */
+export interface Liquidation200Response {
+  /**
+   *
+   * @type {Liquidation200ResponseLiquidations}
+   * @memberof Liquidation200Response
+   */
+  liquidations?: Liquidation200ResponseLiquidations;
+}
+/**
+ *
+ * @export
+ * @interface Liquidation200ResponseLiquidations
+ */
+export interface Liquidation200ResponseLiquidations {
+  /**
+   *
+   * @type {Liquidation200ResponseLiquidationsLiquidation}
+   * @memberof Liquidation200ResponseLiquidations
+   */
+  liquidation?: Liquidation200ResponseLiquidationsLiquidation;
+  /**
+   *
+   * @type {Array<Liquidation200ResponseLiquidationsLiquidation>}
+   * @memberof Liquidation200ResponseLiquidations
+   */
+  next_liquidation?: Array<Liquidation200ResponseLiquidationsLiquidation>;
+}
+/**
+ *
+ * @export
+ * @interface Liquidation200ResponseLiquidationsLiquidation
+ */
+export interface Liquidation200ResponseLiquidationsLiquidation {
+  /**
+   *
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+   * @memberof Liquidation200ResponseLiquidationsLiquidation
+   */
+  amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {string}
+   * @memberof Liquidation200ResponseLiquidationsLiquidation
+   */
+  liquidation_date?: string;
+}
+/**
+ *
+ * @export
  * @interface ListedClass200Response
  */
 export interface ListedClass200Response {
@@ -1181,13 +1268,13 @@ export interface ListedNfts200ResponseListingsInner {
    * @type {string}
    * @memberof ListedNfts200ResponseListingsInner
    */
-  min_bid?: string;
+  minimum_deposit_rate?: string;
   /**
    *
-   * @type {string}
+   * @type {boolean}
    * @memberof ListedNfts200ResponseListingsInner
    */
-  bid_active_rank?: string;
+  automatic_refinancing?: boolean;
   /**
    *
    * @type {string}
@@ -1232,7 +1319,6 @@ export const ListedNfts200ResponseListingsInnerStateEnum = {
   Listing: 'LISTING',
   Bidding: 'BIDDING',
   SellingDecision: 'SELLING_DECISION',
-  Liquidation: 'LIQUIDATION',
   EndListing: 'END_LISTING',
   SuccessfulBid: 'SUCCESSFUL_BID',
 } as const;
@@ -1240,6 +1326,50 @@ export const ListedNfts200ResponseListingsInnerStateEnum = {
 export type ListedNfts200ResponseListingsInnerStateEnum =
   typeof ListedNfts200ResponseListingsInnerStateEnum[keyof typeof ListedNfts200ResponseListingsInnerStateEnum];
 
+/**
+ *
+ * @export
+ * @interface ListerBorrowingBidderInfoInner
+ */
+export interface ListerBorrowingBidderInfoInner {
+  /**
+   *
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+   * @memberof ListerBorrowingBidderInfoInner
+   */
+  amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+   * @memberof ListerBorrowingBidderInfoInner
+   */
+  paid_interest_amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {string}
+   * @memberof ListerBorrowingBidderInfoInner
+   */
+  start_at?: string;
+}
+/**
+ *
+ * @export
+ * @interface Loan200Response
+ */
+export interface Loan200Response {
+  /**
+   *
+   * @type {Loans200ResponseLoansInner}
+   * @memberof Loan200Response
+   */
+  loan?: Loans200ResponseLoansInner;
+  /**
+   *
+   * @type {string}
+   * @memberof Loan200Response
+   */
+  borrowing_limit?: string;
+}
 /**
  *
  * @export
@@ -1566,6 +1696,86 @@ export interface OracleAll200Response {
 /**
  *
  * @export
+ * @interface PaymentStatus200Response
+ */
+export interface PaymentStatus200Response {
+  /**
+   *
+   * @type {PaymentStatus200ResponsePaymentStatus}
+   * @memberof PaymentStatus200Response
+   */
+  paymentStatus?: PaymentStatus200ResponsePaymentStatus;
+}
+/**
+ *
+ * @export
+ * @interface PaymentStatus200ResponsePaymentStatus
+ */
+export interface PaymentStatus200ResponsePaymentStatus {
+  /**
+   *
+   * @type {BidderBids200ResponseBidsInnerNftId}
+   * @memberof PaymentStatus200ResponsePaymentStatus
+   */
+  nft_id?: BidderBids200ResponseBidsInnerNftId;
+  /**
+   *
+   * @type {string}
+   * @memberof PaymentStatus200ResponsePaymentStatus
+   */
+  bidder?: string;
+  /**
+   *
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+   * @memberof PaymentStatus200ResponsePaymentStatus
+   */
+  amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {boolean}
+   * @memberof PaymentStatus200ResponsePaymentStatus
+   */
+  automatic_payment?: boolean;
+  /**
+   *
+   * @type {string}
+   * @memberof PaymentStatus200ResponsePaymentStatus
+   */
+  paid_amount?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof PaymentStatus200ResponsePaymentStatus
+   */
+  bid_time?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof PaymentStatus200ResponsePaymentStatus
+   */
+  state?: PaymentStatus200ResponsePaymentStatusStateEnum;
+  /**
+   *
+   * @type {boolean}
+   * @memberof PaymentStatus200ResponsePaymentStatus
+   */
+  all_paid?: boolean;
+}
+
+export const PaymentStatus200ResponsePaymentStatusStateEnum = {
+  Listing: 'LISTING',
+  Bidding: 'BIDDING',
+  SellingDecision: 'SELLING_DECISION',
+  EndListing: 'END_LISTING',
+  SuccessfulBid: 'SUCCESSFUL_BID',
+} as const;
+
+export type PaymentStatus200ResponsePaymentStatusStateEnum =
+  typeof PaymentStatus200ResponsePaymentStatusStateEnum[keyof typeof PaymentStatus200ResponsePaymentStatusStateEnum];
+
+/**
+ *
+ * @export
  * @interface Price200Response
  */
 export interface Price200Response {
@@ -1702,6 +1912,25 @@ export interface Rewards200Response {
    * @memberof Rewards200Response
    */
   rewards?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+}
+/**
+ *
+ * @export
+ * @interface TodoRemoveNftIdBidderThenUseIt
+ */
+export interface TodoRemoveNftIdBidderThenUseIt {
+  /**
+   *
+   * @type {BidderBids200ResponseBidsInnerNftId}
+   * @memberof TodoRemoveNftIdBidderThenUseIt
+   */
+  nft_id?: BidderBids200ResponseBidsInnerNftId;
+  /**
+   *
+   * @type {string}
+   * @memberof TodoRemoveNftIdBidderThenUseIt
+   */
+  bidder?: string;
 }
 /**
  *
@@ -2241,6 +2470,88 @@ export interface UnunifiIncentiveRewardPeriod {
 /**
  *
  * @export
+ * @interface UnunifiNftmarketBidId
+ */
+export interface UnunifiNftmarketBidId {
+  /**
+   *
+   * @type {BidderBids200ResponseBidsInnerNftId}
+   * @memberof UnunifiNftmarketBidId
+   */
+  nft_id?: BidderBids200ResponseBidsInnerNftId;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiNftmarketBidId
+   */
+  bidder?: string;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiNftmarketBorrowing
+ */
+export interface UnunifiNftmarketBorrowing {
+  /**
+   *
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+   * @memberof UnunifiNftmarketBorrowing
+   */
+  amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+   * @memberof UnunifiNftmarketBorrowing
+   */
+  paid_interest_amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiNftmarketBorrowing
+   */
+  start_at?: string;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiNftmarketLiquidation
+ */
+export interface UnunifiNftmarketLiquidation {
+  /**
+   *
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+   * @memberof UnunifiNftmarketLiquidation
+   */
+  amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiNftmarketLiquidation
+   */
+  liquidation_date?: string;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiNftmarketLiquidations
+ */
+export interface UnunifiNftmarketLiquidations {
+  /**
+   *
+   * @type {Liquidation200ResponseLiquidationsLiquidation}
+   * @memberof UnunifiNftmarketLiquidations
+   */
+  liquidation?: Liquidation200ResponseLiquidationsLiquidation;
+  /**
+   *
+   * @type {Array<Liquidation200ResponseLiquidationsLiquidation>}
+   * @memberof UnunifiNftmarketLiquidations
+   */
+  next_liquidation?: Array<Liquidation200ResponseLiquidationsLiquidation>;
+}
+/**
+ *
+ * @export
  * @interface UnunifiNftmarketListedNft
  */
 export interface UnunifiNftmarketListedNft {
@@ -2273,7 +2584,6 @@ export const UnunifiNftmarketListingState = {
   Listing: 'LISTING',
   Bidding: 'BIDDING',
   SellingDecision: 'SELLING_DECISION',
-  Liquidation: 'LIQUIDATION',
   EndListing: 'END_LISTING',
   SuccessfulBid: 'SUCCESSFUL_BID',
 } as const;
@@ -2336,7 +2646,31 @@ export interface UnunifiNftmarketNftBid {
    * @type {CdpAll200ResponseCdpInnerCdpCollateral}
    * @memberof UnunifiNftmarketNftBid
    */
-  amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  bid_amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+   * @memberof UnunifiNftmarketNftBid
+   */
+  deposit_amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+   * @memberof UnunifiNftmarketNftBid
+   */
+  paid_amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiNftmarketNftBid
+   */
+  bidding_period?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiNftmarketNftBid
+   */
+  deposit_lending_rate?: string;
   /**
    *
    * @type {boolean}
@@ -2348,13 +2682,25 @@ export interface UnunifiNftmarketNftBid {
    * @type {string}
    * @memberof UnunifiNftmarketNftBid
    */
-  paid_amount?: string;
+  bid_time?: string;
   /**
    *
-   * @type {string}
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
    * @memberof UnunifiNftmarketNftBid
    */
-  bid_time?: string;
+  interest_amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {Array<ListerBorrowingBidderInfoInner>}
+   * @memberof UnunifiNftmarketNftBid
+   */
+  borrowings?: Array<ListerBorrowingBidderInfoInner>;
+  /**
+   *
+   * @type {TodoRemoveNftIdBidderThenUseIt}
+   * @memberof UnunifiNftmarketNftBid
+   */
+  id?: TodoRemoveNftIdBidderThenUseIt;
 }
 /**
  *
@@ -2416,13 +2762,13 @@ export interface UnunifiNftmarketNftListing {
    * @type {string}
    * @memberof UnunifiNftmarketNftListing
    */
-  min_bid?: string;
+  minimum_deposit_rate?: string;
   /**
    *
-   * @type {string}
+   * @type {boolean}
    * @memberof UnunifiNftmarketNftListing
    */
-  bid_active_rank?: string;
+  automatic_refinancing?: boolean;
   /**
    *
    * @type {string}
@@ -2467,7 +2813,6 @@ export const UnunifiNftmarketNftListingStateEnum = {
   Listing: 'LISTING',
   Bidding: 'BIDDING',
   SellingDecision: 'SELLING_DECISION',
-  Liquidation: 'LIQUIDATION',
   EndListing: 'END_LISTING',
   SuccessfulBid: 'SUCCESSFUL_BID',
 } as const;
@@ -2593,6 +2938,73 @@ export interface UnunifiNftmarketParams {
 /**
  *
  * @export
+ * @interface UnunifiNftmarketPaymentStatus
+ */
+export interface UnunifiNftmarketPaymentStatus {
+  /**
+   *
+   * @type {BidderBids200ResponseBidsInnerNftId}
+   * @memberof UnunifiNftmarketPaymentStatus
+   */
+  nft_id?: BidderBids200ResponseBidsInnerNftId;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiNftmarketPaymentStatus
+   */
+  bidder?: string;
+  /**
+   *
+   * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+   * @memberof UnunifiNftmarketPaymentStatus
+   */
+  amount?: CdpAll200ResponseCdpInnerCdpCollateral;
+  /**
+   *
+   * @type {boolean}
+   * @memberof UnunifiNftmarketPaymentStatus
+   */
+  automatic_payment?: boolean;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiNftmarketPaymentStatus
+   */
+  paid_amount?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiNftmarketPaymentStatus
+   */
+  bid_time?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiNftmarketPaymentStatus
+   */
+  state?: UnunifiNftmarketPaymentStatusStateEnum;
+  /**
+   *
+   * @type {boolean}
+   * @memberof UnunifiNftmarketPaymentStatus
+   */
+  all_paid?: boolean;
+}
+
+export const UnunifiNftmarketPaymentStatusStateEnum = {
+  Listing: 'LISTING',
+  Bidding: 'BIDDING',
+  SellingDecision: 'SELLING_DECISION',
+  EndListing: 'END_LISTING',
+  SuccessfulBid: 'SUCCESSFUL_BID',
+} as const;
+
+export type UnunifiNftmarketPaymentStatusStateEnum =
+  typeof UnunifiNftmarketPaymentStatusStateEnum[keyof typeof UnunifiNftmarketPaymentStatusStateEnum];
+
+/**
+ *
+ * @export
  * @interface UnunifiNftmarketQueryBidderBidsResponse
  */
 export interface UnunifiNftmarketQueryBidderBidsResponse {
@@ -2602,6 +3014,19 @@ export interface UnunifiNftmarketQueryBidderBidsResponse {
    * @memberof UnunifiNftmarketQueryBidderBidsResponse
    */
   bids?: Array<BidderBids200ResponseBidsInner>;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiNftmarketQueryLiquidationResponse
+ */
+export interface UnunifiNftmarketQueryLiquidationResponse {
+  /**
+   *
+   * @type {Liquidation200ResponseLiquidations}
+   * @memberof UnunifiNftmarketQueryLiquidationResponse
+   */
+  liquidations?: Liquidation200ResponseLiquidations;
 }
 /**
  *
@@ -2687,6 +3112,25 @@ export interface UnunifiNftmarketQueryListedNftsResponse {
 /**
  *
  * @export
+ * @interface UnunifiNftmarketQueryLoanResponse
+ */
+export interface UnunifiNftmarketQueryLoanResponse {
+  /**
+   *
+   * @type {Loans200ResponseLoansInner}
+   * @memberof UnunifiNftmarketQueryLoanResponse
+   */
+  loan?: Loans200ResponseLoansInner;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiNftmarketQueryLoanResponse
+   */
+  borrowing_limit?: string;
+}
+/**
+ *
+ * @export
  * @interface UnunifiNftmarketQueryLoansResponse
  */
 export interface UnunifiNftmarketQueryLoansResponse {
@@ -2735,6 +3179,19 @@ export interface UnunifiNftmarketQueryParamsResponse {
    * @memberof UnunifiNftmarketQueryParamsResponse
    */
   params?: NftmarketParams200ResponseParams;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiNftmarketQueryPaymentStatusResponse
+ */
+export interface UnunifiNftmarketQueryPaymentStatusResponse {
+  /**
+   *
+   * @type {PaymentStatus200ResponsePaymentStatus}
+   * @memberof UnunifiNftmarketQueryPaymentStatusResponse
+   */
+  paymentStatus?: PaymentStatus200ResponsePaymentStatus;
 }
 /**
  *
@@ -3793,6 +4250,41 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     /**
      *
      * @param {string} classId
+     * @param {string} nftId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    liquidation: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      // verify required parameter 'classId' is not null or undefined
+      assertParamExists('liquidation', 'classId', classId);
+      // verify required parameter 'nftId' is not null or undefined
+      assertParamExists('liquidation', 'nftId', nftId);
+      const localVarPath = `/ununifi/nftmarket/liquidation/{class_id}/{nft_id}`
+        .replace(`{${'class_id'}}`, encodeURIComponent(String(classId)))
+        .replace(`{${'nft_id'}}`, encodeURIComponent(String(nftId)));
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @param {string} classId
      * @param {number} nftLimit
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3859,11 +4351,51 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
+     * @param {string} [owner]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listedNfts: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+    listedNfts: async (owner?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       const localVarPath = `/ununifi/nftmarket/listed_nfts`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      if (owner !== undefined) {
+        localVarQueryParameter['owner'] = owner;
+      }
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @param {string} classId
+     * @param {string} nftId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    loan: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      // verify required parameter 'classId' is not null or undefined
+      assertParamExists('loan', 'classId', classId);
+      // verify required parameter 'nftId' is not null or undefined
+      assertParamExists('loan', 'nftId', nftId);
+      const localVarPath = `/ununifi/nftmarket/loans/{class_id}/{nft_id}`
+        .replace(`{${'class_id'}}`, encodeURIComponent(String(classId)))
+        .replace(`{${'nft_id'}}`, encodeURIComponent(String(nftId)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -4174,6 +4706,45 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
       if (paginationCountTotal !== undefined) {
         localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
       }
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @param {string} classId
+     * @param {string} nftId
+     * @param {string} bidder
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    paymentStatus: async (classId: string, nftId: string, bidder: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      // verify required parameter 'classId' is not null or undefined
+      assertParamExists('paymentStatus', 'classId', classId);
+      // verify required parameter 'nftId' is not null or undefined
+      assertParamExists('paymentStatus', 'nftId', nftId);
+      // verify required parameter 'bidder' is not null or undefined
+      assertParamExists('paymentStatus', 'bidder', bidder);
+      const localVarPath = `/ununifi/nftmarket/payment_status/{class_id}/{nft_id}/{bidder}`
+        .replace(`{${'class_id'}}`, encodeURIComponent(String(classId)))
+        .replace(`{${'nft_id'}}`, encodeURIComponent(String(nftId)))
+        .replace(`{${'bidder'}}`, encodeURIComponent(String(bidder)));
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
 
       setSearchParams(localVarUrlObj, localVarQueryParameter);
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4634,6 +5205,21 @@ export const QueryApiFp = function (configuration?: Configuration) {
     /**
      *
      * @param {string} classId
+     * @param {string} nftId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async liquidation(
+      classId: string,
+      nftId: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Liquidation200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.liquidation(classId, nftId, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @param {string} classId
      * @param {number} nftLimit
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4661,13 +5247,30 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
+     * @param {string} [owner]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async listedNfts(
+      owner?: string,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListedNfts200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.listedNfts(options);
+      const localVarAxiosArgs = await localVarAxiosParamCreator.listedNfts(owner, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @param {string} classId
+     * @param {string} nftId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async loan(
+      classId: string,
+      nftId: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Loan200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.loan(classId, nftId, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -4798,6 +5401,23 @@ export const QueryApiFp = function (configuration?: Configuration) {
         paginationCountTotal,
         options,
       );
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @param {string} classId
+     * @param {string} nftId
+     * @param {string} bidder
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async paymentStatus(
+      classId: string,
+      nftId: string,
+      bidder: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaymentStatus200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.paymentStatus(classId, nftId, bidder, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -5070,6 +5690,16 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     /**
      *
      * @param {string} classId
+     * @param {string} nftId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    liquidation(classId: string, nftId: string, options?: any): AxiosPromise<Liquidation200Response> {
+      return localVarFp.liquidation(classId, nftId, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @param {string} classId
      * @param {number} nftLimit
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5088,11 +5718,22 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
+     * @param {string} [owner]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listedNfts(options?: any): AxiosPromise<ListedNfts200Response> {
-      return localVarFp.listedNfts(options).then((request) => request(axios, basePath));
+    listedNfts(owner?: string, options?: any): AxiosPromise<ListedNfts200Response> {
+      return localVarFp.listedNfts(owner, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @param {string} classId
+     * @param {string} nftId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    loan(classId: string, nftId: string, options?: any): AxiosPromise<Loan200Response> {
+      return localVarFp.loan(classId, nftId, options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -5190,6 +5831,17 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
       return localVarFp
         .oracleAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options)
         .then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @param {string} classId
+     * @param {string} nftId
+     * @param {string} bidder
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    paymentStatus(classId: string, nftId: string, bidder: string, options?: any): AxiosPromise<PaymentStatus200Response> {
+      return localVarFp.paymentStatus(classId, nftId, bidder, options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -5492,6 +6144,20 @@ export class QueryApi extends BaseAPI {
   /**
    *
    * @param {string} classId
+   * @param {string} nftId
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public liquidation(classId: string, nftId: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .liquidation(classId, nftId, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @param {string} classId
    * @param {number} nftLimit
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
@@ -5518,13 +6184,28 @@ export class QueryApi extends BaseAPI {
 
   /**
    *
+   * @param {string} [owner]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public listedNfts(options?: AxiosRequestConfig) {
+  public listedNfts(owner?: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .listedNfts(options)
+      .listedNfts(owner, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @param {string} classId
+   * @param {string} nftId
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public loan(classId: string, nftId: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .loan(classId, nftId, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -5650,6 +6331,21 @@ export class QueryApi extends BaseAPI {
   ) {
     return QueryApiFp(this.configuration)
       .oracleAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @param {string} classId
+   * @param {string} nftId
+   * @param {string} bidder
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public paymentStatus(classId: string, nftId: string, bidder: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .paymentStatus(classId, nftId, bidder, options)
       .then((request) => request(this.axios, this.basePath));
   }
 

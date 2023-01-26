@@ -6143,6 +6143,20 @@ export namespace ununifi {
        * @returns Promise
        */
       public rewards(request: ununifi.nftmarket.IQueryRewardsRequest): Promise<ununifi.nftmarket.QueryRewardsResponse>;
+
+      /**
+       * Calls Liquidation.
+       * @param request QueryLiquidationRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryLiquidationResponse
+       */
+      public liquidation(request: ununifi.nftmarket.IQueryLiquidationRequest, callback: ununifi.nftmarket.Query.LiquidationCallback): void;
+
+      /**
+       * Calls Liquidation.
+       * @param request QueryLiquidationRequest message or plain object
+       * @returns Promise
+       */
+      public liquidation(request: ununifi.nftmarket.IQueryLiquidationRequest): Promise<ununifi.nftmarket.QueryLiquidationResponse>;
     }
 
     namespace Query {
@@ -6229,6 +6243,13 @@ export namespace ununifi {
        * @param [response] QueryRewardsResponse
        */
       type RewardsCallback = (error: Error | null, response?: ununifi.nftmarket.QueryRewardsResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.nftmarket.Query#liquidation}.
+       * @param error Error, if any
+       * @param [response] QueryLiquidationResponse
+       */
+      type LiquidationCallback = (error: Error | null, response?: ununifi.nftmarket.QueryLiquidationResponse) => void;
     }
 
     /** Properties of a QueryParamsRequest. */
@@ -8269,6 +8290,180 @@ export namespace ununifi {
 
       /**
        * Converts this QueryRewardsResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryLiquidationRequest. */
+    interface IQueryLiquidationRequest {
+      /** QueryLiquidationRequest class_id */
+      class_id?: string | null;
+
+      /** QueryLiquidationRequest nft_id */
+      nft_id?: string | null;
+    }
+
+    /** Represents a QueryLiquidationRequest. */
+    class QueryLiquidationRequest implements IQueryLiquidationRequest {
+      /**
+       * Constructs a new QueryLiquidationRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.nftmarket.IQueryLiquidationRequest);
+
+      /** QueryLiquidationRequest class_id. */
+      public class_id: string;
+
+      /** QueryLiquidationRequest nft_id. */
+      public nft_id: string;
+
+      /**
+       * Encodes the specified QueryLiquidationRequest message. Does not implicitly {@link ununifi.nftmarket.QueryLiquidationRequest.verify|verify} messages.
+       * @param message QueryLiquidationRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.nftmarket.IQueryLiquidationRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryLiquidationRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryLiquidationRequest.verify|verify} messages.
+       * @param message QueryLiquidationRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.nftmarket.IQueryLiquidationRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryLiquidationRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryLiquidationRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.nftmarket.QueryLiquidationRequest;
+
+      /**
+       * Decodes a QueryLiquidationRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryLiquidationRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.nftmarket.QueryLiquidationRequest;
+
+      /**
+       * Verifies a QueryLiquidationRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryLiquidationRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryLiquidationRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryLiquidationRequest;
+
+      /**
+       * Creates a plain object from a QueryLiquidationRequest message. Also converts values to other types if specified.
+       * @param message QueryLiquidationRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.nftmarket.QueryLiquidationRequest,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryLiquidationRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryLiquidationResponse. */
+    interface IQueryLiquidationResponse {
+      /** QueryLiquidationResponse liquidations */
+      liquidations?: ununifi.nftmarket.ILiquidations | null;
+    }
+
+    /** Represents a QueryLiquidationResponse. */
+    class QueryLiquidationResponse implements IQueryLiquidationResponse {
+      /**
+       * Constructs a new QueryLiquidationResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.nftmarket.IQueryLiquidationResponse);
+
+      /** QueryLiquidationResponse liquidations. */
+      public liquidations?: ununifi.nftmarket.ILiquidations | null;
+
+      /**
+       * Encodes the specified QueryLiquidationResponse message. Does not implicitly {@link ununifi.nftmarket.QueryLiquidationResponse.verify|verify} messages.
+       * @param message QueryLiquidationResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.nftmarket.IQueryLiquidationResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryLiquidationResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryLiquidationResponse.verify|verify} messages.
+       * @param message QueryLiquidationResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.nftmarket.IQueryLiquidationResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryLiquidationResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryLiquidationResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.nftmarket.QueryLiquidationResponse;
+
+      /**
+       * Decodes a QueryLiquidationResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryLiquidationResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.nftmarket.QueryLiquidationResponse;
+
+      /**
+       * Verifies a QueryLiquidationResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryLiquidationResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryLiquidationResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryLiquidationResponse;
+
+      /**
+       * Creates a plain object from a QueryLiquidationResponse message. Also converts values to other types if specified.
+       * @param message QueryLiquidationResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.nftmarket.QueryLiquidationResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryLiquidationResponse to JSON.
        * @returns JSON object
        */
       public toJSON(): { [k: string]: any };
@@ -10466,6 +10661,180 @@ export namespace ununifi {
 
       /**
        * Converts this PaymentStatus to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a Liquidation. */
+    interface ILiquidation {
+      /** Liquidation amount */
+      amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /** Liquidation liquidation_date */
+      liquidation_date?: google.protobuf.ITimestamp | null;
+    }
+
+    /** Represents a Liquidation. */
+    class Liquidation implements ILiquidation {
+      /**
+       * Constructs a new Liquidation.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.nftmarket.ILiquidation);
+
+      /** Liquidation amount. */
+      public amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /** Liquidation liquidation_date. */
+      public liquidation_date?: google.protobuf.ITimestamp | null;
+
+      /**
+       * Encodes the specified Liquidation message. Does not implicitly {@link ununifi.nftmarket.Liquidation.verify|verify} messages.
+       * @param message Liquidation message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.nftmarket.ILiquidation, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified Liquidation message, length delimited. Does not implicitly {@link ununifi.nftmarket.Liquidation.verify|verify} messages.
+       * @param message Liquidation message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.nftmarket.ILiquidation, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a Liquidation message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns Liquidation
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.nftmarket.Liquidation;
+
+      /**
+       * Decodes a Liquidation message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns Liquidation
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.nftmarket.Liquidation;
+
+      /**
+       * Verifies a Liquidation message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a Liquidation message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns Liquidation
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.Liquidation;
+
+      /**
+       * Creates a plain object from a Liquidation message. Also converts values to other types if specified.
+       * @param message Liquidation
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.nftmarket.Liquidation, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this Liquidation to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a Liquidations. */
+    interface ILiquidations {
+      /** Liquidations liquidation */
+      liquidation?: ununifi.nftmarket.ILiquidation | null;
+
+      /** Liquidations next_liquidation */
+      next_liquidation?: ununifi.nftmarket.ILiquidation[] | null;
+    }
+
+    /** Represents a Liquidations. */
+    class Liquidations implements ILiquidations {
+      /**
+       * Constructs a new Liquidations.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.nftmarket.ILiquidations);
+
+      /** Liquidations liquidation. */
+      public liquidation?: ununifi.nftmarket.ILiquidation | null;
+
+      /** Liquidations next_liquidation. */
+      public next_liquidation: ununifi.nftmarket.ILiquidation[];
+
+      /**
+       * Encodes the specified Liquidations message. Does not implicitly {@link ununifi.nftmarket.Liquidations.verify|verify} messages.
+       * @param message Liquidations message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.nftmarket.ILiquidations, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified Liquidations message, length delimited. Does not implicitly {@link ununifi.nftmarket.Liquidations.verify|verify} messages.
+       * @param message Liquidations message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.nftmarket.ILiquidations, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a Liquidations message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns Liquidations
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.nftmarket.Liquidations;
+
+      /**
+       * Decodes a Liquidations message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns Liquidations
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.nftmarket.Liquidations;
+
+      /**
+       * Verifies a Liquidations message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a Liquidations message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns Liquidations
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.Liquidations;
+
+      /**
+       * Creates a plain object from a Liquidations message. Also converts values to other types if specified.
+       * @param message Liquidations
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.nftmarket.Liquidations, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this Liquidations to JSON.
        * @returns JSON object
        */
       public toJSON(): { [k: string]: any };
