@@ -4538,6 +4538,2564 @@ export namespace ununifi {
     }
   }
 
+  /** Namespace derivatives. */
+  namespace derivatives {
+    /** Represents a Query */
+    class Query extends $protobuf.rpc.Service {
+      /**
+       * Constructs a new Query service.
+       * @param rpcImpl RPC implementation
+       * @param [requestDelimited=false] Whether requests are length-delimited
+       * @param [responseDelimited=false] Whether responses are length-delimited
+       */
+      constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+      /**
+       * Calls Params.
+       * @param request QueryParamsRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryParamsResponse
+       */
+      public params(request: ununifi.derivatives.IQueryParamsRequest, callback: ununifi.derivatives.Query.ParamsCallback): void;
+
+      /**
+       * Calls Params.
+       * @param request QueryParamsRequest message or plain object
+       * @returns Promise
+       */
+      public params(request: ununifi.derivatives.IQueryParamsRequest): Promise<ununifi.derivatives.QueryParamsResponse>;
+
+      /**
+       * Calls LiquidityProviderTokenRealAPY.
+       * @param request QueryLiquidityProviderTokenRealAPYRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryLiquidityProviderTokenRealAPYResponse
+       */
+      public liquidityProviderTokenRealAPY(
+        request: ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYRequest,
+        callback: ununifi.derivatives.Query.LiquidityProviderTokenRealAPYCallback,
+      ): void;
+
+      /**
+       * Calls LiquidityProviderTokenRealAPY.
+       * @param request QueryLiquidityProviderTokenRealAPYRequest message or plain object
+       * @returns Promise
+       */
+      public liquidityProviderTokenRealAPY(
+        request: ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYRequest,
+      ): Promise<ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse>;
+
+      /**
+       * Calls LiquidityProviderTokenNominalAPY.
+       * @param request QueryLiquidityProviderTokenNominalAPYRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryLiquidityProviderTokenNominalAPYResponse
+       */
+      public liquidityProviderTokenNominalAPY(
+        request: ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYRequest,
+        callback: ununifi.derivatives.Query.LiquidityProviderTokenNominalAPYCallback,
+      ): void;
+
+      /**
+       * Calls LiquidityProviderTokenNominalAPY.
+       * @param request QueryLiquidityProviderTokenNominalAPYRequest message or plain object
+       * @returns Promise
+       */
+      public liquidityProviderTokenNominalAPY(
+        request: ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYRequest,
+      ): Promise<ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse>;
+
+      /**
+       * Calls Positions.
+       * @param request QueryPositionsRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryPositionsResponse
+       */
+      public positions(request: ununifi.derivatives.IQueryPositionsRequest, callback: ununifi.derivatives.Query.PositionsCallback): void;
+
+      /**
+       * Calls Positions.
+       * @param request QueryPositionsRequest message or plain object
+       * @returns Promise
+       */
+      public positions(request: ununifi.derivatives.IQueryPositionsRequest): Promise<ununifi.derivatives.QueryPositionsResponse>;
+    }
+
+    namespace Query {
+      /**
+       * Callback as used by {@link ununifi.derivatives.Query#params}.
+       * @param error Error, if any
+       * @param [response] QueryParamsResponse
+       */
+      type ParamsCallback = (error: Error | null, response?: ununifi.derivatives.QueryParamsResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Query#liquidityProviderTokenRealAPY}.
+       * @param error Error, if any
+       * @param [response] QueryLiquidityProviderTokenRealAPYResponse
+       */
+      type LiquidityProviderTokenRealAPYCallback = (
+        error: Error | null,
+        response?: ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse,
+      ) => void;
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Query#liquidityProviderTokenNominalAPY}.
+       * @param error Error, if any
+       * @param [response] QueryLiquidityProviderTokenNominalAPYResponse
+       */
+      type LiquidityProviderTokenNominalAPYCallback = (
+        error: Error | null,
+        response?: ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse,
+      ) => void;
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Query#positions}.
+       * @param error Error, if any
+       * @param [response] QueryPositionsResponse
+       */
+      type PositionsCallback = (error: Error | null, response?: ununifi.derivatives.QueryPositionsResponse) => void;
+    }
+
+    /** Properties of a QueryParamsRequest. */
+    interface IQueryParamsRequest {}
+
+    /** Represents a QueryParamsRequest. */
+    class QueryParamsRequest implements IQueryParamsRequest {
+      /**
+       * Constructs a new QueryParamsRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IQueryParamsRequest);
+
+      /**
+       * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.derivatives.QueryParamsRequest.verify|verify} messages.
+       * @param message QueryParamsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryParamsRequest.verify|verify} messages.
+       * @param message QueryParamsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryParamsRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryParamsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.QueryParamsRequest;
+
+      /**
+       * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryParamsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.QueryParamsRequest;
+
+      /**
+       * Verifies a QueryParamsRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryParamsRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.QueryParamsRequest;
+
+      /**
+       * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
+       * @param message QueryParamsRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.derivatives.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryParamsRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryParamsResponse. */
+    interface IQueryParamsResponse {
+      /** QueryParamsResponse params */
+      params?: ununifi.derivatives.IParams | null;
+    }
+
+    /** Represents a QueryParamsResponse. */
+    class QueryParamsResponse implements IQueryParamsResponse {
+      /**
+       * Constructs a new QueryParamsResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IQueryParamsResponse);
+
+      /** QueryParamsResponse params. */
+      public params?: ununifi.derivatives.IParams | null;
+
+      /**
+       * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.derivatives.QueryParamsResponse.verify|verify} messages.
+       * @param message QueryParamsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryParamsResponse.verify|verify} messages.
+       * @param message QueryParamsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryParamsResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryParamsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.QueryParamsResponse;
+
+      /**
+       * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryParamsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.QueryParamsResponse;
+
+      /**
+       * Verifies a QueryParamsResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryParamsResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.QueryParamsResponse;
+
+      /**
+       * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
+       * @param message QueryParamsResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.QueryParamsResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryParamsResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryLiquidityProviderTokenRealAPYRequest. */
+    interface IQueryLiquidityProviderTokenRealAPYRequest {
+      /** QueryLiquidityProviderTokenRealAPYRequest before_height */
+      before_height?: Long | null;
+
+      /** QueryLiquidityProviderTokenRealAPYRequest after_height */
+      after_height?: Long | null;
+    }
+
+    /** Represents a QueryLiquidityProviderTokenRealAPYRequest. */
+    class QueryLiquidityProviderTokenRealAPYRequest implements IQueryLiquidityProviderTokenRealAPYRequest {
+      /**
+       * Constructs a new QueryLiquidityProviderTokenRealAPYRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYRequest);
+
+      /** QueryLiquidityProviderTokenRealAPYRequest before_height. */
+      public before_height: Long;
+
+      /** QueryLiquidityProviderTokenRealAPYRequest after_height. */
+      public after_height: Long;
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenRealAPYRequest message. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest.verify|verify} messages.
+       * @param message QueryLiquidityProviderTokenRealAPYRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(
+        message: ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYRequest,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenRealAPYRequest message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest.verify|verify} messages.
+       * @param message QueryLiquidityProviderTokenRealAPYRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYRequest,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenRealAPYRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryLiquidityProviderTokenRealAPYRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(
+        reader: $protobuf.Reader | Uint8Array,
+        length?: number,
+      ): ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest;
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenRealAPYRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryLiquidityProviderTokenRealAPYRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest;
+
+      /**
+       * Verifies a QueryLiquidityProviderTokenRealAPYRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryLiquidityProviderTokenRealAPYRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryLiquidityProviderTokenRealAPYRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest;
+
+      /**
+       * Creates a plain object from a QueryLiquidityProviderTokenRealAPYRequest message. Also converts values to other types if specified.
+       * @param message QueryLiquidityProviderTokenRealAPYRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryLiquidityProviderTokenRealAPYRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryLiquidityProviderTokenRealAPYResponse. */
+    interface IQueryLiquidityProviderTokenRealAPYResponse {
+      /** QueryLiquidityProviderTokenRealAPYResponse apy */
+      apy?: string | null;
+    }
+
+    /** Represents a QueryLiquidityProviderTokenRealAPYResponse. */
+    class QueryLiquidityProviderTokenRealAPYResponse implements IQueryLiquidityProviderTokenRealAPYResponse {
+      /**
+       * Constructs a new QueryLiquidityProviderTokenRealAPYResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYResponse);
+
+      /** QueryLiquidityProviderTokenRealAPYResponse apy. */
+      public apy: string;
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenRealAPYResponse message. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse.verify|verify} messages.
+       * @param message QueryLiquidityProviderTokenRealAPYResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(
+        message: ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenRealAPYResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse.verify|verify} messages.
+       * @param message QueryLiquidityProviderTokenRealAPYResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenRealAPYResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryLiquidityProviderTokenRealAPYResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(
+        reader: $protobuf.Reader | Uint8Array,
+        length?: number,
+      ): ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse;
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenRealAPYResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryLiquidityProviderTokenRealAPYResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse;
+
+      /**
+       * Verifies a QueryLiquidityProviderTokenRealAPYResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryLiquidityProviderTokenRealAPYResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryLiquidityProviderTokenRealAPYResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse;
+
+      /**
+       * Creates a plain object from a QueryLiquidityProviderTokenRealAPYResponse message. Also converts values to other types if specified.
+       * @param message QueryLiquidityProviderTokenRealAPYResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryLiquidityProviderTokenRealAPYResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryLiquidityProviderTokenNominalAPYRequest. */
+    interface IQueryLiquidityProviderTokenNominalAPYRequest {
+      /** QueryLiquidityProviderTokenNominalAPYRequest before_height */
+      before_height?: Long | null;
+
+      /** QueryLiquidityProviderTokenNominalAPYRequest after_height */
+      after_height?: Long | null;
+    }
+
+    /** Represents a QueryLiquidityProviderTokenNominalAPYRequest. */
+    class QueryLiquidityProviderTokenNominalAPYRequest implements IQueryLiquidityProviderTokenNominalAPYRequest {
+      /**
+       * Constructs a new QueryLiquidityProviderTokenNominalAPYRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYRequest);
+
+      /** QueryLiquidityProviderTokenNominalAPYRequest before_height. */
+      public before_height: Long;
+
+      /** QueryLiquidityProviderTokenNominalAPYRequest after_height. */
+      public after_height: Long;
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenNominalAPYRequest message. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest.verify|verify} messages.
+       * @param message QueryLiquidityProviderTokenNominalAPYRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(
+        message: ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYRequest,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenNominalAPYRequest message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest.verify|verify} messages.
+       * @param message QueryLiquidityProviderTokenNominalAPYRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYRequest,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenNominalAPYRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryLiquidityProviderTokenNominalAPYRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(
+        reader: $protobuf.Reader | Uint8Array,
+        length?: number,
+      ): ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest;
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenNominalAPYRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryLiquidityProviderTokenNominalAPYRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(
+        reader: $protobuf.Reader | Uint8Array,
+      ): ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest;
+
+      /**
+       * Verifies a QueryLiquidityProviderTokenNominalAPYRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryLiquidityProviderTokenNominalAPYRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryLiquidityProviderTokenNominalAPYRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest;
+
+      /**
+       * Creates a plain object from a QueryLiquidityProviderTokenNominalAPYRequest message. Also converts values to other types if specified.
+       * @param message QueryLiquidityProviderTokenNominalAPYRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryLiquidityProviderTokenNominalAPYRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryLiquidityProviderTokenNominalAPYResponse. */
+    interface IQueryLiquidityProviderTokenNominalAPYResponse {
+      /** QueryLiquidityProviderTokenNominalAPYResponse apy */
+      apy?: string | null;
+    }
+
+    /** Represents a QueryLiquidityProviderTokenNominalAPYResponse. */
+    class QueryLiquidityProviderTokenNominalAPYResponse implements IQueryLiquidityProviderTokenNominalAPYResponse {
+      /**
+       * Constructs a new QueryLiquidityProviderTokenNominalAPYResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYResponse);
+
+      /** QueryLiquidityProviderTokenNominalAPYResponse apy. */
+      public apy: string;
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenNominalAPYResponse message. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse.verify|verify} messages.
+       * @param message QueryLiquidityProviderTokenNominalAPYResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(
+        message: ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenNominalAPYResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse.verify|verify} messages.
+       * @param message QueryLiquidityProviderTokenNominalAPYResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenNominalAPYResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryLiquidityProviderTokenNominalAPYResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(
+        reader: $protobuf.Reader | Uint8Array,
+        length?: number,
+      ): ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse;
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenNominalAPYResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryLiquidityProviderTokenNominalAPYResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(
+        reader: $protobuf.Reader | Uint8Array,
+      ): ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse;
+
+      /**
+       * Verifies a QueryLiquidityProviderTokenNominalAPYResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryLiquidityProviderTokenNominalAPYResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryLiquidityProviderTokenNominalAPYResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse;
+
+      /**
+       * Creates a plain object from a QueryLiquidityProviderTokenNominalAPYResponse message. Also converts values to other types if specified.
+       * @param message QueryLiquidityProviderTokenNominalAPYResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryLiquidityProviderTokenNominalAPYResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryPositionsRequest. */
+    interface IQueryPositionsRequest {
+      /** QueryPositionsRequest address */
+      address?: string | null;
+    }
+
+    /** Represents a QueryPositionsRequest. */
+    class QueryPositionsRequest implements IQueryPositionsRequest {
+      /**
+       * Constructs a new QueryPositionsRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IQueryPositionsRequest);
+
+      /** QueryPositionsRequest address. */
+      public address: string;
+
+      /**
+       * Encodes the specified QueryPositionsRequest message. Does not implicitly {@link ununifi.derivatives.QueryPositionsRequest.verify|verify} messages.
+       * @param message QueryPositionsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IQueryPositionsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryPositionsRequest message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryPositionsRequest.verify|verify} messages.
+       * @param message QueryPositionsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IQueryPositionsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryPositionsRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryPositionsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.QueryPositionsRequest;
+
+      /**
+       * Decodes a QueryPositionsRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryPositionsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.QueryPositionsRequest;
+
+      /**
+       * Verifies a QueryPositionsRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryPositionsRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryPositionsRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.QueryPositionsRequest;
+
+      /**
+       * Creates a plain object from a QueryPositionsRequest message. Also converts values to other types if specified.
+       * @param message QueryPositionsRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.QueryPositionsRequest,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryPositionsRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryPositionsResponse. */
+    interface IQueryPositionsResponse {
+      /** QueryPositionsResponse positions */
+      positions?: ununifi.derivatives.IWrappedPosition[] | null;
+
+      /** QueryPositionsResponse pagination */
+      pagination?: cosmos.base.query.v1beta1.IPageResponse | null;
+    }
+
+    /** Represents a QueryPositionsResponse. */
+    class QueryPositionsResponse implements IQueryPositionsResponse {
+      /**
+       * Constructs a new QueryPositionsResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IQueryPositionsResponse);
+
+      /** QueryPositionsResponse positions. */
+      public positions: ununifi.derivatives.IWrappedPosition[];
+
+      /** QueryPositionsResponse pagination. */
+      public pagination?: cosmos.base.query.v1beta1.IPageResponse | null;
+
+      /**
+       * Encodes the specified QueryPositionsResponse message. Does not implicitly {@link ununifi.derivatives.QueryPositionsResponse.verify|verify} messages.
+       * @param message QueryPositionsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IQueryPositionsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryPositionsResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryPositionsResponse.verify|verify} messages.
+       * @param message QueryPositionsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IQueryPositionsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryPositionsResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryPositionsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.QueryPositionsResponse;
+
+      /**
+       * Decodes a QueryPositionsResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryPositionsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.QueryPositionsResponse;
+
+      /**
+       * Verifies a QueryPositionsResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryPositionsResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryPositionsResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.QueryPositionsResponse;
+
+      /**
+       * Creates a plain object from a QueryPositionsResponse message. Also converts values to other types if specified.
+       * @param message QueryPositionsResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.QueryPositionsResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryPositionsResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** AssetType enum. */
+    enum AssetType {
+      Real = 0,
+      Imaginary = 1,
+    }
+
+    /** PositionType enum. */
+    enum PositionType {
+      POSITION_UNKNOWN = 0,
+      LONG = 1,
+      SHORT = 2,
+    }
+
+    /** Properties of a WrappedPosition. */
+    interface IWrappedPosition {
+      /** WrappedPosition id */
+      id?: string | null;
+
+      /** WrappedPosition address */
+      address?: string | null;
+
+      /** WrappedPosition start_at */
+      start_at?: google.protobuf.ITimestamp | null;
+
+      /** WrappedPosition position */
+      position?: google.protobuf.IAny | null;
+    }
+
+    /** Represents a WrappedPosition. */
+    class WrappedPosition implements IWrappedPosition {
+      /**
+       * Constructs a new WrappedPosition.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IWrappedPosition);
+
+      /** WrappedPosition id. */
+      public id: string;
+
+      /** WrappedPosition address. */
+      public address: string;
+
+      /** WrappedPosition start_at. */
+      public start_at?: google.protobuf.ITimestamp | null;
+
+      /** WrappedPosition position. */
+      public position?: google.protobuf.IAny | null;
+
+      /**
+       * Encodes the specified WrappedPosition message. Does not implicitly {@link ununifi.derivatives.WrappedPosition.verify|verify} messages.
+       * @param message WrappedPosition message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IWrappedPosition, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified WrappedPosition message, length delimited. Does not implicitly {@link ununifi.derivatives.WrappedPosition.verify|verify} messages.
+       * @param message WrappedPosition message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IWrappedPosition, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a WrappedPosition message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns WrappedPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.WrappedPosition;
+
+      /**
+       * Decodes a WrappedPosition message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns WrappedPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.WrappedPosition;
+
+      /**
+       * Verifies a WrappedPosition message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a WrappedPosition message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns WrappedPosition
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.WrappedPosition;
+
+      /**
+       * Creates a plain object from a WrappedPosition message. Also converts values to other types if specified.
+       * @param message WrappedPosition
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.derivatives.WrappedPosition, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this WrappedPosition to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a Pool. */
+    interface IPool {
+      /** Pool accepted_assets */
+      accepted_assets?: ununifi.derivatives.Pool.IAsset[] | null;
+    }
+
+    /** Represents a Pool. */
+    class Pool implements IPool {
+      /**
+       * Constructs a new Pool.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IPool);
+
+      /** Pool accepted_assets. */
+      public accepted_assets: ununifi.derivatives.Pool.IAsset[];
+
+      /**
+       * Encodes the specified Pool message. Does not implicitly {@link ununifi.derivatives.Pool.verify|verify} messages.
+       * @param message Pool message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IPool, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified Pool message, length delimited. Does not implicitly {@link ununifi.derivatives.Pool.verify|verify} messages.
+       * @param message Pool message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IPool, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a Pool message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns Pool
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.Pool;
+
+      /**
+       * Decodes a Pool message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns Pool
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.Pool;
+
+      /**
+       * Verifies a Pool message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a Pool message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns Pool
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.Pool;
+
+      /**
+       * Creates a plain object from a Pool message. Also converts values to other types if specified.
+       * @param message Pool
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.derivatives.Pool, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this Pool to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    namespace Pool {
+      /** Properties of an Asset. */
+      interface IAsset {
+        /** Asset denom */
+        denom?: string | null;
+
+        /** Asset type */
+        type?: ununifi.derivatives.AssetType | null;
+
+        /** Asset target_weight */
+        target_weight?: string | null;
+      }
+
+      /** Represents an Asset. */
+      class Asset implements IAsset {
+        /**
+         * Constructs a new Asset.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: ununifi.derivatives.Pool.IAsset);
+
+        /** Asset denom. */
+        public denom: string;
+
+        /** Asset type. */
+        public type: ununifi.derivatives.AssetType;
+
+        /** Asset target_weight. */
+        public target_weight: string;
+
+        /**
+         * Encodes the specified Asset message. Does not implicitly {@link ununifi.derivatives.Pool.Asset.verify|verify} messages.
+         * @param message Asset message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: ununifi.derivatives.Pool.IAsset, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified Asset message, length delimited. Does not implicitly {@link ununifi.derivatives.Pool.Asset.verify|verify} messages.
+         * @param message Asset message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: ununifi.derivatives.Pool.IAsset, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes an Asset message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns Asset
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.Pool.Asset;
+
+        /**
+         * Decodes an Asset message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Asset
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.Pool.Asset;
+
+        /**
+         * Verifies an Asset message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): string | null;
+
+        /**
+         * Creates an Asset message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns Asset
+         */
+        public static fromObject(object: { [k: string]: any }): ununifi.derivatives.Pool.Asset;
+
+        /**
+         * Creates a plain object from an Asset message. Also converts values to other types if specified.
+         * @param message Asset
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: ununifi.derivatives.Pool.Asset, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this Asset to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+      }
+    }
+
+    /** Properties of a PoolMarketCap. */
+    interface IPoolMarketCap {
+      /** PoolMarketCap total */
+      total?: string | null;
+
+      /** PoolMarketCap quote_denom */
+      quote_denom?: string | null;
+
+      /** PoolMarketCap breakdown */
+      breakdown?: ununifi.derivatives.PoolMarketCap.IBreakdown[] | null;
+    }
+
+    /** Represents a PoolMarketCap. */
+    class PoolMarketCap implements IPoolMarketCap {
+      /**
+       * Constructs a new PoolMarketCap.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IPoolMarketCap);
+
+      /** PoolMarketCap total. */
+      public total: string;
+
+      /** PoolMarketCap quote_denom. */
+      public quote_denom: string;
+
+      /** PoolMarketCap breakdown. */
+      public breakdown: ununifi.derivatives.PoolMarketCap.IBreakdown[];
+
+      /**
+       * Encodes the specified PoolMarketCap message. Does not implicitly {@link ununifi.derivatives.PoolMarketCap.verify|verify} messages.
+       * @param message PoolMarketCap message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IPoolMarketCap, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified PoolMarketCap message, length delimited. Does not implicitly {@link ununifi.derivatives.PoolMarketCap.verify|verify} messages.
+       * @param message PoolMarketCap message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IPoolMarketCap, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a PoolMarketCap message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns PoolMarketCap
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.PoolMarketCap;
+
+      /**
+       * Decodes a PoolMarketCap message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns PoolMarketCap
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.PoolMarketCap;
+
+      /**
+       * Verifies a PoolMarketCap message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a PoolMarketCap message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns PoolMarketCap
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.PoolMarketCap;
+
+      /**
+       * Creates a plain object from a PoolMarketCap message. Also converts values to other types if specified.
+       * @param message PoolMarketCap
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.derivatives.PoolMarketCap, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this PoolMarketCap to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    namespace PoolMarketCap {
+      /** Properties of a Breakdown. */
+      interface IBreakdown {
+        /** Breakdown denom */
+        denom?: string | null;
+
+        /** Breakdown amount */
+        amount?: string | null;
+
+        /** Breakdown price */
+        price?: string | null;
+      }
+
+      /** Represents a Breakdown. */
+      class Breakdown implements IBreakdown {
+        /**
+         * Constructs a new Breakdown.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: ununifi.derivatives.PoolMarketCap.IBreakdown);
+
+        /** Breakdown denom. */
+        public denom: string;
+
+        /** Breakdown amount. */
+        public amount: string;
+
+        /** Breakdown price. */
+        public price: string;
+
+        /**
+         * Encodes the specified Breakdown message. Does not implicitly {@link ununifi.derivatives.PoolMarketCap.Breakdown.verify|verify} messages.
+         * @param message Breakdown message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: ununifi.derivatives.PoolMarketCap.IBreakdown, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified Breakdown message, length delimited. Does not implicitly {@link ununifi.derivatives.PoolMarketCap.Breakdown.verify|verify} messages.
+         * @param message Breakdown message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: ununifi.derivatives.PoolMarketCap.IBreakdown, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a Breakdown message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns Breakdown
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.PoolMarketCap.Breakdown;
+
+        /**
+         * Decodes a Breakdown message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns Breakdown
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.PoolMarketCap.Breakdown;
+
+        /**
+         * Verifies a Breakdown message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): string | null;
+
+        /**
+         * Creates a Breakdown message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns Breakdown
+         */
+        public static fromObject(object: { [k: string]: any }): ununifi.derivatives.PoolMarketCap.Breakdown;
+
+        /**
+         * Creates a plain object from a Breakdown message. Also converts values to other types if specified.
+         * @param message Breakdown
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(
+          message: ununifi.derivatives.PoolMarketCap.Breakdown,
+          options?: $protobuf.IConversionOptions,
+        ): { [k: string]: any };
+
+        /**
+         * Converts this Breakdown to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+      }
+    }
+
+    /** Properties of a Params. */
+    interface IParams {
+      /** Params pool */
+      pool?: ununifi.derivatives.IPool | null;
+
+      /** Params lpt_price_quote_denom */
+      lpt_price_quote_denom?: string | null;
+
+      /** Params base_lpt_mint_fee */
+      base_lpt_mint_fee?: string | null;
+
+      /** Params base_lpt_redeem_fee */
+      base_lpt_redeem_fee?: string | null;
+
+      /** Params borrowing_fee_rate_per_hour */
+      borrowing_fee_rate_per_hour?: string | null;
+
+      /** Params commission_rate */
+      commission_rate?: string | null;
+
+      /** Params margin_maintenance_rate */
+      margin_maintenance_rate?: string | null;
+
+      /** Params funding_rate_proportional_coefficient */
+      funding_rate_proportional_coefficient?: string | null;
+    }
+
+    /** Represents a Params. */
+    class Params implements IParams {
+      /**
+       * Constructs a new Params.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IParams);
+
+      /** Params pool. */
+      public pool?: ununifi.derivatives.IPool | null;
+
+      /** Params lpt_price_quote_denom. */
+      public lpt_price_quote_denom: string;
+
+      /** Params base_lpt_mint_fee. */
+      public base_lpt_mint_fee: string;
+
+      /** Params base_lpt_redeem_fee. */
+      public base_lpt_redeem_fee: string;
+
+      /** Params borrowing_fee_rate_per_hour. */
+      public borrowing_fee_rate_per_hour: string;
+
+      /** Params commission_rate. */
+      public commission_rate: string;
+
+      /** Params margin_maintenance_rate. */
+      public margin_maintenance_rate: string;
+
+      /** Params funding_rate_proportional_coefficient. */
+      public funding_rate_proportional_coefficient: string;
+
+      /**
+       * Encodes the specified Params message. Does not implicitly {@link ununifi.derivatives.Params.verify|verify} messages.
+       * @param message Params message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.derivatives.Params.verify|verify} messages.
+       * @param message Params message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a Params message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns Params
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.Params;
+
+      /**
+       * Decodes a Params message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns Params
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.Params;
+
+      /**
+       * Verifies a Params message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a Params message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns Params
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.Params;
+
+      /**
+       * Creates a plain object from a Params message. Also converts values to other types if specified.
+       * @param message Params
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.derivatives.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this Params to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** OptionType enum. */
+    enum OptionType {
+      OPTION_UNKNOWN = 0,
+      CALL = 1,
+      PUT = 2,
+    }
+
+    /** Properties of a PerpetualOptionsPosition. */
+    interface IPerpetualOptionsPosition {
+      /** PerpetualOptionsPosition option_type */
+      option_type?: ununifi.derivatives.OptionType | null;
+
+      /** PerpetualOptionsPosition position_type */
+      position_type?: ununifi.derivatives.PositionType | null;
+
+      /** PerpetualOptionsPosition denom */
+      denom?: string | null;
+
+      /** PerpetualOptionsPosition quote_denom */
+      quote_denom?: string | null;
+
+      /** PerpetualOptionsPosition strike_price */
+      strike_price?: string | null;
+
+      /** PerpetualOptionsPosition premium */
+      premium?: string | null;
+    }
+
+    /** Represents a PerpetualOptionsPosition. */
+    class PerpetualOptionsPosition implements IPerpetualOptionsPosition {
+      /**
+       * Constructs a new PerpetualOptionsPosition.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IPerpetualOptionsPosition);
+
+      /** PerpetualOptionsPosition option_type. */
+      public option_type: ununifi.derivatives.OptionType;
+
+      /** PerpetualOptionsPosition position_type. */
+      public position_type: ununifi.derivatives.PositionType;
+
+      /** PerpetualOptionsPosition denom. */
+      public denom: string;
+
+      /** PerpetualOptionsPosition quote_denom. */
+      public quote_denom: string;
+
+      /** PerpetualOptionsPosition strike_price. */
+      public strike_price: string;
+
+      /** PerpetualOptionsPosition premium. */
+      public premium: string;
+
+      /**
+       * Encodes the specified PerpetualOptionsPosition message. Does not implicitly {@link ununifi.derivatives.PerpetualOptionsPosition.verify|verify} messages.
+       * @param message PerpetualOptionsPosition message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IPerpetualOptionsPosition, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified PerpetualOptionsPosition message, length delimited. Does not implicitly {@link ununifi.derivatives.PerpetualOptionsPosition.verify|verify} messages.
+       * @param message PerpetualOptionsPosition message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IPerpetualOptionsPosition, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a PerpetualOptionsPosition message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns PerpetualOptionsPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.PerpetualOptionsPosition;
+
+      /**
+       * Decodes a PerpetualOptionsPosition message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns PerpetualOptionsPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.PerpetualOptionsPosition;
+
+      /**
+       * Verifies a PerpetualOptionsPosition message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a PerpetualOptionsPosition message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns PerpetualOptionsPosition
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.PerpetualOptionsPosition;
+
+      /**
+       * Creates a plain object from a PerpetualOptionsPosition message. Also converts values to other types if specified.
+       * @param message PerpetualOptionsPosition
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.PerpetualOptionsPosition,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this PerpetualOptionsPosition to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Represents a Msg */
+    class Msg extends $protobuf.rpc.Service {
+      /**
+       * Constructs a new Msg service.
+       * @param rpcImpl RPC implementation
+       * @param [requestDelimited=false] Whether requests are length-delimited
+       * @param [responseDelimited=false] Whether responses are length-delimited
+       */
+      constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+      /**
+       * Calls MintLiquidityProviderToken.
+       * @param request MsgMintLiquidityProviderToken message or plain object
+       * @param callback Node-style callback called with the error, if any, and MsgMintLiquidityProviderTokenResponse
+       */
+      public mintLiquidityProviderToken(
+        request: ununifi.derivatives.IMsgMintLiquidityProviderToken,
+        callback: ununifi.derivatives.Msg.MintLiquidityProviderTokenCallback,
+      ): void;
+
+      /**
+       * Calls MintLiquidityProviderToken.
+       * @param request MsgMintLiquidityProviderToken message or plain object
+       * @returns Promise
+       */
+      public mintLiquidityProviderToken(
+        request: ununifi.derivatives.IMsgMintLiquidityProviderToken,
+      ): Promise<ununifi.derivatives.MsgMintLiquidityProviderTokenResponse>;
+
+      /**
+       * Calls BurnLiquidityProviderToken.
+       * @param request MsgBurnLiquidityProviderToken message or plain object
+       * @param callback Node-style callback called with the error, if any, and MsgBurnLiquidityProviderTokenResponse
+       */
+      public burnLiquidityProviderToken(
+        request: ununifi.derivatives.IMsgBurnLiquidityProviderToken,
+        callback: ununifi.derivatives.Msg.BurnLiquidityProviderTokenCallback,
+      ): void;
+
+      /**
+       * Calls BurnLiquidityProviderToken.
+       * @param request MsgBurnLiquidityProviderToken message or plain object
+       * @returns Promise
+       */
+      public burnLiquidityProviderToken(
+        request: ununifi.derivatives.IMsgBurnLiquidityProviderToken,
+      ): Promise<ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse>;
+
+      /**
+       * Calls OpenPosition.
+       * @param request MsgOpenPosition message or plain object
+       * @param callback Node-style callback called with the error, if any, and MsgOpenPositionResponse
+       */
+      public openPosition(request: ununifi.derivatives.IMsgOpenPosition, callback: ununifi.derivatives.Msg.OpenPositionCallback): void;
+
+      /**
+       * Calls OpenPosition.
+       * @param request MsgOpenPosition message or plain object
+       * @returns Promise
+       */
+      public openPosition(request: ununifi.derivatives.IMsgOpenPosition): Promise<ununifi.derivatives.MsgOpenPositionResponse>;
+
+      /**
+       * Calls ClosePosition.
+       * @param request MsgClosePosition message or plain object
+       * @param callback Node-style callback called with the error, if any, and MsgClosePositionResponse
+       */
+      public closePosition(request: ununifi.derivatives.IMsgClosePosition, callback: ununifi.derivatives.Msg.ClosePositionCallback): void;
+
+      /**
+       * Calls ClosePosition.
+       * @param request MsgClosePosition message or plain object
+       * @returns Promise
+       */
+      public closePosition(request: ununifi.derivatives.IMsgClosePosition): Promise<ununifi.derivatives.MsgClosePositionResponse>;
+    }
+
+    namespace Msg {
+      /**
+       * Callback as used by {@link ununifi.derivatives.Msg#mintLiquidityProviderToken}.
+       * @param error Error, if any
+       * @param [response] MsgMintLiquidityProviderTokenResponse
+       */
+      type MintLiquidityProviderTokenCallback = (
+        error: Error | null,
+        response?: ununifi.derivatives.MsgMintLiquidityProviderTokenResponse,
+      ) => void;
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Msg#burnLiquidityProviderToken}.
+       * @param error Error, if any
+       * @param [response] MsgBurnLiquidityProviderTokenResponse
+       */
+      type BurnLiquidityProviderTokenCallback = (
+        error: Error | null,
+        response?: ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse,
+      ) => void;
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Msg#openPosition}.
+       * @param error Error, if any
+       * @param [response] MsgOpenPositionResponse
+       */
+      type OpenPositionCallback = (error: Error | null, response?: ununifi.derivatives.MsgOpenPositionResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Msg#closePosition}.
+       * @param error Error, if any
+       * @param [response] MsgClosePositionResponse
+       */
+      type ClosePositionCallback = (error: Error | null, response?: ununifi.derivatives.MsgClosePositionResponse) => void;
+    }
+
+    /** Properties of a MsgMintLiquidityProviderToken. */
+    interface IMsgMintLiquidityProviderToken {
+      /** MsgMintLiquidityProviderToken sender */
+      sender?: string | null;
+
+      /** MsgMintLiquidityProviderToken amount */
+      amount?: cosmos.base.v1beta1.ICoin | null;
+    }
+
+    /** Represents a MsgMintLiquidityProviderToken. */
+    class MsgMintLiquidityProviderToken implements IMsgMintLiquidityProviderToken {
+      /**
+       * Constructs a new MsgMintLiquidityProviderToken.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IMsgMintLiquidityProviderToken);
+
+      /** MsgMintLiquidityProviderToken sender. */
+      public sender: string;
+
+      /** MsgMintLiquidityProviderToken amount. */
+      public amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /**
+       * Encodes the specified MsgMintLiquidityProviderToken message. Does not implicitly {@link ununifi.derivatives.MsgMintLiquidityProviderToken.verify|verify} messages.
+       * @param message MsgMintLiquidityProviderToken message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IMsgMintLiquidityProviderToken, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgMintLiquidityProviderToken message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgMintLiquidityProviderToken.verify|verify} messages.
+       * @param message MsgMintLiquidityProviderToken message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.derivatives.IMsgMintLiquidityProviderToken,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgMintLiquidityProviderToken message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgMintLiquidityProviderToken
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.MsgMintLiquidityProviderToken;
+
+      /**
+       * Decodes a MsgMintLiquidityProviderToken message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgMintLiquidityProviderToken
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.MsgMintLiquidityProviderToken;
+
+      /**
+       * Verifies a MsgMintLiquidityProviderToken message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgMintLiquidityProviderToken message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgMintLiquidityProviderToken
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgMintLiquidityProviderToken;
+
+      /**
+       * Creates a plain object from a MsgMintLiquidityProviderToken message. Also converts values to other types if specified.
+       * @param message MsgMintLiquidityProviderToken
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.MsgMintLiquidityProviderToken,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this MsgMintLiquidityProviderToken to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgMintLiquidityProviderTokenResponse. */
+    interface IMsgMintLiquidityProviderTokenResponse {}
+
+    /** Represents a MsgMintLiquidityProviderTokenResponse. */
+    class MsgMintLiquidityProviderTokenResponse implements IMsgMintLiquidityProviderTokenResponse {
+      /**
+       * Constructs a new MsgMintLiquidityProviderTokenResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IMsgMintLiquidityProviderTokenResponse);
+
+      /**
+       * Encodes the specified MsgMintLiquidityProviderTokenResponse message. Does not implicitly {@link ununifi.derivatives.MsgMintLiquidityProviderTokenResponse.verify|verify} messages.
+       * @param message MsgMintLiquidityProviderTokenResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(
+        message: ununifi.derivatives.IMsgMintLiquidityProviderTokenResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgMintLiquidityProviderTokenResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgMintLiquidityProviderTokenResponse.verify|verify} messages.
+       * @param message MsgMintLiquidityProviderTokenResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.derivatives.IMsgMintLiquidityProviderTokenResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgMintLiquidityProviderTokenResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgMintLiquidityProviderTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(
+        reader: $protobuf.Reader | Uint8Array,
+        length?: number,
+      ): ununifi.derivatives.MsgMintLiquidityProviderTokenResponse;
+
+      /**
+       * Decodes a MsgMintLiquidityProviderTokenResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgMintLiquidityProviderTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.MsgMintLiquidityProviderTokenResponse;
+
+      /**
+       * Verifies a MsgMintLiquidityProviderTokenResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgMintLiquidityProviderTokenResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgMintLiquidityProviderTokenResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgMintLiquidityProviderTokenResponse;
+
+      /**
+       * Creates a plain object from a MsgMintLiquidityProviderTokenResponse message. Also converts values to other types if specified.
+       * @param message MsgMintLiquidityProviderTokenResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.MsgMintLiquidityProviderTokenResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this MsgMintLiquidityProviderTokenResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgBurnLiquidityProviderToken. */
+    interface IMsgBurnLiquidityProviderToken {
+      /** MsgBurnLiquidityProviderToken sender */
+      sender?: string | null;
+
+      /** MsgBurnLiquidityProviderToken amount */
+      amount?: string | null;
+    }
+
+    /** Represents a MsgBurnLiquidityProviderToken. */
+    class MsgBurnLiquidityProviderToken implements IMsgBurnLiquidityProviderToken {
+      /**
+       * Constructs a new MsgBurnLiquidityProviderToken.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IMsgBurnLiquidityProviderToken);
+
+      /** MsgBurnLiquidityProviderToken sender. */
+      public sender: string;
+
+      /** MsgBurnLiquidityProviderToken amount. */
+      public amount: string;
+
+      /**
+       * Encodes the specified MsgBurnLiquidityProviderToken message. Does not implicitly {@link ununifi.derivatives.MsgBurnLiquidityProviderToken.verify|verify} messages.
+       * @param message MsgBurnLiquidityProviderToken message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IMsgBurnLiquidityProviderToken, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgBurnLiquidityProviderToken message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgBurnLiquidityProviderToken.verify|verify} messages.
+       * @param message MsgBurnLiquidityProviderToken message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.derivatives.IMsgBurnLiquidityProviderToken,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgBurnLiquidityProviderToken message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgBurnLiquidityProviderToken
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.MsgBurnLiquidityProviderToken;
+
+      /**
+       * Decodes a MsgBurnLiquidityProviderToken message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgBurnLiquidityProviderToken
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.MsgBurnLiquidityProviderToken;
+
+      /**
+       * Verifies a MsgBurnLiquidityProviderToken message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgBurnLiquidityProviderToken message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgBurnLiquidityProviderToken
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgBurnLiquidityProviderToken;
+
+      /**
+       * Creates a plain object from a MsgBurnLiquidityProviderToken message. Also converts values to other types if specified.
+       * @param message MsgBurnLiquidityProviderToken
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.MsgBurnLiquidityProviderToken,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this MsgBurnLiquidityProviderToken to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgBurnLiquidityProviderTokenResponse. */
+    interface IMsgBurnLiquidityProviderTokenResponse {}
+
+    /** Represents a MsgBurnLiquidityProviderTokenResponse. */
+    class MsgBurnLiquidityProviderTokenResponse implements IMsgBurnLiquidityProviderTokenResponse {
+      /**
+       * Constructs a new MsgBurnLiquidityProviderTokenResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IMsgBurnLiquidityProviderTokenResponse);
+
+      /**
+       * Encodes the specified MsgBurnLiquidityProviderTokenResponse message. Does not implicitly {@link ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse.verify|verify} messages.
+       * @param message MsgBurnLiquidityProviderTokenResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(
+        message: ununifi.derivatives.IMsgBurnLiquidityProviderTokenResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgBurnLiquidityProviderTokenResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse.verify|verify} messages.
+       * @param message MsgBurnLiquidityProviderTokenResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.derivatives.IMsgBurnLiquidityProviderTokenResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgBurnLiquidityProviderTokenResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgBurnLiquidityProviderTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(
+        reader: $protobuf.Reader | Uint8Array,
+        length?: number,
+      ): ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse;
+
+      /**
+       * Decodes a MsgBurnLiquidityProviderTokenResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgBurnLiquidityProviderTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse;
+
+      /**
+       * Verifies a MsgBurnLiquidityProviderTokenResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgBurnLiquidityProviderTokenResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgBurnLiquidityProviderTokenResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse;
+
+      /**
+       * Creates a plain object from a MsgBurnLiquidityProviderTokenResponse message. Also converts values to other types if specified.
+       * @param message MsgBurnLiquidityProviderTokenResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this MsgBurnLiquidityProviderTokenResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgOpenPosition. */
+    interface IMsgOpenPosition {
+      /** MsgOpenPosition sender */
+      sender?: string | null;
+
+      /** MsgOpenPosition margin */
+      margin?: cosmos.base.v1beta1.ICoin | null;
+
+      /** MsgOpenPosition position */
+      position?: google.protobuf.IAny | null;
+    }
+
+    /** Represents a MsgOpenPosition. */
+    class MsgOpenPosition implements IMsgOpenPosition {
+      /**
+       * Constructs a new MsgOpenPosition.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IMsgOpenPosition);
+
+      /** MsgOpenPosition sender. */
+      public sender: string;
+
+      /** MsgOpenPosition margin. */
+      public margin?: cosmos.base.v1beta1.ICoin | null;
+
+      /** MsgOpenPosition position. */
+      public position?: google.protobuf.IAny | null;
+
+      /**
+       * Encodes the specified MsgOpenPosition message. Does not implicitly {@link ununifi.derivatives.MsgOpenPosition.verify|verify} messages.
+       * @param message MsgOpenPosition message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IMsgOpenPosition, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgOpenPosition message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgOpenPosition.verify|verify} messages.
+       * @param message MsgOpenPosition message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IMsgOpenPosition, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgOpenPosition message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgOpenPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.MsgOpenPosition;
+
+      /**
+       * Decodes a MsgOpenPosition message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgOpenPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.MsgOpenPosition;
+
+      /**
+       * Verifies a MsgOpenPosition message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgOpenPosition message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgOpenPosition
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgOpenPosition;
+
+      /**
+       * Creates a plain object from a MsgOpenPosition message. Also converts values to other types if specified.
+       * @param message MsgOpenPosition
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.derivatives.MsgOpenPosition, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this MsgOpenPosition to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgOpenPositionResponse. */
+    interface IMsgOpenPositionResponse {}
+
+    /** Represents a MsgOpenPositionResponse. */
+    class MsgOpenPositionResponse implements IMsgOpenPositionResponse {
+      /**
+       * Constructs a new MsgOpenPositionResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IMsgOpenPositionResponse);
+
+      /**
+       * Encodes the specified MsgOpenPositionResponse message. Does not implicitly {@link ununifi.derivatives.MsgOpenPositionResponse.verify|verify} messages.
+       * @param message MsgOpenPositionResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IMsgOpenPositionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgOpenPositionResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgOpenPositionResponse.verify|verify} messages.
+       * @param message MsgOpenPositionResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IMsgOpenPositionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgOpenPositionResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgOpenPositionResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.MsgOpenPositionResponse;
+
+      /**
+       * Decodes a MsgOpenPositionResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgOpenPositionResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.MsgOpenPositionResponse;
+
+      /**
+       * Verifies a MsgOpenPositionResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgOpenPositionResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgOpenPositionResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgOpenPositionResponse;
+
+      /**
+       * Creates a plain object from a MsgOpenPositionResponse message. Also converts values to other types if specified.
+       * @param message MsgOpenPositionResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.MsgOpenPositionResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this MsgOpenPositionResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgClosePosition. */
+    interface IMsgClosePosition {
+      /** MsgClosePosition sender */
+      sender?: string | null;
+
+      /** MsgClosePosition position_id */
+      position_id?: string | null;
+    }
+
+    /** Represents a MsgClosePosition. */
+    class MsgClosePosition implements IMsgClosePosition {
+      /**
+       * Constructs a new MsgClosePosition.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IMsgClosePosition);
+
+      /** MsgClosePosition sender. */
+      public sender: string;
+
+      /** MsgClosePosition position_id. */
+      public position_id: string;
+
+      /**
+       * Encodes the specified MsgClosePosition message. Does not implicitly {@link ununifi.derivatives.MsgClosePosition.verify|verify} messages.
+       * @param message MsgClosePosition message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IMsgClosePosition, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgClosePosition message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgClosePosition.verify|verify} messages.
+       * @param message MsgClosePosition message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IMsgClosePosition, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgClosePosition message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgClosePosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.MsgClosePosition;
+
+      /**
+       * Decodes a MsgClosePosition message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgClosePosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.MsgClosePosition;
+
+      /**
+       * Verifies a MsgClosePosition message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgClosePosition message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgClosePosition
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgClosePosition;
+
+      /**
+       * Creates a plain object from a MsgClosePosition message. Also converts values to other types if specified.
+       * @param message MsgClosePosition
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.derivatives.MsgClosePosition, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this MsgClosePosition to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgClosePositionResponse. */
+    interface IMsgClosePositionResponse {}
+
+    /** Represents a MsgClosePositionResponse. */
+    class MsgClosePositionResponse implements IMsgClosePositionResponse {
+      /**
+       * Constructs a new MsgClosePositionResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IMsgClosePositionResponse);
+
+      /**
+       * Encodes the specified MsgClosePositionResponse message. Does not implicitly {@link ununifi.derivatives.MsgClosePositionResponse.verify|verify} messages.
+       * @param message MsgClosePositionResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IMsgClosePositionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgClosePositionResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgClosePositionResponse.verify|verify} messages.
+       * @param message MsgClosePositionResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IMsgClosePositionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgClosePositionResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgClosePositionResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.MsgClosePositionResponse;
+
+      /**
+       * Decodes a MsgClosePositionResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgClosePositionResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.MsgClosePositionResponse;
+
+      /**
+       * Verifies a MsgClosePositionResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgClosePositionResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgClosePositionResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgClosePositionResponse;
+
+      /**
+       * Creates a plain object from a MsgClosePositionResponse message. Also converts values to other types if specified.
+       * @param message MsgClosePositionResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.MsgClosePositionResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this MsgClosePositionResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a PerpetualFuturesPosition. */
+    interface IPerpetualFuturesPosition {
+      /** PerpetualFuturesPosition position_type */
+      position_type?: ununifi.derivatives.PositionType | null;
+
+      /** PerpetualFuturesPosition denom */
+      denom?: string | null;
+
+      /** PerpetualFuturesPosition quote_denom */
+      quote_denom?: string | null;
+
+      /** PerpetualFuturesPosition size */
+      size?: string | null;
+
+      /** PerpetualFuturesPosition leverage */
+      leverage?: string | null;
+    }
+
+    /** Represents a PerpetualFuturesPosition. */
+    class PerpetualFuturesPosition implements IPerpetualFuturesPosition {
+      /**
+       * Constructs a new PerpetualFuturesPosition.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IPerpetualFuturesPosition);
+
+      /** PerpetualFuturesPosition position_type. */
+      public position_type: ununifi.derivatives.PositionType;
+
+      /** PerpetualFuturesPosition denom. */
+      public denom: string;
+
+      /** PerpetualFuturesPosition quote_denom. */
+      public quote_denom: string;
+
+      /** PerpetualFuturesPosition size. */
+      public size: string;
+
+      /** PerpetualFuturesPosition leverage. */
+      public leverage: string;
+
+      /**
+       * Encodes the specified PerpetualFuturesPosition message. Does not implicitly {@link ununifi.derivatives.PerpetualFuturesPosition.verify|verify} messages.
+       * @param message PerpetualFuturesPosition message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IPerpetualFuturesPosition, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified PerpetualFuturesPosition message, length delimited. Does not implicitly {@link ununifi.derivatives.PerpetualFuturesPosition.verify|verify} messages.
+       * @param message PerpetualFuturesPosition message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IPerpetualFuturesPosition, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a PerpetualFuturesPosition message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns PerpetualFuturesPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.PerpetualFuturesPosition;
+
+      /**
+       * Decodes a PerpetualFuturesPosition message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns PerpetualFuturesPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.PerpetualFuturesPosition;
+
+      /**
+       * Verifies a PerpetualFuturesPosition message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a PerpetualFuturesPosition message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns PerpetualFuturesPosition
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.PerpetualFuturesPosition;
+
+      /**
+       * Creates a plain object from a PerpetualFuturesPosition message. Also converts values to other types if specified.
+       * @param message PerpetualFuturesPosition
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.derivatives.PerpetualFuturesPosition,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this PerpetualFuturesPosition to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a GenesisState. */
+    interface IGenesisState {
+      /** GenesisState params */
+      params?: ununifi.derivatives.IParams | null;
+    }
+
+    /** Represents a GenesisState. */
+    class GenesisState implements IGenesisState {
+      /**
+       * Constructs a new GenesisState.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.derivatives.IGenesisState);
+
+      /** GenesisState params. */
+      public params?: ununifi.derivatives.IParams | null;
+
+      /**
+       * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.derivatives.GenesisState.verify|verify} messages.
+       * @param message GenesisState message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.derivatives.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.derivatives.GenesisState.verify|verify} messages.
+       * @param message GenesisState message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.derivatives.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a GenesisState message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns GenesisState
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.derivatives.GenesisState;
+
+      /**
+       * Decodes a GenesisState message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns GenesisState
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.derivatives.GenesisState;
+
+      /**
+       * Verifies a GenesisState message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a GenesisState message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns GenesisState
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.derivatives.GenesisState;
+
+      /**
+       * Creates a plain object from a GenesisState message. Also converts values to other types if specified.
+       * @param message GenesisState
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.derivatives.GenesisState, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this GenesisState to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+  }
+
   /** Namespace ecosystemincentive. */
   namespace ecosystemincentive {
     /** Represents a Query */
@@ -21029,10 +23587,100 @@ export namespace ununifi {
       public toJSON(): { [k: string]: any };
     }
 
+    /** Properties of a DenomPair. */
+    interface IDenomPair {
+      /** DenomPair internal_denom */
+      internal_denom?: string | null;
+
+      /** DenomPair market_denom */
+      market_denom?: string | null;
+    }
+
+    /** Represents a DenomPair. */
+    class DenomPair implements IDenomPair {
+      /**
+       * Constructs a new DenomPair.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.pricefeed.IDenomPair);
+
+      /** DenomPair internal_denom. */
+      public internal_denom: string;
+
+      /** DenomPair market_denom. */
+      public market_denom: string;
+
+      /**
+       * Encodes the specified DenomPair message. Does not implicitly {@link ununifi.pricefeed.DenomPair.verify|verify} messages.
+       * @param message DenomPair message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.pricefeed.IDenomPair, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified DenomPair message, length delimited. Does not implicitly {@link ununifi.pricefeed.DenomPair.verify|verify} messages.
+       * @param message DenomPair message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.pricefeed.IDenomPair, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a DenomPair message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns DenomPair
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.pricefeed.DenomPair;
+
+      /**
+       * Decodes a DenomPair message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns DenomPair
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.pricefeed.DenomPair;
+
+      /**
+       * Verifies a DenomPair message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a DenomPair message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns DenomPair
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.pricefeed.DenomPair;
+
+      /**
+       * Creates a plain object from a DenomPair message. Also converts values to other types if specified.
+       * @param message DenomPair
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.pricefeed.DenomPair, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this DenomPair to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
     /** Properties of a Params. */
     interface IParams {
       /** Params markets */
       markets?: ununifi.pricefeed.IMarket[] | null;
+
+      /** Params denom_pairs */
+      denom_pairs?: ununifi.pricefeed.IDenomPair[] | null;
     }
 
     /** Represents a Params. */
@@ -21045,6 +23693,9 @@ export namespace ununifi {
 
       /** Params markets. */
       public markets: ununifi.pricefeed.IMarket[];
+
+      /** Params denom_pairs. */
+      public denom_pairs: ununifi.pricefeed.IDenomPair[];
 
       /**
        * Encodes the specified Params message. Does not implicitly {@link ununifi.pricefeed.Params.verify|verify} messages.

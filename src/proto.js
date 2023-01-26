@@ -10272,6 +10272,5385 @@ export const ununifi = ($root.ununifi = (() => {
     return cdp;
   })();
 
+  ununifi.derivatives = (function () {
+    /**
+     * Namespace derivatives.
+     * @memberof ununifi
+     * @namespace
+     */
+    const derivatives = {};
+
+    derivatives.Query = (function () {
+      /**
+       * Constructs a new Query service.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a Query
+       * @extends $protobuf.rpc.Service
+       * @constructor
+       * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+       * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+       * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+       */
+      function Query(rpcImpl, requestDelimited, responseDelimited) {
+        $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+      }
+
+      (Query.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Query;
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Query#params}.
+       * @memberof ununifi.derivatives.Query
+       * @typedef ParamsCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.derivatives.QueryParamsResponse} [response] QueryParamsResponse
+       */
+
+      /**
+       * Calls Params.
+       * @function params
+       * @memberof ununifi.derivatives.Query
+       * @instance
+       * @param {ununifi.derivatives.IQueryParamsRequest} request QueryParamsRequest message or plain object
+       * @param {ununifi.derivatives.Query.ParamsCallback} callback Node-style callback called with the error, if any, and QueryParamsResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.params = function params(request, callback) {
+          return this.rpcCall(
+            params,
+            $root.ununifi.derivatives.QueryParamsRequest,
+            $root.ununifi.derivatives.QueryParamsResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'Params' },
+      );
+
+      /**
+       * Calls Params.
+       * @function params
+       * @memberof ununifi.derivatives.Query
+       * @instance
+       * @param {ununifi.derivatives.IQueryParamsRequest} request QueryParamsRequest message or plain object
+       * @returns {Promise<ununifi.derivatives.QueryParamsResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Query#liquidityProviderTokenRealAPY}.
+       * @memberof ununifi.derivatives.Query
+       * @typedef LiquidityProviderTokenRealAPYCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse} [response] QueryLiquidityProviderTokenRealAPYResponse
+       */
+
+      /**
+       * Calls LiquidityProviderTokenRealAPY.
+       * @function liquidityProviderTokenRealAPY
+       * @memberof ununifi.derivatives.Query
+       * @instance
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYRequest} request QueryLiquidityProviderTokenRealAPYRequest message or plain object
+       * @param {ununifi.derivatives.Query.LiquidityProviderTokenRealAPYCallback} callback Node-style callback called with the error, if any, and QueryLiquidityProviderTokenRealAPYResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.liquidityProviderTokenRealAPY = function liquidityProviderTokenRealAPY(request, callback) {
+          return this.rpcCall(
+            liquidityProviderTokenRealAPY,
+            $root.ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest,
+            $root.ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'LiquidityProviderTokenRealAPY' },
+      );
+
+      /**
+       * Calls LiquidityProviderTokenRealAPY.
+       * @function liquidityProviderTokenRealAPY
+       * @memberof ununifi.derivatives.Query
+       * @instance
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYRequest} request QueryLiquidityProviderTokenRealAPYRequest message or plain object
+       * @returns {Promise<ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Query#liquidityProviderTokenNominalAPY}.
+       * @memberof ununifi.derivatives.Query
+       * @typedef LiquidityProviderTokenNominalAPYCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse} [response] QueryLiquidityProviderTokenNominalAPYResponse
+       */
+
+      /**
+       * Calls LiquidityProviderTokenNominalAPY.
+       * @function liquidityProviderTokenNominalAPY
+       * @memberof ununifi.derivatives.Query
+       * @instance
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYRequest} request QueryLiquidityProviderTokenNominalAPYRequest message or plain object
+       * @param {ununifi.derivatives.Query.LiquidityProviderTokenNominalAPYCallback} callback Node-style callback called with the error, if any, and QueryLiquidityProviderTokenNominalAPYResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.liquidityProviderTokenNominalAPY = function liquidityProviderTokenNominalAPY(request, callback) {
+          return this.rpcCall(
+            liquidityProviderTokenNominalAPY,
+            $root.ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest,
+            $root.ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'LiquidityProviderTokenNominalAPY' },
+      );
+
+      /**
+       * Calls LiquidityProviderTokenNominalAPY.
+       * @function liquidityProviderTokenNominalAPY
+       * @memberof ununifi.derivatives.Query
+       * @instance
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYRequest} request QueryLiquidityProviderTokenNominalAPYRequest message or plain object
+       * @returns {Promise<ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Query#positions}.
+       * @memberof ununifi.derivatives.Query
+       * @typedef PositionsCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.derivatives.QueryPositionsResponse} [response] QueryPositionsResponse
+       */
+
+      /**
+       * Calls Positions.
+       * @function positions
+       * @memberof ununifi.derivatives.Query
+       * @instance
+       * @param {ununifi.derivatives.IQueryPositionsRequest} request QueryPositionsRequest message or plain object
+       * @param {ununifi.derivatives.Query.PositionsCallback} callback Node-style callback called with the error, if any, and QueryPositionsResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.positions = function positions(request, callback) {
+          return this.rpcCall(
+            positions,
+            $root.ununifi.derivatives.QueryPositionsRequest,
+            $root.ununifi.derivatives.QueryPositionsResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'Positions' },
+      );
+
+      /**
+       * Calls Positions.
+       * @function positions
+       * @memberof ununifi.derivatives.Query
+       * @instance
+       * @param {ununifi.derivatives.IQueryPositionsRequest} request QueryPositionsRequest message or plain object
+       * @returns {Promise<ununifi.derivatives.QueryPositionsResponse>} Promise
+       * @variation 2
+       */
+
+      return Query;
+    })();
+
+    derivatives.QueryParamsRequest = (function () {
+      /**
+       * Properties of a QueryParamsRequest.
+       * @memberof ununifi.derivatives
+       * @interface IQueryParamsRequest
+       */
+
+      /**
+       * Constructs a new QueryParamsRequest.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a QueryParamsRequest.
+       * @implements IQueryParamsRequest
+       * @constructor
+       * @param {ununifi.derivatives.IQueryParamsRequest=} [properties] Properties to set
+       */
+      function QueryParamsRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.derivatives.QueryParamsRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.QueryParamsRequest
+       * @static
+       * @param {ununifi.derivatives.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryParamsRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryParamsRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.QueryParamsRequest
+       * @static
+       * @param {ununifi.derivatives.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryParamsRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryParamsRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.QueryParamsRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.QueryParamsRequest} QueryParamsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryParamsRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.QueryParamsRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.QueryParamsRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.QueryParamsRequest} QueryParamsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryParamsRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryParamsRequest message.
+       * @function verify
+       * @memberof ununifi.derivatives.QueryParamsRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryParamsRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.QueryParamsRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.QueryParamsRequest} QueryParamsRequest
+       */
+      QueryParamsRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.QueryParamsRequest) return object;
+        return new $root.ununifi.derivatives.QueryParamsRequest();
+      };
+
+      /**
+       * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.QueryParamsRequest
+       * @static
+       * @param {ununifi.derivatives.QueryParamsRequest} message QueryParamsRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryParamsRequest.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this QueryParamsRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.QueryParamsRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryParamsRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryParamsRequest;
+    })();
+
+    derivatives.QueryParamsResponse = (function () {
+      /**
+       * Properties of a QueryParamsResponse.
+       * @memberof ununifi.derivatives
+       * @interface IQueryParamsResponse
+       * @property {ununifi.derivatives.IParams|null} [params] QueryParamsResponse params
+       */
+
+      /**
+       * Constructs a new QueryParamsResponse.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a QueryParamsResponse.
+       * @implements IQueryParamsResponse
+       * @constructor
+       * @param {ununifi.derivatives.IQueryParamsResponse=} [properties] Properties to set
+       */
+      function QueryParamsResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryParamsResponse params.
+       * @member {ununifi.derivatives.IParams|null|undefined} params
+       * @memberof ununifi.derivatives.QueryParamsResponse
+       * @instance
+       */
+      QueryParamsResponse.prototype.params = null;
+
+      /**
+       * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.derivatives.QueryParamsResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.QueryParamsResponse
+       * @static
+       * @param {ununifi.derivatives.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryParamsResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.params != null && Object.hasOwnProperty.call(message, 'params'))
+          $root.ununifi.derivatives.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryParamsResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.QueryParamsResponse
+       * @static
+       * @param {ununifi.derivatives.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryParamsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryParamsResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.QueryParamsResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.QueryParamsResponse} QueryParamsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryParamsResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.QueryParamsResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.params = $root.ununifi.derivatives.Params.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.QueryParamsResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.QueryParamsResponse} QueryParamsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryParamsResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryParamsResponse message.
+       * @function verify
+       * @memberof ununifi.derivatives.QueryParamsResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryParamsResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.params != null && message.hasOwnProperty('params')) {
+          let error = $root.ununifi.derivatives.Params.verify(message.params);
+          if (error) return 'params.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.QueryParamsResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.QueryParamsResponse} QueryParamsResponse
+       */
+      QueryParamsResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.QueryParamsResponse) return object;
+        let message = new $root.ununifi.derivatives.QueryParamsResponse();
+        if (object.params != null) {
+          if (typeof object.params !== 'object') throw TypeError('.ununifi.derivatives.QueryParamsResponse.params: object expected');
+          message.params = $root.ununifi.derivatives.Params.fromObject(object.params);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.QueryParamsResponse
+       * @static
+       * @param {ununifi.derivatives.QueryParamsResponse} message QueryParamsResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryParamsResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.params = null;
+        if (message.params != null && message.hasOwnProperty('params'))
+          object.params = $root.ununifi.derivatives.Params.toObject(message.params, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryParamsResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.QueryParamsResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryParamsResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryParamsResponse;
+    })();
+
+    derivatives.QueryLiquidityProviderTokenRealAPYRequest = (function () {
+      /**
+       * Properties of a QueryLiquidityProviderTokenRealAPYRequest.
+       * @memberof ununifi.derivatives
+       * @interface IQueryLiquidityProviderTokenRealAPYRequest
+       * @property {Long|null} [before_height] QueryLiquidityProviderTokenRealAPYRequest before_height
+       * @property {Long|null} [after_height] QueryLiquidityProviderTokenRealAPYRequest after_height
+       */
+
+      /**
+       * Constructs a new QueryLiquidityProviderTokenRealAPYRequest.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a QueryLiquidityProviderTokenRealAPYRequest.
+       * @implements IQueryLiquidityProviderTokenRealAPYRequest
+       * @constructor
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYRequest=} [properties] Properties to set
+       */
+      function QueryLiquidityProviderTokenRealAPYRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryLiquidityProviderTokenRealAPYRequest before_height.
+       * @member {Long} before_height
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest
+       * @instance
+       */
+      QueryLiquidityProviderTokenRealAPYRequest.prototype.before_height = $util.Long ? $util.Long.fromBits(0, 0, false) : 0;
+
+      /**
+       * QueryLiquidityProviderTokenRealAPYRequest after_height.
+       * @member {Long} after_height
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest
+       * @instance
+       */
+      QueryLiquidityProviderTokenRealAPYRequest.prototype.after_height = $util.Long ? $util.Long.fromBits(0, 0, false) : 0;
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenRealAPYRequest message. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest
+       * @static
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYRequest} message QueryLiquidityProviderTokenRealAPYRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryLiquidityProviderTokenRealAPYRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.before_height != null && Object.hasOwnProperty.call(message, 'before_height'))
+          writer.uint32(/* id 1, wireType 0 =*/ 8).int64(message.before_height);
+        if (message.after_height != null && Object.hasOwnProperty.call(message, 'after_height'))
+          writer.uint32(/* id 2, wireType 0 =*/ 16).int64(message.after_height);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenRealAPYRequest message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest
+       * @static
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYRequest} message QueryLiquidityProviderTokenRealAPYRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryLiquidityProviderTokenRealAPYRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenRealAPYRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest} QueryLiquidityProviderTokenRealAPYRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryLiquidityProviderTokenRealAPYRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.before_height = reader.int64();
+              break;
+            case 2:
+              message.after_height = reader.int64();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenRealAPYRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest} QueryLiquidityProviderTokenRealAPYRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryLiquidityProviderTokenRealAPYRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryLiquidityProviderTokenRealAPYRequest message.
+       * @function verify
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryLiquidityProviderTokenRealAPYRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.before_height != null && message.hasOwnProperty('before_height'))
+          if (
+            !$util.isInteger(message.before_height) &&
+            !(message.before_height && $util.isInteger(message.before_height.low) && $util.isInteger(message.before_height.high))
+          )
+            return 'before_height: integer|Long expected';
+        if (message.after_height != null && message.hasOwnProperty('after_height'))
+          if (
+            !$util.isInteger(message.after_height) &&
+            !(message.after_height && $util.isInteger(message.after_height.low) && $util.isInteger(message.after_height.high))
+          )
+            return 'after_height: integer|Long expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryLiquidityProviderTokenRealAPYRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest} QueryLiquidityProviderTokenRealAPYRequest
+       */
+      QueryLiquidityProviderTokenRealAPYRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest) return object;
+        let message = new $root.ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest();
+        if (object.before_height != null)
+          if ($util.Long) (message.before_height = $util.Long.fromValue(object.before_height)).unsigned = false;
+          else if (typeof object.before_height === 'string') message.before_height = parseInt(object.before_height, 10);
+          else if (typeof object.before_height === 'number') message.before_height = object.before_height;
+          else if (typeof object.before_height === 'object')
+            message.before_height = new $util.LongBits(object.before_height.low >>> 0, object.before_height.high >>> 0).toNumber();
+        if (object.after_height != null)
+          if ($util.Long) (message.after_height = $util.Long.fromValue(object.after_height)).unsigned = false;
+          else if (typeof object.after_height === 'string') message.after_height = parseInt(object.after_height, 10);
+          else if (typeof object.after_height === 'number') message.after_height = object.after_height;
+          else if (typeof object.after_height === 'object')
+            message.after_height = new $util.LongBits(object.after_height.low >>> 0, object.after_height.high >>> 0).toNumber();
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryLiquidityProviderTokenRealAPYRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest
+       * @static
+       * @param {ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest} message QueryLiquidityProviderTokenRealAPYRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryLiquidityProviderTokenRealAPYRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, false);
+            object.before_height = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.before_height = options.longs === String ? '0' : 0;
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, false);
+            object.after_height = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.after_height = options.longs === String ? '0' : 0;
+        }
+        if (message.before_height != null && message.hasOwnProperty('before_height'))
+          if (typeof message.before_height === 'number')
+            object.before_height = options.longs === String ? String(message.before_height) : message.before_height;
+          else
+            object.before_height =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.before_height)
+                : options.longs === Number
+                ? new $util.LongBits(message.before_height.low >>> 0, message.before_height.high >>> 0).toNumber()
+                : message.before_height;
+        if (message.after_height != null && message.hasOwnProperty('after_height'))
+          if (typeof message.after_height === 'number')
+            object.after_height = options.longs === String ? String(message.after_height) : message.after_height;
+          else
+            object.after_height =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.after_height)
+                : options.longs === Number
+                ? new $util.LongBits(message.after_height.low >>> 0, message.after_height.high >>> 0).toNumber()
+                : message.after_height;
+        return object;
+      };
+
+      /**
+       * Converts this QueryLiquidityProviderTokenRealAPYRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryLiquidityProviderTokenRealAPYRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryLiquidityProviderTokenRealAPYRequest;
+    })();
+
+    derivatives.QueryLiquidityProviderTokenRealAPYResponse = (function () {
+      /**
+       * Properties of a QueryLiquidityProviderTokenRealAPYResponse.
+       * @memberof ununifi.derivatives
+       * @interface IQueryLiquidityProviderTokenRealAPYResponse
+       * @property {string|null} [apy] QueryLiquidityProviderTokenRealAPYResponse apy
+       */
+
+      /**
+       * Constructs a new QueryLiquidityProviderTokenRealAPYResponse.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a QueryLiquidityProviderTokenRealAPYResponse.
+       * @implements IQueryLiquidityProviderTokenRealAPYResponse
+       * @constructor
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYResponse=} [properties] Properties to set
+       */
+      function QueryLiquidityProviderTokenRealAPYResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryLiquidityProviderTokenRealAPYResponse apy.
+       * @member {string} apy
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse
+       * @instance
+       */
+      QueryLiquidityProviderTokenRealAPYResponse.prototype.apy = '';
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenRealAPYResponse message. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse
+       * @static
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYResponse} message QueryLiquidityProviderTokenRealAPYResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryLiquidityProviderTokenRealAPYResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.apy != null && Object.hasOwnProperty.call(message, 'apy'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.apy);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenRealAPYResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse
+       * @static
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenRealAPYResponse} message QueryLiquidityProviderTokenRealAPYResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryLiquidityProviderTokenRealAPYResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenRealAPYResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse} QueryLiquidityProviderTokenRealAPYResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryLiquidityProviderTokenRealAPYResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.apy = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenRealAPYResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse} QueryLiquidityProviderTokenRealAPYResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryLiquidityProviderTokenRealAPYResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryLiquidityProviderTokenRealAPYResponse message.
+       * @function verify
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryLiquidityProviderTokenRealAPYResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.apy != null && message.hasOwnProperty('apy')) if (!$util.isString(message.apy)) return 'apy: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryLiquidityProviderTokenRealAPYResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse} QueryLiquidityProviderTokenRealAPYResponse
+       */
+      QueryLiquidityProviderTokenRealAPYResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse) return object;
+        let message = new $root.ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse();
+        if (object.apy != null) message.apy = String(object.apy);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryLiquidityProviderTokenRealAPYResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse
+       * @static
+       * @param {ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse} message QueryLiquidityProviderTokenRealAPYResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryLiquidityProviderTokenRealAPYResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.apy = '';
+        if (message.apy != null && message.hasOwnProperty('apy')) object.apy = message.apy;
+        return object;
+      };
+
+      /**
+       * Converts this QueryLiquidityProviderTokenRealAPYResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenRealAPYResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryLiquidityProviderTokenRealAPYResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryLiquidityProviderTokenRealAPYResponse;
+    })();
+
+    derivatives.QueryLiquidityProviderTokenNominalAPYRequest = (function () {
+      /**
+       * Properties of a QueryLiquidityProviderTokenNominalAPYRequest.
+       * @memberof ununifi.derivatives
+       * @interface IQueryLiquidityProviderTokenNominalAPYRequest
+       * @property {Long|null} [before_height] QueryLiquidityProviderTokenNominalAPYRequest before_height
+       * @property {Long|null} [after_height] QueryLiquidityProviderTokenNominalAPYRequest after_height
+       */
+
+      /**
+       * Constructs a new QueryLiquidityProviderTokenNominalAPYRequest.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a QueryLiquidityProviderTokenNominalAPYRequest.
+       * @implements IQueryLiquidityProviderTokenNominalAPYRequest
+       * @constructor
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYRequest=} [properties] Properties to set
+       */
+      function QueryLiquidityProviderTokenNominalAPYRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryLiquidityProviderTokenNominalAPYRequest before_height.
+       * @member {Long} before_height
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest
+       * @instance
+       */
+      QueryLiquidityProviderTokenNominalAPYRequest.prototype.before_height = $util.Long ? $util.Long.fromBits(0, 0, false) : 0;
+
+      /**
+       * QueryLiquidityProviderTokenNominalAPYRequest after_height.
+       * @member {Long} after_height
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest
+       * @instance
+       */
+      QueryLiquidityProviderTokenNominalAPYRequest.prototype.after_height = $util.Long ? $util.Long.fromBits(0, 0, false) : 0;
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenNominalAPYRequest message. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest
+       * @static
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYRequest} message QueryLiquidityProviderTokenNominalAPYRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryLiquidityProviderTokenNominalAPYRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.before_height != null && Object.hasOwnProperty.call(message, 'before_height'))
+          writer.uint32(/* id 1, wireType 0 =*/ 8).int64(message.before_height);
+        if (message.after_height != null && Object.hasOwnProperty.call(message, 'after_height'))
+          writer.uint32(/* id 2, wireType 0 =*/ 16).int64(message.after_height);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenNominalAPYRequest message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest
+       * @static
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYRequest} message QueryLiquidityProviderTokenNominalAPYRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryLiquidityProviderTokenNominalAPYRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenNominalAPYRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest} QueryLiquidityProviderTokenNominalAPYRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryLiquidityProviderTokenNominalAPYRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.before_height = reader.int64();
+              break;
+            case 2:
+              message.after_height = reader.int64();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenNominalAPYRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest} QueryLiquidityProviderTokenNominalAPYRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryLiquidityProviderTokenNominalAPYRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryLiquidityProviderTokenNominalAPYRequest message.
+       * @function verify
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryLiquidityProviderTokenNominalAPYRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.before_height != null && message.hasOwnProperty('before_height'))
+          if (
+            !$util.isInteger(message.before_height) &&
+            !(message.before_height && $util.isInteger(message.before_height.low) && $util.isInteger(message.before_height.high))
+          )
+            return 'before_height: integer|Long expected';
+        if (message.after_height != null && message.hasOwnProperty('after_height'))
+          if (
+            !$util.isInteger(message.after_height) &&
+            !(message.after_height && $util.isInteger(message.after_height.low) && $util.isInteger(message.after_height.high))
+          )
+            return 'after_height: integer|Long expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryLiquidityProviderTokenNominalAPYRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest} QueryLiquidityProviderTokenNominalAPYRequest
+       */
+      QueryLiquidityProviderTokenNominalAPYRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest) return object;
+        let message = new $root.ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest();
+        if (object.before_height != null)
+          if ($util.Long) (message.before_height = $util.Long.fromValue(object.before_height)).unsigned = false;
+          else if (typeof object.before_height === 'string') message.before_height = parseInt(object.before_height, 10);
+          else if (typeof object.before_height === 'number') message.before_height = object.before_height;
+          else if (typeof object.before_height === 'object')
+            message.before_height = new $util.LongBits(object.before_height.low >>> 0, object.before_height.high >>> 0).toNumber();
+        if (object.after_height != null)
+          if ($util.Long) (message.after_height = $util.Long.fromValue(object.after_height)).unsigned = false;
+          else if (typeof object.after_height === 'string') message.after_height = parseInt(object.after_height, 10);
+          else if (typeof object.after_height === 'number') message.after_height = object.after_height;
+          else if (typeof object.after_height === 'object')
+            message.after_height = new $util.LongBits(object.after_height.low >>> 0, object.after_height.high >>> 0).toNumber();
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryLiquidityProviderTokenNominalAPYRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest
+       * @static
+       * @param {ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest} message QueryLiquidityProviderTokenNominalAPYRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryLiquidityProviderTokenNominalAPYRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, false);
+            object.before_height = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.before_height = options.longs === String ? '0' : 0;
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, false);
+            object.after_height = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.after_height = options.longs === String ? '0' : 0;
+        }
+        if (message.before_height != null && message.hasOwnProperty('before_height'))
+          if (typeof message.before_height === 'number')
+            object.before_height = options.longs === String ? String(message.before_height) : message.before_height;
+          else
+            object.before_height =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.before_height)
+                : options.longs === Number
+                ? new $util.LongBits(message.before_height.low >>> 0, message.before_height.high >>> 0).toNumber()
+                : message.before_height;
+        if (message.after_height != null && message.hasOwnProperty('after_height'))
+          if (typeof message.after_height === 'number')
+            object.after_height = options.longs === String ? String(message.after_height) : message.after_height;
+          else
+            object.after_height =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.after_height)
+                : options.longs === Number
+                ? new $util.LongBits(message.after_height.low >>> 0, message.after_height.high >>> 0).toNumber()
+                : message.after_height;
+        return object;
+      };
+
+      /**
+       * Converts this QueryLiquidityProviderTokenNominalAPYRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryLiquidityProviderTokenNominalAPYRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryLiquidityProviderTokenNominalAPYRequest;
+    })();
+
+    derivatives.QueryLiquidityProviderTokenNominalAPYResponse = (function () {
+      /**
+       * Properties of a QueryLiquidityProviderTokenNominalAPYResponse.
+       * @memberof ununifi.derivatives
+       * @interface IQueryLiquidityProviderTokenNominalAPYResponse
+       * @property {string|null} [apy] QueryLiquidityProviderTokenNominalAPYResponse apy
+       */
+
+      /**
+       * Constructs a new QueryLiquidityProviderTokenNominalAPYResponse.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a QueryLiquidityProviderTokenNominalAPYResponse.
+       * @implements IQueryLiquidityProviderTokenNominalAPYResponse
+       * @constructor
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYResponse=} [properties] Properties to set
+       */
+      function QueryLiquidityProviderTokenNominalAPYResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryLiquidityProviderTokenNominalAPYResponse apy.
+       * @member {string} apy
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse
+       * @instance
+       */
+      QueryLiquidityProviderTokenNominalAPYResponse.prototype.apy = '';
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenNominalAPYResponse message. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse
+       * @static
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYResponse} message QueryLiquidityProviderTokenNominalAPYResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryLiquidityProviderTokenNominalAPYResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.apy != null && Object.hasOwnProperty.call(message, 'apy'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.apy);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryLiquidityProviderTokenNominalAPYResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse
+       * @static
+       * @param {ununifi.derivatives.IQueryLiquidityProviderTokenNominalAPYResponse} message QueryLiquidityProviderTokenNominalAPYResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryLiquidityProviderTokenNominalAPYResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenNominalAPYResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse} QueryLiquidityProviderTokenNominalAPYResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryLiquidityProviderTokenNominalAPYResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.apy = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryLiquidityProviderTokenNominalAPYResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse} QueryLiquidityProviderTokenNominalAPYResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryLiquidityProviderTokenNominalAPYResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryLiquidityProviderTokenNominalAPYResponse message.
+       * @function verify
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryLiquidityProviderTokenNominalAPYResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.apy != null && message.hasOwnProperty('apy')) if (!$util.isString(message.apy)) return 'apy: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryLiquidityProviderTokenNominalAPYResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse} QueryLiquidityProviderTokenNominalAPYResponse
+       */
+      QueryLiquidityProviderTokenNominalAPYResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse) return object;
+        let message = new $root.ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse();
+        if (object.apy != null) message.apy = String(object.apy);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryLiquidityProviderTokenNominalAPYResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse
+       * @static
+       * @param {ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse} message QueryLiquidityProviderTokenNominalAPYResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryLiquidityProviderTokenNominalAPYResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.apy = '';
+        if (message.apy != null && message.hasOwnProperty('apy')) object.apy = message.apy;
+        return object;
+      };
+
+      /**
+       * Converts this QueryLiquidityProviderTokenNominalAPYResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.QueryLiquidityProviderTokenNominalAPYResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryLiquidityProviderTokenNominalAPYResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryLiquidityProviderTokenNominalAPYResponse;
+    })();
+
+    derivatives.QueryPositionsRequest = (function () {
+      /**
+       * Properties of a QueryPositionsRequest.
+       * @memberof ununifi.derivatives
+       * @interface IQueryPositionsRequest
+       * @property {string|null} [address] QueryPositionsRequest address
+       */
+
+      /**
+       * Constructs a new QueryPositionsRequest.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a QueryPositionsRequest.
+       * @implements IQueryPositionsRequest
+       * @constructor
+       * @param {ununifi.derivatives.IQueryPositionsRequest=} [properties] Properties to set
+       */
+      function QueryPositionsRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryPositionsRequest address.
+       * @member {string} address
+       * @memberof ununifi.derivatives.QueryPositionsRequest
+       * @instance
+       */
+      QueryPositionsRequest.prototype.address = '';
+
+      /**
+       * Encodes the specified QueryPositionsRequest message. Does not implicitly {@link ununifi.derivatives.QueryPositionsRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.QueryPositionsRequest
+       * @static
+       * @param {ununifi.derivatives.IQueryPositionsRequest} message QueryPositionsRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryPositionsRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.address != null && Object.hasOwnProperty.call(message, 'address'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.address);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryPositionsRequest message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryPositionsRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.QueryPositionsRequest
+       * @static
+       * @param {ununifi.derivatives.IQueryPositionsRequest} message QueryPositionsRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryPositionsRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryPositionsRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.QueryPositionsRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.QueryPositionsRequest} QueryPositionsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryPositionsRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.QueryPositionsRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.address = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryPositionsRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.QueryPositionsRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.QueryPositionsRequest} QueryPositionsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryPositionsRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryPositionsRequest message.
+       * @function verify
+       * @memberof ununifi.derivatives.QueryPositionsRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryPositionsRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.address != null && message.hasOwnProperty('address'))
+          if (!$util.isString(message.address)) return 'address: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryPositionsRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.QueryPositionsRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.QueryPositionsRequest} QueryPositionsRequest
+       */
+      QueryPositionsRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.QueryPositionsRequest) return object;
+        let message = new $root.ununifi.derivatives.QueryPositionsRequest();
+        if (object.address != null) message.address = String(object.address);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryPositionsRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.QueryPositionsRequest
+       * @static
+       * @param {ununifi.derivatives.QueryPositionsRequest} message QueryPositionsRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryPositionsRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.address = '';
+        if (message.address != null && message.hasOwnProperty('address')) object.address = message.address;
+        return object;
+      };
+
+      /**
+       * Converts this QueryPositionsRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.QueryPositionsRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryPositionsRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryPositionsRequest;
+    })();
+
+    derivatives.QueryPositionsResponse = (function () {
+      /**
+       * Properties of a QueryPositionsResponse.
+       * @memberof ununifi.derivatives
+       * @interface IQueryPositionsResponse
+       * @property {Array.<ununifi.derivatives.IWrappedPosition>|null} [positions] QueryPositionsResponse positions
+       * @property {cosmos.base.query.v1beta1.IPageResponse|null} [pagination] QueryPositionsResponse pagination
+       */
+
+      /**
+       * Constructs a new QueryPositionsResponse.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a QueryPositionsResponse.
+       * @implements IQueryPositionsResponse
+       * @constructor
+       * @param {ununifi.derivatives.IQueryPositionsResponse=} [properties] Properties to set
+       */
+      function QueryPositionsResponse(properties) {
+        this.positions = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryPositionsResponse positions.
+       * @member {Array.<ununifi.derivatives.IWrappedPosition>} positions
+       * @memberof ununifi.derivatives.QueryPositionsResponse
+       * @instance
+       */
+      QueryPositionsResponse.prototype.positions = $util.emptyArray;
+
+      /**
+       * QueryPositionsResponse pagination.
+       * @member {cosmos.base.query.v1beta1.IPageResponse|null|undefined} pagination
+       * @memberof ununifi.derivatives.QueryPositionsResponse
+       * @instance
+       */
+      QueryPositionsResponse.prototype.pagination = null;
+
+      /**
+       * Encodes the specified QueryPositionsResponse message. Does not implicitly {@link ununifi.derivatives.QueryPositionsResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.QueryPositionsResponse
+       * @static
+       * @param {ununifi.derivatives.IQueryPositionsResponse} message QueryPositionsResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryPositionsResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.positions != null && message.positions.length)
+          for (let i = 0; i < message.positions.length; ++i)
+            $root.ununifi.derivatives.WrappedPosition.encode(
+              message.positions[i],
+              writer.uint32(/* id 1, wireType 2 =*/ 10).fork(),
+            ).ldelim();
+        if (message.pagination != null && Object.hasOwnProperty.call(message, 'pagination'))
+          $root.cosmos.base.query.v1beta1.PageResponse.encode(
+            message.pagination,
+            writer.uint32(/* id 2, wireType 2 =*/ 18).fork(),
+          ).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryPositionsResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryPositionsResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.QueryPositionsResponse
+       * @static
+       * @param {ununifi.derivatives.IQueryPositionsResponse} message QueryPositionsResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryPositionsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryPositionsResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.QueryPositionsResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.QueryPositionsResponse} QueryPositionsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryPositionsResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.QueryPositionsResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              if (!(message.positions && message.positions.length)) message.positions = [];
+              message.positions.push($root.ununifi.derivatives.WrappedPosition.decode(reader, reader.uint32()));
+              break;
+            case 2:
+              message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryPositionsResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.QueryPositionsResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.QueryPositionsResponse} QueryPositionsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryPositionsResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryPositionsResponse message.
+       * @function verify
+       * @memberof ununifi.derivatives.QueryPositionsResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryPositionsResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.positions != null && message.hasOwnProperty('positions')) {
+          if (!Array.isArray(message.positions)) return 'positions: array expected';
+          for (let i = 0; i < message.positions.length; ++i) {
+            let error = $root.ununifi.derivatives.WrappedPosition.verify(message.positions[i]);
+            if (error) return 'positions.' + error;
+          }
+        }
+        if (message.pagination != null && message.hasOwnProperty('pagination')) {
+          let error = $root.cosmos.base.query.v1beta1.PageResponse.verify(message.pagination);
+          if (error) return 'pagination.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryPositionsResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.QueryPositionsResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.QueryPositionsResponse} QueryPositionsResponse
+       */
+      QueryPositionsResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.QueryPositionsResponse) return object;
+        let message = new $root.ununifi.derivatives.QueryPositionsResponse();
+        if (object.positions) {
+          if (!Array.isArray(object.positions)) throw TypeError('.ununifi.derivatives.QueryPositionsResponse.positions: array expected');
+          message.positions = [];
+          for (let i = 0; i < object.positions.length; ++i) {
+            if (typeof object.positions[i] !== 'object')
+              throw TypeError('.ununifi.derivatives.QueryPositionsResponse.positions: object expected');
+            message.positions[i] = $root.ununifi.derivatives.WrappedPosition.fromObject(object.positions[i]);
+          }
+        }
+        if (object.pagination != null) {
+          if (typeof object.pagination !== 'object')
+            throw TypeError('.ununifi.derivatives.QueryPositionsResponse.pagination: object expected');
+          message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.fromObject(object.pagination);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryPositionsResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.QueryPositionsResponse
+       * @static
+       * @param {ununifi.derivatives.QueryPositionsResponse} message QueryPositionsResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryPositionsResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) object.positions = [];
+        if (options.defaults) object.pagination = null;
+        if (message.positions && message.positions.length) {
+          object.positions = [];
+          for (let j = 0; j < message.positions.length; ++j)
+            object.positions[j] = $root.ununifi.derivatives.WrappedPosition.toObject(message.positions[j], options);
+        }
+        if (message.pagination != null && message.hasOwnProperty('pagination'))
+          object.pagination = $root.cosmos.base.query.v1beta1.PageResponse.toObject(message.pagination, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryPositionsResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.QueryPositionsResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryPositionsResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryPositionsResponse;
+    })();
+
+    /**
+     * AssetType enum.
+     * @name ununifi.derivatives.AssetType
+     * @enum {number}
+     * @property {number} Real=0 Real value
+     * @property {number} Imaginary=1 Imaginary value
+     */
+    derivatives.AssetType = (function () {
+      const valuesById = {},
+        values = Object.create(valuesById);
+      values[(valuesById[0] = 'Real')] = 0;
+      values[(valuesById[1] = 'Imaginary')] = 1;
+      return values;
+    })();
+
+    /**
+     * PositionType enum.
+     * @name ununifi.derivatives.PositionType
+     * @enum {number}
+     * @property {number} POSITION_UNKNOWN=0 POSITION_UNKNOWN value
+     * @property {number} LONG=1 LONG value
+     * @property {number} SHORT=2 SHORT value
+     */
+    derivatives.PositionType = (function () {
+      const valuesById = {},
+        values = Object.create(valuesById);
+      values[(valuesById[0] = 'POSITION_UNKNOWN')] = 0;
+      values[(valuesById[1] = 'LONG')] = 1;
+      values[(valuesById[2] = 'SHORT')] = 2;
+      return values;
+    })();
+
+    derivatives.WrappedPosition = (function () {
+      /**
+       * Properties of a WrappedPosition.
+       * @memberof ununifi.derivatives
+       * @interface IWrappedPosition
+       * @property {string|null} [id] WrappedPosition id
+       * @property {string|null} [address] WrappedPosition address
+       * @property {google.protobuf.ITimestamp|null} [start_at] WrappedPosition start_at
+       * @property {google.protobuf.IAny|null} [position] WrappedPosition position
+       */
+
+      /**
+       * Constructs a new WrappedPosition.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a WrappedPosition.
+       * @implements IWrappedPosition
+       * @constructor
+       * @param {ununifi.derivatives.IWrappedPosition=} [properties] Properties to set
+       */
+      function WrappedPosition(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * WrappedPosition id.
+       * @member {string} id
+       * @memberof ununifi.derivatives.WrappedPosition
+       * @instance
+       */
+      WrappedPosition.prototype.id = '';
+
+      /**
+       * WrappedPosition address.
+       * @member {string} address
+       * @memberof ununifi.derivatives.WrappedPosition
+       * @instance
+       */
+      WrappedPosition.prototype.address = '';
+
+      /**
+       * WrappedPosition start_at.
+       * @member {google.protobuf.ITimestamp|null|undefined} start_at
+       * @memberof ununifi.derivatives.WrappedPosition
+       * @instance
+       */
+      WrappedPosition.prototype.start_at = null;
+
+      /**
+       * WrappedPosition position.
+       * @member {google.protobuf.IAny|null|undefined} position
+       * @memberof ununifi.derivatives.WrappedPosition
+       * @instance
+       */
+      WrappedPosition.prototype.position = null;
+
+      /**
+       * Encodes the specified WrappedPosition message. Does not implicitly {@link ununifi.derivatives.WrappedPosition.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.WrappedPosition
+       * @static
+       * @param {ununifi.derivatives.IWrappedPosition} message WrappedPosition message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      WrappedPosition.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.id != null && Object.hasOwnProperty.call(message, 'id')) writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.id);
+        if (message.address != null && Object.hasOwnProperty.call(message, 'address'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.address);
+        if (message.start_at != null && Object.hasOwnProperty.call(message, 'start_at'))
+          $root.google.protobuf.Timestamp.encode(message.start_at, writer.uint32(/* id 3, wireType 2 =*/ 26).fork()).ldelim();
+        if (message.position != null && Object.hasOwnProperty.call(message, 'position'))
+          $root.google.protobuf.Any.encode(message.position, writer.uint32(/* id 5, wireType 2 =*/ 42).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified WrappedPosition message, length delimited. Does not implicitly {@link ununifi.derivatives.WrappedPosition.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.WrappedPosition
+       * @static
+       * @param {ununifi.derivatives.IWrappedPosition} message WrappedPosition message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      WrappedPosition.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a WrappedPosition message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.WrappedPosition
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.WrappedPosition} WrappedPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      WrappedPosition.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.WrappedPosition();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.id = reader.string();
+              break;
+            case 2:
+              message.address = reader.string();
+              break;
+            case 3:
+              message.start_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+              break;
+            case 5:
+              message.position = $root.google.protobuf.Any.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a WrappedPosition message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.WrappedPosition
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.WrappedPosition} WrappedPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      WrappedPosition.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a WrappedPosition message.
+       * @function verify
+       * @memberof ununifi.derivatives.WrappedPosition
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      WrappedPosition.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.id != null && message.hasOwnProperty('id')) if (!$util.isString(message.id)) return 'id: string expected';
+        if (message.address != null && message.hasOwnProperty('address'))
+          if (!$util.isString(message.address)) return 'address: string expected';
+        if (message.start_at != null && message.hasOwnProperty('start_at')) {
+          let error = $root.google.protobuf.Timestamp.verify(message.start_at);
+          if (error) return 'start_at.' + error;
+        }
+        if (message.position != null && message.hasOwnProperty('position')) {
+          let error = $root.google.protobuf.Any.verify(message.position);
+          if (error) return 'position.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a WrappedPosition message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.WrappedPosition
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.WrappedPosition} WrappedPosition
+       */
+      WrappedPosition.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.WrappedPosition) return object;
+        let message = new $root.ununifi.derivatives.WrappedPosition();
+        if (object.id != null) message.id = String(object.id);
+        if (object.address != null) message.address = String(object.address);
+        if (object.start_at != null) {
+          if (typeof object.start_at !== 'object') throw TypeError('.ununifi.derivatives.WrappedPosition.start_at: object expected');
+          message.start_at = $root.google.protobuf.Timestamp.fromObject(object.start_at);
+        }
+        if (object.position != null) {
+          if (typeof object.position !== 'object') throw TypeError('.ununifi.derivatives.WrappedPosition.position: object expected');
+          message.position = $root.google.protobuf.Any.fromObject(object.position);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a WrappedPosition message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.WrappedPosition
+       * @static
+       * @param {ununifi.derivatives.WrappedPosition} message WrappedPosition
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      WrappedPosition.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.id = '';
+          object.address = '';
+          object.start_at = null;
+          object.position = null;
+        }
+        if (message.id != null && message.hasOwnProperty('id')) object.id = message.id;
+        if (message.address != null && message.hasOwnProperty('address')) object.address = message.address;
+        if (message.start_at != null && message.hasOwnProperty('start_at'))
+          object.start_at = $root.google.protobuf.Timestamp.toObject(message.start_at, options);
+        if (message.position != null && message.hasOwnProperty('position'))
+          object.position = $root.google.protobuf.Any.toObject(message.position, options);
+        return object;
+      };
+
+      /**
+       * Converts this WrappedPosition to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.WrappedPosition
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      WrappedPosition.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return WrappedPosition;
+    })();
+
+    derivatives.Pool = (function () {
+      /**
+       * Properties of a Pool.
+       * @memberof ununifi.derivatives
+       * @interface IPool
+       * @property {Array.<ununifi.derivatives.Pool.IAsset>|null} [accepted_assets] Pool accepted_assets
+       */
+
+      /**
+       * Constructs a new Pool.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a Pool.
+       * @implements IPool
+       * @constructor
+       * @param {ununifi.derivatives.IPool=} [properties] Properties to set
+       */
+      function Pool(properties) {
+        this.accepted_assets = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Pool accepted_assets.
+       * @member {Array.<ununifi.derivatives.Pool.IAsset>} accepted_assets
+       * @memberof ununifi.derivatives.Pool
+       * @instance
+       */
+      Pool.prototype.accepted_assets = $util.emptyArray;
+
+      /**
+       * Encodes the specified Pool message. Does not implicitly {@link ununifi.derivatives.Pool.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.Pool
+       * @static
+       * @param {ununifi.derivatives.IPool} message Pool message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      Pool.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.accepted_assets != null && message.accepted_assets.length)
+          for (let i = 0; i < message.accepted_assets.length; ++i)
+            $root.ununifi.derivatives.Pool.Asset.encode(
+              message.accepted_assets[i],
+              writer.uint32(/* id 1, wireType 2 =*/ 10).fork(),
+            ).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified Pool message, length delimited. Does not implicitly {@link ununifi.derivatives.Pool.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.Pool
+       * @static
+       * @param {ununifi.derivatives.IPool} message Pool message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      Pool.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a Pool message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.Pool
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.Pool} Pool
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      Pool.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.Pool();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              if (!(message.accepted_assets && message.accepted_assets.length)) message.accepted_assets = [];
+              message.accepted_assets.push($root.ununifi.derivatives.Pool.Asset.decode(reader, reader.uint32()));
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a Pool message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.Pool
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.Pool} Pool
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      Pool.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a Pool message.
+       * @function verify
+       * @memberof ununifi.derivatives.Pool
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      Pool.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.accepted_assets != null && message.hasOwnProperty('accepted_assets')) {
+          if (!Array.isArray(message.accepted_assets)) return 'accepted_assets: array expected';
+          for (let i = 0; i < message.accepted_assets.length; ++i) {
+            let error = $root.ununifi.derivatives.Pool.Asset.verify(message.accepted_assets[i]);
+            if (error) return 'accepted_assets.' + error;
+          }
+        }
+        return null;
+      };
+
+      /**
+       * Creates a Pool message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.Pool
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.Pool} Pool
+       */
+      Pool.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.Pool) return object;
+        let message = new $root.ununifi.derivatives.Pool();
+        if (object.accepted_assets) {
+          if (!Array.isArray(object.accepted_assets)) throw TypeError('.ununifi.derivatives.Pool.accepted_assets: array expected');
+          message.accepted_assets = [];
+          for (let i = 0; i < object.accepted_assets.length; ++i) {
+            if (typeof object.accepted_assets[i] !== 'object')
+              throw TypeError('.ununifi.derivatives.Pool.accepted_assets: object expected');
+            message.accepted_assets[i] = $root.ununifi.derivatives.Pool.Asset.fromObject(object.accepted_assets[i]);
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a Pool message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.Pool
+       * @static
+       * @param {ununifi.derivatives.Pool} message Pool
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      Pool.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) object.accepted_assets = [];
+        if (message.accepted_assets && message.accepted_assets.length) {
+          object.accepted_assets = [];
+          for (let j = 0; j < message.accepted_assets.length; ++j)
+            object.accepted_assets[j] = $root.ununifi.derivatives.Pool.Asset.toObject(message.accepted_assets[j], options);
+        }
+        return object;
+      };
+
+      /**
+       * Converts this Pool to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.Pool
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      Pool.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      Pool.Asset = (function () {
+        /**
+         * Properties of an Asset.
+         * @memberof ununifi.derivatives.Pool
+         * @interface IAsset
+         * @property {string|null} [denom] Asset denom
+         * @property {ununifi.derivatives.AssetType|null} [type] Asset type
+         * @property {string|null} [target_weight] Asset target_weight
+         */
+
+        /**
+         * Constructs a new Asset.
+         * @memberof ununifi.derivatives.Pool
+         * @classdesc Represents an Asset.
+         * @implements IAsset
+         * @constructor
+         * @param {ununifi.derivatives.Pool.IAsset=} [properties] Properties to set
+         */
+        function Asset(properties) {
+          if (properties)
+            for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+              if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * Asset denom.
+         * @member {string} denom
+         * @memberof ununifi.derivatives.Pool.Asset
+         * @instance
+         */
+        Asset.prototype.denom = '';
+
+        /**
+         * Asset type.
+         * @member {ununifi.derivatives.AssetType} type
+         * @memberof ununifi.derivatives.Pool.Asset
+         * @instance
+         */
+        Asset.prototype.type = 0;
+
+        /**
+         * Asset target_weight.
+         * @member {string} target_weight
+         * @memberof ununifi.derivatives.Pool.Asset
+         * @instance
+         */
+        Asset.prototype.target_weight = '';
+
+        /**
+         * Encodes the specified Asset message. Does not implicitly {@link ununifi.derivatives.Pool.Asset.verify|verify} messages.
+         * @function encode
+         * @memberof ununifi.derivatives.Pool.Asset
+         * @static
+         * @param {ununifi.derivatives.Pool.IAsset} message Asset message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        Asset.encode = function encode(message, writer) {
+          if (!writer) writer = $Writer.create();
+          if (message.denom != null && Object.hasOwnProperty.call(message, 'denom'))
+            writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.denom);
+          if (message.type != null && Object.hasOwnProperty.call(message, 'type'))
+            writer.uint32(/* id 2, wireType 0 =*/ 16).int32(message.type);
+          if (message.target_weight != null && Object.hasOwnProperty.call(message, 'target_weight'))
+            writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.target_weight);
+          return writer;
+        };
+
+        /**
+         * Encodes the specified Asset message, length delimited. Does not implicitly {@link ununifi.derivatives.Pool.Asset.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof ununifi.derivatives.Pool.Asset
+         * @static
+         * @param {ununifi.derivatives.Pool.IAsset} message Asset message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        Asset.encodeDelimited = function encodeDelimited(message, writer) {
+          return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes an Asset message from the specified reader or buffer.
+         * @function decode
+         * @memberof ununifi.derivatives.Pool.Asset
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {ununifi.derivatives.Pool.Asset} Asset
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        Asset.decode = function decode(reader, length) {
+          if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+          let end = length === undefined ? reader.len : reader.pos + length,
+            message = new $root.ununifi.derivatives.Pool.Asset();
+          while (reader.pos < end) {
+            let tag = reader.uint32();
+            switch (tag >>> 3) {
+              case 1:
+                message.denom = reader.string();
+                break;
+              case 2:
+                message.type = reader.int32();
+                break;
+              case 3:
+                message.target_weight = reader.string();
+                break;
+              default:
+                reader.skipType(tag & 7);
+                break;
+            }
+          }
+          return message;
+        };
+
+        /**
+         * Decodes an Asset message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof ununifi.derivatives.Pool.Asset
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {ununifi.derivatives.Pool.Asset} Asset
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        Asset.decodeDelimited = function decodeDelimited(reader) {
+          if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+          return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies an Asset message.
+         * @function verify
+         * @memberof ununifi.derivatives.Pool.Asset
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        Asset.verify = function verify(message) {
+          if (typeof message !== 'object' || message === null) return 'object expected';
+          if (message.denom != null && message.hasOwnProperty('denom')) if (!$util.isString(message.denom)) return 'denom: string expected';
+          if (message.type != null && message.hasOwnProperty('type'))
+            switch (message.type) {
+              default:
+                return 'type: enum value expected';
+              case 0:
+              case 1:
+                break;
+            }
+          if (message.target_weight != null && message.hasOwnProperty('target_weight'))
+            if (!$util.isString(message.target_weight)) return 'target_weight: string expected';
+          return null;
+        };
+
+        /**
+         * Creates an Asset message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof ununifi.derivatives.Pool.Asset
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {ununifi.derivatives.Pool.Asset} Asset
+         */
+        Asset.fromObject = function fromObject(object) {
+          if (object instanceof $root.ununifi.derivatives.Pool.Asset) return object;
+          let message = new $root.ununifi.derivatives.Pool.Asset();
+          if (object.denom != null) message.denom = String(object.denom);
+          switch (object.type) {
+            case 'Real':
+            case 0:
+              message.type = 0;
+              break;
+            case 'Imaginary':
+            case 1:
+              message.type = 1;
+              break;
+          }
+          if (object.target_weight != null) message.target_weight = String(object.target_weight);
+          return message;
+        };
+
+        /**
+         * Creates a plain object from an Asset message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof ununifi.derivatives.Pool.Asset
+         * @static
+         * @param {ununifi.derivatives.Pool.Asset} message Asset
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        Asset.toObject = function toObject(message, options) {
+          if (!options) options = {};
+          let object = {};
+          if (options.defaults) {
+            object.denom = '';
+            object.type = options.enums === String ? 'Real' : 0;
+            object.target_weight = '';
+          }
+          if (message.denom != null && message.hasOwnProperty('denom')) object.denom = message.denom;
+          if (message.type != null && message.hasOwnProperty('type'))
+            object.type = options.enums === String ? $root.ununifi.derivatives.AssetType[message.type] : message.type;
+          if (message.target_weight != null && message.hasOwnProperty('target_weight')) object.target_weight = message.target_weight;
+          return object;
+        };
+
+        /**
+         * Converts this Asset to JSON.
+         * @function toJSON
+         * @memberof ununifi.derivatives.Pool.Asset
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        Asset.prototype.toJSON = function toJSON() {
+          return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return Asset;
+      })();
+
+      return Pool;
+    })();
+
+    derivatives.PoolMarketCap = (function () {
+      /**
+       * Properties of a PoolMarketCap.
+       * @memberof ununifi.derivatives
+       * @interface IPoolMarketCap
+       * @property {string|null} [total] PoolMarketCap total
+       * @property {string|null} [quote_denom] PoolMarketCap quote_denom
+       * @property {Array.<ununifi.derivatives.PoolMarketCap.IBreakdown>|null} [breakdown] PoolMarketCap breakdown
+       */
+
+      /**
+       * Constructs a new PoolMarketCap.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a PoolMarketCap.
+       * @implements IPoolMarketCap
+       * @constructor
+       * @param {ununifi.derivatives.IPoolMarketCap=} [properties] Properties to set
+       */
+      function PoolMarketCap(properties) {
+        this.breakdown = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * PoolMarketCap total.
+       * @member {string} total
+       * @memberof ununifi.derivatives.PoolMarketCap
+       * @instance
+       */
+      PoolMarketCap.prototype.total = '';
+
+      /**
+       * PoolMarketCap quote_denom.
+       * @member {string} quote_denom
+       * @memberof ununifi.derivatives.PoolMarketCap
+       * @instance
+       */
+      PoolMarketCap.prototype.quote_denom = '';
+
+      /**
+       * PoolMarketCap breakdown.
+       * @member {Array.<ununifi.derivatives.PoolMarketCap.IBreakdown>} breakdown
+       * @memberof ununifi.derivatives.PoolMarketCap
+       * @instance
+       */
+      PoolMarketCap.prototype.breakdown = $util.emptyArray;
+
+      /**
+       * Encodes the specified PoolMarketCap message. Does not implicitly {@link ununifi.derivatives.PoolMarketCap.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.PoolMarketCap
+       * @static
+       * @param {ununifi.derivatives.IPoolMarketCap} message PoolMarketCap message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      PoolMarketCap.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.total != null && Object.hasOwnProperty.call(message, 'total'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.total);
+        if (message.quote_denom != null && Object.hasOwnProperty.call(message, 'quote_denom'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.quote_denom);
+        if (message.breakdown != null && message.breakdown.length)
+          for (let i = 0; i < message.breakdown.length; ++i)
+            $root.ununifi.derivatives.PoolMarketCap.Breakdown.encode(
+              message.breakdown[i],
+              writer.uint32(/* id 3, wireType 2 =*/ 26).fork(),
+            ).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified PoolMarketCap message, length delimited. Does not implicitly {@link ununifi.derivatives.PoolMarketCap.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.PoolMarketCap
+       * @static
+       * @param {ununifi.derivatives.IPoolMarketCap} message PoolMarketCap message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      PoolMarketCap.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a PoolMarketCap message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.PoolMarketCap
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.PoolMarketCap} PoolMarketCap
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      PoolMarketCap.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.PoolMarketCap();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.total = reader.string();
+              break;
+            case 2:
+              message.quote_denom = reader.string();
+              break;
+            case 3:
+              if (!(message.breakdown && message.breakdown.length)) message.breakdown = [];
+              message.breakdown.push($root.ununifi.derivatives.PoolMarketCap.Breakdown.decode(reader, reader.uint32()));
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a PoolMarketCap message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.PoolMarketCap
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.PoolMarketCap} PoolMarketCap
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      PoolMarketCap.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a PoolMarketCap message.
+       * @function verify
+       * @memberof ununifi.derivatives.PoolMarketCap
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      PoolMarketCap.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.total != null && message.hasOwnProperty('total')) if (!$util.isString(message.total)) return 'total: string expected';
+        if (message.quote_denom != null && message.hasOwnProperty('quote_denom'))
+          if (!$util.isString(message.quote_denom)) return 'quote_denom: string expected';
+        if (message.breakdown != null && message.hasOwnProperty('breakdown')) {
+          if (!Array.isArray(message.breakdown)) return 'breakdown: array expected';
+          for (let i = 0; i < message.breakdown.length; ++i) {
+            let error = $root.ununifi.derivatives.PoolMarketCap.Breakdown.verify(message.breakdown[i]);
+            if (error) return 'breakdown.' + error;
+          }
+        }
+        return null;
+      };
+
+      /**
+       * Creates a PoolMarketCap message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.PoolMarketCap
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.PoolMarketCap} PoolMarketCap
+       */
+      PoolMarketCap.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.PoolMarketCap) return object;
+        let message = new $root.ununifi.derivatives.PoolMarketCap();
+        if (object.total != null) message.total = String(object.total);
+        if (object.quote_denom != null) message.quote_denom = String(object.quote_denom);
+        if (object.breakdown) {
+          if (!Array.isArray(object.breakdown)) throw TypeError('.ununifi.derivatives.PoolMarketCap.breakdown: array expected');
+          message.breakdown = [];
+          for (let i = 0; i < object.breakdown.length; ++i) {
+            if (typeof object.breakdown[i] !== 'object') throw TypeError('.ununifi.derivatives.PoolMarketCap.breakdown: object expected');
+            message.breakdown[i] = $root.ununifi.derivatives.PoolMarketCap.Breakdown.fromObject(object.breakdown[i]);
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a PoolMarketCap message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.PoolMarketCap
+       * @static
+       * @param {ununifi.derivatives.PoolMarketCap} message PoolMarketCap
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      PoolMarketCap.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) object.breakdown = [];
+        if (options.defaults) {
+          object.total = '';
+          object.quote_denom = '';
+        }
+        if (message.total != null && message.hasOwnProperty('total')) object.total = message.total;
+        if (message.quote_denom != null && message.hasOwnProperty('quote_denom')) object.quote_denom = message.quote_denom;
+        if (message.breakdown && message.breakdown.length) {
+          object.breakdown = [];
+          for (let j = 0; j < message.breakdown.length; ++j)
+            object.breakdown[j] = $root.ununifi.derivatives.PoolMarketCap.Breakdown.toObject(message.breakdown[j], options);
+        }
+        return object;
+      };
+
+      /**
+       * Converts this PoolMarketCap to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.PoolMarketCap
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      PoolMarketCap.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      PoolMarketCap.Breakdown = (function () {
+        /**
+         * Properties of a Breakdown.
+         * @memberof ununifi.derivatives.PoolMarketCap
+         * @interface IBreakdown
+         * @property {string|null} [denom] Breakdown denom
+         * @property {string|null} [amount] Breakdown amount
+         * @property {string|null} [price] Breakdown price
+         */
+
+        /**
+         * Constructs a new Breakdown.
+         * @memberof ununifi.derivatives.PoolMarketCap
+         * @classdesc Represents a Breakdown.
+         * @implements IBreakdown
+         * @constructor
+         * @param {ununifi.derivatives.PoolMarketCap.IBreakdown=} [properties] Properties to set
+         */
+        function Breakdown(properties) {
+          if (properties)
+            for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+              if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * Breakdown denom.
+         * @member {string} denom
+         * @memberof ununifi.derivatives.PoolMarketCap.Breakdown
+         * @instance
+         */
+        Breakdown.prototype.denom = '';
+
+        /**
+         * Breakdown amount.
+         * @member {string} amount
+         * @memberof ununifi.derivatives.PoolMarketCap.Breakdown
+         * @instance
+         */
+        Breakdown.prototype.amount = '';
+
+        /**
+         * Breakdown price.
+         * @member {string} price
+         * @memberof ununifi.derivatives.PoolMarketCap.Breakdown
+         * @instance
+         */
+        Breakdown.prototype.price = '';
+
+        /**
+         * Encodes the specified Breakdown message. Does not implicitly {@link ununifi.derivatives.PoolMarketCap.Breakdown.verify|verify} messages.
+         * @function encode
+         * @memberof ununifi.derivatives.PoolMarketCap.Breakdown
+         * @static
+         * @param {ununifi.derivatives.PoolMarketCap.IBreakdown} message Breakdown message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        Breakdown.encode = function encode(message, writer) {
+          if (!writer) writer = $Writer.create();
+          if (message.denom != null && Object.hasOwnProperty.call(message, 'denom'))
+            writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.denom);
+          if (message.amount != null && Object.hasOwnProperty.call(message, 'amount'))
+            writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.amount);
+          if (message.price != null && Object.hasOwnProperty.call(message, 'price'))
+            writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.price);
+          return writer;
+        };
+
+        /**
+         * Encodes the specified Breakdown message, length delimited. Does not implicitly {@link ununifi.derivatives.PoolMarketCap.Breakdown.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof ununifi.derivatives.PoolMarketCap.Breakdown
+         * @static
+         * @param {ununifi.derivatives.PoolMarketCap.IBreakdown} message Breakdown message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        Breakdown.encodeDelimited = function encodeDelimited(message, writer) {
+          return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a Breakdown message from the specified reader or buffer.
+         * @function decode
+         * @memberof ununifi.derivatives.PoolMarketCap.Breakdown
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {ununifi.derivatives.PoolMarketCap.Breakdown} Breakdown
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        Breakdown.decode = function decode(reader, length) {
+          if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+          let end = length === undefined ? reader.len : reader.pos + length,
+            message = new $root.ununifi.derivatives.PoolMarketCap.Breakdown();
+          while (reader.pos < end) {
+            let tag = reader.uint32();
+            switch (tag >>> 3) {
+              case 1:
+                message.denom = reader.string();
+                break;
+              case 2:
+                message.amount = reader.string();
+                break;
+              case 3:
+                message.price = reader.string();
+                break;
+              default:
+                reader.skipType(tag & 7);
+                break;
+            }
+          }
+          return message;
+        };
+
+        /**
+         * Decodes a Breakdown message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof ununifi.derivatives.PoolMarketCap.Breakdown
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {ununifi.derivatives.PoolMarketCap.Breakdown} Breakdown
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        Breakdown.decodeDelimited = function decodeDelimited(reader) {
+          if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+          return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a Breakdown message.
+         * @function verify
+         * @memberof ununifi.derivatives.PoolMarketCap.Breakdown
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        Breakdown.verify = function verify(message) {
+          if (typeof message !== 'object' || message === null) return 'object expected';
+          if (message.denom != null && message.hasOwnProperty('denom')) if (!$util.isString(message.denom)) return 'denom: string expected';
+          if (message.amount != null && message.hasOwnProperty('amount'))
+            if (!$util.isString(message.amount)) return 'amount: string expected';
+          if (message.price != null && message.hasOwnProperty('price')) if (!$util.isString(message.price)) return 'price: string expected';
+          return null;
+        };
+
+        /**
+         * Creates a Breakdown message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof ununifi.derivatives.PoolMarketCap.Breakdown
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {ununifi.derivatives.PoolMarketCap.Breakdown} Breakdown
+         */
+        Breakdown.fromObject = function fromObject(object) {
+          if (object instanceof $root.ununifi.derivatives.PoolMarketCap.Breakdown) return object;
+          let message = new $root.ununifi.derivatives.PoolMarketCap.Breakdown();
+          if (object.denom != null) message.denom = String(object.denom);
+          if (object.amount != null) message.amount = String(object.amount);
+          if (object.price != null) message.price = String(object.price);
+          return message;
+        };
+
+        /**
+         * Creates a plain object from a Breakdown message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof ununifi.derivatives.PoolMarketCap.Breakdown
+         * @static
+         * @param {ununifi.derivatives.PoolMarketCap.Breakdown} message Breakdown
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        Breakdown.toObject = function toObject(message, options) {
+          if (!options) options = {};
+          let object = {};
+          if (options.defaults) {
+            object.denom = '';
+            object.amount = '';
+            object.price = '';
+          }
+          if (message.denom != null && message.hasOwnProperty('denom')) object.denom = message.denom;
+          if (message.amount != null && message.hasOwnProperty('amount')) object.amount = message.amount;
+          if (message.price != null && message.hasOwnProperty('price')) object.price = message.price;
+          return object;
+        };
+
+        /**
+         * Converts this Breakdown to JSON.
+         * @function toJSON
+         * @memberof ununifi.derivatives.PoolMarketCap.Breakdown
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        Breakdown.prototype.toJSON = function toJSON() {
+          return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return Breakdown;
+      })();
+
+      return PoolMarketCap;
+    })();
+
+    derivatives.Params = (function () {
+      /**
+       * Properties of a Params.
+       * @memberof ununifi.derivatives
+       * @interface IParams
+       * @property {ununifi.derivatives.IPool|null} [pool] Params pool
+       * @property {string|null} [lpt_price_quote_denom] Params lpt_price_quote_denom
+       * @property {string|null} [base_lpt_mint_fee] Params base_lpt_mint_fee
+       * @property {string|null} [base_lpt_redeem_fee] Params base_lpt_redeem_fee
+       * @property {string|null} [borrowing_fee_rate_per_hour] Params borrowing_fee_rate_per_hour
+       * @property {string|null} [commission_rate] Params commission_rate
+       * @property {string|null} [margin_maintenance_rate] Params margin_maintenance_rate
+       * @property {string|null} [funding_rate_proportional_coefficient] Params funding_rate_proportional_coefficient
+       */
+
+      /**
+       * Constructs a new Params.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a Params.
+       * @implements IParams
+       * @constructor
+       * @param {ununifi.derivatives.IParams=} [properties] Properties to set
+       */
+      function Params(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Params pool.
+       * @member {ununifi.derivatives.IPool|null|undefined} pool
+       * @memberof ununifi.derivatives.Params
+       * @instance
+       */
+      Params.prototype.pool = null;
+
+      /**
+       * Params lpt_price_quote_denom.
+       * @member {string} lpt_price_quote_denom
+       * @memberof ununifi.derivatives.Params
+       * @instance
+       */
+      Params.prototype.lpt_price_quote_denom = '';
+
+      /**
+       * Params base_lpt_mint_fee.
+       * @member {string} base_lpt_mint_fee
+       * @memberof ununifi.derivatives.Params
+       * @instance
+       */
+      Params.prototype.base_lpt_mint_fee = '';
+
+      /**
+       * Params base_lpt_redeem_fee.
+       * @member {string} base_lpt_redeem_fee
+       * @memberof ununifi.derivatives.Params
+       * @instance
+       */
+      Params.prototype.base_lpt_redeem_fee = '';
+
+      /**
+       * Params borrowing_fee_rate_per_hour.
+       * @member {string} borrowing_fee_rate_per_hour
+       * @memberof ununifi.derivatives.Params
+       * @instance
+       */
+      Params.prototype.borrowing_fee_rate_per_hour = '';
+
+      /**
+       * Params commission_rate.
+       * @member {string} commission_rate
+       * @memberof ununifi.derivatives.Params
+       * @instance
+       */
+      Params.prototype.commission_rate = '';
+
+      /**
+       * Params margin_maintenance_rate.
+       * @member {string} margin_maintenance_rate
+       * @memberof ununifi.derivatives.Params
+       * @instance
+       */
+      Params.prototype.margin_maintenance_rate = '';
+
+      /**
+       * Params funding_rate_proportional_coefficient.
+       * @member {string} funding_rate_proportional_coefficient
+       * @memberof ununifi.derivatives.Params
+       * @instance
+       */
+      Params.prototype.funding_rate_proportional_coefficient = '';
+
+      /**
+       * Encodes the specified Params message. Does not implicitly {@link ununifi.derivatives.Params.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.Params
+       * @static
+       * @param {ununifi.derivatives.IParams} message Params message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      Params.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.pool != null && Object.hasOwnProperty.call(message, 'pool'))
+          $root.ununifi.derivatives.Pool.encode(message.pool, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        if (message.lpt_price_quote_denom != null && Object.hasOwnProperty.call(message, 'lpt_price_quote_denom'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.lpt_price_quote_denom);
+        if (message.base_lpt_mint_fee != null && Object.hasOwnProperty.call(message, 'base_lpt_mint_fee'))
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.base_lpt_mint_fee);
+        if (message.base_lpt_redeem_fee != null && Object.hasOwnProperty.call(message, 'base_lpt_redeem_fee'))
+          writer.uint32(/* id 4, wireType 2 =*/ 34).string(message.base_lpt_redeem_fee);
+        if (message.borrowing_fee_rate_per_hour != null && Object.hasOwnProperty.call(message, 'borrowing_fee_rate_per_hour'))
+          writer.uint32(/* id 5, wireType 2 =*/ 42).string(message.borrowing_fee_rate_per_hour);
+        if (message.commission_rate != null && Object.hasOwnProperty.call(message, 'commission_rate'))
+          writer.uint32(/* id 6, wireType 2 =*/ 50).string(message.commission_rate);
+        if (message.margin_maintenance_rate != null && Object.hasOwnProperty.call(message, 'margin_maintenance_rate'))
+          writer.uint32(/* id 7, wireType 2 =*/ 58).string(message.margin_maintenance_rate);
+        if (
+          message.funding_rate_proportional_coefficient != null &&
+          Object.hasOwnProperty.call(message, 'funding_rate_proportional_coefficient')
+        )
+          writer.uint32(/* id 8, wireType 2 =*/ 66).string(message.funding_rate_proportional_coefficient);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.derivatives.Params.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.Params
+       * @static
+       * @param {ununifi.derivatives.IParams} message Params message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      Params.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a Params message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.Params
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.Params} Params
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      Params.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.Params();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.pool = $root.ununifi.derivatives.Pool.decode(reader, reader.uint32());
+              break;
+            case 2:
+              message.lpt_price_quote_denom = reader.string();
+              break;
+            case 3:
+              message.base_lpt_mint_fee = reader.string();
+              break;
+            case 4:
+              message.base_lpt_redeem_fee = reader.string();
+              break;
+            case 5:
+              message.borrowing_fee_rate_per_hour = reader.string();
+              break;
+            case 6:
+              message.commission_rate = reader.string();
+              break;
+            case 7:
+              message.margin_maintenance_rate = reader.string();
+              break;
+            case 8:
+              message.funding_rate_proportional_coefficient = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a Params message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.Params
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.Params} Params
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      Params.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a Params message.
+       * @function verify
+       * @memberof ununifi.derivatives.Params
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      Params.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.pool != null && message.hasOwnProperty('pool')) {
+          let error = $root.ununifi.derivatives.Pool.verify(message.pool);
+          if (error) return 'pool.' + error;
+        }
+        if (message.lpt_price_quote_denom != null && message.hasOwnProperty('lpt_price_quote_denom'))
+          if (!$util.isString(message.lpt_price_quote_denom)) return 'lpt_price_quote_denom: string expected';
+        if (message.base_lpt_mint_fee != null && message.hasOwnProperty('base_lpt_mint_fee'))
+          if (!$util.isString(message.base_lpt_mint_fee)) return 'base_lpt_mint_fee: string expected';
+        if (message.base_lpt_redeem_fee != null && message.hasOwnProperty('base_lpt_redeem_fee'))
+          if (!$util.isString(message.base_lpt_redeem_fee)) return 'base_lpt_redeem_fee: string expected';
+        if (message.borrowing_fee_rate_per_hour != null && message.hasOwnProperty('borrowing_fee_rate_per_hour'))
+          if (!$util.isString(message.borrowing_fee_rate_per_hour)) return 'borrowing_fee_rate_per_hour: string expected';
+        if (message.commission_rate != null && message.hasOwnProperty('commission_rate'))
+          if (!$util.isString(message.commission_rate)) return 'commission_rate: string expected';
+        if (message.margin_maintenance_rate != null && message.hasOwnProperty('margin_maintenance_rate'))
+          if (!$util.isString(message.margin_maintenance_rate)) return 'margin_maintenance_rate: string expected';
+        if (message.funding_rate_proportional_coefficient != null && message.hasOwnProperty('funding_rate_proportional_coefficient'))
+          if (!$util.isString(message.funding_rate_proportional_coefficient))
+            return 'funding_rate_proportional_coefficient: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a Params message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.Params
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.Params} Params
+       */
+      Params.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.Params) return object;
+        let message = new $root.ununifi.derivatives.Params();
+        if (object.pool != null) {
+          if (typeof object.pool !== 'object') throw TypeError('.ununifi.derivatives.Params.pool: object expected');
+          message.pool = $root.ununifi.derivatives.Pool.fromObject(object.pool);
+        }
+        if (object.lpt_price_quote_denom != null) message.lpt_price_quote_denom = String(object.lpt_price_quote_denom);
+        if (object.base_lpt_mint_fee != null) message.base_lpt_mint_fee = String(object.base_lpt_mint_fee);
+        if (object.base_lpt_redeem_fee != null) message.base_lpt_redeem_fee = String(object.base_lpt_redeem_fee);
+        if (object.borrowing_fee_rate_per_hour != null) message.borrowing_fee_rate_per_hour = String(object.borrowing_fee_rate_per_hour);
+        if (object.commission_rate != null) message.commission_rate = String(object.commission_rate);
+        if (object.margin_maintenance_rate != null) message.margin_maintenance_rate = String(object.margin_maintenance_rate);
+        if (object.funding_rate_proportional_coefficient != null)
+          message.funding_rate_proportional_coefficient = String(object.funding_rate_proportional_coefficient);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a Params message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.Params
+       * @static
+       * @param {ununifi.derivatives.Params} message Params
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      Params.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.pool = null;
+          object.lpt_price_quote_denom = '';
+          object.base_lpt_mint_fee = '';
+          object.base_lpt_redeem_fee = '';
+          object.borrowing_fee_rate_per_hour = '';
+          object.commission_rate = '';
+          object.margin_maintenance_rate = '';
+          object.funding_rate_proportional_coefficient = '';
+        }
+        if (message.pool != null && message.hasOwnProperty('pool'))
+          object.pool = $root.ununifi.derivatives.Pool.toObject(message.pool, options);
+        if (message.lpt_price_quote_denom != null && message.hasOwnProperty('lpt_price_quote_denom'))
+          object.lpt_price_quote_denom = message.lpt_price_quote_denom;
+        if (message.base_lpt_mint_fee != null && message.hasOwnProperty('base_lpt_mint_fee'))
+          object.base_lpt_mint_fee = message.base_lpt_mint_fee;
+        if (message.base_lpt_redeem_fee != null && message.hasOwnProperty('base_lpt_redeem_fee'))
+          object.base_lpt_redeem_fee = message.base_lpt_redeem_fee;
+        if (message.borrowing_fee_rate_per_hour != null && message.hasOwnProperty('borrowing_fee_rate_per_hour'))
+          object.borrowing_fee_rate_per_hour = message.borrowing_fee_rate_per_hour;
+        if (message.commission_rate != null && message.hasOwnProperty('commission_rate')) object.commission_rate = message.commission_rate;
+        if (message.margin_maintenance_rate != null && message.hasOwnProperty('margin_maintenance_rate'))
+          object.margin_maintenance_rate = message.margin_maintenance_rate;
+        if (message.funding_rate_proportional_coefficient != null && message.hasOwnProperty('funding_rate_proportional_coefficient'))
+          object.funding_rate_proportional_coefficient = message.funding_rate_proportional_coefficient;
+        return object;
+      };
+
+      /**
+       * Converts this Params to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.Params
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      Params.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return Params;
+    })();
+
+    /**
+     * OptionType enum.
+     * @name ununifi.derivatives.OptionType
+     * @enum {number}
+     * @property {number} OPTION_UNKNOWN=0 OPTION_UNKNOWN value
+     * @property {number} CALL=1 CALL value
+     * @property {number} PUT=2 PUT value
+     */
+    derivatives.OptionType = (function () {
+      const valuesById = {},
+        values = Object.create(valuesById);
+      values[(valuesById[0] = 'OPTION_UNKNOWN')] = 0;
+      values[(valuesById[1] = 'CALL')] = 1;
+      values[(valuesById[2] = 'PUT')] = 2;
+      return values;
+    })();
+
+    derivatives.PerpetualOptionsPosition = (function () {
+      /**
+       * Properties of a PerpetualOptionsPosition.
+       * @memberof ununifi.derivatives
+       * @interface IPerpetualOptionsPosition
+       * @property {ununifi.derivatives.OptionType|null} [option_type] PerpetualOptionsPosition option_type
+       * @property {ununifi.derivatives.PositionType|null} [position_type] PerpetualOptionsPosition position_type
+       * @property {string|null} [denom] PerpetualOptionsPosition denom
+       * @property {string|null} [quote_denom] PerpetualOptionsPosition quote_denom
+       * @property {string|null} [strike_price] PerpetualOptionsPosition strike_price
+       * @property {string|null} [premium] PerpetualOptionsPosition premium
+       */
+
+      /**
+       * Constructs a new PerpetualOptionsPosition.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a PerpetualOptionsPosition.
+       * @implements IPerpetualOptionsPosition
+       * @constructor
+       * @param {ununifi.derivatives.IPerpetualOptionsPosition=} [properties] Properties to set
+       */
+      function PerpetualOptionsPosition(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * PerpetualOptionsPosition option_type.
+       * @member {ununifi.derivatives.OptionType} option_type
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @instance
+       */
+      PerpetualOptionsPosition.prototype.option_type = 0;
+
+      /**
+       * PerpetualOptionsPosition position_type.
+       * @member {ununifi.derivatives.PositionType} position_type
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @instance
+       */
+      PerpetualOptionsPosition.prototype.position_type = 0;
+
+      /**
+       * PerpetualOptionsPosition denom.
+       * @member {string} denom
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @instance
+       */
+      PerpetualOptionsPosition.prototype.denom = '';
+
+      /**
+       * PerpetualOptionsPosition quote_denom.
+       * @member {string} quote_denom
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @instance
+       */
+      PerpetualOptionsPosition.prototype.quote_denom = '';
+
+      /**
+       * PerpetualOptionsPosition strike_price.
+       * @member {string} strike_price
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @instance
+       */
+      PerpetualOptionsPosition.prototype.strike_price = '';
+
+      /**
+       * PerpetualOptionsPosition premium.
+       * @member {string} premium
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @instance
+       */
+      PerpetualOptionsPosition.prototype.premium = '';
+
+      /**
+       * Encodes the specified PerpetualOptionsPosition message. Does not implicitly {@link ununifi.derivatives.PerpetualOptionsPosition.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @static
+       * @param {ununifi.derivatives.IPerpetualOptionsPosition} message PerpetualOptionsPosition message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      PerpetualOptionsPosition.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.option_type != null && Object.hasOwnProperty.call(message, 'option_type'))
+          writer.uint32(/* id 1, wireType 0 =*/ 8).int32(message.option_type);
+        if (message.position_type != null && Object.hasOwnProperty.call(message, 'position_type'))
+          writer.uint32(/* id 2, wireType 0 =*/ 16).int32(message.position_type);
+        if (message.denom != null && Object.hasOwnProperty.call(message, 'denom'))
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.denom);
+        if (message.quote_denom != null && Object.hasOwnProperty.call(message, 'quote_denom'))
+          writer.uint32(/* id 4, wireType 2 =*/ 34).string(message.quote_denom);
+        if (message.strike_price != null && Object.hasOwnProperty.call(message, 'strike_price'))
+          writer.uint32(/* id 5, wireType 2 =*/ 42).string(message.strike_price);
+        if (message.premium != null && Object.hasOwnProperty.call(message, 'premium'))
+          writer.uint32(/* id 6, wireType 2 =*/ 50).string(message.premium);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified PerpetualOptionsPosition message, length delimited. Does not implicitly {@link ununifi.derivatives.PerpetualOptionsPosition.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @static
+       * @param {ununifi.derivatives.IPerpetualOptionsPosition} message PerpetualOptionsPosition message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      PerpetualOptionsPosition.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a PerpetualOptionsPosition message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.PerpetualOptionsPosition} PerpetualOptionsPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      PerpetualOptionsPosition.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.PerpetualOptionsPosition();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.option_type = reader.int32();
+              break;
+            case 2:
+              message.position_type = reader.int32();
+              break;
+            case 3:
+              message.denom = reader.string();
+              break;
+            case 4:
+              message.quote_denom = reader.string();
+              break;
+            case 5:
+              message.strike_price = reader.string();
+              break;
+            case 6:
+              message.premium = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a PerpetualOptionsPosition message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.PerpetualOptionsPosition} PerpetualOptionsPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      PerpetualOptionsPosition.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a PerpetualOptionsPosition message.
+       * @function verify
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      PerpetualOptionsPosition.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.option_type != null && message.hasOwnProperty('option_type'))
+          switch (message.option_type) {
+            default:
+              return 'option_type: enum value expected';
+            case 0:
+            case 1:
+            case 2:
+              break;
+          }
+        if (message.position_type != null && message.hasOwnProperty('position_type'))
+          switch (message.position_type) {
+            default:
+              return 'position_type: enum value expected';
+            case 0:
+            case 1:
+            case 2:
+              break;
+          }
+        if (message.denom != null && message.hasOwnProperty('denom')) if (!$util.isString(message.denom)) return 'denom: string expected';
+        if (message.quote_denom != null && message.hasOwnProperty('quote_denom'))
+          if (!$util.isString(message.quote_denom)) return 'quote_denom: string expected';
+        if (message.strike_price != null && message.hasOwnProperty('strike_price'))
+          if (!$util.isString(message.strike_price)) return 'strike_price: string expected';
+        if (message.premium != null && message.hasOwnProperty('premium'))
+          if (!$util.isString(message.premium)) return 'premium: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a PerpetualOptionsPosition message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.PerpetualOptionsPosition} PerpetualOptionsPosition
+       */
+      PerpetualOptionsPosition.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.PerpetualOptionsPosition) return object;
+        let message = new $root.ununifi.derivatives.PerpetualOptionsPosition();
+        switch (object.option_type) {
+          case 'OPTION_UNKNOWN':
+          case 0:
+            message.option_type = 0;
+            break;
+          case 'CALL':
+          case 1:
+            message.option_type = 1;
+            break;
+          case 'PUT':
+          case 2:
+            message.option_type = 2;
+            break;
+        }
+        switch (object.position_type) {
+          case 'POSITION_UNKNOWN':
+          case 0:
+            message.position_type = 0;
+            break;
+          case 'LONG':
+          case 1:
+            message.position_type = 1;
+            break;
+          case 'SHORT':
+          case 2:
+            message.position_type = 2;
+            break;
+        }
+        if (object.denom != null) message.denom = String(object.denom);
+        if (object.quote_denom != null) message.quote_denom = String(object.quote_denom);
+        if (object.strike_price != null) message.strike_price = String(object.strike_price);
+        if (object.premium != null) message.premium = String(object.premium);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a PerpetualOptionsPosition message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @static
+       * @param {ununifi.derivatives.PerpetualOptionsPosition} message PerpetualOptionsPosition
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      PerpetualOptionsPosition.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.option_type = options.enums === String ? 'OPTION_UNKNOWN' : 0;
+          object.position_type = options.enums === String ? 'POSITION_UNKNOWN' : 0;
+          object.denom = '';
+          object.quote_denom = '';
+          object.strike_price = '';
+          object.premium = '';
+        }
+        if (message.option_type != null && message.hasOwnProperty('option_type'))
+          object.option_type = options.enums === String ? $root.ununifi.derivatives.OptionType[message.option_type] : message.option_type;
+        if (message.position_type != null && message.hasOwnProperty('position_type'))
+          object.position_type =
+            options.enums === String ? $root.ununifi.derivatives.PositionType[message.position_type] : message.position_type;
+        if (message.denom != null && message.hasOwnProperty('denom')) object.denom = message.denom;
+        if (message.quote_denom != null && message.hasOwnProperty('quote_denom')) object.quote_denom = message.quote_denom;
+        if (message.strike_price != null && message.hasOwnProperty('strike_price')) object.strike_price = message.strike_price;
+        if (message.premium != null && message.hasOwnProperty('premium')) object.premium = message.premium;
+        return object;
+      };
+
+      /**
+       * Converts this PerpetualOptionsPosition to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.PerpetualOptionsPosition
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      PerpetualOptionsPosition.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return PerpetualOptionsPosition;
+    })();
+
+    derivatives.Msg = (function () {
+      /**
+       * Constructs a new Msg service.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a Msg
+       * @extends $protobuf.rpc.Service
+       * @constructor
+       * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+       * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+       * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+       */
+      function Msg(rpcImpl, requestDelimited, responseDelimited) {
+        $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+      }
+
+      (Msg.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Msg;
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Msg#mintLiquidityProviderToken}.
+       * @memberof ununifi.derivatives.Msg
+       * @typedef MintLiquidityProviderTokenCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.derivatives.MsgMintLiquidityProviderTokenResponse} [response] MsgMintLiquidityProviderTokenResponse
+       */
+
+      /**
+       * Calls MintLiquidityProviderToken.
+       * @function mintLiquidityProviderToken
+       * @memberof ununifi.derivatives.Msg
+       * @instance
+       * @param {ununifi.derivatives.IMsgMintLiquidityProviderToken} request MsgMintLiquidityProviderToken message or plain object
+       * @param {ununifi.derivatives.Msg.MintLiquidityProviderTokenCallback} callback Node-style callback called with the error, if any, and MsgMintLiquidityProviderTokenResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Msg.prototype.mintLiquidityProviderToken = function mintLiquidityProviderToken(request, callback) {
+          return this.rpcCall(
+            mintLiquidityProviderToken,
+            $root.ununifi.derivatives.MsgMintLiquidityProviderToken,
+            $root.ununifi.derivatives.MsgMintLiquidityProviderTokenResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'MintLiquidityProviderToken' },
+      );
+
+      /**
+       * Calls MintLiquidityProviderToken.
+       * @function mintLiquidityProviderToken
+       * @memberof ununifi.derivatives.Msg
+       * @instance
+       * @param {ununifi.derivatives.IMsgMintLiquidityProviderToken} request MsgMintLiquidityProviderToken message or plain object
+       * @returns {Promise<ununifi.derivatives.MsgMintLiquidityProviderTokenResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Msg#burnLiquidityProviderToken}.
+       * @memberof ununifi.derivatives.Msg
+       * @typedef BurnLiquidityProviderTokenCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse} [response] MsgBurnLiquidityProviderTokenResponse
+       */
+
+      /**
+       * Calls BurnLiquidityProviderToken.
+       * @function burnLiquidityProviderToken
+       * @memberof ununifi.derivatives.Msg
+       * @instance
+       * @param {ununifi.derivatives.IMsgBurnLiquidityProviderToken} request MsgBurnLiquidityProviderToken message or plain object
+       * @param {ununifi.derivatives.Msg.BurnLiquidityProviderTokenCallback} callback Node-style callback called with the error, if any, and MsgBurnLiquidityProviderTokenResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Msg.prototype.burnLiquidityProviderToken = function burnLiquidityProviderToken(request, callback) {
+          return this.rpcCall(
+            burnLiquidityProviderToken,
+            $root.ununifi.derivatives.MsgBurnLiquidityProviderToken,
+            $root.ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'BurnLiquidityProviderToken' },
+      );
+
+      /**
+       * Calls BurnLiquidityProviderToken.
+       * @function burnLiquidityProviderToken
+       * @memberof ununifi.derivatives.Msg
+       * @instance
+       * @param {ununifi.derivatives.IMsgBurnLiquidityProviderToken} request MsgBurnLiquidityProviderToken message or plain object
+       * @returns {Promise<ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Msg#openPosition}.
+       * @memberof ununifi.derivatives.Msg
+       * @typedef OpenPositionCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.derivatives.MsgOpenPositionResponse} [response] MsgOpenPositionResponse
+       */
+
+      /**
+       * Calls OpenPosition.
+       * @function openPosition
+       * @memberof ununifi.derivatives.Msg
+       * @instance
+       * @param {ununifi.derivatives.IMsgOpenPosition} request MsgOpenPosition message or plain object
+       * @param {ununifi.derivatives.Msg.OpenPositionCallback} callback Node-style callback called with the error, if any, and MsgOpenPositionResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Msg.prototype.openPosition = function openPosition(request, callback) {
+          return this.rpcCall(
+            openPosition,
+            $root.ununifi.derivatives.MsgOpenPosition,
+            $root.ununifi.derivatives.MsgOpenPositionResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'OpenPosition' },
+      );
+
+      /**
+       * Calls OpenPosition.
+       * @function openPosition
+       * @memberof ununifi.derivatives.Msg
+       * @instance
+       * @param {ununifi.derivatives.IMsgOpenPosition} request MsgOpenPosition message or plain object
+       * @returns {Promise<ununifi.derivatives.MsgOpenPositionResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.derivatives.Msg#closePosition}.
+       * @memberof ununifi.derivatives.Msg
+       * @typedef ClosePositionCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.derivatives.MsgClosePositionResponse} [response] MsgClosePositionResponse
+       */
+
+      /**
+       * Calls ClosePosition.
+       * @function closePosition
+       * @memberof ununifi.derivatives.Msg
+       * @instance
+       * @param {ununifi.derivatives.IMsgClosePosition} request MsgClosePosition message or plain object
+       * @param {ununifi.derivatives.Msg.ClosePositionCallback} callback Node-style callback called with the error, if any, and MsgClosePositionResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Msg.prototype.closePosition = function closePosition(request, callback) {
+          return this.rpcCall(
+            closePosition,
+            $root.ununifi.derivatives.MsgClosePosition,
+            $root.ununifi.derivatives.MsgClosePositionResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'ClosePosition' },
+      );
+
+      /**
+       * Calls ClosePosition.
+       * @function closePosition
+       * @memberof ununifi.derivatives.Msg
+       * @instance
+       * @param {ununifi.derivatives.IMsgClosePosition} request MsgClosePosition message or plain object
+       * @returns {Promise<ununifi.derivatives.MsgClosePositionResponse>} Promise
+       * @variation 2
+       */
+
+      return Msg;
+    })();
+
+    derivatives.MsgMintLiquidityProviderToken = (function () {
+      /**
+       * Properties of a MsgMintLiquidityProviderToken.
+       * @memberof ununifi.derivatives
+       * @interface IMsgMintLiquidityProviderToken
+       * @property {string|null} [sender] MsgMintLiquidityProviderToken sender
+       * @property {cosmos.base.v1beta1.ICoin|null} [amount] MsgMintLiquidityProviderToken amount
+       */
+
+      /**
+       * Constructs a new MsgMintLiquidityProviderToken.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a MsgMintLiquidityProviderToken.
+       * @implements IMsgMintLiquidityProviderToken
+       * @constructor
+       * @param {ununifi.derivatives.IMsgMintLiquidityProviderToken=} [properties] Properties to set
+       */
+      function MsgMintLiquidityProviderToken(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * MsgMintLiquidityProviderToken sender.
+       * @member {string} sender
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderToken
+       * @instance
+       */
+      MsgMintLiquidityProviderToken.prototype.sender = '';
+
+      /**
+       * MsgMintLiquidityProviderToken amount.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderToken
+       * @instance
+       */
+      MsgMintLiquidityProviderToken.prototype.amount = null;
+
+      /**
+       * Encodes the specified MsgMintLiquidityProviderToken message. Does not implicitly {@link ununifi.derivatives.MsgMintLiquidityProviderToken.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderToken
+       * @static
+       * @param {ununifi.derivatives.IMsgMintLiquidityProviderToken} message MsgMintLiquidityProviderToken message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgMintLiquidityProviderToken.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.sender != null && Object.hasOwnProperty.call(message, 'sender'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.sender);
+        if (message.amount != null && Object.hasOwnProperty.call(message, 'amount'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 2, wireType 2 =*/ 18).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgMintLiquidityProviderToken message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgMintLiquidityProviderToken.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderToken
+       * @static
+       * @param {ununifi.derivatives.IMsgMintLiquidityProviderToken} message MsgMintLiquidityProviderToken message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgMintLiquidityProviderToken.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgMintLiquidityProviderToken message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderToken
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.MsgMintLiquidityProviderToken} MsgMintLiquidityProviderToken
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgMintLiquidityProviderToken.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.MsgMintLiquidityProviderToken();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.sender = reader.string();
+              break;
+            case 2:
+              message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgMintLiquidityProviderToken message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderToken
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.MsgMintLiquidityProviderToken} MsgMintLiquidityProviderToken
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgMintLiquidityProviderToken.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgMintLiquidityProviderToken message.
+       * @function verify
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderToken
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgMintLiquidityProviderToken.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.sender != null && message.hasOwnProperty('sender'))
+          if (!$util.isString(message.sender)) return 'sender: string expected';
+        if (message.amount != null && message.hasOwnProperty('amount')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
+          if (error) return 'amount.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a MsgMintLiquidityProviderToken message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderToken
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.MsgMintLiquidityProviderToken} MsgMintLiquidityProviderToken
+       */
+      MsgMintLiquidityProviderToken.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.MsgMintLiquidityProviderToken) return object;
+        let message = new $root.ununifi.derivatives.MsgMintLiquidityProviderToken();
+        if (object.sender != null) message.sender = String(object.sender);
+        if (object.amount != null) {
+          if (typeof object.amount !== 'object')
+            throw TypeError('.ununifi.derivatives.MsgMintLiquidityProviderToken.amount: object expected');
+          message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a MsgMintLiquidityProviderToken message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderToken
+       * @static
+       * @param {ununifi.derivatives.MsgMintLiquidityProviderToken} message MsgMintLiquidityProviderToken
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgMintLiquidityProviderToken.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.sender = '';
+          object.amount = null;
+        }
+        if (message.sender != null && message.hasOwnProperty('sender')) object.sender = message.sender;
+        if (message.amount != null && message.hasOwnProperty('amount'))
+          object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+        return object;
+      };
+
+      /**
+       * Converts this MsgMintLiquidityProviderToken to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderToken
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgMintLiquidityProviderToken.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgMintLiquidityProviderToken;
+    })();
+
+    derivatives.MsgMintLiquidityProviderTokenResponse = (function () {
+      /**
+       * Properties of a MsgMintLiquidityProviderTokenResponse.
+       * @memberof ununifi.derivatives
+       * @interface IMsgMintLiquidityProviderTokenResponse
+       */
+
+      /**
+       * Constructs a new MsgMintLiquidityProviderTokenResponse.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a MsgMintLiquidityProviderTokenResponse.
+       * @implements IMsgMintLiquidityProviderTokenResponse
+       * @constructor
+       * @param {ununifi.derivatives.IMsgMintLiquidityProviderTokenResponse=} [properties] Properties to set
+       */
+      function MsgMintLiquidityProviderTokenResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified MsgMintLiquidityProviderTokenResponse message. Does not implicitly {@link ununifi.derivatives.MsgMintLiquidityProviderTokenResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderTokenResponse
+       * @static
+       * @param {ununifi.derivatives.IMsgMintLiquidityProviderTokenResponse} message MsgMintLiquidityProviderTokenResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgMintLiquidityProviderTokenResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgMintLiquidityProviderTokenResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgMintLiquidityProviderTokenResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderTokenResponse
+       * @static
+       * @param {ununifi.derivatives.IMsgMintLiquidityProviderTokenResponse} message MsgMintLiquidityProviderTokenResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgMintLiquidityProviderTokenResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgMintLiquidityProviderTokenResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderTokenResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.MsgMintLiquidityProviderTokenResponse} MsgMintLiquidityProviderTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgMintLiquidityProviderTokenResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.MsgMintLiquidityProviderTokenResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgMintLiquidityProviderTokenResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderTokenResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.MsgMintLiquidityProviderTokenResponse} MsgMintLiquidityProviderTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgMintLiquidityProviderTokenResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgMintLiquidityProviderTokenResponse message.
+       * @function verify
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderTokenResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgMintLiquidityProviderTokenResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgMintLiquidityProviderTokenResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderTokenResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.MsgMintLiquidityProviderTokenResponse} MsgMintLiquidityProviderTokenResponse
+       */
+      MsgMintLiquidityProviderTokenResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.MsgMintLiquidityProviderTokenResponse) return object;
+        return new $root.ununifi.derivatives.MsgMintLiquidityProviderTokenResponse();
+      };
+
+      /**
+       * Creates a plain object from a MsgMintLiquidityProviderTokenResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderTokenResponse
+       * @static
+       * @param {ununifi.derivatives.MsgMintLiquidityProviderTokenResponse} message MsgMintLiquidityProviderTokenResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgMintLiquidityProviderTokenResponse.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this MsgMintLiquidityProviderTokenResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.MsgMintLiquidityProviderTokenResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgMintLiquidityProviderTokenResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgMintLiquidityProviderTokenResponse;
+    })();
+
+    derivatives.MsgBurnLiquidityProviderToken = (function () {
+      /**
+       * Properties of a MsgBurnLiquidityProviderToken.
+       * @memberof ununifi.derivatives
+       * @interface IMsgBurnLiquidityProviderToken
+       * @property {string|null} [sender] MsgBurnLiquidityProviderToken sender
+       * @property {string|null} [amount] MsgBurnLiquidityProviderToken amount
+       */
+
+      /**
+       * Constructs a new MsgBurnLiquidityProviderToken.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a MsgBurnLiquidityProviderToken.
+       * @implements IMsgBurnLiquidityProviderToken
+       * @constructor
+       * @param {ununifi.derivatives.IMsgBurnLiquidityProviderToken=} [properties] Properties to set
+       */
+      function MsgBurnLiquidityProviderToken(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * MsgBurnLiquidityProviderToken sender.
+       * @member {string} sender
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderToken
+       * @instance
+       */
+      MsgBurnLiquidityProviderToken.prototype.sender = '';
+
+      /**
+       * MsgBurnLiquidityProviderToken amount.
+       * @member {string} amount
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderToken
+       * @instance
+       */
+      MsgBurnLiquidityProviderToken.prototype.amount = '';
+
+      /**
+       * Encodes the specified MsgBurnLiquidityProviderToken message. Does not implicitly {@link ununifi.derivatives.MsgBurnLiquidityProviderToken.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderToken
+       * @static
+       * @param {ununifi.derivatives.IMsgBurnLiquidityProviderToken} message MsgBurnLiquidityProviderToken message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgBurnLiquidityProviderToken.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.sender != null && Object.hasOwnProperty.call(message, 'sender'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.sender);
+        if (message.amount != null && Object.hasOwnProperty.call(message, 'amount'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.amount);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgBurnLiquidityProviderToken message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgBurnLiquidityProviderToken.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderToken
+       * @static
+       * @param {ununifi.derivatives.IMsgBurnLiquidityProviderToken} message MsgBurnLiquidityProviderToken message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgBurnLiquidityProviderToken.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgBurnLiquidityProviderToken message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderToken
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.MsgBurnLiquidityProviderToken} MsgBurnLiquidityProviderToken
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgBurnLiquidityProviderToken.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.MsgBurnLiquidityProviderToken();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.sender = reader.string();
+              break;
+            case 2:
+              message.amount = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgBurnLiquidityProviderToken message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderToken
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.MsgBurnLiquidityProviderToken} MsgBurnLiquidityProviderToken
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgBurnLiquidityProviderToken.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgBurnLiquidityProviderToken message.
+       * @function verify
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderToken
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgBurnLiquidityProviderToken.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.sender != null && message.hasOwnProperty('sender'))
+          if (!$util.isString(message.sender)) return 'sender: string expected';
+        if (message.amount != null && message.hasOwnProperty('amount'))
+          if (!$util.isString(message.amount)) return 'amount: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgBurnLiquidityProviderToken message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderToken
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.MsgBurnLiquidityProviderToken} MsgBurnLiquidityProviderToken
+       */
+      MsgBurnLiquidityProviderToken.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.MsgBurnLiquidityProviderToken) return object;
+        let message = new $root.ununifi.derivatives.MsgBurnLiquidityProviderToken();
+        if (object.sender != null) message.sender = String(object.sender);
+        if (object.amount != null) message.amount = String(object.amount);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a MsgBurnLiquidityProviderToken message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderToken
+       * @static
+       * @param {ununifi.derivatives.MsgBurnLiquidityProviderToken} message MsgBurnLiquidityProviderToken
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgBurnLiquidityProviderToken.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.sender = '';
+          object.amount = '';
+        }
+        if (message.sender != null && message.hasOwnProperty('sender')) object.sender = message.sender;
+        if (message.amount != null && message.hasOwnProperty('amount')) object.amount = message.amount;
+        return object;
+      };
+
+      /**
+       * Converts this MsgBurnLiquidityProviderToken to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderToken
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgBurnLiquidityProviderToken.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgBurnLiquidityProviderToken;
+    })();
+
+    derivatives.MsgBurnLiquidityProviderTokenResponse = (function () {
+      /**
+       * Properties of a MsgBurnLiquidityProviderTokenResponse.
+       * @memberof ununifi.derivatives
+       * @interface IMsgBurnLiquidityProviderTokenResponse
+       */
+
+      /**
+       * Constructs a new MsgBurnLiquidityProviderTokenResponse.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a MsgBurnLiquidityProviderTokenResponse.
+       * @implements IMsgBurnLiquidityProviderTokenResponse
+       * @constructor
+       * @param {ununifi.derivatives.IMsgBurnLiquidityProviderTokenResponse=} [properties] Properties to set
+       */
+      function MsgBurnLiquidityProviderTokenResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified MsgBurnLiquidityProviderTokenResponse message. Does not implicitly {@link ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse
+       * @static
+       * @param {ununifi.derivatives.IMsgBurnLiquidityProviderTokenResponse} message MsgBurnLiquidityProviderTokenResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgBurnLiquidityProviderTokenResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgBurnLiquidityProviderTokenResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse
+       * @static
+       * @param {ununifi.derivatives.IMsgBurnLiquidityProviderTokenResponse} message MsgBurnLiquidityProviderTokenResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgBurnLiquidityProviderTokenResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgBurnLiquidityProviderTokenResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse} MsgBurnLiquidityProviderTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgBurnLiquidityProviderTokenResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgBurnLiquidityProviderTokenResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse} MsgBurnLiquidityProviderTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgBurnLiquidityProviderTokenResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgBurnLiquidityProviderTokenResponse message.
+       * @function verify
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgBurnLiquidityProviderTokenResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgBurnLiquidityProviderTokenResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse} MsgBurnLiquidityProviderTokenResponse
+       */
+      MsgBurnLiquidityProviderTokenResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse) return object;
+        return new $root.ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse();
+      };
+
+      /**
+       * Creates a plain object from a MsgBurnLiquidityProviderTokenResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse
+       * @static
+       * @param {ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse} message MsgBurnLiquidityProviderTokenResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgBurnLiquidityProviderTokenResponse.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this MsgBurnLiquidityProviderTokenResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgBurnLiquidityProviderTokenResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgBurnLiquidityProviderTokenResponse;
+    })();
+
+    derivatives.MsgOpenPosition = (function () {
+      /**
+       * Properties of a MsgOpenPosition.
+       * @memberof ununifi.derivatives
+       * @interface IMsgOpenPosition
+       * @property {string|null} [sender] MsgOpenPosition sender
+       * @property {cosmos.base.v1beta1.ICoin|null} [margin] MsgOpenPosition margin
+       * @property {google.protobuf.IAny|null} [position] MsgOpenPosition position
+       */
+
+      /**
+       * Constructs a new MsgOpenPosition.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a MsgOpenPosition.
+       * @implements IMsgOpenPosition
+       * @constructor
+       * @param {ununifi.derivatives.IMsgOpenPosition=} [properties] Properties to set
+       */
+      function MsgOpenPosition(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * MsgOpenPosition sender.
+       * @member {string} sender
+       * @memberof ununifi.derivatives.MsgOpenPosition
+       * @instance
+       */
+      MsgOpenPosition.prototype.sender = '';
+
+      /**
+       * MsgOpenPosition margin.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} margin
+       * @memberof ununifi.derivatives.MsgOpenPosition
+       * @instance
+       */
+      MsgOpenPosition.prototype.margin = null;
+
+      /**
+       * MsgOpenPosition position.
+       * @member {google.protobuf.IAny|null|undefined} position
+       * @memberof ununifi.derivatives.MsgOpenPosition
+       * @instance
+       */
+      MsgOpenPosition.prototype.position = null;
+
+      /**
+       * Encodes the specified MsgOpenPosition message. Does not implicitly {@link ununifi.derivatives.MsgOpenPosition.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.MsgOpenPosition
+       * @static
+       * @param {ununifi.derivatives.IMsgOpenPosition} message MsgOpenPosition message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgOpenPosition.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.sender != null && Object.hasOwnProperty.call(message, 'sender'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.sender);
+        if (message.margin != null && Object.hasOwnProperty.call(message, 'margin'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.margin, writer.uint32(/* id 2, wireType 2 =*/ 18).fork()).ldelim();
+        if (message.position != null && Object.hasOwnProperty.call(message, 'position'))
+          $root.google.protobuf.Any.encode(message.position, writer.uint32(/* id 3, wireType 2 =*/ 26).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgOpenPosition message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgOpenPosition.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.MsgOpenPosition
+       * @static
+       * @param {ununifi.derivatives.IMsgOpenPosition} message MsgOpenPosition message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgOpenPosition.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgOpenPosition message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.MsgOpenPosition
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.MsgOpenPosition} MsgOpenPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgOpenPosition.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.MsgOpenPosition();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.sender = reader.string();
+              break;
+            case 2:
+              message.margin = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            case 3:
+              message.position = $root.google.protobuf.Any.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgOpenPosition message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.MsgOpenPosition
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.MsgOpenPosition} MsgOpenPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgOpenPosition.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgOpenPosition message.
+       * @function verify
+       * @memberof ununifi.derivatives.MsgOpenPosition
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgOpenPosition.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.sender != null && message.hasOwnProperty('sender'))
+          if (!$util.isString(message.sender)) return 'sender: string expected';
+        if (message.margin != null && message.hasOwnProperty('margin')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.margin);
+          if (error) return 'margin.' + error;
+        }
+        if (message.position != null && message.hasOwnProperty('position')) {
+          let error = $root.google.protobuf.Any.verify(message.position);
+          if (error) return 'position.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a MsgOpenPosition message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.MsgOpenPosition
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.MsgOpenPosition} MsgOpenPosition
+       */
+      MsgOpenPosition.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.MsgOpenPosition) return object;
+        let message = new $root.ununifi.derivatives.MsgOpenPosition();
+        if (object.sender != null) message.sender = String(object.sender);
+        if (object.margin != null) {
+          if (typeof object.margin !== 'object') throw TypeError('.ununifi.derivatives.MsgOpenPosition.margin: object expected');
+          message.margin = $root.cosmos.base.v1beta1.Coin.fromObject(object.margin);
+        }
+        if (object.position != null) {
+          if (typeof object.position !== 'object') throw TypeError('.ununifi.derivatives.MsgOpenPosition.position: object expected');
+          message.position = $root.google.protobuf.Any.fromObject(object.position);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a MsgOpenPosition message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.MsgOpenPosition
+       * @static
+       * @param {ununifi.derivatives.MsgOpenPosition} message MsgOpenPosition
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgOpenPosition.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.sender = '';
+          object.margin = null;
+          object.position = null;
+        }
+        if (message.sender != null && message.hasOwnProperty('sender')) object.sender = message.sender;
+        if (message.margin != null && message.hasOwnProperty('margin'))
+          object.margin = $root.cosmos.base.v1beta1.Coin.toObject(message.margin, options);
+        if (message.position != null && message.hasOwnProperty('position'))
+          object.position = $root.google.protobuf.Any.toObject(message.position, options);
+        return object;
+      };
+
+      /**
+       * Converts this MsgOpenPosition to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.MsgOpenPosition
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgOpenPosition.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgOpenPosition;
+    })();
+
+    derivatives.MsgOpenPositionResponse = (function () {
+      /**
+       * Properties of a MsgOpenPositionResponse.
+       * @memberof ununifi.derivatives
+       * @interface IMsgOpenPositionResponse
+       */
+
+      /**
+       * Constructs a new MsgOpenPositionResponse.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a MsgOpenPositionResponse.
+       * @implements IMsgOpenPositionResponse
+       * @constructor
+       * @param {ununifi.derivatives.IMsgOpenPositionResponse=} [properties] Properties to set
+       */
+      function MsgOpenPositionResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified MsgOpenPositionResponse message. Does not implicitly {@link ununifi.derivatives.MsgOpenPositionResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.MsgOpenPositionResponse
+       * @static
+       * @param {ununifi.derivatives.IMsgOpenPositionResponse} message MsgOpenPositionResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgOpenPositionResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgOpenPositionResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgOpenPositionResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.MsgOpenPositionResponse
+       * @static
+       * @param {ununifi.derivatives.IMsgOpenPositionResponse} message MsgOpenPositionResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgOpenPositionResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgOpenPositionResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.MsgOpenPositionResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.MsgOpenPositionResponse} MsgOpenPositionResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgOpenPositionResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.MsgOpenPositionResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgOpenPositionResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.MsgOpenPositionResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.MsgOpenPositionResponse} MsgOpenPositionResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgOpenPositionResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgOpenPositionResponse message.
+       * @function verify
+       * @memberof ununifi.derivatives.MsgOpenPositionResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgOpenPositionResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgOpenPositionResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.MsgOpenPositionResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.MsgOpenPositionResponse} MsgOpenPositionResponse
+       */
+      MsgOpenPositionResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.MsgOpenPositionResponse) return object;
+        return new $root.ununifi.derivatives.MsgOpenPositionResponse();
+      };
+
+      /**
+       * Creates a plain object from a MsgOpenPositionResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.MsgOpenPositionResponse
+       * @static
+       * @param {ununifi.derivatives.MsgOpenPositionResponse} message MsgOpenPositionResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgOpenPositionResponse.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this MsgOpenPositionResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.MsgOpenPositionResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgOpenPositionResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgOpenPositionResponse;
+    })();
+
+    derivatives.MsgClosePosition = (function () {
+      /**
+       * Properties of a MsgClosePosition.
+       * @memberof ununifi.derivatives
+       * @interface IMsgClosePosition
+       * @property {string|null} [sender] MsgClosePosition sender
+       * @property {string|null} [position_id] MsgClosePosition position_id
+       */
+
+      /**
+       * Constructs a new MsgClosePosition.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a MsgClosePosition.
+       * @implements IMsgClosePosition
+       * @constructor
+       * @param {ununifi.derivatives.IMsgClosePosition=} [properties] Properties to set
+       */
+      function MsgClosePosition(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * MsgClosePosition sender.
+       * @member {string} sender
+       * @memberof ununifi.derivatives.MsgClosePosition
+       * @instance
+       */
+      MsgClosePosition.prototype.sender = '';
+
+      /**
+       * MsgClosePosition position_id.
+       * @member {string} position_id
+       * @memberof ununifi.derivatives.MsgClosePosition
+       * @instance
+       */
+      MsgClosePosition.prototype.position_id = '';
+
+      /**
+       * Encodes the specified MsgClosePosition message. Does not implicitly {@link ununifi.derivatives.MsgClosePosition.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.MsgClosePosition
+       * @static
+       * @param {ununifi.derivatives.IMsgClosePosition} message MsgClosePosition message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgClosePosition.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.sender != null && Object.hasOwnProperty.call(message, 'sender'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.sender);
+        if (message.position_id != null && Object.hasOwnProperty.call(message, 'position_id'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.position_id);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgClosePosition message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgClosePosition.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.MsgClosePosition
+       * @static
+       * @param {ununifi.derivatives.IMsgClosePosition} message MsgClosePosition message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgClosePosition.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgClosePosition message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.MsgClosePosition
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.MsgClosePosition} MsgClosePosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgClosePosition.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.MsgClosePosition();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.sender = reader.string();
+              break;
+            case 2:
+              message.position_id = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgClosePosition message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.MsgClosePosition
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.MsgClosePosition} MsgClosePosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgClosePosition.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgClosePosition message.
+       * @function verify
+       * @memberof ununifi.derivatives.MsgClosePosition
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgClosePosition.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.sender != null && message.hasOwnProperty('sender'))
+          if (!$util.isString(message.sender)) return 'sender: string expected';
+        if (message.position_id != null && message.hasOwnProperty('position_id'))
+          if (!$util.isString(message.position_id)) return 'position_id: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgClosePosition message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.MsgClosePosition
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.MsgClosePosition} MsgClosePosition
+       */
+      MsgClosePosition.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.MsgClosePosition) return object;
+        let message = new $root.ununifi.derivatives.MsgClosePosition();
+        if (object.sender != null) message.sender = String(object.sender);
+        if (object.position_id != null) message.position_id = String(object.position_id);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a MsgClosePosition message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.MsgClosePosition
+       * @static
+       * @param {ununifi.derivatives.MsgClosePosition} message MsgClosePosition
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgClosePosition.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.sender = '';
+          object.position_id = '';
+        }
+        if (message.sender != null && message.hasOwnProperty('sender')) object.sender = message.sender;
+        if (message.position_id != null && message.hasOwnProperty('position_id')) object.position_id = message.position_id;
+        return object;
+      };
+
+      /**
+       * Converts this MsgClosePosition to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.MsgClosePosition
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgClosePosition.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgClosePosition;
+    })();
+
+    derivatives.MsgClosePositionResponse = (function () {
+      /**
+       * Properties of a MsgClosePositionResponse.
+       * @memberof ununifi.derivatives
+       * @interface IMsgClosePositionResponse
+       */
+
+      /**
+       * Constructs a new MsgClosePositionResponse.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a MsgClosePositionResponse.
+       * @implements IMsgClosePositionResponse
+       * @constructor
+       * @param {ununifi.derivatives.IMsgClosePositionResponse=} [properties] Properties to set
+       */
+      function MsgClosePositionResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified MsgClosePositionResponse message. Does not implicitly {@link ununifi.derivatives.MsgClosePositionResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.MsgClosePositionResponse
+       * @static
+       * @param {ununifi.derivatives.IMsgClosePositionResponse} message MsgClosePositionResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgClosePositionResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgClosePositionResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgClosePositionResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.MsgClosePositionResponse
+       * @static
+       * @param {ununifi.derivatives.IMsgClosePositionResponse} message MsgClosePositionResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgClosePositionResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgClosePositionResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.MsgClosePositionResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.MsgClosePositionResponse} MsgClosePositionResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgClosePositionResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.MsgClosePositionResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgClosePositionResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.MsgClosePositionResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.MsgClosePositionResponse} MsgClosePositionResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgClosePositionResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgClosePositionResponse message.
+       * @function verify
+       * @memberof ununifi.derivatives.MsgClosePositionResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgClosePositionResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgClosePositionResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.MsgClosePositionResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.MsgClosePositionResponse} MsgClosePositionResponse
+       */
+      MsgClosePositionResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.MsgClosePositionResponse) return object;
+        return new $root.ununifi.derivatives.MsgClosePositionResponse();
+      };
+
+      /**
+       * Creates a plain object from a MsgClosePositionResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.MsgClosePositionResponse
+       * @static
+       * @param {ununifi.derivatives.MsgClosePositionResponse} message MsgClosePositionResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgClosePositionResponse.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this MsgClosePositionResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.MsgClosePositionResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgClosePositionResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgClosePositionResponse;
+    })();
+
+    derivatives.PerpetualFuturesPosition = (function () {
+      /**
+       * Properties of a PerpetualFuturesPosition.
+       * @memberof ununifi.derivatives
+       * @interface IPerpetualFuturesPosition
+       * @property {ununifi.derivatives.PositionType|null} [position_type] PerpetualFuturesPosition position_type
+       * @property {string|null} [denom] PerpetualFuturesPosition denom
+       * @property {string|null} [quote_denom] PerpetualFuturesPosition quote_denom
+       * @property {string|null} [size] PerpetualFuturesPosition size
+       * @property {string|null} [leverage] PerpetualFuturesPosition leverage
+       */
+
+      /**
+       * Constructs a new PerpetualFuturesPosition.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a PerpetualFuturesPosition.
+       * @implements IPerpetualFuturesPosition
+       * @constructor
+       * @param {ununifi.derivatives.IPerpetualFuturesPosition=} [properties] Properties to set
+       */
+      function PerpetualFuturesPosition(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * PerpetualFuturesPosition position_type.
+       * @member {ununifi.derivatives.PositionType} position_type
+       * @memberof ununifi.derivatives.PerpetualFuturesPosition
+       * @instance
+       */
+      PerpetualFuturesPosition.prototype.position_type = 0;
+
+      /**
+       * PerpetualFuturesPosition denom.
+       * @member {string} denom
+       * @memberof ununifi.derivatives.PerpetualFuturesPosition
+       * @instance
+       */
+      PerpetualFuturesPosition.prototype.denom = '';
+
+      /**
+       * PerpetualFuturesPosition quote_denom.
+       * @member {string} quote_denom
+       * @memberof ununifi.derivatives.PerpetualFuturesPosition
+       * @instance
+       */
+      PerpetualFuturesPosition.prototype.quote_denom = '';
+
+      /**
+       * PerpetualFuturesPosition size.
+       * @member {string} size
+       * @memberof ununifi.derivatives.PerpetualFuturesPosition
+       * @instance
+       */
+      PerpetualFuturesPosition.prototype.size = '';
+
+      /**
+       * PerpetualFuturesPosition leverage.
+       * @member {string} leverage
+       * @memberof ununifi.derivatives.PerpetualFuturesPosition
+       * @instance
+       */
+      PerpetualFuturesPosition.prototype.leverage = '';
+
+      /**
+       * Encodes the specified PerpetualFuturesPosition message. Does not implicitly {@link ununifi.derivatives.PerpetualFuturesPosition.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.PerpetualFuturesPosition
+       * @static
+       * @param {ununifi.derivatives.IPerpetualFuturesPosition} message PerpetualFuturesPosition message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      PerpetualFuturesPosition.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.position_type != null && Object.hasOwnProperty.call(message, 'position_type'))
+          writer.uint32(/* id 1, wireType 0 =*/ 8).int32(message.position_type);
+        if (message.denom != null && Object.hasOwnProperty.call(message, 'denom'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.denom);
+        if (message.quote_denom != null && Object.hasOwnProperty.call(message, 'quote_denom'))
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.quote_denom);
+        if (message.size != null && Object.hasOwnProperty.call(message, 'size'))
+          writer.uint32(/* id 4, wireType 2 =*/ 34).string(message.size);
+        if (message.leverage != null && Object.hasOwnProperty.call(message, 'leverage'))
+          writer.uint32(/* id 5, wireType 2 =*/ 42).string(message.leverage);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified PerpetualFuturesPosition message, length delimited. Does not implicitly {@link ununifi.derivatives.PerpetualFuturesPosition.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.PerpetualFuturesPosition
+       * @static
+       * @param {ununifi.derivatives.IPerpetualFuturesPosition} message PerpetualFuturesPosition message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      PerpetualFuturesPosition.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a PerpetualFuturesPosition message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.PerpetualFuturesPosition
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.PerpetualFuturesPosition} PerpetualFuturesPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      PerpetualFuturesPosition.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.PerpetualFuturesPosition();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.position_type = reader.int32();
+              break;
+            case 2:
+              message.denom = reader.string();
+              break;
+            case 3:
+              message.quote_denom = reader.string();
+              break;
+            case 4:
+              message.size = reader.string();
+              break;
+            case 5:
+              message.leverage = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a PerpetualFuturesPosition message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.PerpetualFuturesPosition
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.PerpetualFuturesPosition} PerpetualFuturesPosition
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      PerpetualFuturesPosition.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a PerpetualFuturesPosition message.
+       * @function verify
+       * @memberof ununifi.derivatives.PerpetualFuturesPosition
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      PerpetualFuturesPosition.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.position_type != null && message.hasOwnProperty('position_type'))
+          switch (message.position_type) {
+            default:
+              return 'position_type: enum value expected';
+            case 0:
+            case 1:
+            case 2:
+              break;
+          }
+        if (message.denom != null && message.hasOwnProperty('denom')) if (!$util.isString(message.denom)) return 'denom: string expected';
+        if (message.quote_denom != null && message.hasOwnProperty('quote_denom'))
+          if (!$util.isString(message.quote_denom)) return 'quote_denom: string expected';
+        if (message.size != null && message.hasOwnProperty('size')) if (!$util.isString(message.size)) return 'size: string expected';
+        if (message.leverage != null && message.hasOwnProperty('leverage'))
+          if (!$util.isString(message.leverage)) return 'leverage: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a PerpetualFuturesPosition message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.PerpetualFuturesPosition
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.PerpetualFuturesPosition} PerpetualFuturesPosition
+       */
+      PerpetualFuturesPosition.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.PerpetualFuturesPosition) return object;
+        let message = new $root.ununifi.derivatives.PerpetualFuturesPosition();
+        switch (object.position_type) {
+          case 'POSITION_UNKNOWN':
+          case 0:
+            message.position_type = 0;
+            break;
+          case 'LONG':
+          case 1:
+            message.position_type = 1;
+            break;
+          case 'SHORT':
+          case 2:
+            message.position_type = 2;
+            break;
+        }
+        if (object.denom != null) message.denom = String(object.denom);
+        if (object.quote_denom != null) message.quote_denom = String(object.quote_denom);
+        if (object.size != null) message.size = String(object.size);
+        if (object.leverage != null) message.leverage = String(object.leverage);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a PerpetualFuturesPosition message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.PerpetualFuturesPosition
+       * @static
+       * @param {ununifi.derivatives.PerpetualFuturesPosition} message PerpetualFuturesPosition
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      PerpetualFuturesPosition.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.position_type = options.enums === String ? 'POSITION_UNKNOWN' : 0;
+          object.denom = '';
+          object.quote_denom = '';
+          object.size = '';
+          object.leverage = '';
+        }
+        if (message.position_type != null && message.hasOwnProperty('position_type'))
+          object.position_type =
+            options.enums === String ? $root.ununifi.derivatives.PositionType[message.position_type] : message.position_type;
+        if (message.denom != null && message.hasOwnProperty('denom')) object.denom = message.denom;
+        if (message.quote_denom != null && message.hasOwnProperty('quote_denom')) object.quote_denom = message.quote_denom;
+        if (message.size != null && message.hasOwnProperty('size')) object.size = message.size;
+        if (message.leverage != null && message.hasOwnProperty('leverage')) object.leverage = message.leverage;
+        return object;
+      };
+
+      /**
+       * Converts this PerpetualFuturesPosition to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.PerpetualFuturesPosition
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      PerpetualFuturesPosition.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return PerpetualFuturesPosition;
+    })();
+
+    derivatives.GenesisState = (function () {
+      /**
+       * Properties of a GenesisState.
+       * @memberof ununifi.derivatives
+       * @interface IGenesisState
+       * @property {ununifi.derivatives.IParams|null} [params] GenesisState params
+       */
+
+      /**
+       * Constructs a new GenesisState.
+       * @memberof ununifi.derivatives
+       * @classdesc Represents a GenesisState.
+       * @implements IGenesisState
+       * @constructor
+       * @param {ununifi.derivatives.IGenesisState=} [properties] Properties to set
+       */
+      function GenesisState(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * GenesisState params.
+       * @member {ununifi.derivatives.IParams|null|undefined} params
+       * @memberof ununifi.derivatives.GenesisState
+       * @instance
+       */
+      GenesisState.prototype.params = null;
+
+      /**
+       * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.derivatives.GenesisState.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.derivatives.GenesisState
+       * @static
+       * @param {ununifi.derivatives.IGenesisState} message GenesisState message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      GenesisState.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.params != null && Object.hasOwnProperty.call(message, 'params'))
+          $root.ununifi.derivatives.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.derivatives.GenesisState.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.derivatives.GenesisState
+       * @static
+       * @param {ununifi.derivatives.IGenesisState} message GenesisState message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      GenesisState.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a GenesisState message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.derivatives.GenesisState
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.derivatives.GenesisState} GenesisState
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      GenesisState.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.derivatives.GenesisState();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.params = $root.ununifi.derivatives.Params.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a GenesisState message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.derivatives.GenesisState
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.derivatives.GenesisState} GenesisState
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      GenesisState.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a GenesisState message.
+       * @function verify
+       * @memberof ununifi.derivatives.GenesisState
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      GenesisState.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.params != null && message.hasOwnProperty('params')) {
+          let error = $root.ununifi.derivatives.Params.verify(message.params);
+          if (error) return 'params.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a GenesisState message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.derivatives.GenesisState
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.derivatives.GenesisState} GenesisState
+       */
+      GenesisState.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.derivatives.GenesisState) return object;
+        let message = new $root.ununifi.derivatives.GenesisState();
+        if (object.params != null) {
+          if (typeof object.params !== 'object') throw TypeError('.ununifi.derivatives.GenesisState.params: object expected');
+          message.params = $root.ununifi.derivatives.Params.fromObject(object.params);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a GenesisState message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.derivatives.GenesisState
+       * @static
+       * @param {ununifi.derivatives.GenesisState} message GenesisState
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      GenesisState.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.params = null;
+        if (message.params != null && message.hasOwnProperty('params'))
+          object.params = $root.ununifi.derivatives.Params.toObject(message.params, options);
+        return object;
+      };
+
+      /**
+       * Converts this GenesisState to JSON.
+       * @function toJSON
+       * @memberof ununifi.derivatives.GenesisState
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      GenesisState.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return GenesisState;
+    })();
+
+    return derivatives;
+  })();
+
   ununifi.ecosystemincentive = (function () {
     /**
      * Namespace ecosystemincentive.
@@ -46511,12 +51890,198 @@ export const ununifi = ($root.ununifi = (() => {
       return PostedPrice;
     })();
 
+    pricefeed.DenomPair = (function () {
+      /**
+       * Properties of a DenomPair.
+       * @memberof ununifi.pricefeed
+       * @interface IDenomPair
+       * @property {string|null} [internal_denom] DenomPair internal_denom
+       * @property {string|null} [market_denom] DenomPair market_denom
+       */
+
+      /**
+       * Constructs a new DenomPair.
+       * @memberof ununifi.pricefeed
+       * @classdesc Represents a DenomPair.
+       * @implements IDenomPair
+       * @constructor
+       * @param {ununifi.pricefeed.IDenomPair=} [properties] Properties to set
+       */
+      function DenomPair(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * DenomPair internal_denom.
+       * @member {string} internal_denom
+       * @memberof ununifi.pricefeed.DenomPair
+       * @instance
+       */
+      DenomPair.prototype.internal_denom = '';
+
+      /**
+       * DenomPair market_denom.
+       * @member {string} market_denom
+       * @memberof ununifi.pricefeed.DenomPair
+       * @instance
+       */
+      DenomPair.prototype.market_denom = '';
+
+      /**
+       * Encodes the specified DenomPair message. Does not implicitly {@link ununifi.pricefeed.DenomPair.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.pricefeed.DenomPair
+       * @static
+       * @param {ununifi.pricefeed.IDenomPair} message DenomPair message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      DenomPair.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.internal_denom != null && Object.hasOwnProperty.call(message, 'internal_denom'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.internal_denom);
+        if (message.market_denom != null && Object.hasOwnProperty.call(message, 'market_denom'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.market_denom);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified DenomPair message, length delimited. Does not implicitly {@link ununifi.pricefeed.DenomPair.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.pricefeed.DenomPair
+       * @static
+       * @param {ununifi.pricefeed.IDenomPair} message DenomPair message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      DenomPair.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a DenomPair message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.pricefeed.DenomPair
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.pricefeed.DenomPair} DenomPair
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      DenomPair.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.pricefeed.DenomPair();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.internal_denom = reader.string();
+              break;
+            case 2:
+              message.market_denom = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a DenomPair message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.pricefeed.DenomPair
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.pricefeed.DenomPair} DenomPair
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      DenomPair.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a DenomPair message.
+       * @function verify
+       * @memberof ununifi.pricefeed.DenomPair
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      DenomPair.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.internal_denom != null && message.hasOwnProperty('internal_denom'))
+          if (!$util.isString(message.internal_denom)) return 'internal_denom: string expected';
+        if (message.market_denom != null && message.hasOwnProperty('market_denom'))
+          if (!$util.isString(message.market_denom)) return 'market_denom: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a DenomPair message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.pricefeed.DenomPair
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.pricefeed.DenomPair} DenomPair
+       */
+      DenomPair.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.pricefeed.DenomPair) return object;
+        let message = new $root.ununifi.pricefeed.DenomPair();
+        if (object.internal_denom != null) message.internal_denom = String(object.internal_denom);
+        if (object.market_denom != null) message.market_denom = String(object.market_denom);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a DenomPair message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.pricefeed.DenomPair
+       * @static
+       * @param {ununifi.pricefeed.DenomPair} message DenomPair
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      DenomPair.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.internal_denom = '';
+          object.market_denom = '';
+        }
+        if (message.internal_denom != null && message.hasOwnProperty('internal_denom')) object.internal_denom = message.internal_denom;
+        if (message.market_denom != null && message.hasOwnProperty('market_denom')) object.market_denom = message.market_denom;
+        return object;
+      };
+
+      /**
+       * Converts this DenomPair to JSON.
+       * @function toJSON
+       * @memberof ununifi.pricefeed.DenomPair
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      DenomPair.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return DenomPair;
+    })();
+
     pricefeed.Params = (function () {
       /**
        * Properties of a Params.
        * @memberof ununifi.pricefeed
        * @interface IParams
        * @property {Array.<ununifi.pricefeed.IMarket>|null} [markets] Params markets
+       * @property {Array.<ununifi.pricefeed.IDenomPair>|null} [denom_pairs] Params denom_pairs
        */
 
       /**
@@ -46529,6 +52094,7 @@ export const ununifi = ($root.ununifi = (() => {
        */
       function Params(properties) {
         this.markets = [];
+        this.denom_pairs = [];
         if (properties)
           for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
             if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
@@ -46541,6 +52107,14 @@ export const ununifi = ($root.ununifi = (() => {
        * @instance
        */
       Params.prototype.markets = $util.emptyArray;
+
+      /**
+       * Params denom_pairs.
+       * @member {Array.<ununifi.pricefeed.IDenomPair>} denom_pairs
+       * @memberof ununifi.pricefeed.Params
+       * @instance
+       */
+      Params.prototype.denom_pairs = $util.emptyArray;
 
       /**
        * Encodes the specified Params message. Does not implicitly {@link ununifi.pricefeed.Params.verify|verify} messages.
@@ -46556,6 +52130,9 @@ export const ununifi = ($root.ununifi = (() => {
         if (message.markets != null && message.markets.length)
           for (let i = 0; i < message.markets.length; ++i)
             $root.ununifi.pricefeed.Market.encode(message.markets[i], writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        if (message.denom_pairs != null && message.denom_pairs.length)
+          for (let i = 0; i < message.denom_pairs.length; ++i)
+            $root.ununifi.pricefeed.DenomPair.encode(message.denom_pairs[i], writer.uint32(/* id 2, wireType 2 =*/ 18).fork()).ldelim();
         return writer;
       };
 
@@ -46593,6 +52170,10 @@ export const ununifi = ($root.ununifi = (() => {
             case 1:
               if (!(message.markets && message.markets.length)) message.markets = [];
               message.markets.push($root.ununifi.pricefeed.Market.decode(reader, reader.uint32()));
+              break;
+            case 2:
+              if (!(message.denom_pairs && message.denom_pairs.length)) message.denom_pairs = [];
+              message.denom_pairs.push($root.ununifi.pricefeed.DenomPair.decode(reader, reader.uint32()));
               break;
             default:
               reader.skipType(tag & 7);
@@ -46634,6 +52215,13 @@ export const ununifi = ($root.ununifi = (() => {
             if (error) return 'markets.' + error;
           }
         }
+        if (message.denom_pairs != null && message.hasOwnProperty('denom_pairs')) {
+          if (!Array.isArray(message.denom_pairs)) return 'denom_pairs: array expected';
+          for (let i = 0; i < message.denom_pairs.length; ++i) {
+            let error = $root.ununifi.pricefeed.DenomPair.verify(message.denom_pairs[i]);
+            if (error) return 'denom_pairs.' + error;
+          }
+        }
         return null;
       };
 
@@ -46656,6 +52244,14 @@ export const ununifi = ($root.ununifi = (() => {
             message.markets[i] = $root.ununifi.pricefeed.Market.fromObject(object.markets[i]);
           }
         }
+        if (object.denom_pairs) {
+          if (!Array.isArray(object.denom_pairs)) throw TypeError('.ununifi.pricefeed.Params.denom_pairs: array expected');
+          message.denom_pairs = [];
+          for (let i = 0; i < object.denom_pairs.length; ++i) {
+            if (typeof object.denom_pairs[i] !== 'object') throw TypeError('.ununifi.pricefeed.Params.denom_pairs: object expected');
+            message.denom_pairs[i] = $root.ununifi.pricefeed.DenomPair.fromObject(object.denom_pairs[i]);
+          }
+        }
         return message;
       };
 
@@ -46671,11 +52267,19 @@ export const ununifi = ($root.ununifi = (() => {
       Params.toObject = function toObject(message, options) {
         if (!options) options = {};
         let object = {};
-        if (options.arrays || options.defaults) object.markets = [];
+        if (options.arrays || options.defaults) {
+          object.markets = [];
+          object.denom_pairs = [];
+        }
         if (message.markets && message.markets.length) {
           object.markets = [];
           for (let j = 0; j < message.markets.length; ++j)
             object.markets[j] = $root.ununifi.pricefeed.Market.toObject(message.markets[j], options);
+        }
+        if (message.denom_pairs && message.denom_pairs.length) {
+          object.denom_pairs = [];
+          for (let j = 0; j < message.denom_pairs.length; ++j)
+            object.denom_pairs[j] = $root.ununifi.pricefeed.DenomPair.toObject(message.denom_pairs[j], options);
         }
         return object;
       };
