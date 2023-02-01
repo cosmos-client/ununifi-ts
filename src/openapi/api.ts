@@ -47,6 +47,74 @@ export interface AccountAll200Response {
 /**
  *
  * @export
+ * @interface AllPositions200Response
+ */
+export interface AllPositions200Response {
+  /**
+   *
+   * @type {Array<AllPositions200ResponsePositionsInner>}
+   * @memberof AllPositions200Response
+   */
+  positions?: Array<AllPositions200ResponsePositionsInner>;
+  /**
+   *
+   * @type {AuctionAll200ResponsePagination}
+   * @memberof AllPositions200Response
+   */
+  pagination?: AuctionAll200ResponsePagination;
+}
+/**
+ *
+ * @export
+ * @interface AllPositions200ResponsePositionsInner
+ */
+export interface AllPositions200ResponsePositionsInner {
+  /**
+   *
+   * @type {string}
+   * @memberof AllPositions200ResponsePositionsInner
+   */
+  id?: string;
+  /**
+   *
+   * @type {DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner}
+   * @memberof AllPositions200ResponsePositionsInner
+   */
+  market?: DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner;
+  /**
+   *
+   * @type {string}
+   * @memberof AllPositions200ResponsePositionsInner
+   */
+  address?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AllPositions200ResponsePositionsInner
+   */
+  opened_at?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AllPositions200ResponsePositionsInner
+   */
+  opened_height?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AllPositions200ResponsePositionsInner
+   */
+  opened_rate?: string;
+  /**
+   *
+   * @type {AuctionAll200ResponseAuctionsInner}
+   * @memberof AllPositions200ResponsePositionsInner
+   */
+  position_instance?: AuctionAll200ResponseAuctionsInner;
+}
+/**
+ *
+ * @export
  * @interface AllRewards200Response
  */
 export interface AllRewards200Response {
@@ -893,46 +961,103 @@ export interface DerivativesParams200ResponseParams {
   pool?: DerivativesParams200ResponseParamsPool;
   /**
    *
-   * @type {string}
+   * @type {DerivativesParams200ResponseParamsPerpetualFutures}
    * @memberof DerivativesParams200ResponseParams
    */
-  lpt_price_quote_denom?: string;
+  perpetual_futures?: DerivativesParams200ResponseParamsPerpetualFutures;
+  /**
+   *
+   * @type {DerivativesParams200ResponseParamsPerpetualOptions}
+   * @memberof DerivativesParams200ResponseParams
+   */
+  perpetual_options?: DerivativesParams200ResponseParamsPerpetualOptions;
+}
+/**
+ *
+ * @export
+ * @interface DerivativesParams200ResponseParamsPerpetualFutures
+ */
+export interface DerivativesParams200ResponseParamsPerpetualFutures {
   /**
    *
    * @type {string}
-   * @memberof DerivativesParams200ResponseParams
-   */
-  base_lpt_mint_fee?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof DerivativesParams200ResponseParams
-   */
-  base_lpt_redeem_fee?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof DerivativesParams200ResponseParams
-   */
-  borrowing_fee_rate_per_hour?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof DerivativesParams200ResponseParams
+   * @memberof DerivativesParams200ResponseParamsPerpetualFutures
    */
   commission_rate?: string;
   /**
    *
    * @type {string}
-   * @memberof DerivativesParams200ResponseParams
+   * @memberof DerivativesParams200ResponseParamsPerpetualFutures
    */
   margin_maintenance_rate?: string;
   /**
    *
    * @type {string}
-   * @memberof DerivativesParams200ResponseParams
+   * @memberof DerivativesParams200ResponseParamsPerpetualFutures
    */
-  funding_rate_proportional_coefficient?: string;
+  imaginary_funding_rate_proportional_coefficient?: string;
+  /**
+   *
+   * @type {Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>}
+   * @memberof DerivativesParams200ResponseParamsPerpetualFutures
+   */
+  markets?: Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>;
+}
+/**
+ *
+ * @export
+ * @interface DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner
+ */
+export interface DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner {
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner
+   */
+  denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner
+   */
+  quote_denom?: string;
+}
+/**
+ *
+ * @export
+ * @interface DerivativesParams200ResponseParamsPerpetualOptions
+ */
+export interface DerivativesParams200ResponseParamsPerpetualOptions {
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPerpetualOptions
+   */
+  premium_commission_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPerpetualOptions
+   */
+  strike_commission_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPerpetualOptions
+   */
+  margin_maintenance_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPerpetualOptions
+   */
+  imaginary_funding_rate_proportional_coefficient?: string;
+  /**
+   *
+   * @type {Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>}
+   * @memberof DerivativesParams200ResponseParamsPerpetualOptions
+   */
+  markets?: Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>;
 }
 /**
  *
@@ -940,6 +1065,36 @@ export interface DerivativesParams200ResponseParams {
  * @interface DerivativesParams200ResponseParamsPool
  */
 export interface DerivativesParams200ResponseParamsPool {
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPool
+   */
+  quote_ticker?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPool
+   */
+  base_lpt_mint_fee?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPool
+   */
+  base_lpt_redeem_fee?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPool
+   */
+  borrowing_fee_rate_per_hour?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPool
+   */
+  liquidation_needed_report_reward_rate?: string;
   /**
    *
    * @type {Array<DerivativesParams200ResponseParamsPoolAcceptedAssetsInner>}
@@ -964,23 +1119,8 @@ export interface DerivativesParams200ResponseParamsPoolAcceptedAssetsInner {
    * @type {string}
    * @memberof DerivativesParams200ResponseParamsPoolAcceptedAssetsInner
    */
-  type?: DerivativesParams200ResponseParamsPoolAcceptedAssetsInnerTypeEnum;
-  /**
-   *
-   * @type {string}
-   * @memberof DerivativesParams200ResponseParamsPoolAcceptedAssetsInner
-   */
   target_weight?: string;
 }
-
-export const DerivativesParams200ResponseParamsPoolAcceptedAssetsInnerTypeEnum = {
-  Real: 'Real',
-  Imaginary: 'Imaginary',
-} as const;
-
-export type DerivativesParams200ResponseParamsPoolAcceptedAssetsInnerTypeEnum =
-  typeof DerivativesParams200ResponseParamsPoolAcceptedAssetsInnerTypeEnum[keyof typeof DerivativesParams200ResponseParamsPoolAcceptedAssetsInnerTypeEnum];
-
 /**
  *
  * @export
@@ -1915,52 +2055,163 @@ export type PaymentStatus200ResponsePaymentStatusStateEnum =
 /**
  *
  * @export
- * @interface Positions200Response
+ * @interface PerpetualFutures200Response
  */
-export interface Positions200Response {
+export interface PerpetualFutures200Response {
   /**
    *
-   * @type {Array<Positions200ResponsePositionsInner>}
-   * @memberof Positions200Response
+   * @type {string}
+   * @memberof PerpetualFutures200Response
    */
-  positions?: Array<Positions200ResponsePositionsInner>;
+  metrics_quote_ticker?: string;
   /**
    *
-   * @type {AuctionAll200ResponsePagination}
-   * @memberof Positions200Response
+   * @type {string}
+   * @memberof PerpetualFutures200Response
    */
-  pagination?: AuctionAll200ResponsePagination;
+  volume_24hours?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof PerpetualFutures200Response
+   */
+  fees_24hours?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof PerpetualFutures200Response
+   */
+  long_positions?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof PerpetualFutures200Response
+   */
+  short_positions?: string;
 }
 /**
  *
  * @export
- * @interface Positions200ResponsePositionsInner
+ * @interface PerpetualFuturesMarket200Response
  */
-export interface Positions200ResponsePositionsInner {
+export interface PerpetualFuturesMarket200Response {
   /**
    *
    * @type {string}
-   * @memberof Positions200ResponsePositionsInner
+   * @memberof PerpetualFuturesMarket200Response
    */
-  id?: string;
+  price?: string;
   /**
    *
    * @type {string}
-   * @memberof Positions200ResponsePositionsInner
+   * @memberof PerpetualFuturesMarket200Response
    */
-  address?: string;
+  metrics_quote_ticker?: string;
   /**
    *
    * @type {string}
-   * @memberof Positions200ResponsePositionsInner
+   * @memberof PerpetualFuturesMarket200Response
    */
-  start_at?: string;
+  volume_24hours?: string;
   /**
    *
-   * @type {AuctionAll200ResponseAuctionsInner}
-   * @memberof Positions200ResponsePositionsInner
+   * @type {string}
+   * @memberof PerpetualFuturesMarket200Response
    */
-  position?: AuctionAll200ResponseAuctionsInner;
+  fees_24hours?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof PerpetualFuturesMarket200Response
+   */
+  long_positions?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof PerpetualFuturesMarket200Response
+   */
+  short_positions?: string;
+}
+/**
+ *
+ * @export
+ * @interface Pool200Response
+ */
+export interface Pool200Response {
+  /**
+   *
+   * @type {string}
+   * @memberof Pool200Response
+   */
+  metrics_quote_ticker?: string;
+  /**
+   *
+   * @type {Pool200ResponsePoolMarketCap}
+   * @memberof Pool200Response
+   */
+  pool_market_cap?: Pool200ResponsePoolMarketCap;
+  /**
+   *
+   * @type {string}
+   * @memberof Pool200Response
+   */
+  volume_24hours?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Pool200Response
+   */
+  fees_24hours?: string;
+}
+/**
+ *
+ * @export
+ * @interface Pool200ResponsePoolMarketCap
+ */
+export interface Pool200ResponsePoolMarketCap {
+  /**
+   *
+   * @type {string}
+   * @memberof Pool200ResponsePoolMarketCap
+   */
+  quote_ticker?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Pool200ResponsePoolMarketCap
+   */
+  total?: string;
+  /**
+   *
+   * @type {Array<Pool200ResponsePoolMarketCapBreakdownInner>}
+   * @memberof Pool200ResponsePoolMarketCap
+   */
+  breakdown?: Array<Pool200ResponsePoolMarketCapBreakdownInner>;
+}
+/**
+ *
+ * @export
+ * @interface Pool200ResponsePoolMarketCapBreakdownInner
+ */
+export interface Pool200ResponsePoolMarketCapBreakdownInner {
+  /**
+   *
+   * @type {string}
+   * @memberof Pool200ResponsePoolMarketCapBreakdownInner
+   */
+  denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Pool200ResponsePoolMarketCapBreakdownInner
+   */
+  amount?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Pool200ResponsePoolMarketCapBreakdownInner
+   */
+  price?: string;
 }
 /**
  *
@@ -2040,29 +2291,29 @@ export interface PricefeedParams200ResponseParams {
   markets?: Array<MarketAll200ResponseMarketsInner>;
   /**
    *
-   * @type {Array<PricefeedParams200ResponseParamsDenomPairsInner>}
+   * @type {Array<PricefeedParams200ResponseParamsDenomTickerPairsInner>}
    * @memberof PricefeedParams200ResponseParams
    */
-  denom_pairs?: Array<PricefeedParams200ResponseParamsDenomPairsInner>;
+  denom_ticker_pairs?: Array<PricefeedParams200ResponseParamsDenomTickerPairsInner>;
 }
 /**
  *
  * @export
- * @interface PricefeedParams200ResponseParamsDenomPairsInner
+ * @interface PricefeedParams200ResponseParamsDenomTickerPairsInner
  */
-export interface PricefeedParams200ResponseParamsDenomPairsInner {
+export interface PricefeedParams200ResponseParamsDenomTickerPairsInner {
   /**
    *
    * @type {string}
-   * @memberof PricefeedParams200ResponseParamsDenomPairsInner
+   * @memberof PricefeedParams200ResponseParamsDenomTickerPairsInner
    */
-  internal_denom?: string;
+  denom?: string;
   /**
    *
    * @type {string}
-   * @memberof PricefeedParams200ResponseParamsDenomPairsInner
+   * @memberof PricefeedParams200ResponseParamsDenomTickerPairsInner
    */
-  market_denom?: string;
+  ticker?: string;
 }
 /**
  *
@@ -2637,16 +2888,22 @@ export interface UnunifiCdpQueryParamsResponse {
 /**
  *
  * @export
- * @enum {string}
+ * @interface UnunifiDerivativesMarket
  */
-
-export const UnunifiDerivativesAssetType = {
-  Real: 'Real',
-  Imaginary: 'Imaginary',
-} as const;
-
-export type UnunifiDerivativesAssetType = typeof UnunifiDerivativesAssetType[keyof typeof UnunifiDerivativesAssetType];
-
+export interface UnunifiDerivativesMarket {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesMarket
+   */
+  denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesMarket
+   */
+  quote_denom?: string;
+}
 /**
  *
  * @export
@@ -2661,46 +2918,84 @@ export interface UnunifiDerivativesParams {
   pool?: DerivativesParams200ResponseParamsPool;
   /**
    *
-   * @type {string}
+   * @type {DerivativesParams200ResponseParamsPerpetualFutures}
    * @memberof UnunifiDerivativesParams
    */
-  lpt_price_quote_denom?: string;
+  perpetual_futures?: DerivativesParams200ResponseParamsPerpetualFutures;
+  /**
+   *
+   * @type {DerivativesParams200ResponseParamsPerpetualOptions}
+   * @memberof UnunifiDerivativesParams
+   */
+  perpetual_options?: DerivativesParams200ResponseParamsPerpetualOptions;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesPerpetualFuturesParams
+ */
+export interface UnunifiDerivativesPerpetualFuturesParams {
   /**
    *
    * @type {string}
-   * @memberof UnunifiDerivativesParams
-   */
-  base_lpt_mint_fee?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiDerivativesParams
-   */
-  base_lpt_redeem_fee?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiDerivativesParams
-   */
-  borrowing_fee_rate_per_hour?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiDerivativesParams
+   * @memberof UnunifiDerivativesPerpetualFuturesParams
    */
   commission_rate?: string;
   /**
    *
    * @type {string}
-   * @memberof UnunifiDerivativesParams
+   * @memberof UnunifiDerivativesPerpetualFuturesParams
    */
   margin_maintenance_rate?: string;
   /**
    *
    * @type {string}
-   * @memberof UnunifiDerivativesParams
+   * @memberof UnunifiDerivativesPerpetualFuturesParams
    */
-  funding_rate_proportional_coefficient?: string;
+  imaginary_funding_rate_proportional_coefficient?: string;
+  /**
+   *
+   * @type {Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>}
+   * @memberof UnunifiDerivativesPerpetualFuturesParams
+   */
+  markets?: Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesPerpetualOptionsParams
+ */
+export interface UnunifiDerivativesPerpetualOptionsParams {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPerpetualOptionsParams
+   */
+  premium_commission_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPerpetualOptionsParams
+   */
+  strike_commission_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPerpetualOptionsParams
+   */
+  margin_maintenance_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPerpetualOptionsParams
+   */
+  imaginary_funding_rate_proportional_coefficient?: string;
+  /**
+   *
+   * @type {Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>}
+   * @memberof UnunifiDerivativesPerpetualOptionsParams
+   */
+  markets?: Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>;
 }
 /**
  *
@@ -2708,6 +3003,36 @@ export interface UnunifiDerivativesParams {
  * @interface UnunifiDerivativesPool
  */
 export interface UnunifiDerivativesPool {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPool
+   */
+  quote_ticker?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPool
+   */
+  base_lpt_mint_fee?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPool
+   */
+  base_lpt_redeem_fee?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPool
+   */
+  borrowing_fee_rate_per_hour?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPool
+   */
+  liquidation_needed_report_reward_rate?: string;
   /**
    *
    * @type {Array<DerivativesParams200ResponseParamsPoolAcceptedAssetsInner>}
@@ -2732,23 +3057,145 @@ export interface UnunifiDerivativesPoolAsset {
    * @type {string}
    * @memberof UnunifiDerivativesPoolAsset
    */
-  type?: UnunifiDerivativesPoolAssetTypeEnum;
+  target_weight?: string;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesPoolMarketCap
+ */
+export interface UnunifiDerivativesPoolMarketCap {
   /**
    *
    * @type {string}
-   * @memberof UnunifiDerivativesPoolAsset
+   * @memberof UnunifiDerivativesPoolMarketCap
    */
-  target_weight?: string;
+  quote_ticker?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPoolMarketCap
+   */
+  total?: string;
+  /**
+   *
+   * @type {Array<Pool200ResponsePoolMarketCapBreakdownInner>}
+   * @memberof UnunifiDerivativesPoolMarketCap
+   */
+  breakdown?: Array<Pool200ResponsePoolMarketCapBreakdownInner>;
 }
-
-export const UnunifiDerivativesPoolAssetTypeEnum = {
-  Real: 'Real',
-  Imaginary: 'Imaginary',
-} as const;
-
-export type UnunifiDerivativesPoolAssetTypeEnum =
-  typeof UnunifiDerivativesPoolAssetTypeEnum[keyof typeof UnunifiDerivativesPoolAssetTypeEnum];
-
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesPoolMarketCapBreakdown
+ */
+export interface UnunifiDerivativesPoolMarketCapBreakdown {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPoolMarketCapBreakdown
+   */
+  denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPoolMarketCapBreakdown
+   */
+  amount?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPoolMarketCapBreakdown
+   */
+  price?: string;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesPosition
+ */
+export interface UnunifiDerivativesPosition {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPosition
+   */
+  id?: string;
+  /**
+   *
+   * @type {DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner}
+   * @memberof UnunifiDerivativesPosition
+   */
+  market?: DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPosition
+   */
+  address?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPosition
+   */
+  opened_at?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPosition
+   */
+  opened_height?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPosition
+   */
+  opened_rate?: string;
+  /**
+   *
+   * @type {AuctionAll200ResponseAuctionsInner}
+   * @memberof UnunifiDerivativesPosition
+   */
+  position_instance?: AuctionAll200ResponseAuctionsInner;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesQueryAddressPositionsResponse
+ */
+export interface UnunifiDerivativesQueryAddressPositionsResponse {
+  /**
+   *
+   * @type {Array<AllPositions200ResponsePositionsInner>}
+   * @memberof UnunifiDerivativesQueryAddressPositionsResponse
+   */
+  positions?: Array<AllPositions200ResponsePositionsInner>;
+  /**
+   *
+   * @type {AuctionAll200ResponsePagination}
+   * @memberof UnunifiDerivativesQueryAddressPositionsResponse
+   */
+  pagination?: AuctionAll200ResponsePagination;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesQueryAllPositionsResponse
+ */
+export interface UnunifiDerivativesQueryAllPositionsResponse {
+  /**
+   *
+   * @type {Array<AllPositions200ResponsePositionsInner>}
+   * @memberof UnunifiDerivativesQueryAllPositionsResponse
+   */
+  positions?: Array<AllPositions200ResponsePositionsInner>;
+  /**
+   *
+   * @type {AuctionAll200ResponsePagination}
+   * @memberof UnunifiDerivativesQueryAllPositionsResponse
+   */
+  pagination?: AuctionAll200ResponsePagination;
+}
 /**
  *
  * @export
@@ -2791,52 +3238,113 @@ export interface UnunifiDerivativesQueryParamsResponse {
 /**
  *
  * @export
- * @interface UnunifiDerivativesQueryPositionsResponse
+ * @interface UnunifiDerivativesQueryPerpetualFuturesMarketResponse
  */
-export interface UnunifiDerivativesQueryPositionsResponse {
+export interface UnunifiDerivativesQueryPerpetualFuturesMarketResponse {
   /**
    *
-   * @type {Array<Positions200ResponsePositionsInner>}
-   * @memberof UnunifiDerivativesQueryPositionsResponse
+   * @type {string}
+   * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
    */
-  positions?: Array<Positions200ResponsePositionsInner>;
+  price?: string;
   /**
    *
-   * @type {AuctionAll200ResponsePagination}
-   * @memberof UnunifiDerivativesQueryPositionsResponse
+   * @type {string}
+   * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
    */
-  pagination?: AuctionAll200ResponsePagination;
+  metrics_quote_ticker?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
+   */
+  volume_24hours?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
+   */
+  fees_24hours?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
+   */
+  long_positions?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
+   */
+  short_positions?: string;
 }
 /**
  *
  * @export
- * @interface UnunifiDerivativesWrappedPosition
+ * @interface UnunifiDerivativesQueryPerpetualFuturesResponse
  */
-export interface UnunifiDerivativesWrappedPosition {
+export interface UnunifiDerivativesQueryPerpetualFuturesResponse {
   /**
    *
    * @type {string}
-   * @memberof UnunifiDerivativesWrappedPosition
+   * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
    */
-  id?: string;
+  metrics_quote_ticker?: string;
   /**
    *
    * @type {string}
-   * @memberof UnunifiDerivativesWrappedPosition
+   * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
    */
-  address?: string;
+  volume_24hours?: string;
   /**
    *
    * @type {string}
-   * @memberof UnunifiDerivativesWrappedPosition
+   * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
    */
-  start_at?: string;
+  fees_24hours?: string;
   /**
    *
-   * @type {AuctionAll200ResponseAuctionsInner}
-   * @memberof UnunifiDerivativesWrappedPosition
+   * @type {string}
+   * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
    */
-  position?: AuctionAll200ResponseAuctionsInner;
+  long_positions?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
+   */
+  short_positions?: string;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesQueryPoolResponse
+ */
+export interface UnunifiDerivativesQueryPoolResponse {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesQueryPoolResponse
+   */
+  metrics_quote_ticker?: string;
+  /**
+   *
+   * @type {Pool200ResponsePoolMarketCap}
+   * @memberof UnunifiDerivativesQueryPoolResponse
+   */
+  pool_market_cap?: Pool200ResponsePoolMarketCap;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesQueryPoolResponse
+   */
+  volume_24hours?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesQueryPoolResponse
+   */
+  fees_24hours?: string;
 }
 /**
  *
@@ -3988,21 +4496,21 @@ export interface UnunifiPricefeedCurrentPrice {
 /**
  *
  * @export
- * @interface UnunifiPricefeedDenomPair
+ * @interface UnunifiPricefeedDenomTickerPair
  */
-export interface UnunifiPricefeedDenomPair {
+export interface UnunifiPricefeedDenomTickerPair {
   /**
    *
    * @type {string}
-   * @memberof UnunifiPricefeedDenomPair
+   * @memberof UnunifiPricefeedDenomTickerPair
    */
-  internal_denom?: string;
+  denom?: string;
   /**
    *
    * @type {string}
-   * @memberof UnunifiPricefeedDenomPair
+   * @memberof UnunifiPricefeedDenomTickerPair
    */
-  market_denom?: string;
+  ticker?: string;
 }
 /**
  *
@@ -4055,10 +4563,10 @@ export interface UnunifiPricefeedParams {
   markets?: Array<MarketAll200ResponseMarketsInner>;
   /**
    *
-   * @type {Array<PricefeedParams200ResponseParamsDenomPairsInner>}
+   * @type {Array<PricefeedParams200ResponseParamsDenomTickerPairsInner>}
    * @memberof UnunifiPricefeedParams
    */
-  denom_pairs?: Array<PricefeedParams200ResponseParamsDenomPairsInner>;
+  denom_ticker_pairs?: Array<PricefeedParams200ResponseParamsDenomTickerPairsInner>;
 }
 /**
  *
@@ -4334,6 +4842,63 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
      */
     accountAll: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       const localVarPath = `/ununifi/cdp/accounts`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @param {string} address
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    addressPositions: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      // verify required parameter 'address' is not null or undefined
+      assertParamExists('addressPositions', 'address', address);
+      const localVarPath = `/ununifi/derivatives/positions/{address}`.replace(`{${'address'}}`, encodeURIComponent(String(address)));
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    allPositions: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/derivatives/positions`;
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -4986,7 +5551,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
-     * @summary this line is used by starport scaffolding # 2
      * @param {string} [beforeHeight]
      * @param {string} [afterHeight]
      * @param {*} [options] Override http request option.
@@ -5501,14 +6065,136 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
-     * @param {string} address
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    positions: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-      // verify required parameter 'address' is not null or undefined
-      assertParamExists('positions', 'address', address);
-      const localVarPath = `/ununifi/derivatives/positions/{address}`.replace(`{${'address'}}`, encodeURIComponent(String(address)));
+    perpetualFutures: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/derivatives/perpetual-futures`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @param {string} denom
+     * @param {string} quoteDenom
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    perpetualFuturesMarket: async (denom: string, quoteDenom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      // verify required parameter 'denom' is not null or undefined
+      assertParamExists('perpetualFuturesMarket', 'denom', denom);
+      // verify required parameter 'quoteDenom' is not null or undefined
+      assertParamExists('perpetualFuturesMarket', 'quoteDenom', quoteDenom);
+      const localVarPath = `/ununifi/derivatives/perpetual-futures/{denom}/{quote_denom}`
+        .replace(`{${'denom'}}`, encodeURIComponent(String(denom)))
+        .replace(`{${'quote_denom'}}`, encodeURIComponent(String(quoteDenom)));
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    perpetualOptions: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/derivatives/perpetual-options`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @param {string} denom
+     * @param {string} quoteDenom
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    perpetualOptionsMarket: async (denom: string, quoteDenom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      // verify required parameter 'denom' is not null or undefined
+      assertParamExists('perpetualOptionsMarket', 'denom', denom);
+      // verify required parameter 'quoteDenom' is not null or undefined
+      assertParamExists('perpetualOptionsMarket', 'quoteDenom', quoteDenom);
+      const localVarPath = `/ununifi/derivatives/perpetual-options/{denom}/{quote_denom}`
+        .replace(`{${'denom'}}`, encodeURIComponent(String(denom)))
+        .replace(`{${'quote_denom'}}`, encodeURIComponent(String(quoteDenom)));
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @summary this line is used by starport scaffolding # 2
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    pool: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/derivatives/pool`;
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -5849,6 +6535,30 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
+     * @param {string} address
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async addressPositions(
+      address: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllPositions200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.addressPositions(address, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async allPositions(
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllPositions200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.allPositions(options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
      * @param {string} subjectAddr
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -6113,7 +6823,6 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
-     * @summary this line is used by starport scaffolding # 2
      * @param {string} [beforeHeight]
      * @param {string} [afterHeight]
      * @param {*} [options] Override http request option.
@@ -6332,15 +7041,62 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
-     * @param {string} address
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async positions(
-      address: string,
+    async perpetualFutures(
       options?: AxiosRequestConfig,
-    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Positions200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.positions(address, options);
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PerpetualFutures200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualFutures(options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @param {string} denom
+     * @param {string} quoteDenom
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async perpetualFuturesMarket(
+      denom: string,
+      quoteDenom: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PerpetualFuturesMarket200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualFuturesMarket(denom, quoteDenom, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async perpetualOptions(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualOptions(options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @param {string} denom
+     * @param {string} quoteDenom
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async perpetualOptionsMarket(
+      denom: string,
+      quoteDenom: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualOptionsMarket(denom, quoteDenom, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @summary this line is used by starport scaffolding # 2
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async pool(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Pool200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.pool(options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -6491,6 +7247,23 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
      */
     accountAll(options?: any): AxiosPromise<AccountAll200Response> {
       return localVarFp.accountAll(options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @param {string} address
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    addressPositions(address: string, options?: any): AxiosPromise<AllPositions200Response> {
+      return localVarFp.addressPositions(address, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    allPositions(options?: any): AxiosPromise<AllPositions200Response> {
+      return localVarFp.allPositions(options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -6692,7 +7465,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
-     * @summary this line is used by starport scaffolding # 2
      * @param {string} [beforeHeight]
      * @param {string} [afterHeight]
      * @param {*} [options] Override http request option.
@@ -6853,12 +7625,48 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
-     * @param {string} address
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    positions(address: string, options?: any): AxiosPromise<Positions200Response> {
-      return localVarFp.positions(address, options).then((request) => request(axios, basePath));
+    perpetualFutures(options?: any): AxiosPromise<PerpetualFutures200Response> {
+      return localVarFp.perpetualFutures(options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @param {string} denom
+     * @param {string} quoteDenom
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    perpetualFuturesMarket(denom: string, quoteDenom: string, options?: any): AxiosPromise<PerpetualFuturesMarket200Response> {
+      return localVarFp.perpetualFuturesMarket(denom, quoteDenom, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    perpetualOptions(options?: any): AxiosPromise<object> {
+      return localVarFp.perpetualOptions(options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @param {string} denom
+     * @param {string} quoteDenom
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    perpetualOptionsMarket(denom: string, quoteDenom: string, options?: any): AxiosPromise<object> {
+      return localVarFp.perpetualOptionsMarket(denom, quoteDenom, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @summary this line is used by starport scaffolding # 2
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    pool(options?: any): AxiosPromise<Pool200Response> {
+      return localVarFp.pool(options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -6975,6 +7783,31 @@ export class QueryApi extends BaseAPI {
   public accountAll(options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
       .accountAll(options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @param {string} address
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public addressPositions(address: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .addressPositions(address, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public allPositions(options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .allPositions(options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -7246,7 +8079,6 @@ export class QueryApi extends BaseAPI {
 
   /**
    *
-   * @summary this line is used by starport scaffolding # 2
    * @param {string} [beforeHeight]
    * @param {string} [afterHeight]
    * @param {*} [options] Override http request option.
@@ -7455,14 +8287,66 @@ export class QueryApi extends BaseAPI {
 
   /**
    *
-   * @param {string} address
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public positions(address: string, options?: AxiosRequestConfig) {
+  public perpetualFutures(options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .positions(address, options)
+      .perpetualFutures(options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @param {string} denom
+   * @param {string} quoteDenom
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public perpetualFuturesMarket(denom: string, quoteDenom: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .perpetualFuturesMarket(denom, quoteDenom, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public perpetualOptions(options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .perpetualOptions(options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @param {string} denom
+   * @param {string} quoteDenom
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public perpetualOptionsMarket(denom: string, quoteDenom: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .perpetualOptionsMarket(denom, quoteDenom, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @summary this line is used by starport scaffolding # 2
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public pool(options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .pool(options)
       .then((request) => request(this.axios, this.basePath));
   }
 
