@@ -867,6 +867,121 @@ export interface DepositAll200ResponseDepositsInner {
   amount?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 /**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @export
+ * @interface DerivativesParams200Response
+ */
+export interface DerivativesParams200Response {
+  /**
+   *
+   * @type {DerivativesParams200ResponseParams}
+   * @memberof DerivativesParams200Response
+   */
+  params?: DerivativesParams200ResponseParams;
+}
+/**
+ * params holds all the parameters of this module.
+ * @export
+ * @interface DerivativesParams200ResponseParams
+ */
+export interface DerivativesParams200ResponseParams {
+  /**
+   *
+   * @type {DerivativesParams200ResponseParamsPool}
+   * @memberof DerivativesParams200ResponseParams
+   */
+  pool?: DerivativesParams200ResponseParamsPool;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParams
+   */
+  lpt_price_quote_denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParams
+   */
+  base_lpt_mint_fee?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParams
+   */
+  base_lpt_redeem_fee?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParams
+   */
+  borrowing_fee_rate_per_hour?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParams
+   */
+  commission_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParams
+   */
+  margin_maintenance_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParams
+   */
+  funding_rate_proportional_coefficient?: string;
+}
+/**
+ *
+ * @export
+ * @interface DerivativesParams200ResponseParamsPool
+ */
+export interface DerivativesParams200ResponseParamsPool {
+  /**
+   *
+   * @type {Array<DerivativesParams200ResponseParamsPoolAcceptedAssetsInner>}
+   * @memberof DerivativesParams200ResponseParamsPool
+   */
+  accepted_assets?: Array<DerivativesParams200ResponseParamsPoolAcceptedAssetsInner>;
+}
+/**
+ *
+ * @export
+ * @interface DerivativesParams200ResponseParamsPoolAcceptedAssetsInner
+ */
+export interface DerivativesParams200ResponseParamsPoolAcceptedAssetsInner {
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPoolAcceptedAssetsInner
+   */
+  denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPoolAcceptedAssetsInner
+   */
+  type?: DerivativesParams200ResponseParamsPoolAcceptedAssetsInnerTypeEnum;
+  /**
+   *
+   * @type {string}
+   * @memberof DerivativesParams200ResponseParamsPoolAcceptedAssetsInner
+   */
+  target_weight?: string;
+}
+
+export const DerivativesParams200ResponseParamsPoolAcceptedAssetsInnerTypeEnum = {
+  Real: 'Real',
+  Imaginary: 'Imaginary',
+} as const;
+
+export type DerivativesParams200ResponseParamsPoolAcceptedAssetsInnerTypeEnum =
+  typeof DerivativesParams200ResponseParamsPoolAcceptedAssetsInnerTypeEnum[keyof typeof DerivativesParams200ResponseParamsPoolAcceptedAssetsInnerTypeEnum];
+
+/**
  *
  * @export
  * @interface EcosystemincentiveParams200Response
@@ -1154,6 +1269,19 @@ export interface IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner {
    * @memberof IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner
    */
   weight?: string;
+}
+/**
+ *
+ * @export
+ * @interface LiquidityProviderTokenNominalAPY200Response
+ */
+export interface LiquidityProviderTokenNominalAPY200Response {
+  /**
+   *
+   * @type {string}
+   * @memberof LiquidityProviderTokenNominalAPY200Response
+   */
+  apy?: string;
 }
 /**
  *
@@ -1787,6 +1915,56 @@ export type PaymentStatus200ResponsePaymentStatusStateEnum =
 /**
  *
  * @export
+ * @interface Positions200Response
+ */
+export interface Positions200Response {
+  /**
+   *
+   * @type {Array<Positions200ResponsePositionsInner>}
+   * @memberof Positions200Response
+   */
+  positions?: Array<Positions200ResponsePositionsInner>;
+  /**
+   *
+   * @type {AuctionAll200ResponsePagination}
+   * @memberof Positions200Response
+   */
+  pagination?: AuctionAll200ResponsePagination;
+}
+/**
+ *
+ * @export
+ * @interface Positions200ResponsePositionsInner
+ */
+export interface Positions200ResponsePositionsInner {
+  /**
+   *
+   * @type {string}
+   * @memberof Positions200ResponsePositionsInner
+   */
+  id?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Positions200ResponsePositionsInner
+   */
+  address?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Positions200ResponsePositionsInner
+   */
+  start_at?: string;
+  /**
+   *
+   * @type {AuctionAll200ResponseAuctionsInner}
+   * @memberof Positions200ResponsePositionsInner
+   */
+  position?: AuctionAll200ResponseAuctionsInner;
+}
+/**
+ *
+ * @export
  * @interface Price200Response
  */
 export interface Price200Response {
@@ -1860,6 +2038,31 @@ export interface PricefeedParams200ResponseParams {
    * @memberof PricefeedParams200ResponseParams
    */
   markets?: Array<MarketAll200ResponseMarketsInner>;
+  /**
+   *
+   * @type {Array<PricefeedParams200ResponseParamsDenomPairsInner>}
+   * @memberof PricefeedParams200ResponseParams
+   */
+  denom_pairs?: Array<PricefeedParams200ResponseParamsDenomPairsInner>;
+}
+/**
+ *
+ * @export
+ * @interface PricefeedParams200ResponseParamsDenomPairsInner
+ */
+export interface PricefeedParams200ResponseParamsDenomPairsInner {
+  /**
+   *
+   * @type {string}
+   * @memberof PricefeedParams200ResponseParamsDenomPairsInner
+   */
+  internal_denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof PricefeedParams200ResponseParamsDenomPairsInner
+   */
+  market_denom?: string;
 }
 /**
  *
@@ -2430,6 +2633,210 @@ export interface UnunifiCdpQueryParamsResponse {
    * @memberof UnunifiCdpQueryParamsResponse
    */
   params?: CdpParams200ResponseParams;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+
+export const UnunifiDerivativesAssetType = {
+  Real: 'Real',
+  Imaginary: 'Imaginary',
+} as const;
+
+export type UnunifiDerivativesAssetType = typeof UnunifiDerivativesAssetType[keyof typeof UnunifiDerivativesAssetType];
+
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesParams
+ */
+export interface UnunifiDerivativesParams {
+  /**
+   *
+   * @type {DerivativesParams200ResponseParamsPool}
+   * @memberof UnunifiDerivativesParams
+   */
+  pool?: DerivativesParams200ResponseParamsPool;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesParams
+   */
+  lpt_price_quote_denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesParams
+   */
+  base_lpt_mint_fee?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesParams
+   */
+  base_lpt_redeem_fee?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesParams
+   */
+  borrowing_fee_rate_per_hour?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesParams
+   */
+  commission_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesParams
+   */
+  margin_maintenance_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesParams
+   */
+  funding_rate_proportional_coefficient?: string;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesPool
+ */
+export interface UnunifiDerivativesPool {
+  /**
+   *
+   * @type {Array<DerivativesParams200ResponseParamsPoolAcceptedAssetsInner>}
+   * @memberof UnunifiDerivativesPool
+   */
+  accepted_assets?: Array<DerivativesParams200ResponseParamsPoolAcceptedAssetsInner>;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesPoolAsset
+ */
+export interface UnunifiDerivativesPoolAsset {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPoolAsset
+   */
+  denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPoolAsset
+   */
+  type?: UnunifiDerivativesPoolAssetTypeEnum;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesPoolAsset
+   */
+  target_weight?: string;
+}
+
+export const UnunifiDerivativesPoolAssetTypeEnum = {
+  Real: 'Real',
+  Imaginary: 'Imaginary',
+} as const;
+
+export type UnunifiDerivativesPoolAssetTypeEnum =
+  typeof UnunifiDerivativesPoolAssetTypeEnum[keyof typeof UnunifiDerivativesPoolAssetTypeEnum];
+
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesQueryLiquidityProviderTokenNominalAPYResponse
+ */
+export interface UnunifiDerivativesQueryLiquidityProviderTokenNominalAPYResponse {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesQueryLiquidityProviderTokenNominalAPYResponse
+   */
+  apy?: string;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesQueryLiquidityProviderTokenRealAPYResponse
+ */
+export interface UnunifiDerivativesQueryLiquidityProviderTokenRealAPYResponse {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesQueryLiquidityProviderTokenRealAPYResponse
+   */
+  apy?: string;
+}
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @export
+ * @interface UnunifiDerivativesQueryParamsResponse
+ */
+export interface UnunifiDerivativesQueryParamsResponse {
+  /**
+   *
+   * @type {DerivativesParams200ResponseParams}
+   * @memberof UnunifiDerivativesQueryParamsResponse
+   */
+  params?: DerivativesParams200ResponseParams;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesQueryPositionsResponse
+ */
+export interface UnunifiDerivativesQueryPositionsResponse {
+  /**
+   *
+   * @type {Array<Positions200ResponsePositionsInner>}
+   * @memberof UnunifiDerivativesQueryPositionsResponse
+   */
+  positions?: Array<Positions200ResponsePositionsInner>;
+  /**
+   *
+   * @type {AuctionAll200ResponsePagination}
+   * @memberof UnunifiDerivativesQueryPositionsResponse
+   */
+  pagination?: AuctionAll200ResponsePagination;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiDerivativesWrappedPosition
+ */
+export interface UnunifiDerivativesWrappedPosition {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesWrappedPosition
+   */
+  id?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesWrappedPosition
+   */
+  address?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiDerivativesWrappedPosition
+   */
+  start_at?: string;
+  /**
+   *
+   * @type {AuctionAll200ResponseAuctionsInner}
+   * @memberof UnunifiDerivativesWrappedPosition
+   */
+  position?: AuctionAll200ResponseAuctionsInner;
 }
 /**
  *
@@ -3581,6 +3988,25 @@ export interface UnunifiPricefeedCurrentPrice {
 /**
  *
  * @export
+ * @interface UnunifiPricefeedDenomPair
+ */
+export interface UnunifiPricefeedDenomPair {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiPricefeedDenomPair
+   */
+  internal_denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiPricefeedDenomPair
+   */
+  market_denom?: string;
+}
+/**
+ *
+ * @export
  * @interface UnunifiPricefeedMarket
  */
 export interface UnunifiPricefeedMarket {
@@ -3627,6 +4053,12 @@ export interface UnunifiPricefeedParams {
    * @memberof UnunifiPricefeedParams
    */
   markets?: Array<MarketAll200ResponseMarketsInner>;
+  /**
+   *
+   * @type {Array<PricefeedParams200ResponseParamsDenomPairsInner>}
+   * @memberof UnunifiPricefeedParams
+   */
+  denom_pairs?: Array<PricefeedParams200ResponseParamsDenomPairsInner>;
 }
 /**
  *
@@ -4401,6 +4833,34 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
+    derivativesParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/derivatives/params`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @summary Parameters queries the parameters of the module.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
     ecosystemincentiveParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       const localVarPath = `/ununifi/ecosystem_incentive/params`;
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -4473,6 +4933,89 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
       const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
       const localVarHeaderParameter = {} as any;
       const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @param {string} [beforeHeight]
+     * @param {string} [afterHeight]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    liquidityProviderTokenNominalAPY: async (
+      beforeHeight?: string,
+      afterHeight?: string,
+      options: AxiosRequestConfig = {},
+    ): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/derivatives/liquidity-providers/nominal-apy`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      if (beforeHeight !== undefined) {
+        localVarQueryParameter['before_height'] = beforeHeight;
+      }
+
+      if (afterHeight !== undefined) {
+        localVarQueryParameter['after_height'] = afterHeight;
+      }
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @summary this line is used by starport scaffolding # 2
+     * @param {string} [beforeHeight]
+     * @param {string} [afterHeight]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    liquidityProviderTokenRealAPY: async (
+      beforeHeight?: string,
+      afterHeight?: string,
+      options: AxiosRequestConfig = {},
+    ): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/derivatives/liquidity-providers/real-apy`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      if (beforeHeight !== undefined) {
+        localVarQueryParameter['before_height'] = beforeHeight;
+      }
+
+      if (afterHeight !== undefined) {
+        localVarQueryParameter['after_height'] = afterHeight;
+      }
 
       setSearchParams(localVarUrlObj, localVarQueryParameter);
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4936,6 +5479,36 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         .replace(`{${'class_id'}}`, encodeURIComponent(String(classId)))
         .replace(`{${'nft_id'}}`, encodeURIComponent(String(nftId)))
         .replace(`{${'bidder'}}`, encodeURIComponent(String(bidder)));
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @param {string} address
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    positions: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      // verify required parameter 'address' is not null or undefined
+      assertParamExists('positions', 'address', address);
+      const localVarPath = `/ununifi/derivatives/positions/{address}`.replace(`{${'address'}}`, encodeURIComponent(String(address)));
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -5481,6 +6054,18 @@ export const QueryApiFp = function (configuration?: Configuration) {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
+    async derivativesParams(
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DerivativesParams200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.derivativesParams(options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @summary Parameters queries the parameters of the module.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
     async ecosystemincentiveParams(
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EcosystemincentiveParams200Response>> {
@@ -5509,6 +6094,37 @@ export const QueryApiFp = function (configuration?: Configuration) {
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IncentiveUnit200Response>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.incentiveUnit(incentiveUnitId, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @param {string} [beforeHeight]
+     * @param {string} [afterHeight]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async liquidityProviderTokenNominalAPY(
+      beforeHeight?: string,
+      afterHeight?: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LiquidityProviderTokenNominalAPY200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.liquidityProviderTokenNominalAPY(beforeHeight, afterHeight, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @summary this line is used by starport scaffolding # 2
+     * @param {string} [beforeHeight]
+     * @param {string} [afterHeight]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async liquidityProviderTokenRealAPY(
+      beforeHeight?: string,
+      afterHeight?: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LiquidityProviderTokenNominalAPY200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.liquidityProviderTokenRealAPY(beforeHeight, afterHeight, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -5712,6 +6328,19 @@ export const QueryApiFp = function (configuration?: Configuration) {
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaymentStatus200Response>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.paymentStatus(classId, nftId, bidder, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @param {string} address
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async positions(
+      address: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Positions200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.positions(address, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -6018,6 +6647,15 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
+    derivativesParams(options?: any): AxiosPromise<DerivativesParams200Response> {
+      return localVarFp.derivativesParams(options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @summary Parameters queries the parameters of the module.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
     ecosystemincentiveParams(options?: any): AxiosPromise<EcosystemincentiveParams200Response> {
       return localVarFp.ecosystemincentiveParams(options).then((request) => request(axios, basePath));
     },
@@ -6037,6 +6675,35 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
      */
     incentiveUnit(incentiveUnitId: string, options?: any): AxiosPromise<IncentiveUnit200Response> {
       return localVarFp.incentiveUnit(incentiveUnitId, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @param {string} [beforeHeight]
+     * @param {string} [afterHeight]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    liquidityProviderTokenNominalAPY(
+      beforeHeight?: string,
+      afterHeight?: string,
+      options?: any,
+    ): AxiosPromise<LiquidityProviderTokenNominalAPY200Response> {
+      return localVarFp.liquidityProviderTokenNominalAPY(beforeHeight, afterHeight, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @summary this line is used by starport scaffolding # 2
+     * @param {string} [beforeHeight]
+     * @param {string} [afterHeight]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    liquidityProviderTokenRealAPY(
+      beforeHeight?: string,
+      afterHeight?: string,
+      options?: any,
+    ): AxiosPromise<LiquidityProviderTokenNominalAPY200Response> {
+      return localVarFp.liquidityProviderTokenRealAPY(beforeHeight, afterHeight, options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -6183,6 +6850,15 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
      */
     paymentStatus(classId: string, nftId: string, bidder: string, options?: any): AxiosPromise<PaymentStatus200Response> {
       return localVarFp.paymentStatus(classId, nftId, bidder, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @param {string} address
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    positions(address: string, options?: any): AxiosPromise<Positions200Response> {
+      return localVarFp.positions(address, options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -6510,6 +7186,19 @@ export class QueryApi extends BaseAPI {
    * @throws {RequiredError}
    * @memberof QueryApi
    */
+  public derivativesParams(options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .derivativesParams(options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @summary Parameters queries the parameters of the module.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
   public ecosystemincentiveParams(options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
       .ecosystemincentiveParams(options)
@@ -6538,6 +7227,35 @@ export class QueryApi extends BaseAPI {
   public incentiveUnit(incentiveUnitId: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
       .incentiveUnit(incentiveUnitId, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @param {string} [beforeHeight]
+   * @param {string} [afterHeight]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public liquidityProviderTokenNominalAPY(beforeHeight?: string, afterHeight?: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .liquidityProviderTokenNominalAPY(beforeHeight, afterHeight, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @summary this line is used by starport scaffolding # 2
+   * @param {string} [beforeHeight]
+   * @param {string} [afterHeight]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public liquidityProviderTokenRealAPY(beforeHeight?: string, afterHeight?: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .liquidityProviderTokenRealAPY(beforeHeight, afterHeight, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -6732,6 +7450,19 @@ export class QueryApi extends BaseAPI {
   public paymentStatus(classId: string, nftId: string, bidder: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
       .paymentStatus(classId, nftId, bidder, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @param {string} address
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public positions(address: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .positions(address, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
