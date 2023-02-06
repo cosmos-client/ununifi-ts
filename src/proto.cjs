@@ -10549,6 +10549,49 @@
          * @variation 2
          */
 
+        /**
+         * Callback as used by {@link ununifi.ecosystemincentive.Query#incentiveUnitIdsByAddr}.
+         * @memberof ununifi.ecosystemincentive.Query
+         * @typedef IncentiveUnitIdsByAddrCallback
+         * @type {function}
+         * @param {Error|null} error Error, if any
+         * @param {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse} [response] QueryIncentiveUnitIdsByAddrResponse
+         */
+
+        /**
+         * Calls IncentiveUnitIdsByAddr.
+         * @function incentiveUnitIdsByAddr
+         * @memberof ununifi.ecosystemincentive.Query
+         * @instance
+         * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest} request QueryIncentiveUnitIdsByAddrRequest message or plain object
+         * @param {ununifi.ecosystemincentive.Query.IncentiveUnitIdsByAddrCallback} callback Node-style callback called with the error, if any, and QueryIncentiveUnitIdsByAddrResponse
+         * @returns {undefined}
+         * @variation 1
+         */
+        Object.defineProperty(
+          (Query.prototype.incentiveUnitIdsByAddr = function incentiveUnitIdsByAddr(request, callback) {
+            return this.rpcCall(
+              incentiveUnitIdsByAddr,
+              $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest,
+              $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse,
+              request,
+              callback,
+            );
+          }),
+          'name',
+          { value: 'IncentiveUnitIdsByAddr' },
+        );
+
+        /**
+         * Calls IncentiveUnitIdsByAddr.
+         * @function incentiveUnitIdsByAddr
+         * @memberof ununifi.ecosystemincentive.Query
+         * @instance
+         * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest} request QueryIncentiveUnitIdsByAddrRequest message or plain object
+         * @returns {Promise<ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse>} Promise
+         * @variation 2
+         */
+
         return Query;
       })();
 
@@ -12244,6 +12287,354 @@
         return QueryRecordedIncentiveUnitIdResponse;
       })();
 
+      ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest = (function () {
+        /**
+         * Properties of a QueryIncentiveUnitIdsByAddrRequest.
+         * @memberof ununifi.ecosystemincentive
+         * @interface IQueryIncentiveUnitIdsByAddrRequest
+         * @property {string|null} [address] QueryIncentiveUnitIdsByAddrRequest address
+         */
+
+        /**
+         * Constructs a new QueryIncentiveUnitIdsByAddrRequest.
+         * @memberof ununifi.ecosystemincentive
+         * @classdesc Represents a QueryIncentiveUnitIdsByAddrRequest.
+         * @implements IQueryIncentiveUnitIdsByAddrRequest
+         * @constructor
+         * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest=} [properties] Properties to set
+         */
+        function QueryIncentiveUnitIdsByAddrRequest(properties) {
+          if (properties)
+            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+              if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * QueryIncentiveUnitIdsByAddrRequest address.
+         * @member {string} address
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+         * @instance
+         */
+        QueryIncentiveUnitIdsByAddrRequest.prototype.address = '';
+
+        /**
+         * Encodes the specified QueryIncentiveUnitIdsByAddrRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest.verify|verify} messages.
+         * @function encode
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+         * @static
+         * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest} message QueryIncentiveUnitIdsByAddrRequest message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        QueryIncentiveUnitIdsByAddrRequest.encode = function encode(message, writer) {
+          if (!writer) writer = $Writer.create();
+          if (message.address != null && Object.hasOwnProperty.call(message, 'address'))
+            writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.address);
+          return writer;
+        };
+
+        /**
+         * Encodes the specified QueryIncentiveUnitIdsByAddrRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+         * @static
+         * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest} message QueryIncentiveUnitIdsByAddrRequest message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        QueryIncentiveUnitIdsByAddrRequest.encodeDelimited = function encodeDelimited(message, writer) {
+          return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a QueryIncentiveUnitIdsByAddrRequest message from the specified reader or buffer.
+         * @function decode
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest} QueryIncentiveUnitIdsByAddrRequest
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        QueryIncentiveUnitIdsByAddrRequest.decode = function decode(reader, length) {
+          if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+          var end = length === undefined ? reader.len : reader.pos + length,
+            message = new $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest();
+          while (reader.pos < end) {
+            var tag = reader.uint32();
+            switch (tag >>> 3) {
+              case 1:
+                message.address = reader.string();
+                break;
+              default:
+                reader.skipType(tag & 7);
+                break;
+            }
+          }
+          return message;
+        };
+
+        /**
+         * Decodes a QueryIncentiveUnitIdsByAddrRequest message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest} QueryIncentiveUnitIdsByAddrRequest
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        QueryIncentiveUnitIdsByAddrRequest.decodeDelimited = function decodeDelimited(reader) {
+          if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+          return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a QueryIncentiveUnitIdsByAddrRequest message.
+         * @function verify
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        QueryIncentiveUnitIdsByAddrRequest.verify = function verify(message) {
+          if (typeof message !== 'object' || message === null) return 'object expected';
+          if (message.address != null && message.hasOwnProperty('address'))
+            if (!$util.isString(message.address)) return 'address: string expected';
+          return null;
+        };
+
+        /**
+         * Creates a QueryIncentiveUnitIdsByAddrRequest message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest} QueryIncentiveUnitIdsByAddrRequest
+         */
+        QueryIncentiveUnitIdsByAddrRequest.fromObject = function fromObject(object) {
+          if (object instanceof $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest) return object;
+          var message = new $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest();
+          if (object.address != null) message.address = String(object.address);
+          return message;
+        };
+
+        /**
+         * Creates a plain object from a QueryIncentiveUnitIdsByAddrRequest message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+         * @static
+         * @param {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest} message QueryIncentiveUnitIdsByAddrRequest
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        QueryIncentiveUnitIdsByAddrRequest.toObject = function toObject(message, options) {
+          if (!options) options = {};
+          var object = {};
+          if (options.defaults) object.address = '';
+          if (message.address != null && message.hasOwnProperty('address')) object.address = message.address;
+          return object;
+        };
+
+        /**
+         * Converts this QueryIncentiveUnitIdsByAddrRequest to JSON.
+         * @function toJSON
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        QueryIncentiveUnitIdsByAddrRequest.prototype.toJSON = function toJSON() {
+          return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return QueryIncentiveUnitIdsByAddrRequest;
+      })();
+
+      ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse = (function () {
+        /**
+         * Properties of a QueryIncentiveUnitIdsByAddrResponse.
+         * @memberof ununifi.ecosystemincentive
+         * @interface IQueryIncentiveUnitIdsByAddrResponse
+         * @property {ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr|null} [incentive_unit_ids_by_addr] QueryIncentiveUnitIdsByAddrResponse incentive_unit_ids_by_addr
+         */
+
+        /**
+         * Constructs a new QueryIncentiveUnitIdsByAddrResponse.
+         * @memberof ununifi.ecosystemincentive
+         * @classdesc Represents a QueryIncentiveUnitIdsByAddrResponse.
+         * @implements IQueryIncentiveUnitIdsByAddrResponse
+         * @constructor
+         * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrResponse=} [properties] Properties to set
+         */
+        function QueryIncentiveUnitIdsByAddrResponse(properties) {
+          if (properties)
+            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+              if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * QueryIncentiveUnitIdsByAddrResponse incentive_unit_ids_by_addr.
+         * @member {ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr|null|undefined} incentive_unit_ids_by_addr
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+         * @instance
+         */
+        QueryIncentiveUnitIdsByAddrResponse.prototype.incentive_unit_ids_by_addr = null;
+
+        /**
+         * Encodes the specified QueryIncentiveUnitIdsByAddrResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse.verify|verify} messages.
+         * @function encode
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+         * @static
+         * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrResponse} message QueryIncentiveUnitIdsByAddrResponse message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        QueryIncentiveUnitIdsByAddrResponse.encode = function encode(message, writer) {
+          if (!writer) writer = $Writer.create();
+          if (message.incentive_unit_ids_by_addr != null && Object.hasOwnProperty.call(message, 'incentive_unit_ids_by_addr'))
+            $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.encode(
+              message.incentive_unit_ids_by_addr,
+              writer.uint32(/* id 1, wireType 2 =*/ 10).fork(),
+            ).ldelim();
+          return writer;
+        };
+
+        /**
+         * Encodes the specified QueryIncentiveUnitIdsByAddrResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+         * @static
+         * @param {ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrResponse} message QueryIncentiveUnitIdsByAddrResponse message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        QueryIncentiveUnitIdsByAddrResponse.encodeDelimited = function encodeDelimited(message, writer) {
+          return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a QueryIncentiveUnitIdsByAddrResponse message from the specified reader or buffer.
+         * @function decode
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse} QueryIncentiveUnitIdsByAddrResponse
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        QueryIncentiveUnitIdsByAddrResponse.decode = function decode(reader, length) {
+          if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+          var end = length === undefined ? reader.len : reader.pos + length,
+            message = new $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse();
+          while (reader.pos < end) {
+            var tag = reader.uint32();
+            switch (tag >>> 3) {
+              case 1:
+                message.incentive_unit_ids_by_addr = $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.decode(
+                  reader,
+                  reader.uint32(),
+                );
+                break;
+              default:
+                reader.skipType(tag & 7);
+                break;
+            }
+          }
+          return message;
+        };
+
+        /**
+         * Decodes a QueryIncentiveUnitIdsByAddrResponse message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse} QueryIncentiveUnitIdsByAddrResponse
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        QueryIncentiveUnitIdsByAddrResponse.decodeDelimited = function decodeDelimited(reader) {
+          if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+          return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a QueryIncentiveUnitIdsByAddrResponse message.
+         * @function verify
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        QueryIncentiveUnitIdsByAddrResponse.verify = function verify(message) {
+          if (typeof message !== 'object' || message === null) return 'object expected';
+          if (message.incentive_unit_ids_by_addr != null && message.hasOwnProperty('incentive_unit_ids_by_addr')) {
+            var error = $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.verify(message.incentive_unit_ids_by_addr);
+            if (error) return 'incentive_unit_ids_by_addr.' + error;
+          }
+          return null;
+        };
+
+        /**
+         * Creates a QueryIncentiveUnitIdsByAddrResponse message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse} QueryIncentiveUnitIdsByAddrResponse
+         */
+        QueryIncentiveUnitIdsByAddrResponse.fromObject = function fromObject(object) {
+          if (object instanceof $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse) return object;
+          var message = new $root.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse();
+          if (object.incentive_unit_ids_by_addr != null) {
+            if (typeof object.incentive_unit_ids_by_addr !== 'object')
+              throw TypeError(
+                '.ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse.incentive_unit_ids_by_addr: object expected',
+              );
+            message.incentive_unit_ids_by_addr = $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.fromObject(
+              object.incentive_unit_ids_by_addr,
+            );
+          }
+          return message;
+        };
+
+        /**
+         * Creates a plain object from a QueryIncentiveUnitIdsByAddrResponse message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+         * @static
+         * @param {ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse} message QueryIncentiveUnitIdsByAddrResponse
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        QueryIncentiveUnitIdsByAddrResponse.toObject = function toObject(message, options) {
+          if (!options) options = {};
+          var object = {};
+          if (options.defaults) object.incentive_unit_ids_by_addr = null;
+          if (message.incentive_unit_ids_by_addr != null && message.hasOwnProperty('incentive_unit_ids_by_addr'))
+            object.incentive_unit_ids_by_addr = $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.toObject(
+              message.incentive_unit_ids_by_addr,
+              options,
+            );
+          return object;
+        };
+
+        /**
+         * Converts this QueryIncentiveUnitIdsByAddrResponse to JSON.
+         * @function toJSON
+         * @memberof ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        QueryIncentiveUnitIdsByAddrResponse.prototype.toJSON = function toJSON() {
+          return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return QueryIncentiveUnitIdsByAddrResponse;
+      })();
+
       ecosystemincentive.Params = (function () {
         /**
          * Properties of a Params.
@@ -13547,6 +13938,203 @@
         };
 
         return RewardStore;
+      })();
+
+      ecosystemincentive.IncentiveUnitIdsByAddr = (function () {
+        /**
+         * Properties of an IncentiveUnitIdsByAddr.
+         * @memberof ununifi.ecosystemincentive
+         * @interface IIncentiveUnitIdsByAddr
+         * @property {string|null} [address] IncentiveUnitIdsByAddr address
+         * @property {Array.<string>|null} [incentive_unit_ids] IncentiveUnitIdsByAddr incentive_unit_ids
+         */
+
+        /**
+         * Constructs a new IncentiveUnitIdsByAddr.
+         * @memberof ununifi.ecosystemincentive
+         * @classdesc Represents an IncentiveUnitIdsByAddr.
+         * @implements IIncentiveUnitIdsByAddr
+         * @constructor
+         * @param {ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr=} [properties] Properties to set
+         */
+        function IncentiveUnitIdsByAddr(properties) {
+          this.incentive_unit_ids = [];
+          if (properties)
+            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+              if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * IncentiveUnitIdsByAddr address.
+         * @member {string} address
+         * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+         * @instance
+         */
+        IncentiveUnitIdsByAddr.prototype.address = '';
+
+        /**
+         * IncentiveUnitIdsByAddr incentive_unit_ids.
+         * @member {Array.<string>} incentive_unit_ids
+         * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+         * @instance
+         */
+        IncentiveUnitIdsByAddr.prototype.incentive_unit_ids = $util.emptyArray;
+
+        /**
+         * Encodes the specified IncentiveUnitIdsByAddr message. Does not implicitly {@link ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.verify|verify} messages.
+         * @function encode
+         * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+         * @static
+         * @param {ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr} message IncentiveUnitIdsByAddr message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        IncentiveUnitIdsByAddr.encode = function encode(message, writer) {
+          if (!writer) writer = $Writer.create();
+          if (message.address != null && Object.hasOwnProperty.call(message, 'address'))
+            writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.address);
+          if (message.incentive_unit_ids != null && message.incentive_unit_ids.length)
+            for (var i = 0; i < message.incentive_unit_ids.length; ++i)
+              writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.incentive_unit_ids[i]);
+          return writer;
+        };
+
+        /**
+         * Encodes the specified IncentiveUnitIdsByAddr message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+         * @static
+         * @param {ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr} message IncentiveUnitIdsByAddr message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        IncentiveUnitIdsByAddr.encodeDelimited = function encodeDelimited(message, writer) {
+          return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes an IncentiveUnitIdsByAddr message from the specified reader or buffer.
+         * @function decode
+         * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {ununifi.ecosystemincentive.IncentiveUnitIdsByAddr} IncentiveUnitIdsByAddr
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        IncentiveUnitIdsByAddr.decode = function decode(reader, length) {
+          if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+          var end = length === undefined ? reader.len : reader.pos + length,
+            message = new $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr();
+          while (reader.pos < end) {
+            var tag = reader.uint32();
+            switch (tag >>> 3) {
+              case 1:
+                message.address = reader.string();
+                break;
+              case 2:
+                if (!(message.incentive_unit_ids && message.incentive_unit_ids.length)) message.incentive_unit_ids = [];
+                message.incentive_unit_ids.push(reader.string());
+                break;
+              default:
+                reader.skipType(tag & 7);
+                break;
+            }
+          }
+          return message;
+        };
+
+        /**
+         * Decodes an IncentiveUnitIdsByAddr message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {ununifi.ecosystemincentive.IncentiveUnitIdsByAddr} IncentiveUnitIdsByAddr
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        IncentiveUnitIdsByAddr.decodeDelimited = function decodeDelimited(reader) {
+          if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+          return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies an IncentiveUnitIdsByAddr message.
+         * @function verify
+         * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        IncentiveUnitIdsByAddr.verify = function verify(message) {
+          if (typeof message !== 'object' || message === null) return 'object expected';
+          if (message.address != null && message.hasOwnProperty('address'))
+            if (!$util.isString(message.address)) return 'address: string expected';
+          if (message.incentive_unit_ids != null && message.hasOwnProperty('incentive_unit_ids')) {
+            if (!Array.isArray(message.incentive_unit_ids)) return 'incentive_unit_ids: array expected';
+            for (var i = 0; i < message.incentive_unit_ids.length; ++i)
+              if (!$util.isString(message.incentive_unit_ids[i])) return 'incentive_unit_ids: string[] expected';
+          }
+          return null;
+        };
+
+        /**
+         * Creates an IncentiveUnitIdsByAddr message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {ununifi.ecosystemincentive.IncentiveUnitIdsByAddr} IncentiveUnitIdsByAddr
+         */
+        IncentiveUnitIdsByAddr.fromObject = function fromObject(object) {
+          if (object instanceof $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr) return object;
+          var message = new $root.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr();
+          if (object.address != null) message.address = String(object.address);
+          if (object.incentive_unit_ids) {
+            if (!Array.isArray(object.incentive_unit_ids))
+              throw TypeError('.ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.incentive_unit_ids: array expected');
+            message.incentive_unit_ids = [];
+            for (var i = 0; i < object.incentive_unit_ids.length; ++i) message.incentive_unit_ids[i] = String(object.incentive_unit_ids[i]);
+          }
+          return message;
+        };
+
+        /**
+         * Creates a plain object from an IncentiveUnitIdsByAddr message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+         * @static
+         * @param {ununifi.ecosystemincentive.IncentiveUnitIdsByAddr} message IncentiveUnitIdsByAddr
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        IncentiveUnitIdsByAddr.toObject = function toObject(message, options) {
+          if (!options) options = {};
+          var object = {};
+          if (options.arrays || options.defaults) object.incentive_unit_ids = [];
+          if (options.defaults) object.address = '';
+          if (message.address != null && message.hasOwnProperty('address')) object.address = message.address;
+          if (message.incentive_unit_ids && message.incentive_unit_ids.length) {
+            object.incentive_unit_ids = [];
+            for (var j = 0; j < message.incentive_unit_ids.length; ++j) object.incentive_unit_ids[j] = message.incentive_unit_ids[j];
+          }
+          return object;
+        };
+
+        /**
+         * Converts this IncentiveUnitIdsByAddr to JSON.
+         * @function toJSON
+         * @memberof ununifi.ecosystemincentive.IncentiveUnitIdsByAddr
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        IncentiveUnitIdsByAddr.prototype.toJSON = function toJSON() {
+          return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return IncentiveUnitIdsByAddr;
       })();
 
       ecosystemincentive.MemoInputs = (function () {
@@ -41960,6 +42548,7 @@
          * @memberof ununifi.nftmint
          * @interface IGenesisState
          * @property {ununifi.nftmint.IParams|null} [params] GenesisState params
+         * @property {Array.<ununifi.nftmint.IClassAttributes>|null} [class_attributes_list] GenesisState class_attributes_list
          */
 
         /**
@@ -41971,6 +42560,7 @@
          * @param {ununifi.nftmint.IGenesisState=} [properties] Properties to set
          */
         function GenesisState(properties) {
+          this.class_attributes_list = [];
           if (properties)
             for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
               if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
@@ -41985,6 +42575,14 @@
         GenesisState.prototype.params = null;
 
         /**
+         * GenesisState class_attributes_list.
+         * @member {Array.<ununifi.nftmint.IClassAttributes>} class_attributes_list
+         * @memberof ununifi.nftmint.GenesisState
+         * @instance
+         */
+        GenesisState.prototype.class_attributes_list = $util.emptyArray;
+
+        /**
          * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.nftmint.GenesisState.verify|verify} messages.
          * @function encode
          * @memberof ununifi.nftmint.GenesisState
@@ -41997,6 +42595,12 @@
           if (!writer) writer = $Writer.create();
           if (message.params != null && Object.hasOwnProperty.call(message, 'params'))
             $root.ununifi.nftmint.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+          if (message.class_attributes_list != null && message.class_attributes_list.length)
+            for (var i = 0; i < message.class_attributes_list.length; ++i)
+              $root.ununifi.nftmint.ClassAttributes.encode(
+                message.class_attributes_list[i],
+                writer.uint32(/* id 2, wireType 2 =*/ 18).fork(),
+              ).ldelim();
           return writer;
         };
 
@@ -42033,6 +42637,10 @@
             switch (tag >>> 3) {
               case 1:
                 message.params = $root.ununifi.nftmint.Params.decode(reader, reader.uint32());
+                break;
+              case 2:
+                if (!(message.class_attributes_list && message.class_attributes_list.length)) message.class_attributes_list = [];
+                message.class_attributes_list.push($root.ununifi.nftmint.ClassAttributes.decode(reader, reader.uint32()));
                 break;
               default:
                 reader.skipType(tag & 7);
@@ -42071,6 +42679,13 @@
             var error = $root.ununifi.nftmint.Params.verify(message.params);
             if (error) return 'params.' + error;
           }
+          if (message.class_attributes_list != null && message.hasOwnProperty('class_attributes_list')) {
+            if (!Array.isArray(message.class_attributes_list)) return 'class_attributes_list: array expected';
+            for (var i = 0; i < message.class_attributes_list.length; ++i) {
+              var error = $root.ununifi.nftmint.ClassAttributes.verify(message.class_attributes_list[i]);
+              if (error) return 'class_attributes_list.' + error;
+            }
+          }
           return null;
         };
 
@@ -42089,6 +42704,16 @@
             if (typeof object.params !== 'object') throw TypeError('.ununifi.nftmint.GenesisState.params: object expected');
             message.params = $root.ununifi.nftmint.Params.fromObject(object.params);
           }
+          if (object.class_attributes_list) {
+            if (!Array.isArray(object.class_attributes_list))
+              throw TypeError('.ununifi.nftmint.GenesisState.class_attributes_list: array expected');
+            message.class_attributes_list = [];
+            for (var i = 0; i < object.class_attributes_list.length; ++i) {
+              if (typeof object.class_attributes_list[i] !== 'object')
+                throw TypeError('.ununifi.nftmint.GenesisState.class_attributes_list: object expected');
+              message.class_attributes_list[i] = $root.ununifi.nftmint.ClassAttributes.fromObject(object.class_attributes_list[i]);
+            }
+          }
           return message;
         };
 
@@ -42104,9 +42729,15 @@
         GenesisState.toObject = function toObject(message, options) {
           if (!options) options = {};
           var object = {};
+          if (options.arrays || options.defaults) object.class_attributes_list = [];
           if (options.defaults) object.params = null;
           if (message.params != null && message.hasOwnProperty('params'))
             object.params = $root.ununifi.nftmint.Params.toObject(message.params, options);
+          if (message.class_attributes_list && message.class_attributes_list.length) {
+            object.class_attributes_list = [];
+            for (var j = 0; j < message.class_attributes_list.length; ++j)
+              object.class_attributes_list[j] = $root.ununifi.nftmint.ClassAttributes.toObject(message.class_attributes_list[j], options);
+          }
           return object;
         };
 
@@ -48864,6 +49495,7 @@
              * @property {Long|null} [offset] PageRequest offset
              * @property {Long|null} [limit] PageRequest limit
              * @property {boolean|null} [count_total] PageRequest count_total
+             * @property {boolean|null} [reverse] PageRequest reverse
              */
 
             /**
@@ -48913,6 +49545,14 @@
             PageRequest.prototype.count_total = false;
 
             /**
+             * PageRequest reverse.
+             * @member {boolean} reverse
+             * @memberof cosmos.base.query.v1beta1.PageRequest
+             * @instance
+             */
+            PageRequest.prototype.reverse = false;
+
+            /**
              * Encodes the specified PageRequest message. Does not implicitly {@link cosmos.base.query.v1beta1.PageRequest.verify|verify} messages.
              * @function encode
              * @memberof cosmos.base.query.v1beta1.PageRequest
@@ -48931,6 +49571,8 @@
                 writer.uint32(/* id 3, wireType 0 =*/ 24).uint64(message.limit);
               if (message.count_total != null && Object.hasOwnProperty.call(message, 'count_total'))
                 writer.uint32(/* id 4, wireType 0 =*/ 32).bool(message.count_total);
+              if (message.reverse != null && Object.hasOwnProperty.call(message, 'reverse'))
+                writer.uint32(/* id 5, wireType 0 =*/ 40).bool(message.reverse);
               return writer;
             };
 
@@ -48976,6 +49618,9 @@
                     break;
                   case 4:
                     message.count_total = reader.bool();
+                    break;
+                  case 5:
+                    message.reverse = reader.bool();
                     break;
                   default:
                     reader.skipType(tag & 7);
@@ -49027,6 +49672,8 @@
                   return 'limit: integer|Long expected';
               if (message.count_total != null && message.hasOwnProperty('count_total'))
                 if (typeof message.count_total !== 'boolean') return 'count_total: boolean expected';
+              if (message.reverse != null && message.hasOwnProperty('reverse'))
+                if (typeof message.reverse !== 'boolean') return 'reverse: boolean expected';
               return null;
             };
 
@@ -49058,6 +49705,7 @@
                 else if (typeof object.limit === 'object')
                   message.limit = new $util.LongBits(object.limit.low >>> 0, object.limit.high >>> 0).toNumber(true);
               if (object.count_total != null) message.count_total = Boolean(object.count_total);
+              if (object.reverse != null) message.reverse = Boolean(object.reverse);
               return message;
             };
 
@@ -49088,6 +49736,7 @@
                   object.limit = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
                 } else object.limit = options.longs === String ? '0' : 0;
                 object.count_total = false;
+                object.reverse = false;
               }
               if (message.key != null && message.hasOwnProperty('key'))
                 object.key =
@@ -49115,6 +49764,7 @@
                       ? new $util.LongBits(message.limit.low >>> 0, message.limit.high >>> 0).toNumber(true)
                       : message.limit;
               if (message.count_total != null && message.hasOwnProperty('count_total')) object.count_total = message.count_total;
+              if (message.reverse != null && message.hasOwnProperty('reverse')) object.reverse = message.reverse;
               return object;
             };
 
@@ -54996,6 +55646,451 @@
      */
     var cosmos_proto = {};
 
+    cosmos_proto.InterfaceDescriptor = (function () {
+      /**
+       * Properties of an InterfaceDescriptor.
+       * @memberof cosmos_proto
+       * @interface IInterfaceDescriptor
+       * @property {string|null} [name] InterfaceDescriptor name
+       * @property {string|null} [description] InterfaceDescriptor description
+       */
+
+      /**
+       * Constructs a new InterfaceDescriptor.
+       * @memberof cosmos_proto
+       * @classdesc Represents an InterfaceDescriptor.
+       * @implements IInterfaceDescriptor
+       * @constructor
+       * @param {cosmos_proto.IInterfaceDescriptor=} [properties] Properties to set
+       */
+      function InterfaceDescriptor(properties) {
+        if (properties)
+          for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * InterfaceDescriptor name.
+       * @member {string} name
+       * @memberof cosmos_proto.InterfaceDescriptor
+       * @instance
+       */
+      InterfaceDescriptor.prototype.name = '';
+
+      /**
+       * InterfaceDescriptor description.
+       * @member {string} description
+       * @memberof cosmos_proto.InterfaceDescriptor
+       * @instance
+       */
+      InterfaceDescriptor.prototype.description = '';
+
+      /**
+       * Encodes the specified InterfaceDescriptor message. Does not implicitly {@link cosmos_proto.InterfaceDescriptor.verify|verify} messages.
+       * @function encode
+       * @memberof cosmos_proto.InterfaceDescriptor
+       * @static
+       * @param {cosmos_proto.IInterfaceDescriptor} message InterfaceDescriptor message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      InterfaceDescriptor.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.name != null && Object.hasOwnProperty.call(message, 'name'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.name);
+        if (message.description != null && Object.hasOwnProperty.call(message, 'description'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.description);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified InterfaceDescriptor message, length delimited. Does not implicitly {@link cosmos_proto.InterfaceDescriptor.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof cosmos_proto.InterfaceDescriptor
+       * @static
+       * @param {cosmos_proto.IInterfaceDescriptor} message InterfaceDescriptor message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      InterfaceDescriptor.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes an InterfaceDescriptor message from the specified reader or buffer.
+       * @function decode
+       * @memberof cosmos_proto.InterfaceDescriptor
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {cosmos_proto.InterfaceDescriptor} InterfaceDescriptor
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      InterfaceDescriptor.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        var end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.cosmos_proto.InterfaceDescriptor();
+        while (reader.pos < end) {
+          var tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.name = reader.string();
+              break;
+            case 2:
+              message.description = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes an InterfaceDescriptor message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof cosmos_proto.InterfaceDescriptor
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {cosmos_proto.InterfaceDescriptor} InterfaceDescriptor
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      InterfaceDescriptor.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies an InterfaceDescriptor message.
+       * @function verify
+       * @memberof cosmos_proto.InterfaceDescriptor
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      InterfaceDescriptor.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.name != null && message.hasOwnProperty('name')) if (!$util.isString(message.name)) return 'name: string expected';
+        if (message.description != null && message.hasOwnProperty('description'))
+          if (!$util.isString(message.description)) return 'description: string expected';
+        return null;
+      };
+
+      /**
+       * Creates an InterfaceDescriptor message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof cosmos_proto.InterfaceDescriptor
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {cosmos_proto.InterfaceDescriptor} InterfaceDescriptor
+       */
+      InterfaceDescriptor.fromObject = function fromObject(object) {
+        if (object instanceof $root.cosmos_proto.InterfaceDescriptor) return object;
+        var message = new $root.cosmos_proto.InterfaceDescriptor();
+        if (object.name != null) message.name = String(object.name);
+        if (object.description != null) message.description = String(object.description);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from an InterfaceDescriptor message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof cosmos_proto.InterfaceDescriptor
+       * @static
+       * @param {cosmos_proto.InterfaceDescriptor} message InterfaceDescriptor
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      InterfaceDescriptor.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        var object = {};
+        if (options.defaults) {
+          object.name = '';
+          object.description = '';
+        }
+        if (message.name != null && message.hasOwnProperty('name')) object.name = message.name;
+        if (message.description != null && message.hasOwnProperty('description')) object.description = message.description;
+        return object;
+      };
+
+      /**
+       * Converts this InterfaceDescriptor to JSON.
+       * @function toJSON
+       * @memberof cosmos_proto.InterfaceDescriptor
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      InterfaceDescriptor.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return InterfaceDescriptor;
+    })();
+
+    cosmos_proto.ScalarDescriptor = (function () {
+      /**
+       * Properties of a ScalarDescriptor.
+       * @memberof cosmos_proto
+       * @interface IScalarDescriptor
+       * @property {string|null} [name] ScalarDescriptor name
+       * @property {string|null} [description] ScalarDescriptor description
+       * @property {Array.<cosmos_proto.ScalarType>|null} [field_type] ScalarDescriptor field_type
+       */
+
+      /**
+       * Constructs a new ScalarDescriptor.
+       * @memberof cosmos_proto
+       * @classdesc Represents a ScalarDescriptor.
+       * @implements IScalarDescriptor
+       * @constructor
+       * @param {cosmos_proto.IScalarDescriptor=} [properties] Properties to set
+       */
+      function ScalarDescriptor(properties) {
+        this.field_type = [];
+        if (properties)
+          for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * ScalarDescriptor name.
+       * @member {string} name
+       * @memberof cosmos_proto.ScalarDescriptor
+       * @instance
+       */
+      ScalarDescriptor.prototype.name = '';
+
+      /**
+       * ScalarDescriptor description.
+       * @member {string} description
+       * @memberof cosmos_proto.ScalarDescriptor
+       * @instance
+       */
+      ScalarDescriptor.prototype.description = '';
+
+      /**
+       * ScalarDescriptor field_type.
+       * @member {Array.<cosmos_proto.ScalarType>} field_type
+       * @memberof cosmos_proto.ScalarDescriptor
+       * @instance
+       */
+      ScalarDescriptor.prototype.field_type = $util.emptyArray;
+
+      /**
+       * Encodes the specified ScalarDescriptor message. Does not implicitly {@link cosmos_proto.ScalarDescriptor.verify|verify} messages.
+       * @function encode
+       * @memberof cosmos_proto.ScalarDescriptor
+       * @static
+       * @param {cosmos_proto.IScalarDescriptor} message ScalarDescriptor message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      ScalarDescriptor.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.name != null && Object.hasOwnProperty.call(message, 'name'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.name);
+        if (message.description != null && Object.hasOwnProperty.call(message, 'description'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.description);
+        if (message.field_type != null && message.field_type.length) {
+          writer.uint32(/* id 3, wireType 2 =*/ 26).fork();
+          for (var i = 0; i < message.field_type.length; ++i) writer.int32(message.field_type[i]);
+          writer.ldelim();
+        }
+        return writer;
+      };
+
+      /**
+       * Encodes the specified ScalarDescriptor message, length delimited. Does not implicitly {@link cosmos_proto.ScalarDescriptor.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof cosmos_proto.ScalarDescriptor
+       * @static
+       * @param {cosmos_proto.IScalarDescriptor} message ScalarDescriptor message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      ScalarDescriptor.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a ScalarDescriptor message from the specified reader or buffer.
+       * @function decode
+       * @memberof cosmos_proto.ScalarDescriptor
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {cosmos_proto.ScalarDescriptor} ScalarDescriptor
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      ScalarDescriptor.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        var end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.cosmos_proto.ScalarDescriptor();
+        while (reader.pos < end) {
+          var tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.name = reader.string();
+              break;
+            case 2:
+              message.description = reader.string();
+              break;
+            case 3:
+              if (!(message.field_type && message.field_type.length)) message.field_type = [];
+              if ((tag & 7) === 2) {
+                var end2 = reader.uint32() + reader.pos;
+                while (reader.pos < end2) message.field_type.push(reader.int32());
+              } else message.field_type.push(reader.int32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a ScalarDescriptor message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof cosmos_proto.ScalarDescriptor
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {cosmos_proto.ScalarDescriptor} ScalarDescriptor
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      ScalarDescriptor.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a ScalarDescriptor message.
+       * @function verify
+       * @memberof cosmos_proto.ScalarDescriptor
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      ScalarDescriptor.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.name != null && message.hasOwnProperty('name')) if (!$util.isString(message.name)) return 'name: string expected';
+        if (message.description != null && message.hasOwnProperty('description'))
+          if (!$util.isString(message.description)) return 'description: string expected';
+        if (message.field_type != null && message.hasOwnProperty('field_type')) {
+          if (!Array.isArray(message.field_type)) return 'field_type: array expected';
+          for (var i = 0; i < message.field_type.length; ++i)
+            switch (message.field_type[i]) {
+              default:
+                return 'field_type: enum value[] expected';
+              case 0:
+              case 1:
+              case 2:
+                break;
+            }
+        }
+        return null;
+      };
+
+      /**
+       * Creates a ScalarDescriptor message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof cosmos_proto.ScalarDescriptor
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {cosmos_proto.ScalarDescriptor} ScalarDescriptor
+       */
+      ScalarDescriptor.fromObject = function fromObject(object) {
+        if (object instanceof $root.cosmos_proto.ScalarDescriptor) return object;
+        var message = new $root.cosmos_proto.ScalarDescriptor();
+        if (object.name != null) message.name = String(object.name);
+        if (object.description != null) message.description = String(object.description);
+        if (object.field_type) {
+          if (!Array.isArray(object.field_type)) throw TypeError('.cosmos_proto.ScalarDescriptor.field_type: array expected');
+          message.field_type = [];
+          for (var i = 0; i < object.field_type.length; ++i)
+            switch (object.field_type[i]) {
+              default:
+              case 'SCALAR_TYPE_UNSPECIFIED':
+              case 0:
+                message.field_type[i] = 0;
+                break;
+              case 'SCALAR_TYPE_STRING':
+              case 1:
+                message.field_type[i] = 1;
+                break;
+              case 'SCALAR_TYPE_BYTES':
+              case 2:
+                message.field_type[i] = 2;
+                break;
+            }
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a ScalarDescriptor message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof cosmos_proto.ScalarDescriptor
+       * @static
+       * @param {cosmos_proto.ScalarDescriptor} message ScalarDescriptor
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      ScalarDescriptor.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        var object = {};
+        if (options.arrays || options.defaults) object.field_type = [];
+        if (options.defaults) {
+          object.name = '';
+          object.description = '';
+        }
+        if (message.name != null && message.hasOwnProperty('name')) object.name = message.name;
+        if (message.description != null && message.hasOwnProperty('description')) object.description = message.description;
+        if (message.field_type && message.field_type.length) {
+          object.field_type = [];
+          for (var j = 0; j < message.field_type.length; ++j)
+            object.field_type[j] = options.enums === String ? $root.cosmos_proto.ScalarType[message.field_type[j]] : message.field_type[j];
+        }
+        return object;
+      };
+
+      /**
+       * Converts this ScalarDescriptor to JSON.
+       * @function toJSON
+       * @memberof cosmos_proto.ScalarDescriptor
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      ScalarDescriptor.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return ScalarDescriptor;
+    })();
+
+    /**
+     * ScalarType enum.
+     * @name cosmos_proto.ScalarType
+     * @enum {number}
+     * @property {number} SCALAR_TYPE_UNSPECIFIED=0 SCALAR_TYPE_UNSPECIFIED value
+     * @property {number} SCALAR_TYPE_STRING=1 SCALAR_TYPE_STRING value
+     * @property {number} SCALAR_TYPE_BYTES=2 SCALAR_TYPE_BYTES value
+     */
+    cosmos_proto.ScalarType = (function () {
+      var valuesById = {},
+        values = Object.create(valuesById);
+      values[(valuesById[0] = 'SCALAR_TYPE_UNSPECIFIED')] = 0;
+      values[(valuesById[1] = 'SCALAR_TYPE_STRING')] = 1;
+      values[(valuesById[2] = 'SCALAR_TYPE_BYTES')] = 2;
+      return values;
+    })();
+
     return cosmos_proto;
   })();
 
@@ -59098,6 +60193,8 @@
          * @property {string|null} [objc_class_prefix] FileOptions objc_class_prefix
          * @property {string|null} [csharp_namespace] FileOptions csharp_namespace
          * @property {Array.<google.protobuf.IUninterpretedOption>|null} [uninterpreted_option] FileOptions uninterpreted_option
+         * @property {Array.<cosmos_proto.IInterfaceDescriptor>|null} [".cosmos_proto.declare_interface"] FileOptions .cosmos_proto.declare_interface
+         * @property {Array.<cosmos_proto.IScalarDescriptor>|null} [".cosmos_proto.declare_scalar"] FileOptions .cosmos_proto.declare_scalar
          * @property {boolean|null} [".gogoproto.goproto_getters_all"] FileOptions .gogoproto.goproto_getters_all
          * @property {boolean|null} [".gogoproto.goproto_enum_prefix_all"] FileOptions .gogoproto.goproto_enum_prefix_all
          * @property {boolean|null} [".gogoproto.goproto_stringer_all"] FileOptions .gogoproto.goproto_stringer_all
@@ -59142,6 +60239,8 @@
          */
         function FileOptions(properties) {
           this.uninterpreted_option = [];
+          this['.cosmos_proto.declare_interface'] = [];
+          this['.cosmos_proto.declare_scalar'] = [];
           if (properties)
             for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
               if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
@@ -59266,6 +60365,22 @@
          * @instance
          */
         FileOptions.prototype.uninterpreted_option = $util.emptyArray;
+
+        /**
+         * FileOptions .cosmos_proto.declare_interface.
+         * @member {Array.<cosmos_proto.IInterfaceDescriptor>} .cosmos_proto.declare_interface
+         * @memberof google.protobuf.FileOptions
+         * @instance
+         */
+        FileOptions.prototype['.cosmos_proto.declare_interface'] = $util.emptyArray;
+
+        /**
+         * FileOptions .cosmos_proto.declare_scalar.
+         * @member {Array.<cosmos_proto.IScalarDescriptor>} .cosmos_proto.declare_scalar
+         * @memberof google.protobuf.FileOptions
+         * @instance
+         */
+        FileOptions.prototype['.cosmos_proto.declare_scalar'] = $util.emptyArray;
 
         /**
          * FileOptions .gogoproto.goproto_getters_all.
@@ -59650,6 +60765,18 @@
             writer.uint32(/* id 63034, wireType 0 =*/ 504272).bool(message['.gogoproto.goproto_sizecache_all']);
           if (message['.gogoproto.goproto_unkeyed_all'] != null && Object.hasOwnProperty.call(message, '.gogoproto.goproto_unkeyed_all'))
             writer.uint32(/* id 63035, wireType 0 =*/ 504280).bool(message['.gogoproto.goproto_unkeyed_all']);
+          if (message['.cosmos_proto.declare_interface'] != null && message['.cosmos_proto.declare_interface'].length)
+            for (var i = 0; i < message['.cosmos_proto.declare_interface'].length; ++i)
+              $root.cosmos_proto.InterfaceDescriptor.encode(
+                message['.cosmos_proto.declare_interface'][i],
+                writer.uint32(/* id 793021, wireType 2 =*/ 6344170).fork(),
+              ).ldelim();
+          if (message['.cosmos_proto.declare_scalar'] != null && message['.cosmos_proto.declare_scalar'].length)
+            for (var i = 0; i < message['.cosmos_proto.declare_scalar'].length; ++i)
+              $root.cosmos_proto.ScalarDescriptor.encode(
+                message['.cosmos_proto.declare_scalar'][i],
+                writer.uint32(/* id 793022, wireType 2 =*/ 6344178).fork(),
+              ).ldelim();
           return writer;
         };
 
@@ -59729,6 +60856,16 @@
               case 999:
                 if (!(message.uninterpreted_option && message.uninterpreted_option.length)) message.uninterpreted_option = [];
                 message.uninterpreted_option.push($root.google.protobuf.UninterpretedOption.decode(reader, reader.uint32()));
+                break;
+              case 793021:
+                if (!(message['.cosmos_proto.declare_interface'] && message['.cosmos_proto.declare_interface'].length))
+                  message['.cosmos_proto.declare_interface'] = [];
+                message['.cosmos_proto.declare_interface'].push($root.cosmos_proto.InterfaceDescriptor.decode(reader, reader.uint32()));
+                break;
+              case 793022:
+                if (!(message['.cosmos_proto.declare_scalar'] && message['.cosmos_proto.declare_scalar'].length))
+                  message['.cosmos_proto.declare_scalar'] = [];
+                message['.cosmos_proto.declare_scalar'].push($root.cosmos_proto.ScalarDescriptor.decode(reader, reader.uint32()));
                 break;
               case 63001:
                 message['.gogoproto.goproto_getters_all'] = reader.bool();
@@ -59901,6 +61038,20 @@
               if (error) return 'uninterpreted_option.' + error;
             }
           }
+          if (message['.cosmos_proto.declare_interface'] != null && message.hasOwnProperty('.cosmos_proto.declare_interface')) {
+            if (!Array.isArray(message['.cosmos_proto.declare_interface'])) return '.cosmos_proto.declare_interface: array expected';
+            for (var i = 0; i < message['.cosmos_proto.declare_interface'].length; ++i) {
+              var error = $root.cosmos_proto.InterfaceDescriptor.verify(message['.cosmos_proto.declare_interface'][i]);
+              if (error) return '.cosmos_proto.declare_interface.' + error;
+            }
+          }
+          if (message['.cosmos_proto.declare_scalar'] != null && message.hasOwnProperty('.cosmos_proto.declare_scalar')) {
+            if (!Array.isArray(message['.cosmos_proto.declare_scalar'])) return '.cosmos_proto.declare_scalar: array expected';
+            for (var i = 0; i < message['.cosmos_proto.declare_scalar'].length; ++i) {
+              var error = $root.cosmos_proto.ScalarDescriptor.verify(message['.cosmos_proto.declare_scalar'][i]);
+              if (error) return '.cosmos_proto.declare_scalar.' + error;
+            }
+          }
           if (message['.gogoproto.goproto_getters_all'] != null && message.hasOwnProperty('.gogoproto.goproto_getters_all'))
             if (typeof message['.gogoproto.goproto_getters_all'] !== 'boolean') return '.gogoproto.goproto_getters_all: boolean expected';
           if (message['.gogoproto.goproto_enum_prefix_all'] != null && message.hasOwnProperty('.gogoproto.goproto_enum_prefix_all'))
@@ -60023,6 +61174,30 @@
               message.uninterpreted_option[i] = $root.google.protobuf.UninterpretedOption.fromObject(object.uninterpreted_option[i]);
             }
           }
+          if (object['.cosmos_proto.declare_interface']) {
+            if (!Array.isArray(object['.cosmos_proto.declare_interface']))
+              throw TypeError('.google.protobuf.FileOptions..cosmos_proto.declare_interface: array expected');
+            message['.cosmos_proto.declare_interface'] = [];
+            for (var i = 0; i < object['.cosmos_proto.declare_interface'].length; ++i) {
+              if (typeof object['.cosmos_proto.declare_interface'][i] !== 'object')
+                throw TypeError('.google.protobuf.FileOptions..cosmos_proto.declare_interface: object expected');
+              message['.cosmos_proto.declare_interface'][i] = $root.cosmos_proto.InterfaceDescriptor.fromObject(
+                object['.cosmos_proto.declare_interface'][i],
+              );
+            }
+          }
+          if (object['.cosmos_proto.declare_scalar']) {
+            if (!Array.isArray(object['.cosmos_proto.declare_scalar']))
+              throw TypeError('.google.protobuf.FileOptions..cosmos_proto.declare_scalar: array expected');
+            message['.cosmos_proto.declare_scalar'] = [];
+            for (var i = 0; i < object['.cosmos_proto.declare_scalar'].length; ++i) {
+              if (typeof object['.cosmos_proto.declare_scalar'][i] !== 'object')
+                throw TypeError('.google.protobuf.FileOptions..cosmos_proto.declare_scalar: object expected');
+              message['.cosmos_proto.declare_scalar'][i] = $root.cosmos_proto.ScalarDescriptor.fromObject(
+                object['.cosmos_proto.declare_scalar'][i],
+              );
+            }
+          }
           if (object['.gogoproto.goproto_getters_all'] != null)
             message['.gogoproto.goproto_getters_all'] = Boolean(object['.gogoproto.goproto_getters_all']);
           if (object['.gogoproto.goproto_enum_prefix_all'] != null)
@@ -60089,7 +61264,11 @@
         FileOptions.toObject = function toObject(message, options) {
           if (!options) options = {};
           var object = {};
-          if (options.arrays || options.defaults) object.uninterpreted_option = [];
+          if (options.arrays || options.defaults) {
+            object.uninterpreted_option = [];
+            object['.cosmos_proto.declare_interface'] = [];
+            object['.cosmos_proto.declare_scalar'] = [];
+          }
           if (options.defaults) {
             object.java_package = '';
             object.java_outer_classname = '';
@@ -60233,6 +61412,22 @@
             object['.gogoproto.goproto_sizecache_all'] = message['.gogoproto.goproto_sizecache_all'];
           if (message['.gogoproto.goproto_unkeyed_all'] != null && message.hasOwnProperty('.gogoproto.goproto_unkeyed_all'))
             object['.gogoproto.goproto_unkeyed_all'] = message['.gogoproto.goproto_unkeyed_all'];
+          if (message['.cosmos_proto.declare_interface'] && message['.cosmos_proto.declare_interface'].length) {
+            object['.cosmos_proto.declare_interface'] = [];
+            for (var j = 0; j < message['.cosmos_proto.declare_interface'].length; ++j)
+              object['.cosmos_proto.declare_interface'][j] = $root.cosmos_proto.InterfaceDescriptor.toObject(
+                message['.cosmos_proto.declare_interface'][j],
+                options,
+              );
+          }
+          if (message['.cosmos_proto.declare_scalar'] && message['.cosmos_proto.declare_scalar'].length) {
+            object['.cosmos_proto.declare_scalar'] = [];
+            for (var j = 0; j < message['.cosmos_proto.declare_scalar'].length; ++j)
+              object['.cosmos_proto.declare_scalar'][j] = $root.cosmos_proto.ScalarDescriptor.toObject(
+                message['.cosmos_proto.declare_scalar'][j],
+                options,
+              );
+          }
           return object;
         };
 
@@ -60277,8 +61472,7 @@
          * @property {boolean|null} [deprecated] MessageOptions deprecated
          * @property {boolean|null} [map_entry] MessageOptions map_entry
          * @property {Array.<google.protobuf.IUninterpretedOption>|null} [uninterpreted_option] MessageOptions uninterpreted_option
-         * @property {string|null} [".cosmos_proto.interface_type"] MessageOptions .cosmos_proto.interface_type
-         * @property {string|null} [".cosmos_proto.implements_interface"] MessageOptions .cosmos_proto.implements_interface
+         * @property {Array.<string>|null} [".cosmos_proto.implements_interface"] MessageOptions .cosmos_proto.implements_interface
          * @property {boolean|null} [".gogoproto.goproto_getters"] MessageOptions .gogoproto.goproto_getters
          * @property {boolean|null} [".gogoproto.goproto_stringer"] MessageOptions .gogoproto.goproto_stringer
          * @property {boolean|null} [".gogoproto.verbose_equal"] MessageOptions .gogoproto.verbose_equal
@@ -60305,6 +61499,8 @@
          * @property {boolean|null} [".gogoproto.messagename"] MessageOptions .gogoproto.messagename
          * @property {boolean|null} [".gogoproto.goproto_sizecache"] MessageOptions .gogoproto.goproto_sizecache
          * @property {boolean|null} [".gogoproto.goproto_unkeyed"] MessageOptions .gogoproto.goproto_unkeyed
+         * @property {string|null} [".amino.name"] MessageOptions .amino.name
+         * @property {string|null} [".amino.message_encoding"] MessageOptions .amino.message_encoding
          */
 
         /**
@@ -60317,6 +61513,7 @@
          */
         function MessageOptions(properties) {
           this.uninterpreted_option = [];
+          this['.cosmos_proto.implements_interface'] = [];
           if (properties)
             for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
               if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
@@ -60363,20 +61560,12 @@
         MessageOptions.prototype.uninterpreted_option = $util.emptyArray;
 
         /**
-         * MessageOptions .cosmos_proto.interface_type.
-         * @member {string} .cosmos_proto.interface_type
-         * @memberof google.protobuf.MessageOptions
-         * @instance
-         */
-        MessageOptions.prototype['.cosmos_proto.interface_type'] = '';
-
-        /**
          * MessageOptions .cosmos_proto.implements_interface.
-         * @member {string} .cosmos_proto.implements_interface
+         * @member {Array.<string>} .cosmos_proto.implements_interface
          * @memberof google.protobuf.MessageOptions
          * @instance
          */
-        MessageOptions.prototype['.cosmos_proto.implements_interface'] = '';
+        MessageOptions.prototype['.cosmos_proto.implements_interface'] = $util.emptyArray;
 
         /**
          * MessageOptions .gogoproto.goproto_getters.
@@ -60587,6 +61776,22 @@
         MessageOptions.prototype['.gogoproto.goproto_unkeyed'] = false;
 
         /**
+         * MessageOptions .amino.name.
+         * @member {string} .amino.name
+         * @memberof google.protobuf.MessageOptions
+         * @instance
+         */
+        MessageOptions.prototype['.amino.name'] = '';
+
+        /**
+         * MessageOptions .amino.message_encoding.
+         * @member {string} .amino.message_encoding
+         * @memberof google.protobuf.MessageOptions
+         * @instance
+         */
+        MessageOptions.prototype['.amino.message_encoding'] = '';
+
+        /**
          * Encodes the specified MessageOptions message. Does not implicitly {@link google.protobuf.MessageOptions.verify|verify} messages.
          * @function encode
          * @memberof google.protobuf.MessageOptions
@@ -60666,13 +61871,13 @@
             writer.uint32(/* id 64035, wireType 0 =*/ 512280).bool(message['.gogoproto.goproto_unkeyed']);
           if (message['.gogoproto.stringer'] != null && Object.hasOwnProperty.call(message, '.gogoproto.stringer'))
             writer.uint32(/* id 67008, wireType 0 =*/ 536064).bool(message['.gogoproto.stringer']);
-          if (message['.cosmos_proto.interface_type'] != null && Object.hasOwnProperty.call(message, '.cosmos_proto.interface_type'))
-            writer.uint32(/* id 93001, wireType 2 =*/ 744010).string(message['.cosmos_proto.interface_type']);
-          if (
-            message['.cosmos_proto.implements_interface'] != null &&
-            Object.hasOwnProperty.call(message, '.cosmos_proto.implements_interface')
-          )
-            writer.uint32(/* id 93002, wireType 2 =*/ 744018).string(message['.cosmos_proto.implements_interface']);
+          if (message['.cosmos_proto.implements_interface'] != null && message['.cosmos_proto.implements_interface'].length)
+            for (var i = 0; i < message['.cosmos_proto.implements_interface'].length; ++i)
+              writer.uint32(/* id 93001, wireType 2 =*/ 744010).string(message['.cosmos_proto.implements_interface'][i]);
+          if (message['.amino.name'] != null && Object.hasOwnProperty.call(message, '.amino.name'))
+            writer.uint32(/* id 11110001, wireType 2 =*/ 88880010).string(message['.amino.name']);
+          if (message['.amino.message_encoding'] != null && Object.hasOwnProperty.call(message, '.amino.message_encoding'))
+            writer.uint32(/* id 11110002, wireType 2 =*/ 88880018).string(message['.amino.message_encoding']);
           return writer;
         };
 
@@ -60724,10 +61929,9 @@
                 message.uninterpreted_option.push($root.google.protobuf.UninterpretedOption.decode(reader, reader.uint32()));
                 break;
               case 93001:
-                message['.cosmos_proto.interface_type'] = reader.string();
-                break;
-              case 93002:
-                message['.cosmos_proto.implements_interface'] = reader.string();
+                if (!(message['.cosmos_proto.implements_interface'] && message['.cosmos_proto.implements_interface'].length))
+                  message['.cosmos_proto.implements_interface'] = [];
+                message['.cosmos_proto.implements_interface'].push(reader.string());
                 break;
               case 64001:
                 message['.gogoproto.goproto_getters'] = reader.bool();
@@ -60807,6 +62011,12 @@
               case 64035:
                 message['.gogoproto.goproto_unkeyed'] = reader.bool();
                 break;
+              case 11110001:
+                message['.amino.name'] = reader.string();
+                break;
+              case 11110002:
+                message['.amino.message_encoding'] = reader.string();
+                break;
               default:
                 reader.skipType(tag & 7);
                 break;
@@ -60855,11 +62065,12 @@
               if (error) return 'uninterpreted_option.' + error;
             }
           }
-          if (message['.cosmos_proto.interface_type'] != null && message.hasOwnProperty('.cosmos_proto.interface_type'))
-            if (!$util.isString(message['.cosmos_proto.interface_type'])) return '.cosmos_proto.interface_type: string expected';
-          if (message['.cosmos_proto.implements_interface'] != null && message.hasOwnProperty('.cosmos_proto.implements_interface'))
-            if (!$util.isString(message['.cosmos_proto.implements_interface']))
-              return '.cosmos_proto.implements_interface: string expected';
+          if (message['.cosmos_proto.implements_interface'] != null && message.hasOwnProperty('.cosmos_proto.implements_interface')) {
+            if (!Array.isArray(message['.cosmos_proto.implements_interface'])) return '.cosmos_proto.implements_interface: array expected';
+            for (var i = 0; i < message['.cosmos_proto.implements_interface'].length; ++i)
+              if (!$util.isString(message['.cosmos_proto.implements_interface'][i]))
+                return '.cosmos_proto.implements_interface: string[] expected';
+          }
           if (message['.gogoproto.goproto_getters'] != null && message.hasOwnProperty('.gogoproto.goproto_getters'))
             if (typeof message['.gogoproto.goproto_getters'] !== 'boolean') return '.gogoproto.goproto_getters: boolean expected';
           if (message['.gogoproto.goproto_stringer'] != null && message.hasOwnProperty('.gogoproto.goproto_stringer'))
@@ -60913,6 +62124,10 @@
             if (typeof message['.gogoproto.goproto_sizecache'] !== 'boolean') return '.gogoproto.goproto_sizecache: boolean expected';
           if (message['.gogoproto.goproto_unkeyed'] != null && message.hasOwnProperty('.gogoproto.goproto_unkeyed'))
             if (typeof message['.gogoproto.goproto_unkeyed'] !== 'boolean') return '.gogoproto.goproto_unkeyed: boolean expected';
+          if (message['.amino.name'] != null && message.hasOwnProperty('.amino.name'))
+            if (!$util.isString(message['.amino.name'])) return '.amino.name: string expected';
+          if (message['.amino.message_encoding'] != null && message.hasOwnProperty('.amino.message_encoding'))
+            if (!$util.isString(message['.amino.message_encoding'])) return '.amino.message_encoding: string expected';
           return null;
         };
 
@@ -60942,10 +62157,13 @@
               message.uninterpreted_option[i] = $root.google.protobuf.UninterpretedOption.fromObject(object.uninterpreted_option[i]);
             }
           }
-          if (object['.cosmos_proto.interface_type'] != null)
-            message['.cosmos_proto.interface_type'] = String(object['.cosmos_proto.interface_type']);
-          if (object['.cosmos_proto.implements_interface'] != null)
-            message['.cosmos_proto.implements_interface'] = String(object['.cosmos_proto.implements_interface']);
+          if (object['.cosmos_proto.implements_interface']) {
+            if (!Array.isArray(object['.cosmos_proto.implements_interface']))
+              throw TypeError('.google.protobuf.MessageOptions..cosmos_proto.implements_interface: array expected');
+            message['.cosmos_proto.implements_interface'] = [];
+            for (var i = 0; i < object['.cosmos_proto.implements_interface'].length; ++i)
+              message['.cosmos_proto.implements_interface'][i] = String(object['.cosmos_proto.implements_interface'][i]);
+          }
           if (object['.gogoproto.goproto_getters'] != null)
             message['.gogoproto.goproto_getters'] = Boolean(object['.gogoproto.goproto_getters']);
           if (object['.gogoproto.goproto_stringer'] != null)
@@ -60981,6 +62199,8 @@
             message['.gogoproto.goproto_sizecache'] = Boolean(object['.gogoproto.goproto_sizecache']);
           if (object['.gogoproto.goproto_unkeyed'] != null)
             message['.gogoproto.goproto_unkeyed'] = Boolean(object['.gogoproto.goproto_unkeyed']);
+          if (object['.amino.name'] != null) message['.amino.name'] = String(object['.amino.name']);
+          if (object['.amino.message_encoding'] != null) message['.amino.message_encoding'] = String(object['.amino.message_encoding']);
           return message;
         };
 
@@ -60996,7 +62216,10 @@
         MessageOptions.toObject = function toObject(message, options) {
           if (!options) options = {};
           var object = {};
-          if (options.arrays || options.defaults) object.uninterpreted_option = [];
+          if (options.arrays || options.defaults) {
+            object.uninterpreted_option = [];
+            object['.cosmos_proto.implements_interface'] = [];
+          }
           if (options.defaults) {
             object.message_set_wire_format = false;
             object.no_standard_descriptor_accessor = false;
@@ -61028,8 +62251,8 @@
             object['.gogoproto.goproto_sizecache'] = false;
             object['.gogoproto.goproto_unkeyed'] = false;
             object['.gogoproto.stringer'] = false;
-            object['.cosmos_proto.interface_type'] = '';
-            object['.cosmos_proto.implements_interface'] = '';
+            object['.amino.name'] = '';
+            object['.amino.message_encoding'] = '';
           }
           if (message.message_set_wire_format != null && message.hasOwnProperty('message_set_wire_format'))
             object.message_set_wire_format = message.message_set_wire_format;
@@ -61094,10 +62317,14 @@
             object['.gogoproto.goproto_unkeyed'] = message['.gogoproto.goproto_unkeyed'];
           if (message['.gogoproto.stringer'] != null && message.hasOwnProperty('.gogoproto.stringer'))
             object['.gogoproto.stringer'] = message['.gogoproto.stringer'];
-          if (message['.cosmos_proto.interface_type'] != null && message.hasOwnProperty('.cosmos_proto.interface_type'))
-            object['.cosmos_proto.interface_type'] = message['.cosmos_proto.interface_type'];
-          if (message['.cosmos_proto.implements_interface'] != null && message.hasOwnProperty('.cosmos_proto.implements_interface'))
-            object['.cosmos_proto.implements_interface'] = message['.cosmos_proto.implements_interface'];
+          if (message['.cosmos_proto.implements_interface'] && message['.cosmos_proto.implements_interface'].length) {
+            object['.cosmos_proto.implements_interface'] = [];
+            for (var j = 0; j < message['.cosmos_proto.implements_interface'].length; ++j)
+              object['.cosmos_proto.implements_interface'][j] = message['.cosmos_proto.implements_interface'][j];
+          }
+          if (message['.amino.name'] != null && message.hasOwnProperty('.amino.name')) object['.amino.name'] = message['.amino.name'];
+          if (message['.amino.message_encoding'] != null && message.hasOwnProperty('.amino.message_encoding'))
+            object['.amino.message_encoding'] = message['.amino.message_encoding'];
           return object;
         };
 
@@ -61142,6 +62369,9 @@
          * @property {boolean|null} [".gogoproto.stdduration"] FieldOptions .gogoproto.stdduration
          * @property {boolean|null} [".gogoproto.wktpointer"] FieldOptions .gogoproto.wktpointer
          * @property {string|null} [".gogoproto.castrepeated"] FieldOptions .gogoproto.castrepeated
+         * @property {string|null} [".amino.encoding"] FieldOptions .amino.encoding
+         * @property {string|null} [".amino.field_name"] FieldOptions .amino.field_name
+         * @property {boolean|null} [".amino.dont_omitempty"] FieldOptions .amino.dont_omitempty
          */
 
         /**
@@ -61336,6 +62566,30 @@
         FieldOptions.prototype['.gogoproto.castrepeated'] = '';
 
         /**
+         * FieldOptions .amino.encoding.
+         * @member {string} .amino.encoding
+         * @memberof google.protobuf.FieldOptions
+         * @instance
+         */
+        FieldOptions.prototype['.amino.encoding'] = '';
+
+        /**
+         * FieldOptions .amino.field_name.
+         * @member {string} .amino.field_name
+         * @memberof google.protobuf.FieldOptions
+         * @instance
+         */
+        FieldOptions.prototype['.amino.field_name'] = '';
+
+        /**
+         * FieldOptions .amino.dont_omitempty.
+         * @member {boolean} .amino.dont_omitempty
+         * @memberof google.protobuf.FieldOptions
+         * @instance
+         */
+        FieldOptions.prototype['.amino.dont_omitempty'] = false;
+
+        /**
          * Encodes the specified FieldOptions message. Does not implicitly {@link google.protobuf.FieldOptions.verify|verify} messages.
          * @function encode
          * @memberof google.protobuf.FieldOptions
@@ -61394,6 +62648,12 @@
             writer.uint32(/* id 93001, wireType 2 =*/ 744010).string(message['.cosmos_proto.accepts_interface']);
           if (message['.cosmos_proto.scalar'] != null && Object.hasOwnProperty.call(message, '.cosmos_proto.scalar'))
             writer.uint32(/* id 93002, wireType 2 =*/ 744018).string(message['.cosmos_proto.scalar']);
+          if (message['.amino.encoding'] != null && Object.hasOwnProperty.call(message, '.amino.encoding'))
+            writer.uint32(/* id 11110003, wireType 2 =*/ 88880026).string(message['.amino.encoding']);
+          if (message['.amino.field_name'] != null && Object.hasOwnProperty.call(message, '.amino.field_name'))
+            writer.uint32(/* id 11110004, wireType 2 =*/ 88880034).string(message['.amino.field_name']);
+          if (message['.amino.dont_omitempty'] != null && Object.hasOwnProperty.call(message, '.amino.dont_omitempty'))
+            writer.uint32(/* id 11110005, wireType 0 =*/ 88880040).bool(message['.amino.dont_omitempty']);
           return writer;
         };
 
@@ -61495,6 +62755,15 @@
               case 65013:
                 message['.gogoproto.castrepeated'] = reader.string();
                 break;
+              case 11110003:
+                message['.amino.encoding'] = reader.string();
+                break;
+              case 11110004:
+                message['.amino.field_name'] = reader.string();
+                break;
+              case 11110005:
+                message['.amino.dont_omitempty'] = reader.bool();
+                break;
               default:
                 reader.skipType(tag & 7);
                 break;
@@ -61591,6 +62860,12 @@
             if (typeof message['.gogoproto.wktpointer'] !== 'boolean') return '.gogoproto.wktpointer: boolean expected';
           if (message['.gogoproto.castrepeated'] != null && message.hasOwnProperty('.gogoproto.castrepeated'))
             if (!$util.isString(message['.gogoproto.castrepeated'])) return '.gogoproto.castrepeated: string expected';
+          if (message['.amino.encoding'] != null && message.hasOwnProperty('.amino.encoding'))
+            if (!$util.isString(message['.amino.encoding'])) return '.amino.encoding: string expected';
+          if (message['.amino.field_name'] != null && message.hasOwnProperty('.amino.field_name'))
+            if (!$util.isString(message['.amino.field_name'])) return '.amino.field_name: string expected';
+          if (message['.amino.dont_omitempty'] != null && message.hasOwnProperty('.amino.dont_omitempty'))
+            if (typeof message['.amino.dont_omitempty'] !== 'boolean') return '.amino.dont_omitempty: boolean expected';
           return null;
         };
 
@@ -61663,6 +62938,9 @@
           if (object['.gogoproto.stdduration'] != null) message['.gogoproto.stdduration'] = Boolean(object['.gogoproto.stdduration']);
           if (object['.gogoproto.wktpointer'] != null) message['.gogoproto.wktpointer'] = Boolean(object['.gogoproto.wktpointer']);
           if (object['.gogoproto.castrepeated'] != null) message['.gogoproto.castrepeated'] = String(object['.gogoproto.castrepeated']);
+          if (object['.amino.encoding'] != null) message['.amino.encoding'] = String(object['.amino.encoding']);
+          if (object['.amino.field_name'] != null) message['.amino.field_name'] = String(object['.amino.field_name']);
+          if (object['.amino.dont_omitempty'] != null) message['.amino.dont_omitempty'] = Boolean(object['.amino.dont_omitempty']);
           return message;
         };
 
@@ -61701,6 +62979,9 @@
             object['.gogoproto.castrepeated'] = '';
             object['.cosmos_proto.accepts_interface'] = '';
             object['.cosmos_proto.scalar'] = '';
+            object['.amino.encoding'] = '';
+            object['.amino.field_name'] = '';
+            object['.amino.dont_omitempty'] = false;
           }
           if (message.ctype != null && message.hasOwnProperty('ctype'))
             object.ctype = options.enums === String ? $root.google.protobuf.FieldOptions.CType[message.ctype] : message.ctype;
@@ -61745,6 +63026,12 @@
             object['.cosmos_proto.accepts_interface'] = message['.cosmos_proto.accepts_interface'];
           if (message['.cosmos_proto.scalar'] != null && message.hasOwnProperty('.cosmos_proto.scalar'))
             object['.cosmos_proto.scalar'] = message['.cosmos_proto.scalar'];
+          if (message['.amino.encoding'] != null && message.hasOwnProperty('.amino.encoding'))
+            object['.amino.encoding'] = message['.amino.encoding'];
+          if (message['.amino.field_name'] != null && message.hasOwnProperty('.amino.field_name'))
+            object['.amino.field_name'] = message['.amino.field_name'];
+          if (message['.amino.dont_omitempty'] != null && message.hasOwnProperty('.amino.dont_omitempty'))
+            object['.amino.dont_omitempty'] = message['.amino.dont_omitempty'];
           return object;
         };
 
@@ -65079,6 +66366,17 @@
     })();
 
     return google;
+  })();
+
+  $root.amino = (function () {
+    /**
+     * Namespace amino.
+     * @exports amino
+     * @namespace
+     */
+    var amino = {};
+
+    return amino;
   })();
 
   return $root;
