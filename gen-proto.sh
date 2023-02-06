@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
+# git submodule update --init --recursive
 
 rm -r proto
 rm -r proto-thirdparty
-cp -r ./chain/proto ./
-cp -r ./chain/proto-thirdparty ./
+
+mkdir -p ./proto ./proto-thirdparty
+
+buf export ./chain --exclude-imports --output ./proto
+buf export ./chain --output ./proto-thirdparty
 
 proto_dirs=$(find ./proto -path -prune -o -name '*.proto' -print0 | xargs -0 -n1 dirname | sort | uniq)
 proto_files=()
