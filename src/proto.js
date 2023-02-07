@@ -19807,6 +19807,7 @@ export const ununifi = ($root.ununifi = (() => {
        * @property {google.protobuf.ITimestamp|null} [full_payment_end_at] NftListing full_payment_end_at
        * @property {google.protobuf.ITimestamp|null} [successful_bid_end_at] NftListing successful_bid_end_at
        * @property {Long|null} [auto_relisted_count] NftListing auto_relisted_count
+       * @property {cosmos.base.v1beta1.ICoin|null} [collected_amount] NftListing collected_amount
        */
 
       /**
@@ -19920,6 +19921,14 @@ export const ununifi = ($root.ununifi = (() => {
       NftListing.prototype.auto_relisted_count = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
 
       /**
+       * NftListing collected_amount.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} collected_amount
+       * @memberof ununifi.nftmarket.NftListing
+       * @instance
+       */
+      NftListing.prototype.collected_amount = null;
+
+      /**
        * Encodes the specified NftListing message. Does not implicitly {@link ununifi.nftmarket.NftListing.verify|verify} messages.
        * @function encode
        * @memberof ununifi.nftmarket.NftListing
@@ -19954,6 +19963,8 @@ export const ununifi = ($root.ununifi = (() => {
           $root.google.protobuf.Timestamp.encode(message.successful_bid_end_at, writer.uint32(/* id 11, wireType 2 =*/ 90).fork()).ldelim();
         if (message.auto_relisted_count != null && Object.hasOwnProperty.call(message, 'auto_relisted_count'))
           writer.uint32(/* id 12, wireType 0 =*/ 96).uint64(message.auto_relisted_count);
+        if (message.collected_amount != null && Object.hasOwnProperty.call(message, 'collected_amount'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.collected_amount, writer.uint32(/* id 13, wireType 2 =*/ 106).fork()).ldelim();
         return writer;
       };
 
@@ -20023,6 +20034,9 @@ export const ununifi = ($root.ununifi = (() => {
               break;
             case 12:
               message.auto_relisted_count = reader.uint64();
+              break;
+            case 13:
+              message.collected_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
               break;
             default:
               reader.skipType(tag & 7);
@@ -20114,6 +20128,10 @@ export const ununifi = ($root.ununifi = (() => {
             )
           )
             return 'auto_relisted_count: integer|Long expected';
+        if (message.collected_amount != null && message.hasOwnProperty('collected_amount')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.collected_amount);
+          if (error) return 'collected_amount.' + error;
+        }
         return null;
       };
 
@@ -20199,6 +20217,11 @@ export const ununifi = ($root.ununifi = (() => {
               object.auto_relisted_count.low >>> 0,
               object.auto_relisted_count.high >>> 0,
             ).toNumber(true);
+        if (object.collected_amount != null) {
+          if (typeof object.collected_amount !== 'object')
+            throw TypeError('.ununifi.nftmarket.NftListing.collected_amount: object expected');
+          message.collected_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.collected_amount);
+        }
         return message;
       };
 
@@ -20230,6 +20253,7 @@ export const ununifi = ($root.ununifi = (() => {
             let long = new $util.Long(0, 0, true);
             object.auto_relisted_count = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
           } else object.auto_relisted_count = options.longs === String ? '0' : 0;
+          object.collected_amount = null;
         }
         if (message.nft_id != null && message.hasOwnProperty('nft_id'))
           object.nft_id = $root.ununifi.nftmarket.NftIdentifier.toObject(message.nft_id, options);
@@ -20261,6 +20285,8 @@ export const ununifi = ($root.ununifi = (() => {
                 : options.longs === Number
                 ? new $util.LongBits(message.auto_relisted_count.low >>> 0, message.auto_relisted_count.high >>> 0).toNumber(true)
                 : message.auto_relisted_count;
+        if (message.collected_amount != null && message.hasOwnProperty('collected_amount'))
+          object.collected_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.collected_amount, options);
         return object;
       };
 

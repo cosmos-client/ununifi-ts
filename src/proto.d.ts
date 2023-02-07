@@ -8963,6 +8963,9 @@ export namespace ununifi {
 
       /** NftListing auto_relisted_count */
       auto_relisted_count?: Long | null;
+
+      /** NftListing collected_amount */
+      collected_amount?: cosmos.base.v1beta1.ICoin | null;
     }
 
     /** Represents a NftListing. */
@@ -9008,6 +9011,9 @@ export namespace ununifi {
 
       /** NftListing auto_relisted_count. */
       public auto_relisted_count: Long;
+
+      /** NftListing collected_amount. */
+      public collected_amount?: cosmos.base.v1beta1.ICoin | null;
 
       /**
        * Encodes the specified NftListing message. Does not implicitly {@link ununifi.nftmarket.NftListing.verify|verify} messages.
