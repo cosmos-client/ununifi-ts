@@ -29,7 +29,7 @@ export function loan(sdk: cosmosclient.CosmosSDK, classId: string, nftId: string
   return new QueryApi(undefined, sdk.url).loan(classId, nftId);
 }
 
-export function cdpsListed(sdk: cosmosclient.CosmosSDK) {
+export function cdpsList(sdk: cosmosclient.CosmosSDK) {
   return new QueryApi(undefined, sdk.url).cDPsList();
 }
 
@@ -37,6 +37,18 @@ export function nftBids(sdk: cosmosclient.CosmosSDK, classId: string, nftId: str
   return new QueryApi(undefined, sdk.url).nftBids(classId, nftId);
 }
 
-export function bidderBids(sdk: cosmosclient.CosmosSDK, bidder: cosmosclient.AccAddress) {
-  return new QueryApi(undefined, sdk.url).bidderBids(bidder.toString());
+export function bidderBids(sdk: cosmosclient.CosmosSDK, bidder: string) {
+  return new QueryApi(undefined, sdk.url).bidderBids(bidder);
+}
+
+export function liquidation(sdk: cosmosclient.CosmosSDK, classId: string, nftId: string) {
+  return new QueryApi(undefined, sdk.url).liquidation(classId, nftId);
+}
+
+export function paymentStatus(sdk: cosmosclient.CosmosSDK, classId: string, nftId: string, bidder: string) {
+  return new QueryApi(undefined, sdk.url).paymentStatus(classId, nftId, bidder);
+}
+
+export function rewards(sdk: cosmosclient.CosmosSDK, address: string) {
+  return new QueryApi(undefined, sdk.url).rewards(address);
 }
