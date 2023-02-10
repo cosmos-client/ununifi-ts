@@ -25,6 +25,10 @@ export function loans(sdk: cosmosclient.CosmosSDK) {
   return new QueryApi(undefined, sdk.url).loans();
 }
 
+export function loan(sdk: cosmosclient.CosmosSDK, classId: string, nftId: string) {
+  return new QueryApi(undefined, sdk.url).loan(classId, nftId);
+}
+
 export function cdpsListed(sdk: cosmosclient.CosmosSDK) {
   return new QueryApi(undefined, sdk.url).cDPsList();
 }
