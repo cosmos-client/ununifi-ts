@@ -97,6 +97,18 @@ export interface AllPositions200ResponsePositionsInner {
     'opened_rate'?: string;
     /**
      * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'remaining_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'last_levied_at'?: string;
+    /**
+     * 
      * @type {AuctionAll200ResponseAuctionsInner}
      * @memberof AllPositions200ResponsePositionsInner
      */
@@ -944,10 +956,10 @@ export interface DerivativesParams200Response {
 export interface DerivativesParams200ResponseParams {
     /**
      * 
-     * @type {DerivativesParams200ResponseParamsPool}
+     * @type {DerivativesParams200ResponseParamsPoolParams}
      * @memberof DerivativesParams200ResponseParams
      */
-    'pool'?: DerivativesParams200ResponseParamsPool;
+    'pool_params'?: DerivativesParams200ResponseParamsPoolParams;
     /**
      * 
      * @type {DerivativesParams200ResponseParamsPerpetualFutures}
@@ -1003,7 +1015,7 @@ export interface DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner 
      * @type {string}
      * @memberof DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner
      */
-    'denom'?: string;
+    'base_denom'?: string;
     /**
      * 
      * @type {string}
@@ -1051,62 +1063,68 @@ export interface DerivativesParams200ResponseParamsPerpetualOptions {
 /**
  * 
  * @export
- * @interface DerivativesParams200ResponseParamsPool
+ * @interface DerivativesParams200ResponseParamsPoolParams
  */
-export interface DerivativesParams200ResponseParamsPool {
+export interface DerivativesParams200ResponseParamsPoolParams {
     /**
      * 
      * @type {string}
-     * @memberof DerivativesParams200ResponseParamsPool
+     * @memberof DerivativesParams200ResponseParamsPoolParams
      */
     'quote_ticker'?: string;
     /**
      * 
      * @type {string}
-     * @memberof DerivativesParams200ResponseParamsPool
+     * @memberof DerivativesParams200ResponseParamsPoolParams
      */
     'base_lpt_mint_fee'?: string;
     /**
      * 
      * @type {string}
-     * @memberof DerivativesParams200ResponseParamsPool
+     * @memberof DerivativesParams200ResponseParamsPoolParams
      */
     'base_lpt_redeem_fee'?: string;
     /**
      * 
      * @type {string}
-     * @memberof DerivativesParams200ResponseParamsPool
+     * @memberof DerivativesParams200ResponseParamsPoolParams
      */
     'borrowing_fee_rate_per_hour'?: string;
     /**
      * 
      * @type {string}
-     * @memberof DerivativesParams200ResponseParamsPool
+     * @memberof DerivativesParams200ResponseParamsPoolParams
      */
-    'liquidation_needed_report_reward_rate'?: string;
+    'report_liquidation_reward_rate'?: string;
     /**
      * 
-     * @type {Array<DerivativesParams200ResponseParamsPoolAcceptedAssetsInner>}
-     * @memberof DerivativesParams200ResponseParamsPool
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPoolParams
      */
-    'accepted_assets'?: Array<DerivativesParams200ResponseParamsPoolAcceptedAssetsInner>;
+    'report_levy_period_reward_rate'?: string;
+    /**
+     * 
+     * @type {Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner>}
+     * @memberof DerivativesParams200ResponseParamsPoolParams
+     */
+    'accepted_assets'?: Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner>;
 }
 /**
  * 
  * @export
- * @interface DerivativesParams200ResponseParamsPoolAcceptedAssetsInner
+ * @interface DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner
  */
-export interface DerivativesParams200ResponseParamsPoolAcceptedAssetsInner {
+export interface DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner {
     /**
      * 
      * @type {string}
-     * @memberof DerivativesParams200ResponseParamsPoolAcceptedAssetsInner
+     * @memberof DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner
      */
     'denom'?: string;
     /**
      * 
      * @type {string}
-     * @memberof DerivativesParams200ResponseParamsPoolAcceptedAssetsInner
+     * @memberof DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner
      */
     'target_weight'?: string;
 }
@@ -1147,6 +1165,25 @@ export interface EcosystemincentiveParams200ResponseParams {
      * @memberof EcosystemincentiveParams200ResponseParams
      */
     'max_subject_info_num_in_unit'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface EstimateDLPTokenAmount200Response
+ */
+export interface EstimateDLPTokenAmount200Response {
+    /**
+     * 
+     * @type {string}
+     * @memberof EstimateDLPTokenAmount200Response
+     */
+    'amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof EstimateDLPTokenAmount200Response
+     */
+    'fee'?: string;
 }
 /**
  * `Any` contains an arbitrary serialized protocol buffer message along with a URL that describes the type of the serialized message.  Protobuf library provides support to pack/unpack Any values in the form of utility functions or additional generated methods of the Any type.  Example 1: Pack and unpack a message in C++.      Foo foo = ...;     Any any;     any.PackFrom(foo);     ...     if (any.UnpackTo(&foo)) {       ...     }  Example 2: Pack and unpack a message in Java.      Foo foo = ...;     Any any = Any.pack(foo);     ...     if (any.is(Foo.class)) {       foo = any.unpack(Foo.class);     }   Example 3: Pack and unpack a message in Python.      foo = Foo(...)     any = Any()     any.Pack(foo)     ...     if any.Is(Foo.DESCRIPTOR):       any.Unpack(foo)       ...   Example 4: Pack and unpack a message in Go       foo := &pb.Foo{...}      any, err := ptypes.MarshalAny(foo)      ...      foo := &pb.Foo{}      if err := ptypes.UnmarshalAny(any, foo); err != nil {        ...      }  The pack methods provided by protobuf library will by default use \'type.googleapis.com/full.type.name\' as the type URL and the unpack methods only use the fully qualified type name after the last \'/\' in the type URL, for example \"foo.bar.com/x/y.z\" will yield type name \"y.z\".   JSON ==== The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:      package google.profile;     message Person {       string first_name = 1;       string last_name = 2;     }      {       \"@type\": \"type.googleapis.com/google.profile.Person\",       \"firstName\": <string>,       \"lastName\": <string>     }  If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message [google.protobuf.Duration][]):      {       \"@type\": \"type.googleapis.com/google.protobuf.Duration\",       \"value\": \"1.212s\"     }
@@ -2307,31 +2344,6 @@ export interface PricefeedParams200ResponseParams {
      * @memberof PricefeedParams200ResponseParams
      */
     'markets'?: Array<MarketAll200ResponseMarketsInner>;
-    /**
-     * 
-     * @type {Array<PricefeedParams200ResponseParamsDenomTickerPairsInner>}
-     * @memberof PricefeedParams200ResponseParams
-     */
-    'denom_ticker_pairs'?: Array<PricefeedParams200ResponseParamsDenomTickerPairsInner>;
-}
-/**
- * 
- * @export
- * @interface PricefeedParams200ResponseParamsDenomTickerPairsInner
- */
-export interface PricefeedParams200ResponseParamsDenomTickerPairsInner {
-    /**
-     * 
-     * @type {string}
-     * @memberof PricefeedParams200ResponseParamsDenomTickerPairsInner
-     */
-    'denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PricefeedParams200ResponseParamsDenomTickerPairsInner
-     */
-    'ticker'?: string;
 }
 /**
  * 
@@ -2913,7 +2925,7 @@ export interface UnunifiDerivativesMarket {
      * @type {string}
      * @memberof UnunifiDerivativesMarket
      */
-    'denom'?: string;
+    'base_denom'?: string;
     /**
      * 
      * @type {string}
@@ -2929,10 +2941,10 @@ export interface UnunifiDerivativesMarket {
 export interface UnunifiDerivativesParams {
     /**
      * 
-     * @type {DerivativesParams200ResponseParamsPool}
+     * @type {DerivativesParams200ResponseParamsPoolParams}
      * @memberof UnunifiDerivativesParams
      */
-    'pool'?: DerivativesParams200ResponseParamsPool;
+    'pool_params'?: DerivativesParams200ResponseParamsPoolParams;
     /**
      * 
      * @type {DerivativesParams200ResponseParamsPerpetualFutures}
@@ -3017,68 +3029,6 @@ export interface UnunifiDerivativesPerpetualOptionsParams {
 /**
  * 
  * @export
- * @interface UnunifiDerivativesPool
- */
-export interface UnunifiDerivativesPool {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesPool
-     */
-    'quote_ticker'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesPool
-     */
-    'base_lpt_mint_fee'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesPool
-     */
-    'base_lpt_redeem_fee'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesPool
-     */
-    'borrowing_fee_rate_per_hour'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesPool
-     */
-    'liquidation_needed_report_reward_rate'?: string;
-    /**
-     * 
-     * @type {Array<DerivativesParams200ResponseParamsPoolAcceptedAssetsInner>}
-     * @memberof UnunifiDerivativesPool
-     */
-    'accepted_assets'?: Array<DerivativesParams200ResponseParamsPoolAcceptedAssetsInner>;
-}
-/**
- * 
- * @export
- * @interface UnunifiDerivativesPoolAsset
- */
-export interface UnunifiDerivativesPoolAsset {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesPoolAsset
-     */
-    'denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesPoolAsset
-     */
-    'target_weight'?: string;
-}
-/**
- * 
- * @export
  * @interface UnunifiDerivativesPoolMarketCap
  */
 export interface UnunifiDerivativesPoolMarketCap {
@@ -3129,6 +3079,74 @@ export interface UnunifiDerivativesPoolMarketCapBreakdown {
 /**
  * 
  * @export
+ * @interface UnunifiDerivativesPoolParams
+ */
+export interface UnunifiDerivativesPoolParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'quote_ticker'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'base_lpt_mint_fee'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'base_lpt_redeem_fee'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'borrowing_fee_rate_per_hour'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'report_liquidation_reward_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'report_levy_period_reward_rate'?: string;
+    /**
+     * 
+     * @type {Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner>}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'accepted_assets'?: Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesPoolParamsAsset
+ */
+export interface UnunifiDerivativesPoolParamsAsset {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParamsAsset
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParamsAsset
+     */
+    'target_weight'?: string;
+}
+/**
+ * 
+ * @export
  * @interface UnunifiDerivativesPosition
  */
 export interface UnunifiDerivativesPosition {
@@ -3168,6 +3186,18 @@ export interface UnunifiDerivativesPosition {
      * @memberof UnunifiDerivativesPosition
      */
     'opened_rate'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'remaining_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'last_levied_at'?: string;
     /**
      * 
      * @type {AuctionAll200ResponseAuctionsInner}
@@ -3212,6 +3242,44 @@ export interface UnunifiDerivativesQueryAllPositionsResponse {
      * @memberof UnunifiDerivativesQueryAllPositionsResponse
      */
     'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
+ */
+export interface UnunifiDerivativesQueryEstimateDLPTokenAmountResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
+     */
+    'amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
+     */
+    'fee'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryEstimateRedeemAmountResponse
+ */
+export interface UnunifiDerivativesQueryEstimateRedeemAmountResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryEstimateRedeemAmountResponse
+     */
+    'amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryEstimateRedeemAmountResponse
+     */
+    'fee'?: string;
 }
 /**
  * 
@@ -4543,25 +4611,6 @@ export interface UnunifiPricefeedCurrentPrice {
 /**
  * 
  * @export
- * @interface UnunifiPricefeedDenomTickerPair
- */
-export interface UnunifiPricefeedDenomTickerPair {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiPricefeedDenomTickerPair
-     */
-    'denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiPricefeedDenomTickerPair
-     */
-    'ticker'?: string;
-}
-/**
- * 
- * @export
  * @interface UnunifiPricefeedMarket
  */
 export interface UnunifiPricefeedMarket {
@@ -4608,12 +4657,6 @@ export interface UnunifiPricefeedParams {
      * @memberof UnunifiPricefeedParams
      */
     'markets'?: Array<MarketAll200ResponseMarketsInner>;
-    /**
-     * 
-     * @type {Array<PricefeedParams200ResponseParamsDenomTickerPairsInner>}
-     * @memberof UnunifiPricefeedParams
-     */
-    'denom_ticker_pairs'?: Array<PricefeedParams200ResponseParamsDenomTickerPairsInner>;
 }
 /**
  * 
@@ -5524,6 +5567,84 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} [mintDenom] 
+         * @param {string} [amount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateDLPTokenAmount: async (mintDenom?: string, amount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/estimate-dlp-token-amount`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (mintDenom !== undefined) {
+                localVarQueryParameter['mint_denom'] = mintDenom;
+            }
+
+            if (amount !== undefined) {
+                localVarQueryParameter['amount'] = amount;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [redeemDenom] 
+         * @param {string} [lptAmount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateRedeemAmount: async (redeemDenom?: string, lptAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/estimate-redeem-amount`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (redeemDenom !== undefined) {
+                localVarQueryParameter['redeem_denom'] = redeemDenom;
+            }
+
+            if (lptAmount !== undefined) {
+                localVarQueryParameter['lpt_amount'] = lptAmount;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6210,18 +6331,18 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} denom 
+         * @param {string} baseDenom 
          * @param {string} quoteDenom 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        perpetualFuturesMarket: async (denom: string, quoteDenom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'denom' is not null or undefined
-            assertParamExists('perpetualFuturesMarket', 'denom', denom)
+        perpetualFuturesMarket: async (baseDenom: string, quoteDenom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'baseDenom' is not null or undefined
+            assertParamExists('perpetualFuturesMarket', 'baseDenom', baseDenom)
             // verify required parameter 'quoteDenom' is not null or undefined
             assertParamExists('perpetualFuturesMarket', 'quoteDenom', quoteDenom)
-            const localVarPath = `/ununifi/derivatives/perpetual-futures/{denom}/{quote_denom}`
-                .replace(`{${"denom"}}`, encodeURIComponent(String(denom)))
+            const localVarPath = `/ununifi/derivatives/perpetual-futures/{base_denom}/{quote_denom}`
+                .replace(`{${"base_denom"}}`, encodeURIComponent(String(baseDenom)))
                 .replace(`{${"quote_denom"}}`, encodeURIComponent(String(quoteDenom)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6276,18 +6397,18 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} denom 
+         * @param {string} baseDenom 
          * @param {string} quoteDenom 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        perpetualOptionsMarket: async (denom: string, quoteDenom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'denom' is not null or undefined
-            assertParamExists('perpetualOptionsMarket', 'denom', denom)
+        perpetualOptionsMarket: async (baseDenom: string, quoteDenom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'baseDenom' is not null or undefined
+            assertParamExists('perpetualOptionsMarket', 'baseDenom', baseDenom)
             // verify required parameter 'quoteDenom' is not null or undefined
             assertParamExists('perpetualOptionsMarket', 'quoteDenom', quoteDenom)
-            const localVarPath = `/ununifi/derivatives/perpetual-options/{denom}/{quote_denom}`
-                .replace(`{${"denom"}}`, encodeURIComponent(String(denom)))
+            const localVarPath = `/ununifi/derivatives/perpetual-options/{base_denom}/{quote_denom}`
+                .replace(`{${"base_denom"}}`, encodeURIComponent(String(baseDenom)))
                 .replace(`{${"quote_denom"}}`, encodeURIComponent(String(quoteDenom)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6848,6 +6969,28 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} [mintDenom] 
+         * @param {string} [amount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async estimateDLPTokenAmount(mintDenom?: string, amount?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateDLPTokenAmount200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.estimateDLPTokenAmount(mintDenom, amount, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [redeemDenom] 
+         * @param {string} [lptAmount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async estimateRedeemAmount(redeemDenom?: string, lptAmount?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateDLPTokenAmount200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemAmount(redeemDenom, lptAmount, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -7050,13 +7193,13 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} denom 
+         * @param {string} baseDenom 
          * @param {string} quoteDenom 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async perpetualFuturesMarket(denom: string, quoteDenom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PerpetualFuturesMarket200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualFuturesMarket(denom, quoteDenom, options);
+        async perpetualFuturesMarket(baseDenom: string, quoteDenom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PerpetualFuturesMarket200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualFuturesMarket(baseDenom, quoteDenom, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -7070,13 +7213,13 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} denom 
+         * @param {string} baseDenom 
          * @param {string} quoteDenom 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async perpetualOptionsMarket(denom: string, quoteDenom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualOptionsMarket(denom, quoteDenom, options);
+        async perpetualOptionsMarket(baseDenom: string, quoteDenom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualOptionsMarket(baseDenom, quoteDenom, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -7364,6 +7507,26 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {string} [mintDenom] 
+         * @param {string} [amount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateDLPTokenAmount(mintDenom?: string, amount?: string, options?: any): AxiosPromise<EstimateDLPTokenAmount200Response> {
+            return localVarFp.estimateDLPTokenAmount(mintDenom, amount, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [redeemDenom] 
+         * @param {string} [lptAmount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateRedeemAmount(redeemDenom?: string, lptAmount?: string, options?: any): AxiosPromise<EstimateDLPTokenAmount200Response> {
+            return localVarFp.estimateRedeemAmount(redeemDenom, lptAmount, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -7547,13 +7710,13 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} denom 
+         * @param {string} baseDenom 
          * @param {string} quoteDenom 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        perpetualFuturesMarket(denom: string, quoteDenom: string, options?: any): AxiosPromise<PerpetualFuturesMarket200Response> {
-            return localVarFp.perpetualFuturesMarket(denom, quoteDenom, options).then((request) => request(axios, basePath));
+        perpetualFuturesMarket(baseDenom: string, quoteDenom: string, options?: any): AxiosPromise<PerpetualFuturesMarket200Response> {
+            return localVarFp.perpetualFuturesMarket(baseDenom, quoteDenom, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7565,13 +7728,13 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} denom 
+         * @param {string} baseDenom 
          * @param {string} quoteDenom 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        perpetualOptionsMarket(denom: string, quoteDenom: string, options?: any): AxiosPromise<object> {
-            return localVarFp.perpetualOptionsMarket(denom, quoteDenom, options).then((request) => request(axios, basePath));
+        perpetualOptionsMarket(baseDenom: string, quoteDenom: string, options?: any): AxiosPromise<object> {
+            return localVarFp.perpetualOptionsMarket(baseDenom, quoteDenom, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7887,6 +8050,30 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} [mintDenom] 
+     * @param {string} [amount] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public estimateDLPTokenAmount(mintDenom?: string, amount?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).estimateDLPTokenAmount(mintDenom, amount, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [redeemDenom] 
+     * @param {string} [lptAmount] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public estimateRedeemAmount(redeemDenom?: string, lptAmount?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).estimateRedeemAmount(redeemDenom, lptAmount, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
@@ -8108,14 +8295,14 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} denom 
+     * @param {string} baseDenom 
      * @param {string} quoteDenom 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public perpetualFuturesMarket(denom: string, quoteDenom: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).perpetualFuturesMarket(denom, quoteDenom, options).then((request) => request(this.axios, this.basePath));
+    public perpetualFuturesMarket(baseDenom: string, quoteDenom: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).perpetualFuturesMarket(baseDenom, quoteDenom, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8130,14 +8317,14 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} denom 
+     * @param {string} baseDenom 
      * @param {string} quoteDenom 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public perpetualOptionsMarket(denom: string, quoteDenom: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).perpetualOptionsMarket(denom, quoteDenom, options).then((request) => request(this.axios, this.basePath));
+    public perpetualOptionsMarket(baseDenom: string, quoteDenom: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).perpetualOptionsMarket(baseDenom, quoteDenom, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
