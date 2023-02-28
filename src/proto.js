@@ -16237,29 +16237,30 @@ export const ununifi = $root.ununifi = (() => {
             return Position;
         })();
 
-        derivatives.Pool = (function() {
+        derivatives.PoolParams = (function() {
 
             /**
-             * Properties of a Pool.
+             * Properties of a PoolParams.
              * @memberof ununifi.derivatives
-             * @interface IPool
-             * @property {string|null} [quote_ticker] Pool quote_ticker
-             * @property {string|null} [base_lpt_mint_fee] Pool base_lpt_mint_fee
-             * @property {string|null} [base_lpt_redeem_fee] Pool base_lpt_redeem_fee
-             * @property {string|null} [borrowing_fee_rate_per_hour] Pool borrowing_fee_rate_per_hour
-             * @property {string|null} [liquidation_needed_report_reward_rate] Pool liquidation_needed_report_reward_rate
-             * @property {Array.<ununifi.derivatives.Pool.IAsset>|null} [accepted_assets] Pool accepted_assets
+             * @interface IPoolParams
+             * @property {string|null} [quote_ticker] PoolParams quote_ticker
+             * @property {string|null} [base_lpt_mint_fee] PoolParams base_lpt_mint_fee
+             * @property {string|null} [base_lpt_redeem_fee] PoolParams base_lpt_redeem_fee
+             * @property {string|null} [borrowing_fee_rate_per_hour] PoolParams borrowing_fee_rate_per_hour
+             * @property {string|null} [report_liquidation_reward_rate] PoolParams report_liquidation_reward_rate
+             * @property {string|null} [report_levy_period_reward_rate] PoolParams report_levy_period_reward_rate
+             * @property {Array.<ununifi.derivatives.PoolParams.IAsset>|null} [accepted_assets] PoolParams accepted_assets
              */
 
             /**
-             * Constructs a new Pool.
+             * Constructs a new PoolParams.
              * @memberof ununifi.derivatives
-             * @classdesc Represents a Pool.
-             * @implements IPool
+             * @classdesc Represents a PoolParams.
+             * @implements IPoolParams
              * @constructor
-             * @param {ununifi.derivatives.IPool=} [properties] Properties to set
+             * @param {ununifi.derivatives.IPoolParams=} [properties] Properties to set
              */
-            function Pool(properties) {
+            function PoolParams(properties) {
                 this.accepted_assets = [];
                 if (properties)
                     for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
@@ -16268,63 +16269,71 @@ export const ununifi = $root.ununifi = (() => {
             }
 
             /**
-             * Pool quote_ticker.
+             * PoolParams quote_ticker.
              * @member {string} quote_ticker
-             * @memberof ununifi.derivatives.Pool
+             * @memberof ununifi.derivatives.PoolParams
              * @instance
              */
-            Pool.prototype.quote_ticker = "";
+            PoolParams.prototype.quote_ticker = "";
 
             /**
-             * Pool base_lpt_mint_fee.
+             * PoolParams base_lpt_mint_fee.
              * @member {string} base_lpt_mint_fee
-             * @memberof ununifi.derivatives.Pool
+             * @memberof ununifi.derivatives.PoolParams
              * @instance
              */
-            Pool.prototype.base_lpt_mint_fee = "";
+            PoolParams.prototype.base_lpt_mint_fee = "";
 
             /**
-             * Pool base_lpt_redeem_fee.
+             * PoolParams base_lpt_redeem_fee.
              * @member {string} base_lpt_redeem_fee
-             * @memberof ununifi.derivatives.Pool
+             * @memberof ununifi.derivatives.PoolParams
              * @instance
              */
-            Pool.prototype.base_lpt_redeem_fee = "";
+            PoolParams.prototype.base_lpt_redeem_fee = "";
 
             /**
-             * Pool borrowing_fee_rate_per_hour.
+             * PoolParams borrowing_fee_rate_per_hour.
              * @member {string} borrowing_fee_rate_per_hour
-             * @memberof ununifi.derivatives.Pool
+             * @memberof ununifi.derivatives.PoolParams
              * @instance
              */
-            Pool.prototype.borrowing_fee_rate_per_hour = "";
+            PoolParams.prototype.borrowing_fee_rate_per_hour = "";
 
             /**
-             * Pool liquidation_needed_report_reward_rate.
-             * @member {string} liquidation_needed_report_reward_rate
-             * @memberof ununifi.derivatives.Pool
+             * PoolParams report_liquidation_reward_rate.
+             * @member {string} report_liquidation_reward_rate
+             * @memberof ununifi.derivatives.PoolParams
              * @instance
              */
-            Pool.prototype.liquidation_needed_report_reward_rate = "";
+            PoolParams.prototype.report_liquidation_reward_rate = "";
 
             /**
-             * Pool accepted_assets.
-             * @member {Array.<ununifi.derivatives.Pool.IAsset>} accepted_assets
-             * @memberof ununifi.derivatives.Pool
+             * PoolParams report_levy_period_reward_rate.
+             * @member {string} report_levy_period_reward_rate
+             * @memberof ununifi.derivatives.PoolParams
              * @instance
              */
-            Pool.prototype.accepted_assets = $util.emptyArray;
+            PoolParams.prototype.report_levy_period_reward_rate = "";
 
             /**
-             * Encodes the specified Pool message. Does not implicitly {@link ununifi.derivatives.Pool.verify|verify} messages.
+             * PoolParams accepted_assets.
+             * @member {Array.<ununifi.derivatives.PoolParams.IAsset>} accepted_assets
+             * @memberof ununifi.derivatives.PoolParams
+             * @instance
+             */
+            PoolParams.prototype.accepted_assets = $util.emptyArray;
+
+            /**
+             * Encodes the specified PoolParams message. Does not implicitly {@link ununifi.derivatives.PoolParams.verify|verify} messages.
              * @function encode
-             * @memberof ununifi.derivatives.Pool
+             * @memberof ununifi.derivatives.PoolParams
              * @static
-             * @param {ununifi.derivatives.IPool} message Pool message or plain object to encode
+             * @param {ununifi.derivatives.IPoolParams} message PoolParams message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
-            Pool.encode = function encode(message, writer) {
+            PoolParams.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
                 if (message.quote_ticker != null && Object.hasOwnProperty.call(message, "quote_ticker"))
@@ -16335,42 +16344,44 @@ export const ununifi = $root.ununifi = (() => {
                     writer.uint32(/* id 3, wireType 2 =*/26).string(message.base_lpt_redeem_fee);
                 if (message.borrowing_fee_rate_per_hour != null && Object.hasOwnProperty.call(message, "borrowing_fee_rate_per_hour"))
                     writer.uint32(/* id 4, wireType 2 =*/34).string(message.borrowing_fee_rate_per_hour);
-                if (message.liquidation_needed_report_reward_rate != null && Object.hasOwnProperty.call(message, "liquidation_needed_report_reward_rate"))
-                    writer.uint32(/* id 5, wireType 2 =*/42).string(message.liquidation_needed_report_reward_rate);
+                if (message.report_liquidation_reward_rate != null && Object.hasOwnProperty.call(message, "report_liquidation_reward_rate"))
+                    writer.uint32(/* id 5, wireType 2 =*/42).string(message.report_liquidation_reward_rate);
+                if (message.report_levy_period_reward_rate != null && Object.hasOwnProperty.call(message, "report_levy_period_reward_rate"))
+                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.report_levy_period_reward_rate);
                 if (message.accepted_assets != null && message.accepted_assets.length)
                     for (let i = 0; i < message.accepted_assets.length; ++i)
-                        $root.ununifi.derivatives.Pool.Asset.encode(message.accepted_assets[i], writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
+                        $root.ununifi.derivatives.PoolParams.Asset.encode(message.accepted_assets[i], writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
                 return writer;
             };
 
             /**
-             * Encodes the specified Pool message, length delimited. Does not implicitly {@link ununifi.derivatives.Pool.verify|verify} messages.
+             * Encodes the specified PoolParams message, length delimited. Does not implicitly {@link ununifi.derivatives.PoolParams.verify|verify} messages.
              * @function encodeDelimited
-             * @memberof ununifi.derivatives.Pool
+             * @memberof ununifi.derivatives.PoolParams
              * @static
-             * @param {ununifi.derivatives.IPool} message Pool message or plain object to encode
+             * @param {ununifi.derivatives.IPoolParams} message PoolParams message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
-            Pool.encodeDelimited = function encodeDelimited(message, writer) {
+            PoolParams.encodeDelimited = function encodeDelimited(message, writer) {
                 return this.encode(message, writer).ldelim();
             };
 
             /**
-             * Decodes a Pool message from the specified reader or buffer.
+             * Decodes a PoolParams message from the specified reader or buffer.
              * @function decode
-             * @memberof ununifi.derivatives.Pool
+             * @memberof ununifi.derivatives.PoolParams
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.derivatives.Pool} Pool
+             * @returns {ununifi.derivatives.PoolParams} PoolParams
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            Pool.decode = function decode(reader, length) {
+            PoolParams.decode = function decode(reader, length) {
                 if (!(reader instanceof $Reader))
                     reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.Pool();
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.PoolParams();
                 while (reader.pos < end) {
                     let tag = reader.uint32();
                     switch (tag >>> 3) {
@@ -16387,12 +16398,15 @@ export const ununifi = $root.ununifi = (() => {
                         message.borrowing_fee_rate_per_hour = reader.string();
                         break;
                     case 5:
-                        message.liquidation_needed_report_reward_rate = reader.string();
+                        message.report_liquidation_reward_rate = reader.string();
                         break;
                     case 6:
+                        message.report_levy_period_reward_rate = reader.string();
+                        break;
+                    case 7:
                         if (!(message.accepted_assets && message.accepted_assets.length))
                             message.accepted_assets = [];
-                        message.accepted_assets.push($root.ununifi.derivatives.Pool.Asset.decode(reader, reader.uint32()));
+                        message.accepted_assets.push($root.ununifi.derivatives.PoolParams.Asset.decode(reader, reader.uint32()));
                         break;
                     default:
                         reader.skipType(tag & 7);
@@ -16403,30 +16417,30 @@ export const ununifi = $root.ununifi = (() => {
             };
 
             /**
-             * Decodes a Pool message from the specified reader or buffer, length delimited.
+             * Decodes a PoolParams message from the specified reader or buffer, length delimited.
              * @function decodeDelimited
-             * @memberof ununifi.derivatives.Pool
+             * @memberof ununifi.derivatives.PoolParams
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.derivatives.Pool} Pool
+             * @returns {ununifi.derivatives.PoolParams} PoolParams
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            Pool.decodeDelimited = function decodeDelimited(reader) {
+            PoolParams.decodeDelimited = function decodeDelimited(reader) {
                 if (!(reader instanceof $Reader))
                     reader = new $Reader(reader);
                 return this.decode(reader, reader.uint32());
             };
 
             /**
-             * Verifies a Pool message.
+             * Verifies a PoolParams message.
              * @function verify
-             * @memberof ununifi.derivatives.Pool
+             * @memberof ununifi.derivatives.PoolParams
              * @static
              * @param {Object.<string,*>} message Plain object to verify
              * @returns {string|null} `null` if valid, otherwise the reason why it is not
              */
-            Pool.verify = function verify(message) {
+            PoolParams.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
                 if (message.quote_ticker != null && message.hasOwnProperty("quote_ticker"))
@@ -16441,14 +16455,17 @@ export const ununifi = $root.ununifi = (() => {
                 if (message.borrowing_fee_rate_per_hour != null && message.hasOwnProperty("borrowing_fee_rate_per_hour"))
                     if (!$util.isString(message.borrowing_fee_rate_per_hour))
                         return "borrowing_fee_rate_per_hour: string expected";
-                if (message.liquidation_needed_report_reward_rate != null && message.hasOwnProperty("liquidation_needed_report_reward_rate"))
-                    if (!$util.isString(message.liquidation_needed_report_reward_rate))
-                        return "liquidation_needed_report_reward_rate: string expected";
+                if (message.report_liquidation_reward_rate != null && message.hasOwnProperty("report_liquidation_reward_rate"))
+                    if (!$util.isString(message.report_liquidation_reward_rate))
+                        return "report_liquidation_reward_rate: string expected";
+                if (message.report_levy_period_reward_rate != null && message.hasOwnProperty("report_levy_period_reward_rate"))
+                    if (!$util.isString(message.report_levy_period_reward_rate))
+                        return "report_levy_period_reward_rate: string expected";
                 if (message.accepted_assets != null && message.hasOwnProperty("accepted_assets")) {
                     if (!Array.isArray(message.accepted_assets))
                         return "accepted_assets: array expected";
                     for (let i = 0; i < message.accepted_assets.length; ++i) {
-                        let error = $root.ununifi.derivatives.Pool.Asset.verify(message.accepted_assets[i]);
+                        let error = $root.ununifi.derivatives.PoolParams.Asset.verify(message.accepted_assets[i]);
                         if (error)
                             return "accepted_assets." + error;
                     }
@@ -16457,17 +16474,17 @@ export const ununifi = $root.ununifi = (() => {
             };
 
             /**
-             * Creates a Pool message from a plain object. Also converts values to their respective internal types.
+             * Creates a PoolParams message from a plain object. Also converts values to their respective internal types.
              * @function fromObject
-             * @memberof ununifi.derivatives.Pool
+             * @memberof ununifi.derivatives.PoolParams
              * @static
              * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.derivatives.Pool} Pool
+             * @returns {ununifi.derivatives.PoolParams} PoolParams
              */
-            Pool.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.derivatives.Pool)
+            PoolParams.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.derivatives.PoolParams)
                     return object;
-                let message = new $root.ununifi.derivatives.Pool();
+                let message = new $root.ununifi.derivatives.PoolParams();
                 if (object.quote_ticker != null)
                     message.quote_ticker = String(object.quote_ticker);
                 if (object.base_lpt_mint_fee != null)
@@ -16476,31 +16493,33 @@ export const ununifi = $root.ununifi = (() => {
                     message.base_lpt_redeem_fee = String(object.base_lpt_redeem_fee);
                 if (object.borrowing_fee_rate_per_hour != null)
                     message.borrowing_fee_rate_per_hour = String(object.borrowing_fee_rate_per_hour);
-                if (object.liquidation_needed_report_reward_rate != null)
-                    message.liquidation_needed_report_reward_rate = String(object.liquidation_needed_report_reward_rate);
+                if (object.report_liquidation_reward_rate != null)
+                    message.report_liquidation_reward_rate = String(object.report_liquidation_reward_rate);
+                if (object.report_levy_period_reward_rate != null)
+                    message.report_levy_period_reward_rate = String(object.report_levy_period_reward_rate);
                 if (object.accepted_assets) {
                     if (!Array.isArray(object.accepted_assets))
-                        throw TypeError(".ununifi.derivatives.Pool.accepted_assets: array expected");
+                        throw TypeError(".ununifi.derivatives.PoolParams.accepted_assets: array expected");
                     message.accepted_assets = [];
                     for (let i = 0; i < object.accepted_assets.length; ++i) {
                         if (typeof object.accepted_assets[i] !== "object")
-                            throw TypeError(".ununifi.derivatives.Pool.accepted_assets: object expected");
-                        message.accepted_assets[i] = $root.ununifi.derivatives.Pool.Asset.fromObject(object.accepted_assets[i]);
+                            throw TypeError(".ununifi.derivatives.PoolParams.accepted_assets: object expected");
+                        message.accepted_assets[i] = $root.ununifi.derivatives.PoolParams.Asset.fromObject(object.accepted_assets[i]);
                     }
                 }
                 return message;
             };
 
             /**
-             * Creates a plain object from a Pool message. Also converts values to other types if specified.
+             * Creates a plain object from a PoolParams message. Also converts values to other types if specified.
              * @function toObject
-             * @memberof ununifi.derivatives.Pool
+             * @memberof ununifi.derivatives.PoolParams
              * @static
-             * @param {ununifi.derivatives.Pool} message Pool
+             * @param {ununifi.derivatives.PoolParams} message PoolParams
              * @param {$protobuf.IConversionOptions} [options] Conversion options
              * @returns {Object.<string,*>} Plain object
              */
-            Pool.toObject = function toObject(message, options) {
+            PoolParams.toObject = function toObject(message, options) {
                 if (!options)
                     options = {};
                 let object = {};
@@ -16511,7 +16530,8 @@ export const ununifi = $root.ununifi = (() => {
                     object.base_lpt_mint_fee = "";
                     object.base_lpt_redeem_fee = "";
                     object.borrowing_fee_rate_per_hour = "";
-                    object.liquidation_needed_report_reward_rate = "";
+                    object.report_liquidation_reward_rate = "";
+                    object.report_levy_period_reward_rate = "";
                 }
                 if (message.quote_ticker != null && message.hasOwnProperty("quote_ticker"))
                     object.quote_ticker = message.quote_ticker;
@@ -16521,32 +16541,34 @@ export const ununifi = $root.ununifi = (() => {
                     object.base_lpt_redeem_fee = message.base_lpt_redeem_fee;
                 if (message.borrowing_fee_rate_per_hour != null && message.hasOwnProperty("borrowing_fee_rate_per_hour"))
                     object.borrowing_fee_rate_per_hour = message.borrowing_fee_rate_per_hour;
-                if (message.liquidation_needed_report_reward_rate != null && message.hasOwnProperty("liquidation_needed_report_reward_rate"))
-                    object.liquidation_needed_report_reward_rate = message.liquidation_needed_report_reward_rate;
+                if (message.report_liquidation_reward_rate != null && message.hasOwnProperty("report_liquidation_reward_rate"))
+                    object.report_liquidation_reward_rate = message.report_liquidation_reward_rate;
+                if (message.report_levy_period_reward_rate != null && message.hasOwnProperty("report_levy_period_reward_rate"))
+                    object.report_levy_period_reward_rate = message.report_levy_period_reward_rate;
                 if (message.accepted_assets && message.accepted_assets.length) {
                     object.accepted_assets = [];
                     for (let j = 0; j < message.accepted_assets.length; ++j)
-                        object.accepted_assets[j] = $root.ununifi.derivatives.Pool.Asset.toObject(message.accepted_assets[j], options);
+                        object.accepted_assets[j] = $root.ununifi.derivatives.PoolParams.Asset.toObject(message.accepted_assets[j], options);
                 }
                 return object;
             };
 
             /**
-             * Converts this Pool to JSON.
+             * Converts this PoolParams to JSON.
              * @function toJSON
-             * @memberof ununifi.derivatives.Pool
+             * @memberof ununifi.derivatives.PoolParams
              * @instance
              * @returns {Object.<string,*>} JSON object
              */
-            Pool.prototype.toJSON = function toJSON() {
+            PoolParams.prototype.toJSON = function toJSON() {
                 return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
             };
 
-            Pool.Asset = (function() {
+            PoolParams.Asset = (function() {
 
                 /**
                  * Properties of an Asset.
-                 * @memberof ununifi.derivatives.Pool
+                 * @memberof ununifi.derivatives.PoolParams
                  * @interface IAsset
                  * @property {string|null} [denom] Asset denom
                  * @property {string|null} [target_weight] Asset target_weight
@@ -16554,11 +16576,11 @@ export const ununifi = $root.ununifi = (() => {
 
                 /**
                  * Constructs a new Asset.
-                 * @memberof ununifi.derivatives.Pool
+                 * @memberof ununifi.derivatives.PoolParams
                  * @classdesc Represents an Asset.
                  * @implements IAsset
                  * @constructor
-                 * @param {ununifi.derivatives.Pool.IAsset=} [properties] Properties to set
+                 * @param {ununifi.derivatives.PoolParams.IAsset=} [properties] Properties to set
                  */
                 function Asset(properties) {
                     if (properties)
@@ -16570,7 +16592,7 @@ export const ununifi = $root.ununifi = (() => {
                 /**
                  * Asset denom.
                  * @member {string} denom
-                 * @memberof ununifi.derivatives.Pool.Asset
+                 * @memberof ununifi.derivatives.PoolParams.Asset
                  * @instance
                  */
                 Asset.prototype.denom = "";
@@ -16578,17 +16600,17 @@ export const ununifi = $root.ununifi = (() => {
                 /**
                  * Asset target_weight.
                  * @member {string} target_weight
-                 * @memberof ununifi.derivatives.Pool.Asset
+                 * @memberof ununifi.derivatives.PoolParams.Asset
                  * @instance
                  */
                 Asset.prototype.target_weight = "";
 
                 /**
-                 * Encodes the specified Asset message. Does not implicitly {@link ununifi.derivatives.Pool.Asset.verify|verify} messages.
+                 * Encodes the specified Asset message. Does not implicitly {@link ununifi.derivatives.PoolParams.Asset.verify|verify} messages.
                  * @function encode
-                 * @memberof ununifi.derivatives.Pool.Asset
+                 * @memberof ununifi.derivatives.PoolParams.Asset
                  * @static
-                 * @param {ununifi.derivatives.Pool.IAsset} message Asset message or plain object to encode
+                 * @param {ununifi.derivatives.PoolParams.IAsset} message Asset message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -16603,11 +16625,11 @@ export const ununifi = $root.ununifi = (() => {
                 };
 
                 /**
-                 * Encodes the specified Asset message, length delimited. Does not implicitly {@link ununifi.derivatives.Pool.Asset.verify|verify} messages.
+                 * Encodes the specified Asset message, length delimited. Does not implicitly {@link ununifi.derivatives.PoolParams.Asset.verify|verify} messages.
                  * @function encodeDelimited
-                 * @memberof ununifi.derivatives.Pool.Asset
+                 * @memberof ununifi.derivatives.PoolParams.Asset
                  * @static
-                 * @param {ununifi.derivatives.Pool.IAsset} message Asset message or plain object to encode
+                 * @param {ununifi.derivatives.PoolParams.IAsset} message Asset message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -16618,18 +16640,18 @@ export const ununifi = $root.ununifi = (() => {
                 /**
                  * Decodes an Asset message from the specified reader or buffer.
                  * @function decode
-                 * @memberof ununifi.derivatives.Pool.Asset
+                 * @memberof ununifi.derivatives.PoolParams.Asset
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.derivatives.Pool.Asset} Asset
+                 * @returns {ununifi.derivatives.PoolParams.Asset} Asset
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
                 Asset.decode = function decode(reader, length) {
                     if (!(reader instanceof $Reader))
                         reader = $Reader.create(reader);
-                    let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.Pool.Asset();
+                    let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.PoolParams.Asset();
                     while (reader.pos < end) {
                         let tag = reader.uint32();
                         switch (tag >>> 3) {
@@ -16650,10 +16672,10 @@ export const ununifi = $root.ununifi = (() => {
                 /**
                  * Decodes an Asset message from the specified reader or buffer, length delimited.
                  * @function decodeDelimited
-                 * @memberof ununifi.derivatives.Pool.Asset
+                 * @memberof ununifi.derivatives.PoolParams.Asset
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.derivatives.Pool.Asset} Asset
+                 * @returns {ununifi.derivatives.PoolParams.Asset} Asset
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -16666,7 +16688,7 @@ export const ununifi = $root.ununifi = (() => {
                 /**
                  * Verifies an Asset message.
                  * @function verify
-                 * @memberof ununifi.derivatives.Pool.Asset
+                 * @memberof ununifi.derivatives.PoolParams.Asset
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
@@ -16686,15 +16708,15 @@ export const ununifi = $root.ununifi = (() => {
                 /**
                  * Creates an Asset message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof ununifi.derivatives.Pool.Asset
+                 * @memberof ununifi.derivatives.PoolParams.Asset
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.derivatives.Pool.Asset} Asset
+                 * @returns {ununifi.derivatives.PoolParams.Asset} Asset
                  */
                 Asset.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.derivatives.Pool.Asset)
+                    if (object instanceof $root.ununifi.derivatives.PoolParams.Asset)
                         return object;
-                    let message = new $root.ununifi.derivatives.Pool.Asset();
+                    let message = new $root.ununifi.derivatives.PoolParams.Asset();
                     if (object.denom != null)
                         message.denom = String(object.denom);
                     if (object.target_weight != null)
@@ -16705,9 +16727,9 @@ export const ununifi = $root.ununifi = (() => {
                 /**
                  * Creates a plain object from an Asset message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof ununifi.derivatives.Pool.Asset
+                 * @memberof ununifi.derivatives.PoolParams.Asset
                  * @static
-                 * @param {ununifi.derivatives.Pool.Asset} message Asset
+                 * @param {ununifi.derivatives.PoolParams.Asset} message Asset
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
@@ -16729,7 +16751,7 @@ export const ununifi = $root.ununifi = (() => {
                 /**
                  * Converts this Asset to JSON.
                  * @function toJSON
-                 * @memberof ununifi.derivatives.Pool.Asset
+                 * @memberof ununifi.derivatives.PoolParams.Asset
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
@@ -16740,7 +16762,7 @@ export const ununifi = $root.ununifi = (() => {
                 return Asset;
             })();
 
-            return Pool;
+            return PoolParams;
         })();
 
         derivatives.PoolMarketCap = (function() {
@@ -17403,6 +17425,416 @@ export const ununifi = $root.ununifi = (() => {
             return Market;
         })();
 
+        derivatives.EventPriceIsNotFeeded = (function() {
+
+            /**
+             * Properties of an EventPriceIsNotFeeded.
+             * @memberof ununifi.derivatives
+             * @interface IEventPriceIsNotFeeded
+             * @property {string|null} [asset] EventPriceIsNotFeeded asset
+             */
+
+            /**
+             * Constructs a new EventPriceIsNotFeeded.
+             * @memberof ununifi.derivatives
+             * @classdesc Represents an EventPriceIsNotFeeded.
+             * @implements IEventPriceIsNotFeeded
+             * @constructor
+             * @param {ununifi.derivatives.IEventPriceIsNotFeeded=} [properties] Properties to set
+             */
+            function EventPriceIsNotFeeded(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * EventPriceIsNotFeeded asset.
+             * @member {string} asset
+             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
+             * @instance
+             */
+            EventPriceIsNotFeeded.prototype.asset = "";
+
+            /**
+             * Encodes the specified EventPriceIsNotFeeded message. Does not implicitly {@link ununifi.derivatives.EventPriceIsNotFeeded.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
+             * @static
+             * @param {ununifi.derivatives.IEventPriceIsNotFeeded} message EventPriceIsNotFeeded message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            EventPriceIsNotFeeded.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.asset != null && Object.hasOwnProperty.call(message, "asset"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.asset);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified EventPriceIsNotFeeded message, length delimited. Does not implicitly {@link ununifi.derivatives.EventPriceIsNotFeeded.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
+             * @static
+             * @param {ununifi.derivatives.IEventPriceIsNotFeeded} message EventPriceIsNotFeeded message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            EventPriceIsNotFeeded.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an EventPriceIsNotFeeded message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.derivatives.EventPriceIsNotFeeded} EventPriceIsNotFeeded
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            EventPriceIsNotFeeded.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.EventPriceIsNotFeeded();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.asset = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an EventPriceIsNotFeeded message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.derivatives.EventPriceIsNotFeeded} EventPriceIsNotFeeded
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            EventPriceIsNotFeeded.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an EventPriceIsNotFeeded message.
+             * @function verify
+             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            EventPriceIsNotFeeded.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.asset != null && message.hasOwnProperty("asset"))
+                    if (!$util.isString(message.asset))
+                        return "asset: string expected";
+                return null;
+            };
+
+            /**
+             * Creates an EventPriceIsNotFeeded message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.derivatives.EventPriceIsNotFeeded} EventPriceIsNotFeeded
+             */
+            EventPriceIsNotFeeded.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.derivatives.EventPriceIsNotFeeded)
+                    return object;
+                let message = new $root.ununifi.derivatives.EventPriceIsNotFeeded();
+                if (object.asset != null)
+                    message.asset = String(object.asset);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an EventPriceIsNotFeeded message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
+             * @static
+             * @param {ununifi.derivatives.EventPriceIsNotFeeded} message EventPriceIsNotFeeded
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            EventPriceIsNotFeeded.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults)
+                    object.asset = "";
+                if (message.asset != null && message.hasOwnProperty("asset"))
+                    object.asset = message.asset;
+                return object;
+            };
+
+            /**
+             * Converts this EventPriceIsNotFeeded to JSON.
+             * @function toJSON
+             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            EventPriceIsNotFeeded.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return EventPriceIsNotFeeded;
+        })();
+
+        derivatives.Params = (function() {
+
+            /**
+             * Properties of a Params.
+             * @memberof ununifi.derivatives
+             * @interface IParams
+             * @property {ununifi.derivatives.IPoolParams|null} [pool_params] Params pool_params
+             * @property {ununifi.derivatives.IPerpetualFuturesParams|null} [perpetual_futures] Params perpetual_futures
+             * @property {ununifi.derivatives.IPerpetualOptionsParams|null} [perpetual_options] Params perpetual_options
+             */
+
+            /**
+             * Constructs a new Params.
+             * @memberof ununifi.derivatives
+             * @classdesc Represents a Params.
+             * @implements IParams
+             * @constructor
+             * @param {ununifi.derivatives.IParams=} [properties] Properties to set
+             */
+            function Params(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Params pool_params.
+             * @member {ununifi.derivatives.IPoolParams|null|undefined} pool_params
+             * @memberof ununifi.derivatives.Params
+             * @instance
+             */
+            Params.prototype.pool_params = null;
+
+            /**
+             * Params perpetual_futures.
+             * @member {ununifi.derivatives.IPerpetualFuturesParams|null|undefined} perpetual_futures
+             * @memberof ununifi.derivatives.Params
+             * @instance
+             */
+            Params.prototype.perpetual_futures = null;
+
+            /**
+             * Params perpetual_options.
+             * @member {ununifi.derivatives.IPerpetualOptionsParams|null|undefined} perpetual_options
+             * @memberof ununifi.derivatives.Params
+             * @instance
+             */
+            Params.prototype.perpetual_options = null;
+
+            /**
+             * Encodes the specified Params message. Does not implicitly {@link ununifi.derivatives.Params.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.derivatives.Params
+             * @static
+             * @param {ununifi.derivatives.IParams} message Params message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Params.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.pool_params != null && Object.hasOwnProperty.call(message, "pool_params"))
+                    $root.ununifi.derivatives.PoolParams.encode(message.pool_params, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                if (message.perpetual_futures != null && Object.hasOwnProperty.call(message, "perpetual_futures"))
+                    $root.ununifi.derivatives.PerpetualFuturesParams.encode(message.perpetual_futures, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                if (message.perpetual_options != null && Object.hasOwnProperty.call(message, "perpetual_options"))
+                    $root.ununifi.derivatives.PerpetualOptionsParams.encode(message.perpetual_options, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.derivatives.Params.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.derivatives.Params
+             * @static
+             * @param {ununifi.derivatives.IParams} message Params message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Params.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a Params message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.derivatives.Params
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.derivatives.Params} Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Params.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.Params();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.pool_params = $root.ununifi.derivatives.PoolParams.decode(reader, reader.uint32());
+                        break;
+                    case 2:
+                        message.perpetual_futures = $root.ununifi.derivatives.PerpetualFuturesParams.decode(reader, reader.uint32());
+                        break;
+                    case 3:
+                        message.perpetual_options = $root.ununifi.derivatives.PerpetualOptionsParams.decode(reader, reader.uint32());
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a Params message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.derivatives.Params
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.derivatives.Params} Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Params.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a Params message.
+             * @function verify
+             * @memberof ununifi.derivatives.Params
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            Params.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.pool_params != null && message.hasOwnProperty("pool_params")) {
+                    let error = $root.ununifi.derivatives.PoolParams.verify(message.pool_params);
+                    if (error)
+                        return "pool_params." + error;
+                }
+                if (message.perpetual_futures != null && message.hasOwnProperty("perpetual_futures")) {
+                    let error = $root.ununifi.derivatives.PerpetualFuturesParams.verify(message.perpetual_futures);
+                    if (error)
+                        return "perpetual_futures." + error;
+                }
+                if (message.perpetual_options != null && message.hasOwnProperty("perpetual_options")) {
+                    let error = $root.ununifi.derivatives.PerpetualOptionsParams.verify(message.perpetual_options);
+                    if (error)
+                        return "perpetual_options." + error;
+                }
+                return null;
+            };
+
+            /**
+             * Creates a Params message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.derivatives.Params
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.derivatives.Params} Params
+             */
+            Params.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.derivatives.Params)
+                    return object;
+                let message = new $root.ununifi.derivatives.Params();
+                if (object.pool_params != null) {
+                    if (typeof object.pool_params !== "object")
+                        throw TypeError(".ununifi.derivatives.Params.pool_params: object expected");
+                    message.pool_params = $root.ununifi.derivatives.PoolParams.fromObject(object.pool_params);
+                }
+                if (object.perpetual_futures != null) {
+                    if (typeof object.perpetual_futures !== "object")
+                        throw TypeError(".ununifi.derivatives.Params.perpetual_futures: object expected");
+                    message.perpetual_futures = $root.ununifi.derivatives.PerpetualFuturesParams.fromObject(object.perpetual_futures);
+                }
+                if (object.perpetual_options != null) {
+                    if (typeof object.perpetual_options !== "object")
+                        throw TypeError(".ununifi.derivatives.Params.perpetual_options: object expected");
+                    message.perpetual_options = $root.ununifi.derivatives.PerpetualOptionsParams.fromObject(object.perpetual_options);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a Params message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.derivatives.Params
+             * @static
+             * @param {ununifi.derivatives.Params} message Params
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            Params.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.pool_params = null;
+                    object.perpetual_futures = null;
+                    object.perpetual_options = null;
+                }
+                if (message.pool_params != null && message.hasOwnProperty("pool_params"))
+                    object.pool_params = $root.ununifi.derivatives.PoolParams.toObject(message.pool_params, options);
+                if (message.perpetual_futures != null && message.hasOwnProperty("perpetual_futures"))
+                    object.perpetual_futures = $root.ununifi.derivatives.PerpetualFuturesParams.toObject(message.perpetual_futures, options);
+                if (message.perpetual_options != null && message.hasOwnProperty("perpetual_options"))
+                    object.perpetual_options = $root.ununifi.derivatives.PerpetualOptionsParams.toObject(message.perpetual_options, options);
+                return object;
+            };
+
+            /**
+             * Converts this Params to JSON.
+             * @function toJSON
+             * @memberof ununifi.derivatives.Params
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            Params.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return Params;
+        })();
+
         derivatives.PerpetualFuturesParams = (function() {
 
             /**
@@ -17665,6 +18097,1371 @@ export const ununifi = $root.ununifi = (() => {
             };
 
             return PerpetualFuturesParams;
+        })();
+
+        derivatives.PerpetualFuturesPositionInstance = (function() {
+
+            /**
+             * Properties of a PerpetualFuturesPositionInstance.
+             * @memberof ununifi.derivatives
+             * @interface IPerpetualFuturesPositionInstance
+             * @property {ununifi.derivatives.PositionType|null} [position_type] PerpetualFuturesPositionInstance position_type
+             * @property {string|null} [size] PerpetualFuturesPositionInstance size
+             * @property {number|null} [leverage] PerpetualFuturesPositionInstance leverage
+             */
+
+            /**
+             * Constructs a new PerpetualFuturesPositionInstance.
+             * @memberof ununifi.derivatives
+             * @classdesc Represents a PerpetualFuturesPositionInstance.
+             * @implements IPerpetualFuturesPositionInstance
+             * @constructor
+             * @param {ununifi.derivatives.IPerpetualFuturesPositionInstance=} [properties] Properties to set
+             */
+            function PerpetualFuturesPositionInstance(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * PerpetualFuturesPositionInstance position_type.
+             * @member {ununifi.derivatives.PositionType} position_type
+             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
+             * @instance
+             */
+            PerpetualFuturesPositionInstance.prototype.position_type = 0;
+
+            /**
+             * PerpetualFuturesPositionInstance size.
+             * @member {string} size
+             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
+             * @instance
+             */
+            PerpetualFuturesPositionInstance.prototype.size = "";
+
+            /**
+             * PerpetualFuturesPositionInstance leverage.
+             * @member {number} leverage
+             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
+             * @instance
+             */
+            PerpetualFuturesPositionInstance.prototype.leverage = 0;
+
+            /**
+             * Encodes the specified PerpetualFuturesPositionInstance message. Does not implicitly {@link ununifi.derivatives.PerpetualFuturesPositionInstance.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
+             * @static
+             * @param {ununifi.derivatives.IPerpetualFuturesPositionInstance} message PerpetualFuturesPositionInstance message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            PerpetualFuturesPositionInstance.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.position_type != null && Object.hasOwnProperty.call(message, "position_type"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.position_type);
+                if (message.size != null && Object.hasOwnProperty.call(message, "size"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.size);
+                if (message.leverage != null && Object.hasOwnProperty.call(message, "leverage"))
+                    writer.uint32(/* id 3, wireType 0 =*/24).uint32(message.leverage);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified PerpetualFuturesPositionInstance message, length delimited. Does not implicitly {@link ununifi.derivatives.PerpetualFuturesPositionInstance.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
+             * @static
+             * @param {ununifi.derivatives.IPerpetualFuturesPositionInstance} message PerpetualFuturesPositionInstance message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            PerpetualFuturesPositionInstance.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a PerpetualFuturesPositionInstance message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.derivatives.PerpetualFuturesPositionInstance} PerpetualFuturesPositionInstance
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            PerpetualFuturesPositionInstance.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.PerpetualFuturesPositionInstance();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.position_type = reader.int32();
+                        break;
+                    case 2:
+                        message.size = reader.string();
+                        break;
+                    case 3:
+                        message.leverage = reader.uint32();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a PerpetualFuturesPositionInstance message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.derivatives.PerpetualFuturesPositionInstance} PerpetualFuturesPositionInstance
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            PerpetualFuturesPositionInstance.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a PerpetualFuturesPositionInstance message.
+             * @function verify
+             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            PerpetualFuturesPositionInstance.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.position_type != null && message.hasOwnProperty("position_type"))
+                    switch (message.position_type) {
+                    default:
+                        return "position_type: enum value expected";
+                    case 0:
+                    case 1:
+                    case 2:
+                        break;
+                    }
+                if (message.size != null && message.hasOwnProperty("size"))
+                    if (!$util.isString(message.size))
+                        return "size: string expected";
+                if (message.leverage != null && message.hasOwnProperty("leverage"))
+                    if (!$util.isInteger(message.leverage))
+                        return "leverage: integer expected";
+                return null;
+            };
+
+            /**
+             * Creates a PerpetualFuturesPositionInstance message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.derivatives.PerpetualFuturesPositionInstance} PerpetualFuturesPositionInstance
+             */
+            PerpetualFuturesPositionInstance.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.derivatives.PerpetualFuturesPositionInstance)
+                    return object;
+                let message = new $root.ununifi.derivatives.PerpetualFuturesPositionInstance();
+                switch (object.position_type) {
+                case "POSITION_UNKNOWN":
+                case 0:
+                    message.position_type = 0;
+                    break;
+                case "LONG":
+                case 1:
+                    message.position_type = 1;
+                    break;
+                case "SHORT":
+                case 2:
+                    message.position_type = 2;
+                    break;
+                }
+                if (object.size != null)
+                    message.size = String(object.size);
+                if (object.leverage != null)
+                    message.leverage = object.leverage >>> 0;
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a PerpetualFuturesPositionInstance message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
+             * @static
+             * @param {ununifi.derivatives.PerpetualFuturesPositionInstance} message PerpetualFuturesPositionInstance
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            PerpetualFuturesPositionInstance.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.position_type = options.enums === String ? "POSITION_UNKNOWN" : 0;
+                    object.size = "";
+                    object.leverage = 0;
+                }
+                if (message.position_type != null && message.hasOwnProperty("position_type"))
+                    object.position_type = options.enums === String ? $root.ununifi.derivatives.PositionType[message.position_type] : message.position_type;
+                if (message.size != null && message.hasOwnProperty("size"))
+                    object.size = message.size;
+                if (message.leverage != null && message.hasOwnProperty("leverage"))
+                    object.leverage = message.leverage;
+                return object;
+            };
+
+            /**
+             * Converts this PerpetualFuturesPositionInstance to JSON.
+             * @function toJSON
+             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            PerpetualFuturesPositionInstance.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return PerpetualFuturesPositionInstance;
+        })();
+
+        derivatives.PerpetualFuturesNetPositionOfMarket = (function() {
+
+            /**
+             * Properties of a PerpetualFuturesNetPositionOfMarket.
+             * @memberof ununifi.derivatives
+             * @interface IPerpetualFuturesNetPositionOfMarket
+             * @property {ununifi.derivatives.IMarket|null} [market] PerpetualFuturesNetPositionOfMarket market
+             * @property {string|null} [position_size] PerpetualFuturesNetPositionOfMarket position_size
+             */
+
+            /**
+             * Constructs a new PerpetualFuturesNetPositionOfMarket.
+             * @memberof ununifi.derivatives
+             * @classdesc Represents a PerpetualFuturesNetPositionOfMarket.
+             * @implements IPerpetualFuturesNetPositionOfMarket
+             * @constructor
+             * @param {ununifi.derivatives.IPerpetualFuturesNetPositionOfMarket=} [properties] Properties to set
+             */
+            function PerpetualFuturesNetPositionOfMarket(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * PerpetualFuturesNetPositionOfMarket market.
+             * @member {ununifi.derivatives.IMarket|null|undefined} market
+             * @memberof ununifi.derivatives.PerpetualFuturesNetPositionOfMarket
+             * @instance
+             */
+            PerpetualFuturesNetPositionOfMarket.prototype.market = null;
+
+            /**
+             * PerpetualFuturesNetPositionOfMarket position_size.
+             * @member {string} position_size
+             * @memberof ununifi.derivatives.PerpetualFuturesNetPositionOfMarket
+             * @instance
+             */
+            PerpetualFuturesNetPositionOfMarket.prototype.position_size = "";
+
+            /**
+             * Encodes the specified PerpetualFuturesNetPositionOfMarket message. Does not implicitly {@link ununifi.derivatives.PerpetualFuturesNetPositionOfMarket.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.derivatives.PerpetualFuturesNetPositionOfMarket
+             * @static
+             * @param {ununifi.derivatives.IPerpetualFuturesNetPositionOfMarket} message PerpetualFuturesNetPositionOfMarket message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            PerpetualFuturesNetPositionOfMarket.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.market != null && Object.hasOwnProperty.call(message, "market"))
+                    $root.ununifi.derivatives.Market.encode(message.market, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                if (message.position_size != null && Object.hasOwnProperty.call(message, "position_size"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.position_size);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified PerpetualFuturesNetPositionOfMarket message, length delimited. Does not implicitly {@link ununifi.derivatives.PerpetualFuturesNetPositionOfMarket.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.derivatives.PerpetualFuturesNetPositionOfMarket
+             * @static
+             * @param {ununifi.derivatives.IPerpetualFuturesNetPositionOfMarket} message PerpetualFuturesNetPositionOfMarket message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            PerpetualFuturesNetPositionOfMarket.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a PerpetualFuturesNetPositionOfMarket message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.derivatives.PerpetualFuturesNetPositionOfMarket
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.derivatives.PerpetualFuturesNetPositionOfMarket} PerpetualFuturesNetPositionOfMarket
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            PerpetualFuturesNetPositionOfMarket.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.PerpetualFuturesNetPositionOfMarket();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.market = $root.ununifi.derivatives.Market.decode(reader, reader.uint32());
+                        break;
+                    case 2:
+                        message.position_size = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a PerpetualFuturesNetPositionOfMarket message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.derivatives.PerpetualFuturesNetPositionOfMarket
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.derivatives.PerpetualFuturesNetPositionOfMarket} PerpetualFuturesNetPositionOfMarket
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            PerpetualFuturesNetPositionOfMarket.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a PerpetualFuturesNetPositionOfMarket message.
+             * @function verify
+             * @memberof ununifi.derivatives.PerpetualFuturesNetPositionOfMarket
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            PerpetualFuturesNetPositionOfMarket.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.market != null && message.hasOwnProperty("market")) {
+                    let error = $root.ununifi.derivatives.Market.verify(message.market);
+                    if (error)
+                        return "market." + error;
+                }
+                if (message.position_size != null && message.hasOwnProperty("position_size"))
+                    if (!$util.isString(message.position_size))
+                        return "position_size: string expected";
+                return null;
+            };
+
+            /**
+             * Creates a PerpetualFuturesNetPositionOfMarket message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.derivatives.PerpetualFuturesNetPositionOfMarket
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.derivatives.PerpetualFuturesNetPositionOfMarket} PerpetualFuturesNetPositionOfMarket
+             */
+            PerpetualFuturesNetPositionOfMarket.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.derivatives.PerpetualFuturesNetPositionOfMarket)
+                    return object;
+                let message = new $root.ununifi.derivatives.PerpetualFuturesNetPositionOfMarket();
+                if (object.market != null) {
+                    if (typeof object.market !== "object")
+                        throw TypeError(".ununifi.derivatives.PerpetualFuturesNetPositionOfMarket.market: object expected");
+                    message.market = $root.ununifi.derivatives.Market.fromObject(object.market);
+                }
+                if (object.position_size != null)
+                    message.position_size = String(object.position_size);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a PerpetualFuturesNetPositionOfMarket message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.derivatives.PerpetualFuturesNetPositionOfMarket
+             * @static
+             * @param {ununifi.derivatives.PerpetualFuturesNetPositionOfMarket} message PerpetualFuturesNetPositionOfMarket
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            PerpetualFuturesNetPositionOfMarket.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.market = null;
+                    object.position_size = "";
+                }
+                if (message.market != null && message.hasOwnProperty("market"))
+                    object.market = $root.ununifi.derivatives.Market.toObject(message.market, options);
+                if (message.position_size != null && message.hasOwnProperty("position_size"))
+                    object.position_size = message.position_size;
+                return object;
+            };
+
+            /**
+             * Converts this PerpetualFuturesNetPositionOfMarket to JSON.
+             * @function toJSON
+             * @memberof ununifi.derivatives.PerpetualFuturesNetPositionOfMarket
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            PerpetualFuturesNetPositionOfMarket.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return PerpetualFuturesNetPositionOfMarket;
+        })();
+
+        derivatives.EventPerpetualFuturesPositionOpened = (function() {
+
+            /**
+             * Properties of an EventPerpetualFuturesPositionOpened.
+             * @memberof ununifi.derivatives
+             * @interface IEventPerpetualFuturesPositionOpened
+             * @property {string|null} [sender] EventPerpetualFuturesPositionOpened sender
+             * @property {string|null} [position_id] EventPerpetualFuturesPositionOpened position_id
+             */
+
+            /**
+             * Constructs a new EventPerpetualFuturesPositionOpened.
+             * @memberof ununifi.derivatives
+             * @classdesc Represents an EventPerpetualFuturesPositionOpened.
+             * @implements IEventPerpetualFuturesPositionOpened
+             * @constructor
+             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionOpened=} [properties] Properties to set
+             */
+            function EventPerpetualFuturesPositionOpened(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * EventPerpetualFuturesPositionOpened sender.
+             * @member {string} sender
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
+             * @instance
+             */
+            EventPerpetualFuturesPositionOpened.prototype.sender = "";
+
+            /**
+             * EventPerpetualFuturesPositionOpened position_id.
+             * @member {string} position_id
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
+             * @instance
+             */
+            EventPerpetualFuturesPositionOpened.prototype.position_id = "";
+
+            /**
+             * Encodes the specified EventPerpetualFuturesPositionOpened message. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionOpened.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
+             * @static
+             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionOpened} message EventPerpetualFuturesPositionOpened message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            EventPerpetualFuturesPositionOpened.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                if (message.position_id != null && Object.hasOwnProperty.call(message, "position_id"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.position_id);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified EventPerpetualFuturesPositionOpened message, length delimited. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionOpened.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
+             * @static
+             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionOpened} message EventPerpetualFuturesPositionOpened message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            EventPerpetualFuturesPositionOpened.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an EventPerpetualFuturesPositionOpened message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionOpened} EventPerpetualFuturesPositionOpened
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            EventPerpetualFuturesPositionOpened.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionOpened();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.sender = reader.string();
+                        break;
+                    case 2:
+                        message.position_id = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an EventPerpetualFuturesPositionOpened message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionOpened} EventPerpetualFuturesPositionOpened
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            EventPerpetualFuturesPositionOpened.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an EventPerpetualFuturesPositionOpened message.
+             * @function verify
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            EventPerpetualFuturesPositionOpened.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.sender != null && message.hasOwnProperty("sender"))
+                    if (!$util.isString(message.sender))
+                        return "sender: string expected";
+                if (message.position_id != null && message.hasOwnProperty("position_id"))
+                    if (!$util.isString(message.position_id))
+                        return "position_id: string expected";
+                return null;
+            };
+
+            /**
+             * Creates an EventPerpetualFuturesPositionOpened message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionOpened} EventPerpetualFuturesPositionOpened
+             */
+            EventPerpetualFuturesPositionOpened.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.derivatives.EventPerpetualFuturesPositionOpened)
+                    return object;
+                let message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionOpened();
+                if (object.sender != null)
+                    message.sender = String(object.sender);
+                if (object.position_id != null)
+                    message.position_id = String(object.position_id);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an EventPerpetualFuturesPositionOpened message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
+             * @static
+             * @param {ununifi.derivatives.EventPerpetualFuturesPositionOpened} message EventPerpetualFuturesPositionOpened
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            EventPerpetualFuturesPositionOpened.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.sender = "";
+                    object.position_id = "";
+                }
+                if (message.sender != null && message.hasOwnProperty("sender"))
+                    object.sender = message.sender;
+                if (message.position_id != null && message.hasOwnProperty("position_id"))
+                    object.position_id = message.position_id;
+                return object;
+            };
+
+            /**
+             * Converts this EventPerpetualFuturesPositionOpened to JSON.
+             * @function toJSON
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            EventPerpetualFuturesPositionOpened.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return EventPerpetualFuturesPositionOpened;
+        })();
+
+        derivatives.EventPerpetualFuturesPositionClosed = (function() {
+
+            /**
+             * Properties of an EventPerpetualFuturesPositionClosed.
+             * @memberof ununifi.derivatives
+             * @interface IEventPerpetualFuturesPositionClosed
+             * @property {string|null} [sender] EventPerpetualFuturesPositionClosed sender
+             * @property {string|null} [position_id] EventPerpetualFuturesPositionClosed position_id
+             * @property {string|null} [fee_amount] EventPerpetualFuturesPositionClosed fee_amount
+             * @property {string|null} [trade_amount] EventPerpetualFuturesPositionClosed trade_amount
+             */
+
+            /**
+             * Constructs a new EventPerpetualFuturesPositionClosed.
+             * @memberof ununifi.derivatives
+             * @classdesc Represents an EventPerpetualFuturesPositionClosed.
+             * @implements IEventPerpetualFuturesPositionClosed
+             * @constructor
+             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionClosed=} [properties] Properties to set
+             */
+            function EventPerpetualFuturesPositionClosed(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * EventPerpetualFuturesPositionClosed sender.
+             * @member {string} sender
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
+             * @instance
+             */
+            EventPerpetualFuturesPositionClosed.prototype.sender = "";
+
+            /**
+             * EventPerpetualFuturesPositionClosed position_id.
+             * @member {string} position_id
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
+             * @instance
+             */
+            EventPerpetualFuturesPositionClosed.prototype.position_id = "";
+
+            /**
+             * EventPerpetualFuturesPositionClosed fee_amount.
+             * @member {string} fee_amount
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
+             * @instance
+             */
+            EventPerpetualFuturesPositionClosed.prototype.fee_amount = "";
+
+            /**
+             * EventPerpetualFuturesPositionClosed trade_amount.
+             * @member {string} trade_amount
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
+             * @instance
+             */
+            EventPerpetualFuturesPositionClosed.prototype.trade_amount = "";
+
+            /**
+             * Encodes the specified EventPerpetualFuturesPositionClosed message. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionClosed.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
+             * @static
+             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionClosed} message EventPerpetualFuturesPositionClosed message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            EventPerpetualFuturesPositionClosed.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                if (message.position_id != null && Object.hasOwnProperty.call(message, "position_id"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.position_id);
+                if (message.fee_amount != null && Object.hasOwnProperty.call(message, "fee_amount"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.fee_amount);
+                if (message.trade_amount != null && Object.hasOwnProperty.call(message, "trade_amount"))
+                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.trade_amount);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified EventPerpetualFuturesPositionClosed message, length delimited. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionClosed.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
+             * @static
+             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionClosed} message EventPerpetualFuturesPositionClosed message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            EventPerpetualFuturesPositionClosed.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an EventPerpetualFuturesPositionClosed message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionClosed} EventPerpetualFuturesPositionClosed
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            EventPerpetualFuturesPositionClosed.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionClosed();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.sender = reader.string();
+                        break;
+                    case 2:
+                        message.position_id = reader.string();
+                        break;
+                    case 3:
+                        message.fee_amount = reader.string();
+                        break;
+                    case 4:
+                        message.trade_amount = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an EventPerpetualFuturesPositionClosed message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionClosed} EventPerpetualFuturesPositionClosed
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            EventPerpetualFuturesPositionClosed.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an EventPerpetualFuturesPositionClosed message.
+             * @function verify
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            EventPerpetualFuturesPositionClosed.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.sender != null && message.hasOwnProperty("sender"))
+                    if (!$util.isString(message.sender))
+                        return "sender: string expected";
+                if (message.position_id != null && message.hasOwnProperty("position_id"))
+                    if (!$util.isString(message.position_id))
+                        return "position_id: string expected";
+                if (message.fee_amount != null && message.hasOwnProperty("fee_amount"))
+                    if (!$util.isString(message.fee_amount))
+                        return "fee_amount: string expected";
+                if (message.trade_amount != null && message.hasOwnProperty("trade_amount"))
+                    if (!$util.isString(message.trade_amount))
+                        return "trade_amount: string expected";
+                return null;
+            };
+
+            /**
+             * Creates an EventPerpetualFuturesPositionClosed message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionClosed} EventPerpetualFuturesPositionClosed
+             */
+            EventPerpetualFuturesPositionClosed.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.derivatives.EventPerpetualFuturesPositionClosed)
+                    return object;
+                let message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionClosed();
+                if (object.sender != null)
+                    message.sender = String(object.sender);
+                if (object.position_id != null)
+                    message.position_id = String(object.position_id);
+                if (object.fee_amount != null)
+                    message.fee_amount = String(object.fee_amount);
+                if (object.trade_amount != null)
+                    message.trade_amount = String(object.trade_amount);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an EventPerpetualFuturesPositionClosed message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
+             * @static
+             * @param {ununifi.derivatives.EventPerpetualFuturesPositionClosed} message EventPerpetualFuturesPositionClosed
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            EventPerpetualFuturesPositionClosed.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.sender = "";
+                    object.position_id = "";
+                    object.fee_amount = "";
+                    object.trade_amount = "";
+                }
+                if (message.sender != null && message.hasOwnProperty("sender"))
+                    object.sender = message.sender;
+                if (message.position_id != null && message.hasOwnProperty("position_id"))
+                    object.position_id = message.position_id;
+                if (message.fee_amount != null && message.hasOwnProperty("fee_amount"))
+                    object.fee_amount = message.fee_amount;
+                if (message.trade_amount != null && message.hasOwnProperty("trade_amount"))
+                    object.trade_amount = message.trade_amount;
+                return object;
+            };
+
+            /**
+             * Converts this EventPerpetualFuturesPositionClosed to JSON.
+             * @function toJSON
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            EventPerpetualFuturesPositionClosed.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return EventPerpetualFuturesPositionClosed;
+        })();
+
+        derivatives.EventPerpetualFuturesPositionLiquidated = (function() {
+
+            /**
+             * Properties of an EventPerpetualFuturesPositionLiquidated.
+             * @memberof ununifi.derivatives
+             * @interface IEventPerpetualFuturesPositionLiquidated
+             * @property {string|null} [reward_recipient] EventPerpetualFuturesPositionLiquidated reward_recipient
+             * @property {string|null} [position_id] EventPerpetualFuturesPositionLiquidated position_id
+             * @property {string|null} [remaining_margin] EventPerpetualFuturesPositionLiquidated remaining_margin
+             * @property {string|null} [reward_amount] EventPerpetualFuturesPositionLiquidated reward_amount
+             */
+
+            /**
+             * Constructs a new EventPerpetualFuturesPositionLiquidated.
+             * @memberof ununifi.derivatives
+             * @classdesc Represents an EventPerpetualFuturesPositionLiquidated.
+             * @implements IEventPerpetualFuturesPositionLiquidated
+             * @constructor
+             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionLiquidated=} [properties] Properties to set
+             */
+            function EventPerpetualFuturesPositionLiquidated(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * EventPerpetualFuturesPositionLiquidated reward_recipient.
+             * @member {string} reward_recipient
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
+             * @instance
+             */
+            EventPerpetualFuturesPositionLiquidated.prototype.reward_recipient = "";
+
+            /**
+             * EventPerpetualFuturesPositionLiquidated position_id.
+             * @member {string} position_id
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
+             * @instance
+             */
+            EventPerpetualFuturesPositionLiquidated.prototype.position_id = "";
+
+            /**
+             * EventPerpetualFuturesPositionLiquidated remaining_margin.
+             * @member {string} remaining_margin
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
+             * @instance
+             */
+            EventPerpetualFuturesPositionLiquidated.prototype.remaining_margin = "";
+
+            /**
+             * EventPerpetualFuturesPositionLiquidated reward_amount.
+             * @member {string} reward_amount
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
+             * @instance
+             */
+            EventPerpetualFuturesPositionLiquidated.prototype.reward_amount = "";
+
+            /**
+             * Encodes the specified EventPerpetualFuturesPositionLiquidated message. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionLiquidated.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
+             * @static
+             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionLiquidated} message EventPerpetualFuturesPositionLiquidated message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            EventPerpetualFuturesPositionLiquidated.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.reward_recipient != null && Object.hasOwnProperty.call(message, "reward_recipient"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.reward_recipient);
+                if (message.position_id != null && Object.hasOwnProperty.call(message, "position_id"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.position_id);
+                if (message.remaining_margin != null && Object.hasOwnProperty.call(message, "remaining_margin"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.remaining_margin);
+                if (message.reward_amount != null && Object.hasOwnProperty.call(message, "reward_amount"))
+                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.reward_amount);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified EventPerpetualFuturesPositionLiquidated message, length delimited. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionLiquidated.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
+             * @static
+             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionLiquidated} message EventPerpetualFuturesPositionLiquidated message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            EventPerpetualFuturesPositionLiquidated.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an EventPerpetualFuturesPositionLiquidated message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionLiquidated} EventPerpetualFuturesPositionLiquidated
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            EventPerpetualFuturesPositionLiquidated.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionLiquidated();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.reward_recipient = reader.string();
+                        break;
+                    case 2:
+                        message.position_id = reader.string();
+                        break;
+                    case 3:
+                        message.remaining_margin = reader.string();
+                        break;
+                    case 4:
+                        message.reward_amount = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an EventPerpetualFuturesPositionLiquidated message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionLiquidated} EventPerpetualFuturesPositionLiquidated
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            EventPerpetualFuturesPositionLiquidated.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an EventPerpetualFuturesPositionLiquidated message.
+             * @function verify
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            EventPerpetualFuturesPositionLiquidated.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.reward_recipient != null && message.hasOwnProperty("reward_recipient"))
+                    if (!$util.isString(message.reward_recipient))
+                        return "reward_recipient: string expected";
+                if (message.position_id != null && message.hasOwnProperty("position_id"))
+                    if (!$util.isString(message.position_id))
+                        return "position_id: string expected";
+                if (message.remaining_margin != null && message.hasOwnProperty("remaining_margin"))
+                    if (!$util.isString(message.remaining_margin))
+                        return "remaining_margin: string expected";
+                if (message.reward_amount != null && message.hasOwnProperty("reward_amount"))
+                    if (!$util.isString(message.reward_amount))
+                        return "reward_amount: string expected";
+                return null;
+            };
+
+            /**
+             * Creates an EventPerpetualFuturesPositionLiquidated message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionLiquidated} EventPerpetualFuturesPositionLiquidated
+             */
+            EventPerpetualFuturesPositionLiquidated.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.derivatives.EventPerpetualFuturesPositionLiquidated)
+                    return object;
+                let message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionLiquidated();
+                if (object.reward_recipient != null)
+                    message.reward_recipient = String(object.reward_recipient);
+                if (object.position_id != null)
+                    message.position_id = String(object.position_id);
+                if (object.remaining_margin != null)
+                    message.remaining_margin = String(object.remaining_margin);
+                if (object.reward_amount != null)
+                    message.reward_amount = String(object.reward_amount);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an EventPerpetualFuturesPositionLiquidated message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
+             * @static
+             * @param {ununifi.derivatives.EventPerpetualFuturesPositionLiquidated} message EventPerpetualFuturesPositionLiquidated
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            EventPerpetualFuturesPositionLiquidated.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.reward_recipient = "";
+                    object.position_id = "";
+                    object.remaining_margin = "";
+                    object.reward_amount = "";
+                }
+                if (message.reward_recipient != null && message.hasOwnProperty("reward_recipient"))
+                    object.reward_recipient = message.reward_recipient;
+                if (message.position_id != null && message.hasOwnProperty("position_id"))
+                    object.position_id = message.position_id;
+                if (message.remaining_margin != null && message.hasOwnProperty("remaining_margin"))
+                    object.remaining_margin = message.remaining_margin;
+                if (message.reward_amount != null && message.hasOwnProperty("reward_amount"))
+                    object.reward_amount = message.reward_amount;
+                return object;
+            };
+
+            /**
+             * Converts this EventPerpetualFuturesPositionLiquidated to JSON.
+             * @function toJSON
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            EventPerpetualFuturesPositionLiquidated.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return EventPerpetualFuturesPositionLiquidated;
+        })();
+
+        derivatives.EventPerpetualFuturesPositionLevied = (function() {
+
+            /**
+             * Properties of an EventPerpetualFuturesPositionLevied.
+             * @memberof ununifi.derivatives
+             * @interface IEventPerpetualFuturesPositionLevied
+             * @property {string|null} [reward_recipient] EventPerpetualFuturesPositionLevied reward_recipient
+             * @property {string|null} [position_id] EventPerpetualFuturesPositionLevied position_id
+             * @property {string|null} [remaining_margin] EventPerpetualFuturesPositionLevied remaining_margin
+             * @property {string|null} [reward_amount] EventPerpetualFuturesPositionLevied reward_amount
+             */
+
+            /**
+             * Constructs a new EventPerpetualFuturesPositionLevied.
+             * @memberof ununifi.derivatives
+             * @classdesc Represents an EventPerpetualFuturesPositionLevied.
+             * @implements IEventPerpetualFuturesPositionLevied
+             * @constructor
+             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionLevied=} [properties] Properties to set
+             */
+            function EventPerpetualFuturesPositionLevied(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * EventPerpetualFuturesPositionLevied reward_recipient.
+             * @member {string} reward_recipient
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLevied
+             * @instance
+             */
+            EventPerpetualFuturesPositionLevied.prototype.reward_recipient = "";
+
+            /**
+             * EventPerpetualFuturesPositionLevied position_id.
+             * @member {string} position_id
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLevied
+             * @instance
+             */
+            EventPerpetualFuturesPositionLevied.prototype.position_id = "";
+
+            /**
+             * EventPerpetualFuturesPositionLevied remaining_margin.
+             * @member {string} remaining_margin
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLevied
+             * @instance
+             */
+            EventPerpetualFuturesPositionLevied.prototype.remaining_margin = "";
+
+            /**
+             * EventPerpetualFuturesPositionLevied reward_amount.
+             * @member {string} reward_amount
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLevied
+             * @instance
+             */
+            EventPerpetualFuturesPositionLevied.prototype.reward_amount = "";
+
+            /**
+             * Encodes the specified EventPerpetualFuturesPositionLevied message. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionLevied.verify|verify} messages.
+             * @function encode
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLevied
+             * @static
+             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionLevied} message EventPerpetualFuturesPositionLevied message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            EventPerpetualFuturesPositionLevied.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.reward_recipient != null && Object.hasOwnProperty.call(message, "reward_recipient"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.reward_recipient);
+                if (message.position_id != null && Object.hasOwnProperty.call(message, "position_id"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.position_id);
+                if (message.remaining_margin != null && Object.hasOwnProperty.call(message, "remaining_margin"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.remaining_margin);
+                if (message.reward_amount != null && Object.hasOwnProperty.call(message, "reward_amount"))
+                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.reward_amount);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified EventPerpetualFuturesPositionLevied message, length delimited. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionLevied.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLevied
+             * @static
+             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionLevied} message EventPerpetualFuturesPositionLevied message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            EventPerpetualFuturesPositionLevied.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an EventPerpetualFuturesPositionLevied message from the specified reader or buffer.
+             * @function decode
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLevied
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionLevied} EventPerpetualFuturesPositionLevied
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            EventPerpetualFuturesPositionLevied.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionLevied();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.reward_recipient = reader.string();
+                        break;
+                    case 2:
+                        message.position_id = reader.string();
+                        break;
+                    case 3:
+                        message.remaining_margin = reader.string();
+                        break;
+                    case 4:
+                        message.reward_amount = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an EventPerpetualFuturesPositionLevied message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLevied
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionLevied} EventPerpetualFuturesPositionLevied
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            EventPerpetualFuturesPositionLevied.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an EventPerpetualFuturesPositionLevied message.
+             * @function verify
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLevied
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            EventPerpetualFuturesPositionLevied.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.reward_recipient != null && message.hasOwnProperty("reward_recipient"))
+                    if (!$util.isString(message.reward_recipient))
+                        return "reward_recipient: string expected";
+                if (message.position_id != null && message.hasOwnProperty("position_id"))
+                    if (!$util.isString(message.position_id))
+                        return "position_id: string expected";
+                if (message.remaining_margin != null && message.hasOwnProperty("remaining_margin"))
+                    if (!$util.isString(message.remaining_margin))
+                        return "remaining_margin: string expected";
+                if (message.reward_amount != null && message.hasOwnProperty("reward_amount"))
+                    if (!$util.isString(message.reward_amount))
+                        return "reward_amount: string expected";
+                return null;
+            };
+
+            /**
+             * Creates an EventPerpetualFuturesPositionLevied message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLevied
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionLevied} EventPerpetualFuturesPositionLevied
+             */
+            EventPerpetualFuturesPositionLevied.fromObject = function fromObject(object) {
+                if (object instanceof $root.ununifi.derivatives.EventPerpetualFuturesPositionLevied)
+                    return object;
+                let message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionLevied();
+                if (object.reward_recipient != null)
+                    message.reward_recipient = String(object.reward_recipient);
+                if (object.position_id != null)
+                    message.position_id = String(object.position_id);
+                if (object.remaining_margin != null)
+                    message.remaining_margin = String(object.remaining_margin);
+                if (object.reward_amount != null)
+                    message.reward_amount = String(object.reward_amount);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an EventPerpetualFuturesPositionLevied message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLevied
+             * @static
+             * @param {ununifi.derivatives.EventPerpetualFuturesPositionLevied} message EventPerpetualFuturesPositionLevied
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            EventPerpetualFuturesPositionLevied.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.reward_recipient = "";
+                    object.position_id = "";
+                    object.remaining_margin = "";
+                    object.reward_amount = "";
+                }
+                if (message.reward_recipient != null && message.hasOwnProperty("reward_recipient"))
+                    object.reward_recipient = message.reward_recipient;
+                if (message.position_id != null && message.hasOwnProperty("position_id"))
+                    object.position_id = message.position_id;
+                if (message.remaining_margin != null && message.hasOwnProperty("remaining_margin"))
+                    object.remaining_margin = message.remaining_margin;
+                if (message.reward_amount != null && message.hasOwnProperty("reward_amount"))
+                    object.reward_amount = message.reward_amount;
+                return object;
+            };
+
+            /**
+             * Converts this EventPerpetualFuturesPositionLevied to JSON.
+             * @function toJSON
+             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLevied
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            EventPerpetualFuturesPositionLevied.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return EventPerpetualFuturesPositionLevied;
         })();
 
         derivatives.PerpetualOptionsParams = (function() {
@@ -17951,416 +19748,6 @@ export const ununifi = $root.ununifi = (() => {
             };
 
             return PerpetualOptionsParams;
-        })();
-
-        derivatives.Params = (function() {
-
-            /**
-             * Properties of a Params.
-             * @memberof ununifi.derivatives
-             * @interface IParams
-             * @property {ununifi.derivatives.IPool|null} [pool] Params pool
-             * @property {ununifi.derivatives.IPerpetualFuturesParams|null} [perpetual_futures] Params perpetual_futures
-             * @property {ununifi.derivatives.IPerpetualOptionsParams|null} [perpetual_options] Params perpetual_options
-             */
-
-            /**
-             * Constructs a new Params.
-             * @memberof ununifi.derivatives
-             * @classdesc Represents a Params.
-             * @implements IParams
-             * @constructor
-             * @param {ununifi.derivatives.IParams=} [properties] Properties to set
-             */
-            function Params(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * Params pool.
-             * @member {ununifi.derivatives.IPool|null|undefined} pool
-             * @memberof ununifi.derivatives.Params
-             * @instance
-             */
-            Params.prototype.pool = null;
-
-            /**
-             * Params perpetual_futures.
-             * @member {ununifi.derivatives.IPerpetualFuturesParams|null|undefined} perpetual_futures
-             * @memberof ununifi.derivatives.Params
-             * @instance
-             */
-            Params.prototype.perpetual_futures = null;
-
-            /**
-             * Params perpetual_options.
-             * @member {ununifi.derivatives.IPerpetualOptionsParams|null|undefined} perpetual_options
-             * @memberof ununifi.derivatives.Params
-             * @instance
-             */
-            Params.prototype.perpetual_options = null;
-
-            /**
-             * Encodes the specified Params message. Does not implicitly {@link ununifi.derivatives.Params.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.derivatives.Params
-             * @static
-             * @param {ununifi.derivatives.IParams} message Params message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Params.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.pool != null && Object.hasOwnProperty.call(message, "pool"))
-                    $root.ununifi.derivatives.Pool.encode(message.pool, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                if (message.perpetual_futures != null && Object.hasOwnProperty.call(message, "perpetual_futures"))
-                    $root.ununifi.derivatives.PerpetualFuturesParams.encode(message.perpetual_futures, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                if (message.perpetual_options != null && Object.hasOwnProperty.call(message, "perpetual_options"))
-                    $root.ununifi.derivatives.PerpetualOptionsParams.encode(message.perpetual_options, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-                return writer;
-            };
-
-            /**
-             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.derivatives.Params.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.derivatives.Params
-             * @static
-             * @param {ununifi.derivatives.IParams} message Params message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            Params.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a Params message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.derivatives.Params
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.derivatives.Params} Params
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Params.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.Params();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.pool = $root.ununifi.derivatives.Pool.decode(reader, reader.uint32());
-                        break;
-                    case 2:
-                        message.perpetual_futures = $root.ununifi.derivatives.PerpetualFuturesParams.decode(reader, reader.uint32());
-                        break;
-                    case 3:
-                        message.perpetual_options = $root.ununifi.derivatives.PerpetualOptionsParams.decode(reader, reader.uint32());
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a Params message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.derivatives.Params
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.derivatives.Params} Params
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            Params.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a Params message.
-             * @function verify
-             * @memberof ununifi.derivatives.Params
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            Params.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.pool != null && message.hasOwnProperty("pool")) {
-                    let error = $root.ununifi.derivatives.Pool.verify(message.pool);
-                    if (error)
-                        return "pool." + error;
-                }
-                if (message.perpetual_futures != null && message.hasOwnProperty("perpetual_futures")) {
-                    let error = $root.ununifi.derivatives.PerpetualFuturesParams.verify(message.perpetual_futures);
-                    if (error)
-                        return "perpetual_futures." + error;
-                }
-                if (message.perpetual_options != null && message.hasOwnProperty("perpetual_options")) {
-                    let error = $root.ununifi.derivatives.PerpetualOptionsParams.verify(message.perpetual_options);
-                    if (error)
-                        return "perpetual_options." + error;
-                }
-                return null;
-            };
-
-            /**
-             * Creates a Params message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.derivatives.Params
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.derivatives.Params} Params
-             */
-            Params.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.derivatives.Params)
-                    return object;
-                let message = new $root.ununifi.derivatives.Params();
-                if (object.pool != null) {
-                    if (typeof object.pool !== "object")
-                        throw TypeError(".ununifi.derivatives.Params.pool: object expected");
-                    message.pool = $root.ununifi.derivatives.Pool.fromObject(object.pool);
-                }
-                if (object.perpetual_futures != null) {
-                    if (typeof object.perpetual_futures !== "object")
-                        throw TypeError(".ununifi.derivatives.Params.perpetual_futures: object expected");
-                    message.perpetual_futures = $root.ununifi.derivatives.PerpetualFuturesParams.fromObject(object.perpetual_futures);
-                }
-                if (object.perpetual_options != null) {
-                    if (typeof object.perpetual_options !== "object")
-                        throw TypeError(".ununifi.derivatives.Params.perpetual_options: object expected");
-                    message.perpetual_options = $root.ununifi.derivatives.PerpetualOptionsParams.fromObject(object.perpetual_options);
-                }
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a Params message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.derivatives.Params
-             * @static
-             * @param {ununifi.derivatives.Params} message Params
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            Params.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.pool = null;
-                    object.perpetual_futures = null;
-                    object.perpetual_options = null;
-                }
-                if (message.pool != null && message.hasOwnProperty("pool"))
-                    object.pool = $root.ununifi.derivatives.Pool.toObject(message.pool, options);
-                if (message.perpetual_futures != null && message.hasOwnProperty("perpetual_futures"))
-                    object.perpetual_futures = $root.ununifi.derivatives.PerpetualFuturesParams.toObject(message.perpetual_futures, options);
-                if (message.perpetual_options != null && message.hasOwnProperty("perpetual_options"))
-                    object.perpetual_options = $root.ununifi.derivatives.PerpetualOptionsParams.toObject(message.perpetual_options, options);
-                return object;
-            };
-
-            /**
-             * Converts this Params to JSON.
-             * @function toJSON
-             * @memberof ununifi.derivatives.Params
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            Params.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return Params;
-        })();
-
-        derivatives.EventPriceIsNotFeeded = (function() {
-
-            /**
-             * Properties of an EventPriceIsNotFeeded.
-             * @memberof ununifi.derivatives
-             * @interface IEventPriceIsNotFeeded
-             * @property {string|null} [asset] EventPriceIsNotFeeded asset
-             */
-
-            /**
-             * Constructs a new EventPriceIsNotFeeded.
-             * @memberof ununifi.derivatives
-             * @classdesc Represents an EventPriceIsNotFeeded.
-             * @implements IEventPriceIsNotFeeded
-             * @constructor
-             * @param {ununifi.derivatives.IEventPriceIsNotFeeded=} [properties] Properties to set
-             */
-            function EventPriceIsNotFeeded(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * EventPriceIsNotFeeded asset.
-             * @member {string} asset
-             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
-             * @instance
-             */
-            EventPriceIsNotFeeded.prototype.asset = "";
-
-            /**
-             * Encodes the specified EventPriceIsNotFeeded message. Does not implicitly {@link ununifi.derivatives.EventPriceIsNotFeeded.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
-             * @static
-             * @param {ununifi.derivatives.IEventPriceIsNotFeeded} message EventPriceIsNotFeeded message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            EventPriceIsNotFeeded.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.asset != null && Object.hasOwnProperty.call(message, "asset"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.asset);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified EventPriceIsNotFeeded message, length delimited. Does not implicitly {@link ununifi.derivatives.EventPriceIsNotFeeded.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
-             * @static
-             * @param {ununifi.derivatives.IEventPriceIsNotFeeded} message EventPriceIsNotFeeded message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            EventPriceIsNotFeeded.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes an EventPriceIsNotFeeded message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.derivatives.EventPriceIsNotFeeded} EventPriceIsNotFeeded
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            EventPriceIsNotFeeded.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.EventPriceIsNotFeeded();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.asset = reader.string();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes an EventPriceIsNotFeeded message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.derivatives.EventPriceIsNotFeeded} EventPriceIsNotFeeded
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            EventPriceIsNotFeeded.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies an EventPriceIsNotFeeded message.
-             * @function verify
-             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            EventPriceIsNotFeeded.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.asset != null && message.hasOwnProperty("asset"))
-                    if (!$util.isString(message.asset))
-                        return "asset: string expected";
-                return null;
-            };
-
-            /**
-             * Creates an EventPriceIsNotFeeded message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.derivatives.EventPriceIsNotFeeded} EventPriceIsNotFeeded
-             */
-            EventPriceIsNotFeeded.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.derivatives.EventPriceIsNotFeeded)
-                    return object;
-                let message = new $root.ununifi.derivatives.EventPriceIsNotFeeded();
-                if (object.asset != null)
-                    message.asset = String(object.asset);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from an EventPriceIsNotFeeded message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
-             * @static
-             * @param {ununifi.derivatives.EventPriceIsNotFeeded} message EventPriceIsNotFeeded
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            EventPriceIsNotFeeded.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults)
-                    object.asset = "";
-                if (message.asset != null && message.hasOwnProperty("asset"))
-                    object.asset = message.asset;
-                return object;
-            };
-
-            /**
-             * Converts this EventPriceIsNotFeeded to JSON.
-             * @function toJSON
-             * @memberof ununifi.derivatives.EventPriceIsNotFeeded
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            EventPriceIsNotFeeded.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return EventPriceIsNotFeeded;
         })();
 
         /**
@@ -20720,6 +22107,9 @@ export const ununifi = $root.ununifi = (() => {
              * Properties of a MsgReportLevyPeriod.
              * @memberof ununifi.derivatives
              * @interface IMsgReportLevyPeriod
+             * @property {string|null} [sender] MsgReportLevyPeriod sender
+             * @property {string|null} [position_id] MsgReportLevyPeriod position_id
+             * @property {string|null} [reward_recipient] MsgReportLevyPeriod reward_recipient
              */
 
             /**
@@ -20738,6 +22128,30 @@ export const ununifi = $root.ununifi = (() => {
             }
 
             /**
+             * MsgReportLevyPeriod sender.
+             * @member {string} sender
+             * @memberof ununifi.derivatives.MsgReportLevyPeriod
+             * @instance
+             */
+            MsgReportLevyPeriod.prototype.sender = "";
+
+            /**
+             * MsgReportLevyPeriod position_id.
+             * @member {string} position_id
+             * @memberof ununifi.derivatives.MsgReportLevyPeriod
+             * @instance
+             */
+            MsgReportLevyPeriod.prototype.position_id = "";
+
+            /**
+             * MsgReportLevyPeriod reward_recipient.
+             * @member {string} reward_recipient
+             * @memberof ununifi.derivatives.MsgReportLevyPeriod
+             * @instance
+             */
+            MsgReportLevyPeriod.prototype.reward_recipient = "";
+
+            /**
              * Encodes the specified MsgReportLevyPeriod message. Does not implicitly {@link ununifi.derivatives.MsgReportLevyPeriod.verify|verify} messages.
              * @function encode
              * @memberof ununifi.derivatives.MsgReportLevyPeriod
@@ -20749,6 +22163,12 @@ export const ununifi = $root.ununifi = (() => {
             MsgReportLevyPeriod.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
+                if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                if (message.position_id != null && Object.hasOwnProperty.call(message, "position_id"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.position_id);
+                if (message.reward_recipient != null && Object.hasOwnProperty.call(message, "reward_recipient"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.reward_recipient);
                 return writer;
             };
 
@@ -20783,6 +22203,15 @@ export const ununifi = $root.ununifi = (() => {
                 while (reader.pos < end) {
                     let tag = reader.uint32();
                     switch (tag >>> 3) {
+                    case 1:
+                        message.sender = reader.string();
+                        break;
+                    case 2:
+                        message.position_id = reader.string();
+                        break;
+                    case 3:
+                        message.reward_recipient = reader.string();
+                        break;
                     default:
                         reader.skipType(tag & 7);
                         break;
@@ -20818,6 +22247,15 @@ export const ununifi = $root.ununifi = (() => {
             MsgReportLevyPeriod.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
+                if (message.sender != null && message.hasOwnProperty("sender"))
+                    if (!$util.isString(message.sender))
+                        return "sender: string expected";
+                if (message.position_id != null && message.hasOwnProperty("position_id"))
+                    if (!$util.isString(message.position_id))
+                        return "position_id: string expected";
+                if (message.reward_recipient != null && message.hasOwnProperty("reward_recipient"))
+                    if (!$util.isString(message.reward_recipient))
+                        return "reward_recipient: string expected";
                 return null;
             };
 
@@ -20832,7 +22270,14 @@ export const ununifi = $root.ununifi = (() => {
             MsgReportLevyPeriod.fromObject = function fromObject(object) {
                 if (object instanceof $root.ununifi.derivatives.MsgReportLevyPeriod)
                     return object;
-                return new $root.ununifi.derivatives.MsgReportLevyPeriod();
+                let message = new $root.ununifi.derivatives.MsgReportLevyPeriod();
+                if (object.sender != null)
+                    message.sender = String(object.sender);
+                if (object.position_id != null)
+                    message.position_id = String(object.position_id);
+                if (object.reward_recipient != null)
+                    message.reward_recipient = String(object.reward_recipient);
+                return message;
             };
 
             /**
@@ -20844,8 +22289,22 @@ export const ununifi = $root.ununifi = (() => {
              * @param {$protobuf.IConversionOptions} [options] Conversion options
              * @returns {Object.<string,*>} Plain object
              */
-            MsgReportLevyPeriod.toObject = function toObject() {
-                return {};
+            MsgReportLevyPeriod.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.sender = "";
+                    object.position_id = "";
+                    object.reward_recipient = "";
+                }
+                if (message.sender != null && message.hasOwnProperty("sender"))
+                    object.sender = message.sender;
+                if (message.position_id != null && message.hasOwnProperty("position_id"))
+                    object.position_id = message.position_id;
+                if (message.reward_recipient != null && message.hasOwnProperty("reward_recipient"))
+                    object.reward_recipient = message.reward_recipient;
+                return object;
             };
 
             /**
@@ -21010,926 +22469,6 @@ export const ununifi = $root.ununifi = (() => {
             return MsgReportLevyPeriodResponse;
         })();
 
-        derivatives.PerpetualFuturesPositionInstance = (function() {
-
-            /**
-             * Properties of a PerpetualFuturesPositionInstance.
-             * @memberof ununifi.derivatives
-             * @interface IPerpetualFuturesPositionInstance
-             * @property {ununifi.derivatives.PositionType|null} [position_type] PerpetualFuturesPositionInstance position_type
-             * @property {string|null} [size] PerpetualFuturesPositionInstance size
-             * @property {number|null} [leverage] PerpetualFuturesPositionInstance leverage
-             */
-
-            /**
-             * Constructs a new PerpetualFuturesPositionInstance.
-             * @memberof ununifi.derivatives
-             * @classdesc Represents a PerpetualFuturesPositionInstance.
-             * @implements IPerpetualFuturesPositionInstance
-             * @constructor
-             * @param {ununifi.derivatives.IPerpetualFuturesPositionInstance=} [properties] Properties to set
-             */
-            function PerpetualFuturesPositionInstance(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * PerpetualFuturesPositionInstance position_type.
-             * @member {ununifi.derivatives.PositionType} position_type
-             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
-             * @instance
-             */
-            PerpetualFuturesPositionInstance.prototype.position_type = 0;
-
-            /**
-             * PerpetualFuturesPositionInstance size.
-             * @member {string} size
-             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
-             * @instance
-             */
-            PerpetualFuturesPositionInstance.prototype.size = "";
-
-            /**
-             * PerpetualFuturesPositionInstance leverage.
-             * @member {number} leverage
-             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
-             * @instance
-             */
-            PerpetualFuturesPositionInstance.prototype.leverage = 0;
-
-            /**
-             * Encodes the specified PerpetualFuturesPositionInstance message. Does not implicitly {@link ununifi.derivatives.PerpetualFuturesPositionInstance.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
-             * @static
-             * @param {ununifi.derivatives.IPerpetualFuturesPositionInstance} message PerpetualFuturesPositionInstance message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            PerpetualFuturesPositionInstance.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.position_type != null && Object.hasOwnProperty.call(message, "position_type"))
-                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.position_type);
-                if (message.size != null && Object.hasOwnProperty.call(message, "size"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.size);
-                if (message.leverage != null && Object.hasOwnProperty.call(message, "leverage"))
-                    writer.uint32(/* id 3, wireType 0 =*/24).uint32(message.leverage);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified PerpetualFuturesPositionInstance message, length delimited. Does not implicitly {@link ununifi.derivatives.PerpetualFuturesPositionInstance.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
-             * @static
-             * @param {ununifi.derivatives.IPerpetualFuturesPositionInstance} message PerpetualFuturesPositionInstance message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            PerpetualFuturesPositionInstance.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes a PerpetualFuturesPositionInstance message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.derivatives.PerpetualFuturesPositionInstance} PerpetualFuturesPositionInstance
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            PerpetualFuturesPositionInstance.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.PerpetualFuturesPositionInstance();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.position_type = reader.int32();
-                        break;
-                    case 2:
-                        message.size = reader.string();
-                        break;
-                    case 3:
-                        message.leverage = reader.uint32();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes a PerpetualFuturesPositionInstance message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.derivatives.PerpetualFuturesPositionInstance} PerpetualFuturesPositionInstance
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            PerpetualFuturesPositionInstance.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies a PerpetualFuturesPositionInstance message.
-             * @function verify
-             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            PerpetualFuturesPositionInstance.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.position_type != null && message.hasOwnProperty("position_type"))
-                    switch (message.position_type) {
-                    default:
-                        return "position_type: enum value expected";
-                    case 0:
-                    case 1:
-                    case 2:
-                        break;
-                    }
-                if (message.size != null && message.hasOwnProperty("size"))
-                    if (!$util.isString(message.size))
-                        return "size: string expected";
-                if (message.leverage != null && message.hasOwnProperty("leverage"))
-                    if (!$util.isInteger(message.leverage))
-                        return "leverage: integer expected";
-                return null;
-            };
-
-            /**
-             * Creates a PerpetualFuturesPositionInstance message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.derivatives.PerpetualFuturesPositionInstance} PerpetualFuturesPositionInstance
-             */
-            PerpetualFuturesPositionInstance.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.derivatives.PerpetualFuturesPositionInstance)
-                    return object;
-                let message = new $root.ununifi.derivatives.PerpetualFuturesPositionInstance();
-                switch (object.position_type) {
-                case "POSITION_UNKNOWN":
-                case 0:
-                    message.position_type = 0;
-                    break;
-                case "LONG":
-                case 1:
-                    message.position_type = 1;
-                    break;
-                case "SHORT":
-                case 2:
-                    message.position_type = 2;
-                    break;
-                }
-                if (object.size != null)
-                    message.size = String(object.size);
-                if (object.leverage != null)
-                    message.leverage = object.leverage >>> 0;
-                return message;
-            };
-
-            /**
-             * Creates a plain object from a PerpetualFuturesPositionInstance message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
-             * @static
-             * @param {ununifi.derivatives.PerpetualFuturesPositionInstance} message PerpetualFuturesPositionInstance
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            PerpetualFuturesPositionInstance.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.position_type = options.enums === String ? "POSITION_UNKNOWN" : 0;
-                    object.size = "";
-                    object.leverage = 0;
-                }
-                if (message.position_type != null && message.hasOwnProperty("position_type"))
-                    object.position_type = options.enums === String ? $root.ununifi.derivatives.PositionType[message.position_type] : message.position_type;
-                if (message.size != null && message.hasOwnProperty("size"))
-                    object.size = message.size;
-                if (message.leverage != null && message.hasOwnProperty("leverage"))
-                    object.leverage = message.leverage;
-                return object;
-            };
-
-            /**
-             * Converts this PerpetualFuturesPositionInstance to JSON.
-             * @function toJSON
-             * @memberof ununifi.derivatives.PerpetualFuturesPositionInstance
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            PerpetualFuturesPositionInstance.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return PerpetualFuturesPositionInstance;
-        })();
-
-        derivatives.EventPerpetualFuturesPositionOpened = (function() {
-
-            /**
-             * Properties of an EventPerpetualFuturesPositionOpened.
-             * @memberof ununifi.derivatives
-             * @interface IEventPerpetualFuturesPositionOpened
-             * @property {string|null} [sender] EventPerpetualFuturesPositionOpened sender
-             * @property {string|null} [position_id] EventPerpetualFuturesPositionOpened position_id
-             */
-
-            /**
-             * Constructs a new EventPerpetualFuturesPositionOpened.
-             * @memberof ununifi.derivatives
-             * @classdesc Represents an EventPerpetualFuturesPositionOpened.
-             * @implements IEventPerpetualFuturesPositionOpened
-             * @constructor
-             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionOpened=} [properties] Properties to set
-             */
-            function EventPerpetualFuturesPositionOpened(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * EventPerpetualFuturesPositionOpened sender.
-             * @member {string} sender
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
-             * @instance
-             */
-            EventPerpetualFuturesPositionOpened.prototype.sender = "";
-
-            /**
-             * EventPerpetualFuturesPositionOpened position_id.
-             * @member {string} position_id
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
-             * @instance
-             */
-            EventPerpetualFuturesPositionOpened.prototype.position_id = "";
-
-            /**
-             * Encodes the specified EventPerpetualFuturesPositionOpened message. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionOpened.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
-             * @static
-             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionOpened} message EventPerpetualFuturesPositionOpened message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            EventPerpetualFuturesPositionOpened.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
-                if (message.position_id != null && Object.hasOwnProperty.call(message, "position_id"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.position_id);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified EventPerpetualFuturesPositionOpened message, length delimited. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionOpened.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
-             * @static
-             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionOpened} message EventPerpetualFuturesPositionOpened message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            EventPerpetualFuturesPositionOpened.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes an EventPerpetualFuturesPositionOpened message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionOpened} EventPerpetualFuturesPositionOpened
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            EventPerpetualFuturesPositionOpened.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionOpened();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.sender = reader.string();
-                        break;
-                    case 2:
-                        message.position_id = reader.string();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes an EventPerpetualFuturesPositionOpened message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionOpened} EventPerpetualFuturesPositionOpened
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            EventPerpetualFuturesPositionOpened.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies an EventPerpetualFuturesPositionOpened message.
-             * @function verify
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            EventPerpetualFuturesPositionOpened.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.sender != null && message.hasOwnProperty("sender"))
-                    if (!$util.isString(message.sender))
-                        return "sender: string expected";
-                if (message.position_id != null && message.hasOwnProperty("position_id"))
-                    if (!$util.isString(message.position_id))
-                        return "position_id: string expected";
-                return null;
-            };
-
-            /**
-             * Creates an EventPerpetualFuturesPositionOpened message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionOpened} EventPerpetualFuturesPositionOpened
-             */
-            EventPerpetualFuturesPositionOpened.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.derivatives.EventPerpetualFuturesPositionOpened)
-                    return object;
-                let message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionOpened();
-                if (object.sender != null)
-                    message.sender = String(object.sender);
-                if (object.position_id != null)
-                    message.position_id = String(object.position_id);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from an EventPerpetualFuturesPositionOpened message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
-             * @static
-             * @param {ununifi.derivatives.EventPerpetualFuturesPositionOpened} message EventPerpetualFuturesPositionOpened
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            EventPerpetualFuturesPositionOpened.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.sender = "";
-                    object.position_id = "";
-                }
-                if (message.sender != null && message.hasOwnProperty("sender"))
-                    object.sender = message.sender;
-                if (message.position_id != null && message.hasOwnProperty("position_id"))
-                    object.position_id = message.position_id;
-                return object;
-            };
-
-            /**
-             * Converts this EventPerpetualFuturesPositionOpened to JSON.
-             * @function toJSON
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionOpened
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            EventPerpetualFuturesPositionOpened.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return EventPerpetualFuturesPositionOpened;
-        })();
-
-        derivatives.EventPerpetualFuturesPositionClosed = (function() {
-
-            /**
-             * Properties of an EventPerpetualFuturesPositionClosed.
-             * @memberof ununifi.derivatives
-             * @interface IEventPerpetualFuturesPositionClosed
-             * @property {string|null} [sender] EventPerpetualFuturesPositionClosed sender
-             * @property {string|null} [position_id] EventPerpetualFuturesPositionClosed position_id
-             * @property {string|null} [fee_amount] EventPerpetualFuturesPositionClosed fee_amount
-             * @property {string|null} [trade_amount] EventPerpetualFuturesPositionClosed trade_amount
-             */
-
-            /**
-             * Constructs a new EventPerpetualFuturesPositionClosed.
-             * @memberof ununifi.derivatives
-             * @classdesc Represents an EventPerpetualFuturesPositionClosed.
-             * @implements IEventPerpetualFuturesPositionClosed
-             * @constructor
-             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionClosed=} [properties] Properties to set
-             */
-            function EventPerpetualFuturesPositionClosed(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * EventPerpetualFuturesPositionClosed sender.
-             * @member {string} sender
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
-             * @instance
-             */
-            EventPerpetualFuturesPositionClosed.prototype.sender = "";
-
-            /**
-             * EventPerpetualFuturesPositionClosed position_id.
-             * @member {string} position_id
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
-             * @instance
-             */
-            EventPerpetualFuturesPositionClosed.prototype.position_id = "";
-
-            /**
-             * EventPerpetualFuturesPositionClosed fee_amount.
-             * @member {string} fee_amount
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
-             * @instance
-             */
-            EventPerpetualFuturesPositionClosed.prototype.fee_amount = "";
-
-            /**
-             * EventPerpetualFuturesPositionClosed trade_amount.
-             * @member {string} trade_amount
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
-             * @instance
-             */
-            EventPerpetualFuturesPositionClosed.prototype.trade_amount = "";
-
-            /**
-             * Encodes the specified EventPerpetualFuturesPositionClosed message. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionClosed.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
-             * @static
-             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionClosed} message EventPerpetualFuturesPositionClosed message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            EventPerpetualFuturesPositionClosed.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
-                if (message.position_id != null && Object.hasOwnProperty.call(message, "position_id"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.position_id);
-                if (message.fee_amount != null && Object.hasOwnProperty.call(message, "fee_amount"))
-                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.fee_amount);
-                if (message.trade_amount != null && Object.hasOwnProperty.call(message, "trade_amount"))
-                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.trade_amount);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified EventPerpetualFuturesPositionClosed message, length delimited. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionClosed.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
-             * @static
-             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionClosed} message EventPerpetualFuturesPositionClosed message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            EventPerpetualFuturesPositionClosed.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes an EventPerpetualFuturesPositionClosed message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionClosed} EventPerpetualFuturesPositionClosed
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            EventPerpetualFuturesPositionClosed.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionClosed();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.sender = reader.string();
-                        break;
-                    case 2:
-                        message.position_id = reader.string();
-                        break;
-                    case 3:
-                        message.fee_amount = reader.string();
-                        break;
-                    case 4:
-                        message.trade_amount = reader.string();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes an EventPerpetualFuturesPositionClosed message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionClosed} EventPerpetualFuturesPositionClosed
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            EventPerpetualFuturesPositionClosed.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies an EventPerpetualFuturesPositionClosed message.
-             * @function verify
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            EventPerpetualFuturesPositionClosed.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.sender != null && message.hasOwnProperty("sender"))
-                    if (!$util.isString(message.sender))
-                        return "sender: string expected";
-                if (message.position_id != null && message.hasOwnProperty("position_id"))
-                    if (!$util.isString(message.position_id))
-                        return "position_id: string expected";
-                if (message.fee_amount != null && message.hasOwnProperty("fee_amount"))
-                    if (!$util.isString(message.fee_amount))
-                        return "fee_amount: string expected";
-                if (message.trade_amount != null && message.hasOwnProperty("trade_amount"))
-                    if (!$util.isString(message.trade_amount))
-                        return "trade_amount: string expected";
-                return null;
-            };
-
-            /**
-             * Creates an EventPerpetualFuturesPositionClosed message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionClosed} EventPerpetualFuturesPositionClosed
-             */
-            EventPerpetualFuturesPositionClosed.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.derivatives.EventPerpetualFuturesPositionClosed)
-                    return object;
-                let message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionClosed();
-                if (object.sender != null)
-                    message.sender = String(object.sender);
-                if (object.position_id != null)
-                    message.position_id = String(object.position_id);
-                if (object.fee_amount != null)
-                    message.fee_amount = String(object.fee_amount);
-                if (object.trade_amount != null)
-                    message.trade_amount = String(object.trade_amount);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from an EventPerpetualFuturesPositionClosed message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
-             * @static
-             * @param {ununifi.derivatives.EventPerpetualFuturesPositionClosed} message EventPerpetualFuturesPositionClosed
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            EventPerpetualFuturesPositionClosed.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.sender = "";
-                    object.position_id = "";
-                    object.fee_amount = "";
-                    object.trade_amount = "";
-                }
-                if (message.sender != null && message.hasOwnProperty("sender"))
-                    object.sender = message.sender;
-                if (message.position_id != null && message.hasOwnProperty("position_id"))
-                    object.position_id = message.position_id;
-                if (message.fee_amount != null && message.hasOwnProperty("fee_amount"))
-                    object.fee_amount = message.fee_amount;
-                if (message.trade_amount != null && message.hasOwnProperty("trade_amount"))
-                    object.trade_amount = message.trade_amount;
-                return object;
-            };
-
-            /**
-             * Converts this EventPerpetualFuturesPositionClosed to JSON.
-             * @function toJSON
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionClosed
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            EventPerpetualFuturesPositionClosed.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return EventPerpetualFuturesPositionClosed;
-        })();
-
-        derivatives.EventPerpetualFuturesPositionLiquidated = (function() {
-
-            /**
-             * Properties of an EventPerpetualFuturesPositionLiquidated.
-             * @memberof ununifi.derivatives
-             * @interface IEventPerpetualFuturesPositionLiquidated
-             * @property {string|null} [reward_recipient] EventPerpetualFuturesPositionLiquidated reward_recipient
-             * @property {string|null} [position_id] EventPerpetualFuturesPositionLiquidated position_id
-             * @property {string|null} [remaining_margin] EventPerpetualFuturesPositionLiquidated remaining_margin
-             * @property {string|null} [reward_amount] EventPerpetualFuturesPositionLiquidated reward_amount
-             */
-
-            /**
-             * Constructs a new EventPerpetualFuturesPositionLiquidated.
-             * @memberof ununifi.derivatives
-             * @classdesc Represents an EventPerpetualFuturesPositionLiquidated.
-             * @implements IEventPerpetualFuturesPositionLiquidated
-             * @constructor
-             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionLiquidated=} [properties] Properties to set
-             */
-            function EventPerpetualFuturesPositionLiquidated(properties) {
-                if (properties)
-                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                        if (properties[keys[i]] != null)
-                            this[keys[i]] = properties[keys[i]];
-            }
-
-            /**
-             * EventPerpetualFuturesPositionLiquidated reward_recipient.
-             * @member {string} reward_recipient
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
-             * @instance
-             */
-            EventPerpetualFuturesPositionLiquidated.prototype.reward_recipient = "";
-
-            /**
-             * EventPerpetualFuturesPositionLiquidated position_id.
-             * @member {string} position_id
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
-             * @instance
-             */
-            EventPerpetualFuturesPositionLiquidated.prototype.position_id = "";
-
-            /**
-             * EventPerpetualFuturesPositionLiquidated remaining_margin.
-             * @member {string} remaining_margin
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
-             * @instance
-             */
-            EventPerpetualFuturesPositionLiquidated.prototype.remaining_margin = "";
-
-            /**
-             * EventPerpetualFuturesPositionLiquidated reward_amount.
-             * @member {string} reward_amount
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
-             * @instance
-             */
-            EventPerpetualFuturesPositionLiquidated.prototype.reward_amount = "";
-
-            /**
-             * Encodes the specified EventPerpetualFuturesPositionLiquidated message. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionLiquidated.verify|verify} messages.
-             * @function encode
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
-             * @static
-             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionLiquidated} message EventPerpetualFuturesPositionLiquidated message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            EventPerpetualFuturesPositionLiquidated.encode = function encode(message, writer) {
-                if (!writer)
-                    writer = $Writer.create();
-                if (message.reward_recipient != null && Object.hasOwnProperty.call(message, "reward_recipient"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.reward_recipient);
-                if (message.position_id != null && Object.hasOwnProperty.call(message, "position_id"))
-                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.position_id);
-                if (message.remaining_margin != null && Object.hasOwnProperty.call(message, "remaining_margin"))
-                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.remaining_margin);
-                if (message.reward_amount != null && Object.hasOwnProperty.call(message, "reward_amount"))
-                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.reward_amount);
-                return writer;
-            };
-
-            /**
-             * Encodes the specified EventPerpetualFuturesPositionLiquidated message, length delimited. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionLiquidated.verify|verify} messages.
-             * @function encodeDelimited
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
-             * @static
-             * @param {ununifi.derivatives.IEventPerpetualFuturesPositionLiquidated} message EventPerpetualFuturesPositionLiquidated message or plain object to encode
-             * @param {$protobuf.Writer} [writer] Writer to encode to
-             * @returns {$protobuf.Writer} Writer
-             */
-            EventPerpetualFuturesPositionLiquidated.encodeDelimited = function encodeDelimited(message, writer) {
-                return this.encode(message, writer).ldelim();
-            };
-
-            /**
-             * Decodes an EventPerpetualFuturesPositionLiquidated message from the specified reader or buffer.
-             * @function decode
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @param {number} [length] Message length if known beforehand
-             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionLiquidated} EventPerpetualFuturesPositionLiquidated
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            EventPerpetualFuturesPositionLiquidated.decode = function decode(reader, length) {
-                if (!(reader instanceof $Reader))
-                    reader = $Reader.create(reader);
-                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionLiquidated();
-                while (reader.pos < end) {
-                    let tag = reader.uint32();
-                    switch (tag >>> 3) {
-                    case 1:
-                        message.reward_recipient = reader.string();
-                        break;
-                    case 2:
-                        message.position_id = reader.string();
-                        break;
-                    case 3:
-                        message.remaining_margin = reader.string();
-                        break;
-                    case 4:
-                        message.reward_amount = reader.string();
-                        break;
-                    default:
-                        reader.skipType(tag & 7);
-                        break;
-                    }
-                }
-                return message;
-            };
-
-            /**
-             * Decodes an EventPerpetualFuturesPositionLiquidated message from the specified reader or buffer, length delimited.
-             * @function decodeDelimited
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
-             * @static
-             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionLiquidated} EventPerpetualFuturesPositionLiquidated
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            EventPerpetualFuturesPositionLiquidated.decodeDelimited = function decodeDelimited(reader) {
-                if (!(reader instanceof $Reader))
-                    reader = new $Reader(reader);
-                return this.decode(reader, reader.uint32());
-            };
-
-            /**
-             * Verifies an EventPerpetualFuturesPositionLiquidated message.
-             * @function verify
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
-             * @static
-             * @param {Object.<string,*>} message Plain object to verify
-             * @returns {string|null} `null` if valid, otherwise the reason why it is not
-             */
-            EventPerpetualFuturesPositionLiquidated.verify = function verify(message) {
-                if (typeof message !== "object" || message === null)
-                    return "object expected";
-                if (message.reward_recipient != null && message.hasOwnProperty("reward_recipient"))
-                    if (!$util.isString(message.reward_recipient))
-                        return "reward_recipient: string expected";
-                if (message.position_id != null && message.hasOwnProperty("position_id"))
-                    if (!$util.isString(message.position_id))
-                        return "position_id: string expected";
-                if (message.remaining_margin != null && message.hasOwnProperty("remaining_margin"))
-                    if (!$util.isString(message.remaining_margin))
-                        return "remaining_margin: string expected";
-                if (message.reward_amount != null && message.hasOwnProperty("reward_amount"))
-                    if (!$util.isString(message.reward_amount))
-                        return "reward_amount: string expected";
-                return null;
-            };
-
-            /**
-             * Creates an EventPerpetualFuturesPositionLiquidated message from a plain object. Also converts values to their respective internal types.
-             * @function fromObject
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
-             * @static
-             * @param {Object.<string,*>} object Plain object
-             * @returns {ununifi.derivatives.EventPerpetualFuturesPositionLiquidated} EventPerpetualFuturesPositionLiquidated
-             */
-            EventPerpetualFuturesPositionLiquidated.fromObject = function fromObject(object) {
-                if (object instanceof $root.ununifi.derivatives.EventPerpetualFuturesPositionLiquidated)
-                    return object;
-                let message = new $root.ununifi.derivatives.EventPerpetualFuturesPositionLiquidated();
-                if (object.reward_recipient != null)
-                    message.reward_recipient = String(object.reward_recipient);
-                if (object.position_id != null)
-                    message.position_id = String(object.position_id);
-                if (object.remaining_margin != null)
-                    message.remaining_margin = String(object.remaining_margin);
-                if (object.reward_amount != null)
-                    message.reward_amount = String(object.reward_amount);
-                return message;
-            };
-
-            /**
-             * Creates a plain object from an EventPerpetualFuturesPositionLiquidated message. Also converts values to other types if specified.
-             * @function toObject
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
-             * @static
-             * @param {ununifi.derivatives.EventPerpetualFuturesPositionLiquidated} message EventPerpetualFuturesPositionLiquidated
-             * @param {$protobuf.IConversionOptions} [options] Conversion options
-             * @returns {Object.<string,*>} Plain object
-             */
-            EventPerpetualFuturesPositionLiquidated.toObject = function toObject(message, options) {
-                if (!options)
-                    options = {};
-                let object = {};
-                if (options.defaults) {
-                    object.reward_recipient = "";
-                    object.position_id = "";
-                    object.remaining_margin = "";
-                    object.reward_amount = "";
-                }
-                if (message.reward_recipient != null && message.hasOwnProperty("reward_recipient"))
-                    object.reward_recipient = message.reward_recipient;
-                if (message.position_id != null && message.hasOwnProperty("position_id"))
-                    object.position_id = message.position_id;
-                if (message.remaining_margin != null && message.hasOwnProperty("remaining_margin"))
-                    object.remaining_margin = message.remaining_margin;
-                if (message.reward_amount != null && message.hasOwnProperty("reward_amount"))
-                    object.reward_amount = message.reward_amount;
-                return object;
-            };
-
-            /**
-             * Converts this EventPerpetualFuturesPositionLiquidated to JSON.
-             * @function toJSON
-             * @memberof ununifi.derivatives.EventPerpetualFuturesPositionLiquidated
-             * @instance
-             * @returns {Object.<string,*>} JSON object
-             */
-            EventPerpetualFuturesPositionLiquidated.prototype.toJSON = function toJSON() {
-                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-            };
-
-            return EventPerpetualFuturesPositionLiquidated;
-        })();
-
         derivatives.GenesisState = (function() {
 
             /**
@@ -21937,6 +22476,9 @@ export const ununifi = $root.ununifi = (() => {
              * @memberof ununifi.derivatives
              * @interface IGenesisState
              * @property {ununifi.derivatives.IParams|null} [params] GenesisState params
+             * @property {Array.<ununifi.derivatives.IPosition>|null} [positions] GenesisState positions
+             * @property {ununifi.derivatives.IPoolMarketCap|null} [pool_market_cap] GenesisState pool_market_cap
+             * @property {Array.<ununifi.derivatives.IPerpetualFuturesNetPositionOfMarket>|null} [perpetual_futures_net_position_of_market] GenesisState perpetual_futures_net_position_of_market
              */
 
             /**
@@ -21948,6 +22490,8 @@ export const ununifi = $root.ununifi = (() => {
              * @param {ununifi.derivatives.IGenesisState=} [properties] Properties to set
              */
             function GenesisState(properties) {
+                this.positions = [];
+                this.perpetual_futures_net_position_of_market = [];
                 if (properties)
                     for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                         if (properties[keys[i]] != null)
@@ -21963,6 +22507,30 @@ export const ununifi = $root.ununifi = (() => {
             GenesisState.prototype.params = null;
 
             /**
+             * GenesisState positions.
+             * @member {Array.<ununifi.derivatives.IPosition>} positions
+             * @memberof ununifi.derivatives.GenesisState
+             * @instance
+             */
+            GenesisState.prototype.positions = $util.emptyArray;
+
+            /**
+             * GenesisState pool_market_cap.
+             * @member {ununifi.derivatives.IPoolMarketCap|null|undefined} pool_market_cap
+             * @memberof ununifi.derivatives.GenesisState
+             * @instance
+             */
+            GenesisState.prototype.pool_market_cap = null;
+
+            /**
+             * GenesisState perpetual_futures_net_position_of_market.
+             * @member {Array.<ununifi.derivatives.IPerpetualFuturesNetPositionOfMarket>} perpetual_futures_net_position_of_market
+             * @memberof ununifi.derivatives.GenesisState
+             * @instance
+             */
+            GenesisState.prototype.perpetual_futures_net_position_of_market = $util.emptyArray;
+
+            /**
              * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.derivatives.GenesisState.verify|verify} messages.
              * @function encode
              * @memberof ununifi.derivatives.GenesisState
@@ -21976,6 +22544,14 @@ export const ununifi = $root.ununifi = (() => {
                     writer = $Writer.create();
                 if (message.params != null && Object.hasOwnProperty.call(message, "params"))
                     $root.ununifi.derivatives.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                if (message.positions != null && message.positions.length)
+                    for (let i = 0; i < message.positions.length; ++i)
+                        $root.ununifi.derivatives.Position.encode(message.positions[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                if (message.pool_market_cap != null && Object.hasOwnProperty.call(message, "pool_market_cap"))
+                    $root.ununifi.derivatives.PoolMarketCap.encode(message.pool_market_cap, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                if (message.perpetual_futures_net_position_of_market != null && message.perpetual_futures_net_position_of_market.length)
+                    for (let i = 0; i < message.perpetual_futures_net_position_of_market.length; ++i)
+                        $root.ununifi.derivatives.PerpetualFuturesNetPositionOfMarket.encode(message.perpetual_futures_net_position_of_market[i], writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
                 return writer;
             };
 
@@ -22012,6 +22588,19 @@ export const ununifi = $root.ununifi = (() => {
                     switch (tag >>> 3) {
                     case 1:
                         message.params = $root.ununifi.derivatives.Params.decode(reader, reader.uint32());
+                        break;
+                    case 2:
+                        if (!(message.positions && message.positions.length))
+                            message.positions = [];
+                        message.positions.push($root.ununifi.derivatives.Position.decode(reader, reader.uint32()));
+                        break;
+                    case 3:
+                        message.pool_market_cap = $root.ununifi.derivatives.PoolMarketCap.decode(reader, reader.uint32());
+                        break;
+                    case 4:
+                        if (!(message.perpetual_futures_net_position_of_market && message.perpetual_futures_net_position_of_market.length))
+                            message.perpetual_futures_net_position_of_market = [];
+                        message.perpetual_futures_net_position_of_market.push($root.ununifi.derivatives.PerpetualFuturesNetPositionOfMarket.decode(reader, reader.uint32()));
                         break;
                     default:
                         reader.skipType(tag & 7);
@@ -22053,6 +22642,29 @@ export const ununifi = $root.ununifi = (() => {
                     if (error)
                         return "params." + error;
                 }
+                if (message.positions != null && message.hasOwnProperty("positions")) {
+                    if (!Array.isArray(message.positions))
+                        return "positions: array expected";
+                    for (let i = 0; i < message.positions.length; ++i) {
+                        let error = $root.ununifi.derivatives.Position.verify(message.positions[i]);
+                        if (error)
+                            return "positions." + error;
+                    }
+                }
+                if (message.pool_market_cap != null && message.hasOwnProperty("pool_market_cap")) {
+                    let error = $root.ununifi.derivatives.PoolMarketCap.verify(message.pool_market_cap);
+                    if (error)
+                        return "pool_market_cap." + error;
+                }
+                if (message.perpetual_futures_net_position_of_market != null && message.hasOwnProperty("perpetual_futures_net_position_of_market")) {
+                    if (!Array.isArray(message.perpetual_futures_net_position_of_market))
+                        return "perpetual_futures_net_position_of_market: array expected";
+                    for (let i = 0; i < message.perpetual_futures_net_position_of_market.length; ++i) {
+                        let error = $root.ununifi.derivatives.PerpetualFuturesNetPositionOfMarket.verify(message.perpetual_futures_net_position_of_market[i]);
+                        if (error)
+                            return "perpetual_futures_net_position_of_market." + error;
+                    }
+                }
                 return null;
             };
 
@@ -22073,6 +22685,31 @@ export const ununifi = $root.ununifi = (() => {
                         throw TypeError(".ununifi.derivatives.GenesisState.params: object expected");
                     message.params = $root.ununifi.derivatives.Params.fromObject(object.params);
                 }
+                if (object.positions) {
+                    if (!Array.isArray(object.positions))
+                        throw TypeError(".ununifi.derivatives.GenesisState.positions: array expected");
+                    message.positions = [];
+                    for (let i = 0; i < object.positions.length; ++i) {
+                        if (typeof object.positions[i] !== "object")
+                            throw TypeError(".ununifi.derivatives.GenesisState.positions: object expected");
+                        message.positions[i] = $root.ununifi.derivatives.Position.fromObject(object.positions[i]);
+                    }
+                }
+                if (object.pool_market_cap != null) {
+                    if (typeof object.pool_market_cap !== "object")
+                        throw TypeError(".ununifi.derivatives.GenesisState.pool_market_cap: object expected");
+                    message.pool_market_cap = $root.ununifi.derivatives.PoolMarketCap.fromObject(object.pool_market_cap);
+                }
+                if (object.perpetual_futures_net_position_of_market) {
+                    if (!Array.isArray(object.perpetual_futures_net_position_of_market))
+                        throw TypeError(".ununifi.derivatives.GenesisState.perpetual_futures_net_position_of_market: array expected");
+                    message.perpetual_futures_net_position_of_market = [];
+                    for (let i = 0; i < object.perpetual_futures_net_position_of_market.length; ++i) {
+                        if (typeof object.perpetual_futures_net_position_of_market[i] !== "object")
+                            throw TypeError(".ununifi.derivatives.GenesisState.perpetual_futures_net_position_of_market: object expected");
+                        message.perpetual_futures_net_position_of_market[i] = $root.ununifi.derivatives.PerpetualFuturesNetPositionOfMarket.fromObject(object.perpetual_futures_net_position_of_market[i]);
+                    }
+                }
                 return message;
             };
 
@@ -22089,10 +22726,28 @@ export const ununifi = $root.ununifi = (() => {
                 if (!options)
                     options = {};
                 let object = {};
-                if (options.defaults)
+                if (options.arrays || options.defaults) {
+                    object.positions = [];
+                    object.perpetual_futures_net_position_of_market = [];
+                }
+                if (options.defaults) {
                     object.params = null;
+                    object.pool_market_cap = null;
+                }
                 if (message.params != null && message.hasOwnProperty("params"))
                     object.params = $root.ununifi.derivatives.Params.toObject(message.params, options);
+                if (message.positions && message.positions.length) {
+                    object.positions = [];
+                    for (let j = 0; j < message.positions.length; ++j)
+                        object.positions[j] = $root.ununifi.derivatives.Position.toObject(message.positions[j], options);
+                }
+                if (message.pool_market_cap != null && message.hasOwnProperty("pool_market_cap"))
+                    object.pool_market_cap = $root.ununifi.derivatives.PoolMarketCap.toObject(message.pool_market_cap, options);
+                if (message.perpetual_futures_net_position_of_market && message.perpetual_futures_net_position_of_market.length) {
+                    object.perpetual_futures_net_position_of_market = [];
+                    for (let j = 0; j < message.perpetual_futures_net_position_of_market.length; ++j)
+                        object.perpetual_futures_net_position_of_market[j] = $root.ununifi.derivatives.PerpetualFuturesNetPositionOfMarket.toObject(message.perpetual_futures_net_position_of_market[j], options);
+                }
                 return object;
             };
 
