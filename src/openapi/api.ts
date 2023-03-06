@@ -5168,7 +5168,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         addressPositions: async (address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'address' is not null or undefined
             assertParamExists('addressPositions', 'address', address)
-            const localVarPath = `/ununifi/derivatives/positions/{address}`
+            const localVarPath = `/ununifi/derivatives/{address}/positions`
                 .replace(`{${"address"}}`, encodeURIComponent(String(address)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
