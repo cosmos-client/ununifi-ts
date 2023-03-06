@@ -53,7 +53,7 @@ export function perpetualOptionsMarket(sdk: cosmosclient.CosmosSDK, denom: strin
   return new QueryApi(undefined, sdk.url).perpetualOptionsMarket(denom, quoteDenom);
 }
 
-export function perpetualFuturePositions(
+export function perpetualFuturesPositions(
   sdk: cosmosclient.CosmosSDK,
   positionType: 'POSITION_UNKNOWN' | 'LONG' | 'SHORT',
   address: string,
