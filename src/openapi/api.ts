@@ -61,56 +61,105 @@ export interface AllPositions200Response {
 export interface AllPositions200ResponsePositionsInner {
     /**
      * 
+     * @type {AllPositions200ResponsePositionsInnerPosition}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'position'?: AllPositions200ResponsePositionsInnerPosition;
+    /**
+     * 
      * @type {string}
      * @memberof AllPositions200ResponsePositionsInner
+     */
+    'quote_ticker'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'profit_and_loss'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'remaining_margin_value'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'effective_margin_value'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'margin_maintenance_rate'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface AllPositions200ResponsePositionsInnerPosition
+ */
+export interface AllPositions200ResponsePositionsInnerPosition {
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInnerPosition
      */
     'id'?: string;
     /**
      * 
      * @type {DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner}
-     * @memberof AllPositions200ResponsePositionsInner
+     * @memberof AllPositions200ResponsePositionsInnerPosition
      */
     'market'?: DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner;
     /**
      * 
      * @type {string}
-     * @memberof AllPositions200ResponsePositionsInner
+     * @memberof AllPositions200ResponsePositionsInnerPosition
      */
     'address'?: string;
     /**
      * 
      * @type {string}
-     * @memberof AllPositions200ResponsePositionsInner
+     * @memberof AllPositions200ResponsePositionsInnerPosition
      */
     'opened_at'?: string;
     /**
      * 
      * @type {string}
-     * @memberof AllPositions200ResponsePositionsInner
+     * @memberof AllPositions200ResponsePositionsInnerPosition
      */
     'opened_height'?: string;
     /**
      * 
      * @type {string}
-     * @memberof AllPositions200ResponsePositionsInner
+     * @memberof AllPositions200ResponsePositionsInnerPosition
      */
-    'opened_rate'?: string;
+    'opened_base_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInnerPosition
+     */
+    'opened_quote_rate'?: string;
     /**
      * 
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof AllPositions200ResponsePositionsInner
+     * @memberof AllPositions200ResponsePositionsInnerPosition
      */
     'remaining_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
     /**
      * 
      * @type {string}
-     * @memberof AllPositions200ResponsePositionsInner
+     * @memberof AllPositions200ResponsePositionsInnerPosition
      */
     'last_levied_at'?: string;
     /**
      * 
      * @type {AuctionAll200ResponseAuctionsInner}
-     * @memberof AllPositions200ResponsePositionsInner
+     * @memberof AllPositions200ResponsePositionsInnerPosition
      */
     'position_instance'?: AuctionAll200ResponseAuctionsInner;
 }
@@ -2190,6 +2239,19 @@ export interface PerpetualFuturesMarket200Response {
 /**
  * 
  * @export
+ * @interface PerpetualFuturesPositionSize200Response
+ */
+export interface PerpetualFuturesPositionSize200Response {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof PerpetualFuturesPositionSize200Response
+     */
+    'total_position_size_usd'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
  * @interface Pool200Response
  */
 export interface Pool200Response {
@@ -2267,6 +2329,37 @@ export interface Pool200ResponsePoolMarketCapBreakdownInner {
      * @memberof Pool200ResponsePoolMarketCapBreakdownInner
      */
     'price'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface Position200Response
+ */
+export interface Position200Response {
+    /**
+     * 
+     * @type {AllPositions200ResponsePositionsInnerPosition}
+     * @memberof Position200Response
+     */
+    'position'?: AllPositions200ResponsePositionsInnerPosition;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof Position200Response
+     */
+    'valuation_profit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof Position200Response
+     */
+    'margin_maintenance_rate'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof Position200Response
+     */
+    'effective_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 /**
  * 
@@ -3185,7 +3278,13 @@ export interface UnunifiDerivativesPosition {
      * @type {string}
      * @memberof UnunifiDerivativesPosition
      */
-    'opened_rate'?: string;
+    'opened_base_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'opened_quote_rate'?: string;
     /**
      * 
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
@@ -3204,6 +3303,64 @@ export interface UnunifiDerivativesPosition {
      * @memberof UnunifiDerivativesPosition
      */
     'position_instance'?: AuctionAll200ResponseAuctionsInner;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export const UnunifiDerivativesPositionType = {
+    PositionUnknown: 'POSITION_UNKNOWN',
+    Long: 'LONG',
+    Short: 'SHORT'
+} as const;
+
+export type UnunifiDerivativesPositionType = typeof UnunifiDerivativesPositionType[keyof typeof UnunifiDerivativesPositionType];
+
+
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueriedPosition
+ */
+export interface UnunifiDerivativesQueriedPosition {
+    /**
+     * 
+     * @type {AllPositions200ResponsePositionsInnerPosition}
+     * @memberof UnunifiDerivativesQueriedPosition
+     */
+    'position'?: AllPositions200ResponsePositionsInnerPosition;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueriedPosition
+     */
+    'quote_ticker'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueriedPosition
+     */
+    'profit_and_loss'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueriedPosition
+     */
+    'remaining_margin_value'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueriedPosition
+     */
+    'effective_margin_value'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueriedPosition
+     */
+    'margin_maintenance_rate'?: string;
 }
 /**
  * 
@@ -3366,6 +3523,19 @@ export interface UnunifiDerivativesQueryPerpetualFuturesMarketResponse {
 /**
  * 
  * @export
+ * @interface UnunifiDerivativesQueryPerpetualFuturesPositionSizeResponse
+ */
+export interface UnunifiDerivativesQueryPerpetualFuturesPositionSizeResponse {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryPerpetualFuturesPositionSizeResponse
+     */
+    'total_position_size_usd'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
  * @interface UnunifiDerivativesQueryPerpetualFuturesResponse
  */
 export interface UnunifiDerivativesQueryPerpetualFuturesResponse {
@@ -3430,6 +3600,37 @@ export interface UnunifiDerivativesQueryPoolResponse {
      * @memberof UnunifiDerivativesQueryPoolResponse
      */
     'fees_24hours'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryPositionResponse
+ */
+export interface UnunifiDerivativesQueryPositionResponse {
+    /**
+     * 
+     * @type {AllPositions200ResponsePositionsInnerPosition}
+     * @memberof UnunifiDerivativesQueryPositionResponse
+     */
+    'position'?: AllPositions200ResponsePositionsInnerPosition;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryPositionResponse
+     */
+    'valuation_profit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPositionResponse
+     */
+    'margin_maintenance_rate'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryPositionResponse
+     */
+    'effective_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 /**
  * 
@@ -4957,10 +5158,14 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @param {string} address 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addressPositions: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        addressPositions: async (address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'address' is not null or undefined
             assertParamExists('addressPositions', 'address', address)
             const localVarPath = `/ununifi/derivatives/positions/{address}`
@@ -4976,6 +5181,22 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            if (paginationKey !== undefined) {
+                localVarQueryParameter['pagination.key'] = paginationKey;
+            }
+
+            if (paginationOffset !== undefined) {
+                localVarQueryParameter['pagination.offset'] = paginationOffset;
+            }
+
+            if (paginationLimit !== undefined) {
+                localVarQueryParameter['pagination.limit'] = paginationLimit;
+            }
+
+            if (paginationCountTotal !== undefined) {
+                localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
+            }
+
 
     
             setSearchParams(localVarUrlObj, localVarQueryParameter);
@@ -4989,10 +5210,14 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        allPositions: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        allPositions: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/derivatives/positions`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -5004,6 +5229,22 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (paginationKey !== undefined) {
+                localVarQueryParameter['pagination.key'] = paginationKey;
+            }
+
+            if (paginationOffset !== undefined) {
+                localVarQueryParameter['pagination.offset'] = paginationOffset;
+            }
+
+            if (paginationLimit !== undefined) {
+                localVarQueryParameter['pagination.limit'] = paginationLimit;
+            }
+
+            if (paginationCountTotal !== undefined) {
+                localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
+            }
 
 
     
@@ -6368,6 +6609,43 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {'POSITION_UNKNOWN' | 'LONG' | 'SHORT'} positionType 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        perpetualFuturesPositionSize: async (positionType: 'POSITION_UNKNOWN' | 'LONG' | 'SHORT', address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'positionType' is not null or undefined
+            assertParamExists('perpetualFuturesPositionSize', 'positionType', positionType)
+            // verify required parameter 'address' is not null or undefined
+            assertParamExists('perpetualFuturesPositionSize', 'address', address)
+            const localVarPath = `/ununifi/derivatives/positions/perpetual-futures/{position_type}/{address}`
+                .replace(`{${"position_type"}}`, encodeURIComponent(String(positionType)))
+                .replace(`{${"address"}}`, encodeURIComponent(String(address)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6440,6 +6718,39 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          */
         pool: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/derivatives/pool`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} positionId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        position: async (positionId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'positionId' is not null or undefined
+            assertParamExists('position', 'positionId', positionId)
+            const localVarPath = `/ununifi/derivatives/positions/{position_id}`
+                .replace(`{${"position_id"}}`, encodeURIComponent(String(positionId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -6784,20 +7095,28 @@ export const QueryApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} address 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async addressPositions(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllPositions200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.addressPositions(address, options);
+        async addressPositions(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllPositions200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.addressPositions(address, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async allPositions(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllPositions200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.allPositions(options);
+        async allPositions(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllPositions200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.allPositions(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -7204,6 +7523,17 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {'POSITION_UNKNOWN' | 'LONG' | 'SHORT'} positionType 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async perpetualFuturesPositionSize(positionType: 'POSITION_UNKNOWN' | 'LONG' | 'SHORT', address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PerpetualFuturesPositionSize200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualFuturesPositionSize(positionType, address, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -7230,6 +7560,16 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async pool(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Pool200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.pool(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} positionId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async position(positionId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Position200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.position(positionId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -7340,19 +7680,27 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         /**
          * 
          * @param {string} address 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addressPositions(address: string, options?: any): AxiosPromise<AllPositions200Response> {
-            return localVarFp.addressPositions(address, options).then((request) => request(axios, basePath));
+        addressPositions(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<AllPositions200Response> {
+            return localVarFp.addressPositions(address, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
         },
         /**
          * 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        allPositions(options?: any): AxiosPromise<AllPositions200Response> {
-            return localVarFp.allPositions(options).then((request) => request(axios, basePath));
+        allPositions(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<AllPositions200Response> {
+            return localVarFp.allPositions(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7720,6 +8068,16 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {'POSITION_UNKNOWN' | 'LONG' | 'SHORT'} positionType 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        perpetualFuturesPositionSize(positionType: 'POSITION_UNKNOWN' | 'LONG' | 'SHORT', address: string, options?: any): AxiosPromise<PerpetualFuturesPositionSize200Response> {
+            return localVarFp.perpetualFuturesPositionSize(positionType, address, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -7744,6 +8102,15 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         pool(options?: any): AxiosPromise<Pool200Response> {
             return localVarFp.pool(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} positionId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        position(positionId: string, options?: any): AxiosPromise<Position200Response> {
+            return localVarFp.position(positionId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7847,22 +8214,30 @@ export class QueryApi extends BaseAPI {
     /**
      * 
      * @param {string} address 
+     * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+     * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+     * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+     * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public addressPositions(address: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).addressPositions(address, options).then((request) => request(this.axios, this.basePath));
+    public addressPositions(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).addressPositions(address, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
+     * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+     * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+     * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+     * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public allPositions(options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).allPositions(options).then((request) => request(this.axios, this.basePath));
+    public allPositions(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).allPositions(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8307,6 +8682,18 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @param {'POSITION_UNKNOWN' | 'LONG' | 'SHORT'} positionType 
+     * @param {string} address 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public perpetualFuturesPositionSize(positionType: 'POSITION_UNKNOWN' | 'LONG' | 'SHORT', address: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).perpetualFuturesPositionSize(positionType, address, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
@@ -8336,6 +8723,17 @@ export class QueryApi extends BaseAPI {
      */
     public pool(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).pool(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} positionId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public position(positionId: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).position(positionId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
