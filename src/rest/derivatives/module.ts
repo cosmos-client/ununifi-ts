@@ -37,19 +37,19 @@ export function position(sdk: cosmosclient.CosmosSDK, positionId: string) {
   return new QueryApi(undefined, sdk.url).position(positionId);
 }
 
-export function wholePerpetualFutures(sdk: cosmosclient.CosmosSDK) {
+export function PerpetualFutures(sdk: cosmosclient.CosmosSDK) {
   return new QueryApi(undefined, sdk.url).perpetualFutures();
 }
 
-export function perpetualFuture(sdk: cosmosclient.CosmosSDK, baseDenom: string, quoteDenom: string) {
+export function perpetualFuturesMarket(sdk: cosmosclient.CosmosSDK, baseDenom: string, quoteDenom: string) {
   return new QueryApi(undefined, sdk.url).perpetualFuturesMarket(baseDenom, quoteDenom);
 }
 
-export function wholePerpetualOptions(sdk: cosmosclient.CosmosSDK) {
+export function PerpetualOptions(sdk: cosmosclient.CosmosSDK) {
   return new QueryApi(undefined, sdk.url).perpetualOptions();
 }
 
-export function perpetualOption(sdk: cosmosclient.CosmosSDK, denom: string, quoteDenom: string) {
+export function perpetualOptionsMarket(sdk: cosmosclient.CosmosSDK, denom: string, quoteDenom: string) {
   return new QueryApi(undefined, sdk.url).perpetualOptionsMarket(denom, quoteDenom);
 }
 
