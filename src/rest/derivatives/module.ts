@@ -37,7 +37,7 @@ export function position(sdk: cosmosclient.CosmosSDK, positionId: string) {
   return new QueryApi(undefined, sdk.url).position(positionId);
 }
 
-export function PerpetualFutures(sdk: cosmosclient.CosmosSDK) {
+export function perpetualFutures(sdk: cosmosclient.CosmosSDK) {
   return new QueryApi(undefined, sdk.url).perpetualFutures();
 }
 
@@ -45,7 +45,7 @@ export function perpetualFuturesMarket(sdk: cosmosclient.CosmosSDK, baseDenom: s
   return new QueryApi(undefined, sdk.url).perpetualFuturesMarket(baseDenom, quoteDenom);
 }
 
-export function PerpetualOptions(sdk: cosmosclient.CosmosSDK) {
+export function perpetualOptions(sdk: cosmosclient.CosmosSDK) {
   return new QueryApi(undefined, sdk.url).perpetualOptions();
 }
 
