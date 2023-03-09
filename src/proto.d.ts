@@ -7321,10 +7321,10 @@ export namespace ununifi {
         interface IQueryEstimateDLPTokenAmountResponse {
 
             /** QueryEstimateDLPTokenAmountResponse amount */
-            amount?: (string|null);
+            amount?: (cosmos.base.v1beta1.ICoin|null);
 
             /** QueryEstimateDLPTokenAmountResponse fee */
-            fee?: (string|null);
+            fee?: (cosmos.base.v1beta1.ICoin|null);
         }
 
         /** Represents a QueryEstimateDLPTokenAmountResponse. */
@@ -7337,10 +7337,10 @@ export namespace ununifi {
             constructor(properties?: ununifi.derivatives.IQueryEstimateDLPTokenAmountResponse);
 
             /** QueryEstimateDLPTokenAmountResponse amount. */
-            public amount: string;
+            public amount?: (cosmos.base.v1beta1.ICoin|null);
 
             /** QueryEstimateDLPTokenAmountResponse fee. */
-            public fee: string;
+            public fee?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
              * Encodes the specified QueryEstimateDLPTokenAmountResponse message. Does not implicitly {@link ununifi.derivatives.QueryEstimateDLPTokenAmountResponse.verify|verify} messages.
@@ -7499,10 +7499,10 @@ export namespace ununifi {
         interface IQueryEstimateRedeemAmountResponse {
 
             /** QueryEstimateRedeemAmountResponse amount */
-            amount?: (string|null);
+            amount?: (cosmos.base.v1beta1.ICoin|null);
 
             /** QueryEstimateRedeemAmountResponse fee */
-            fee?: (string|null);
+            fee?: (cosmos.base.v1beta1.ICoin|null);
         }
 
         /** Represents a QueryEstimateRedeemAmountResponse. */
@@ -7515,10 +7515,10 @@ export namespace ununifi {
             constructor(properties?: ununifi.derivatives.IQueryEstimateRedeemAmountResponse);
 
             /** QueryEstimateRedeemAmountResponse amount. */
-            public amount: string;
+            public amount?: (cosmos.base.v1beta1.ICoin|null);
 
             /** QueryEstimateRedeemAmountResponse fee. */
-            public fee: string;
+            public fee?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
              * Encodes the specified QueryEstimateRedeemAmountResponse message. Does not implicitly {@link ununifi.derivatives.QueryEstimateRedeemAmountResponse.verify|verify} messages.
