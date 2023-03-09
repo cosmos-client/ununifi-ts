@@ -5863,13 +5863,19 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} [mintDenom] 
-         * @param {string} [amount] 
+         * @param {string} mintDenom 
+         * @param {string} amount 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        estimateDLPTokenAmount: async (mintDenom?: string, amount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/derivatives/estimate-dlp-token-amount`;
+        estimateDLPTokenAmount: async (mintDenom: string, amount: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'mintDenom' is not null or undefined
+            assertParamExists('estimateDLPTokenAmount', 'mintDenom', mintDenom)
+            // verify required parameter 'amount' is not null or undefined
+            assertParamExists('estimateDLPTokenAmount', 'amount', amount)
+            const localVarPath = `/ununifi/derivatives/estimate-dlp-token-amount/{mint_denom}/{amount}`
+                .replace(`{${"mint_denom"}}`, encodeURIComponent(String(mintDenom)))
+                .replace(`{${"amount"}}`, encodeURIComponent(String(amount)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5880,14 +5886,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            if (mintDenom !== undefined) {
-                localVarQueryParameter['mint_denom'] = mintDenom;
-            }
-
-            if (amount !== undefined) {
-                localVarQueryParameter['amount'] = amount;
-            }
 
 
     
@@ -5902,13 +5900,19 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} [redeemDenom] 
-         * @param {string} [lptAmount] 
+         * @param {string} redeemDenom 
+         * @param {string} lptAmount 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        estimateRedeemAmount: async (redeemDenom?: string, lptAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/derivatives/estimate-redeem-amount`;
+        estimateRedeemAmount: async (redeemDenom: string, lptAmount: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'redeemDenom' is not null or undefined
+            assertParamExists('estimateRedeemAmount', 'redeemDenom', redeemDenom)
+            // verify required parameter 'lptAmount' is not null or undefined
+            assertParamExists('estimateRedeemAmount', 'lptAmount', lptAmount)
+            const localVarPath = `/ununifi/derivatives/estimate-redeem-amount/{redeem_denom}/{lpt_amount}`
+                .replace(`{${"redeem_denom"}}`, encodeURIComponent(String(redeemDenom)))
+                .replace(`{${"lpt_amount"}}`, encodeURIComponent(String(lptAmount)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5919,14 +5923,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            if (redeemDenom !== undefined) {
-                localVarQueryParameter['redeem_denom'] = redeemDenom;
-            }
-
-            if (lptAmount !== undefined) {
-                localVarQueryParameter['lpt_amount'] = lptAmount;
-            }
 
 
     
@@ -7352,23 +7348,23 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} [mintDenom] 
-         * @param {string} [amount] 
+         * @param {string} mintDenom 
+         * @param {string} amount 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async estimateDLPTokenAmount(mintDenom?: string, amount?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateDLPTokenAmount200Response>> {
+        async estimateDLPTokenAmount(mintDenom: string, amount: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateDLPTokenAmount200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.estimateDLPTokenAmount(mintDenom, amount, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {string} [redeemDenom] 
-         * @param {string} [lptAmount] 
+         * @param {string} redeemDenom 
+         * @param {string} lptAmount 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async estimateRedeemAmount(redeemDenom?: string, lptAmount?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateDLPTokenAmount200Response>> {
+        async estimateRedeemAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateDLPTokenAmount200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemAmount(redeemDenom, lptAmount, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -7927,22 +7923,22 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} [mintDenom] 
-         * @param {string} [amount] 
+         * @param {string} mintDenom 
+         * @param {string} amount 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        estimateDLPTokenAmount(mintDenom?: string, amount?: string, options?: any): AxiosPromise<EstimateDLPTokenAmount200Response> {
+        estimateDLPTokenAmount(mintDenom: string, amount: string, options?: any): AxiosPromise<EstimateDLPTokenAmount200Response> {
             return localVarFp.estimateDLPTokenAmount(mintDenom, amount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [redeemDenom] 
-         * @param {string} [lptAmount] 
+         * @param {string} redeemDenom 
+         * @param {string} lptAmount 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        estimateRedeemAmount(redeemDenom?: string, lptAmount?: string, options?: any): AxiosPromise<EstimateDLPTokenAmount200Response> {
+        estimateRedeemAmount(redeemDenom: string, lptAmount: string, options?: any): AxiosPromise<EstimateDLPTokenAmount200Response> {
             return localVarFp.estimateRedeemAmount(redeemDenom, lptAmount, options).then((request) => request(axios, basePath));
         },
         /**
@@ -8507,25 +8503,25 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} [mintDenom] 
-     * @param {string} [amount] 
+     * @param {string} mintDenom 
+     * @param {string} amount 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public estimateDLPTokenAmount(mintDenom?: string, amount?: string, options?: AxiosRequestConfig) {
+    public estimateDLPTokenAmount(mintDenom: string, amount: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).estimateDLPTokenAmount(mintDenom, amount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [redeemDenom] 
-     * @param {string} [lptAmount] 
+     * @param {string} redeemDenom 
+     * @param {string} lptAmount 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public estimateRedeemAmount(redeemDenom?: string, lptAmount?: string, options?: AxiosRequestConfig) {
+    public estimateRedeemAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).estimateRedeemAmount(redeemDenom, lptAmount, options).then((request) => request(this.axios, this.basePath));
     }
 

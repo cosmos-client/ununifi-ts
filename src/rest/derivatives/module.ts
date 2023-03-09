@@ -5,12 +5,12 @@ export function params(sdk: cosmosclient.CosmosSDK) {
   return new QueryApi(undefined, sdk.url).derivativesParams();
 }
 
-export function estimateDLPTokenAmount(sdk: cosmosclient.CosmosSDK, mintDenom?: string, mintAmount?: string) {
+export function estimateDLPTokenAmount(sdk: cosmosclient.CosmosSDK, mintDenom: string, mintAmount: string) {
   return new QueryApi(undefined, sdk.url).estimateDLPTokenAmount(mintDenom, mintAmount);
 }
 
-export function estimateRedeemAmount(sdk: cosmosclient.CosmosSDK, redeemDenom?: string, lptAmount?: string) {
-  return new QueryApi(undefined, sdk.url).estimateDLPTokenAmount(redeemDenom, lptAmount);
+export function estimateRedeemAmount(sdk: cosmosclient.CosmosSDK, redeemDenom: string, lptAmount: string) {
+  return new QueryApi(undefined, sdk.url).estimateRedeemAmount(redeemDenom, lptAmount);
 }
 
 export function nominalAPY(sdk: cosmosclient.CosmosSDK) {
@@ -61,8 +61,6 @@ export function perpetualFuturesPositions(
   return new QueryApi(undefined, sdk.url).perpetualFuturesPositionSize(positionType, address);
 }
 
-export function dlpTokenRates(
-  sdk: cosmosclient.CosmosSDK,
-) {
+export function dlpTokenRates(sdk: cosmosclient.CosmosSDK) {
   return new QueryApi(undefined, sdk.url).dLPTokenRates();
 }
