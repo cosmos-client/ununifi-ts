@@ -60,3 +60,9 @@ export function perpetualFuturesPositions(
 ) {
   return new QueryApi(undefined, sdk.url).perpetualFuturesPositionSize(positionType, address);
 }
+
+export function dlpTokenRates(
+  sdk: cosmosclient.CosmosSDK,
+) {
+  return new QueryApi(undefined, sdk.url).dLPTokenRates();
+}
