@@ -4818,6 +4818,20 @@ export namespace ununifi {
             public addressPositions(request: ununifi.derivatives.IQueryAddressPositionsRequest): Promise<ununifi.derivatives.QueryAddressPositionsResponse>;
 
             /**
+             * Calls DLPTokenRates.
+             * @param request QueryDLPTokenRateRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryDLPTokenRateResponse
+             */
+            public dLPTokenRates(request: ununifi.derivatives.IQueryDLPTokenRateRequest, callback: ununifi.derivatives.Query.DLPTokenRatesCallback): void;
+
+            /**
+             * Calls DLPTokenRates.
+             * @param request QueryDLPTokenRateRequest message or plain object
+             * @returns Promise
+             */
+            public dLPTokenRates(request: ununifi.derivatives.IQueryDLPTokenRateRequest): Promise<ununifi.derivatives.QueryDLPTokenRateResponse>;
+
+            /**
              * Calls EstimateDLPTokenAmount.
              * @param request QueryEstimateDLPTokenAmountRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryEstimateDLPTokenAmountResponse
@@ -4931,6 +4945,13 @@ export namespace ununifi {
              * @param [response] QueryAddressPositionsResponse
              */
             type AddressPositionsCallback = (error: (Error|null), response?: ununifi.derivatives.QueryAddressPositionsResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.derivatives.Query#dLPTokenRates}.
+             * @param error Error, if any
+             * @param [response] QueryDLPTokenRateResponse
+             */
+            type DLPTokenRatesCallback = (error: (Error|null), response?: ununifi.derivatives.QueryDLPTokenRateResponse) => void;
 
             /**
              * Callback as used by {@link ununifi.derivatives.Query#estimateDLPTokenAmount}.
@@ -7041,6 +7062,172 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
+        /** Properties of a QueryDLPTokenRateRequest. */
+        interface IQueryDLPTokenRateRequest {
+        }
+
+        /** Represents a QueryDLPTokenRateRequest. */
+        class QueryDLPTokenRateRequest implements IQueryDLPTokenRateRequest {
+
+            /**
+             * Constructs a new QueryDLPTokenRateRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.derivatives.IQueryDLPTokenRateRequest);
+
+            /**
+             * Encodes the specified QueryDLPTokenRateRequest message. Does not implicitly {@link ununifi.derivatives.QueryDLPTokenRateRequest.verify|verify} messages.
+             * @param message QueryDLPTokenRateRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.derivatives.IQueryDLPTokenRateRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryDLPTokenRateRequest message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryDLPTokenRateRequest.verify|verify} messages.
+             * @param message QueryDLPTokenRateRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.derivatives.IQueryDLPTokenRateRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryDLPTokenRateRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryDLPTokenRateRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.derivatives.QueryDLPTokenRateRequest;
+
+            /**
+             * Decodes a QueryDLPTokenRateRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryDLPTokenRateRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.derivatives.QueryDLPTokenRateRequest;
+
+            /**
+             * Verifies a QueryDLPTokenRateRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryDLPTokenRateRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryDLPTokenRateRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.derivatives.QueryDLPTokenRateRequest;
+
+            /**
+             * Creates a plain object from a QueryDLPTokenRateRequest message. Also converts values to other types if specified.
+             * @param message QueryDLPTokenRateRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.derivatives.QueryDLPTokenRateRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryDLPTokenRateRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryDLPTokenRateResponse. */
+        interface IQueryDLPTokenRateResponse {
+
+            /** QueryDLPTokenRateResponse symbol */
+            symbol?: (string|null);
+
+            /** QueryDLPTokenRateResponse rates */
+            rates?: (cosmos.base.v1beta1.ICoin[]|null);
+        }
+
+        /** Represents a QueryDLPTokenRateResponse. */
+        class QueryDLPTokenRateResponse implements IQueryDLPTokenRateResponse {
+
+            /**
+             * Constructs a new QueryDLPTokenRateResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.derivatives.IQueryDLPTokenRateResponse);
+
+            /** QueryDLPTokenRateResponse symbol. */
+            public symbol: string;
+
+            /** QueryDLPTokenRateResponse rates. */
+            public rates: cosmos.base.v1beta1.ICoin[];
+
+            /**
+             * Encodes the specified QueryDLPTokenRateResponse message. Does not implicitly {@link ununifi.derivatives.QueryDLPTokenRateResponse.verify|verify} messages.
+             * @param message QueryDLPTokenRateResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.derivatives.IQueryDLPTokenRateResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryDLPTokenRateResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryDLPTokenRateResponse.verify|verify} messages.
+             * @param message QueryDLPTokenRateResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.derivatives.IQueryDLPTokenRateResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryDLPTokenRateResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryDLPTokenRateResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.derivatives.QueryDLPTokenRateResponse;
+
+            /**
+             * Decodes a QueryDLPTokenRateResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryDLPTokenRateResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.derivatives.QueryDLPTokenRateResponse;
+
+            /**
+             * Verifies a QueryDLPTokenRateResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryDLPTokenRateResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryDLPTokenRateResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.derivatives.QueryDLPTokenRateResponse;
+
+            /**
+             * Creates a plain object from a QueryDLPTokenRateResponse message. Also converts values to other types if specified.
+             * @param message QueryDLPTokenRateResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.derivatives.QueryDLPTokenRateResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryDLPTokenRateResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
         /** Properties of a QueryEstimateDLPTokenAmountRequest. */
         interface IQueryEstimateDLPTokenAmountRequest {
 
@@ -7404,101 +7591,6 @@ export namespace ununifi {
             SHORT = 2
         }
 
-        /** RevenueType enum. */
-        enum RevenueType {
-            PROFIT = 0,
-            LOSS = 1
-        }
-
-        /** Properties of a Revenue. */
-        interface IRevenue {
-
-            /** Revenue revenue_type */
-            revenue_type?: (ununifi.derivatives.RevenueType|null);
-
-            /** Revenue amount */
-            amount?: (cosmos.base.v1beta1.ICoin|null);
-        }
-
-        /** Represents a Revenue. */
-        class Revenue implements IRevenue {
-
-            /**
-             * Constructs a new Revenue.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.derivatives.IRevenue);
-
-            /** Revenue revenue_type. */
-            public revenue_type: ununifi.derivatives.RevenueType;
-
-            /** Revenue amount. */
-            public amount?: (cosmos.base.v1beta1.ICoin|null);
-
-            /**
-             * Encodes the specified Revenue message. Does not implicitly {@link ununifi.derivatives.Revenue.verify|verify} messages.
-             * @param message Revenue message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.derivatives.IRevenue, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified Revenue message, length delimited. Does not implicitly {@link ununifi.derivatives.Revenue.verify|verify} messages.
-             * @param message Revenue message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.derivatives.IRevenue, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a Revenue message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns Revenue
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.derivatives.Revenue;
-
-            /**
-             * Decodes a Revenue message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns Revenue
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.derivatives.Revenue;
-
-            /**
-             * Verifies a Revenue message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a Revenue message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns Revenue
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.derivatives.Revenue;
-
-            /**
-             * Creates a plain object from a Revenue message. Also converts values to other types if specified.
-             * @param message Revenue
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.derivatives.Revenue, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this Revenue to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
         /** Properties of a Position. */
         interface IPosition {
 
@@ -7642,17 +7734,14 @@ export namespace ununifi {
             /** QueriedPosition position */
             position?: (ununifi.derivatives.IPosition|null);
 
-            /** QueriedPosition quote_ticker */
-            quote_ticker?: (string|null);
-
-            /** QueriedPosition profit_and_loss */
-            profit_and_loss?: (string|null);
+            /** QueriedPosition valuation_profit */
+            valuation_profit?: (cosmos.base.v1beta1.ICoin|null);
 
             /** QueriedPosition remaining_margin_value */
             remaining_margin_value?: (string|null);
 
-            /** QueriedPosition effective_margin_value */
-            effective_margin_value?: (string|null);
+            /** QueriedPosition effective_margin */
+            effective_margin?: (cosmos.base.v1beta1.ICoin|null);
 
             /** QueriedPosition margin_maintenance_rate */
             margin_maintenance_rate?: (string|null);
@@ -7670,17 +7759,14 @@ export namespace ununifi {
             /** QueriedPosition position. */
             public position?: (ununifi.derivatives.IPosition|null);
 
-            /** QueriedPosition quote_ticker. */
-            public quote_ticker: string;
-
-            /** QueriedPosition profit_and_loss. */
-            public profit_and_loss: string;
+            /** QueriedPosition valuation_profit. */
+            public valuation_profit?: (cosmos.base.v1beta1.ICoin|null);
 
             /** QueriedPosition remaining_margin_value. */
             public remaining_margin_value: string;
 
-            /** QueriedPosition effective_margin_value. */
-            public effective_margin_value: string;
+            /** QueriedPosition effective_margin. */
+            public effective_margin?: (cosmos.base.v1beta1.ICoin|null);
 
             /** QueriedPosition margin_maintenance_rate. */
             public margin_maintenance_rate: string;

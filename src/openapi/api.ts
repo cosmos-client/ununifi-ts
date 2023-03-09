@@ -67,16 +67,10 @@ export interface AllPositions200ResponsePositionsInner {
     'position'?: AllPositions200ResponsePositionsInnerPosition;
     /**
      * 
-     * @type {string}
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof AllPositions200ResponsePositionsInner
      */
-    'quote_ticker'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AllPositions200ResponsePositionsInner
-     */
-    'profit_and_loss'?: string;
+    'valuation_profit'?: CdpAll200ResponseCdpInnerCdpCollateral;
     /**
      * 
      * @type {string}
@@ -85,10 +79,10 @@ export interface AllPositions200ResponsePositionsInner {
     'remaining_margin_value'?: string;
     /**
      * 
-     * @type {string}
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof AllPositions200ResponsePositionsInner
      */
-    'effective_margin_value'?: string;
+    'effective_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
     /**
      * 
      * @type {string}
@@ -945,6 +939,25 @@ export interface CosmosBaseV1beta1Coin {
      * @memberof CosmosBaseV1beta1Coin
      */
     'amount'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface DLPTokenRates200Response
+ */
+export interface DLPTokenRates200Response {
+    /**
+     * 
+     * @type {string}
+     * @memberof DLPTokenRates200Response
+     */
+    'symbol'?: string;
+    /**
+     * 
+     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @memberof DLPTokenRates200Response
+     */
+    'rates'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
 }
 /**
  * 
@@ -3333,16 +3346,10 @@ export interface UnunifiDerivativesQueriedPosition {
     'position'?: AllPositions200ResponsePositionsInnerPosition;
     /**
      * 
-     * @type {string}
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof UnunifiDerivativesQueriedPosition
      */
-    'quote_ticker'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesQueriedPosition
-     */
-    'profit_and_loss'?: string;
+    'valuation_profit'?: CdpAll200ResponseCdpInnerCdpCollateral;
     /**
      * 
      * @type {string}
@@ -3351,10 +3358,10 @@ export interface UnunifiDerivativesQueriedPosition {
     'remaining_margin_value'?: string;
     /**
      * 
-     * @type {string}
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof UnunifiDerivativesQueriedPosition
      */
-    'effective_margin_value'?: string;
+    'effective_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
     /**
      * 
      * @type {string}
@@ -3399,6 +3406,25 @@ export interface UnunifiDerivativesQueryAllPositionsResponse {
      * @memberof UnunifiDerivativesQueryAllPositionsResponse
      */
     'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryDLPTokenRateResponse
+ */
+export interface UnunifiDerivativesQueryDLPTokenRateResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryDLPTokenRateResponse
+     */
+    'symbol'?: string;
+    /**
+     * 
+     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @memberof UnunifiDerivativesQueryDLPTokenRateResponse
+     */
+    'rates'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
 }
 /**
  * 
@@ -5711,6 +5737,35 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        dLPTokenRates: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/pools/dlp`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} owner 
          * @param {string} collateralType 
          * @param {*} [options] Override http request option.
@@ -7257,6 +7312,15 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async dLPTokenRates(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DLPTokenRates200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.dLPTokenRates(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} owner 
          * @param {string} collateralType 
          * @param {*} [options] Override http request option.
@@ -7827,6 +7891,14 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        dLPTokenRates(options?: any): AxiosPromise<DLPTokenRates200Response> {
+            return localVarFp.dLPTokenRates(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {string} owner 
          * @param {string} collateralType 
          * @param {*} [options] Override http request option.
@@ -8387,6 +8459,16 @@ export class QueryApi extends BaseAPI {
      */
     public classIdsByOwner(owner: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).classIdsByOwner(owner, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public dLPTokenRates(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).dLPTokenRates(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
