@@ -2195,16 +2195,16 @@ export interface PerpetualFutures200Response {
     'fees_24hours'?: string;
     /**
      * 
-     * @type {string}
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof PerpetualFutures200Response
      */
-    'long_positions'?: string;
+    'long_positions'?: CdpAll200ResponseCdpInnerCdpCollateral;
     /**
      * 
-     * @type {string}
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof PerpetualFutures200Response
      */
-    'short_positions'?: string;
+    'short_positions'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 /**
  * 
@@ -3585,16 +3585,16 @@ export interface UnunifiDerivativesQueryPerpetualFuturesResponse {
     'fees_24hours'?: string;
     /**
      * 
-     * @type {string}
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
      */
-    'long_positions'?: string;
+    'long_positions'?: CdpAll200ResponseCdpInnerCdpCollateral;
     /**
      * 
-     * @type {string}
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
      */
-    'short_positions'?: string;
+    'short_positions'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 /**
  * 

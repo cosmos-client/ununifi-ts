@@ -5740,10 +5740,10 @@ export namespace ununifi {
             fees_24hours?: (string|null);
 
             /** QueryPerpetualFuturesResponse long_positions */
-            long_positions?: (string|null);
+            long_positions?: (cosmos.base.v1beta1.ICoin|null);
 
             /** QueryPerpetualFuturesResponse short_positions */
-            short_positions?: (string|null);
+            short_positions?: (cosmos.base.v1beta1.ICoin|null);
         }
 
         /** Represents a QueryPerpetualFuturesResponse. */
@@ -5765,10 +5765,10 @@ export namespace ununifi {
             public fees_24hours: string;
 
             /** QueryPerpetualFuturesResponse long_positions. */
-            public long_positions: string;
+            public long_positions?: (cosmos.base.v1beta1.ICoin|null);
 
             /** QueryPerpetualFuturesResponse short_positions. */
-            public short_positions: string;
+            public short_positions?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
              * Encodes the specified QueryPerpetualFuturesResponse message. Does not implicitly {@link ununifi.derivatives.QueryPerpetualFuturesResponse.verify|verify} messages.
