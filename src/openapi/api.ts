@@ -389,7 +389,31 @@ export interface BidderBids200ResponseBidsInner {
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'bid_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'deposit_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'paid_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'bidding_period'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'deposit_lending_rate'?: string;
     /**
      * 
      * @type {boolean}
@@ -401,13 +425,25 @@ export interface BidderBids200ResponseBidsInner {
      * @type {string}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'paid_amount'?: string;
+    'bid_time'?: string;
     /**
      * 
-     * @type {string}
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'bid_time'?: string;
+    'interest_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {Array<ListerBorrowingBidderInfoInner>}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'borrowings'?: Array<ListerBorrowingBidderInfoInner>;
+    /**
+     * 
+     * @type {TodoRemoveNftIdBidderThenUseIt}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'id'?: TodoRemoveNftIdBidderThenUseIt;
 }
 /**
  * 
@@ -1533,6 +1569,57 @@ export interface IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr {
 /**
  * 
  * @export
+ * @interface Liquidation200Response
+ */
+export interface Liquidation200Response {
+    /**
+     * 
+     * @type {Liquidation200ResponseLiquidations}
+     * @memberof Liquidation200Response
+     */
+    'liquidations'?: Liquidation200ResponseLiquidations;
+}
+/**
+ * 
+ * @export
+ * @interface Liquidation200ResponseLiquidations
+ */
+export interface Liquidation200ResponseLiquidations {
+    /**
+     * 
+     * @type {Liquidation200ResponseLiquidationsLiquidation}
+     * @memberof Liquidation200ResponseLiquidations
+     */
+    'liquidation'?: Liquidation200ResponseLiquidationsLiquidation;
+    /**
+     * 
+     * @type {Array<Liquidation200ResponseLiquidationsLiquidation>}
+     * @memberof Liquidation200ResponseLiquidations
+     */
+    'next_liquidation'?: Array<Liquidation200ResponseLiquidationsLiquidation>;
+}
+/**
+ * 
+ * @export
+ * @interface Liquidation200ResponseLiquidationsLiquidation
+ */
+export interface Liquidation200ResponseLiquidationsLiquidation {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof Liquidation200ResponseLiquidationsLiquidation
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof Liquidation200ResponseLiquidationsLiquidation
+     */
+    'liquidation_date'?: string;
+}
+/**
+ * 
+ * @export
  * @interface LiquidityProviderTokenNominalAPY200Response
  */
 export interface LiquidityProviderTokenNominalAPY200Response {
@@ -1690,13 +1777,13 @@ export interface ListedNfts200ResponseListingsInner {
      * @type {string}
      * @memberof ListedNfts200ResponseListingsInner
      */
-    'min_bid'?: string;
+    'minimum_deposit_rate'?: string;
     /**
      * 
-     * @type {string}
+     * @type {boolean}
      * @memberof ListedNfts200ResponseListingsInner
      */
-    'bid_active_rank'?: string;
+    'automatic_refinancing'?: boolean;
     /**
      * 
      * @type {string}
@@ -1727,6 +1814,12 @@ export interface ListedNfts200ResponseListingsInner {
      * @memberof ListedNfts200ResponseListingsInner
      */
     'auto_relisted_count'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof ListedNfts200ResponseListingsInner
+     */
+    'collected_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 
 export const ListedNfts200ResponseListingsInnerListingTypeEnum = {
@@ -1740,13 +1833,37 @@ export const ListedNfts200ResponseListingsInnerStateEnum = {
     Listing: 'LISTING',
     Bidding: 'BIDDING',
     SellingDecision: 'SELLING_DECISION',
-    Liquidation: 'LIQUIDATION',
     EndListing: 'END_LISTING',
     SuccessfulBid: 'SUCCESSFUL_BID'
 } as const;
 
 export type ListedNfts200ResponseListingsInnerStateEnum = typeof ListedNfts200ResponseListingsInnerStateEnum[keyof typeof ListedNfts200ResponseListingsInnerStateEnum];
 
+/**
+ * 
+ * @export
+ * @interface ListerBorrowingBidderInfoInner
+ */
+export interface ListerBorrowingBidderInfoInner {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof ListerBorrowingBidderInfoInner
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof ListerBorrowingBidderInfoInner
+     */
+    'paid_interest_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListerBorrowingBidderInfoInner
+     */
+    'start_at'?: string;
+}
 /**
  * 
  * @export
@@ -2162,7 +2279,6 @@ export const PaymentStatus200ResponsePaymentStatusStateEnum = {
     Listing: 'LISTING',
     Bidding: 'BIDDING',
     SellingDecision: 'SELLING_DECISION',
-    Liquidation: 'LIQUIDATION',
     EndListing: 'END_LISTING',
     SuccessfulBid: 'SUCCESSFUL_BID'
 } as const;
@@ -2584,6 +2700,25 @@ export interface Rewards200Response {
      * @memberof Rewards200Response
      */
     'rewards'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+}
+/**
+ * 
+ * @export
+ * @interface TodoRemoveNftIdBidderThenUseIt
+ */
+export interface TodoRemoveNftIdBidderThenUseIt {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof TodoRemoveNftIdBidderThenUseIt
+     */
+    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    /**
+     * 
+     * @type {string}
+     * @memberof TodoRemoveNftIdBidderThenUseIt
+     */
+    'bidder'?: string;
 }
 /**
  * 
@@ -3998,6 +4133,88 @@ export interface UnunifiIncentiveRewardPeriod {
 /**
  * 
  * @export
+ * @interface UnunifiNftmarketBidId
+ */
+export interface UnunifiNftmarketBidId {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof UnunifiNftmarketBidId
+     */
+    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketBidId
+     */
+    'bidder'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketBorrowing
+ */
+export interface UnunifiNftmarketBorrowing {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketBorrowing
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketBorrowing
+     */
+    'paid_interest_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketBorrowing
+     */
+    'start_at'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketLiquidation
+ */
+export interface UnunifiNftmarketLiquidation {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketLiquidation
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketLiquidation
+     */
+    'liquidation_date'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketLiquidations
+ */
+export interface UnunifiNftmarketLiquidations {
+    /**
+     * 
+     * @type {Liquidation200ResponseLiquidationsLiquidation}
+     * @memberof UnunifiNftmarketLiquidations
+     */
+    'liquidation'?: Liquidation200ResponseLiquidationsLiquidation;
+    /**
+     * 
+     * @type {Array<Liquidation200ResponseLiquidationsLiquidation>}
+     * @memberof UnunifiNftmarketLiquidations
+     */
+    'next_liquidation'?: Array<Liquidation200ResponseLiquidationsLiquidation>;
+}
+/**
+ * 
+ * @export
  * @interface UnunifiNftmarketListedNft
  */
 export interface UnunifiNftmarketListedNft {
@@ -4030,7 +4247,6 @@ export const UnunifiNftmarketListingState = {
     Listing: 'LISTING',
     Bidding: 'BIDDING',
     SellingDecision: 'SELLING_DECISION',
-    Liquidation: 'LIQUIDATION',
     EndListing: 'END_LISTING',
     SuccessfulBid: 'SUCCESSFUL_BID'
 } as const;
@@ -4095,7 +4311,31 @@ export interface UnunifiNftmarketNftBid {
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof UnunifiNftmarketNftBid
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'bid_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'deposit_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'paid_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'bidding_period'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'deposit_lending_rate'?: string;
     /**
      * 
      * @type {boolean}
@@ -4107,13 +4347,25 @@ export interface UnunifiNftmarketNftBid {
      * @type {string}
      * @memberof UnunifiNftmarketNftBid
      */
-    'paid_amount'?: string;
+    'bid_time'?: string;
     /**
      * 
-     * @type {string}
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof UnunifiNftmarketNftBid
      */
-    'bid_time'?: string;
+    'interest_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {Array<ListerBorrowingBidderInfoInner>}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'borrowings'?: Array<ListerBorrowingBidderInfoInner>;
+    /**
+     * 
+     * @type {TodoRemoveNftIdBidderThenUseIt}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'id'?: TodoRemoveNftIdBidderThenUseIt;
 }
 /**
  * 
@@ -4175,13 +4427,13 @@ export interface UnunifiNftmarketNftListing {
      * @type {string}
      * @memberof UnunifiNftmarketNftListing
      */
-    'min_bid'?: string;
+    'minimum_deposit_rate'?: string;
     /**
      * 
-     * @type {string}
+     * @type {boolean}
      * @memberof UnunifiNftmarketNftListing
      */
-    'bid_active_rank'?: string;
+    'automatic_refinancing'?: boolean;
     /**
      * 
      * @type {string}
@@ -4212,6 +4464,12 @@ export interface UnunifiNftmarketNftListing {
      * @memberof UnunifiNftmarketNftListing
      */
     'auto_relisted_count'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'collected_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 
 export const UnunifiNftmarketNftListingListingTypeEnum = {
@@ -4225,7 +4483,6 @@ export const UnunifiNftmarketNftListingStateEnum = {
     Listing: 'LISTING',
     Bidding: 'BIDDING',
     SellingDecision: 'SELLING_DECISION',
-    Liquidation: 'LIQUIDATION',
     EndListing: 'END_LISTING',
     SuccessfulBid: 'SUCCESSFUL_BID'
 } as const;
@@ -4407,7 +4664,6 @@ export const UnunifiNftmarketPaymentStatusStateEnum = {
     Listing: 'LISTING',
     Bidding: 'BIDDING',
     SellingDecision: 'SELLING_DECISION',
-    Liquidation: 'LIQUIDATION',
     EndListing: 'END_LISTING',
     SuccessfulBid: 'SUCCESSFUL_BID'
 } as const;
@@ -4426,6 +4682,19 @@ export interface UnunifiNftmarketQueryBidderBidsResponse {
      * @memberof UnunifiNftmarketQueryBidderBidsResponse
      */
     'bids'?: Array<BidderBids200ResponseBidsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketQueryLiquidationResponse
+ */
+export interface UnunifiNftmarketQueryLiquidationResponse {
+    /**
+     * 
+     * @type {Liquidation200ResponseLiquidations}
+     * @memberof UnunifiNftmarketQueryLiquidationResponse
+     */
+    'liquidations'?: Liquidation200ResponseLiquidations;
 }
 /**
  * 
@@ -6032,6 +6301,43 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        liquidation: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'classId' is not null or undefined
+            assertParamExists('liquidation', 'classId', classId)
+            // verify required parameter 'nftId' is not null or undefined
+            assertParamExists('liquidation', 'nftId', nftId)
+            const localVarPath = `/ununifi/nftmarket/liquidation/{class_id}/{nft_id}`
+                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
+                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} [beforeHeight] 
          * @param {string} [afterHeight] 
          * @param {*} [options] Override http request option.
@@ -7399,6 +7705,17 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async liquidation(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Liquidation200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.liquidation(classId, nftId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} [beforeHeight] 
          * @param {string} [afterHeight] 
          * @param {*} [options] Override http request option.
@@ -7966,6 +8283,16 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         incentiveUnitIdsByAddr(address: string, options?: any): AxiosPromise<IncentiveUnitIdsByAddr200Response> {
             return localVarFp.incentiveUnitIdsByAddr(address, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        liquidation(classId: string, nftId: string, options?: any): AxiosPromise<Liquidation200Response> {
+            return localVarFp.liquidation(classId, nftId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -8555,6 +8882,18 @@ export class QueryApi extends BaseAPI {
      */
     public incentiveUnitIdsByAddr(address: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).incentiveUnitIdsByAddr(address, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} classId 
+     * @param {string} nftId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public liquidation(classId: string, nftId: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).liquidation(classId, nftId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
