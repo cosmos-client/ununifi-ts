@@ -13,8 +13,6 @@ cosmosclient.codec.register('/ununifi.nftmarket.MsgEndNftListing', ununifi.nftma
 cosmosclient.codec.register('/ununifi.nftmarket.MsgPayFullBid', ununifi.nftmarket.MsgPayFullBid);
 cosmosclient.codec.register('/ununifi.nftmarket.MsgBorrow', ununifi.nftmarket.MsgBorrow);
 cosmosclient.codec.register('/ununifi.nftmarket.MsgRepay', ununifi.nftmarket.MsgRepay);
-// cosmosclient.codec.register('/ununifi.nftmarket.MsgMintStableCoin', ununifi.nftmarket.MsgMintStableCoin);
-// cosmosclient.codec.register('/ununifi.nftmarket.MsgBurnStableCoin', ununifi.nftmarket.MsgBurnStableCoin);
 // cosmosclient.codec.register('/ununifi.nftmarket.MsgLiquidate', ununifi.nftmarket.MsgLiquidate);
 cosmosclient.codec.register('/ununifi.nftmarket.MsgSellingDecision', ununifi.nftmarket.MsgSellingDecision);
 cosmosclient.codec.register('/ununifi.nftmarket.MsgMintNft', ununifi.nftmarket.MsgMintNft);
