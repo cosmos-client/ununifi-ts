@@ -3435,7 +3435,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /UnUniFi/chain/yield-aggregator/strategies/{denom}:
+  /UnUniFi/chain/yield-aggregator/strategies/query-param:
     get:
       operationId: StrategyAll
       responses:
@@ -3509,8 +3509,8 @@ paths:
                       format: byte
       parameters:
         - name: denom
-          in: path
-          required: true
+          in: query
+          required: false
           type: string
         - name: pagination.key
           description: |-
