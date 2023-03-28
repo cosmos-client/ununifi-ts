@@ -2699,7 +2699,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         estimateMintAmount: async (id: string, depositAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('estimateMintAmount', 'id', id)
-            const localVarPath = `/UnUniFi/chain/yield-aggregator/vaults/{id}/estimate-mint-amount`
+            const localVarPath = `/ununifi/yield-aggregator/vaults/{id}/estimate-mint-amount`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2737,7 +2737,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         estimateRedeemAmount: async (id: string, burnAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('estimateRedeemAmount', 'id', id)
-            const localVarPath = `/UnUniFi/chain/yield-aggregator/vaults/{id}/estimate-redeem-amount`
+            const localVarPath = `/ununifi/yield-aggregator/vaults/{id}/estimate-redeem-amount`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -3063,18 +3063,15 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} denom 
          * @param {string} id 
+         * @param {string} [denom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        strategy: async (denom: string, id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'denom' is not null or undefined
-            assertParamExists('strategy', 'denom', denom)
+        strategy: async (id: string, denom?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('strategy', 'id', id)
-            const localVarPath = `/UnUniFi/chain/yield-aggregator/strategies/{denom}/{id}`
-                .replace(`{${"denom"}}`, encodeURIComponent(String(denom)))
+            const localVarPath = `/ununifi/yield-aggregator/strategies/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -3086,6 +3083,10 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (denom !== undefined) {
+                localVarQueryParameter['denom'] = denom;
+            }
 
 
     
@@ -3109,7 +3110,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         strategyAll: async (denom?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/UnUniFi/chain/yield-aggregator/strategies/query-param`;
+            const localVarPath = `/ununifi/yield-aggregator/strategies/query-param`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3190,7 +3191,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         vault: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('vault', 'id', id)
-            const localVarPath = `/UnUniFi/chain/yield-aggregator/vaults/{id}`
+            const localVarPath = `/ununifi/yield-aggregator/vaults/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -3225,7 +3226,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         vaultAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/UnUniFi/chain/yield-aggregator/vaults`;
+            const localVarPath = `/ununifi/yield-aggregator/vaults`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3271,7 +3272,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         yieldAggregatorParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/UnUniFi/chain/yield-aggregator/params`;
+            const localVarPath = `/ununifi/yield-aggregator/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3508,13 +3509,13 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} denom 
          * @param {string} id 
+         * @param {string} [denom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async strategy(denom: string, id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Strategy200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.strategy(denom, id, options);
+        async strategy(id: string, denom?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Strategy200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.strategy(id, denom, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3770,13 +3771,13 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} denom 
          * @param {string} id 
+         * @param {string} [denom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        strategy(denom: string, id: string, options?: any): AxiosPromise<Strategy200Response> {
-            return localVarFp.strategy(denom, id, options).then((request) => request(axios, basePath));
+        strategy(id: string, denom?: string, options?: any): AxiosPromise<Strategy200Response> {
+            return localVarFp.strategy(id, denom, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4062,14 +4063,14 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} denom 
      * @param {string} id 
+     * @param {string} [denom] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public strategy(denom: string, id: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).strategy(denom, id, options).then((request) => request(this.axios, this.basePath));
+    public strategy(id: string, denom?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).strategy(id, denom, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

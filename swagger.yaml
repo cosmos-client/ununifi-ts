@@ -3362,7 +3362,7 @@ paths:
           type: boolean
       tags:
         - Query
-  /UnUniFi/chain/yield-aggregator/params:
+  /ununifi/yield-aggregator/params:
     get:
       summary: Parameters queries the parameters of the module.
       operationId: YieldAggregatorParams
@@ -3435,7 +3435,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /UnUniFi/chain/yield-aggregator/strategies/query-param:
+  /ununifi/yield-aggregator/strategies/query-param:
     get:
       operationId: StrategyAll
       responses:
@@ -3560,7 +3560,7 @@ paths:
           type: boolean
       tags:
         - Query
-  /UnUniFi/chain/yield-aggregator/strategies/{denom}/{id}:
+  /ununifi/yield-aggregator/strategies/{id}:
     get:
       operationId: Strategy
       responses:
@@ -3604,18 +3604,18 @@ paths:
                       type: string
                       format: byte
       parameters:
-        - name: denom
-          in: path
-          required: true
-          type: string
         - name: id
           in: path
           required: true
           type: string
           format: uint64
+        - name: denom
+          in: query
+          required: false
+          type: string
       tags:
         - Query
-  /UnUniFi/chain/yield-aggregator/vaults:
+  /ununifi/yield-aggregator/vaults:
     get:
       summary: 'this line is used by starport scaffolding # 2'
       operationId: VaultAll
@@ -3764,7 +3764,7 @@ paths:
           type: boolean
       tags:
         - Query
-  /UnUniFi/chain/yield-aggregator/vaults/{id}:
+  /ununifi/yield-aggregator/vaults/{id}:
     get:
       operationId: Vault
       responses:
@@ -3856,7 +3856,7 @@ paths:
           format: uint64
       tags:
         - Query
-  /UnUniFi/chain/yield-aggregator/vaults/{id}/estimate-mint-amount:
+  /ununifi/yield-aggregator/vaults/{id}/estimate-mint-amount:
     get:
       operationId: EstimateMintAmount
       responses:
@@ -3914,7 +3914,7 @@ paths:
           type: string
       tags:
         - Query
-  /UnUniFi/chain/yield-aggregator/vaults/{id}/estimate-redeem-amount:
+  /ununifi/yield-aggregator/vaults/{id}/estimate-redeem-amount:
     get:
       operationId: EstimateRedeemAmount
       responses:
