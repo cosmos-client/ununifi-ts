@@ -3,9 +3,12 @@ import cosmosclient from '@cosmos-client/core';
 
 export * as yieldAggregator from './module';
 
-cosmosclient.codec.register('/ununifi.yieldAggregator.MsgDepositToVault', ununifi.chain.yieldaggregator.MsgDepositToVault);
-cosmosclient.codec.register('/ununifi.yieldAggregator.MsgWithdrawFromVault', ununifi.chain.yieldaggregator.MsgWithdrawFromVault);
-cosmosclient.codec.register('/ununifi.yieldAggregator.MsgCreateVault', ununifi.chain.yieldaggregator.MsgCreateVault);
-cosmosclient.codec.register('/ununifi.yieldAggregator.StrategyWeight', ununifi.chain.yieldaggregator.StrategyWeight);
-cosmosclient.codec.register('/ununifi.yieldAggregator.MsgMsgDeleteVault', ununifi.chain.yieldaggregator.MsgDeleteVault);
-cosmosclient.codec.register('/ununifi.yieldAggregator.MsgTransferVaultOwnership', ununifi.chain.yieldaggregator.MsgTransferVaultOwnership);
+cosmosclient.codec.register('/ununifi.chain.yieldaggregator.MsgDepositToVault', ununifi.chain.yieldaggregator.MsgDepositToVault);
+cosmosclient.codec.register('/ununifi.chain.yieldaggregator.MsgWithdrawFromVault', ununifi.chain.yieldaggregator.MsgWithdrawFromVault);
+cosmosclient.codec.register('/ununifi.chain.yieldaggregator.MsgCreateVault', ununifi.chain.yieldaggregator.MsgCreateVault);
+cosmosclient.codec.register('/ununifi.chain.yieldaggregator.StrategyWeight', ununifi.chain.yieldaggregator.StrategyWeight);
+cosmosclient.codec.register('/ununifi.chain.yieldaggregator.MsgMsgDeleteVault', ununifi.chain.yieldaggregator.MsgDeleteVault);
+cosmosclient.codec.register(
+  '/ununifi.chain.yieldaggregator.MsgTransferVaultOwnership',
+  ununifi.chain.yieldaggregator.MsgTransferVaultOwnership,
+);
