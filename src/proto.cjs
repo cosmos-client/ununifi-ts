@@ -19519,6 +19519,7223 @@
             return ununifidist;
         })();
     
+        ununifi.yieldaggregator = (function() {
+    
+            /**
+             * Namespace yieldaggregator.
+             * @memberof ununifi
+             * @namespace
+             */
+            var yieldaggregator = {};
+    
+            yieldaggregator.Query = (function() {
+    
+                /**
+                 * Constructs a new Query service.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a Query
+                 * @extends $protobuf.rpc.Service
+                 * @constructor
+                 * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+                 * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+                 * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+                 */
+                function Query(rpcImpl, requestDelimited, responseDelimited) {
+                    $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+                }
+    
+                (Query.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Query;
+    
+                /**
+                 * Callback as used by {@link ununifi.yieldaggregator.Query#params}.
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @typedef ParamsCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.yieldaggregator.QueryParamsResponse} [response] QueryParamsResponse
+                 */
+    
+                /**
+                 * Calls Params.
+                 * @function params
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryParamsRequest} request QueryParamsRequest message or plain object
+                 * @param {ununifi.yieldaggregator.Query.ParamsCallback} callback Node-style callback called with the error, if any, and QueryParamsResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.params = function params(request, callback) {
+                    return this.rpcCall(params, $root.ununifi.yieldaggregator.QueryParamsRequest, $root.ununifi.yieldaggregator.QueryParamsResponse, request, callback);
+                }, "name", { value: "Params" });
+    
+                /**
+                 * Calls Params.
+                 * @function params
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryParamsRequest} request QueryParamsRequest message or plain object
+                 * @returns {Promise<ununifi.yieldaggregator.QueryParamsResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.yieldaggregator.Query#vaultAll}.
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @typedef VaultAllCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.yieldaggregator.QueryAllVaultResponse} [response] QueryAllVaultResponse
+                 */
+    
+                /**
+                 * Calls VaultAll.
+                 * @function vaultAll
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryAllVaultRequest} request QueryAllVaultRequest message or plain object
+                 * @param {ununifi.yieldaggregator.Query.VaultAllCallback} callback Node-style callback called with the error, if any, and QueryAllVaultResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.vaultAll = function vaultAll(request, callback) {
+                    return this.rpcCall(vaultAll, $root.ununifi.yieldaggregator.QueryAllVaultRequest, $root.ununifi.yieldaggregator.QueryAllVaultResponse, request, callback);
+                }, "name", { value: "VaultAll" });
+    
+                /**
+                 * Calls VaultAll.
+                 * @function vaultAll
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryAllVaultRequest} request QueryAllVaultRequest message or plain object
+                 * @returns {Promise<ununifi.yieldaggregator.QueryAllVaultResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.yieldaggregator.Query#vault}.
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @typedef VaultCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.yieldaggregator.QueryGetVaultResponse} [response] QueryGetVaultResponse
+                 */
+    
+                /**
+                 * Calls Vault.
+                 * @function vault
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryGetVaultRequest} request QueryGetVaultRequest message or plain object
+                 * @param {ununifi.yieldaggregator.Query.VaultCallback} callback Node-style callback called with the error, if any, and QueryGetVaultResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.vault = function vault(request, callback) {
+                    return this.rpcCall(vault, $root.ununifi.yieldaggregator.QueryGetVaultRequest, $root.ununifi.yieldaggregator.QueryGetVaultResponse, request, callback);
+                }, "name", { value: "Vault" });
+    
+                /**
+                 * Calls Vault.
+                 * @function vault
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryGetVaultRequest} request QueryGetVaultRequest message or plain object
+                 * @returns {Promise<ununifi.yieldaggregator.QueryGetVaultResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.yieldaggregator.Query#strategyAll}.
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @typedef StrategyAllCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.yieldaggregator.QueryAllStrategyResponse} [response] QueryAllStrategyResponse
+                 */
+    
+                /**
+                 * Calls StrategyAll.
+                 * @function strategyAll
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryAllStrategyRequest} request QueryAllStrategyRequest message or plain object
+                 * @param {ununifi.yieldaggregator.Query.StrategyAllCallback} callback Node-style callback called with the error, if any, and QueryAllStrategyResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.strategyAll = function strategyAll(request, callback) {
+                    return this.rpcCall(strategyAll, $root.ununifi.yieldaggregator.QueryAllStrategyRequest, $root.ununifi.yieldaggregator.QueryAllStrategyResponse, request, callback);
+                }, "name", { value: "StrategyAll" });
+    
+                /**
+                 * Calls StrategyAll.
+                 * @function strategyAll
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryAllStrategyRequest} request QueryAllStrategyRequest message or plain object
+                 * @returns {Promise<ununifi.yieldaggregator.QueryAllStrategyResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.yieldaggregator.Query#strategy}.
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @typedef StrategyCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.yieldaggregator.QueryGetStrategyResponse} [response] QueryGetStrategyResponse
+                 */
+    
+                /**
+                 * Calls Strategy.
+                 * @function strategy
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryGetStrategyRequest} request QueryGetStrategyRequest message or plain object
+                 * @param {ununifi.yieldaggregator.Query.StrategyCallback} callback Node-style callback called with the error, if any, and QueryGetStrategyResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.strategy = function strategy(request, callback) {
+                    return this.rpcCall(strategy, $root.ununifi.yieldaggregator.QueryGetStrategyRequest, $root.ununifi.yieldaggregator.QueryGetStrategyResponse, request, callback);
+                }, "name", { value: "Strategy" });
+    
+                /**
+                 * Calls Strategy.
+                 * @function strategy
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryGetStrategyRequest} request QueryGetStrategyRequest message or plain object
+                 * @returns {Promise<ununifi.yieldaggregator.QueryGetStrategyResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.yieldaggregator.Query#estimateMintAmount}.
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @typedef EstimateMintAmountCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.yieldaggregator.QueryEstimateMintAmountResponse} [response] QueryEstimateMintAmountResponse
+                 */
+    
+                /**
+                 * Calls EstimateMintAmount.
+                 * @function estimateMintAmount
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryEstimateMintAmountRequest} request QueryEstimateMintAmountRequest message or plain object
+                 * @param {ununifi.yieldaggregator.Query.EstimateMintAmountCallback} callback Node-style callback called with the error, if any, and QueryEstimateMintAmountResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.estimateMintAmount = function estimateMintAmount(request, callback) {
+                    return this.rpcCall(estimateMintAmount, $root.ununifi.yieldaggregator.QueryEstimateMintAmountRequest, $root.ununifi.yieldaggregator.QueryEstimateMintAmountResponse, request, callback);
+                }, "name", { value: "EstimateMintAmount" });
+    
+                /**
+                 * Calls EstimateMintAmount.
+                 * @function estimateMintAmount
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryEstimateMintAmountRequest} request QueryEstimateMintAmountRequest message or plain object
+                 * @returns {Promise<ununifi.yieldaggregator.QueryEstimateMintAmountResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.yieldaggregator.Query#estimateRedeemAmount}.
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @typedef EstimateRedeemAmountCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse} [response] QueryEstimateRedeemAmountResponse
+                 */
+    
+                /**
+                 * Calls EstimateRedeemAmount.
+                 * @function estimateRedeemAmount
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryEstimateRedeemAmountRequest} request QueryEstimateRedeemAmountRequest message or plain object
+                 * @param {ununifi.yieldaggregator.Query.EstimateRedeemAmountCallback} callback Node-style callback called with the error, if any, and QueryEstimateRedeemAmountResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.estimateRedeemAmount = function estimateRedeemAmount(request, callback) {
+                    return this.rpcCall(estimateRedeemAmount, $root.ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest, $root.ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse, request, callback);
+                }, "name", { value: "EstimateRedeemAmount" });
+    
+                /**
+                 * Calls EstimateRedeemAmount.
+                 * @function estimateRedeemAmount
+                 * @memberof ununifi.yieldaggregator.Query
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IQueryEstimateRedeemAmountRequest} request QueryEstimateRedeemAmountRequest message or plain object
+                 * @returns {Promise<ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse>} Promise
+                 * @variation 2
+                 */
+    
+                return Query;
+            })();
+    
+            yieldaggregator.QueryParamsRequest = (function() {
+    
+                /**
+                 * Properties of a QueryParamsRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryParamsRequest
+                 */
+    
+                /**
+                 * Constructs a new QueryParamsRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryParamsRequest.
+                 * @implements IQueryParamsRequest
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryParamsRequest=} [properties] Properties to set
+                 */
+                function QueryParamsRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryParamsRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryParamsRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryParamsRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryParamsRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryParamsRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryParamsRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryParamsRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryParamsRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryParamsRequest} QueryParamsRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryParamsRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryParamsRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryParamsRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryParamsRequest} QueryParamsRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryParamsRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryParamsRequest message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryParamsRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryParamsRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryParamsRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryParamsRequest} QueryParamsRequest
+                 */
+                QueryParamsRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryParamsRequest)
+                        return object;
+                    return new $root.ununifi.yieldaggregator.QueryParamsRequest();
+                };
+    
+                /**
+                 * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryParamsRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryParamsRequest} message QueryParamsRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryParamsRequest.toObject = function toObject() {
+                    return {};
+                };
+    
+                /**
+                 * Converts this QueryParamsRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryParamsRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryParamsRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryParamsRequest;
+            })();
+    
+            yieldaggregator.QueryParamsResponse = (function() {
+    
+                /**
+                 * Properties of a QueryParamsResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryParamsResponse
+                 * @property {ununifi.yieldaggregator.IParams|null} [params] QueryParamsResponse params
+                 */
+    
+                /**
+                 * Constructs a new QueryParamsResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryParamsResponse.
+                 * @implements IQueryParamsResponse
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryParamsResponse=} [properties] Properties to set
+                 */
+                function QueryParamsResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryParamsResponse params.
+                 * @member {ununifi.yieldaggregator.IParams|null|undefined} params
+                 * @memberof ununifi.yieldaggregator.QueryParamsResponse
+                 * @instance
+                 */
+                QueryParamsResponse.prototype.params = null;
+    
+                /**
+                 * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryParamsResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryParamsResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryParamsResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.params != null && Object.hasOwnProperty.call(message, "params"))
+                        $root.ununifi.yieldaggregator.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryParamsResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryParamsResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryParamsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryParamsResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryParamsResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryParamsResponse} QueryParamsResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryParamsResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryParamsResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.params = $root.ununifi.yieldaggregator.Params.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryParamsResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryParamsResponse} QueryParamsResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryParamsResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryParamsResponse message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryParamsResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryParamsResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.params != null && message.hasOwnProperty("params")) {
+                        var error = $root.ununifi.yieldaggregator.Params.verify(message.params);
+                        if (error)
+                            return "params." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryParamsResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryParamsResponse} QueryParamsResponse
+                 */
+                QueryParamsResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryParamsResponse)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.QueryParamsResponse();
+                    if (object.params != null) {
+                        if (typeof object.params !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.QueryParamsResponse.params: object expected");
+                        message.params = $root.ununifi.yieldaggregator.Params.fromObject(object.params);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryParamsResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryParamsResponse} message QueryParamsResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryParamsResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.params = null;
+                    if (message.params != null && message.hasOwnProperty("params"))
+                        object.params = $root.ununifi.yieldaggregator.Params.toObject(message.params, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryParamsResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryParamsResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryParamsResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryParamsResponse;
+            })();
+    
+            yieldaggregator.QueryAllVaultRequest = (function() {
+    
+                /**
+                 * Properties of a QueryAllVaultRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryAllVaultRequest
+                 * @property {cosmos.base.query.v1beta1.IPageRequest|null} [pagination] QueryAllVaultRequest pagination
+                 */
+    
+                /**
+                 * Constructs a new QueryAllVaultRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryAllVaultRequest.
+                 * @implements IQueryAllVaultRequest
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryAllVaultRequest=} [properties] Properties to set
+                 */
+                function QueryAllVaultRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryAllVaultRequest pagination.
+                 * @member {cosmos.base.query.v1beta1.IPageRequest|null|undefined} pagination
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultRequest
+                 * @instance
+                 */
+                QueryAllVaultRequest.prototype.pagination = null;
+    
+                /**
+                 * Encodes the specified QueryAllVaultRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryAllVaultRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryAllVaultRequest} message QueryAllVaultRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryAllVaultRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
+                        $root.cosmos.base.query.v1beta1.PageRequest.encode(message.pagination, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryAllVaultRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryAllVaultRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryAllVaultRequest} message QueryAllVaultRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryAllVaultRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryAllVaultRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryAllVaultRequest} QueryAllVaultRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryAllVaultRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryAllVaultRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryAllVaultRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryAllVaultRequest} QueryAllVaultRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryAllVaultRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryAllVaultRequest message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryAllVaultRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.pagination != null && message.hasOwnProperty("pagination")) {
+                        var error = $root.cosmos.base.query.v1beta1.PageRequest.verify(message.pagination);
+                        if (error)
+                            return "pagination." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryAllVaultRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryAllVaultRequest} QueryAllVaultRequest
+                 */
+                QueryAllVaultRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryAllVaultRequest)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.QueryAllVaultRequest();
+                    if (object.pagination != null) {
+                        if (typeof object.pagination !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.QueryAllVaultRequest.pagination: object expected");
+                        message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.fromObject(object.pagination);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryAllVaultRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryAllVaultRequest} message QueryAllVaultRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryAllVaultRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.pagination = null;
+                    if (message.pagination != null && message.hasOwnProperty("pagination"))
+                        object.pagination = $root.cosmos.base.query.v1beta1.PageRequest.toObject(message.pagination, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryAllVaultRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryAllVaultRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryAllVaultRequest;
+            })();
+    
+            yieldaggregator.QueryAllVaultResponse = (function() {
+    
+                /**
+                 * Properties of a QueryAllVaultResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryAllVaultResponse
+                 * @property {Array.<ununifi.yieldaggregator.IVault>|null} [vaults] QueryAllVaultResponse vaults
+                 * @property {cosmos.base.query.v1beta1.IPageResponse|null} [pagination] QueryAllVaultResponse pagination
+                 */
+    
+                /**
+                 * Constructs a new QueryAllVaultResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryAllVaultResponse.
+                 * @implements IQueryAllVaultResponse
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryAllVaultResponse=} [properties] Properties to set
+                 */
+                function QueryAllVaultResponse(properties) {
+                    this.vaults = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryAllVaultResponse vaults.
+                 * @member {Array.<ununifi.yieldaggregator.IVault>} vaults
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultResponse
+                 * @instance
+                 */
+                QueryAllVaultResponse.prototype.vaults = $util.emptyArray;
+    
+                /**
+                 * QueryAllVaultResponse pagination.
+                 * @member {cosmos.base.query.v1beta1.IPageResponse|null|undefined} pagination
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultResponse
+                 * @instance
+                 */
+                QueryAllVaultResponse.prototype.pagination = null;
+    
+                /**
+                 * Encodes the specified QueryAllVaultResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryAllVaultResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryAllVaultResponse} message QueryAllVaultResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryAllVaultResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.vaults != null && message.vaults.length)
+                        for (var i = 0; i < message.vaults.length; ++i)
+                            $root.ununifi.yieldaggregator.Vault.encode(message.vaults[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
+                        $root.cosmos.base.query.v1beta1.PageResponse.encode(message.pagination, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryAllVaultResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryAllVaultResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryAllVaultResponse} message QueryAllVaultResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryAllVaultResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryAllVaultResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryAllVaultResponse} QueryAllVaultResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryAllVaultResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryAllVaultResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            if (!(message.vaults && message.vaults.length))
+                                message.vaults = [];
+                            message.vaults.push($root.ununifi.yieldaggregator.Vault.decode(reader, reader.uint32()));
+                            break;
+                        case 2:
+                            message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryAllVaultResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryAllVaultResponse} QueryAllVaultResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryAllVaultResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryAllVaultResponse message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryAllVaultResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.vaults != null && message.hasOwnProperty("vaults")) {
+                        if (!Array.isArray(message.vaults))
+                            return "vaults: array expected";
+                        for (var i = 0; i < message.vaults.length; ++i) {
+                            var error = $root.ununifi.yieldaggregator.Vault.verify(message.vaults[i]);
+                            if (error)
+                                return "vaults." + error;
+                        }
+                    }
+                    if (message.pagination != null && message.hasOwnProperty("pagination")) {
+                        var error = $root.cosmos.base.query.v1beta1.PageResponse.verify(message.pagination);
+                        if (error)
+                            return "pagination." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryAllVaultResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryAllVaultResponse} QueryAllVaultResponse
+                 */
+                QueryAllVaultResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryAllVaultResponse)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.QueryAllVaultResponse();
+                    if (object.vaults) {
+                        if (!Array.isArray(object.vaults))
+                            throw TypeError(".ununifi.yieldaggregator.QueryAllVaultResponse.vaults: array expected");
+                        message.vaults = [];
+                        for (var i = 0; i < object.vaults.length; ++i) {
+                            if (typeof object.vaults[i] !== "object")
+                                throw TypeError(".ununifi.yieldaggregator.QueryAllVaultResponse.vaults: object expected");
+                            message.vaults[i] = $root.ununifi.yieldaggregator.Vault.fromObject(object.vaults[i]);
+                        }
+                    }
+                    if (object.pagination != null) {
+                        if (typeof object.pagination !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.QueryAllVaultResponse.pagination: object expected");
+                        message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.fromObject(object.pagination);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryAllVaultResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryAllVaultResponse} message QueryAllVaultResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryAllVaultResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults)
+                        object.vaults = [];
+                    if (options.defaults)
+                        object.pagination = null;
+                    if (message.vaults && message.vaults.length) {
+                        object.vaults = [];
+                        for (var j = 0; j < message.vaults.length; ++j)
+                            object.vaults[j] = $root.ununifi.yieldaggregator.Vault.toObject(message.vaults[j], options);
+                    }
+                    if (message.pagination != null && message.hasOwnProperty("pagination"))
+                        object.pagination = $root.cosmos.base.query.v1beta1.PageResponse.toObject(message.pagination, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryAllVaultResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryAllVaultResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryAllVaultResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryAllVaultResponse;
+            })();
+    
+            yieldaggregator.QueryGetVaultRequest = (function() {
+    
+                /**
+                 * Properties of a QueryGetVaultRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryGetVaultRequest
+                 * @property {Long|null} [id] QueryGetVaultRequest id
+                 */
+    
+                /**
+                 * Constructs a new QueryGetVaultRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryGetVaultRequest.
+                 * @implements IQueryGetVaultRequest
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryGetVaultRequest=} [properties] Properties to set
+                 */
+                function QueryGetVaultRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryGetVaultRequest id.
+                 * @member {Long} id
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultRequest
+                 * @instance
+                 */
+                QueryGetVaultRequest.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * Encodes the specified QueryGetVaultRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryGetVaultRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryGetVaultRequest} message QueryGetVaultRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryGetVaultRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                        writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryGetVaultRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryGetVaultRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryGetVaultRequest} message QueryGetVaultRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryGetVaultRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryGetVaultRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryGetVaultRequest} QueryGetVaultRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryGetVaultRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryGetVaultRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.id = reader.uint64();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryGetVaultRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryGetVaultRequest} QueryGetVaultRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryGetVaultRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryGetVaultRequest message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryGetVaultRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
+                            return "id: integer|Long expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryGetVaultRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryGetVaultRequest} QueryGetVaultRequest
+                 */
+                QueryGetVaultRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryGetVaultRequest)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.QueryGetVaultRequest();
+                    if (object.id != null)
+                        if ($util.Long)
+                            (message.id = $util.Long.fromValue(object.id)).unsigned = true;
+                        else if (typeof object.id === "string")
+                            message.id = parseInt(object.id, 10);
+                        else if (typeof object.id === "number")
+                            message.id = object.id;
+                        else if (typeof object.id === "object")
+                            message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryGetVaultRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryGetVaultRequest} message QueryGetVaultRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryGetVaultRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.id = options.longs === String ? "0" : 0;
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        if (typeof message.id === "number")
+                            object.id = options.longs === String ? String(message.id) : message.id;
+                        else
+                            object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryGetVaultRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryGetVaultRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryGetVaultRequest;
+            })();
+    
+            yieldaggregator.QueryGetVaultResponse = (function() {
+    
+                /**
+                 * Properties of a QueryGetVaultResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryGetVaultResponse
+                 * @property {ununifi.yieldaggregator.IVault|null} [vault] QueryGetVaultResponse vault
+                 * @property {Array.<ununifi.yieldaggregator.IStrategy>|null} [strategies] QueryGetVaultResponse strategies
+                 * @property {string|null} [total_bonded_amount] QueryGetVaultResponse total_bonded_amount
+                 * @property {string|null} [total_unbonding_amount] QueryGetVaultResponse total_unbonding_amount
+                 * @property {string|null} [total_withdrawal_balance] QueryGetVaultResponse total_withdrawal_balance
+                 */
+    
+                /**
+                 * Constructs a new QueryGetVaultResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryGetVaultResponse.
+                 * @implements IQueryGetVaultResponse
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryGetVaultResponse=} [properties] Properties to set
+                 */
+                function QueryGetVaultResponse(properties) {
+                    this.strategies = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryGetVaultResponse vault.
+                 * @member {ununifi.yieldaggregator.IVault|null|undefined} vault
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @instance
+                 */
+                QueryGetVaultResponse.prototype.vault = null;
+    
+                /**
+                 * QueryGetVaultResponse strategies.
+                 * @member {Array.<ununifi.yieldaggregator.IStrategy>} strategies
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @instance
+                 */
+                QueryGetVaultResponse.prototype.strategies = $util.emptyArray;
+    
+                /**
+                 * QueryGetVaultResponse total_bonded_amount.
+                 * @member {string} total_bonded_amount
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @instance
+                 */
+                QueryGetVaultResponse.prototype.total_bonded_amount = "";
+    
+                /**
+                 * QueryGetVaultResponse total_unbonding_amount.
+                 * @member {string} total_unbonding_amount
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @instance
+                 */
+                QueryGetVaultResponse.prototype.total_unbonding_amount = "";
+    
+                /**
+                 * QueryGetVaultResponse total_withdrawal_balance.
+                 * @member {string} total_withdrawal_balance
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @instance
+                 */
+                QueryGetVaultResponse.prototype.total_withdrawal_balance = "";
+    
+                /**
+                 * Encodes the specified QueryGetVaultResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryGetVaultResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryGetVaultResponse} message QueryGetVaultResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryGetVaultResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.vault != null && Object.hasOwnProperty.call(message, "vault"))
+                        $root.ununifi.yieldaggregator.Vault.encode(message.vault, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.strategies != null && message.strategies.length)
+                        for (var i = 0; i < message.strategies.length; ++i)
+                            $root.ununifi.yieldaggregator.Strategy.encode(message.strategies[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    if (message.total_bonded_amount != null && Object.hasOwnProperty.call(message, "total_bonded_amount"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.total_bonded_amount);
+                    if (message.total_unbonding_amount != null && Object.hasOwnProperty.call(message, "total_unbonding_amount"))
+                        writer.uint32(/* id 4, wireType 2 =*/34).string(message.total_unbonding_amount);
+                    if (message.total_withdrawal_balance != null && Object.hasOwnProperty.call(message, "total_withdrawal_balance"))
+                        writer.uint32(/* id 5, wireType 2 =*/42).string(message.total_withdrawal_balance);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryGetVaultResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryGetVaultResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryGetVaultResponse} message QueryGetVaultResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryGetVaultResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryGetVaultResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryGetVaultResponse} QueryGetVaultResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryGetVaultResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryGetVaultResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.vault = $root.ununifi.yieldaggregator.Vault.decode(reader, reader.uint32());
+                            break;
+                        case 2:
+                            if (!(message.strategies && message.strategies.length))
+                                message.strategies = [];
+                            message.strategies.push($root.ununifi.yieldaggregator.Strategy.decode(reader, reader.uint32()));
+                            break;
+                        case 3:
+                            message.total_bonded_amount = reader.string();
+                            break;
+                        case 4:
+                            message.total_unbonding_amount = reader.string();
+                            break;
+                        case 5:
+                            message.total_withdrawal_balance = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryGetVaultResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryGetVaultResponse} QueryGetVaultResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryGetVaultResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryGetVaultResponse message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryGetVaultResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.vault != null && message.hasOwnProperty("vault")) {
+                        var error = $root.ununifi.yieldaggregator.Vault.verify(message.vault);
+                        if (error)
+                            return "vault." + error;
+                    }
+                    if (message.strategies != null && message.hasOwnProperty("strategies")) {
+                        if (!Array.isArray(message.strategies))
+                            return "strategies: array expected";
+                        for (var i = 0; i < message.strategies.length; ++i) {
+                            var error = $root.ununifi.yieldaggregator.Strategy.verify(message.strategies[i]);
+                            if (error)
+                                return "strategies." + error;
+                        }
+                    }
+                    if (message.total_bonded_amount != null && message.hasOwnProperty("total_bonded_amount"))
+                        if (!$util.isString(message.total_bonded_amount))
+                            return "total_bonded_amount: string expected";
+                    if (message.total_unbonding_amount != null && message.hasOwnProperty("total_unbonding_amount"))
+                        if (!$util.isString(message.total_unbonding_amount))
+                            return "total_unbonding_amount: string expected";
+                    if (message.total_withdrawal_balance != null && message.hasOwnProperty("total_withdrawal_balance"))
+                        if (!$util.isString(message.total_withdrawal_balance))
+                            return "total_withdrawal_balance: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryGetVaultResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryGetVaultResponse} QueryGetVaultResponse
+                 */
+                QueryGetVaultResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryGetVaultResponse)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.QueryGetVaultResponse();
+                    if (object.vault != null) {
+                        if (typeof object.vault !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.QueryGetVaultResponse.vault: object expected");
+                        message.vault = $root.ununifi.yieldaggregator.Vault.fromObject(object.vault);
+                    }
+                    if (object.strategies) {
+                        if (!Array.isArray(object.strategies))
+                            throw TypeError(".ununifi.yieldaggregator.QueryGetVaultResponse.strategies: array expected");
+                        message.strategies = [];
+                        for (var i = 0; i < object.strategies.length; ++i) {
+                            if (typeof object.strategies[i] !== "object")
+                                throw TypeError(".ununifi.yieldaggregator.QueryGetVaultResponse.strategies: object expected");
+                            message.strategies[i] = $root.ununifi.yieldaggregator.Strategy.fromObject(object.strategies[i]);
+                        }
+                    }
+                    if (object.total_bonded_amount != null)
+                        message.total_bonded_amount = String(object.total_bonded_amount);
+                    if (object.total_unbonding_amount != null)
+                        message.total_unbonding_amount = String(object.total_unbonding_amount);
+                    if (object.total_withdrawal_balance != null)
+                        message.total_withdrawal_balance = String(object.total_withdrawal_balance);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryGetVaultResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryGetVaultResponse} message QueryGetVaultResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryGetVaultResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults)
+                        object.strategies = [];
+                    if (options.defaults) {
+                        object.vault = null;
+                        object.total_bonded_amount = "";
+                        object.total_unbonding_amount = "";
+                        object.total_withdrawal_balance = "";
+                    }
+                    if (message.vault != null && message.hasOwnProperty("vault"))
+                        object.vault = $root.ununifi.yieldaggregator.Vault.toObject(message.vault, options);
+                    if (message.strategies && message.strategies.length) {
+                        object.strategies = [];
+                        for (var j = 0; j < message.strategies.length; ++j)
+                            object.strategies[j] = $root.ununifi.yieldaggregator.Strategy.toObject(message.strategies[j], options);
+                    }
+                    if (message.total_bonded_amount != null && message.hasOwnProperty("total_bonded_amount"))
+                        object.total_bonded_amount = message.total_bonded_amount;
+                    if (message.total_unbonding_amount != null && message.hasOwnProperty("total_unbonding_amount"))
+                        object.total_unbonding_amount = message.total_unbonding_amount;
+                    if (message.total_withdrawal_balance != null && message.hasOwnProperty("total_withdrawal_balance"))
+                        object.total_withdrawal_balance = message.total_withdrawal_balance;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryGetVaultResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryGetVaultResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryGetVaultResponse;
+            })();
+    
+            yieldaggregator.QueryAllStrategyRequest = (function() {
+    
+                /**
+                 * Properties of a QueryAllStrategyRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryAllStrategyRequest
+                 * @property {string|null} [denom] QueryAllStrategyRequest denom
+                 * @property {cosmos.base.query.v1beta1.IPageRequest|null} [pagination] QueryAllStrategyRequest pagination
+                 */
+    
+                /**
+                 * Constructs a new QueryAllStrategyRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryAllStrategyRequest.
+                 * @implements IQueryAllStrategyRequest
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryAllStrategyRequest=} [properties] Properties to set
+                 */
+                function QueryAllStrategyRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryAllStrategyRequest denom.
+                 * @member {string} denom
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyRequest
+                 * @instance
+                 */
+                QueryAllStrategyRequest.prototype.denom = "";
+    
+                /**
+                 * QueryAllStrategyRequest pagination.
+                 * @member {cosmos.base.query.v1beta1.IPageRequest|null|undefined} pagination
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyRequest
+                 * @instance
+                 */
+                QueryAllStrategyRequest.prototype.pagination = null;
+    
+                /**
+                 * Encodes the specified QueryAllStrategyRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryAllStrategyRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryAllStrategyRequest} message QueryAllStrategyRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryAllStrategyRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.denom);
+                    if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
+                        $root.cosmos.base.query.v1beta1.PageRequest.encode(message.pagination, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryAllStrategyRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryAllStrategyRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryAllStrategyRequest} message QueryAllStrategyRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryAllStrategyRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryAllStrategyRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryAllStrategyRequest} QueryAllStrategyRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryAllStrategyRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryAllStrategyRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.denom = reader.string();
+                            break;
+                        case 2:
+                            message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryAllStrategyRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryAllStrategyRequest} QueryAllStrategyRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryAllStrategyRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryAllStrategyRequest message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryAllStrategyRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        if (!$util.isString(message.denom))
+                            return "denom: string expected";
+                    if (message.pagination != null && message.hasOwnProperty("pagination")) {
+                        var error = $root.cosmos.base.query.v1beta1.PageRequest.verify(message.pagination);
+                        if (error)
+                            return "pagination." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryAllStrategyRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryAllStrategyRequest} QueryAllStrategyRequest
+                 */
+                QueryAllStrategyRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryAllStrategyRequest)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.QueryAllStrategyRequest();
+                    if (object.denom != null)
+                        message.denom = String(object.denom);
+                    if (object.pagination != null) {
+                        if (typeof object.pagination !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.QueryAllStrategyRequest.pagination: object expected");
+                        message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.fromObject(object.pagination);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryAllStrategyRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryAllStrategyRequest} message QueryAllStrategyRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryAllStrategyRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.denom = "";
+                        object.pagination = null;
+                    }
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        object.denom = message.denom;
+                    if (message.pagination != null && message.hasOwnProperty("pagination"))
+                        object.pagination = $root.cosmos.base.query.v1beta1.PageRequest.toObject(message.pagination, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryAllStrategyRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryAllStrategyRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryAllStrategyRequest;
+            })();
+    
+            yieldaggregator.QueryAllStrategyResponse = (function() {
+    
+                /**
+                 * Properties of a QueryAllStrategyResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryAllStrategyResponse
+                 * @property {Array.<ununifi.yieldaggregator.IStrategy>|null} [strategies] QueryAllStrategyResponse strategies
+                 * @property {cosmos.base.query.v1beta1.IPageResponse|null} [pagination] QueryAllStrategyResponse pagination
+                 */
+    
+                /**
+                 * Constructs a new QueryAllStrategyResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryAllStrategyResponse.
+                 * @implements IQueryAllStrategyResponse
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryAllStrategyResponse=} [properties] Properties to set
+                 */
+                function QueryAllStrategyResponse(properties) {
+                    this.strategies = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryAllStrategyResponse strategies.
+                 * @member {Array.<ununifi.yieldaggregator.IStrategy>} strategies
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyResponse
+                 * @instance
+                 */
+                QueryAllStrategyResponse.prototype.strategies = $util.emptyArray;
+    
+                /**
+                 * QueryAllStrategyResponse pagination.
+                 * @member {cosmos.base.query.v1beta1.IPageResponse|null|undefined} pagination
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyResponse
+                 * @instance
+                 */
+                QueryAllStrategyResponse.prototype.pagination = null;
+    
+                /**
+                 * Encodes the specified QueryAllStrategyResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryAllStrategyResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryAllStrategyResponse} message QueryAllStrategyResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryAllStrategyResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.strategies != null && message.strategies.length)
+                        for (var i = 0; i < message.strategies.length; ++i)
+                            $root.ununifi.yieldaggregator.Strategy.encode(message.strategies[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
+                        $root.cosmos.base.query.v1beta1.PageResponse.encode(message.pagination, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryAllStrategyResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryAllStrategyResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryAllStrategyResponse} message QueryAllStrategyResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryAllStrategyResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryAllStrategyResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryAllStrategyResponse} QueryAllStrategyResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryAllStrategyResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryAllStrategyResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            if (!(message.strategies && message.strategies.length))
+                                message.strategies = [];
+                            message.strategies.push($root.ununifi.yieldaggregator.Strategy.decode(reader, reader.uint32()));
+                            break;
+                        case 2:
+                            message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryAllStrategyResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryAllStrategyResponse} QueryAllStrategyResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryAllStrategyResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryAllStrategyResponse message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryAllStrategyResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.strategies != null && message.hasOwnProperty("strategies")) {
+                        if (!Array.isArray(message.strategies))
+                            return "strategies: array expected";
+                        for (var i = 0; i < message.strategies.length; ++i) {
+                            var error = $root.ununifi.yieldaggregator.Strategy.verify(message.strategies[i]);
+                            if (error)
+                                return "strategies." + error;
+                        }
+                    }
+                    if (message.pagination != null && message.hasOwnProperty("pagination")) {
+                        var error = $root.cosmos.base.query.v1beta1.PageResponse.verify(message.pagination);
+                        if (error)
+                            return "pagination." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryAllStrategyResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryAllStrategyResponse} QueryAllStrategyResponse
+                 */
+                QueryAllStrategyResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryAllStrategyResponse)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.QueryAllStrategyResponse();
+                    if (object.strategies) {
+                        if (!Array.isArray(object.strategies))
+                            throw TypeError(".ununifi.yieldaggregator.QueryAllStrategyResponse.strategies: array expected");
+                        message.strategies = [];
+                        for (var i = 0; i < object.strategies.length; ++i) {
+                            if (typeof object.strategies[i] !== "object")
+                                throw TypeError(".ununifi.yieldaggregator.QueryAllStrategyResponse.strategies: object expected");
+                            message.strategies[i] = $root.ununifi.yieldaggregator.Strategy.fromObject(object.strategies[i]);
+                        }
+                    }
+                    if (object.pagination != null) {
+                        if (typeof object.pagination !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.QueryAllStrategyResponse.pagination: object expected");
+                        message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.fromObject(object.pagination);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryAllStrategyResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryAllStrategyResponse} message QueryAllStrategyResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryAllStrategyResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults)
+                        object.strategies = [];
+                    if (options.defaults)
+                        object.pagination = null;
+                    if (message.strategies && message.strategies.length) {
+                        object.strategies = [];
+                        for (var j = 0; j < message.strategies.length; ++j)
+                            object.strategies[j] = $root.ununifi.yieldaggregator.Strategy.toObject(message.strategies[j], options);
+                    }
+                    if (message.pagination != null && message.hasOwnProperty("pagination"))
+                        object.pagination = $root.cosmos.base.query.v1beta1.PageResponse.toObject(message.pagination, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryAllStrategyResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryAllStrategyResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryAllStrategyResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryAllStrategyResponse;
+            })();
+    
+            yieldaggregator.QueryGetStrategyRequest = (function() {
+    
+                /**
+                 * Properties of a QueryGetStrategyRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryGetStrategyRequest
+                 * @property {string|null} [denom] QueryGetStrategyRequest denom
+                 * @property {Long|null} [id] QueryGetStrategyRequest id
+                 */
+    
+                /**
+                 * Constructs a new QueryGetStrategyRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryGetStrategyRequest.
+                 * @implements IQueryGetStrategyRequest
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryGetStrategyRequest=} [properties] Properties to set
+                 */
+                function QueryGetStrategyRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryGetStrategyRequest denom.
+                 * @member {string} denom
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyRequest
+                 * @instance
+                 */
+                QueryGetStrategyRequest.prototype.denom = "";
+    
+                /**
+                 * QueryGetStrategyRequest id.
+                 * @member {Long} id
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyRequest
+                 * @instance
+                 */
+                QueryGetStrategyRequest.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * Encodes the specified QueryGetStrategyRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryGetStrategyRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryGetStrategyRequest} message QueryGetStrategyRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryGetStrategyRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.denom);
+                    if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                        writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryGetStrategyRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryGetStrategyRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryGetStrategyRequest} message QueryGetStrategyRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryGetStrategyRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryGetStrategyRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryGetStrategyRequest} QueryGetStrategyRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryGetStrategyRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryGetStrategyRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.denom = reader.string();
+                            break;
+                        case 2:
+                            message.id = reader.uint64();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryGetStrategyRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryGetStrategyRequest} QueryGetStrategyRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryGetStrategyRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryGetStrategyRequest message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryGetStrategyRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        if (!$util.isString(message.denom))
+                            return "denom: string expected";
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
+                            return "id: integer|Long expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryGetStrategyRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryGetStrategyRequest} QueryGetStrategyRequest
+                 */
+                QueryGetStrategyRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryGetStrategyRequest)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.QueryGetStrategyRequest();
+                    if (object.denom != null)
+                        message.denom = String(object.denom);
+                    if (object.id != null)
+                        if ($util.Long)
+                            (message.id = $util.Long.fromValue(object.id)).unsigned = true;
+                        else if (typeof object.id === "string")
+                            message.id = parseInt(object.id, 10);
+                        else if (typeof object.id === "number")
+                            message.id = object.id;
+                        else if (typeof object.id === "object")
+                            message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryGetStrategyRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryGetStrategyRequest} message QueryGetStrategyRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryGetStrategyRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.denom = "";
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.id = options.longs === String ? "0" : 0;
+                    }
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        object.denom = message.denom;
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        if (typeof message.id === "number")
+                            object.id = options.longs === String ? String(message.id) : message.id;
+                        else
+                            object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryGetStrategyRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryGetStrategyRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryGetStrategyRequest;
+            })();
+    
+            yieldaggregator.QueryGetStrategyResponse = (function() {
+    
+                /**
+                 * Properties of a QueryGetStrategyResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryGetStrategyResponse
+                 * @property {ununifi.yieldaggregator.IStrategy|null} [strategy] QueryGetStrategyResponse strategy
+                 */
+    
+                /**
+                 * Constructs a new QueryGetStrategyResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryGetStrategyResponse.
+                 * @implements IQueryGetStrategyResponse
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryGetStrategyResponse=} [properties] Properties to set
+                 */
+                function QueryGetStrategyResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryGetStrategyResponse strategy.
+                 * @member {ununifi.yieldaggregator.IStrategy|null|undefined} strategy
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyResponse
+                 * @instance
+                 */
+                QueryGetStrategyResponse.prototype.strategy = null;
+    
+                /**
+                 * Encodes the specified QueryGetStrategyResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryGetStrategyResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryGetStrategyResponse} message QueryGetStrategyResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryGetStrategyResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.strategy != null && Object.hasOwnProperty.call(message, "strategy"))
+                        $root.ununifi.yieldaggregator.Strategy.encode(message.strategy, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryGetStrategyResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryGetStrategyResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryGetStrategyResponse} message QueryGetStrategyResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryGetStrategyResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryGetStrategyResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryGetStrategyResponse} QueryGetStrategyResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryGetStrategyResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryGetStrategyResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.strategy = $root.ununifi.yieldaggregator.Strategy.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryGetStrategyResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryGetStrategyResponse} QueryGetStrategyResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryGetStrategyResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryGetStrategyResponse message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryGetStrategyResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.strategy != null && message.hasOwnProperty("strategy")) {
+                        var error = $root.ununifi.yieldaggregator.Strategy.verify(message.strategy);
+                        if (error)
+                            return "strategy." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryGetStrategyResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryGetStrategyResponse} QueryGetStrategyResponse
+                 */
+                QueryGetStrategyResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryGetStrategyResponse)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.QueryGetStrategyResponse();
+                    if (object.strategy != null) {
+                        if (typeof object.strategy !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.QueryGetStrategyResponse.strategy: object expected");
+                        message.strategy = $root.ununifi.yieldaggregator.Strategy.fromObject(object.strategy);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryGetStrategyResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryGetStrategyResponse} message QueryGetStrategyResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryGetStrategyResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.strategy = null;
+                    if (message.strategy != null && message.hasOwnProperty("strategy"))
+                        object.strategy = $root.ununifi.yieldaggregator.Strategy.toObject(message.strategy, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryGetStrategyResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryGetStrategyResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryGetStrategyResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryGetStrategyResponse;
+            })();
+    
+            yieldaggregator.QueryEstimateMintAmountRequest = (function() {
+    
+                /**
+                 * Properties of a QueryEstimateMintAmountRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryEstimateMintAmountRequest
+                 * @property {Long|null} [id] QueryEstimateMintAmountRequest id
+                 * @property {string|null} [deposit_amount] QueryEstimateMintAmountRequest deposit_amount
+                 */
+    
+                /**
+                 * Constructs a new QueryEstimateMintAmountRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryEstimateMintAmountRequest.
+                 * @implements IQueryEstimateMintAmountRequest
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryEstimateMintAmountRequest=} [properties] Properties to set
+                 */
+                function QueryEstimateMintAmountRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryEstimateMintAmountRequest id.
+                 * @member {Long} id
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountRequest
+                 * @instance
+                 */
+                QueryEstimateMintAmountRequest.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * QueryEstimateMintAmountRequest deposit_amount.
+                 * @member {string} deposit_amount
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountRequest
+                 * @instance
+                 */
+                QueryEstimateMintAmountRequest.prototype.deposit_amount = "";
+    
+                /**
+                 * Encodes the specified QueryEstimateMintAmountRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateMintAmountRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryEstimateMintAmountRequest} message QueryEstimateMintAmountRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryEstimateMintAmountRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                        writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
+                    if (message.deposit_amount != null && Object.hasOwnProperty.call(message, "deposit_amount"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.deposit_amount);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryEstimateMintAmountRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateMintAmountRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryEstimateMintAmountRequest} message QueryEstimateMintAmountRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryEstimateMintAmountRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryEstimateMintAmountRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryEstimateMintAmountRequest} QueryEstimateMintAmountRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryEstimateMintAmountRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryEstimateMintAmountRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.id = reader.uint64();
+                            break;
+                        case 2:
+                            message.deposit_amount = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryEstimateMintAmountRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryEstimateMintAmountRequest} QueryEstimateMintAmountRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryEstimateMintAmountRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryEstimateMintAmountRequest message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryEstimateMintAmountRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
+                            return "id: integer|Long expected";
+                    if (message.deposit_amount != null && message.hasOwnProperty("deposit_amount"))
+                        if (!$util.isString(message.deposit_amount))
+                            return "deposit_amount: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryEstimateMintAmountRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryEstimateMintAmountRequest} QueryEstimateMintAmountRequest
+                 */
+                QueryEstimateMintAmountRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryEstimateMintAmountRequest)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.QueryEstimateMintAmountRequest();
+                    if (object.id != null)
+                        if ($util.Long)
+                            (message.id = $util.Long.fromValue(object.id)).unsigned = true;
+                        else if (typeof object.id === "string")
+                            message.id = parseInt(object.id, 10);
+                        else if (typeof object.id === "number")
+                            message.id = object.id;
+                        else if (typeof object.id === "object")
+                            message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
+                    if (object.deposit_amount != null)
+                        message.deposit_amount = String(object.deposit_amount);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryEstimateMintAmountRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryEstimateMintAmountRequest} message QueryEstimateMintAmountRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryEstimateMintAmountRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.id = options.longs === String ? "0" : 0;
+                        object.deposit_amount = "";
+                    }
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        if (typeof message.id === "number")
+                            object.id = options.longs === String ? String(message.id) : message.id;
+                        else
+                            object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
+                    if (message.deposit_amount != null && message.hasOwnProperty("deposit_amount"))
+                        object.deposit_amount = message.deposit_amount;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryEstimateMintAmountRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryEstimateMintAmountRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryEstimateMintAmountRequest;
+            })();
+    
+            yieldaggregator.QueryEstimateMintAmountResponse = (function() {
+    
+                /**
+                 * Properties of a QueryEstimateMintAmountResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryEstimateMintAmountResponse
+                 * @property {cosmos.base.v1beta1.ICoin|null} [mint_amount] QueryEstimateMintAmountResponse mint_amount
+                 */
+    
+                /**
+                 * Constructs a new QueryEstimateMintAmountResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryEstimateMintAmountResponse.
+                 * @implements IQueryEstimateMintAmountResponse
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryEstimateMintAmountResponse=} [properties] Properties to set
+                 */
+                function QueryEstimateMintAmountResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryEstimateMintAmountResponse mint_amount.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} mint_amount
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountResponse
+                 * @instance
+                 */
+                QueryEstimateMintAmountResponse.prototype.mint_amount = null;
+    
+                /**
+                 * Encodes the specified QueryEstimateMintAmountResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateMintAmountResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryEstimateMintAmountResponse} message QueryEstimateMintAmountResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryEstimateMintAmountResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.mint_amount != null && Object.hasOwnProperty.call(message, "mint_amount"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.mint_amount, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryEstimateMintAmountResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateMintAmountResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryEstimateMintAmountResponse} message QueryEstimateMintAmountResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryEstimateMintAmountResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryEstimateMintAmountResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryEstimateMintAmountResponse} QueryEstimateMintAmountResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryEstimateMintAmountResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryEstimateMintAmountResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.mint_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryEstimateMintAmountResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryEstimateMintAmountResponse} QueryEstimateMintAmountResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryEstimateMintAmountResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryEstimateMintAmountResponse message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryEstimateMintAmountResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.mint_amount != null && message.hasOwnProperty("mint_amount")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.mint_amount);
+                        if (error)
+                            return "mint_amount." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryEstimateMintAmountResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryEstimateMintAmountResponse} QueryEstimateMintAmountResponse
+                 */
+                QueryEstimateMintAmountResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryEstimateMintAmountResponse)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.QueryEstimateMintAmountResponse();
+                    if (object.mint_amount != null) {
+                        if (typeof object.mint_amount !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.QueryEstimateMintAmountResponse.mint_amount: object expected");
+                        message.mint_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.mint_amount);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryEstimateMintAmountResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryEstimateMintAmountResponse} message QueryEstimateMintAmountResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryEstimateMintAmountResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.mint_amount = null;
+                    if (message.mint_amount != null && message.hasOwnProperty("mint_amount"))
+                        object.mint_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.mint_amount, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryEstimateMintAmountResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryEstimateMintAmountResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryEstimateMintAmountResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryEstimateMintAmountResponse;
+            })();
+    
+            yieldaggregator.QueryEstimateRedeemAmountRequest = (function() {
+    
+                /**
+                 * Properties of a QueryEstimateRedeemAmountRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryEstimateRedeemAmountRequest
+                 * @property {Long|null} [id] QueryEstimateRedeemAmountRequest id
+                 * @property {string|null} [burn_amount] QueryEstimateRedeemAmountRequest burn_amount
+                 */
+    
+                /**
+                 * Constructs a new QueryEstimateRedeemAmountRequest.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryEstimateRedeemAmountRequest.
+                 * @implements IQueryEstimateRedeemAmountRequest
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryEstimateRedeemAmountRequest=} [properties] Properties to set
+                 */
+                function QueryEstimateRedeemAmountRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryEstimateRedeemAmountRequest id.
+                 * @member {Long} id
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest
+                 * @instance
+                 */
+                QueryEstimateRedeemAmountRequest.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * QueryEstimateRedeemAmountRequest burn_amount.
+                 * @member {string} burn_amount
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest
+                 * @instance
+                 */
+                QueryEstimateRedeemAmountRequest.prototype.burn_amount = "";
+    
+                /**
+                 * Encodes the specified QueryEstimateRedeemAmountRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryEstimateRedeemAmountRequest} message QueryEstimateRedeemAmountRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryEstimateRedeemAmountRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                        writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
+                    if (message.burn_amount != null && Object.hasOwnProperty.call(message, "burn_amount"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.burn_amount);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryEstimateRedeemAmountRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryEstimateRedeemAmountRequest} message QueryEstimateRedeemAmountRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryEstimateRedeemAmountRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryEstimateRedeemAmountRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest} QueryEstimateRedeemAmountRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryEstimateRedeemAmountRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.id = reader.uint64();
+                            break;
+                        case 2:
+                            message.burn_amount = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryEstimateRedeemAmountRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest} QueryEstimateRedeemAmountRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryEstimateRedeemAmountRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryEstimateRedeemAmountRequest message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryEstimateRedeemAmountRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
+                            return "id: integer|Long expected";
+                    if (message.burn_amount != null && message.hasOwnProperty("burn_amount"))
+                        if (!$util.isString(message.burn_amount))
+                            return "burn_amount: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryEstimateRedeemAmountRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest} QueryEstimateRedeemAmountRequest
+                 */
+                QueryEstimateRedeemAmountRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest();
+                    if (object.id != null)
+                        if ($util.Long)
+                            (message.id = $util.Long.fromValue(object.id)).unsigned = true;
+                        else if (typeof object.id === "string")
+                            message.id = parseInt(object.id, 10);
+                        else if (typeof object.id === "number")
+                            message.id = object.id;
+                        else if (typeof object.id === "object")
+                            message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
+                    if (object.burn_amount != null)
+                        message.burn_amount = String(object.burn_amount);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryEstimateRedeemAmountRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest} message QueryEstimateRedeemAmountRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryEstimateRedeemAmountRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.id = options.longs === String ? "0" : 0;
+                        object.burn_amount = "";
+                    }
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        if (typeof message.id === "number")
+                            object.id = options.longs === String ? String(message.id) : message.id;
+                        else
+                            object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
+                    if (message.burn_amount != null && message.hasOwnProperty("burn_amount"))
+                        object.burn_amount = message.burn_amount;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryEstimateRedeemAmountRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryEstimateRedeemAmountRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryEstimateRedeemAmountRequest;
+            })();
+    
+            yieldaggregator.QueryEstimateRedeemAmountResponse = (function() {
+    
+                /**
+                 * Properties of a QueryEstimateRedeemAmountResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IQueryEstimateRedeemAmountResponse
+                 * @property {cosmos.base.v1beta1.ICoin|null} [redeem_amount] QueryEstimateRedeemAmountResponse redeem_amount
+                 */
+    
+                /**
+                 * Constructs a new QueryEstimateRedeemAmountResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a QueryEstimateRedeemAmountResponse.
+                 * @implements IQueryEstimateRedeemAmountResponse
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IQueryEstimateRedeemAmountResponse=} [properties] Properties to set
+                 */
+                function QueryEstimateRedeemAmountResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryEstimateRedeemAmountResponse redeem_amount.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} redeem_amount
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
+                 * @instance
+                 */
+                QueryEstimateRedeemAmountResponse.prototype.redeem_amount = null;
+    
+                /**
+                 * Encodes the specified QueryEstimateRedeemAmountResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryEstimateRedeemAmountResponse} message QueryEstimateRedeemAmountResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryEstimateRedeemAmountResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.redeem_amount != null && Object.hasOwnProperty.call(message, "redeem_amount"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.redeem_amount, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryEstimateRedeemAmountResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IQueryEstimateRedeemAmountResponse} message QueryEstimateRedeemAmountResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryEstimateRedeemAmountResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryEstimateRedeemAmountResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse} QueryEstimateRedeemAmountResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryEstimateRedeemAmountResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.redeem_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryEstimateRedeemAmountResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse} QueryEstimateRedeemAmountResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryEstimateRedeemAmountResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryEstimateRedeemAmountResponse message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryEstimateRedeemAmountResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.redeem_amount != null && message.hasOwnProperty("redeem_amount")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.redeem_amount);
+                        if (error)
+                            return "redeem_amount." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryEstimateRedeemAmountResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse} QueryEstimateRedeemAmountResponse
+                 */
+                QueryEstimateRedeemAmountResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse();
+                    if (object.redeem_amount != null) {
+                        if (typeof object.redeem_amount !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse.redeem_amount: object expected");
+                        message.redeem_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.redeem_amount);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryEstimateRedeemAmountResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse} message QueryEstimateRedeemAmountResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryEstimateRedeemAmountResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.redeem_amount = null;
+                    if (message.redeem_amount != null && message.hasOwnProperty("redeem_amount"))
+                        object.redeem_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.redeem_amount, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryEstimateRedeemAmountResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryEstimateRedeemAmountResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryEstimateRedeemAmountResponse;
+            })();
+    
+            yieldaggregator.Params = (function() {
+    
+                /**
+                 * Properties of a Params.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IParams
+                 * @property {string|null} [commission_rate] Params commission_rate
+                 * @property {cosmos.base.v1beta1.ICoin|null} [vault_creation_fee] Params vault_creation_fee
+                 * @property {cosmos.base.v1beta1.ICoin|null} [vault_creation_deposit] Params vault_creation_deposit
+                 */
+    
+                /**
+                 * Constructs a new Params.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a Params.
+                 * @implements IParams
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IParams=} [properties] Properties to set
+                 */
+                function Params(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Params commission_rate.
+                 * @member {string} commission_rate
+                 * @memberof ununifi.yieldaggregator.Params
+                 * @instance
+                 */
+                Params.prototype.commission_rate = "";
+    
+                /**
+                 * Params vault_creation_fee.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} vault_creation_fee
+                 * @memberof ununifi.yieldaggregator.Params
+                 * @instance
+                 */
+                Params.prototype.vault_creation_fee = null;
+    
+                /**
+                 * Params vault_creation_deposit.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} vault_creation_deposit
+                 * @memberof ununifi.yieldaggregator.Params
+                 * @instance
+                 */
+                Params.prototype.vault_creation_deposit = null;
+    
+                /**
+                 * Encodes the specified Params message. Does not implicitly {@link ununifi.yieldaggregator.Params.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.Params
+                 * @static
+                 * @param {ununifi.yieldaggregator.IParams} message Params message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                Params.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.commission_rate != null && Object.hasOwnProperty.call(message, "commission_rate"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.commission_rate);
+                    if (message.vault_creation_fee != null && Object.hasOwnProperty.call(message, "vault_creation_fee"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.vault_creation_fee, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    if (message.vault_creation_deposit != null && Object.hasOwnProperty.call(message, "vault_creation_deposit"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.vault_creation_deposit, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.Params.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.Params
+                 * @static
+                 * @param {ununifi.yieldaggregator.IParams} message Params message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                Params.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a Params message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.Params
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.Params} Params
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                Params.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.Params();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.commission_rate = reader.string();
+                            break;
+                        case 2:
+                            message.vault_creation_fee = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        case 3:
+                            message.vault_creation_deposit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a Params message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.Params
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.Params} Params
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                Params.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a Params message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.Params
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                Params.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.commission_rate != null && message.hasOwnProperty("commission_rate"))
+                        if (!$util.isString(message.commission_rate))
+                            return "commission_rate: string expected";
+                    if (message.vault_creation_fee != null && message.hasOwnProperty("vault_creation_fee")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.vault_creation_fee);
+                        if (error)
+                            return "vault_creation_fee." + error;
+                    }
+                    if (message.vault_creation_deposit != null && message.hasOwnProperty("vault_creation_deposit")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.vault_creation_deposit);
+                        if (error)
+                            return "vault_creation_deposit." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a Params message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.Params
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.Params} Params
+                 */
+                Params.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.Params)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.Params();
+                    if (object.commission_rate != null)
+                        message.commission_rate = String(object.commission_rate);
+                    if (object.vault_creation_fee != null) {
+                        if (typeof object.vault_creation_fee !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.Params.vault_creation_fee: object expected");
+                        message.vault_creation_fee = $root.cosmos.base.v1beta1.Coin.fromObject(object.vault_creation_fee);
+                    }
+                    if (object.vault_creation_deposit != null) {
+                        if (typeof object.vault_creation_deposit !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.Params.vault_creation_deposit: object expected");
+                        message.vault_creation_deposit = $root.cosmos.base.v1beta1.Coin.fromObject(object.vault_creation_deposit);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a Params message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.Params
+                 * @static
+                 * @param {ununifi.yieldaggregator.Params} message Params
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                Params.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.commission_rate = "";
+                        object.vault_creation_fee = null;
+                        object.vault_creation_deposit = null;
+                    }
+                    if (message.commission_rate != null && message.hasOwnProperty("commission_rate"))
+                        object.commission_rate = message.commission_rate;
+                    if (message.vault_creation_fee != null && message.hasOwnProperty("vault_creation_fee"))
+                        object.vault_creation_fee = $root.cosmos.base.v1beta1.Coin.toObject(message.vault_creation_fee, options);
+                    if (message.vault_creation_deposit != null && message.hasOwnProperty("vault_creation_deposit"))
+                        object.vault_creation_deposit = $root.cosmos.base.v1beta1.Coin.toObject(message.vault_creation_deposit, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this Params to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.Params
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                Params.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return Params;
+            })();
+    
+            yieldaggregator.StrategyWeight = (function() {
+    
+                /**
+                 * Properties of a StrategyWeight.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IStrategyWeight
+                 * @property {Long|null} [strategy_id] StrategyWeight strategy_id
+                 * @property {string|null} [weight] StrategyWeight weight
+                 */
+    
+                /**
+                 * Constructs a new StrategyWeight.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a StrategyWeight.
+                 * @implements IStrategyWeight
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IStrategyWeight=} [properties] Properties to set
+                 */
+                function StrategyWeight(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * StrategyWeight strategy_id.
+                 * @member {Long} strategy_id
+                 * @memberof ununifi.yieldaggregator.StrategyWeight
+                 * @instance
+                 */
+                StrategyWeight.prototype.strategy_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * StrategyWeight weight.
+                 * @member {string} weight
+                 * @memberof ununifi.yieldaggregator.StrategyWeight
+                 * @instance
+                 */
+                StrategyWeight.prototype.weight = "";
+    
+                /**
+                 * Encodes the specified StrategyWeight message. Does not implicitly {@link ununifi.yieldaggregator.StrategyWeight.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.StrategyWeight
+                 * @static
+                 * @param {ununifi.yieldaggregator.IStrategyWeight} message StrategyWeight message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                StrategyWeight.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.strategy_id != null && Object.hasOwnProperty.call(message, "strategy_id"))
+                        writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.strategy_id);
+                    if (message.weight != null && Object.hasOwnProperty.call(message, "weight"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.weight);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified StrategyWeight message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.StrategyWeight.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.StrategyWeight
+                 * @static
+                 * @param {ununifi.yieldaggregator.IStrategyWeight} message StrategyWeight message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                StrategyWeight.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a StrategyWeight message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.StrategyWeight
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.StrategyWeight} StrategyWeight
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                StrategyWeight.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.StrategyWeight();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.strategy_id = reader.uint64();
+                            break;
+                        case 2:
+                            message.weight = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a StrategyWeight message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.StrategyWeight
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.StrategyWeight} StrategyWeight
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                StrategyWeight.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a StrategyWeight message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.StrategyWeight
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                StrategyWeight.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.strategy_id != null && message.hasOwnProperty("strategy_id"))
+                        if (!$util.isInteger(message.strategy_id) && !(message.strategy_id && $util.isInteger(message.strategy_id.low) && $util.isInteger(message.strategy_id.high)))
+                            return "strategy_id: integer|Long expected";
+                    if (message.weight != null && message.hasOwnProperty("weight"))
+                        if (!$util.isString(message.weight))
+                            return "weight: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a StrategyWeight message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.StrategyWeight
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.StrategyWeight} StrategyWeight
+                 */
+                StrategyWeight.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.StrategyWeight)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.StrategyWeight();
+                    if (object.strategy_id != null)
+                        if ($util.Long)
+                            (message.strategy_id = $util.Long.fromValue(object.strategy_id)).unsigned = true;
+                        else if (typeof object.strategy_id === "string")
+                            message.strategy_id = parseInt(object.strategy_id, 10);
+                        else if (typeof object.strategy_id === "number")
+                            message.strategy_id = object.strategy_id;
+                        else if (typeof object.strategy_id === "object")
+                            message.strategy_id = new $util.LongBits(object.strategy_id.low >>> 0, object.strategy_id.high >>> 0).toNumber(true);
+                    if (object.weight != null)
+                        message.weight = String(object.weight);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a StrategyWeight message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.StrategyWeight
+                 * @static
+                 * @param {ununifi.yieldaggregator.StrategyWeight} message StrategyWeight
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                StrategyWeight.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.strategy_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.strategy_id = options.longs === String ? "0" : 0;
+                        object.weight = "";
+                    }
+                    if (message.strategy_id != null && message.hasOwnProperty("strategy_id"))
+                        if (typeof message.strategy_id === "number")
+                            object.strategy_id = options.longs === String ? String(message.strategy_id) : message.strategy_id;
+                        else
+                            object.strategy_id = options.longs === String ? $util.Long.prototype.toString.call(message.strategy_id) : options.longs === Number ? new $util.LongBits(message.strategy_id.low >>> 0, message.strategy_id.high >>> 0).toNumber(true) : message.strategy_id;
+                    if (message.weight != null && message.hasOwnProperty("weight"))
+                        object.weight = message.weight;
+                    return object;
+                };
+    
+                /**
+                 * Converts this StrategyWeight to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.StrategyWeight
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                StrategyWeight.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return StrategyWeight;
+            })();
+    
+            yieldaggregator.Vault = (function() {
+    
+                /**
+                 * Properties of a Vault.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IVault
+                 * @property {Long|null} [id] Vault id
+                 * @property {string|null} [denom] Vault denom
+                 * @property {string|null} [owner] Vault owner
+                 * @property {cosmos.base.v1beta1.ICoin|null} [owner_deposit] Vault owner_deposit
+                 * @property {string|null} [withdraw_commission_rate] Vault withdraw_commission_rate
+                 * @property {string|null} [withdraw_reserve_rate] Vault withdraw_reserve_rate
+                 * @property {Array.<ununifi.yieldaggregator.IStrategyWeight>|null} [strategy_weights] Vault strategy_weights
+                 */
+    
+                /**
+                 * Constructs a new Vault.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a Vault.
+                 * @implements IVault
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IVault=} [properties] Properties to set
+                 */
+                function Vault(properties) {
+                    this.strategy_weights = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Vault id.
+                 * @member {Long} id
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @instance
+                 */
+                Vault.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * Vault denom.
+                 * @member {string} denom
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @instance
+                 */
+                Vault.prototype.denom = "";
+    
+                /**
+                 * Vault owner.
+                 * @member {string} owner
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @instance
+                 */
+                Vault.prototype.owner = "";
+    
+                /**
+                 * Vault owner_deposit.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} owner_deposit
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @instance
+                 */
+                Vault.prototype.owner_deposit = null;
+    
+                /**
+                 * Vault withdraw_commission_rate.
+                 * @member {string} withdraw_commission_rate
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @instance
+                 */
+                Vault.prototype.withdraw_commission_rate = "";
+    
+                /**
+                 * Vault withdraw_reserve_rate.
+                 * @member {string} withdraw_reserve_rate
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @instance
+                 */
+                Vault.prototype.withdraw_reserve_rate = "";
+    
+                /**
+                 * Vault strategy_weights.
+                 * @member {Array.<ununifi.yieldaggregator.IStrategyWeight>} strategy_weights
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @instance
+                 */
+                Vault.prototype.strategy_weights = $util.emptyArray;
+    
+                /**
+                 * Encodes the specified Vault message. Does not implicitly {@link ununifi.yieldaggregator.Vault.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @static
+                 * @param {ununifi.yieldaggregator.IVault} message Vault message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                Vault.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                        writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
+                    if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.denom);
+                    if (message.owner != null && Object.hasOwnProperty.call(message, "owner"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.owner);
+                    if (message.owner_deposit != null && Object.hasOwnProperty.call(message, "owner_deposit"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.owner_deposit, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+                    if (message.withdraw_commission_rate != null && Object.hasOwnProperty.call(message, "withdraw_commission_rate"))
+                        writer.uint32(/* id 5, wireType 2 =*/42).string(message.withdraw_commission_rate);
+                    if (message.withdraw_reserve_rate != null && Object.hasOwnProperty.call(message, "withdraw_reserve_rate"))
+                        writer.uint32(/* id 6, wireType 2 =*/50).string(message.withdraw_reserve_rate);
+                    if (message.strategy_weights != null && message.strategy_weights.length)
+                        for (var i = 0; i < message.strategy_weights.length; ++i)
+                            $root.ununifi.yieldaggregator.StrategyWeight.encode(message.strategy_weights[i], writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified Vault message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.Vault.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @static
+                 * @param {ununifi.yieldaggregator.IVault} message Vault message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                Vault.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a Vault message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.Vault} Vault
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                Vault.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.Vault();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.id = reader.uint64();
+                            break;
+                        case 2:
+                            message.denom = reader.string();
+                            break;
+                        case 3:
+                            message.owner = reader.string();
+                            break;
+                        case 4:
+                            message.owner_deposit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        case 5:
+                            message.withdraw_commission_rate = reader.string();
+                            break;
+                        case 6:
+                            message.withdraw_reserve_rate = reader.string();
+                            break;
+                        case 7:
+                            if (!(message.strategy_weights && message.strategy_weights.length))
+                                message.strategy_weights = [];
+                            message.strategy_weights.push($root.ununifi.yieldaggregator.StrategyWeight.decode(reader, reader.uint32()));
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a Vault message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.Vault} Vault
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                Vault.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a Vault message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                Vault.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
+                            return "id: integer|Long expected";
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        if (!$util.isString(message.denom))
+                            return "denom: string expected";
+                    if (message.owner != null && message.hasOwnProperty("owner"))
+                        if (!$util.isString(message.owner))
+                            return "owner: string expected";
+                    if (message.owner_deposit != null && message.hasOwnProperty("owner_deposit")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.owner_deposit);
+                        if (error)
+                            return "owner_deposit." + error;
+                    }
+                    if (message.withdraw_commission_rate != null && message.hasOwnProperty("withdraw_commission_rate"))
+                        if (!$util.isString(message.withdraw_commission_rate))
+                            return "withdraw_commission_rate: string expected";
+                    if (message.withdraw_reserve_rate != null && message.hasOwnProperty("withdraw_reserve_rate"))
+                        if (!$util.isString(message.withdraw_reserve_rate))
+                            return "withdraw_reserve_rate: string expected";
+                    if (message.strategy_weights != null && message.hasOwnProperty("strategy_weights")) {
+                        if (!Array.isArray(message.strategy_weights))
+                            return "strategy_weights: array expected";
+                        for (var i = 0; i < message.strategy_weights.length; ++i) {
+                            var error = $root.ununifi.yieldaggregator.StrategyWeight.verify(message.strategy_weights[i]);
+                            if (error)
+                                return "strategy_weights." + error;
+                        }
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a Vault message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.Vault} Vault
+                 */
+                Vault.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.Vault)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.Vault();
+                    if (object.id != null)
+                        if ($util.Long)
+                            (message.id = $util.Long.fromValue(object.id)).unsigned = true;
+                        else if (typeof object.id === "string")
+                            message.id = parseInt(object.id, 10);
+                        else if (typeof object.id === "number")
+                            message.id = object.id;
+                        else if (typeof object.id === "object")
+                            message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
+                    if (object.denom != null)
+                        message.denom = String(object.denom);
+                    if (object.owner != null)
+                        message.owner = String(object.owner);
+                    if (object.owner_deposit != null) {
+                        if (typeof object.owner_deposit !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.Vault.owner_deposit: object expected");
+                        message.owner_deposit = $root.cosmos.base.v1beta1.Coin.fromObject(object.owner_deposit);
+                    }
+                    if (object.withdraw_commission_rate != null)
+                        message.withdraw_commission_rate = String(object.withdraw_commission_rate);
+                    if (object.withdraw_reserve_rate != null)
+                        message.withdraw_reserve_rate = String(object.withdraw_reserve_rate);
+                    if (object.strategy_weights) {
+                        if (!Array.isArray(object.strategy_weights))
+                            throw TypeError(".ununifi.yieldaggregator.Vault.strategy_weights: array expected");
+                        message.strategy_weights = [];
+                        for (var i = 0; i < object.strategy_weights.length; ++i) {
+                            if (typeof object.strategy_weights[i] !== "object")
+                                throw TypeError(".ununifi.yieldaggregator.Vault.strategy_weights: object expected");
+                            message.strategy_weights[i] = $root.ununifi.yieldaggregator.StrategyWeight.fromObject(object.strategy_weights[i]);
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a Vault message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @static
+                 * @param {ununifi.yieldaggregator.Vault} message Vault
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                Vault.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults)
+                        object.strategy_weights = [];
+                    if (options.defaults) {
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.id = options.longs === String ? "0" : 0;
+                        object.denom = "";
+                        object.owner = "";
+                        object.owner_deposit = null;
+                        object.withdraw_commission_rate = "";
+                        object.withdraw_reserve_rate = "";
+                    }
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        if (typeof message.id === "number")
+                            object.id = options.longs === String ? String(message.id) : message.id;
+                        else
+                            object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        object.denom = message.denom;
+                    if (message.owner != null && message.hasOwnProperty("owner"))
+                        object.owner = message.owner;
+                    if (message.owner_deposit != null && message.hasOwnProperty("owner_deposit"))
+                        object.owner_deposit = $root.cosmos.base.v1beta1.Coin.toObject(message.owner_deposit, options);
+                    if (message.withdraw_commission_rate != null && message.hasOwnProperty("withdraw_commission_rate"))
+                        object.withdraw_commission_rate = message.withdraw_commission_rate;
+                    if (message.withdraw_reserve_rate != null && message.hasOwnProperty("withdraw_reserve_rate"))
+                        object.withdraw_reserve_rate = message.withdraw_reserve_rate;
+                    if (message.strategy_weights && message.strategy_weights.length) {
+                        object.strategy_weights = [];
+                        for (var j = 0; j < message.strategy_weights.length; ++j)
+                            object.strategy_weights[j] = $root.ununifi.yieldaggregator.StrategyWeight.toObject(message.strategy_weights[j], options);
+                    }
+                    return object;
+                };
+    
+                /**
+                 * Converts this Vault to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.Vault
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                Vault.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return Vault;
+            })();
+    
+            yieldaggregator.Strategy = (function() {
+    
+                /**
+                 * Properties of a Strategy.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IStrategy
+                 * @property {string|null} [denom] Strategy denom
+                 * @property {Long|null} [id] Strategy id
+                 * @property {string|null} [contract_address] Strategy contract_address
+                 * @property {string|null} [name] Strategy name
+                 */
+    
+                /**
+                 * Constructs a new Strategy.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a Strategy.
+                 * @implements IStrategy
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IStrategy=} [properties] Properties to set
+                 */
+                function Strategy(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Strategy denom.
+                 * @member {string} denom
+                 * @memberof ununifi.yieldaggregator.Strategy
+                 * @instance
+                 */
+                Strategy.prototype.denom = "";
+    
+                /**
+                 * Strategy id.
+                 * @member {Long} id
+                 * @memberof ununifi.yieldaggregator.Strategy
+                 * @instance
+                 */
+                Strategy.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * Strategy contract_address.
+                 * @member {string} contract_address
+                 * @memberof ununifi.yieldaggregator.Strategy
+                 * @instance
+                 */
+                Strategy.prototype.contract_address = "";
+    
+                /**
+                 * Strategy name.
+                 * @member {string} name
+                 * @memberof ununifi.yieldaggregator.Strategy
+                 * @instance
+                 */
+                Strategy.prototype.name = "";
+    
+                /**
+                 * Encodes the specified Strategy message. Does not implicitly {@link ununifi.yieldaggregator.Strategy.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.Strategy
+                 * @static
+                 * @param {ununifi.yieldaggregator.IStrategy} message Strategy message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                Strategy.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.denom);
+                    if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                        writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.id);
+                    if (message.contract_address != null && Object.hasOwnProperty.call(message, "contract_address"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.contract_address);
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                        writer.uint32(/* id 4, wireType 2 =*/34).string(message.name);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified Strategy message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.Strategy.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.Strategy
+                 * @static
+                 * @param {ununifi.yieldaggregator.IStrategy} message Strategy message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                Strategy.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a Strategy message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.Strategy
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.Strategy} Strategy
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                Strategy.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.Strategy();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.denom = reader.string();
+                            break;
+                        case 2:
+                            message.id = reader.uint64();
+                            break;
+                        case 3:
+                            message.contract_address = reader.string();
+                            break;
+                        case 4:
+                            message.name = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a Strategy message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.Strategy
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.Strategy} Strategy
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                Strategy.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a Strategy message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.Strategy
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                Strategy.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        if (!$util.isString(message.denom))
+                            return "denom: string expected";
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
+                            return "id: integer|Long expected";
+                    if (message.contract_address != null && message.hasOwnProperty("contract_address"))
+                        if (!$util.isString(message.contract_address))
+                            return "contract_address: string expected";
+                    if (message.name != null && message.hasOwnProperty("name"))
+                        if (!$util.isString(message.name))
+                            return "name: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a Strategy message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.Strategy
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.Strategy} Strategy
+                 */
+                Strategy.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.Strategy)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.Strategy();
+                    if (object.denom != null)
+                        message.denom = String(object.denom);
+                    if (object.id != null)
+                        if ($util.Long)
+                            (message.id = $util.Long.fromValue(object.id)).unsigned = true;
+                        else if (typeof object.id === "string")
+                            message.id = parseInt(object.id, 10);
+                        else if (typeof object.id === "number")
+                            message.id = object.id;
+                        else if (typeof object.id === "object")
+                            message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
+                    if (object.contract_address != null)
+                        message.contract_address = String(object.contract_address);
+                    if (object.name != null)
+                        message.name = String(object.name);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a Strategy message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.Strategy
+                 * @static
+                 * @param {ununifi.yieldaggregator.Strategy} message Strategy
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                Strategy.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.denom = "";
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.id = options.longs === String ? "0" : 0;
+                        object.contract_address = "";
+                        object.name = "";
+                    }
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        object.denom = message.denom;
+                    if (message.id != null && message.hasOwnProperty("id"))
+                        if (typeof message.id === "number")
+                            object.id = options.longs === String ? String(message.id) : message.id;
+                        else
+                            object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
+                    if (message.contract_address != null && message.hasOwnProperty("contract_address"))
+                        object.contract_address = message.contract_address;
+                    if (message.name != null && message.hasOwnProperty("name"))
+                        object.name = message.name;
+                    return object;
+                };
+    
+                /**
+                 * Converts this Strategy to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.Strategy
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                Strategy.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return Strategy;
+            })();
+    
+            yieldaggregator.VaultMetrics = (function() {
+    
+                /**
+                 * Properties of a VaultMetrics.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IVaultMetrics
+                 * @property {string|null} [allocation] VaultMetrics allocation
+                 * @property {string|null} [apy] VaultMetrics apy
+                 */
+    
+                /**
+                 * Constructs a new VaultMetrics.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a VaultMetrics.
+                 * @implements IVaultMetrics
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IVaultMetrics=} [properties] Properties to set
+                 */
+                function VaultMetrics(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * VaultMetrics allocation.
+                 * @member {string} allocation
+                 * @memberof ununifi.yieldaggregator.VaultMetrics
+                 * @instance
+                 */
+                VaultMetrics.prototype.allocation = "";
+    
+                /**
+                 * VaultMetrics apy.
+                 * @member {string} apy
+                 * @memberof ununifi.yieldaggregator.VaultMetrics
+                 * @instance
+                 */
+                VaultMetrics.prototype.apy = "";
+    
+                /**
+                 * Encodes the specified VaultMetrics message. Does not implicitly {@link ununifi.yieldaggregator.VaultMetrics.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.VaultMetrics
+                 * @static
+                 * @param {ununifi.yieldaggregator.IVaultMetrics} message VaultMetrics message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                VaultMetrics.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.allocation != null && Object.hasOwnProperty.call(message, "allocation"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.allocation);
+                    if (message.apy != null && Object.hasOwnProperty.call(message, "apy"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.apy);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified VaultMetrics message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.VaultMetrics.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.VaultMetrics
+                 * @static
+                 * @param {ununifi.yieldaggregator.IVaultMetrics} message VaultMetrics message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                VaultMetrics.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a VaultMetrics message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.VaultMetrics
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.VaultMetrics} VaultMetrics
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                VaultMetrics.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.VaultMetrics();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.allocation = reader.string();
+                            break;
+                        case 2:
+                            message.apy = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a VaultMetrics message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.VaultMetrics
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.VaultMetrics} VaultMetrics
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                VaultMetrics.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a VaultMetrics message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.VaultMetrics
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                VaultMetrics.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.allocation != null && message.hasOwnProperty("allocation"))
+                        if (!$util.isString(message.allocation))
+                            return "allocation: string expected";
+                    if (message.apy != null && message.hasOwnProperty("apy"))
+                        if (!$util.isString(message.apy))
+                            return "apy: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a VaultMetrics message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.VaultMetrics
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.VaultMetrics} VaultMetrics
+                 */
+                VaultMetrics.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.VaultMetrics)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.VaultMetrics();
+                    if (object.allocation != null)
+                        message.allocation = String(object.allocation);
+                    if (object.apy != null)
+                        message.apy = String(object.apy);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a VaultMetrics message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.VaultMetrics
+                 * @static
+                 * @param {ununifi.yieldaggregator.VaultMetrics} message VaultMetrics
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                VaultMetrics.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.allocation = "";
+                        object.apy = "";
+                    }
+                    if (message.allocation != null && message.hasOwnProperty("allocation"))
+                        object.allocation = message.allocation;
+                    if (message.apy != null && message.hasOwnProperty("apy"))
+                        object.apy = message.apy;
+                    return object;
+                };
+    
+                /**
+                 * Converts this VaultMetrics to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.VaultMetrics
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                VaultMetrics.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return VaultMetrics;
+            })();
+    
+            yieldaggregator.StrategyMetrics = (function() {
+    
+                /**
+                 * Properties of a StrategyMetrics.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IStrategyMetrics
+                 * @property {string|null} [allocation] StrategyMetrics allocation
+                 * @property {string|null} [apr] StrategyMetrics apr
+                 */
+    
+                /**
+                 * Constructs a new StrategyMetrics.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a StrategyMetrics.
+                 * @implements IStrategyMetrics
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IStrategyMetrics=} [properties] Properties to set
+                 */
+                function StrategyMetrics(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * StrategyMetrics allocation.
+                 * @member {string} allocation
+                 * @memberof ununifi.yieldaggregator.StrategyMetrics
+                 * @instance
+                 */
+                StrategyMetrics.prototype.allocation = "";
+    
+                /**
+                 * StrategyMetrics apr.
+                 * @member {string} apr
+                 * @memberof ununifi.yieldaggregator.StrategyMetrics
+                 * @instance
+                 */
+                StrategyMetrics.prototype.apr = "";
+    
+                /**
+                 * Encodes the specified StrategyMetrics message. Does not implicitly {@link ununifi.yieldaggregator.StrategyMetrics.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.StrategyMetrics
+                 * @static
+                 * @param {ununifi.yieldaggregator.IStrategyMetrics} message StrategyMetrics message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                StrategyMetrics.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.allocation != null && Object.hasOwnProperty.call(message, "allocation"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.allocation);
+                    if (message.apr != null && Object.hasOwnProperty.call(message, "apr"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.apr);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified StrategyMetrics message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.StrategyMetrics.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.StrategyMetrics
+                 * @static
+                 * @param {ununifi.yieldaggregator.IStrategyMetrics} message StrategyMetrics message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                StrategyMetrics.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a StrategyMetrics message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.StrategyMetrics
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.StrategyMetrics} StrategyMetrics
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                StrategyMetrics.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.StrategyMetrics();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.allocation = reader.string();
+                            break;
+                        case 2:
+                            message.apr = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a StrategyMetrics message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.StrategyMetrics
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.StrategyMetrics} StrategyMetrics
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                StrategyMetrics.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a StrategyMetrics message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.StrategyMetrics
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                StrategyMetrics.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.allocation != null && message.hasOwnProperty("allocation"))
+                        if (!$util.isString(message.allocation))
+                            return "allocation: string expected";
+                    if (message.apr != null && message.hasOwnProperty("apr"))
+                        if (!$util.isString(message.apr))
+                            return "apr: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a StrategyMetrics message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.StrategyMetrics
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.StrategyMetrics} StrategyMetrics
+                 */
+                StrategyMetrics.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.StrategyMetrics)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.StrategyMetrics();
+                    if (object.allocation != null)
+                        message.allocation = String(object.allocation);
+                    if (object.apr != null)
+                        message.apr = String(object.apr);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a StrategyMetrics message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.StrategyMetrics
+                 * @static
+                 * @param {ununifi.yieldaggregator.StrategyMetrics} message StrategyMetrics
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                StrategyMetrics.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.allocation = "";
+                        object.apr = "";
+                    }
+                    if (message.allocation != null && message.hasOwnProperty("allocation"))
+                        object.allocation = message.allocation;
+                    if (message.apr != null && message.hasOwnProperty("apr"))
+                        object.apr = message.apr;
+                    return object;
+                };
+    
+                /**
+                 * Converts this StrategyMetrics to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.StrategyMetrics
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                StrategyMetrics.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return StrategyMetrics;
+            })();
+    
+            yieldaggregator.Msg = (function() {
+    
+                /**
+                 * Constructs a new Msg service.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a Msg
+                 * @extends $protobuf.rpc.Service
+                 * @constructor
+                 * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+                 * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+                 * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+                 */
+                function Msg(rpcImpl, requestDelimited, responseDelimited) {
+                    $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+                }
+    
+                (Msg.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Msg;
+    
+                /**
+                 * Callback as used by {@link ununifi.yieldaggregator.Msg#depositToVault}.
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @typedef DepositToVaultCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.yieldaggregator.MsgDepositToVaultResponse} [response] MsgDepositToVaultResponse
+                 */
+    
+                /**
+                 * Calls DepositToVault.
+                 * @function depositToVault
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IMsgDepositToVault} request MsgDepositToVault message or plain object
+                 * @param {ununifi.yieldaggregator.Msg.DepositToVaultCallback} callback Node-style callback called with the error, if any, and MsgDepositToVaultResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Msg.prototype.depositToVault = function depositToVault(request, callback) {
+                    return this.rpcCall(depositToVault, $root.ununifi.yieldaggregator.MsgDepositToVault, $root.ununifi.yieldaggregator.MsgDepositToVaultResponse, request, callback);
+                }, "name", { value: "DepositToVault" });
+    
+                /**
+                 * Calls DepositToVault.
+                 * @function depositToVault
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IMsgDepositToVault} request MsgDepositToVault message or plain object
+                 * @returns {Promise<ununifi.yieldaggregator.MsgDepositToVaultResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.yieldaggregator.Msg#withdrawFromVault}.
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @typedef WithdrawFromVaultCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.yieldaggregator.MsgWithdrawFromVaultResponse} [response] MsgWithdrawFromVaultResponse
+                 */
+    
+                /**
+                 * Calls WithdrawFromVault.
+                 * @function withdrawFromVault
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IMsgWithdrawFromVault} request MsgWithdrawFromVault message or plain object
+                 * @param {ununifi.yieldaggregator.Msg.WithdrawFromVaultCallback} callback Node-style callback called with the error, if any, and MsgWithdrawFromVaultResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Msg.prototype.withdrawFromVault = function withdrawFromVault(request, callback) {
+                    return this.rpcCall(withdrawFromVault, $root.ununifi.yieldaggregator.MsgWithdrawFromVault, $root.ununifi.yieldaggregator.MsgWithdrawFromVaultResponse, request, callback);
+                }, "name", { value: "WithdrawFromVault" });
+    
+                /**
+                 * Calls WithdrawFromVault.
+                 * @function withdrawFromVault
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IMsgWithdrawFromVault} request MsgWithdrawFromVault message or plain object
+                 * @returns {Promise<ununifi.yieldaggregator.MsgWithdrawFromVaultResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.yieldaggregator.Msg#createVault}.
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @typedef CreateVaultCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.yieldaggregator.MsgCreateVaultResponse} [response] MsgCreateVaultResponse
+                 */
+    
+                /**
+                 * Calls CreateVault.
+                 * @function createVault
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IMsgCreateVault} request MsgCreateVault message or plain object
+                 * @param {ununifi.yieldaggregator.Msg.CreateVaultCallback} callback Node-style callback called with the error, if any, and MsgCreateVaultResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Msg.prototype.createVault = function createVault(request, callback) {
+                    return this.rpcCall(createVault, $root.ununifi.yieldaggregator.MsgCreateVault, $root.ununifi.yieldaggregator.MsgCreateVaultResponse, request, callback);
+                }, "name", { value: "CreateVault" });
+    
+                /**
+                 * Calls CreateVault.
+                 * @function createVault
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IMsgCreateVault} request MsgCreateVault message or plain object
+                 * @returns {Promise<ununifi.yieldaggregator.MsgCreateVaultResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.yieldaggregator.Msg#deleteVault}.
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @typedef DeleteVaultCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.yieldaggregator.MsgDeleteVaultResponse} [response] MsgDeleteVaultResponse
+                 */
+    
+                /**
+                 * Calls DeleteVault.
+                 * @function deleteVault
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IMsgDeleteVault} request MsgDeleteVault message or plain object
+                 * @param {ununifi.yieldaggregator.Msg.DeleteVaultCallback} callback Node-style callback called with the error, if any, and MsgDeleteVaultResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Msg.prototype.deleteVault = function deleteVault(request, callback) {
+                    return this.rpcCall(deleteVault, $root.ununifi.yieldaggregator.MsgDeleteVault, $root.ununifi.yieldaggregator.MsgDeleteVaultResponse, request, callback);
+                }, "name", { value: "DeleteVault" });
+    
+                /**
+                 * Calls DeleteVault.
+                 * @function deleteVault
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IMsgDeleteVault} request MsgDeleteVault message or plain object
+                 * @returns {Promise<ununifi.yieldaggregator.MsgDeleteVaultResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.yieldaggregator.Msg#transferVaultOwnership}.
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @typedef TransferVaultOwnershipCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse} [response] MsgTransferVaultOwnershipResponse
+                 */
+    
+                /**
+                 * Calls TransferVaultOwnership.
+                 * @function transferVaultOwnership
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IMsgTransferVaultOwnership} request MsgTransferVaultOwnership message or plain object
+                 * @param {ununifi.yieldaggregator.Msg.TransferVaultOwnershipCallback} callback Node-style callback called with the error, if any, and MsgTransferVaultOwnershipResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Msg.prototype.transferVaultOwnership = function transferVaultOwnership(request, callback) {
+                    return this.rpcCall(transferVaultOwnership, $root.ununifi.yieldaggregator.MsgTransferVaultOwnership, $root.ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse, request, callback);
+                }, "name", { value: "TransferVaultOwnership" });
+    
+                /**
+                 * Calls TransferVaultOwnership.
+                 * @function transferVaultOwnership
+                 * @memberof ununifi.yieldaggregator.Msg
+                 * @instance
+                 * @param {ununifi.yieldaggregator.IMsgTransferVaultOwnership} request MsgTransferVaultOwnership message or plain object
+                 * @returns {Promise<ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse>} Promise
+                 * @variation 2
+                 */
+    
+                return Msg;
+            })();
+    
+            yieldaggregator.MsgDepositToVault = (function() {
+    
+                /**
+                 * Properties of a MsgDepositToVault.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IMsgDepositToVault
+                 * @property {string|null} [sender] MsgDepositToVault sender
+                 * @property {Long|null} [vault_id] MsgDepositToVault vault_id
+                 * @property {cosmos.base.v1beta1.ICoin|null} [amount] MsgDepositToVault amount
+                 */
+    
+                /**
+                 * Constructs a new MsgDepositToVault.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a MsgDepositToVault.
+                 * @implements IMsgDepositToVault
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IMsgDepositToVault=} [properties] Properties to set
+                 */
+                function MsgDepositToVault(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * MsgDepositToVault sender.
+                 * @member {string} sender
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVault
+                 * @instance
+                 */
+                MsgDepositToVault.prototype.sender = "";
+    
+                /**
+                 * MsgDepositToVault vault_id.
+                 * @member {Long} vault_id
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVault
+                 * @instance
+                 */
+                MsgDepositToVault.prototype.vault_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * MsgDepositToVault amount.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVault
+                 * @instance
+                 */
+                MsgDepositToVault.prototype.amount = null;
+    
+                /**
+                 * Encodes the specified MsgDepositToVault message. Does not implicitly {@link ununifi.yieldaggregator.MsgDepositToVault.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVault
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgDepositToVault} message MsgDepositToVault message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgDepositToVault.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                    if (message.vault_id != null && Object.hasOwnProperty.call(message, "vault_id"))
+                        writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.vault_id);
+                    if (message.amount != null && Object.hasOwnProperty.call(message, "amount"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgDepositToVault message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgDepositToVault.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVault
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgDepositToVault} message MsgDepositToVault message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgDepositToVault.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgDepositToVault message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVault
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.MsgDepositToVault} MsgDepositToVault
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgDepositToVault.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.MsgDepositToVault();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.sender = reader.string();
+                            break;
+                        case 2:
+                            message.vault_id = reader.uint64();
+                            break;
+                        case 3:
+                            message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgDepositToVault message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVault
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.MsgDepositToVault} MsgDepositToVault
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgDepositToVault.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgDepositToVault message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVault
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgDepositToVault.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        if (!$util.isString(message.sender))
+                            return "sender: string expected";
+                    if (message.vault_id != null && message.hasOwnProperty("vault_id"))
+                        if (!$util.isInteger(message.vault_id) && !(message.vault_id && $util.isInteger(message.vault_id.low) && $util.isInteger(message.vault_id.high)))
+                            return "vault_id: integer|Long expected";
+                    if (message.amount != null && message.hasOwnProperty("amount")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
+                        if (error)
+                            return "amount." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgDepositToVault message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVault
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.MsgDepositToVault} MsgDepositToVault
+                 */
+                MsgDepositToVault.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.MsgDepositToVault)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.MsgDepositToVault();
+                    if (object.sender != null)
+                        message.sender = String(object.sender);
+                    if (object.vault_id != null)
+                        if ($util.Long)
+                            (message.vault_id = $util.Long.fromValue(object.vault_id)).unsigned = true;
+                        else if (typeof object.vault_id === "string")
+                            message.vault_id = parseInt(object.vault_id, 10);
+                        else if (typeof object.vault_id === "number")
+                            message.vault_id = object.vault_id;
+                        else if (typeof object.vault_id === "object")
+                            message.vault_id = new $util.LongBits(object.vault_id.low >>> 0, object.vault_id.high >>> 0).toNumber(true);
+                    if (object.amount != null) {
+                        if (typeof object.amount !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.MsgDepositToVault.amount: object expected");
+                        message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a MsgDepositToVault message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVault
+                 * @static
+                 * @param {ununifi.yieldaggregator.MsgDepositToVault} message MsgDepositToVault
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgDepositToVault.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.sender = "";
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.vault_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.vault_id = options.longs === String ? "0" : 0;
+                        object.amount = null;
+                    }
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        object.sender = message.sender;
+                    if (message.vault_id != null && message.hasOwnProperty("vault_id"))
+                        if (typeof message.vault_id === "number")
+                            object.vault_id = options.longs === String ? String(message.vault_id) : message.vault_id;
+                        else
+                            object.vault_id = options.longs === String ? $util.Long.prototype.toString.call(message.vault_id) : options.longs === Number ? new $util.LongBits(message.vault_id.low >>> 0, message.vault_id.high >>> 0).toNumber(true) : message.vault_id;
+                    if (message.amount != null && message.hasOwnProperty("amount"))
+                        object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this MsgDepositToVault to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVault
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgDepositToVault.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgDepositToVault;
+            })();
+    
+            yieldaggregator.MsgDepositToVaultResponse = (function() {
+    
+                /**
+                 * Properties of a MsgDepositToVaultResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IMsgDepositToVaultResponse
+                 */
+    
+                /**
+                 * Constructs a new MsgDepositToVaultResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a MsgDepositToVaultResponse.
+                 * @implements IMsgDepositToVaultResponse
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IMsgDepositToVaultResponse=} [properties] Properties to set
+                 */
+                function MsgDepositToVaultResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Encodes the specified MsgDepositToVaultResponse message. Does not implicitly {@link ununifi.yieldaggregator.MsgDepositToVaultResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgDepositToVaultResponse} message MsgDepositToVaultResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgDepositToVaultResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgDepositToVaultResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgDepositToVaultResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgDepositToVaultResponse} message MsgDepositToVaultResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgDepositToVaultResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgDepositToVaultResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVaultResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.MsgDepositToVaultResponse} MsgDepositToVaultResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgDepositToVaultResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.MsgDepositToVaultResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgDepositToVaultResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVaultResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.MsgDepositToVaultResponse} MsgDepositToVaultResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgDepositToVaultResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgDepositToVaultResponse message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVaultResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgDepositToVaultResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgDepositToVaultResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVaultResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.MsgDepositToVaultResponse} MsgDepositToVaultResponse
+                 */
+                MsgDepositToVaultResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.MsgDepositToVaultResponse)
+                        return object;
+                    return new $root.ununifi.yieldaggregator.MsgDepositToVaultResponse();
+                };
+    
+                /**
+                 * Creates a plain object from a MsgDepositToVaultResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.MsgDepositToVaultResponse} message MsgDepositToVaultResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgDepositToVaultResponse.toObject = function toObject() {
+                    return {};
+                };
+    
+                /**
+                 * Converts this MsgDepositToVaultResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.MsgDepositToVaultResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgDepositToVaultResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgDepositToVaultResponse;
+            })();
+    
+            yieldaggregator.MsgWithdrawFromVault = (function() {
+    
+                /**
+                 * Properties of a MsgWithdrawFromVault.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IMsgWithdrawFromVault
+                 * @property {string|null} [sender] MsgWithdrawFromVault sender
+                 * @property {Long|null} [vault_id] MsgWithdrawFromVault vault_id
+                 * @property {string|null} [lp_token_amount] MsgWithdrawFromVault lp_token_amount
+                 */
+    
+                /**
+                 * Constructs a new MsgWithdrawFromVault.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a MsgWithdrawFromVault.
+                 * @implements IMsgWithdrawFromVault
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IMsgWithdrawFromVault=} [properties] Properties to set
+                 */
+                function MsgWithdrawFromVault(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * MsgWithdrawFromVault sender.
+                 * @member {string} sender
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVault
+                 * @instance
+                 */
+                MsgWithdrawFromVault.prototype.sender = "";
+    
+                /**
+                 * MsgWithdrawFromVault vault_id.
+                 * @member {Long} vault_id
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVault
+                 * @instance
+                 */
+                MsgWithdrawFromVault.prototype.vault_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * MsgWithdrawFromVault lp_token_amount.
+                 * @member {string} lp_token_amount
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVault
+                 * @instance
+                 */
+                MsgWithdrawFromVault.prototype.lp_token_amount = "";
+    
+                /**
+                 * Encodes the specified MsgWithdrawFromVault message. Does not implicitly {@link ununifi.yieldaggregator.MsgWithdrawFromVault.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVault
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgWithdrawFromVault} message MsgWithdrawFromVault message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgWithdrawFromVault.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                    if (message.vault_id != null && Object.hasOwnProperty.call(message, "vault_id"))
+                        writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.vault_id);
+                    if (message.lp_token_amount != null && Object.hasOwnProperty.call(message, "lp_token_amount"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.lp_token_amount);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgWithdrawFromVault message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgWithdrawFromVault.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVault
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgWithdrawFromVault} message MsgWithdrawFromVault message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgWithdrawFromVault.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgWithdrawFromVault message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVault
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.MsgWithdrawFromVault} MsgWithdrawFromVault
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgWithdrawFromVault.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.MsgWithdrawFromVault();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.sender = reader.string();
+                            break;
+                        case 2:
+                            message.vault_id = reader.uint64();
+                            break;
+                        case 3:
+                            message.lp_token_amount = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgWithdrawFromVault message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVault
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.MsgWithdrawFromVault} MsgWithdrawFromVault
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgWithdrawFromVault.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgWithdrawFromVault message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVault
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgWithdrawFromVault.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        if (!$util.isString(message.sender))
+                            return "sender: string expected";
+                    if (message.vault_id != null && message.hasOwnProperty("vault_id"))
+                        if (!$util.isInteger(message.vault_id) && !(message.vault_id && $util.isInteger(message.vault_id.low) && $util.isInteger(message.vault_id.high)))
+                            return "vault_id: integer|Long expected";
+                    if (message.lp_token_amount != null && message.hasOwnProperty("lp_token_amount"))
+                        if (!$util.isString(message.lp_token_amount))
+                            return "lp_token_amount: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgWithdrawFromVault message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVault
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.MsgWithdrawFromVault} MsgWithdrawFromVault
+                 */
+                MsgWithdrawFromVault.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.MsgWithdrawFromVault)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.MsgWithdrawFromVault();
+                    if (object.sender != null)
+                        message.sender = String(object.sender);
+                    if (object.vault_id != null)
+                        if ($util.Long)
+                            (message.vault_id = $util.Long.fromValue(object.vault_id)).unsigned = true;
+                        else if (typeof object.vault_id === "string")
+                            message.vault_id = parseInt(object.vault_id, 10);
+                        else if (typeof object.vault_id === "number")
+                            message.vault_id = object.vault_id;
+                        else if (typeof object.vault_id === "object")
+                            message.vault_id = new $util.LongBits(object.vault_id.low >>> 0, object.vault_id.high >>> 0).toNumber(true);
+                    if (object.lp_token_amount != null)
+                        message.lp_token_amount = String(object.lp_token_amount);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a MsgWithdrawFromVault message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVault
+                 * @static
+                 * @param {ununifi.yieldaggregator.MsgWithdrawFromVault} message MsgWithdrawFromVault
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgWithdrawFromVault.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.sender = "";
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.vault_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.vault_id = options.longs === String ? "0" : 0;
+                        object.lp_token_amount = "";
+                    }
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        object.sender = message.sender;
+                    if (message.vault_id != null && message.hasOwnProperty("vault_id"))
+                        if (typeof message.vault_id === "number")
+                            object.vault_id = options.longs === String ? String(message.vault_id) : message.vault_id;
+                        else
+                            object.vault_id = options.longs === String ? $util.Long.prototype.toString.call(message.vault_id) : options.longs === Number ? new $util.LongBits(message.vault_id.low >>> 0, message.vault_id.high >>> 0).toNumber(true) : message.vault_id;
+                    if (message.lp_token_amount != null && message.hasOwnProperty("lp_token_amount"))
+                        object.lp_token_amount = message.lp_token_amount;
+                    return object;
+                };
+    
+                /**
+                 * Converts this MsgWithdrawFromVault to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVault
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgWithdrawFromVault.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgWithdrawFromVault;
+            })();
+    
+            yieldaggregator.MsgWithdrawFromVaultResponse = (function() {
+    
+                /**
+                 * Properties of a MsgWithdrawFromVaultResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IMsgWithdrawFromVaultResponse
+                 */
+    
+                /**
+                 * Constructs a new MsgWithdrawFromVaultResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a MsgWithdrawFromVaultResponse.
+                 * @implements IMsgWithdrawFromVaultResponse
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IMsgWithdrawFromVaultResponse=} [properties] Properties to set
+                 */
+                function MsgWithdrawFromVaultResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Encodes the specified MsgWithdrawFromVaultResponse message. Does not implicitly {@link ununifi.yieldaggregator.MsgWithdrawFromVaultResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgWithdrawFromVaultResponse} message MsgWithdrawFromVaultResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgWithdrawFromVaultResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgWithdrawFromVaultResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgWithdrawFromVaultResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgWithdrawFromVaultResponse} message MsgWithdrawFromVaultResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgWithdrawFromVaultResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgWithdrawFromVaultResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVaultResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.MsgWithdrawFromVaultResponse} MsgWithdrawFromVaultResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgWithdrawFromVaultResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.MsgWithdrawFromVaultResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgWithdrawFromVaultResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVaultResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.MsgWithdrawFromVaultResponse} MsgWithdrawFromVaultResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgWithdrawFromVaultResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgWithdrawFromVaultResponse message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVaultResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgWithdrawFromVaultResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgWithdrawFromVaultResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVaultResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.MsgWithdrawFromVaultResponse} MsgWithdrawFromVaultResponse
+                 */
+                MsgWithdrawFromVaultResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.MsgWithdrawFromVaultResponse)
+                        return object;
+                    return new $root.ununifi.yieldaggregator.MsgWithdrawFromVaultResponse();
+                };
+    
+                /**
+                 * Creates a plain object from a MsgWithdrawFromVaultResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.MsgWithdrawFromVaultResponse} message MsgWithdrawFromVaultResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgWithdrawFromVaultResponse.toObject = function toObject() {
+                    return {};
+                };
+    
+                /**
+                 * Converts this MsgWithdrawFromVaultResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.MsgWithdrawFromVaultResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgWithdrawFromVaultResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgWithdrawFromVaultResponse;
+            })();
+    
+            yieldaggregator.MsgCreateVault = (function() {
+    
+                /**
+                 * Properties of a MsgCreateVault.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IMsgCreateVault
+                 * @property {string|null} [sender] MsgCreateVault sender
+                 * @property {string|null} [denom] MsgCreateVault denom
+                 * @property {string|null} [commission_rate] MsgCreateVault commission_rate
+                 * @property {Array.<ununifi.yieldaggregator.IStrategyWeight>|null} [strategy_weights] MsgCreateVault strategy_weights
+                 * @property {cosmos.base.v1beta1.ICoin|null} [fee] MsgCreateVault fee
+                 * @property {cosmos.base.v1beta1.ICoin|null} [deposit] MsgCreateVault deposit
+                 */
+    
+                /**
+                 * Constructs a new MsgCreateVault.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a MsgCreateVault.
+                 * @implements IMsgCreateVault
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IMsgCreateVault=} [properties] Properties to set
+                 */
+                function MsgCreateVault(properties) {
+                    this.strategy_weights = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * MsgCreateVault sender.
+                 * @member {string} sender
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @instance
+                 */
+                MsgCreateVault.prototype.sender = "";
+    
+                /**
+                 * MsgCreateVault denom.
+                 * @member {string} denom
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @instance
+                 */
+                MsgCreateVault.prototype.denom = "";
+    
+                /**
+                 * MsgCreateVault commission_rate.
+                 * @member {string} commission_rate
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @instance
+                 */
+                MsgCreateVault.prototype.commission_rate = "";
+    
+                /**
+                 * MsgCreateVault strategy_weights.
+                 * @member {Array.<ununifi.yieldaggregator.IStrategyWeight>} strategy_weights
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @instance
+                 */
+                MsgCreateVault.prototype.strategy_weights = $util.emptyArray;
+    
+                /**
+                 * MsgCreateVault fee.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} fee
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @instance
+                 */
+                MsgCreateVault.prototype.fee = null;
+    
+                /**
+                 * MsgCreateVault deposit.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} deposit
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @instance
+                 */
+                MsgCreateVault.prototype.deposit = null;
+    
+                /**
+                 * Encodes the specified MsgCreateVault message. Does not implicitly {@link ununifi.yieldaggregator.MsgCreateVault.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgCreateVault} message MsgCreateVault message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgCreateVault.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                    if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.denom);
+                    if (message.commission_rate != null && Object.hasOwnProperty.call(message, "commission_rate"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.commission_rate);
+                    if (message.strategy_weights != null && message.strategy_weights.length)
+                        for (var i = 0; i < message.strategy_weights.length; ++i)
+                            $root.ununifi.yieldaggregator.StrategyWeight.encode(message.strategy_weights[i], writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+                    if (message.fee != null && Object.hasOwnProperty.call(message, "fee"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.fee, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+                    if (message.deposit != null && Object.hasOwnProperty.call(message, "deposit"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.deposit, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgCreateVault message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgCreateVault.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgCreateVault} message MsgCreateVault message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgCreateVault.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgCreateVault message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.MsgCreateVault} MsgCreateVault
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgCreateVault.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.MsgCreateVault();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.sender = reader.string();
+                            break;
+                        case 2:
+                            message.denom = reader.string();
+                            break;
+                        case 3:
+                            message.commission_rate = reader.string();
+                            break;
+                        case 4:
+                            if (!(message.strategy_weights && message.strategy_weights.length))
+                                message.strategy_weights = [];
+                            message.strategy_weights.push($root.ununifi.yieldaggregator.StrategyWeight.decode(reader, reader.uint32()));
+                            break;
+                        case 5:
+                            message.fee = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        case 6:
+                            message.deposit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgCreateVault message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.MsgCreateVault} MsgCreateVault
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgCreateVault.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgCreateVault message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgCreateVault.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        if (!$util.isString(message.sender))
+                            return "sender: string expected";
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        if (!$util.isString(message.denom))
+                            return "denom: string expected";
+                    if (message.commission_rate != null && message.hasOwnProperty("commission_rate"))
+                        if (!$util.isString(message.commission_rate))
+                            return "commission_rate: string expected";
+                    if (message.strategy_weights != null && message.hasOwnProperty("strategy_weights")) {
+                        if (!Array.isArray(message.strategy_weights))
+                            return "strategy_weights: array expected";
+                        for (var i = 0; i < message.strategy_weights.length; ++i) {
+                            var error = $root.ununifi.yieldaggregator.StrategyWeight.verify(message.strategy_weights[i]);
+                            if (error)
+                                return "strategy_weights." + error;
+                        }
+                    }
+                    if (message.fee != null && message.hasOwnProperty("fee")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.fee);
+                        if (error)
+                            return "fee." + error;
+                    }
+                    if (message.deposit != null && message.hasOwnProperty("deposit")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.deposit);
+                        if (error)
+                            return "deposit." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgCreateVault message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.MsgCreateVault} MsgCreateVault
+                 */
+                MsgCreateVault.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.MsgCreateVault)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.MsgCreateVault();
+                    if (object.sender != null)
+                        message.sender = String(object.sender);
+                    if (object.denom != null)
+                        message.denom = String(object.denom);
+                    if (object.commission_rate != null)
+                        message.commission_rate = String(object.commission_rate);
+                    if (object.strategy_weights) {
+                        if (!Array.isArray(object.strategy_weights))
+                            throw TypeError(".ununifi.yieldaggregator.MsgCreateVault.strategy_weights: array expected");
+                        message.strategy_weights = [];
+                        for (var i = 0; i < object.strategy_weights.length; ++i) {
+                            if (typeof object.strategy_weights[i] !== "object")
+                                throw TypeError(".ununifi.yieldaggregator.MsgCreateVault.strategy_weights: object expected");
+                            message.strategy_weights[i] = $root.ununifi.yieldaggregator.StrategyWeight.fromObject(object.strategy_weights[i]);
+                        }
+                    }
+                    if (object.fee != null) {
+                        if (typeof object.fee !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.MsgCreateVault.fee: object expected");
+                        message.fee = $root.cosmos.base.v1beta1.Coin.fromObject(object.fee);
+                    }
+                    if (object.deposit != null) {
+                        if (typeof object.deposit !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.MsgCreateVault.deposit: object expected");
+                        message.deposit = $root.cosmos.base.v1beta1.Coin.fromObject(object.deposit);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a MsgCreateVault message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @static
+                 * @param {ununifi.yieldaggregator.MsgCreateVault} message MsgCreateVault
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgCreateVault.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults)
+                        object.strategy_weights = [];
+                    if (options.defaults) {
+                        object.sender = "";
+                        object.denom = "";
+                        object.commission_rate = "";
+                        object.fee = null;
+                        object.deposit = null;
+                    }
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        object.sender = message.sender;
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        object.denom = message.denom;
+                    if (message.commission_rate != null && message.hasOwnProperty("commission_rate"))
+                        object.commission_rate = message.commission_rate;
+                    if (message.strategy_weights && message.strategy_weights.length) {
+                        object.strategy_weights = [];
+                        for (var j = 0; j < message.strategy_weights.length; ++j)
+                            object.strategy_weights[j] = $root.ununifi.yieldaggregator.StrategyWeight.toObject(message.strategy_weights[j], options);
+                    }
+                    if (message.fee != null && message.hasOwnProperty("fee"))
+                        object.fee = $root.cosmos.base.v1beta1.Coin.toObject(message.fee, options);
+                    if (message.deposit != null && message.hasOwnProperty("deposit"))
+                        object.deposit = $root.cosmos.base.v1beta1.Coin.toObject(message.deposit, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this MsgCreateVault to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgCreateVault.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgCreateVault;
+            })();
+    
+            yieldaggregator.MsgCreateVaultResponse = (function() {
+    
+                /**
+                 * Properties of a MsgCreateVaultResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IMsgCreateVaultResponse
+                 */
+    
+                /**
+                 * Constructs a new MsgCreateVaultResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a MsgCreateVaultResponse.
+                 * @implements IMsgCreateVaultResponse
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IMsgCreateVaultResponse=} [properties] Properties to set
+                 */
+                function MsgCreateVaultResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Encodes the specified MsgCreateVaultResponse message. Does not implicitly {@link ununifi.yieldaggregator.MsgCreateVaultResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.MsgCreateVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgCreateVaultResponse} message MsgCreateVaultResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgCreateVaultResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgCreateVaultResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgCreateVaultResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgCreateVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgCreateVaultResponse} message MsgCreateVaultResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgCreateVaultResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgCreateVaultResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.MsgCreateVaultResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.MsgCreateVaultResponse} MsgCreateVaultResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgCreateVaultResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.MsgCreateVaultResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgCreateVaultResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgCreateVaultResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.MsgCreateVaultResponse} MsgCreateVaultResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgCreateVaultResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgCreateVaultResponse message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.MsgCreateVaultResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgCreateVaultResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgCreateVaultResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.MsgCreateVaultResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.MsgCreateVaultResponse} MsgCreateVaultResponse
+                 */
+                MsgCreateVaultResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.MsgCreateVaultResponse)
+                        return object;
+                    return new $root.ununifi.yieldaggregator.MsgCreateVaultResponse();
+                };
+    
+                /**
+                 * Creates a plain object from a MsgCreateVaultResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.MsgCreateVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.MsgCreateVaultResponse} message MsgCreateVaultResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgCreateVaultResponse.toObject = function toObject() {
+                    return {};
+                };
+    
+                /**
+                 * Converts this MsgCreateVaultResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.MsgCreateVaultResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgCreateVaultResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgCreateVaultResponse;
+            })();
+    
+            yieldaggregator.MsgDeleteVault = (function() {
+    
+                /**
+                 * Properties of a MsgDeleteVault.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IMsgDeleteVault
+                 * @property {string|null} [sender] MsgDeleteVault sender
+                 * @property {Long|null} [vault_id] MsgDeleteVault vault_id
+                 */
+    
+                /**
+                 * Constructs a new MsgDeleteVault.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a MsgDeleteVault.
+                 * @implements IMsgDeleteVault
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IMsgDeleteVault=} [properties] Properties to set
+                 */
+                function MsgDeleteVault(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * MsgDeleteVault sender.
+                 * @member {string} sender
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVault
+                 * @instance
+                 */
+                MsgDeleteVault.prototype.sender = "";
+    
+                /**
+                 * MsgDeleteVault vault_id.
+                 * @member {Long} vault_id
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVault
+                 * @instance
+                 */
+                MsgDeleteVault.prototype.vault_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * Encodes the specified MsgDeleteVault message. Does not implicitly {@link ununifi.yieldaggregator.MsgDeleteVault.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVault
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgDeleteVault} message MsgDeleteVault message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgDeleteVault.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                    if (message.vault_id != null && Object.hasOwnProperty.call(message, "vault_id"))
+                        writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.vault_id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgDeleteVault message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgDeleteVault.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVault
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgDeleteVault} message MsgDeleteVault message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgDeleteVault.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgDeleteVault message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVault
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.MsgDeleteVault} MsgDeleteVault
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgDeleteVault.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.MsgDeleteVault();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.sender = reader.string();
+                            break;
+                        case 2:
+                            message.vault_id = reader.uint64();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgDeleteVault message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVault
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.MsgDeleteVault} MsgDeleteVault
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgDeleteVault.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgDeleteVault message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVault
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgDeleteVault.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        if (!$util.isString(message.sender))
+                            return "sender: string expected";
+                    if (message.vault_id != null && message.hasOwnProperty("vault_id"))
+                        if (!$util.isInteger(message.vault_id) && !(message.vault_id && $util.isInteger(message.vault_id.low) && $util.isInteger(message.vault_id.high)))
+                            return "vault_id: integer|Long expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgDeleteVault message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVault
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.MsgDeleteVault} MsgDeleteVault
+                 */
+                MsgDeleteVault.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.MsgDeleteVault)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.MsgDeleteVault();
+                    if (object.sender != null)
+                        message.sender = String(object.sender);
+                    if (object.vault_id != null)
+                        if ($util.Long)
+                            (message.vault_id = $util.Long.fromValue(object.vault_id)).unsigned = true;
+                        else if (typeof object.vault_id === "string")
+                            message.vault_id = parseInt(object.vault_id, 10);
+                        else if (typeof object.vault_id === "number")
+                            message.vault_id = object.vault_id;
+                        else if (typeof object.vault_id === "object")
+                            message.vault_id = new $util.LongBits(object.vault_id.low >>> 0, object.vault_id.high >>> 0).toNumber(true);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a MsgDeleteVault message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVault
+                 * @static
+                 * @param {ununifi.yieldaggregator.MsgDeleteVault} message MsgDeleteVault
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgDeleteVault.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.sender = "";
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.vault_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.vault_id = options.longs === String ? "0" : 0;
+                    }
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        object.sender = message.sender;
+                    if (message.vault_id != null && message.hasOwnProperty("vault_id"))
+                        if (typeof message.vault_id === "number")
+                            object.vault_id = options.longs === String ? String(message.vault_id) : message.vault_id;
+                        else
+                            object.vault_id = options.longs === String ? $util.Long.prototype.toString.call(message.vault_id) : options.longs === Number ? new $util.LongBits(message.vault_id.low >>> 0, message.vault_id.high >>> 0).toNumber(true) : message.vault_id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this MsgDeleteVault to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVault
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgDeleteVault.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgDeleteVault;
+            })();
+    
+            yieldaggregator.MsgDeleteVaultResponse = (function() {
+    
+                /**
+                 * Properties of a MsgDeleteVaultResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IMsgDeleteVaultResponse
+                 */
+    
+                /**
+                 * Constructs a new MsgDeleteVaultResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a MsgDeleteVaultResponse.
+                 * @implements IMsgDeleteVaultResponse
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IMsgDeleteVaultResponse=} [properties] Properties to set
+                 */
+                function MsgDeleteVaultResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Encodes the specified MsgDeleteVaultResponse message. Does not implicitly {@link ununifi.yieldaggregator.MsgDeleteVaultResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgDeleteVaultResponse} message MsgDeleteVaultResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgDeleteVaultResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgDeleteVaultResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgDeleteVaultResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgDeleteVaultResponse} message MsgDeleteVaultResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgDeleteVaultResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgDeleteVaultResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVaultResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.MsgDeleteVaultResponse} MsgDeleteVaultResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgDeleteVaultResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.MsgDeleteVaultResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgDeleteVaultResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVaultResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.MsgDeleteVaultResponse} MsgDeleteVaultResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgDeleteVaultResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgDeleteVaultResponse message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVaultResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgDeleteVaultResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgDeleteVaultResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVaultResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.MsgDeleteVaultResponse} MsgDeleteVaultResponse
+                 */
+                MsgDeleteVaultResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.MsgDeleteVaultResponse)
+                        return object;
+                    return new $root.ununifi.yieldaggregator.MsgDeleteVaultResponse();
+                };
+    
+                /**
+                 * Creates a plain object from a MsgDeleteVaultResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVaultResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.MsgDeleteVaultResponse} message MsgDeleteVaultResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgDeleteVaultResponse.toObject = function toObject() {
+                    return {};
+                };
+    
+                /**
+                 * Converts this MsgDeleteVaultResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.MsgDeleteVaultResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgDeleteVaultResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgDeleteVaultResponse;
+            })();
+    
+            yieldaggregator.MsgTransferVaultOwnership = (function() {
+    
+                /**
+                 * Properties of a MsgTransferVaultOwnership.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IMsgTransferVaultOwnership
+                 * @property {string|null} [sender] MsgTransferVaultOwnership sender
+                 * @property {Long|null} [vault_id] MsgTransferVaultOwnership vault_id
+                 * @property {string|null} [recipient] MsgTransferVaultOwnership recipient
+                 */
+    
+                /**
+                 * Constructs a new MsgTransferVaultOwnership.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a MsgTransferVaultOwnership.
+                 * @implements IMsgTransferVaultOwnership
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IMsgTransferVaultOwnership=} [properties] Properties to set
+                 */
+                function MsgTransferVaultOwnership(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * MsgTransferVaultOwnership sender.
+                 * @member {string} sender
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnership
+                 * @instance
+                 */
+                MsgTransferVaultOwnership.prototype.sender = "";
+    
+                /**
+                 * MsgTransferVaultOwnership vault_id.
+                 * @member {Long} vault_id
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnership
+                 * @instance
+                 */
+                MsgTransferVaultOwnership.prototype.vault_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * MsgTransferVaultOwnership recipient.
+                 * @member {string} recipient
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnership
+                 * @instance
+                 */
+                MsgTransferVaultOwnership.prototype.recipient = "";
+    
+                /**
+                 * Encodes the specified MsgTransferVaultOwnership message. Does not implicitly {@link ununifi.yieldaggregator.MsgTransferVaultOwnership.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnership
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgTransferVaultOwnership} message MsgTransferVaultOwnership message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgTransferVaultOwnership.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
+                    if (message.vault_id != null && Object.hasOwnProperty.call(message, "vault_id"))
+                        writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.vault_id);
+                    if (message.recipient != null && Object.hasOwnProperty.call(message, "recipient"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.recipient);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgTransferVaultOwnership message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgTransferVaultOwnership.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnership
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgTransferVaultOwnership} message MsgTransferVaultOwnership message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgTransferVaultOwnership.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgTransferVaultOwnership message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnership
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.MsgTransferVaultOwnership} MsgTransferVaultOwnership
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgTransferVaultOwnership.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.MsgTransferVaultOwnership();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.sender = reader.string();
+                            break;
+                        case 2:
+                            message.vault_id = reader.uint64();
+                            break;
+                        case 3:
+                            message.recipient = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgTransferVaultOwnership message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnership
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.MsgTransferVaultOwnership} MsgTransferVaultOwnership
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgTransferVaultOwnership.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgTransferVaultOwnership message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnership
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgTransferVaultOwnership.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        if (!$util.isString(message.sender))
+                            return "sender: string expected";
+                    if (message.vault_id != null && message.hasOwnProperty("vault_id"))
+                        if (!$util.isInteger(message.vault_id) && !(message.vault_id && $util.isInteger(message.vault_id.low) && $util.isInteger(message.vault_id.high)))
+                            return "vault_id: integer|Long expected";
+                    if (message.recipient != null && message.hasOwnProperty("recipient"))
+                        if (!$util.isString(message.recipient))
+                            return "recipient: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgTransferVaultOwnership message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnership
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.MsgTransferVaultOwnership} MsgTransferVaultOwnership
+                 */
+                MsgTransferVaultOwnership.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.MsgTransferVaultOwnership)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.MsgTransferVaultOwnership();
+                    if (object.sender != null)
+                        message.sender = String(object.sender);
+                    if (object.vault_id != null)
+                        if ($util.Long)
+                            (message.vault_id = $util.Long.fromValue(object.vault_id)).unsigned = true;
+                        else if (typeof object.vault_id === "string")
+                            message.vault_id = parseInt(object.vault_id, 10);
+                        else if (typeof object.vault_id === "number")
+                            message.vault_id = object.vault_id;
+                        else if (typeof object.vault_id === "object")
+                            message.vault_id = new $util.LongBits(object.vault_id.low >>> 0, object.vault_id.high >>> 0).toNumber(true);
+                    if (object.recipient != null)
+                        message.recipient = String(object.recipient);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a MsgTransferVaultOwnership message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnership
+                 * @static
+                 * @param {ununifi.yieldaggregator.MsgTransferVaultOwnership} message MsgTransferVaultOwnership
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgTransferVaultOwnership.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.sender = "";
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.vault_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.vault_id = options.longs === String ? "0" : 0;
+                        object.recipient = "";
+                    }
+                    if (message.sender != null && message.hasOwnProperty("sender"))
+                        object.sender = message.sender;
+                    if (message.vault_id != null && message.hasOwnProperty("vault_id"))
+                        if (typeof message.vault_id === "number")
+                            object.vault_id = options.longs === String ? String(message.vault_id) : message.vault_id;
+                        else
+                            object.vault_id = options.longs === String ? $util.Long.prototype.toString.call(message.vault_id) : options.longs === Number ? new $util.LongBits(message.vault_id.low >>> 0, message.vault_id.high >>> 0).toNumber(true) : message.vault_id;
+                    if (message.recipient != null && message.hasOwnProperty("recipient"))
+                        object.recipient = message.recipient;
+                    return object;
+                };
+    
+                /**
+                 * Converts this MsgTransferVaultOwnership to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnership
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgTransferVaultOwnership.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgTransferVaultOwnership;
+            })();
+    
+            yieldaggregator.MsgTransferVaultOwnershipResponse = (function() {
+    
+                /**
+                 * Properties of a MsgTransferVaultOwnershipResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IMsgTransferVaultOwnershipResponse
+                 */
+    
+                /**
+                 * Constructs a new MsgTransferVaultOwnershipResponse.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a MsgTransferVaultOwnershipResponse.
+                 * @implements IMsgTransferVaultOwnershipResponse
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IMsgTransferVaultOwnershipResponse=} [properties] Properties to set
+                 */
+                function MsgTransferVaultOwnershipResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Encodes the specified MsgTransferVaultOwnershipResponse message. Does not implicitly {@link ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgTransferVaultOwnershipResponse} message MsgTransferVaultOwnershipResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgTransferVaultOwnershipResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified MsgTransferVaultOwnershipResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.IMsgTransferVaultOwnershipResponse} message MsgTransferVaultOwnershipResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MsgTransferVaultOwnershipResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a MsgTransferVaultOwnershipResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse} MsgTransferVaultOwnershipResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgTransferVaultOwnershipResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a MsgTransferVaultOwnershipResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse} MsgTransferVaultOwnershipResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MsgTransferVaultOwnershipResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a MsgTransferVaultOwnershipResponse message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MsgTransferVaultOwnershipResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a MsgTransferVaultOwnershipResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse} MsgTransferVaultOwnershipResponse
+                 */
+                MsgTransferVaultOwnershipResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse)
+                        return object;
+                    return new $root.ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse();
+                };
+    
+                /**
+                 * Creates a plain object from a MsgTransferVaultOwnershipResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse
+                 * @static
+                 * @param {ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse} message MsgTransferVaultOwnershipResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MsgTransferVaultOwnershipResponse.toObject = function toObject() {
+                    return {};
+                };
+    
+                /**
+                 * Converts this MsgTransferVaultOwnershipResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MsgTransferVaultOwnershipResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return MsgTransferVaultOwnershipResponse;
+            })();
+    
+            yieldaggregator.GenesisState = (function() {
+    
+                /**
+                 * Properties of a GenesisState.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IGenesisState
+                 * @property {ununifi.yieldaggregator.IParams|null} [params] GenesisState params
+                 * @property {Array.<ununifi.yieldaggregator.IVault>|null} [vaults] GenesisState vaults
+                 * @property {Array.<ununifi.yieldaggregator.IStrategy>|null} [strategies] GenesisState strategies
+                 */
+    
+                /**
+                 * Constructs a new GenesisState.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a GenesisState.
+                 * @implements IGenesisState
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IGenesisState=} [properties] Properties to set
+                 */
+                function GenesisState(properties) {
+                    this.vaults = [];
+                    this.strategies = [];
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * GenesisState params.
+                 * @member {ununifi.yieldaggregator.IParams|null|undefined} params
+                 * @memberof ununifi.yieldaggregator.GenesisState
+                 * @instance
+                 */
+                GenesisState.prototype.params = null;
+    
+                /**
+                 * GenesisState vaults.
+                 * @member {Array.<ununifi.yieldaggregator.IVault>} vaults
+                 * @memberof ununifi.yieldaggregator.GenesisState
+                 * @instance
+                 */
+                GenesisState.prototype.vaults = $util.emptyArray;
+    
+                /**
+                 * GenesisState strategies.
+                 * @member {Array.<ununifi.yieldaggregator.IStrategy>} strategies
+                 * @memberof ununifi.yieldaggregator.GenesisState
+                 * @instance
+                 */
+                GenesisState.prototype.strategies = $util.emptyArray;
+    
+                /**
+                 * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.yieldaggregator.GenesisState.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.GenesisState
+                 * @static
+                 * @param {ununifi.yieldaggregator.IGenesisState} message GenesisState message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                GenesisState.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.params != null && Object.hasOwnProperty.call(message, "params"))
+                        $root.ununifi.yieldaggregator.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.vaults != null && message.vaults.length)
+                        for (var i = 0; i < message.vaults.length; ++i)
+                            $root.ununifi.yieldaggregator.Vault.encode(message.vaults[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    if (message.strategies != null && message.strategies.length)
+                        for (var i = 0; i < message.strategies.length; ++i)
+                            $root.ununifi.yieldaggregator.Strategy.encode(message.strategies[i], writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.GenesisState.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.GenesisState
+                 * @static
+                 * @param {ununifi.yieldaggregator.IGenesisState} message GenesisState message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                GenesisState.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a GenesisState message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.GenesisState
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.GenesisState} GenesisState
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                GenesisState.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.GenesisState();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.params = $root.ununifi.yieldaggregator.Params.decode(reader, reader.uint32());
+                            break;
+                        case 2:
+                            if (!(message.vaults && message.vaults.length))
+                                message.vaults = [];
+                            message.vaults.push($root.ununifi.yieldaggregator.Vault.decode(reader, reader.uint32()));
+                            break;
+                        case 3:
+                            if (!(message.strategies && message.strategies.length))
+                                message.strategies = [];
+                            message.strategies.push($root.ununifi.yieldaggregator.Strategy.decode(reader, reader.uint32()));
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a GenesisState message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.GenesisState
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.GenesisState} GenesisState
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                GenesisState.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a GenesisState message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.GenesisState
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                GenesisState.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.params != null && message.hasOwnProperty("params")) {
+                        var error = $root.ununifi.yieldaggregator.Params.verify(message.params);
+                        if (error)
+                            return "params." + error;
+                    }
+                    if (message.vaults != null && message.hasOwnProperty("vaults")) {
+                        if (!Array.isArray(message.vaults))
+                            return "vaults: array expected";
+                        for (var i = 0; i < message.vaults.length; ++i) {
+                            var error = $root.ununifi.yieldaggregator.Vault.verify(message.vaults[i]);
+                            if (error)
+                                return "vaults." + error;
+                        }
+                    }
+                    if (message.strategies != null && message.hasOwnProperty("strategies")) {
+                        if (!Array.isArray(message.strategies))
+                            return "strategies: array expected";
+                        for (var i = 0; i < message.strategies.length; ++i) {
+                            var error = $root.ununifi.yieldaggregator.Strategy.verify(message.strategies[i]);
+                            if (error)
+                                return "strategies." + error;
+                        }
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a GenesisState message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.GenesisState
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.GenesisState} GenesisState
+                 */
+                GenesisState.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.GenesisState)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.GenesisState();
+                    if (object.params != null) {
+                        if (typeof object.params !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.GenesisState.params: object expected");
+                        message.params = $root.ununifi.yieldaggregator.Params.fromObject(object.params);
+                    }
+                    if (object.vaults) {
+                        if (!Array.isArray(object.vaults))
+                            throw TypeError(".ununifi.yieldaggregator.GenesisState.vaults: array expected");
+                        message.vaults = [];
+                        for (var i = 0; i < object.vaults.length; ++i) {
+                            if (typeof object.vaults[i] !== "object")
+                                throw TypeError(".ununifi.yieldaggregator.GenesisState.vaults: object expected");
+                            message.vaults[i] = $root.ununifi.yieldaggregator.Vault.fromObject(object.vaults[i]);
+                        }
+                    }
+                    if (object.strategies) {
+                        if (!Array.isArray(object.strategies))
+                            throw TypeError(".ununifi.yieldaggregator.GenesisState.strategies: array expected");
+                        message.strategies = [];
+                        for (var i = 0; i < object.strategies.length; ++i) {
+                            if (typeof object.strategies[i] !== "object")
+                                throw TypeError(".ununifi.yieldaggregator.GenesisState.strategies: object expected");
+                            message.strategies[i] = $root.ununifi.yieldaggregator.Strategy.fromObject(object.strategies[i]);
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a GenesisState message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.GenesisState
+                 * @static
+                 * @param {ununifi.yieldaggregator.GenesisState} message GenesisState
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                GenesisState.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.arrays || options.defaults) {
+                        object.vaults = [];
+                        object.strategies = [];
+                    }
+                    if (options.defaults)
+                        object.params = null;
+                    if (message.params != null && message.hasOwnProperty("params"))
+                        object.params = $root.ununifi.yieldaggregator.Params.toObject(message.params, options);
+                    if (message.vaults && message.vaults.length) {
+                        object.vaults = [];
+                        for (var j = 0; j < message.vaults.length; ++j)
+                            object.vaults[j] = $root.ununifi.yieldaggregator.Vault.toObject(message.vaults[j], options);
+                    }
+                    if (message.strategies && message.strategies.length) {
+                        object.strategies = [];
+                        for (var j = 0; j < message.strategies.length; ++j)
+                            object.strategies[j] = $root.ununifi.yieldaggregator.Strategy.toObject(message.strategies[j], options);
+                    }
+                    return object;
+                };
+    
+                /**
+                 * Converts this GenesisState to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.GenesisState
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                GenesisState.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return GenesisState;
+            })();
+    
+            yieldaggregator.ProposalAddStrategy = (function() {
+    
+                /**
+                 * Properties of a ProposalAddStrategy.
+                 * @memberof ununifi.yieldaggregator
+                 * @interface IProposalAddStrategy
+                 * @property {string|null} [title] ProposalAddStrategy title
+                 * @property {string|null} [description] ProposalAddStrategy description
+                 * @property {string|null} [denom] ProposalAddStrategy denom
+                 * @property {string|null} [contract_address] ProposalAddStrategy contract_address
+                 * @property {string|null} [name] ProposalAddStrategy name
+                 */
+    
+                /**
+                 * Constructs a new ProposalAddStrategy.
+                 * @memberof ununifi.yieldaggregator
+                 * @classdesc Represents a ProposalAddStrategy.
+                 * @implements IProposalAddStrategy
+                 * @constructor
+                 * @param {ununifi.yieldaggregator.IProposalAddStrategy=} [properties] Properties to set
+                 */
+                function ProposalAddStrategy(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * ProposalAddStrategy title.
+                 * @member {string} title
+                 * @memberof ununifi.yieldaggregator.ProposalAddStrategy
+                 * @instance
+                 */
+                ProposalAddStrategy.prototype.title = "";
+    
+                /**
+                 * ProposalAddStrategy description.
+                 * @member {string} description
+                 * @memberof ununifi.yieldaggregator.ProposalAddStrategy
+                 * @instance
+                 */
+                ProposalAddStrategy.prototype.description = "";
+    
+                /**
+                 * ProposalAddStrategy denom.
+                 * @member {string} denom
+                 * @memberof ununifi.yieldaggregator.ProposalAddStrategy
+                 * @instance
+                 */
+                ProposalAddStrategy.prototype.denom = "";
+    
+                /**
+                 * ProposalAddStrategy contract_address.
+                 * @member {string} contract_address
+                 * @memberof ununifi.yieldaggregator.ProposalAddStrategy
+                 * @instance
+                 */
+                ProposalAddStrategy.prototype.contract_address = "";
+    
+                /**
+                 * ProposalAddStrategy name.
+                 * @member {string} name
+                 * @memberof ununifi.yieldaggregator.ProposalAddStrategy
+                 * @instance
+                 */
+                ProposalAddStrategy.prototype.name = "";
+    
+                /**
+                 * Encodes the specified ProposalAddStrategy message. Does not implicitly {@link ununifi.yieldaggregator.ProposalAddStrategy.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.yieldaggregator.ProposalAddStrategy
+                 * @static
+                 * @param {ununifi.yieldaggregator.IProposalAddStrategy} message ProposalAddStrategy message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                ProposalAddStrategy.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.title != null && Object.hasOwnProperty.call(message, "title"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.title);
+                    if (message.description != null && Object.hasOwnProperty.call(message, "description"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.description);
+                    if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.denom);
+                    if (message.contract_address != null && Object.hasOwnProperty.call(message, "contract_address"))
+                        writer.uint32(/* id 4, wireType 2 =*/34).string(message.contract_address);
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                        writer.uint32(/* id 5, wireType 2 =*/42).string(message.name);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified ProposalAddStrategy message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.ProposalAddStrategy.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.yieldaggregator.ProposalAddStrategy
+                 * @static
+                 * @param {ununifi.yieldaggregator.IProposalAddStrategy} message ProposalAddStrategy message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                ProposalAddStrategy.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a ProposalAddStrategy message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.yieldaggregator.ProposalAddStrategy
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.yieldaggregator.ProposalAddStrategy} ProposalAddStrategy
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                ProposalAddStrategy.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.yieldaggregator.ProposalAddStrategy();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.title = reader.string();
+                            break;
+                        case 2:
+                            message.description = reader.string();
+                            break;
+                        case 3:
+                            message.denom = reader.string();
+                            break;
+                        case 4:
+                            message.contract_address = reader.string();
+                            break;
+                        case 5:
+                            message.name = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a ProposalAddStrategy message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.yieldaggregator.ProposalAddStrategy
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.yieldaggregator.ProposalAddStrategy} ProposalAddStrategy
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                ProposalAddStrategy.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a ProposalAddStrategy message.
+                 * @function verify
+                 * @memberof ununifi.yieldaggregator.ProposalAddStrategy
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                ProposalAddStrategy.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.title != null && message.hasOwnProperty("title"))
+                        if (!$util.isString(message.title))
+                            return "title: string expected";
+                    if (message.description != null && message.hasOwnProperty("description"))
+                        if (!$util.isString(message.description))
+                            return "description: string expected";
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        if (!$util.isString(message.denom))
+                            return "denom: string expected";
+                    if (message.contract_address != null && message.hasOwnProperty("contract_address"))
+                        if (!$util.isString(message.contract_address))
+                            return "contract_address: string expected";
+                    if (message.name != null && message.hasOwnProperty("name"))
+                        if (!$util.isString(message.name))
+                            return "name: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a ProposalAddStrategy message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.yieldaggregator.ProposalAddStrategy
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.yieldaggregator.ProposalAddStrategy} ProposalAddStrategy
+                 */
+                ProposalAddStrategy.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.yieldaggregator.ProposalAddStrategy)
+                        return object;
+                    var message = new $root.ununifi.yieldaggregator.ProposalAddStrategy();
+                    if (object.title != null)
+                        message.title = String(object.title);
+                    if (object.description != null)
+                        message.description = String(object.description);
+                    if (object.denom != null)
+                        message.denom = String(object.denom);
+                    if (object.contract_address != null)
+                        message.contract_address = String(object.contract_address);
+                    if (object.name != null)
+                        message.name = String(object.name);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a ProposalAddStrategy message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.yieldaggregator.ProposalAddStrategy
+                 * @static
+                 * @param {ununifi.yieldaggregator.ProposalAddStrategy} message ProposalAddStrategy
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                ProposalAddStrategy.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.title = "";
+                        object.description = "";
+                        object.denom = "";
+                        object.contract_address = "";
+                        object.name = "";
+                    }
+                    if (message.title != null && message.hasOwnProperty("title"))
+                        object.title = message.title;
+                    if (message.description != null && message.hasOwnProperty("description"))
+                        object.description = message.description;
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        object.denom = message.denom;
+                    if (message.contract_address != null && message.hasOwnProperty("contract_address"))
+                        object.contract_address = message.contract_address;
+                    if (message.name != null && message.hasOwnProperty("name"))
+                        object.name = message.name;
+                    return object;
+                };
+    
+                /**
+                 * Converts this ProposalAddStrategy to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.yieldaggregator.ProposalAddStrategy
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                ProposalAddStrategy.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return ProposalAddStrategy;
+            })();
+    
+            return yieldaggregator;
+        })();
+    
         ununifi.chain = (function() {
     
             /**
@@ -19527,7156 +26744,6 @@
              * @namespace
              */
             var chain = {};
-    
-            chain.yieldaggregator = (function() {
-    
-                /**
-                 * Namespace yieldaggregator.
-                 * @memberof ununifi.chain
-                 * @namespace
-                 */
-                var yieldaggregator = {};
-    
-                yieldaggregator.Query = (function() {
-    
-                    /**
-                     * Constructs a new Query service.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a Query
-                     * @extends $protobuf.rpc.Service
-                     * @constructor
-                     * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
-                     * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
-                     * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
-                     */
-                    function Query(rpcImpl, requestDelimited, responseDelimited) {
-                        $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
-                    }
-    
-                    (Query.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Query;
-    
-                    /**
-                     * Callback as used by {@link ununifi.chain.yieldaggregator.Query#params}.
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @typedef ParamsCallback
-                     * @type {function}
-                     * @param {Error|null} error Error, if any
-                     * @param {ununifi.chain.yieldaggregator.QueryParamsResponse} [response] QueryParamsResponse
-                     */
-    
-                    /**
-                     * Calls Params.
-                     * @function params
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryParamsRequest} request QueryParamsRequest message or plain object
-                     * @param {ununifi.chain.yieldaggregator.Query.ParamsCallback} callback Node-style callback called with the error, if any, and QueryParamsResponse
-                     * @returns {undefined}
-                     * @variation 1
-                     */
-                    Object.defineProperty(Query.prototype.params = function params(request, callback) {
-                        return this.rpcCall(params, $root.ununifi.chain.yieldaggregator.QueryParamsRequest, $root.ununifi.chain.yieldaggregator.QueryParamsResponse, request, callback);
-                    }, "name", { value: "Params" });
-    
-                    /**
-                     * Calls Params.
-                     * @function params
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryParamsRequest} request QueryParamsRequest message or plain object
-                     * @returns {Promise<ununifi.chain.yieldaggregator.QueryParamsResponse>} Promise
-                     * @variation 2
-                     */
-    
-                    /**
-                     * Callback as used by {@link ununifi.chain.yieldaggregator.Query#vaultAll}.
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @typedef VaultAllCallback
-                     * @type {function}
-                     * @param {Error|null} error Error, if any
-                     * @param {ununifi.chain.yieldaggregator.QueryAllVaultResponse} [response] QueryAllVaultResponse
-                     */
-    
-                    /**
-                     * Calls VaultAll.
-                     * @function vaultAll
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllVaultRequest} request QueryAllVaultRequest message or plain object
-                     * @param {ununifi.chain.yieldaggregator.Query.VaultAllCallback} callback Node-style callback called with the error, if any, and QueryAllVaultResponse
-                     * @returns {undefined}
-                     * @variation 1
-                     */
-                    Object.defineProperty(Query.prototype.vaultAll = function vaultAll(request, callback) {
-                        return this.rpcCall(vaultAll, $root.ununifi.chain.yieldaggregator.QueryAllVaultRequest, $root.ununifi.chain.yieldaggregator.QueryAllVaultResponse, request, callback);
-                    }, "name", { value: "VaultAll" });
-    
-                    /**
-                     * Calls VaultAll.
-                     * @function vaultAll
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllVaultRequest} request QueryAllVaultRequest message or plain object
-                     * @returns {Promise<ununifi.chain.yieldaggregator.QueryAllVaultResponse>} Promise
-                     * @variation 2
-                     */
-    
-                    /**
-                     * Callback as used by {@link ununifi.chain.yieldaggregator.Query#vault}.
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @typedef VaultCallback
-                     * @type {function}
-                     * @param {Error|null} error Error, if any
-                     * @param {ununifi.chain.yieldaggregator.QueryGetVaultResponse} [response] QueryGetVaultResponse
-                     */
-    
-                    /**
-                     * Calls Vault.
-                     * @function vault
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetVaultRequest} request QueryGetVaultRequest message or plain object
-                     * @param {ununifi.chain.yieldaggregator.Query.VaultCallback} callback Node-style callback called with the error, if any, and QueryGetVaultResponse
-                     * @returns {undefined}
-                     * @variation 1
-                     */
-                    Object.defineProperty(Query.prototype.vault = function vault(request, callback) {
-                        return this.rpcCall(vault, $root.ununifi.chain.yieldaggregator.QueryGetVaultRequest, $root.ununifi.chain.yieldaggregator.QueryGetVaultResponse, request, callback);
-                    }, "name", { value: "Vault" });
-    
-                    /**
-                     * Calls Vault.
-                     * @function vault
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetVaultRequest} request QueryGetVaultRequest message or plain object
-                     * @returns {Promise<ununifi.chain.yieldaggregator.QueryGetVaultResponse>} Promise
-                     * @variation 2
-                     */
-    
-                    /**
-                     * Callback as used by {@link ununifi.chain.yieldaggregator.Query#strategyAll}.
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @typedef StrategyAllCallback
-                     * @type {function}
-                     * @param {Error|null} error Error, if any
-                     * @param {ununifi.chain.yieldaggregator.QueryAllStrategyResponse} [response] QueryAllStrategyResponse
-                     */
-    
-                    /**
-                     * Calls StrategyAll.
-                     * @function strategyAll
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllStrategyRequest} request QueryAllStrategyRequest message or plain object
-                     * @param {ununifi.chain.yieldaggregator.Query.StrategyAllCallback} callback Node-style callback called with the error, if any, and QueryAllStrategyResponse
-                     * @returns {undefined}
-                     * @variation 1
-                     */
-                    Object.defineProperty(Query.prototype.strategyAll = function strategyAll(request, callback) {
-                        return this.rpcCall(strategyAll, $root.ununifi.chain.yieldaggregator.QueryAllStrategyRequest, $root.ununifi.chain.yieldaggregator.QueryAllStrategyResponse, request, callback);
-                    }, "name", { value: "StrategyAll" });
-    
-                    /**
-                     * Calls StrategyAll.
-                     * @function strategyAll
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllStrategyRequest} request QueryAllStrategyRequest message or plain object
-                     * @returns {Promise<ununifi.chain.yieldaggregator.QueryAllStrategyResponse>} Promise
-                     * @variation 2
-                     */
-    
-                    /**
-                     * Callback as used by {@link ununifi.chain.yieldaggregator.Query#strategy}.
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @typedef StrategyCallback
-                     * @type {function}
-                     * @param {Error|null} error Error, if any
-                     * @param {ununifi.chain.yieldaggregator.QueryGetStrategyResponse} [response] QueryGetStrategyResponse
-                     */
-    
-                    /**
-                     * Calls Strategy.
-                     * @function strategy
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetStrategyRequest} request QueryGetStrategyRequest message or plain object
-                     * @param {ununifi.chain.yieldaggregator.Query.StrategyCallback} callback Node-style callback called with the error, if any, and QueryGetStrategyResponse
-                     * @returns {undefined}
-                     * @variation 1
-                     */
-                    Object.defineProperty(Query.prototype.strategy = function strategy(request, callback) {
-                        return this.rpcCall(strategy, $root.ununifi.chain.yieldaggregator.QueryGetStrategyRequest, $root.ununifi.chain.yieldaggregator.QueryGetStrategyResponse, request, callback);
-                    }, "name", { value: "Strategy" });
-    
-                    /**
-                     * Calls Strategy.
-                     * @function strategy
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetStrategyRequest} request QueryGetStrategyRequest message or plain object
-                     * @returns {Promise<ununifi.chain.yieldaggregator.QueryGetStrategyResponse>} Promise
-                     * @variation 2
-                     */
-    
-                    /**
-                     * Callback as used by {@link ununifi.chain.yieldaggregator.Query#estimateMintAmount}.
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @typedef EstimateMintAmountCallback
-                     * @type {function}
-                     * @param {Error|null} error Error, if any
-                     * @param {ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse} [response] QueryEstimateMintAmountResponse
-                     */
-    
-                    /**
-                     * Calls EstimateMintAmount.
-                     * @function estimateMintAmount
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateMintAmountRequest} request QueryEstimateMintAmountRequest message or plain object
-                     * @param {ununifi.chain.yieldaggregator.Query.EstimateMintAmountCallback} callback Node-style callback called with the error, if any, and QueryEstimateMintAmountResponse
-                     * @returns {undefined}
-                     * @variation 1
-                     */
-                    Object.defineProperty(Query.prototype.estimateMintAmount = function estimateMintAmount(request, callback) {
-                        return this.rpcCall(estimateMintAmount, $root.ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest, $root.ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse, request, callback);
-                    }, "name", { value: "EstimateMintAmount" });
-    
-                    /**
-                     * Calls EstimateMintAmount.
-                     * @function estimateMintAmount
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateMintAmountRequest} request QueryEstimateMintAmountRequest message or plain object
-                     * @returns {Promise<ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse>} Promise
-                     * @variation 2
-                     */
-    
-                    /**
-                     * Callback as used by {@link ununifi.chain.yieldaggregator.Query#estimateRedeemAmount}.
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @typedef EstimateRedeemAmountCallback
-                     * @type {function}
-                     * @param {Error|null} error Error, if any
-                     * @param {ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse} [response] QueryEstimateRedeemAmountResponse
-                     */
-    
-                    /**
-                     * Calls EstimateRedeemAmount.
-                     * @function estimateRedeemAmount
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountRequest} request QueryEstimateRedeemAmountRequest message or plain object
-                     * @param {ununifi.chain.yieldaggregator.Query.EstimateRedeemAmountCallback} callback Node-style callback called with the error, if any, and QueryEstimateRedeemAmountResponse
-                     * @returns {undefined}
-                     * @variation 1
-                     */
-                    Object.defineProperty(Query.prototype.estimateRedeemAmount = function estimateRedeemAmount(request, callback) {
-                        return this.rpcCall(estimateRedeemAmount, $root.ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest, $root.ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse, request, callback);
-                    }, "name", { value: "EstimateRedeemAmount" });
-    
-                    /**
-                     * Calls EstimateRedeemAmount.
-                     * @function estimateRedeemAmount
-                     * @memberof ununifi.chain.yieldaggregator.Query
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountRequest} request QueryEstimateRedeemAmountRequest message or plain object
-                     * @returns {Promise<ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse>} Promise
-                     * @variation 2
-                     */
-    
-                    return Query;
-                })();
-    
-                yieldaggregator.QueryParamsRequest = (function() {
-    
-                    /**
-                     * Properties of a QueryParamsRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryParamsRequest
-                     */
-    
-                    /**
-                     * Constructs a new QueryParamsRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryParamsRequest.
-                     * @implements IQueryParamsRequest
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryParamsRequest=} [properties] Properties to set
-                     */
-                    function QueryParamsRequest(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryParamsRequest.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryParamsRequest.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryParamsRequest.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryParamsRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryParamsRequest message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryParamsRequest} QueryParamsRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryParamsRequest.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryParamsRequest();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryParamsRequest} QueryParamsRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryParamsRequest.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryParamsRequest message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsRequest
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryParamsRequest.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsRequest
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryParamsRequest} QueryParamsRequest
-                     */
-                    QueryParamsRequest.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryParamsRequest)
-                            return object;
-                        return new $root.ununifi.chain.yieldaggregator.QueryParamsRequest();
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryParamsRequest} message QueryParamsRequest
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryParamsRequest.toObject = function toObject() {
-                        return {};
-                    };
-    
-                    /**
-                     * Converts this QueryParamsRequest to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsRequest
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryParamsRequest.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryParamsRequest;
-                })();
-    
-                yieldaggregator.QueryParamsResponse = (function() {
-    
-                    /**
-                     * Properties of a QueryParamsResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryParamsResponse
-                     * @property {ununifi.chain.yieldaggregator.IParams|null} [params] QueryParamsResponse params
-                     */
-    
-                    /**
-                     * Constructs a new QueryParamsResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryParamsResponse.
-                     * @implements IQueryParamsResponse
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryParamsResponse=} [properties] Properties to set
-                     */
-                    function QueryParamsResponse(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * QueryParamsResponse params.
-                     * @member {ununifi.chain.yieldaggregator.IParams|null|undefined} params
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsResponse
-                     * @instance
-                     */
-                    QueryParamsResponse.prototype.params = null;
-    
-                    /**
-                     * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryParamsResponse.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryParamsResponse.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.params != null && Object.hasOwnProperty.call(message, "params"))
-                            $root.ununifi.chain.yieldaggregator.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryParamsResponse.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryParamsResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryParamsResponse message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryParamsResponse} QueryParamsResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryParamsResponse.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryParamsResponse();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.params = $root.ununifi.chain.yieldaggregator.Params.decode(reader, reader.uint32());
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryParamsResponse} QueryParamsResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryParamsResponse.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryParamsResponse message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsResponse
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryParamsResponse.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.params != null && message.hasOwnProperty("params")) {
-                            var error = $root.ununifi.chain.yieldaggregator.Params.verify(message.params);
-                            if (error)
-                                return "params." + error;
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsResponse
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryParamsResponse} QueryParamsResponse
-                     */
-                    QueryParamsResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryParamsResponse)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.QueryParamsResponse();
-                        if (object.params != null) {
-                            if (typeof object.params !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.QueryParamsResponse.params: object expected");
-                            message.params = $root.ununifi.chain.yieldaggregator.Params.fromObject(object.params);
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryParamsResponse} message QueryParamsResponse
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryParamsResponse.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults)
-                            object.params = null;
-                        if (message.params != null && message.hasOwnProperty("params"))
-                            object.params = $root.ununifi.chain.yieldaggregator.Params.toObject(message.params, options);
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this QueryParamsResponse to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryParamsResponse
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryParamsResponse.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryParamsResponse;
-                })();
-    
-                yieldaggregator.QueryAllVaultRequest = (function() {
-    
-                    /**
-                     * Properties of a QueryAllVaultRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryAllVaultRequest
-                     * @property {cosmos.base.query.v1beta1.IPageRequest|null} [pagination] QueryAllVaultRequest pagination
-                     */
-    
-                    /**
-                     * Constructs a new QueryAllVaultRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryAllVaultRequest.
-                     * @implements IQueryAllVaultRequest
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllVaultRequest=} [properties] Properties to set
-                     */
-                    function QueryAllVaultRequest(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * QueryAllVaultRequest pagination.
-                     * @member {cosmos.base.query.v1beta1.IPageRequest|null|undefined} pagination
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultRequest
-                     * @instance
-                     */
-                    QueryAllVaultRequest.prototype.pagination = null;
-    
-                    /**
-                     * Encodes the specified QueryAllVaultRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllVaultRequest.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllVaultRequest} message QueryAllVaultRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryAllVaultRequest.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
-                            $root.cosmos.base.query.v1beta1.PageRequest.encode(message.pagination, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryAllVaultRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllVaultRequest.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllVaultRequest} message QueryAllVaultRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryAllVaultRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryAllVaultRequest message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryAllVaultRequest} QueryAllVaultRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryAllVaultRequest.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryAllVaultRequest();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.decode(reader, reader.uint32());
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryAllVaultRequest message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryAllVaultRequest} QueryAllVaultRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryAllVaultRequest.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryAllVaultRequest message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultRequest
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryAllVaultRequest.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.pagination != null && message.hasOwnProperty("pagination")) {
-                            var error = $root.cosmos.base.query.v1beta1.PageRequest.verify(message.pagination);
-                            if (error)
-                                return "pagination." + error;
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryAllVaultRequest message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultRequest
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryAllVaultRequest} QueryAllVaultRequest
-                     */
-                    QueryAllVaultRequest.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryAllVaultRequest)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.QueryAllVaultRequest();
-                        if (object.pagination != null) {
-                            if (typeof object.pagination !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.QueryAllVaultRequest.pagination: object expected");
-                            message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.fromObject(object.pagination);
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryAllVaultRequest message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryAllVaultRequest} message QueryAllVaultRequest
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryAllVaultRequest.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults)
-                            object.pagination = null;
-                        if (message.pagination != null && message.hasOwnProperty("pagination"))
-                            object.pagination = $root.cosmos.base.query.v1beta1.PageRequest.toObject(message.pagination, options);
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this QueryAllVaultRequest to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultRequest
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryAllVaultRequest.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryAllVaultRequest;
-                })();
-    
-                yieldaggregator.QueryAllVaultResponse = (function() {
-    
-                    /**
-                     * Properties of a QueryAllVaultResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryAllVaultResponse
-                     * @property {Array.<ununifi.chain.yieldaggregator.IVault>|null} [vaults] QueryAllVaultResponse vaults
-                     * @property {cosmos.base.query.v1beta1.IPageResponse|null} [pagination] QueryAllVaultResponse pagination
-                     */
-    
-                    /**
-                     * Constructs a new QueryAllVaultResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryAllVaultResponse.
-                     * @implements IQueryAllVaultResponse
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllVaultResponse=} [properties] Properties to set
-                     */
-                    function QueryAllVaultResponse(properties) {
-                        this.vaults = [];
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * QueryAllVaultResponse vaults.
-                     * @member {Array.<ununifi.chain.yieldaggregator.IVault>} vaults
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultResponse
-                     * @instance
-                     */
-                    QueryAllVaultResponse.prototype.vaults = $util.emptyArray;
-    
-                    /**
-                     * QueryAllVaultResponse pagination.
-                     * @member {cosmos.base.query.v1beta1.IPageResponse|null|undefined} pagination
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultResponse
-                     * @instance
-                     */
-                    QueryAllVaultResponse.prototype.pagination = null;
-    
-                    /**
-                     * Encodes the specified QueryAllVaultResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllVaultResponse.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllVaultResponse} message QueryAllVaultResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryAllVaultResponse.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.vaults != null && message.vaults.length)
-                            for (var i = 0; i < message.vaults.length; ++i)
-                                $root.ununifi.chain.yieldaggregator.Vault.encode(message.vaults[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                        if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
-                            $root.cosmos.base.query.v1beta1.PageResponse.encode(message.pagination, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryAllVaultResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllVaultResponse.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllVaultResponse} message QueryAllVaultResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryAllVaultResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryAllVaultResponse message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryAllVaultResponse} QueryAllVaultResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryAllVaultResponse.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryAllVaultResponse();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                if (!(message.vaults && message.vaults.length))
-                                    message.vaults = [];
-                                message.vaults.push($root.ununifi.chain.yieldaggregator.Vault.decode(reader, reader.uint32()));
-                                break;
-                            case 2:
-                                message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.decode(reader, reader.uint32());
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryAllVaultResponse message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryAllVaultResponse} QueryAllVaultResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryAllVaultResponse.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryAllVaultResponse message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultResponse
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryAllVaultResponse.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.vaults != null && message.hasOwnProperty("vaults")) {
-                            if (!Array.isArray(message.vaults))
-                                return "vaults: array expected";
-                            for (var i = 0; i < message.vaults.length; ++i) {
-                                var error = $root.ununifi.chain.yieldaggregator.Vault.verify(message.vaults[i]);
-                                if (error)
-                                    return "vaults." + error;
-                            }
-                        }
-                        if (message.pagination != null && message.hasOwnProperty("pagination")) {
-                            var error = $root.cosmos.base.query.v1beta1.PageResponse.verify(message.pagination);
-                            if (error)
-                                return "pagination." + error;
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryAllVaultResponse message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultResponse
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryAllVaultResponse} QueryAllVaultResponse
-                     */
-                    QueryAllVaultResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryAllVaultResponse)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.QueryAllVaultResponse();
-                        if (object.vaults) {
-                            if (!Array.isArray(object.vaults))
-                                throw TypeError(".ununifi.chain.yieldaggregator.QueryAllVaultResponse.vaults: array expected");
-                            message.vaults = [];
-                            for (var i = 0; i < object.vaults.length; ++i) {
-                                if (typeof object.vaults[i] !== "object")
-                                    throw TypeError(".ununifi.chain.yieldaggregator.QueryAllVaultResponse.vaults: object expected");
-                                message.vaults[i] = $root.ununifi.chain.yieldaggregator.Vault.fromObject(object.vaults[i]);
-                            }
-                        }
-                        if (object.pagination != null) {
-                            if (typeof object.pagination !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.QueryAllVaultResponse.pagination: object expected");
-                            message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.fromObject(object.pagination);
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryAllVaultResponse message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryAllVaultResponse} message QueryAllVaultResponse
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryAllVaultResponse.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.arrays || options.defaults)
-                            object.vaults = [];
-                        if (options.defaults)
-                            object.pagination = null;
-                        if (message.vaults && message.vaults.length) {
-                            object.vaults = [];
-                            for (var j = 0; j < message.vaults.length; ++j)
-                                object.vaults[j] = $root.ununifi.chain.yieldaggregator.Vault.toObject(message.vaults[j], options);
-                        }
-                        if (message.pagination != null && message.hasOwnProperty("pagination"))
-                            object.pagination = $root.cosmos.base.query.v1beta1.PageResponse.toObject(message.pagination, options);
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this QueryAllVaultResponse to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllVaultResponse
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryAllVaultResponse.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryAllVaultResponse;
-                })();
-    
-                yieldaggregator.QueryGetVaultRequest = (function() {
-    
-                    /**
-                     * Properties of a QueryGetVaultRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryGetVaultRequest
-                     * @property {Long|null} [id] QueryGetVaultRequest id
-                     */
-    
-                    /**
-                     * Constructs a new QueryGetVaultRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryGetVaultRequest.
-                     * @implements IQueryGetVaultRequest
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetVaultRequest=} [properties] Properties to set
-                     */
-                    function QueryGetVaultRequest(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * QueryGetVaultRequest id.
-                     * @member {Long} id
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultRequest
-                     * @instance
-                     */
-                    QueryGetVaultRequest.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * Encodes the specified QueryGetVaultRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetVaultRequest.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetVaultRequest} message QueryGetVaultRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryGetVaultRequest.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.id != null && Object.hasOwnProperty.call(message, "id"))
-                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryGetVaultRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetVaultRequest.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetVaultRequest} message QueryGetVaultRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryGetVaultRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryGetVaultRequest message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryGetVaultRequest} QueryGetVaultRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryGetVaultRequest.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryGetVaultRequest();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.id = reader.uint64();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryGetVaultRequest message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryGetVaultRequest} QueryGetVaultRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryGetVaultRequest.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryGetVaultRequest message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultRequest
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryGetVaultRequest.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.id != null && message.hasOwnProperty("id"))
-                            if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
-                                return "id: integer|Long expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryGetVaultRequest message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultRequest
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryGetVaultRequest} QueryGetVaultRequest
-                     */
-                    QueryGetVaultRequest.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryGetVaultRequest)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.QueryGetVaultRequest();
-                        if (object.id != null)
-                            if ($util.Long)
-                                (message.id = $util.Long.fromValue(object.id)).unsigned = true;
-                            else if (typeof object.id === "string")
-                                message.id = parseInt(object.id, 10);
-                            else if (typeof object.id === "number")
-                                message.id = object.id;
-                            else if (typeof object.id === "object")
-                                message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryGetVaultRequest message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryGetVaultRequest} message QueryGetVaultRequest
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryGetVaultRequest.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults)
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.id = options.longs === String ? "0" : 0;
-                        if (message.id != null && message.hasOwnProperty("id"))
-                            if (typeof message.id === "number")
-                                object.id = options.longs === String ? String(message.id) : message.id;
-                            else
-                                object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this QueryGetVaultRequest to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultRequest
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryGetVaultRequest.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryGetVaultRequest;
-                })();
-    
-                yieldaggregator.QueryGetVaultResponse = (function() {
-    
-                    /**
-                     * Properties of a QueryGetVaultResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryGetVaultResponse
-                     * @property {ununifi.chain.yieldaggregator.IVault|null} [vault] QueryGetVaultResponse vault
-                     * @property {Array.<ununifi.chain.yieldaggregator.IStrategy>|null} [strategies] QueryGetVaultResponse strategies
-                     */
-    
-                    /**
-                     * Constructs a new QueryGetVaultResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryGetVaultResponse.
-                     * @implements IQueryGetVaultResponse
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetVaultResponse=} [properties] Properties to set
-                     */
-                    function QueryGetVaultResponse(properties) {
-                        this.strategies = [];
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * QueryGetVaultResponse vault.
-                     * @member {ununifi.chain.yieldaggregator.IVault|null|undefined} vault
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultResponse
-                     * @instance
-                     */
-                    QueryGetVaultResponse.prototype.vault = null;
-    
-                    /**
-                     * QueryGetVaultResponse strategies.
-                     * @member {Array.<ununifi.chain.yieldaggregator.IStrategy>} strategies
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultResponse
-                     * @instance
-                     */
-                    QueryGetVaultResponse.prototype.strategies = $util.emptyArray;
-    
-                    /**
-                     * Encodes the specified QueryGetVaultResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetVaultResponse.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetVaultResponse} message QueryGetVaultResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryGetVaultResponse.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.vault != null && Object.hasOwnProperty.call(message, "vault"))
-                            $root.ununifi.chain.yieldaggregator.Vault.encode(message.vault, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                        if (message.strategies != null && message.strategies.length)
-                            for (var i = 0; i < message.strategies.length; ++i)
-                                $root.ununifi.chain.yieldaggregator.Strategy.encode(message.strategies[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryGetVaultResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetVaultResponse.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetVaultResponse} message QueryGetVaultResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryGetVaultResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryGetVaultResponse message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryGetVaultResponse} QueryGetVaultResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryGetVaultResponse.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryGetVaultResponse();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.vault = $root.ununifi.chain.yieldaggregator.Vault.decode(reader, reader.uint32());
-                                break;
-                            case 2:
-                                if (!(message.strategies && message.strategies.length))
-                                    message.strategies = [];
-                                message.strategies.push($root.ununifi.chain.yieldaggregator.Strategy.decode(reader, reader.uint32()));
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryGetVaultResponse message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryGetVaultResponse} QueryGetVaultResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryGetVaultResponse.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryGetVaultResponse message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultResponse
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryGetVaultResponse.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.vault != null && message.hasOwnProperty("vault")) {
-                            var error = $root.ununifi.chain.yieldaggregator.Vault.verify(message.vault);
-                            if (error)
-                                return "vault." + error;
-                        }
-                        if (message.strategies != null && message.hasOwnProperty("strategies")) {
-                            if (!Array.isArray(message.strategies))
-                                return "strategies: array expected";
-                            for (var i = 0; i < message.strategies.length; ++i) {
-                                var error = $root.ununifi.chain.yieldaggregator.Strategy.verify(message.strategies[i]);
-                                if (error)
-                                    return "strategies." + error;
-                            }
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryGetVaultResponse message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultResponse
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryGetVaultResponse} QueryGetVaultResponse
-                     */
-                    QueryGetVaultResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryGetVaultResponse)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.QueryGetVaultResponse();
-                        if (object.vault != null) {
-                            if (typeof object.vault !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.QueryGetVaultResponse.vault: object expected");
-                            message.vault = $root.ununifi.chain.yieldaggregator.Vault.fromObject(object.vault);
-                        }
-                        if (object.strategies) {
-                            if (!Array.isArray(object.strategies))
-                                throw TypeError(".ununifi.chain.yieldaggregator.QueryGetVaultResponse.strategies: array expected");
-                            message.strategies = [];
-                            for (var i = 0; i < object.strategies.length; ++i) {
-                                if (typeof object.strategies[i] !== "object")
-                                    throw TypeError(".ununifi.chain.yieldaggregator.QueryGetVaultResponse.strategies: object expected");
-                                message.strategies[i] = $root.ununifi.chain.yieldaggregator.Strategy.fromObject(object.strategies[i]);
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryGetVaultResponse message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryGetVaultResponse} message QueryGetVaultResponse
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryGetVaultResponse.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.arrays || options.defaults)
-                            object.strategies = [];
-                        if (options.defaults)
-                            object.vault = null;
-                        if (message.vault != null && message.hasOwnProperty("vault"))
-                            object.vault = $root.ununifi.chain.yieldaggregator.Vault.toObject(message.vault, options);
-                        if (message.strategies && message.strategies.length) {
-                            object.strategies = [];
-                            for (var j = 0; j < message.strategies.length; ++j)
-                                object.strategies[j] = $root.ununifi.chain.yieldaggregator.Strategy.toObject(message.strategies[j], options);
-                        }
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this QueryGetVaultResponse to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetVaultResponse
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryGetVaultResponse.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryGetVaultResponse;
-                })();
-    
-                yieldaggregator.QueryAllStrategyRequest = (function() {
-    
-                    /**
-                     * Properties of a QueryAllStrategyRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryAllStrategyRequest
-                     * @property {string|null} [denom] QueryAllStrategyRequest denom
-                     * @property {cosmos.base.query.v1beta1.IPageRequest|null} [pagination] QueryAllStrategyRequest pagination
-                     */
-    
-                    /**
-                     * Constructs a new QueryAllStrategyRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryAllStrategyRequest.
-                     * @implements IQueryAllStrategyRequest
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllStrategyRequest=} [properties] Properties to set
-                     */
-                    function QueryAllStrategyRequest(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * QueryAllStrategyRequest denom.
-                     * @member {string} denom
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyRequest
-                     * @instance
-                     */
-                    QueryAllStrategyRequest.prototype.denom = "";
-    
-                    /**
-                     * QueryAllStrategyRequest pagination.
-                     * @member {cosmos.base.query.v1beta1.IPageRequest|null|undefined} pagination
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyRequest
-                     * @instance
-                     */
-                    QueryAllStrategyRequest.prototype.pagination = null;
-    
-                    /**
-                     * Encodes the specified QueryAllStrategyRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllStrategyRequest.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllStrategyRequest} message QueryAllStrategyRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryAllStrategyRequest.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.denom);
-                        if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
-                            $root.cosmos.base.query.v1beta1.PageRequest.encode(message.pagination, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryAllStrategyRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllStrategyRequest.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllStrategyRequest} message QueryAllStrategyRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryAllStrategyRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryAllStrategyRequest message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryAllStrategyRequest} QueryAllStrategyRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryAllStrategyRequest.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryAllStrategyRequest();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.denom = reader.string();
-                                break;
-                            case 2:
-                                message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.decode(reader, reader.uint32());
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryAllStrategyRequest message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryAllStrategyRequest} QueryAllStrategyRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryAllStrategyRequest.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryAllStrategyRequest message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyRequest
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryAllStrategyRequest.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.denom != null && message.hasOwnProperty("denom"))
-                            if (!$util.isString(message.denom))
-                                return "denom: string expected";
-                        if (message.pagination != null && message.hasOwnProperty("pagination")) {
-                            var error = $root.cosmos.base.query.v1beta1.PageRequest.verify(message.pagination);
-                            if (error)
-                                return "pagination." + error;
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryAllStrategyRequest message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyRequest
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryAllStrategyRequest} QueryAllStrategyRequest
-                     */
-                    QueryAllStrategyRequest.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryAllStrategyRequest)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.QueryAllStrategyRequest();
-                        if (object.denom != null)
-                            message.denom = String(object.denom);
-                        if (object.pagination != null) {
-                            if (typeof object.pagination !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.QueryAllStrategyRequest.pagination: object expected");
-                            message.pagination = $root.cosmos.base.query.v1beta1.PageRequest.fromObject(object.pagination);
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryAllStrategyRequest message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryAllStrategyRequest} message QueryAllStrategyRequest
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryAllStrategyRequest.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            object.denom = "";
-                            object.pagination = null;
-                        }
-                        if (message.denom != null && message.hasOwnProperty("denom"))
-                            object.denom = message.denom;
-                        if (message.pagination != null && message.hasOwnProperty("pagination"))
-                            object.pagination = $root.cosmos.base.query.v1beta1.PageRequest.toObject(message.pagination, options);
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this QueryAllStrategyRequest to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyRequest
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryAllStrategyRequest.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryAllStrategyRequest;
-                })();
-    
-                yieldaggregator.QueryAllStrategyResponse = (function() {
-    
-                    /**
-                     * Properties of a QueryAllStrategyResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryAllStrategyResponse
-                     * @property {Array.<ununifi.chain.yieldaggregator.IStrategy>|null} [strategies] QueryAllStrategyResponse strategies
-                     * @property {cosmos.base.query.v1beta1.IPageResponse|null} [pagination] QueryAllStrategyResponse pagination
-                     */
-    
-                    /**
-                     * Constructs a new QueryAllStrategyResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryAllStrategyResponse.
-                     * @implements IQueryAllStrategyResponse
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllStrategyResponse=} [properties] Properties to set
-                     */
-                    function QueryAllStrategyResponse(properties) {
-                        this.strategies = [];
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * QueryAllStrategyResponse strategies.
-                     * @member {Array.<ununifi.chain.yieldaggregator.IStrategy>} strategies
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyResponse
-                     * @instance
-                     */
-                    QueryAllStrategyResponse.prototype.strategies = $util.emptyArray;
-    
-                    /**
-                     * QueryAllStrategyResponse pagination.
-                     * @member {cosmos.base.query.v1beta1.IPageResponse|null|undefined} pagination
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyResponse
-                     * @instance
-                     */
-                    QueryAllStrategyResponse.prototype.pagination = null;
-    
-                    /**
-                     * Encodes the specified QueryAllStrategyResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllStrategyResponse.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllStrategyResponse} message QueryAllStrategyResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryAllStrategyResponse.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.strategies != null && message.strategies.length)
-                            for (var i = 0; i < message.strategies.length; ++i)
-                                $root.ununifi.chain.yieldaggregator.Strategy.encode(message.strategies[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                        if (message.pagination != null && Object.hasOwnProperty.call(message, "pagination"))
-                            $root.cosmos.base.query.v1beta1.PageResponse.encode(message.pagination, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryAllStrategyResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllStrategyResponse.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryAllStrategyResponse} message QueryAllStrategyResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryAllStrategyResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryAllStrategyResponse message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryAllStrategyResponse} QueryAllStrategyResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryAllStrategyResponse.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryAllStrategyResponse();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                if (!(message.strategies && message.strategies.length))
-                                    message.strategies = [];
-                                message.strategies.push($root.ununifi.chain.yieldaggregator.Strategy.decode(reader, reader.uint32()));
-                                break;
-                            case 2:
-                                message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.decode(reader, reader.uint32());
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryAllStrategyResponse message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryAllStrategyResponse} QueryAllStrategyResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryAllStrategyResponse.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryAllStrategyResponse message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyResponse
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryAllStrategyResponse.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.strategies != null && message.hasOwnProperty("strategies")) {
-                            if (!Array.isArray(message.strategies))
-                                return "strategies: array expected";
-                            for (var i = 0; i < message.strategies.length; ++i) {
-                                var error = $root.ununifi.chain.yieldaggregator.Strategy.verify(message.strategies[i]);
-                                if (error)
-                                    return "strategies." + error;
-                            }
-                        }
-                        if (message.pagination != null && message.hasOwnProperty("pagination")) {
-                            var error = $root.cosmos.base.query.v1beta1.PageResponse.verify(message.pagination);
-                            if (error)
-                                return "pagination." + error;
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryAllStrategyResponse message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyResponse
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryAllStrategyResponse} QueryAllStrategyResponse
-                     */
-                    QueryAllStrategyResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryAllStrategyResponse)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.QueryAllStrategyResponse();
-                        if (object.strategies) {
-                            if (!Array.isArray(object.strategies))
-                                throw TypeError(".ununifi.chain.yieldaggregator.QueryAllStrategyResponse.strategies: array expected");
-                            message.strategies = [];
-                            for (var i = 0; i < object.strategies.length; ++i) {
-                                if (typeof object.strategies[i] !== "object")
-                                    throw TypeError(".ununifi.chain.yieldaggregator.QueryAllStrategyResponse.strategies: object expected");
-                                message.strategies[i] = $root.ununifi.chain.yieldaggregator.Strategy.fromObject(object.strategies[i]);
-                            }
-                        }
-                        if (object.pagination != null) {
-                            if (typeof object.pagination !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.QueryAllStrategyResponse.pagination: object expected");
-                            message.pagination = $root.cosmos.base.query.v1beta1.PageResponse.fromObject(object.pagination);
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryAllStrategyResponse message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryAllStrategyResponse} message QueryAllStrategyResponse
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryAllStrategyResponse.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.arrays || options.defaults)
-                            object.strategies = [];
-                        if (options.defaults)
-                            object.pagination = null;
-                        if (message.strategies && message.strategies.length) {
-                            object.strategies = [];
-                            for (var j = 0; j < message.strategies.length; ++j)
-                                object.strategies[j] = $root.ununifi.chain.yieldaggregator.Strategy.toObject(message.strategies[j], options);
-                        }
-                        if (message.pagination != null && message.hasOwnProperty("pagination"))
-                            object.pagination = $root.cosmos.base.query.v1beta1.PageResponse.toObject(message.pagination, options);
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this QueryAllStrategyResponse to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryAllStrategyResponse
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryAllStrategyResponse.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryAllStrategyResponse;
-                })();
-    
-                yieldaggregator.QueryGetStrategyRequest = (function() {
-    
-                    /**
-                     * Properties of a QueryGetStrategyRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryGetStrategyRequest
-                     * @property {string|null} [denom] QueryGetStrategyRequest denom
-                     * @property {Long|null} [id] QueryGetStrategyRequest id
-                     */
-    
-                    /**
-                     * Constructs a new QueryGetStrategyRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryGetStrategyRequest.
-                     * @implements IQueryGetStrategyRequest
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetStrategyRequest=} [properties] Properties to set
-                     */
-                    function QueryGetStrategyRequest(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * QueryGetStrategyRequest denom.
-                     * @member {string} denom
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyRequest
-                     * @instance
-                     */
-                    QueryGetStrategyRequest.prototype.denom = "";
-    
-                    /**
-                     * QueryGetStrategyRequest id.
-                     * @member {Long} id
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyRequest
-                     * @instance
-                     */
-                    QueryGetStrategyRequest.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * Encodes the specified QueryGetStrategyRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetStrategyRequest.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetStrategyRequest} message QueryGetStrategyRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryGetStrategyRequest.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.denom);
-                        if (message.id != null && Object.hasOwnProperty.call(message, "id"))
-                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.id);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryGetStrategyRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetStrategyRequest.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetStrategyRequest} message QueryGetStrategyRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryGetStrategyRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryGetStrategyRequest message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryGetStrategyRequest} QueryGetStrategyRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryGetStrategyRequest.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryGetStrategyRequest();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.denom = reader.string();
-                                break;
-                            case 2:
-                                message.id = reader.uint64();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryGetStrategyRequest message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryGetStrategyRequest} QueryGetStrategyRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryGetStrategyRequest.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryGetStrategyRequest message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyRequest
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryGetStrategyRequest.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.denom != null && message.hasOwnProperty("denom"))
-                            if (!$util.isString(message.denom))
-                                return "denom: string expected";
-                        if (message.id != null && message.hasOwnProperty("id"))
-                            if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
-                                return "id: integer|Long expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryGetStrategyRequest message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyRequest
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryGetStrategyRequest} QueryGetStrategyRequest
-                     */
-                    QueryGetStrategyRequest.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryGetStrategyRequest)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.QueryGetStrategyRequest();
-                        if (object.denom != null)
-                            message.denom = String(object.denom);
-                        if (object.id != null)
-                            if ($util.Long)
-                                (message.id = $util.Long.fromValue(object.id)).unsigned = true;
-                            else if (typeof object.id === "string")
-                                message.id = parseInt(object.id, 10);
-                            else if (typeof object.id === "number")
-                                message.id = object.id;
-                            else if (typeof object.id === "object")
-                                message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryGetStrategyRequest message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryGetStrategyRequest} message QueryGetStrategyRequest
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryGetStrategyRequest.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            object.denom = "";
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.id = options.longs === String ? "0" : 0;
-                        }
-                        if (message.denom != null && message.hasOwnProperty("denom"))
-                            object.denom = message.denom;
-                        if (message.id != null && message.hasOwnProperty("id"))
-                            if (typeof message.id === "number")
-                                object.id = options.longs === String ? String(message.id) : message.id;
-                            else
-                                object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this QueryGetStrategyRequest to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyRequest
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryGetStrategyRequest.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryGetStrategyRequest;
-                })();
-    
-                yieldaggregator.QueryGetStrategyResponse = (function() {
-    
-                    /**
-                     * Properties of a QueryGetStrategyResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryGetStrategyResponse
-                     * @property {ununifi.chain.yieldaggregator.IStrategy|null} [strategy] QueryGetStrategyResponse strategy
-                     */
-    
-                    /**
-                     * Constructs a new QueryGetStrategyResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryGetStrategyResponse.
-                     * @implements IQueryGetStrategyResponse
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetStrategyResponse=} [properties] Properties to set
-                     */
-                    function QueryGetStrategyResponse(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * QueryGetStrategyResponse strategy.
-                     * @member {ununifi.chain.yieldaggregator.IStrategy|null|undefined} strategy
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyResponse
-                     * @instance
-                     */
-                    QueryGetStrategyResponse.prototype.strategy = null;
-    
-                    /**
-                     * Encodes the specified QueryGetStrategyResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetStrategyResponse.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetStrategyResponse} message QueryGetStrategyResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryGetStrategyResponse.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.strategy != null && Object.hasOwnProperty.call(message, "strategy"))
-                            $root.ununifi.chain.yieldaggregator.Strategy.encode(message.strategy, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryGetStrategyResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetStrategyResponse.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryGetStrategyResponse} message QueryGetStrategyResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryGetStrategyResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryGetStrategyResponse message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryGetStrategyResponse} QueryGetStrategyResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryGetStrategyResponse.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryGetStrategyResponse();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.strategy = $root.ununifi.chain.yieldaggregator.Strategy.decode(reader, reader.uint32());
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryGetStrategyResponse message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryGetStrategyResponse} QueryGetStrategyResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryGetStrategyResponse.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryGetStrategyResponse message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyResponse
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryGetStrategyResponse.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.strategy != null && message.hasOwnProperty("strategy")) {
-                            var error = $root.ununifi.chain.yieldaggregator.Strategy.verify(message.strategy);
-                            if (error)
-                                return "strategy." + error;
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryGetStrategyResponse message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyResponse
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryGetStrategyResponse} QueryGetStrategyResponse
-                     */
-                    QueryGetStrategyResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryGetStrategyResponse)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.QueryGetStrategyResponse();
-                        if (object.strategy != null) {
-                            if (typeof object.strategy !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.QueryGetStrategyResponse.strategy: object expected");
-                            message.strategy = $root.ununifi.chain.yieldaggregator.Strategy.fromObject(object.strategy);
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryGetStrategyResponse message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryGetStrategyResponse} message QueryGetStrategyResponse
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryGetStrategyResponse.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults)
-                            object.strategy = null;
-                        if (message.strategy != null && message.hasOwnProperty("strategy"))
-                            object.strategy = $root.ununifi.chain.yieldaggregator.Strategy.toObject(message.strategy, options);
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this QueryGetStrategyResponse to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryGetStrategyResponse
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryGetStrategyResponse.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryGetStrategyResponse;
-                })();
-    
-                yieldaggregator.QueryEstimateMintAmountRequest = (function() {
-    
-                    /**
-                     * Properties of a QueryEstimateMintAmountRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryEstimateMintAmountRequest
-                     * @property {Long|null} [id] QueryEstimateMintAmountRequest id
-                     * @property {string|null} [deposit_amount] QueryEstimateMintAmountRequest deposit_amount
-                     */
-    
-                    /**
-                     * Constructs a new QueryEstimateMintAmountRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryEstimateMintAmountRequest.
-                     * @implements IQueryEstimateMintAmountRequest
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateMintAmountRequest=} [properties] Properties to set
-                     */
-                    function QueryEstimateMintAmountRequest(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * QueryEstimateMintAmountRequest id.
-                     * @member {Long} id
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest
-                     * @instance
-                     */
-                    QueryEstimateMintAmountRequest.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * QueryEstimateMintAmountRequest deposit_amount.
-                     * @member {string} deposit_amount
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest
-                     * @instance
-                     */
-                    QueryEstimateMintAmountRequest.prototype.deposit_amount = "";
-    
-                    /**
-                     * Encodes the specified QueryEstimateMintAmountRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateMintAmountRequest} message QueryEstimateMintAmountRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryEstimateMintAmountRequest.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.id != null && Object.hasOwnProperty.call(message, "id"))
-                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
-                        if (message.deposit_amount != null && Object.hasOwnProperty.call(message, "deposit_amount"))
-                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.deposit_amount);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryEstimateMintAmountRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateMintAmountRequest} message QueryEstimateMintAmountRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryEstimateMintAmountRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryEstimateMintAmountRequest message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest} QueryEstimateMintAmountRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryEstimateMintAmountRequest.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.id = reader.uint64();
-                                break;
-                            case 2:
-                                message.deposit_amount = reader.string();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryEstimateMintAmountRequest message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest} QueryEstimateMintAmountRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryEstimateMintAmountRequest.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryEstimateMintAmountRequest message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryEstimateMintAmountRequest.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.id != null && message.hasOwnProperty("id"))
-                            if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
-                                return "id: integer|Long expected";
-                        if (message.deposit_amount != null && message.hasOwnProperty("deposit_amount"))
-                            if (!$util.isString(message.deposit_amount))
-                                return "deposit_amount: string expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryEstimateMintAmountRequest message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest} QueryEstimateMintAmountRequest
-                     */
-                    QueryEstimateMintAmountRequest.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest();
-                        if (object.id != null)
-                            if ($util.Long)
-                                (message.id = $util.Long.fromValue(object.id)).unsigned = true;
-                            else if (typeof object.id === "string")
-                                message.id = parseInt(object.id, 10);
-                            else if (typeof object.id === "number")
-                                message.id = object.id;
-                            else if (typeof object.id === "object")
-                                message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
-                        if (object.deposit_amount != null)
-                            message.deposit_amount = String(object.deposit_amount);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryEstimateMintAmountRequest message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest} message QueryEstimateMintAmountRequest
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryEstimateMintAmountRequest.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.id = options.longs === String ? "0" : 0;
-                            object.deposit_amount = "";
-                        }
-                        if (message.id != null && message.hasOwnProperty("id"))
-                            if (typeof message.id === "number")
-                                object.id = options.longs === String ? String(message.id) : message.id;
-                            else
-                                object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
-                        if (message.deposit_amount != null && message.hasOwnProperty("deposit_amount"))
-                            object.deposit_amount = message.deposit_amount;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this QueryEstimateMintAmountRequest to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryEstimateMintAmountRequest.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryEstimateMintAmountRequest;
-                })();
-    
-                yieldaggregator.QueryEstimateMintAmountResponse = (function() {
-    
-                    /**
-                     * Properties of a QueryEstimateMintAmountResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryEstimateMintAmountResponse
-                     * @property {cosmos.base.v1beta1.ICoin|null} [mint_amount] QueryEstimateMintAmountResponse mint_amount
-                     */
-    
-                    /**
-                     * Constructs a new QueryEstimateMintAmountResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryEstimateMintAmountResponse.
-                     * @implements IQueryEstimateMintAmountResponse
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateMintAmountResponse=} [properties] Properties to set
-                     */
-                    function QueryEstimateMintAmountResponse(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * QueryEstimateMintAmountResponse mint_amount.
-                     * @member {cosmos.base.v1beta1.ICoin|null|undefined} mint_amount
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse
-                     * @instance
-                     */
-                    QueryEstimateMintAmountResponse.prototype.mint_amount = null;
-    
-                    /**
-                     * Encodes the specified QueryEstimateMintAmountResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateMintAmountResponse} message QueryEstimateMintAmountResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryEstimateMintAmountResponse.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.mint_amount != null && Object.hasOwnProperty.call(message, "mint_amount"))
-                            $root.cosmos.base.v1beta1.Coin.encode(message.mint_amount, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryEstimateMintAmountResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateMintAmountResponse} message QueryEstimateMintAmountResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryEstimateMintAmountResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryEstimateMintAmountResponse message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse} QueryEstimateMintAmountResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryEstimateMintAmountResponse.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.mint_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryEstimateMintAmountResponse message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse} QueryEstimateMintAmountResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryEstimateMintAmountResponse.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryEstimateMintAmountResponse message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryEstimateMintAmountResponse.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.mint_amount != null && message.hasOwnProperty("mint_amount")) {
-                            var error = $root.cosmos.base.v1beta1.Coin.verify(message.mint_amount);
-                            if (error)
-                                return "mint_amount." + error;
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryEstimateMintAmountResponse message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse} QueryEstimateMintAmountResponse
-                     */
-                    QueryEstimateMintAmountResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse();
-                        if (object.mint_amount != null) {
-                            if (typeof object.mint_amount !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse.mint_amount: object expected");
-                            message.mint_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.mint_amount);
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryEstimateMintAmountResponse message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse} message QueryEstimateMintAmountResponse
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryEstimateMintAmountResponse.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults)
-                            object.mint_amount = null;
-                        if (message.mint_amount != null && message.hasOwnProperty("mint_amount"))
-                            object.mint_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.mint_amount, options);
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this QueryEstimateMintAmountResponse to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryEstimateMintAmountResponse.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryEstimateMintAmountResponse;
-                })();
-    
-                yieldaggregator.QueryEstimateRedeemAmountRequest = (function() {
-    
-                    /**
-                     * Properties of a QueryEstimateRedeemAmountRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryEstimateRedeemAmountRequest
-                     * @property {Long|null} [id] QueryEstimateRedeemAmountRequest id
-                     * @property {string|null} [burn_amount] QueryEstimateRedeemAmountRequest burn_amount
-                     */
-    
-                    /**
-                     * Constructs a new QueryEstimateRedeemAmountRequest.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryEstimateRedeemAmountRequest.
-                     * @implements IQueryEstimateRedeemAmountRequest
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountRequest=} [properties] Properties to set
-                     */
-                    function QueryEstimateRedeemAmountRequest(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * QueryEstimateRedeemAmountRequest id.
-                     * @member {Long} id
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest
-                     * @instance
-                     */
-                    QueryEstimateRedeemAmountRequest.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * QueryEstimateRedeemAmountRequest burn_amount.
-                     * @member {string} burn_amount
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest
-                     * @instance
-                     */
-                    QueryEstimateRedeemAmountRequest.prototype.burn_amount = "";
-    
-                    /**
-                     * Encodes the specified QueryEstimateRedeemAmountRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountRequest} message QueryEstimateRedeemAmountRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryEstimateRedeemAmountRequest.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.id != null && Object.hasOwnProperty.call(message, "id"))
-                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
-                        if (message.burn_amount != null && Object.hasOwnProperty.call(message, "burn_amount"))
-                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.burn_amount);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryEstimateRedeemAmountRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountRequest} message QueryEstimateRedeemAmountRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryEstimateRedeemAmountRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryEstimateRedeemAmountRequest message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest} QueryEstimateRedeemAmountRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryEstimateRedeemAmountRequest.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.id = reader.uint64();
-                                break;
-                            case 2:
-                                message.burn_amount = reader.string();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryEstimateRedeemAmountRequest message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest} QueryEstimateRedeemAmountRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryEstimateRedeemAmountRequest.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryEstimateRedeemAmountRequest message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryEstimateRedeemAmountRequest.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.id != null && message.hasOwnProperty("id"))
-                            if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
-                                return "id: integer|Long expected";
-                        if (message.burn_amount != null && message.hasOwnProperty("burn_amount"))
-                            if (!$util.isString(message.burn_amount))
-                                return "burn_amount: string expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryEstimateRedeemAmountRequest message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest} QueryEstimateRedeemAmountRequest
-                     */
-                    QueryEstimateRedeemAmountRequest.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest();
-                        if (object.id != null)
-                            if ($util.Long)
-                                (message.id = $util.Long.fromValue(object.id)).unsigned = true;
-                            else if (typeof object.id === "string")
-                                message.id = parseInt(object.id, 10);
-                            else if (typeof object.id === "number")
-                                message.id = object.id;
-                            else if (typeof object.id === "object")
-                                message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
-                        if (object.burn_amount != null)
-                            message.burn_amount = String(object.burn_amount);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryEstimateRedeemAmountRequest message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest} message QueryEstimateRedeemAmountRequest
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryEstimateRedeemAmountRequest.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.id = options.longs === String ? "0" : 0;
-                            object.burn_amount = "";
-                        }
-                        if (message.id != null && message.hasOwnProperty("id"))
-                            if (typeof message.id === "number")
-                                object.id = options.longs === String ? String(message.id) : message.id;
-                            else
-                                object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
-                        if (message.burn_amount != null && message.hasOwnProperty("burn_amount"))
-                            object.burn_amount = message.burn_amount;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this QueryEstimateRedeemAmountRequest to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryEstimateRedeemAmountRequest.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryEstimateRedeemAmountRequest;
-                })();
-    
-                yieldaggregator.QueryEstimateRedeemAmountResponse = (function() {
-    
-                    /**
-                     * Properties of a QueryEstimateRedeemAmountResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IQueryEstimateRedeemAmountResponse
-                     * @property {cosmos.base.v1beta1.ICoin|null} [redeem_amount] QueryEstimateRedeemAmountResponse redeem_amount
-                     */
-    
-                    /**
-                     * Constructs a new QueryEstimateRedeemAmountResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a QueryEstimateRedeemAmountResponse.
-                     * @implements IQueryEstimateRedeemAmountResponse
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountResponse=} [properties] Properties to set
-                     */
-                    function QueryEstimateRedeemAmountResponse(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * QueryEstimateRedeemAmountResponse redeem_amount.
-                     * @member {cosmos.base.v1beta1.ICoin|null|undefined} redeem_amount
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse
-                     * @instance
-                     */
-                    QueryEstimateRedeemAmountResponse.prototype.redeem_amount = null;
-    
-                    /**
-                     * Encodes the specified QueryEstimateRedeemAmountResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountResponse} message QueryEstimateRedeemAmountResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryEstimateRedeemAmountResponse.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.redeem_amount != null && Object.hasOwnProperty.call(message, "redeem_amount"))
-                            $root.cosmos.base.v1beta1.Coin.encode(message.redeem_amount, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified QueryEstimateRedeemAmountResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountResponse} message QueryEstimateRedeemAmountResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    QueryEstimateRedeemAmountResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a QueryEstimateRedeemAmountResponse message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse} QueryEstimateRedeemAmountResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryEstimateRedeemAmountResponse.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.redeem_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a QueryEstimateRedeemAmountResponse message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse} QueryEstimateRedeemAmountResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    QueryEstimateRedeemAmountResponse.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a QueryEstimateRedeemAmountResponse message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    QueryEstimateRedeemAmountResponse.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.redeem_amount != null && message.hasOwnProperty("redeem_amount")) {
-                            var error = $root.cosmos.base.v1beta1.Coin.verify(message.redeem_amount);
-                            if (error)
-                                return "redeem_amount." + error;
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a QueryEstimateRedeemAmountResponse message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse} QueryEstimateRedeemAmountResponse
-                     */
-                    QueryEstimateRedeemAmountResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse();
-                        if (object.redeem_amount != null) {
-                            if (typeof object.redeem_amount !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse.redeem_amount: object expected");
-                            message.redeem_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.redeem_amount);
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a QueryEstimateRedeemAmountResponse message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse} message QueryEstimateRedeemAmountResponse
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    QueryEstimateRedeemAmountResponse.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults)
-                            object.redeem_amount = null;
-                        if (message.redeem_amount != null && message.hasOwnProperty("redeem_amount"))
-                            object.redeem_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.redeem_amount, options);
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this QueryEstimateRedeemAmountResponse to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    QueryEstimateRedeemAmountResponse.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return QueryEstimateRedeemAmountResponse;
-                })();
-    
-                yieldaggregator.Params = (function() {
-    
-                    /**
-                     * Properties of a Params.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IParams
-                     * @property {string|null} [commission_rate] Params commission_rate
-                     * @property {cosmos.base.v1beta1.ICoin|null} [vault_creation_fee] Params vault_creation_fee
-                     * @property {cosmos.base.v1beta1.ICoin|null} [vault_creation_deposit] Params vault_creation_deposit
-                     */
-    
-                    /**
-                     * Constructs a new Params.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a Params.
-                     * @implements IParams
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IParams=} [properties] Properties to set
-                     */
-                    function Params(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * Params commission_rate.
-                     * @member {string} commission_rate
-                     * @memberof ununifi.chain.yieldaggregator.Params
-                     * @instance
-                     */
-                    Params.prototype.commission_rate = "";
-    
-                    /**
-                     * Params vault_creation_fee.
-                     * @member {cosmos.base.v1beta1.ICoin|null|undefined} vault_creation_fee
-                     * @memberof ununifi.chain.yieldaggregator.Params
-                     * @instance
-                     */
-                    Params.prototype.vault_creation_fee = null;
-    
-                    /**
-                     * Params vault_creation_deposit.
-                     * @member {cosmos.base.v1beta1.ICoin|null|undefined} vault_creation_deposit
-                     * @memberof ununifi.chain.yieldaggregator.Params
-                     * @instance
-                     */
-                    Params.prototype.vault_creation_deposit = null;
-    
-                    /**
-                     * Encodes the specified Params message. Does not implicitly {@link ununifi.chain.yieldaggregator.Params.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.Params
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IParams} message Params message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    Params.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.commission_rate != null && Object.hasOwnProperty.call(message, "commission_rate"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.commission_rate);
-                        if (message.vault_creation_fee != null && Object.hasOwnProperty.call(message, "vault_creation_fee"))
-                            $root.cosmos.base.v1beta1.Coin.encode(message.vault_creation_fee, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                        if (message.vault_creation_deposit != null && Object.hasOwnProperty.call(message, "vault_creation_deposit"))
-                            $root.cosmos.base.v1beta1.Coin.encode(message.vault_creation_deposit, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.Params.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.Params
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IParams} message Params message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    Params.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a Params message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.Params
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.Params} Params
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    Params.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.Params();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.commission_rate = reader.string();
-                                break;
-                            case 2:
-                                message.vault_creation_fee = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                                break;
-                            case 3:
-                                message.vault_creation_deposit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a Params message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.Params
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.Params} Params
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    Params.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a Params message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.Params
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    Params.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.commission_rate != null && message.hasOwnProperty("commission_rate"))
-                            if (!$util.isString(message.commission_rate))
-                                return "commission_rate: string expected";
-                        if (message.vault_creation_fee != null && message.hasOwnProperty("vault_creation_fee")) {
-                            var error = $root.cosmos.base.v1beta1.Coin.verify(message.vault_creation_fee);
-                            if (error)
-                                return "vault_creation_fee." + error;
-                        }
-                        if (message.vault_creation_deposit != null && message.hasOwnProperty("vault_creation_deposit")) {
-                            var error = $root.cosmos.base.v1beta1.Coin.verify(message.vault_creation_deposit);
-                            if (error)
-                                return "vault_creation_deposit." + error;
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a Params message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.Params
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.Params} Params
-                     */
-                    Params.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.Params)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.Params();
-                        if (object.commission_rate != null)
-                            message.commission_rate = String(object.commission_rate);
-                        if (object.vault_creation_fee != null) {
-                            if (typeof object.vault_creation_fee !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.Params.vault_creation_fee: object expected");
-                            message.vault_creation_fee = $root.cosmos.base.v1beta1.Coin.fromObject(object.vault_creation_fee);
-                        }
-                        if (object.vault_creation_deposit != null) {
-                            if (typeof object.vault_creation_deposit !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.Params.vault_creation_deposit: object expected");
-                            message.vault_creation_deposit = $root.cosmos.base.v1beta1.Coin.fromObject(object.vault_creation_deposit);
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a Params message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.Params
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.Params} message Params
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    Params.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            object.commission_rate = "";
-                            object.vault_creation_fee = null;
-                            object.vault_creation_deposit = null;
-                        }
-                        if (message.commission_rate != null && message.hasOwnProperty("commission_rate"))
-                            object.commission_rate = message.commission_rate;
-                        if (message.vault_creation_fee != null && message.hasOwnProperty("vault_creation_fee"))
-                            object.vault_creation_fee = $root.cosmos.base.v1beta1.Coin.toObject(message.vault_creation_fee, options);
-                        if (message.vault_creation_deposit != null && message.hasOwnProperty("vault_creation_deposit"))
-                            object.vault_creation_deposit = $root.cosmos.base.v1beta1.Coin.toObject(message.vault_creation_deposit, options);
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this Params to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.Params
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    Params.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return Params;
-                })();
-    
-                yieldaggregator.StrategyWeight = (function() {
-    
-                    /**
-                     * Properties of a StrategyWeight.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IStrategyWeight
-                     * @property {Long|null} [strategy_id] StrategyWeight strategy_id
-                     * @property {string|null} [weight] StrategyWeight weight
-                     */
-    
-                    /**
-                     * Constructs a new StrategyWeight.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a StrategyWeight.
-                     * @implements IStrategyWeight
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IStrategyWeight=} [properties] Properties to set
-                     */
-                    function StrategyWeight(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * StrategyWeight strategy_id.
-                     * @member {Long} strategy_id
-                     * @memberof ununifi.chain.yieldaggregator.StrategyWeight
-                     * @instance
-                     */
-                    StrategyWeight.prototype.strategy_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * StrategyWeight weight.
-                     * @member {string} weight
-                     * @memberof ununifi.chain.yieldaggregator.StrategyWeight
-                     * @instance
-                     */
-                    StrategyWeight.prototype.weight = "";
-    
-                    /**
-                     * Encodes the specified StrategyWeight message. Does not implicitly {@link ununifi.chain.yieldaggregator.StrategyWeight.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.StrategyWeight
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IStrategyWeight} message StrategyWeight message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    StrategyWeight.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.strategy_id != null && Object.hasOwnProperty.call(message, "strategy_id"))
-                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.strategy_id);
-                        if (message.weight != null && Object.hasOwnProperty.call(message, "weight"))
-                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.weight);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified StrategyWeight message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.StrategyWeight.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.StrategyWeight
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IStrategyWeight} message StrategyWeight message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    StrategyWeight.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a StrategyWeight message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.StrategyWeight
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.StrategyWeight} StrategyWeight
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    StrategyWeight.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.StrategyWeight();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.strategy_id = reader.uint64();
-                                break;
-                            case 2:
-                                message.weight = reader.string();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a StrategyWeight message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.StrategyWeight
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.StrategyWeight} StrategyWeight
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    StrategyWeight.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a StrategyWeight message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.StrategyWeight
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    StrategyWeight.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.strategy_id != null && message.hasOwnProperty("strategy_id"))
-                            if (!$util.isInteger(message.strategy_id) && !(message.strategy_id && $util.isInteger(message.strategy_id.low) && $util.isInteger(message.strategy_id.high)))
-                                return "strategy_id: integer|Long expected";
-                        if (message.weight != null && message.hasOwnProperty("weight"))
-                            if (!$util.isString(message.weight))
-                                return "weight: string expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a StrategyWeight message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.StrategyWeight
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.StrategyWeight} StrategyWeight
-                     */
-                    StrategyWeight.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.StrategyWeight)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.StrategyWeight();
-                        if (object.strategy_id != null)
-                            if ($util.Long)
-                                (message.strategy_id = $util.Long.fromValue(object.strategy_id)).unsigned = true;
-                            else if (typeof object.strategy_id === "string")
-                                message.strategy_id = parseInt(object.strategy_id, 10);
-                            else if (typeof object.strategy_id === "number")
-                                message.strategy_id = object.strategy_id;
-                            else if (typeof object.strategy_id === "object")
-                                message.strategy_id = new $util.LongBits(object.strategy_id.low >>> 0, object.strategy_id.high >>> 0).toNumber(true);
-                        if (object.weight != null)
-                            message.weight = String(object.weight);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a StrategyWeight message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.StrategyWeight
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.StrategyWeight} message StrategyWeight
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    StrategyWeight.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.strategy_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.strategy_id = options.longs === String ? "0" : 0;
-                            object.weight = "";
-                        }
-                        if (message.strategy_id != null && message.hasOwnProperty("strategy_id"))
-                            if (typeof message.strategy_id === "number")
-                                object.strategy_id = options.longs === String ? String(message.strategy_id) : message.strategy_id;
-                            else
-                                object.strategy_id = options.longs === String ? $util.Long.prototype.toString.call(message.strategy_id) : options.longs === Number ? new $util.LongBits(message.strategy_id.low >>> 0, message.strategy_id.high >>> 0).toNumber(true) : message.strategy_id;
-                        if (message.weight != null && message.hasOwnProperty("weight"))
-                            object.weight = message.weight;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this StrategyWeight to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.StrategyWeight
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    StrategyWeight.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return StrategyWeight;
-                })();
-    
-                yieldaggregator.Vault = (function() {
-    
-                    /**
-                     * Properties of a Vault.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IVault
-                     * @property {Long|null} [id] Vault id
-                     * @property {string|null} [denom] Vault denom
-                     * @property {string|null} [owner] Vault owner
-                     * @property {cosmos.base.v1beta1.ICoin|null} [owner_deposit] Vault owner_deposit
-                     * @property {string|null} [withdraw_commission_rate] Vault withdraw_commission_rate
-                     * @property {string|null} [withdraw_reserve_rate] Vault withdraw_reserve_rate
-                     * @property {Array.<ununifi.chain.yieldaggregator.IStrategyWeight>|null} [strategy_weights] Vault strategy_weights
-                     */
-    
-                    /**
-                     * Constructs a new Vault.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a Vault.
-                     * @implements IVault
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IVault=} [properties] Properties to set
-                     */
-                    function Vault(properties) {
-                        this.strategy_weights = [];
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * Vault id.
-                     * @member {Long} id
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @instance
-                     */
-                    Vault.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * Vault denom.
-                     * @member {string} denom
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @instance
-                     */
-                    Vault.prototype.denom = "";
-    
-                    /**
-                     * Vault owner.
-                     * @member {string} owner
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @instance
-                     */
-                    Vault.prototype.owner = "";
-    
-                    /**
-                     * Vault owner_deposit.
-                     * @member {cosmos.base.v1beta1.ICoin|null|undefined} owner_deposit
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @instance
-                     */
-                    Vault.prototype.owner_deposit = null;
-    
-                    /**
-                     * Vault withdraw_commission_rate.
-                     * @member {string} withdraw_commission_rate
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @instance
-                     */
-                    Vault.prototype.withdraw_commission_rate = "";
-    
-                    /**
-                     * Vault withdraw_reserve_rate.
-                     * @member {string} withdraw_reserve_rate
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @instance
-                     */
-                    Vault.prototype.withdraw_reserve_rate = "";
-    
-                    /**
-                     * Vault strategy_weights.
-                     * @member {Array.<ununifi.chain.yieldaggregator.IStrategyWeight>} strategy_weights
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @instance
-                     */
-                    Vault.prototype.strategy_weights = $util.emptyArray;
-    
-                    /**
-                     * Encodes the specified Vault message. Does not implicitly {@link ununifi.chain.yieldaggregator.Vault.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IVault} message Vault message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    Vault.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.id != null && Object.hasOwnProperty.call(message, "id"))
-                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
-                        if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
-                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.denom);
-                        if (message.owner != null && Object.hasOwnProperty.call(message, "owner"))
-                            writer.uint32(/* id 3, wireType 2 =*/26).string(message.owner);
-                        if (message.owner_deposit != null && Object.hasOwnProperty.call(message, "owner_deposit"))
-                            $root.cosmos.base.v1beta1.Coin.encode(message.owner_deposit, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-                        if (message.withdraw_commission_rate != null && Object.hasOwnProperty.call(message, "withdraw_commission_rate"))
-                            writer.uint32(/* id 5, wireType 2 =*/42).string(message.withdraw_commission_rate);
-                        if (message.withdraw_reserve_rate != null && Object.hasOwnProperty.call(message, "withdraw_reserve_rate"))
-                            writer.uint32(/* id 6, wireType 2 =*/50).string(message.withdraw_reserve_rate);
-                        if (message.strategy_weights != null && message.strategy_weights.length)
-                            for (var i = 0; i < message.strategy_weights.length; ++i)
-                                $root.ununifi.chain.yieldaggregator.StrategyWeight.encode(message.strategy_weights[i], writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified Vault message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.Vault.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IVault} message Vault message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    Vault.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a Vault message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.Vault} Vault
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    Vault.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.Vault();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.id = reader.uint64();
-                                break;
-                            case 2:
-                                message.denom = reader.string();
-                                break;
-                            case 3:
-                                message.owner = reader.string();
-                                break;
-                            case 4:
-                                message.owner_deposit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                                break;
-                            case 5:
-                                message.withdraw_commission_rate = reader.string();
-                                break;
-                            case 6:
-                                message.withdraw_reserve_rate = reader.string();
-                                break;
-                            case 7:
-                                if (!(message.strategy_weights && message.strategy_weights.length))
-                                    message.strategy_weights = [];
-                                message.strategy_weights.push($root.ununifi.chain.yieldaggregator.StrategyWeight.decode(reader, reader.uint32()));
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a Vault message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.Vault} Vault
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    Vault.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a Vault message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    Vault.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.id != null && message.hasOwnProperty("id"))
-                            if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
-                                return "id: integer|Long expected";
-                        if (message.denom != null && message.hasOwnProperty("denom"))
-                            if (!$util.isString(message.denom))
-                                return "denom: string expected";
-                        if (message.owner != null && message.hasOwnProperty("owner"))
-                            if (!$util.isString(message.owner))
-                                return "owner: string expected";
-                        if (message.owner_deposit != null && message.hasOwnProperty("owner_deposit")) {
-                            var error = $root.cosmos.base.v1beta1.Coin.verify(message.owner_deposit);
-                            if (error)
-                                return "owner_deposit." + error;
-                        }
-                        if (message.withdraw_commission_rate != null && message.hasOwnProperty("withdraw_commission_rate"))
-                            if (!$util.isString(message.withdraw_commission_rate))
-                                return "withdraw_commission_rate: string expected";
-                        if (message.withdraw_reserve_rate != null && message.hasOwnProperty("withdraw_reserve_rate"))
-                            if (!$util.isString(message.withdraw_reserve_rate))
-                                return "withdraw_reserve_rate: string expected";
-                        if (message.strategy_weights != null && message.hasOwnProperty("strategy_weights")) {
-                            if (!Array.isArray(message.strategy_weights))
-                                return "strategy_weights: array expected";
-                            for (var i = 0; i < message.strategy_weights.length; ++i) {
-                                var error = $root.ununifi.chain.yieldaggregator.StrategyWeight.verify(message.strategy_weights[i]);
-                                if (error)
-                                    return "strategy_weights." + error;
-                            }
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a Vault message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.Vault} Vault
-                     */
-                    Vault.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.Vault)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.Vault();
-                        if (object.id != null)
-                            if ($util.Long)
-                                (message.id = $util.Long.fromValue(object.id)).unsigned = true;
-                            else if (typeof object.id === "string")
-                                message.id = parseInt(object.id, 10);
-                            else if (typeof object.id === "number")
-                                message.id = object.id;
-                            else if (typeof object.id === "object")
-                                message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
-                        if (object.denom != null)
-                            message.denom = String(object.denom);
-                        if (object.owner != null)
-                            message.owner = String(object.owner);
-                        if (object.owner_deposit != null) {
-                            if (typeof object.owner_deposit !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.Vault.owner_deposit: object expected");
-                            message.owner_deposit = $root.cosmos.base.v1beta1.Coin.fromObject(object.owner_deposit);
-                        }
-                        if (object.withdraw_commission_rate != null)
-                            message.withdraw_commission_rate = String(object.withdraw_commission_rate);
-                        if (object.withdraw_reserve_rate != null)
-                            message.withdraw_reserve_rate = String(object.withdraw_reserve_rate);
-                        if (object.strategy_weights) {
-                            if (!Array.isArray(object.strategy_weights))
-                                throw TypeError(".ununifi.chain.yieldaggregator.Vault.strategy_weights: array expected");
-                            message.strategy_weights = [];
-                            for (var i = 0; i < object.strategy_weights.length; ++i) {
-                                if (typeof object.strategy_weights[i] !== "object")
-                                    throw TypeError(".ununifi.chain.yieldaggregator.Vault.strategy_weights: object expected");
-                                message.strategy_weights[i] = $root.ununifi.chain.yieldaggregator.StrategyWeight.fromObject(object.strategy_weights[i]);
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a Vault message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.Vault} message Vault
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    Vault.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.arrays || options.defaults)
-                            object.strategy_weights = [];
-                        if (options.defaults) {
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.id = options.longs === String ? "0" : 0;
-                            object.denom = "";
-                            object.owner = "";
-                            object.owner_deposit = null;
-                            object.withdraw_commission_rate = "";
-                            object.withdraw_reserve_rate = "";
-                        }
-                        if (message.id != null && message.hasOwnProperty("id"))
-                            if (typeof message.id === "number")
-                                object.id = options.longs === String ? String(message.id) : message.id;
-                            else
-                                object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
-                        if (message.denom != null && message.hasOwnProperty("denom"))
-                            object.denom = message.denom;
-                        if (message.owner != null && message.hasOwnProperty("owner"))
-                            object.owner = message.owner;
-                        if (message.owner_deposit != null && message.hasOwnProperty("owner_deposit"))
-                            object.owner_deposit = $root.cosmos.base.v1beta1.Coin.toObject(message.owner_deposit, options);
-                        if (message.withdraw_commission_rate != null && message.hasOwnProperty("withdraw_commission_rate"))
-                            object.withdraw_commission_rate = message.withdraw_commission_rate;
-                        if (message.withdraw_reserve_rate != null && message.hasOwnProperty("withdraw_reserve_rate"))
-                            object.withdraw_reserve_rate = message.withdraw_reserve_rate;
-                        if (message.strategy_weights && message.strategy_weights.length) {
-                            object.strategy_weights = [];
-                            for (var j = 0; j < message.strategy_weights.length; ++j)
-                                object.strategy_weights[j] = $root.ununifi.chain.yieldaggregator.StrategyWeight.toObject(message.strategy_weights[j], options);
-                        }
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this Vault to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.Vault
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    Vault.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return Vault;
-                })();
-    
-                yieldaggregator.Strategy = (function() {
-    
-                    /**
-                     * Properties of a Strategy.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IStrategy
-                     * @property {string|null} [denom] Strategy denom
-                     * @property {Long|null} [id] Strategy id
-                     * @property {string|null} [contract_address] Strategy contract_address
-                     * @property {string|null} [name] Strategy name
-                     */
-    
-                    /**
-                     * Constructs a new Strategy.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a Strategy.
-                     * @implements IStrategy
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IStrategy=} [properties] Properties to set
-                     */
-                    function Strategy(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * Strategy denom.
-                     * @member {string} denom
-                     * @memberof ununifi.chain.yieldaggregator.Strategy
-                     * @instance
-                     */
-                    Strategy.prototype.denom = "";
-    
-                    /**
-                     * Strategy id.
-                     * @member {Long} id
-                     * @memberof ununifi.chain.yieldaggregator.Strategy
-                     * @instance
-                     */
-                    Strategy.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * Strategy contract_address.
-                     * @member {string} contract_address
-                     * @memberof ununifi.chain.yieldaggregator.Strategy
-                     * @instance
-                     */
-                    Strategy.prototype.contract_address = "";
-    
-                    /**
-                     * Strategy name.
-                     * @member {string} name
-                     * @memberof ununifi.chain.yieldaggregator.Strategy
-                     * @instance
-                     */
-                    Strategy.prototype.name = "";
-    
-                    /**
-                     * Encodes the specified Strategy message. Does not implicitly {@link ununifi.chain.yieldaggregator.Strategy.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.Strategy
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IStrategy} message Strategy message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    Strategy.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.denom);
-                        if (message.id != null && Object.hasOwnProperty.call(message, "id"))
-                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.id);
-                        if (message.contract_address != null && Object.hasOwnProperty.call(message, "contract_address"))
-                            writer.uint32(/* id 3, wireType 2 =*/26).string(message.contract_address);
-                        if (message.name != null && Object.hasOwnProperty.call(message, "name"))
-                            writer.uint32(/* id 4, wireType 2 =*/34).string(message.name);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified Strategy message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.Strategy.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.Strategy
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IStrategy} message Strategy message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    Strategy.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a Strategy message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.Strategy
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.Strategy} Strategy
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    Strategy.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.Strategy();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.denom = reader.string();
-                                break;
-                            case 2:
-                                message.id = reader.uint64();
-                                break;
-                            case 3:
-                                message.contract_address = reader.string();
-                                break;
-                            case 4:
-                                message.name = reader.string();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a Strategy message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.Strategy
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.Strategy} Strategy
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    Strategy.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a Strategy message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.Strategy
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    Strategy.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.denom != null && message.hasOwnProperty("denom"))
-                            if (!$util.isString(message.denom))
-                                return "denom: string expected";
-                        if (message.id != null && message.hasOwnProperty("id"))
-                            if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
-                                return "id: integer|Long expected";
-                        if (message.contract_address != null && message.hasOwnProperty("contract_address"))
-                            if (!$util.isString(message.contract_address))
-                                return "contract_address: string expected";
-                        if (message.name != null && message.hasOwnProperty("name"))
-                            if (!$util.isString(message.name))
-                                return "name: string expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a Strategy message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.Strategy
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.Strategy} Strategy
-                     */
-                    Strategy.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.Strategy)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.Strategy();
-                        if (object.denom != null)
-                            message.denom = String(object.denom);
-                        if (object.id != null)
-                            if ($util.Long)
-                                (message.id = $util.Long.fromValue(object.id)).unsigned = true;
-                            else if (typeof object.id === "string")
-                                message.id = parseInt(object.id, 10);
-                            else if (typeof object.id === "number")
-                                message.id = object.id;
-                            else if (typeof object.id === "object")
-                                message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
-                        if (object.contract_address != null)
-                            message.contract_address = String(object.contract_address);
-                        if (object.name != null)
-                            message.name = String(object.name);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a Strategy message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.Strategy
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.Strategy} message Strategy
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    Strategy.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            object.denom = "";
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.id = options.longs === String ? "0" : 0;
-                            object.contract_address = "";
-                            object.name = "";
-                        }
-                        if (message.denom != null && message.hasOwnProperty("denom"))
-                            object.denom = message.denom;
-                        if (message.id != null && message.hasOwnProperty("id"))
-                            if (typeof message.id === "number")
-                                object.id = options.longs === String ? String(message.id) : message.id;
-                            else
-                                object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
-                        if (message.contract_address != null && message.hasOwnProperty("contract_address"))
-                            object.contract_address = message.contract_address;
-                        if (message.name != null && message.hasOwnProperty("name"))
-                            object.name = message.name;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this Strategy to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.Strategy
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    Strategy.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return Strategy;
-                })();
-    
-                yieldaggregator.VaultMetrics = (function() {
-    
-                    /**
-                     * Properties of a VaultMetrics.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IVaultMetrics
-                     * @property {string|null} [allocation] VaultMetrics allocation
-                     * @property {string|null} [apy] VaultMetrics apy
-                     */
-    
-                    /**
-                     * Constructs a new VaultMetrics.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a VaultMetrics.
-                     * @implements IVaultMetrics
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IVaultMetrics=} [properties] Properties to set
-                     */
-                    function VaultMetrics(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * VaultMetrics allocation.
-                     * @member {string} allocation
-                     * @memberof ununifi.chain.yieldaggregator.VaultMetrics
-                     * @instance
-                     */
-                    VaultMetrics.prototype.allocation = "";
-    
-                    /**
-                     * VaultMetrics apy.
-                     * @member {string} apy
-                     * @memberof ununifi.chain.yieldaggregator.VaultMetrics
-                     * @instance
-                     */
-                    VaultMetrics.prototype.apy = "";
-    
-                    /**
-                     * Encodes the specified VaultMetrics message. Does not implicitly {@link ununifi.chain.yieldaggregator.VaultMetrics.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.VaultMetrics
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IVaultMetrics} message VaultMetrics message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    VaultMetrics.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.allocation != null && Object.hasOwnProperty.call(message, "allocation"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.allocation);
-                        if (message.apy != null && Object.hasOwnProperty.call(message, "apy"))
-                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.apy);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified VaultMetrics message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.VaultMetrics.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.VaultMetrics
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IVaultMetrics} message VaultMetrics message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    VaultMetrics.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a VaultMetrics message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.VaultMetrics
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.VaultMetrics} VaultMetrics
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    VaultMetrics.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.VaultMetrics();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.allocation = reader.string();
-                                break;
-                            case 2:
-                                message.apy = reader.string();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a VaultMetrics message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.VaultMetrics
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.VaultMetrics} VaultMetrics
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    VaultMetrics.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a VaultMetrics message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.VaultMetrics
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    VaultMetrics.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.allocation != null && message.hasOwnProperty("allocation"))
-                            if (!$util.isString(message.allocation))
-                                return "allocation: string expected";
-                        if (message.apy != null && message.hasOwnProperty("apy"))
-                            if (!$util.isString(message.apy))
-                                return "apy: string expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a VaultMetrics message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.VaultMetrics
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.VaultMetrics} VaultMetrics
-                     */
-                    VaultMetrics.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.VaultMetrics)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.VaultMetrics();
-                        if (object.allocation != null)
-                            message.allocation = String(object.allocation);
-                        if (object.apy != null)
-                            message.apy = String(object.apy);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a VaultMetrics message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.VaultMetrics
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.VaultMetrics} message VaultMetrics
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    VaultMetrics.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            object.allocation = "";
-                            object.apy = "";
-                        }
-                        if (message.allocation != null && message.hasOwnProperty("allocation"))
-                            object.allocation = message.allocation;
-                        if (message.apy != null && message.hasOwnProperty("apy"))
-                            object.apy = message.apy;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this VaultMetrics to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.VaultMetrics
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    VaultMetrics.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return VaultMetrics;
-                })();
-    
-                yieldaggregator.StrategyMetrics = (function() {
-    
-                    /**
-                     * Properties of a StrategyMetrics.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IStrategyMetrics
-                     * @property {string|null} [allocation] StrategyMetrics allocation
-                     * @property {string|null} [apr] StrategyMetrics apr
-                     */
-    
-                    /**
-                     * Constructs a new StrategyMetrics.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a StrategyMetrics.
-                     * @implements IStrategyMetrics
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IStrategyMetrics=} [properties] Properties to set
-                     */
-                    function StrategyMetrics(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * StrategyMetrics allocation.
-                     * @member {string} allocation
-                     * @memberof ununifi.chain.yieldaggregator.StrategyMetrics
-                     * @instance
-                     */
-                    StrategyMetrics.prototype.allocation = "";
-    
-                    /**
-                     * StrategyMetrics apr.
-                     * @member {string} apr
-                     * @memberof ununifi.chain.yieldaggregator.StrategyMetrics
-                     * @instance
-                     */
-                    StrategyMetrics.prototype.apr = "";
-    
-                    /**
-                     * Encodes the specified StrategyMetrics message. Does not implicitly {@link ununifi.chain.yieldaggregator.StrategyMetrics.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.StrategyMetrics
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IStrategyMetrics} message StrategyMetrics message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    StrategyMetrics.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.allocation != null && Object.hasOwnProperty.call(message, "allocation"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.allocation);
-                        if (message.apr != null && Object.hasOwnProperty.call(message, "apr"))
-                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.apr);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified StrategyMetrics message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.StrategyMetrics.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.StrategyMetrics
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IStrategyMetrics} message StrategyMetrics message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    StrategyMetrics.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a StrategyMetrics message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.StrategyMetrics
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.StrategyMetrics} StrategyMetrics
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    StrategyMetrics.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.StrategyMetrics();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.allocation = reader.string();
-                                break;
-                            case 2:
-                                message.apr = reader.string();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a StrategyMetrics message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.StrategyMetrics
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.StrategyMetrics} StrategyMetrics
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    StrategyMetrics.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a StrategyMetrics message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.StrategyMetrics
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    StrategyMetrics.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.allocation != null && message.hasOwnProperty("allocation"))
-                            if (!$util.isString(message.allocation))
-                                return "allocation: string expected";
-                        if (message.apr != null && message.hasOwnProperty("apr"))
-                            if (!$util.isString(message.apr))
-                                return "apr: string expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a StrategyMetrics message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.StrategyMetrics
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.StrategyMetrics} StrategyMetrics
-                     */
-                    StrategyMetrics.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.StrategyMetrics)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.StrategyMetrics();
-                        if (object.allocation != null)
-                            message.allocation = String(object.allocation);
-                        if (object.apr != null)
-                            message.apr = String(object.apr);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a StrategyMetrics message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.StrategyMetrics
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.StrategyMetrics} message StrategyMetrics
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    StrategyMetrics.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            object.allocation = "";
-                            object.apr = "";
-                        }
-                        if (message.allocation != null && message.hasOwnProperty("allocation"))
-                            object.allocation = message.allocation;
-                        if (message.apr != null && message.hasOwnProperty("apr"))
-                            object.apr = message.apr;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this StrategyMetrics to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.StrategyMetrics
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    StrategyMetrics.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return StrategyMetrics;
-                })();
-    
-                yieldaggregator.Msg = (function() {
-    
-                    /**
-                     * Constructs a new Msg service.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a Msg
-                     * @extends $protobuf.rpc.Service
-                     * @constructor
-                     * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
-                     * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
-                     * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
-                     */
-                    function Msg(rpcImpl, requestDelimited, responseDelimited) {
-                        $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
-                    }
-    
-                    (Msg.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Msg;
-    
-                    /**
-                     * Callback as used by {@link ununifi.chain.yieldaggregator.Msg#depositToVault}.
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @typedef DepositToVaultCallback
-                     * @type {function}
-                     * @param {Error|null} error Error, if any
-                     * @param {ununifi.chain.yieldaggregator.MsgDepositToVaultResponse} [response] MsgDepositToVaultResponse
-                     */
-    
-                    /**
-                     * Calls DepositToVault.
-                     * @function depositToVault
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IMsgDepositToVault} request MsgDepositToVault message or plain object
-                     * @param {ununifi.chain.yieldaggregator.Msg.DepositToVaultCallback} callback Node-style callback called with the error, if any, and MsgDepositToVaultResponse
-                     * @returns {undefined}
-                     * @variation 1
-                     */
-                    Object.defineProperty(Msg.prototype.depositToVault = function depositToVault(request, callback) {
-                        return this.rpcCall(depositToVault, $root.ununifi.chain.yieldaggregator.MsgDepositToVault, $root.ununifi.chain.yieldaggregator.MsgDepositToVaultResponse, request, callback);
-                    }, "name", { value: "DepositToVault" });
-    
-                    /**
-                     * Calls DepositToVault.
-                     * @function depositToVault
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IMsgDepositToVault} request MsgDepositToVault message or plain object
-                     * @returns {Promise<ununifi.chain.yieldaggregator.MsgDepositToVaultResponse>} Promise
-                     * @variation 2
-                     */
-    
-                    /**
-                     * Callback as used by {@link ununifi.chain.yieldaggregator.Msg#withdrawFromVault}.
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @typedef WithdrawFromVaultCallback
-                     * @type {function}
-                     * @param {Error|null} error Error, if any
-                     * @param {ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse} [response] MsgWithdrawFromVaultResponse
-                     */
-    
-                    /**
-                     * Calls WithdrawFromVault.
-                     * @function withdrawFromVault
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IMsgWithdrawFromVault} request MsgWithdrawFromVault message or plain object
-                     * @param {ununifi.chain.yieldaggregator.Msg.WithdrawFromVaultCallback} callback Node-style callback called with the error, if any, and MsgWithdrawFromVaultResponse
-                     * @returns {undefined}
-                     * @variation 1
-                     */
-                    Object.defineProperty(Msg.prototype.withdrawFromVault = function withdrawFromVault(request, callback) {
-                        return this.rpcCall(withdrawFromVault, $root.ununifi.chain.yieldaggregator.MsgWithdrawFromVault, $root.ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse, request, callback);
-                    }, "name", { value: "WithdrawFromVault" });
-    
-                    /**
-                     * Calls WithdrawFromVault.
-                     * @function withdrawFromVault
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IMsgWithdrawFromVault} request MsgWithdrawFromVault message or plain object
-                     * @returns {Promise<ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse>} Promise
-                     * @variation 2
-                     */
-    
-                    /**
-                     * Callback as used by {@link ununifi.chain.yieldaggregator.Msg#createVault}.
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @typedef CreateVaultCallback
-                     * @type {function}
-                     * @param {Error|null} error Error, if any
-                     * @param {ununifi.chain.yieldaggregator.MsgCreateVaultResponse} [response] MsgCreateVaultResponse
-                     */
-    
-                    /**
-                     * Calls CreateVault.
-                     * @function createVault
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IMsgCreateVault} request MsgCreateVault message or plain object
-                     * @param {ununifi.chain.yieldaggregator.Msg.CreateVaultCallback} callback Node-style callback called with the error, if any, and MsgCreateVaultResponse
-                     * @returns {undefined}
-                     * @variation 1
-                     */
-                    Object.defineProperty(Msg.prototype.createVault = function createVault(request, callback) {
-                        return this.rpcCall(createVault, $root.ununifi.chain.yieldaggregator.MsgCreateVault, $root.ununifi.chain.yieldaggregator.MsgCreateVaultResponse, request, callback);
-                    }, "name", { value: "CreateVault" });
-    
-                    /**
-                     * Calls CreateVault.
-                     * @function createVault
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IMsgCreateVault} request MsgCreateVault message or plain object
-                     * @returns {Promise<ununifi.chain.yieldaggregator.MsgCreateVaultResponse>} Promise
-                     * @variation 2
-                     */
-    
-                    /**
-                     * Callback as used by {@link ununifi.chain.yieldaggregator.Msg#deleteVault}.
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @typedef DeleteVaultCallback
-                     * @type {function}
-                     * @param {Error|null} error Error, if any
-                     * @param {ununifi.chain.yieldaggregator.MsgDeleteVaultResponse} [response] MsgDeleteVaultResponse
-                     */
-    
-                    /**
-                     * Calls DeleteVault.
-                     * @function deleteVault
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IMsgDeleteVault} request MsgDeleteVault message or plain object
-                     * @param {ununifi.chain.yieldaggregator.Msg.DeleteVaultCallback} callback Node-style callback called with the error, if any, and MsgDeleteVaultResponse
-                     * @returns {undefined}
-                     * @variation 1
-                     */
-                    Object.defineProperty(Msg.prototype.deleteVault = function deleteVault(request, callback) {
-                        return this.rpcCall(deleteVault, $root.ununifi.chain.yieldaggregator.MsgDeleteVault, $root.ununifi.chain.yieldaggregator.MsgDeleteVaultResponse, request, callback);
-                    }, "name", { value: "DeleteVault" });
-    
-                    /**
-                     * Calls DeleteVault.
-                     * @function deleteVault
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IMsgDeleteVault} request MsgDeleteVault message or plain object
-                     * @returns {Promise<ununifi.chain.yieldaggregator.MsgDeleteVaultResponse>} Promise
-                     * @variation 2
-                     */
-    
-                    /**
-                     * Callback as used by {@link ununifi.chain.yieldaggregator.Msg#transferVaultOwnership}.
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @typedef TransferVaultOwnershipCallback
-                     * @type {function}
-                     * @param {Error|null} error Error, if any
-                     * @param {ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse} [response] MsgTransferVaultOwnershipResponse
-                     */
-    
-                    /**
-                     * Calls TransferVaultOwnership.
-                     * @function transferVaultOwnership
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IMsgTransferVaultOwnership} request MsgTransferVaultOwnership message or plain object
-                     * @param {ununifi.chain.yieldaggregator.Msg.TransferVaultOwnershipCallback} callback Node-style callback called with the error, if any, and MsgTransferVaultOwnershipResponse
-                     * @returns {undefined}
-                     * @variation 1
-                     */
-                    Object.defineProperty(Msg.prototype.transferVaultOwnership = function transferVaultOwnership(request, callback) {
-                        return this.rpcCall(transferVaultOwnership, $root.ununifi.chain.yieldaggregator.MsgTransferVaultOwnership, $root.ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse, request, callback);
-                    }, "name", { value: "TransferVaultOwnership" });
-    
-                    /**
-                     * Calls TransferVaultOwnership.
-                     * @function transferVaultOwnership
-                     * @memberof ununifi.chain.yieldaggregator.Msg
-                     * @instance
-                     * @param {ununifi.chain.yieldaggregator.IMsgTransferVaultOwnership} request MsgTransferVaultOwnership message or plain object
-                     * @returns {Promise<ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse>} Promise
-                     * @variation 2
-                     */
-    
-                    return Msg;
-                })();
-    
-                yieldaggregator.MsgDepositToVault = (function() {
-    
-                    /**
-                     * Properties of a MsgDepositToVault.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IMsgDepositToVault
-                     * @property {string|null} [sender] MsgDepositToVault sender
-                     * @property {Long|null} [vault_id] MsgDepositToVault vault_id
-                     * @property {cosmos.base.v1beta1.ICoin|null} [amount] MsgDepositToVault amount
-                     */
-    
-                    /**
-                     * Constructs a new MsgDepositToVault.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a MsgDepositToVault.
-                     * @implements IMsgDepositToVault
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IMsgDepositToVault=} [properties] Properties to set
-                     */
-                    function MsgDepositToVault(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * MsgDepositToVault sender.
-                     * @member {string} sender
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVault
-                     * @instance
-                     */
-                    MsgDepositToVault.prototype.sender = "";
-    
-                    /**
-                     * MsgDepositToVault vault_id.
-                     * @member {Long} vault_id
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVault
-                     * @instance
-                     */
-                    MsgDepositToVault.prototype.vault_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * MsgDepositToVault amount.
-                     * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVault
-                     * @instance
-                     */
-                    MsgDepositToVault.prototype.amount = null;
-    
-                    /**
-                     * Encodes the specified MsgDepositToVault message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDepositToVault.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgDepositToVault} message MsgDepositToVault message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgDepositToVault.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
-                        if (message.vault_id != null && Object.hasOwnProperty.call(message, "vault_id"))
-                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.vault_id);
-                        if (message.amount != null && Object.hasOwnProperty.call(message, "amount"))
-                            $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified MsgDepositToVault message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDepositToVault.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgDepositToVault} message MsgDepositToVault message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgDepositToVault.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a MsgDepositToVault message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVault
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.MsgDepositToVault} MsgDepositToVault
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgDepositToVault.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.MsgDepositToVault();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.sender = reader.string();
-                                break;
-                            case 2:
-                                message.vault_id = reader.uint64();
-                                break;
-                            case 3:
-                                message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a MsgDepositToVault message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVault
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.MsgDepositToVault} MsgDepositToVault
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgDepositToVault.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a MsgDepositToVault message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVault
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    MsgDepositToVault.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.sender != null && message.hasOwnProperty("sender"))
-                            if (!$util.isString(message.sender))
-                                return "sender: string expected";
-                        if (message.vault_id != null && message.hasOwnProperty("vault_id"))
-                            if (!$util.isInteger(message.vault_id) && !(message.vault_id && $util.isInteger(message.vault_id.low) && $util.isInteger(message.vault_id.high)))
-                                return "vault_id: integer|Long expected";
-                        if (message.amount != null && message.hasOwnProperty("amount")) {
-                            var error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
-                            if (error)
-                                return "amount." + error;
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a MsgDepositToVault message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVault
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.MsgDepositToVault} MsgDepositToVault
-                     */
-                    MsgDepositToVault.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.MsgDepositToVault)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.MsgDepositToVault();
-                        if (object.sender != null)
-                            message.sender = String(object.sender);
-                        if (object.vault_id != null)
-                            if ($util.Long)
-                                (message.vault_id = $util.Long.fromValue(object.vault_id)).unsigned = true;
-                            else if (typeof object.vault_id === "string")
-                                message.vault_id = parseInt(object.vault_id, 10);
-                            else if (typeof object.vault_id === "number")
-                                message.vault_id = object.vault_id;
-                            else if (typeof object.vault_id === "object")
-                                message.vault_id = new $util.LongBits(object.vault_id.low >>> 0, object.vault_id.high >>> 0).toNumber(true);
-                        if (object.amount != null) {
-                            if (typeof object.amount !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.MsgDepositToVault.amount: object expected");
-                            message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a MsgDepositToVault message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.MsgDepositToVault} message MsgDepositToVault
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    MsgDepositToVault.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            object.sender = "";
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.vault_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.vault_id = options.longs === String ? "0" : 0;
-                            object.amount = null;
-                        }
-                        if (message.sender != null && message.hasOwnProperty("sender"))
-                            object.sender = message.sender;
-                        if (message.vault_id != null && message.hasOwnProperty("vault_id"))
-                            if (typeof message.vault_id === "number")
-                                object.vault_id = options.longs === String ? String(message.vault_id) : message.vault_id;
-                            else
-                                object.vault_id = options.longs === String ? $util.Long.prototype.toString.call(message.vault_id) : options.longs === Number ? new $util.LongBits(message.vault_id.low >>> 0, message.vault_id.high >>> 0).toNumber(true) : message.vault_id;
-                        if (message.amount != null && message.hasOwnProperty("amount"))
-                            object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this MsgDepositToVault to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVault
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    MsgDepositToVault.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return MsgDepositToVault;
-                })();
-    
-                yieldaggregator.MsgDepositToVaultResponse = (function() {
-    
-                    /**
-                     * Properties of a MsgDepositToVaultResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IMsgDepositToVaultResponse
-                     */
-    
-                    /**
-                     * Constructs a new MsgDepositToVaultResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a MsgDepositToVaultResponse.
-                     * @implements IMsgDepositToVaultResponse
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IMsgDepositToVaultResponse=} [properties] Properties to set
-                     */
-                    function MsgDepositToVaultResponse(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * Encodes the specified MsgDepositToVaultResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDepositToVaultResponse.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgDepositToVaultResponse} message MsgDepositToVaultResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgDepositToVaultResponse.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified MsgDepositToVaultResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDepositToVaultResponse.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgDepositToVaultResponse} message MsgDepositToVaultResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgDepositToVaultResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a MsgDepositToVaultResponse message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVaultResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.MsgDepositToVaultResponse} MsgDepositToVaultResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgDepositToVaultResponse.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.MsgDepositToVaultResponse();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a MsgDepositToVaultResponse message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVaultResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.MsgDepositToVaultResponse} MsgDepositToVaultResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgDepositToVaultResponse.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a MsgDepositToVaultResponse message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVaultResponse
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    MsgDepositToVaultResponse.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a MsgDepositToVaultResponse message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVaultResponse
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.MsgDepositToVaultResponse} MsgDepositToVaultResponse
-                     */
-                    MsgDepositToVaultResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.MsgDepositToVaultResponse)
-                            return object;
-                        return new $root.ununifi.chain.yieldaggregator.MsgDepositToVaultResponse();
-                    };
-    
-                    /**
-                     * Creates a plain object from a MsgDepositToVaultResponse message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.MsgDepositToVaultResponse} message MsgDepositToVaultResponse
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    MsgDepositToVaultResponse.toObject = function toObject() {
-                        return {};
-                    };
-    
-                    /**
-                     * Converts this MsgDepositToVaultResponse to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.MsgDepositToVaultResponse
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    MsgDepositToVaultResponse.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return MsgDepositToVaultResponse;
-                })();
-    
-                yieldaggregator.MsgWithdrawFromVault = (function() {
-    
-                    /**
-                     * Properties of a MsgWithdrawFromVault.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IMsgWithdrawFromVault
-                     * @property {string|null} [sender] MsgWithdrawFromVault sender
-                     * @property {Long|null} [vault_id] MsgWithdrawFromVault vault_id
-                     * @property {string|null} [lp_token_amount] MsgWithdrawFromVault lp_token_amount
-                     */
-    
-                    /**
-                     * Constructs a new MsgWithdrawFromVault.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a MsgWithdrawFromVault.
-                     * @implements IMsgWithdrawFromVault
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IMsgWithdrawFromVault=} [properties] Properties to set
-                     */
-                    function MsgWithdrawFromVault(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * MsgWithdrawFromVault sender.
-                     * @member {string} sender
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVault
-                     * @instance
-                     */
-                    MsgWithdrawFromVault.prototype.sender = "";
-    
-                    /**
-                     * MsgWithdrawFromVault vault_id.
-                     * @member {Long} vault_id
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVault
-                     * @instance
-                     */
-                    MsgWithdrawFromVault.prototype.vault_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * MsgWithdrawFromVault lp_token_amount.
-                     * @member {string} lp_token_amount
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVault
-                     * @instance
-                     */
-                    MsgWithdrawFromVault.prototype.lp_token_amount = "";
-    
-                    /**
-                     * Encodes the specified MsgWithdrawFromVault message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgWithdrawFromVault.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgWithdrawFromVault} message MsgWithdrawFromVault message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgWithdrawFromVault.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
-                        if (message.vault_id != null && Object.hasOwnProperty.call(message, "vault_id"))
-                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.vault_id);
-                        if (message.lp_token_amount != null && Object.hasOwnProperty.call(message, "lp_token_amount"))
-                            writer.uint32(/* id 3, wireType 2 =*/26).string(message.lp_token_amount);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified MsgWithdrawFromVault message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgWithdrawFromVault.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgWithdrawFromVault} message MsgWithdrawFromVault message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgWithdrawFromVault.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a MsgWithdrawFromVault message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVault
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.MsgWithdrawFromVault} MsgWithdrawFromVault
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgWithdrawFromVault.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.MsgWithdrawFromVault();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.sender = reader.string();
-                                break;
-                            case 2:
-                                message.vault_id = reader.uint64();
-                                break;
-                            case 3:
-                                message.lp_token_amount = reader.string();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a MsgWithdrawFromVault message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVault
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.MsgWithdrawFromVault} MsgWithdrawFromVault
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgWithdrawFromVault.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a MsgWithdrawFromVault message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVault
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    MsgWithdrawFromVault.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.sender != null && message.hasOwnProperty("sender"))
-                            if (!$util.isString(message.sender))
-                                return "sender: string expected";
-                        if (message.vault_id != null && message.hasOwnProperty("vault_id"))
-                            if (!$util.isInteger(message.vault_id) && !(message.vault_id && $util.isInteger(message.vault_id.low) && $util.isInteger(message.vault_id.high)))
-                                return "vault_id: integer|Long expected";
-                        if (message.lp_token_amount != null && message.hasOwnProperty("lp_token_amount"))
-                            if (!$util.isString(message.lp_token_amount))
-                                return "lp_token_amount: string expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a MsgWithdrawFromVault message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVault
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.MsgWithdrawFromVault} MsgWithdrawFromVault
-                     */
-                    MsgWithdrawFromVault.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.MsgWithdrawFromVault)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.MsgWithdrawFromVault();
-                        if (object.sender != null)
-                            message.sender = String(object.sender);
-                        if (object.vault_id != null)
-                            if ($util.Long)
-                                (message.vault_id = $util.Long.fromValue(object.vault_id)).unsigned = true;
-                            else if (typeof object.vault_id === "string")
-                                message.vault_id = parseInt(object.vault_id, 10);
-                            else if (typeof object.vault_id === "number")
-                                message.vault_id = object.vault_id;
-                            else if (typeof object.vault_id === "object")
-                                message.vault_id = new $util.LongBits(object.vault_id.low >>> 0, object.vault_id.high >>> 0).toNumber(true);
-                        if (object.lp_token_amount != null)
-                            message.lp_token_amount = String(object.lp_token_amount);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a MsgWithdrawFromVault message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.MsgWithdrawFromVault} message MsgWithdrawFromVault
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    MsgWithdrawFromVault.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            object.sender = "";
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.vault_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.vault_id = options.longs === String ? "0" : 0;
-                            object.lp_token_amount = "";
-                        }
-                        if (message.sender != null && message.hasOwnProperty("sender"))
-                            object.sender = message.sender;
-                        if (message.vault_id != null && message.hasOwnProperty("vault_id"))
-                            if (typeof message.vault_id === "number")
-                                object.vault_id = options.longs === String ? String(message.vault_id) : message.vault_id;
-                            else
-                                object.vault_id = options.longs === String ? $util.Long.prototype.toString.call(message.vault_id) : options.longs === Number ? new $util.LongBits(message.vault_id.low >>> 0, message.vault_id.high >>> 0).toNumber(true) : message.vault_id;
-                        if (message.lp_token_amount != null && message.hasOwnProperty("lp_token_amount"))
-                            object.lp_token_amount = message.lp_token_amount;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this MsgWithdrawFromVault to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVault
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    MsgWithdrawFromVault.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return MsgWithdrawFromVault;
-                })();
-    
-                yieldaggregator.MsgWithdrawFromVaultResponse = (function() {
-    
-                    /**
-                     * Properties of a MsgWithdrawFromVaultResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IMsgWithdrawFromVaultResponse
-                     */
-    
-                    /**
-                     * Constructs a new MsgWithdrawFromVaultResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a MsgWithdrawFromVaultResponse.
-                     * @implements IMsgWithdrawFromVaultResponse
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IMsgWithdrawFromVaultResponse=} [properties] Properties to set
-                     */
-                    function MsgWithdrawFromVaultResponse(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * Encodes the specified MsgWithdrawFromVaultResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgWithdrawFromVaultResponse} message MsgWithdrawFromVaultResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgWithdrawFromVaultResponse.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified MsgWithdrawFromVaultResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgWithdrawFromVaultResponse} message MsgWithdrawFromVaultResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgWithdrawFromVaultResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a MsgWithdrawFromVaultResponse message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse} MsgWithdrawFromVaultResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgWithdrawFromVaultResponse.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a MsgWithdrawFromVaultResponse message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse} MsgWithdrawFromVaultResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgWithdrawFromVaultResponse.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a MsgWithdrawFromVaultResponse message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    MsgWithdrawFromVaultResponse.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a MsgWithdrawFromVaultResponse message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse} MsgWithdrawFromVaultResponse
-                     */
-                    MsgWithdrawFromVaultResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse)
-                            return object;
-                        return new $root.ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse();
-                    };
-    
-                    /**
-                     * Creates a plain object from a MsgWithdrawFromVaultResponse message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse} message MsgWithdrawFromVaultResponse
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    MsgWithdrawFromVaultResponse.toObject = function toObject() {
-                        return {};
-                    };
-    
-                    /**
-                     * Converts this MsgWithdrawFromVaultResponse to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    MsgWithdrawFromVaultResponse.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return MsgWithdrawFromVaultResponse;
-                })();
-    
-                yieldaggregator.MsgCreateVault = (function() {
-    
-                    /**
-                     * Properties of a MsgCreateVault.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IMsgCreateVault
-                     * @property {string|null} [sender] MsgCreateVault sender
-                     * @property {string|null} [denom] MsgCreateVault denom
-                     * @property {string|null} [commission_rate] MsgCreateVault commission_rate
-                     * @property {Array.<ununifi.chain.yieldaggregator.IStrategyWeight>|null} [strategy_weights] MsgCreateVault strategy_weights
-                     * @property {cosmos.base.v1beta1.ICoin|null} [fee] MsgCreateVault fee
-                     * @property {cosmos.base.v1beta1.ICoin|null} [deposit] MsgCreateVault deposit
-                     */
-    
-                    /**
-                     * Constructs a new MsgCreateVault.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a MsgCreateVault.
-                     * @implements IMsgCreateVault
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IMsgCreateVault=} [properties] Properties to set
-                     */
-                    function MsgCreateVault(properties) {
-                        this.strategy_weights = [];
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * MsgCreateVault sender.
-                     * @member {string} sender
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @instance
-                     */
-                    MsgCreateVault.prototype.sender = "";
-    
-                    /**
-                     * MsgCreateVault denom.
-                     * @member {string} denom
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @instance
-                     */
-                    MsgCreateVault.prototype.denom = "";
-    
-                    /**
-                     * MsgCreateVault commission_rate.
-                     * @member {string} commission_rate
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @instance
-                     */
-                    MsgCreateVault.prototype.commission_rate = "";
-    
-                    /**
-                     * MsgCreateVault strategy_weights.
-                     * @member {Array.<ununifi.chain.yieldaggregator.IStrategyWeight>} strategy_weights
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @instance
-                     */
-                    MsgCreateVault.prototype.strategy_weights = $util.emptyArray;
-    
-                    /**
-                     * MsgCreateVault fee.
-                     * @member {cosmos.base.v1beta1.ICoin|null|undefined} fee
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @instance
-                     */
-                    MsgCreateVault.prototype.fee = null;
-    
-                    /**
-                     * MsgCreateVault deposit.
-                     * @member {cosmos.base.v1beta1.ICoin|null|undefined} deposit
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @instance
-                     */
-                    MsgCreateVault.prototype.deposit = null;
-    
-                    /**
-                     * Encodes the specified MsgCreateVault message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgCreateVault.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgCreateVault} message MsgCreateVault message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgCreateVault.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
-                        if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
-                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.denom);
-                        if (message.commission_rate != null && Object.hasOwnProperty.call(message, "commission_rate"))
-                            writer.uint32(/* id 3, wireType 2 =*/26).string(message.commission_rate);
-                        if (message.strategy_weights != null && message.strategy_weights.length)
-                            for (var i = 0; i < message.strategy_weights.length; ++i)
-                                $root.ununifi.chain.yieldaggregator.StrategyWeight.encode(message.strategy_weights[i], writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-                        if (message.fee != null && Object.hasOwnProperty.call(message, "fee"))
-                            $root.cosmos.base.v1beta1.Coin.encode(message.fee, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
-                        if (message.deposit != null && Object.hasOwnProperty.call(message, "deposit"))
-                            $root.cosmos.base.v1beta1.Coin.encode(message.deposit, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified MsgCreateVault message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgCreateVault.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgCreateVault} message MsgCreateVault message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgCreateVault.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a MsgCreateVault message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.MsgCreateVault} MsgCreateVault
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgCreateVault.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.MsgCreateVault();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.sender = reader.string();
-                                break;
-                            case 2:
-                                message.denom = reader.string();
-                                break;
-                            case 3:
-                                message.commission_rate = reader.string();
-                                break;
-                            case 4:
-                                if (!(message.strategy_weights && message.strategy_weights.length))
-                                    message.strategy_weights = [];
-                                message.strategy_weights.push($root.ununifi.chain.yieldaggregator.StrategyWeight.decode(reader, reader.uint32()));
-                                break;
-                            case 5:
-                                message.fee = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                                break;
-                            case 6:
-                                message.deposit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a MsgCreateVault message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.MsgCreateVault} MsgCreateVault
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgCreateVault.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a MsgCreateVault message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    MsgCreateVault.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.sender != null && message.hasOwnProperty("sender"))
-                            if (!$util.isString(message.sender))
-                                return "sender: string expected";
-                        if (message.denom != null && message.hasOwnProperty("denom"))
-                            if (!$util.isString(message.denom))
-                                return "denom: string expected";
-                        if (message.commission_rate != null && message.hasOwnProperty("commission_rate"))
-                            if (!$util.isString(message.commission_rate))
-                                return "commission_rate: string expected";
-                        if (message.strategy_weights != null && message.hasOwnProperty("strategy_weights")) {
-                            if (!Array.isArray(message.strategy_weights))
-                                return "strategy_weights: array expected";
-                            for (var i = 0; i < message.strategy_weights.length; ++i) {
-                                var error = $root.ununifi.chain.yieldaggregator.StrategyWeight.verify(message.strategy_weights[i]);
-                                if (error)
-                                    return "strategy_weights." + error;
-                            }
-                        }
-                        if (message.fee != null && message.hasOwnProperty("fee")) {
-                            var error = $root.cosmos.base.v1beta1.Coin.verify(message.fee);
-                            if (error)
-                                return "fee." + error;
-                        }
-                        if (message.deposit != null && message.hasOwnProperty("deposit")) {
-                            var error = $root.cosmos.base.v1beta1.Coin.verify(message.deposit);
-                            if (error)
-                                return "deposit." + error;
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a MsgCreateVault message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.MsgCreateVault} MsgCreateVault
-                     */
-                    MsgCreateVault.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.MsgCreateVault)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.MsgCreateVault();
-                        if (object.sender != null)
-                            message.sender = String(object.sender);
-                        if (object.denom != null)
-                            message.denom = String(object.denom);
-                        if (object.commission_rate != null)
-                            message.commission_rate = String(object.commission_rate);
-                        if (object.strategy_weights) {
-                            if (!Array.isArray(object.strategy_weights))
-                                throw TypeError(".ununifi.chain.yieldaggregator.MsgCreateVault.strategy_weights: array expected");
-                            message.strategy_weights = [];
-                            for (var i = 0; i < object.strategy_weights.length; ++i) {
-                                if (typeof object.strategy_weights[i] !== "object")
-                                    throw TypeError(".ununifi.chain.yieldaggregator.MsgCreateVault.strategy_weights: object expected");
-                                message.strategy_weights[i] = $root.ununifi.chain.yieldaggregator.StrategyWeight.fromObject(object.strategy_weights[i]);
-                            }
-                        }
-                        if (object.fee != null) {
-                            if (typeof object.fee !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.MsgCreateVault.fee: object expected");
-                            message.fee = $root.cosmos.base.v1beta1.Coin.fromObject(object.fee);
-                        }
-                        if (object.deposit != null) {
-                            if (typeof object.deposit !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.MsgCreateVault.deposit: object expected");
-                            message.deposit = $root.cosmos.base.v1beta1.Coin.fromObject(object.deposit);
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a MsgCreateVault message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.MsgCreateVault} message MsgCreateVault
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    MsgCreateVault.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.arrays || options.defaults)
-                            object.strategy_weights = [];
-                        if (options.defaults) {
-                            object.sender = "";
-                            object.denom = "";
-                            object.commission_rate = "";
-                            object.fee = null;
-                            object.deposit = null;
-                        }
-                        if (message.sender != null && message.hasOwnProperty("sender"))
-                            object.sender = message.sender;
-                        if (message.denom != null && message.hasOwnProperty("denom"))
-                            object.denom = message.denom;
-                        if (message.commission_rate != null && message.hasOwnProperty("commission_rate"))
-                            object.commission_rate = message.commission_rate;
-                        if (message.strategy_weights && message.strategy_weights.length) {
-                            object.strategy_weights = [];
-                            for (var j = 0; j < message.strategy_weights.length; ++j)
-                                object.strategy_weights[j] = $root.ununifi.chain.yieldaggregator.StrategyWeight.toObject(message.strategy_weights[j], options);
-                        }
-                        if (message.fee != null && message.hasOwnProperty("fee"))
-                            object.fee = $root.cosmos.base.v1beta1.Coin.toObject(message.fee, options);
-                        if (message.deposit != null && message.hasOwnProperty("deposit"))
-                            object.deposit = $root.cosmos.base.v1beta1.Coin.toObject(message.deposit, options);
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this MsgCreateVault to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVault
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    MsgCreateVault.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return MsgCreateVault;
-                })();
-    
-                yieldaggregator.MsgCreateVaultResponse = (function() {
-    
-                    /**
-                     * Properties of a MsgCreateVaultResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IMsgCreateVaultResponse
-                     */
-    
-                    /**
-                     * Constructs a new MsgCreateVaultResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a MsgCreateVaultResponse.
-                     * @implements IMsgCreateVaultResponse
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IMsgCreateVaultResponse=} [properties] Properties to set
-                     */
-                    function MsgCreateVaultResponse(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * Encodes the specified MsgCreateVaultResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgCreateVaultResponse.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgCreateVaultResponse} message MsgCreateVaultResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgCreateVaultResponse.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified MsgCreateVaultResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgCreateVaultResponse.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgCreateVaultResponse} message MsgCreateVaultResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgCreateVaultResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a MsgCreateVaultResponse message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVaultResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.MsgCreateVaultResponse} MsgCreateVaultResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgCreateVaultResponse.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.MsgCreateVaultResponse();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a MsgCreateVaultResponse message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVaultResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.MsgCreateVaultResponse} MsgCreateVaultResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgCreateVaultResponse.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a MsgCreateVaultResponse message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVaultResponse
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    MsgCreateVaultResponse.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a MsgCreateVaultResponse message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVaultResponse
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.MsgCreateVaultResponse} MsgCreateVaultResponse
-                     */
-                    MsgCreateVaultResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.MsgCreateVaultResponse)
-                            return object;
-                        return new $root.ununifi.chain.yieldaggregator.MsgCreateVaultResponse();
-                    };
-    
-                    /**
-                     * Creates a plain object from a MsgCreateVaultResponse message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.MsgCreateVaultResponse} message MsgCreateVaultResponse
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    MsgCreateVaultResponse.toObject = function toObject() {
-                        return {};
-                    };
-    
-                    /**
-                     * Converts this MsgCreateVaultResponse to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.MsgCreateVaultResponse
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    MsgCreateVaultResponse.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return MsgCreateVaultResponse;
-                })();
-    
-                yieldaggregator.MsgDeleteVault = (function() {
-    
-                    /**
-                     * Properties of a MsgDeleteVault.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IMsgDeleteVault
-                     * @property {string|null} [sender] MsgDeleteVault sender
-                     * @property {Long|null} [vault_id] MsgDeleteVault vault_id
-                     */
-    
-                    /**
-                     * Constructs a new MsgDeleteVault.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a MsgDeleteVault.
-                     * @implements IMsgDeleteVault
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IMsgDeleteVault=} [properties] Properties to set
-                     */
-                    function MsgDeleteVault(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * MsgDeleteVault sender.
-                     * @member {string} sender
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVault
-                     * @instance
-                     */
-                    MsgDeleteVault.prototype.sender = "";
-    
-                    /**
-                     * MsgDeleteVault vault_id.
-                     * @member {Long} vault_id
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVault
-                     * @instance
-                     */
-                    MsgDeleteVault.prototype.vault_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * Encodes the specified MsgDeleteVault message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDeleteVault.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgDeleteVault} message MsgDeleteVault message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgDeleteVault.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
-                        if (message.vault_id != null && Object.hasOwnProperty.call(message, "vault_id"))
-                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.vault_id);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified MsgDeleteVault message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDeleteVault.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgDeleteVault} message MsgDeleteVault message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgDeleteVault.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a MsgDeleteVault message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVault
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.MsgDeleteVault} MsgDeleteVault
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgDeleteVault.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.MsgDeleteVault();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.sender = reader.string();
-                                break;
-                            case 2:
-                                message.vault_id = reader.uint64();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a MsgDeleteVault message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVault
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.MsgDeleteVault} MsgDeleteVault
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgDeleteVault.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a MsgDeleteVault message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVault
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    MsgDeleteVault.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.sender != null && message.hasOwnProperty("sender"))
-                            if (!$util.isString(message.sender))
-                                return "sender: string expected";
-                        if (message.vault_id != null && message.hasOwnProperty("vault_id"))
-                            if (!$util.isInteger(message.vault_id) && !(message.vault_id && $util.isInteger(message.vault_id.low) && $util.isInteger(message.vault_id.high)))
-                                return "vault_id: integer|Long expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a MsgDeleteVault message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVault
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.MsgDeleteVault} MsgDeleteVault
-                     */
-                    MsgDeleteVault.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.MsgDeleteVault)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.MsgDeleteVault();
-                        if (object.sender != null)
-                            message.sender = String(object.sender);
-                        if (object.vault_id != null)
-                            if ($util.Long)
-                                (message.vault_id = $util.Long.fromValue(object.vault_id)).unsigned = true;
-                            else if (typeof object.vault_id === "string")
-                                message.vault_id = parseInt(object.vault_id, 10);
-                            else if (typeof object.vault_id === "number")
-                                message.vault_id = object.vault_id;
-                            else if (typeof object.vault_id === "object")
-                                message.vault_id = new $util.LongBits(object.vault_id.low >>> 0, object.vault_id.high >>> 0).toNumber(true);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a MsgDeleteVault message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVault
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.MsgDeleteVault} message MsgDeleteVault
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    MsgDeleteVault.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            object.sender = "";
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.vault_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.vault_id = options.longs === String ? "0" : 0;
-                        }
-                        if (message.sender != null && message.hasOwnProperty("sender"))
-                            object.sender = message.sender;
-                        if (message.vault_id != null && message.hasOwnProperty("vault_id"))
-                            if (typeof message.vault_id === "number")
-                                object.vault_id = options.longs === String ? String(message.vault_id) : message.vault_id;
-                            else
-                                object.vault_id = options.longs === String ? $util.Long.prototype.toString.call(message.vault_id) : options.longs === Number ? new $util.LongBits(message.vault_id.low >>> 0, message.vault_id.high >>> 0).toNumber(true) : message.vault_id;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this MsgDeleteVault to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVault
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    MsgDeleteVault.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return MsgDeleteVault;
-                })();
-    
-                yieldaggregator.MsgDeleteVaultResponse = (function() {
-    
-                    /**
-                     * Properties of a MsgDeleteVaultResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IMsgDeleteVaultResponse
-                     */
-    
-                    /**
-                     * Constructs a new MsgDeleteVaultResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a MsgDeleteVaultResponse.
-                     * @implements IMsgDeleteVaultResponse
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IMsgDeleteVaultResponse=} [properties] Properties to set
-                     */
-                    function MsgDeleteVaultResponse(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * Encodes the specified MsgDeleteVaultResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDeleteVaultResponse.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgDeleteVaultResponse} message MsgDeleteVaultResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgDeleteVaultResponse.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified MsgDeleteVaultResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDeleteVaultResponse.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgDeleteVaultResponse} message MsgDeleteVaultResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgDeleteVaultResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a MsgDeleteVaultResponse message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVaultResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.MsgDeleteVaultResponse} MsgDeleteVaultResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgDeleteVaultResponse.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.MsgDeleteVaultResponse();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a MsgDeleteVaultResponse message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVaultResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.MsgDeleteVaultResponse} MsgDeleteVaultResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgDeleteVaultResponse.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a MsgDeleteVaultResponse message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVaultResponse
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    MsgDeleteVaultResponse.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a MsgDeleteVaultResponse message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVaultResponse
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.MsgDeleteVaultResponse} MsgDeleteVaultResponse
-                     */
-                    MsgDeleteVaultResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.MsgDeleteVaultResponse)
-                            return object;
-                        return new $root.ununifi.chain.yieldaggregator.MsgDeleteVaultResponse();
-                    };
-    
-                    /**
-                     * Creates a plain object from a MsgDeleteVaultResponse message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVaultResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.MsgDeleteVaultResponse} message MsgDeleteVaultResponse
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    MsgDeleteVaultResponse.toObject = function toObject() {
-                        return {};
-                    };
-    
-                    /**
-                     * Converts this MsgDeleteVaultResponse to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.MsgDeleteVaultResponse
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    MsgDeleteVaultResponse.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return MsgDeleteVaultResponse;
-                })();
-    
-                yieldaggregator.MsgTransferVaultOwnership = (function() {
-    
-                    /**
-                     * Properties of a MsgTransferVaultOwnership.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IMsgTransferVaultOwnership
-                     * @property {string|null} [sender] MsgTransferVaultOwnership sender
-                     * @property {Long|null} [vault_id] MsgTransferVaultOwnership vault_id
-                     * @property {string|null} [recipient] MsgTransferVaultOwnership recipient
-                     */
-    
-                    /**
-                     * Constructs a new MsgTransferVaultOwnership.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a MsgTransferVaultOwnership.
-                     * @implements IMsgTransferVaultOwnership
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IMsgTransferVaultOwnership=} [properties] Properties to set
-                     */
-                    function MsgTransferVaultOwnership(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * MsgTransferVaultOwnership sender.
-                     * @member {string} sender
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnership
-                     * @instance
-                     */
-                    MsgTransferVaultOwnership.prototype.sender = "";
-    
-                    /**
-                     * MsgTransferVaultOwnership vault_id.
-                     * @member {Long} vault_id
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnership
-                     * @instance
-                     */
-                    MsgTransferVaultOwnership.prototype.vault_id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * MsgTransferVaultOwnership recipient.
-                     * @member {string} recipient
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnership
-                     * @instance
-                     */
-                    MsgTransferVaultOwnership.prototype.recipient = "";
-    
-                    /**
-                     * Encodes the specified MsgTransferVaultOwnership message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgTransferVaultOwnership.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnership
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgTransferVaultOwnership} message MsgTransferVaultOwnership message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgTransferVaultOwnership.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
-                        if (message.vault_id != null && Object.hasOwnProperty.call(message, "vault_id"))
-                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.vault_id);
-                        if (message.recipient != null && Object.hasOwnProperty.call(message, "recipient"))
-                            writer.uint32(/* id 3, wireType 2 =*/26).string(message.recipient);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified MsgTransferVaultOwnership message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgTransferVaultOwnership.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnership
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgTransferVaultOwnership} message MsgTransferVaultOwnership message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgTransferVaultOwnership.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a MsgTransferVaultOwnership message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnership
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.MsgTransferVaultOwnership} MsgTransferVaultOwnership
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgTransferVaultOwnership.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.MsgTransferVaultOwnership();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.sender = reader.string();
-                                break;
-                            case 2:
-                                message.vault_id = reader.uint64();
-                                break;
-                            case 3:
-                                message.recipient = reader.string();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a MsgTransferVaultOwnership message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnership
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.MsgTransferVaultOwnership} MsgTransferVaultOwnership
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgTransferVaultOwnership.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a MsgTransferVaultOwnership message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnership
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    MsgTransferVaultOwnership.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.sender != null && message.hasOwnProperty("sender"))
-                            if (!$util.isString(message.sender))
-                                return "sender: string expected";
-                        if (message.vault_id != null && message.hasOwnProperty("vault_id"))
-                            if (!$util.isInteger(message.vault_id) && !(message.vault_id && $util.isInteger(message.vault_id.low) && $util.isInteger(message.vault_id.high)))
-                                return "vault_id: integer|Long expected";
-                        if (message.recipient != null && message.hasOwnProperty("recipient"))
-                            if (!$util.isString(message.recipient))
-                                return "recipient: string expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a MsgTransferVaultOwnership message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnership
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.MsgTransferVaultOwnership} MsgTransferVaultOwnership
-                     */
-                    MsgTransferVaultOwnership.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.MsgTransferVaultOwnership)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.MsgTransferVaultOwnership();
-                        if (object.sender != null)
-                            message.sender = String(object.sender);
-                        if (object.vault_id != null)
-                            if ($util.Long)
-                                (message.vault_id = $util.Long.fromValue(object.vault_id)).unsigned = true;
-                            else if (typeof object.vault_id === "string")
-                                message.vault_id = parseInt(object.vault_id, 10);
-                            else if (typeof object.vault_id === "number")
-                                message.vault_id = object.vault_id;
-                            else if (typeof object.vault_id === "object")
-                                message.vault_id = new $util.LongBits(object.vault_id.low >>> 0, object.vault_id.high >>> 0).toNumber(true);
-                        if (object.recipient != null)
-                            message.recipient = String(object.recipient);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a MsgTransferVaultOwnership message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnership
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.MsgTransferVaultOwnership} message MsgTransferVaultOwnership
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    MsgTransferVaultOwnership.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            object.sender = "";
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.vault_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.vault_id = options.longs === String ? "0" : 0;
-                            object.recipient = "";
-                        }
-                        if (message.sender != null && message.hasOwnProperty("sender"))
-                            object.sender = message.sender;
-                        if (message.vault_id != null && message.hasOwnProperty("vault_id"))
-                            if (typeof message.vault_id === "number")
-                                object.vault_id = options.longs === String ? String(message.vault_id) : message.vault_id;
-                            else
-                                object.vault_id = options.longs === String ? $util.Long.prototype.toString.call(message.vault_id) : options.longs === Number ? new $util.LongBits(message.vault_id.low >>> 0, message.vault_id.high >>> 0).toNumber(true) : message.vault_id;
-                        if (message.recipient != null && message.hasOwnProperty("recipient"))
-                            object.recipient = message.recipient;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this MsgTransferVaultOwnership to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnership
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    MsgTransferVaultOwnership.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return MsgTransferVaultOwnership;
-                })();
-    
-                yieldaggregator.MsgTransferVaultOwnershipResponse = (function() {
-    
-                    /**
-                     * Properties of a MsgTransferVaultOwnershipResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IMsgTransferVaultOwnershipResponse
-                     */
-    
-                    /**
-                     * Constructs a new MsgTransferVaultOwnershipResponse.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a MsgTransferVaultOwnershipResponse.
-                     * @implements IMsgTransferVaultOwnershipResponse
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IMsgTransferVaultOwnershipResponse=} [properties] Properties to set
-                     */
-                    function MsgTransferVaultOwnershipResponse(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * Encodes the specified MsgTransferVaultOwnershipResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgTransferVaultOwnershipResponse} message MsgTransferVaultOwnershipResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgTransferVaultOwnershipResponse.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified MsgTransferVaultOwnershipResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IMsgTransferVaultOwnershipResponse} message MsgTransferVaultOwnershipResponse message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    MsgTransferVaultOwnershipResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a MsgTransferVaultOwnershipResponse message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse} MsgTransferVaultOwnershipResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgTransferVaultOwnershipResponse.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a MsgTransferVaultOwnershipResponse message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse} MsgTransferVaultOwnershipResponse
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    MsgTransferVaultOwnershipResponse.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a MsgTransferVaultOwnershipResponse message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    MsgTransferVaultOwnershipResponse.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a MsgTransferVaultOwnershipResponse message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse} MsgTransferVaultOwnershipResponse
-                     */
-                    MsgTransferVaultOwnershipResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse)
-                            return object;
-                        return new $root.ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse();
-                    };
-    
-                    /**
-                     * Creates a plain object from a MsgTransferVaultOwnershipResponse message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse} message MsgTransferVaultOwnershipResponse
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    MsgTransferVaultOwnershipResponse.toObject = function toObject() {
-                        return {};
-                    };
-    
-                    /**
-                     * Converts this MsgTransferVaultOwnershipResponse to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    MsgTransferVaultOwnershipResponse.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return MsgTransferVaultOwnershipResponse;
-                })();
-    
-                yieldaggregator.GenesisState = (function() {
-    
-                    /**
-                     * Properties of a GenesisState.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IGenesisState
-                     * @property {ununifi.chain.yieldaggregator.IParams|null} [params] GenesisState params
-                     * @property {Array.<ununifi.chain.yieldaggregator.IVault>|null} [vaults] GenesisState vaults
-                     * @property {Array.<ununifi.chain.yieldaggregator.IStrategy>|null} [strategies] GenesisState strategies
-                     */
-    
-                    /**
-                     * Constructs a new GenesisState.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a GenesisState.
-                     * @implements IGenesisState
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IGenesisState=} [properties] Properties to set
-                     */
-                    function GenesisState(properties) {
-                        this.vaults = [];
-                        this.strategies = [];
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * GenesisState params.
-                     * @member {ununifi.chain.yieldaggregator.IParams|null|undefined} params
-                     * @memberof ununifi.chain.yieldaggregator.GenesisState
-                     * @instance
-                     */
-                    GenesisState.prototype.params = null;
-    
-                    /**
-                     * GenesisState vaults.
-                     * @member {Array.<ununifi.chain.yieldaggregator.IVault>} vaults
-                     * @memberof ununifi.chain.yieldaggregator.GenesisState
-                     * @instance
-                     */
-                    GenesisState.prototype.vaults = $util.emptyArray;
-    
-                    /**
-                     * GenesisState strategies.
-                     * @member {Array.<ununifi.chain.yieldaggregator.IStrategy>} strategies
-                     * @memberof ununifi.chain.yieldaggregator.GenesisState
-                     * @instance
-                     */
-                    GenesisState.prototype.strategies = $util.emptyArray;
-    
-                    /**
-                     * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.chain.yieldaggregator.GenesisState.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.GenesisState
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IGenesisState} message GenesisState message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    GenesisState.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.params != null && Object.hasOwnProperty.call(message, "params"))
-                            $root.ununifi.chain.yieldaggregator.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                        if (message.vaults != null && message.vaults.length)
-                            for (var i = 0; i < message.vaults.length; ++i)
-                                $root.ununifi.chain.yieldaggregator.Vault.encode(message.vaults[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                        if (message.strategies != null && message.strategies.length)
-                            for (var i = 0; i < message.strategies.length; ++i)
-                                $root.ununifi.chain.yieldaggregator.Strategy.encode(message.strategies[i], writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.GenesisState.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.GenesisState
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IGenesisState} message GenesisState message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    GenesisState.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a GenesisState message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.GenesisState
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.GenesisState} GenesisState
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    GenesisState.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.GenesisState();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.params = $root.ununifi.chain.yieldaggregator.Params.decode(reader, reader.uint32());
-                                break;
-                            case 2:
-                                if (!(message.vaults && message.vaults.length))
-                                    message.vaults = [];
-                                message.vaults.push($root.ununifi.chain.yieldaggregator.Vault.decode(reader, reader.uint32()));
-                                break;
-                            case 3:
-                                if (!(message.strategies && message.strategies.length))
-                                    message.strategies = [];
-                                message.strategies.push($root.ununifi.chain.yieldaggregator.Strategy.decode(reader, reader.uint32()));
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a GenesisState message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.GenesisState
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.GenesisState} GenesisState
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    GenesisState.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a GenesisState message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.GenesisState
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    GenesisState.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.params != null && message.hasOwnProperty("params")) {
-                            var error = $root.ununifi.chain.yieldaggregator.Params.verify(message.params);
-                            if (error)
-                                return "params." + error;
-                        }
-                        if (message.vaults != null && message.hasOwnProperty("vaults")) {
-                            if (!Array.isArray(message.vaults))
-                                return "vaults: array expected";
-                            for (var i = 0; i < message.vaults.length; ++i) {
-                                var error = $root.ununifi.chain.yieldaggregator.Vault.verify(message.vaults[i]);
-                                if (error)
-                                    return "vaults." + error;
-                            }
-                        }
-                        if (message.strategies != null && message.hasOwnProperty("strategies")) {
-                            if (!Array.isArray(message.strategies))
-                                return "strategies: array expected";
-                            for (var i = 0; i < message.strategies.length; ++i) {
-                                var error = $root.ununifi.chain.yieldaggregator.Strategy.verify(message.strategies[i]);
-                                if (error)
-                                    return "strategies." + error;
-                            }
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a GenesisState message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.GenesisState
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.GenesisState} GenesisState
-                     */
-                    GenesisState.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.GenesisState)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.GenesisState();
-                        if (object.params != null) {
-                            if (typeof object.params !== "object")
-                                throw TypeError(".ununifi.chain.yieldaggregator.GenesisState.params: object expected");
-                            message.params = $root.ununifi.chain.yieldaggregator.Params.fromObject(object.params);
-                        }
-                        if (object.vaults) {
-                            if (!Array.isArray(object.vaults))
-                                throw TypeError(".ununifi.chain.yieldaggregator.GenesisState.vaults: array expected");
-                            message.vaults = [];
-                            for (var i = 0; i < object.vaults.length; ++i) {
-                                if (typeof object.vaults[i] !== "object")
-                                    throw TypeError(".ununifi.chain.yieldaggregator.GenesisState.vaults: object expected");
-                                message.vaults[i] = $root.ununifi.chain.yieldaggregator.Vault.fromObject(object.vaults[i]);
-                            }
-                        }
-                        if (object.strategies) {
-                            if (!Array.isArray(object.strategies))
-                                throw TypeError(".ununifi.chain.yieldaggregator.GenesisState.strategies: array expected");
-                            message.strategies = [];
-                            for (var i = 0; i < object.strategies.length; ++i) {
-                                if (typeof object.strategies[i] !== "object")
-                                    throw TypeError(".ununifi.chain.yieldaggregator.GenesisState.strategies: object expected");
-                                message.strategies[i] = $root.ununifi.chain.yieldaggregator.Strategy.fromObject(object.strategies[i]);
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a GenesisState message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.GenesisState
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.GenesisState} message GenesisState
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    GenesisState.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.arrays || options.defaults) {
-                            object.vaults = [];
-                            object.strategies = [];
-                        }
-                        if (options.defaults)
-                            object.params = null;
-                        if (message.params != null && message.hasOwnProperty("params"))
-                            object.params = $root.ununifi.chain.yieldaggregator.Params.toObject(message.params, options);
-                        if (message.vaults && message.vaults.length) {
-                            object.vaults = [];
-                            for (var j = 0; j < message.vaults.length; ++j)
-                                object.vaults[j] = $root.ununifi.chain.yieldaggregator.Vault.toObject(message.vaults[j], options);
-                        }
-                        if (message.strategies && message.strategies.length) {
-                            object.strategies = [];
-                            for (var j = 0; j < message.strategies.length; ++j)
-                                object.strategies[j] = $root.ununifi.chain.yieldaggregator.Strategy.toObject(message.strategies[j], options);
-                        }
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this GenesisState to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.GenesisState
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    GenesisState.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return GenesisState;
-                })();
-    
-                yieldaggregator.ProposalAddStrategy = (function() {
-    
-                    /**
-                     * Properties of a ProposalAddStrategy.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @interface IProposalAddStrategy
-                     * @property {string|null} [title] ProposalAddStrategy title
-                     * @property {string|null} [description] ProposalAddStrategy description
-                     * @property {string|null} [denom] ProposalAddStrategy denom
-                     * @property {string|null} [contract_address] ProposalAddStrategy contract_address
-                     * @property {string|null} [name] ProposalAddStrategy name
-                     */
-    
-                    /**
-                     * Constructs a new ProposalAddStrategy.
-                     * @memberof ununifi.chain.yieldaggregator
-                     * @classdesc Represents a ProposalAddStrategy.
-                     * @implements IProposalAddStrategy
-                     * @constructor
-                     * @param {ununifi.chain.yieldaggregator.IProposalAddStrategy=} [properties] Properties to set
-                     */
-                    function ProposalAddStrategy(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * ProposalAddStrategy title.
-                     * @member {string} title
-                     * @memberof ununifi.chain.yieldaggregator.ProposalAddStrategy
-                     * @instance
-                     */
-                    ProposalAddStrategy.prototype.title = "";
-    
-                    /**
-                     * ProposalAddStrategy description.
-                     * @member {string} description
-                     * @memberof ununifi.chain.yieldaggregator.ProposalAddStrategy
-                     * @instance
-                     */
-                    ProposalAddStrategy.prototype.description = "";
-    
-                    /**
-                     * ProposalAddStrategy denom.
-                     * @member {string} denom
-                     * @memberof ununifi.chain.yieldaggregator.ProposalAddStrategy
-                     * @instance
-                     */
-                    ProposalAddStrategy.prototype.denom = "";
-    
-                    /**
-                     * ProposalAddStrategy contract_address.
-                     * @member {string} contract_address
-                     * @memberof ununifi.chain.yieldaggregator.ProposalAddStrategy
-                     * @instance
-                     */
-                    ProposalAddStrategy.prototype.contract_address = "";
-    
-                    /**
-                     * ProposalAddStrategy name.
-                     * @member {string} name
-                     * @memberof ununifi.chain.yieldaggregator.ProposalAddStrategy
-                     * @instance
-                     */
-                    ProposalAddStrategy.prototype.name = "";
-    
-                    /**
-                     * Encodes the specified ProposalAddStrategy message. Does not implicitly {@link ununifi.chain.yieldaggregator.ProposalAddStrategy.verify|verify} messages.
-                     * @function encode
-                     * @memberof ununifi.chain.yieldaggregator.ProposalAddStrategy
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IProposalAddStrategy} message ProposalAddStrategy message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    ProposalAddStrategy.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.title != null && Object.hasOwnProperty.call(message, "title"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.title);
-                        if (message.description != null && Object.hasOwnProperty.call(message, "description"))
-                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.description);
-                        if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
-                            writer.uint32(/* id 3, wireType 2 =*/26).string(message.denom);
-                        if (message.contract_address != null && Object.hasOwnProperty.call(message, "contract_address"))
-                            writer.uint32(/* id 4, wireType 2 =*/34).string(message.contract_address);
-                        if (message.name != null && Object.hasOwnProperty.call(message, "name"))
-                            writer.uint32(/* id 5, wireType 2 =*/42).string(message.name);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified ProposalAddStrategy message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.ProposalAddStrategy.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.ProposalAddStrategy
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.IProposalAddStrategy} message ProposalAddStrategy message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    ProposalAddStrategy.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a ProposalAddStrategy message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof ununifi.chain.yieldaggregator.ProposalAddStrategy
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {ununifi.chain.yieldaggregator.ProposalAddStrategy} ProposalAddStrategy
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    ProposalAddStrategy.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.chain.yieldaggregator.ProposalAddStrategy();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.title = reader.string();
-                                break;
-                            case 2:
-                                message.description = reader.string();
-                                break;
-                            case 3:
-                                message.denom = reader.string();
-                                break;
-                            case 4:
-                                message.contract_address = reader.string();
-                                break;
-                            case 5:
-                                message.name = reader.string();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a ProposalAddStrategy message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof ununifi.chain.yieldaggregator.ProposalAddStrategy
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {ununifi.chain.yieldaggregator.ProposalAddStrategy} ProposalAddStrategy
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    ProposalAddStrategy.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a ProposalAddStrategy message.
-                     * @function verify
-                     * @memberof ununifi.chain.yieldaggregator.ProposalAddStrategy
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    ProposalAddStrategy.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.title != null && message.hasOwnProperty("title"))
-                            if (!$util.isString(message.title))
-                                return "title: string expected";
-                        if (message.description != null && message.hasOwnProperty("description"))
-                            if (!$util.isString(message.description))
-                                return "description: string expected";
-                        if (message.denom != null && message.hasOwnProperty("denom"))
-                            if (!$util.isString(message.denom))
-                                return "denom: string expected";
-                        if (message.contract_address != null && message.hasOwnProperty("contract_address"))
-                            if (!$util.isString(message.contract_address))
-                                return "contract_address: string expected";
-                        if (message.name != null && message.hasOwnProperty("name"))
-                            if (!$util.isString(message.name))
-                                return "name: string expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a ProposalAddStrategy message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof ununifi.chain.yieldaggregator.ProposalAddStrategy
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {ununifi.chain.yieldaggregator.ProposalAddStrategy} ProposalAddStrategy
-                     */
-                    ProposalAddStrategy.fromObject = function fromObject(object) {
-                        if (object instanceof $root.ununifi.chain.yieldaggregator.ProposalAddStrategy)
-                            return object;
-                        var message = new $root.ununifi.chain.yieldaggregator.ProposalAddStrategy();
-                        if (object.title != null)
-                            message.title = String(object.title);
-                        if (object.description != null)
-                            message.description = String(object.description);
-                        if (object.denom != null)
-                            message.denom = String(object.denom);
-                        if (object.contract_address != null)
-                            message.contract_address = String(object.contract_address);
-                        if (object.name != null)
-                            message.name = String(object.name);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a ProposalAddStrategy message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof ununifi.chain.yieldaggregator.ProposalAddStrategy
-                     * @static
-                     * @param {ununifi.chain.yieldaggregator.ProposalAddStrategy} message ProposalAddStrategy
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    ProposalAddStrategy.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            object.title = "";
-                            object.description = "";
-                            object.denom = "";
-                            object.contract_address = "";
-                            object.name = "";
-                        }
-                        if (message.title != null && message.hasOwnProperty("title"))
-                            object.title = message.title;
-                        if (message.description != null && message.hasOwnProperty("description"))
-                            object.description = message.description;
-                        if (message.denom != null && message.hasOwnProperty("denom"))
-                            object.denom = message.denom;
-                        if (message.contract_address != null && message.hasOwnProperty("contract_address"))
-                            object.contract_address = message.contract_address;
-                        if (message.name != null && message.hasOwnProperty("name"))
-                            object.name = message.name;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this ProposalAddStrategy to JSON.
-                     * @function toJSON
-                     * @memberof ununifi.chain.yieldaggregator.ProposalAddStrategy
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    ProposalAddStrategy.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return ProposalAddStrategy;
-                })();
-    
-                return yieldaggregator;
-            })();
     
             chain.yieldfarm = (function() {
     

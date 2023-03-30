@@ -8483,3148 +8483,3166 @@ export namespace ununifi {
         }
     }
 
+    /** Namespace yieldaggregator. */
+    namespace yieldaggregator {
+
+        /** Represents a Query */
+        class Query extends $protobuf.rpc.Service {
+
+            /**
+             * Constructs a new Query service.
+             * @param rpcImpl RPC implementation
+             * @param [requestDelimited=false] Whether requests are length-delimited
+             * @param [responseDelimited=false] Whether responses are length-delimited
+             */
+            constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+            /**
+             * Calls Params.
+             * @param request QueryParamsRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryParamsResponse
+             */
+            public params(request: ununifi.yieldaggregator.IQueryParamsRequest, callback: ununifi.yieldaggregator.Query.ParamsCallback): void;
+
+            /**
+             * Calls Params.
+             * @param request QueryParamsRequest message or plain object
+             * @returns Promise
+             */
+            public params(request: ununifi.yieldaggregator.IQueryParamsRequest): Promise<ununifi.yieldaggregator.QueryParamsResponse>;
+
+            /**
+             * Calls VaultAll.
+             * @param request QueryAllVaultRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryAllVaultResponse
+             */
+            public vaultAll(request: ununifi.yieldaggregator.IQueryAllVaultRequest, callback: ununifi.yieldaggregator.Query.VaultAllCallback): void;
+
+            /**
+             * Calls VaultAll.
+             * @param request QueryAllVaultRequest message or plain object
+             * @returns Promise
+             */
+            public vaultAll(request: ununifi.yieldaggregator.IQueryAllVaultRequest): Promise<ununifi.yieldaggregator.QueryAllVaultResponse>;
+
+            /**
+             * Calls Vault.
+             * @param request QueryGetVaultRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryGetVaultResponse
+             */
+            public vault(request: ununifi.yieldaggregator.IQueryGetVaultRequest, callback: ununifi.yieldaggregator.Query.VaultCallback): void;
+
+            /**
+             * Calls Vault.
+             * @param request QueryGetVaultRequest message or plain object
+             * @returns Promise
+             */
+            public vault(request: ununifi.yieldaggregator.IQueryGetVaultRequest): Promise<ununifi.yieldaggregator.QueryGetVaultResponse>;
+
+            /**
+             * Calls StrategyAll.
+             * @param request QueryAllStrategyRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryAllStrategyResponse
+             */
+            public strategyAll(request: ununifi.yieldaggregator.IQueryAllStrategyRequest, callback: ununifi.yieldaggregator.Query.StrategyAllCallback): void;
+
+            /**
+             * Calls StrategyAll.
+             * @param request QueryAllStrategyRequest message or plain object
+             * @returns Promise
+             */
+            public strategyAll(request: ununifi.yieldaggregator.IQueryAllStrategyRequest): Promise<ununifi.yieldaggregator.QueryAllStrategyResponse>;
+
+            /**
+             * Calls Strategy.
+             * @param request QueryGetStrategyRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryGetStrategyResponse
+             */
+            public strategy(request: ununifi.yieldaggregator.IQueryGetStrategyRequest, callback: ununifi.yieldaggregator.Query.StrategyCallback): void;
+
+            /**
+             * Calls Strategy.
+             * @param request QueryGetStrategyRequest message or plain object
+             * @returns Promise
+             */
+            public strategy(request: ununifi.yieldaggregator.IQueryGetStrategyRequest): Promise<ununifi.yieldaggregator.QueryGetStrategyResponse>;
+
+            /**
+             * Calls EstimateMintAmount.
+             * @param request QueryEstimateMintAmountRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryEstimateMintAmountResponse
+             */
+            public estimateMintAmount(request: ununifi.yieldaggregator.IQueryEstimateMintAmountRequest, callback: ununifi.yieldaggregator.Query.EstimateMintAmountCallback): void;
+
+            /**
+             * Calls EstimateMintAmount.
+             * @param request QueryEstimateMintAmountRequest message or plain object
+             * @returns Promise
+             */
+            public estimateMintAmount(request: ununifi.yieldaggregator.IQueryEstimateMintAmountRequest): Promise<ununifi.yieldaggregator.QueryEstimateMintAmountResponse>;
+
+            /**
+             * Calls EstimateRedeemAmount.
+             * @param request QueryEstimateRedeemAmountRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryEstimateRedeemAmountResponse
+             */
+            public estimateRedeemAmount(request: ununifi.yieldaggregator.IQueryEstimateRedeemAmountRequest, callback: ununifi.yieldaggregator.Query.EstimateRedeemAmountCallback): void;
+
+            /**
+             * Calls EstimateRedeemAmount.
+             * @param request QueryEstimateRedeemAmountRequest message or plain object
+             * @returns Promise
+             */
+            public estimateRedeemAmount(request: ununifi.yieldaggregator.IQueryEstimateRedeemAmountRequest): Promise<ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse>;
+        }
+
+        namespace Query {
+
+            /**
+             * Callback as used by {@link ununifi.yieldaggregator.Query#params}.
+             * @param error Error, if any
+             * @param [response] QueryParamsResponse
+             */
+            type ParamsCallback = (error: (Error|null), response?: ununifi.yieldaggregator.QueryParamsResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.yieldaggregator.Query#vaultAll}.
+             * @param error Error, if any
+             * @param [response] QueryAllVaultResponse
+             */
+            type VaultAllCallback = (error: (Error|null), response?: ununifi.yieldaggregator.QueryAllVaultResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.yieldaggregator.Query#vault}.
+             * @param error Error, if any
+             * @param [response] QueryGetVaultResponse
+             */
+            type VaultCallback = (error: (Error|null), response?: ununifi.yieldaggregator.QueryGetVaultResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.yieldaggregator.Query#strategyAll}.
+             * @param error Error, if any
+             * @param [response] QueryAllStrategyResponse
+             */
+            type StrategyAllCallback = (error: (Error|null), response?: ununifi.yieldaggregator.QueryAllStrategyResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.yieldaggregator.Query#strategy}.
+             * @param error Error, if any
+             * @param [response] QueryGetStrategyResponse
+             */
+            type StrategyCallback = (error: (Error|null), response?: ununifi.yieldaggregator.QueryGetStrategyResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.yieldaggregator.Query#estimateMintAmount}.
+             * @param error Error, if any
+             * @param [response] QueryEstimateMintAmountResponse
+             */
+            type EstimateMintAmountCallback = (error: (Error|null), response?: ununifi.yieldaggregator.QueryEstimateMintAmountResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.yieldaggregator.Query#estimateRedeemAmount}.
+             * @param error Error, if any
+             * @param [response] QueryEstimateRedeemAmountResponse
+             */
+            type EstimateRedeemAmountCallback = (error: (Error|null), response?: ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse) => void;
+        }
+
+        /** Properties of a QueryParamsRequest. */
+        interface IQueryParamsRequest {
+        }
+
+        /** Represents a QueryParamsRequest. */
+        class QueryParamsRequest implements IQueryParamsRequest {
+
+            /**
+             * Constructs a new QueryParamsRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryParamsRequest);
+
+            /**
+             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryParamsRequest.verify|verify} messages.
+             * @param message QueryParamsRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryParamsRequest.verify|verify} messages.
+             * @param message QueryParamsRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryParamsRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryParamsRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryParamsRequest;
+
+            /**
+             * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryParamsRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryParamsRequest;
+
+            /**
+             * Verifies a QueryParamsRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryParamsRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryParamsRequest;
+
+            /**
+             * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
+             * @param message QueryParamsRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryParamsRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryParamsResponse. */
+        interface IQueryParamsResponse {
+
+            /** QueryParamsResponse params */
+            params?: (ununifi.yieldaggregator.IParams|null);
+        }
+
+        /** Represents a QueryParamsResponse. */
+        class QueryParamsResponse implements IQueryParamsResponse {
+
+            /**
+             * Constructs a new QueryParamsResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryParamsResponse);
+
+            /** QueryParamsResponse params. */
+            public params?: (ununifi.yieldaggregator.IParams|null);
+
+            /**
+             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryParamsResponse.verify|verify} messages.
+             * @param message QueryParamsResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryParamsResponse.verify|verify} messages.
+             * @param message QueryParamsResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryParamsResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryParamsResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryParamsResponse;
+
+            /**
+             * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryParamsResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryParamsResponse;
+
+            /**
+             * Verifies a QueryParamsResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryParamsResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryParamsResponse;
+
+            /**
+             * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
+             * @param message QueryParamsResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryParamsResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllVaultRequest. */
+        interface IQueryAllVaultRequest {
+
+            /** QueryAllVaultRequest pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+        }
+
+        /** Represents a QueryAllVaultRequest. */
+        class QueryAllVaultRequest implements IQueryAllVaultRequest {
+
+            /**
+             * Constructs a new QueryAllVaultRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryAllVaultRequest);
+
+            /** QueryAllVaultRequest pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+
+            /**
+             * Encodes the specified QueryAllVaultRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryAllVaultRequest.verify|verify} messages.
+             * @param message QueryAllVaultRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryAllVaultRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllVaultRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryAllVaultRequest.verify|verify} messages.
+             * @param message QueryAllVaultRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryAllVaultRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllVaultRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllVaultRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryAllVaultRequest;
+
+            /**
+             * Decodes a QueryAllVaultRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllVaultRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryAllVaultRequest;
+
+            /**
+             * Verifies a QueryAllVaultRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllVaultRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllVaultRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryAllVaultRequest;
+
+            /**
+             * Creates a plain object from a QueryAllVaultRequest message. Also converts values to other types if specified.
+             * @param message QueryAllVaultRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryAllVaultRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllVaultRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllVaultResponse. */
+        interface IQueryAllVaultResponse {
+
+            /** QueryAllVaultResponse vaults */
+            vaults?: (ununifi.yieldaggregator.IVault[]|null);
+
+            /** QueryAllVaultResponse pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+        }
+
+        /** Represents a QueryAllVaultResponse. */
+        class QueryAllVaultResponse implements IQueryAllVaultResponse {
+
+            /**
+             * Constructs a new QueryAllVaultResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryAllVaultResponse);
+
+            /** QueryAllVaultResponse vaults. */
+            public vaults: ununifi.yieldaggregator.IVault[];
+
+            /** QueryAllVaultResponse pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+
+            /**
+             * Encodes the specified QueryAllVaultResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryAllVaultResponse.verify|verify} messages.
+             * @param message QueryAllVaultResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryAllVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllVaultResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryAllVaultResponse.verify|verify} messages.
+             * @param message QueryAllVaultResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryAllVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllVaultResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllVaultResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryAllVaultResponse;
+
+            /**
+             * Decodes a QueryAllVaultResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllVaultResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryAllVaultResponse;
+
+            /**
+             * Verifies a QueryAllVaultResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllVaultResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllVaultResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryAllVaultResponse;
+
+            /**
+             * Creates a plain object from a QueryAllVaultResponse message. Also converts values to other types if specified.
+             * @param message QueryAllVaultResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryAllVaultResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllVaultResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetVaultRequest. */
+        interface IQueryGetVaultRequest {
+
+            /** QueryGetVaultRequest id */
+            id?: (Long|null);
+        }
+
+        /** Represents a QueryGetVaultRequest. */
+        class QueryGetVaultRequest implements IQueryGetVaultRequest {
+
+            /**
+             * Constructs a new QueryGetVaultRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryGetVaultRequest);
+
+            /** QueryGetVaultRequest id. */
+            public id: Long;
+
+            /**
+             * Encodes the specified QueryGetVaultRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryGetVaultRequest.verify|verify} messages.
+             * @param message QueryGetVaultRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryGetVaultRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetVaultRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryGetVaultRequest.verify|verify} messages.
+             * @param message QueryGetVaultRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryGetVaultRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetVaultRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetVaultRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryGetVaultRequest;
+
+            /**
+             * Decodes a QueryGetVaultRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetVaultRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryGetVaultRequest;
+
+            /**
+             * Verifies a QueryGetVaultRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetVaultRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetVaultRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryGetVaultRequest;
+
+            /**
+             * Creates a plain object from a QueryGetVaultRequest message. Also converts values to other types if specified.
+             * @param message QueryGetVaultRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryGetVaultRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetVaultRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetVaultResponse. */
+        interface IQueryGetVaultResponse {
+
+            /** QueryGetVaultResponse vault */
+            vault?: (ununifi.yieldaggregator.IVault|null);
+
+            /** QueryGetVaultResponse strategies */
+            strategies?: (ununifi.yieldaggregator.IStrategy[]|null);
+
+            /** QueryGetVaultResponse total_bonded_amount */
+            total_bonded_amount?: (string|null);
+
+            /** QueryGetVaultResponse total_unbonding_amount */
+            total_unbonding_amount?: (string|null);
+
+            /** QueryGetVaultResponse total_withdrawal_balance */
+            total_withdrawal_balance?: (string|null);
+        }
+
+        /** Represents a QueryGetVaultResponse. */
+        class QueryGetVaultResponse implements IQueryGetVaultResponse {
+
+            /**
+             * Constructs a new QueryGetVaultResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryGetVaultResponse);
+
+            /** QueryGetVaultResponse vault. */
+            public vault?: (ununifi.yieldaggregator.IVault|null);
+
+            /** QueryGetVaultResponse strategies. */
+            public strategies: ununifi.yieldaggregator.IStrategy[];
+
+            /** QueryGetVaultResponse total_bonded_amount. */
+            public total_bonded_amount: string;
+
+            /** QueryGetVaultResponse total_unbonding_amount. */
+            public total_unbonding_amount: string;
+
+            /** QueryGetVaultResponse total_withdrawal_balance. */
+            public total_withdrawal_balance: string;
+
+            /**
+             * Encodes the specified QueryGetVaultResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryGetVaultResponse.verify|verify} messages.
+             * @param message QueryGetVaultResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryGetVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetVaultResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryGetVaultResponse.verify|verify} messages.
+             * @param message QueryGetVaultResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryGetVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetVaultResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetVaultResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryGetVaultResponse;
+
+            /**
+             * Decodes a QueryGetVaultResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetVaultResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryGetVaultResponse;
+
+            /**
+             * Verifies a QueryGetVaultResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetVaultResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetVaultResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryGetVaultResponse;
+
+            /**
+             * Creates a plain object from a QueryGetVaultResponse message. Also converts values to other types if specified.
+             * @param message QueryGetVaultResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryGetVaultResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetVaultResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllStrategyRequest. */
+        interface IQueryAllStrategyRequest {
+
+            /** QueryAllStrategyRequest denom */
+            denom?: (string|null);
+
+            /** QueryAllStrategyRequest pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+        }
+
+        /** Represents a QueryAllStrategyRequest. */
+        class QueryAllStrategyRequest implements IQueryAllStrategyRequest {
+
+            /**
+             * Constructs a new QueryAllStrategyRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryAllStrategyRequest);
+
+            /** QueryAllStrategyRequest denom. */
+            public denom: string;
+
+            /** QueryAllStrategyRequest pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+
+            /**
+             * Encodes the specified QueryAllStrategyRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryAllStrategyRequest.verify|verify} messages.
+             * @param message QueryAllStrategyRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryAllStrategyRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllStrategyRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryAllStrategyRequest.verify|verify} messages.
+             * @param message QueryAllStrategyRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryAllStrategyRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllStrategyRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllStrategyRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryAllStrategyRequest;
+
+            /**
+             * Decodes a QueryAllStrategyRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllStrategyRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryAllStrategyRequest;
+
+            /**
+             * Verifies a QueryAllStrategyRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllStrategyRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllStrategyRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryAllStrategyRequest;
+
+            /**
+             * Creates a plain object from a QueryAllStrategyRequest message. Also converts values to other types if specified.
+             * @param message QueryAllStrategyRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryAllStrategyRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllStrategyRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllStrategyResponse. */
+        interface IQueryAllStrategyResponse {
+
+            /** QueryAllStrategyResponse strategies */
+            strategies?: (ununifi.yieldaggregator.IStrategy[]|null);
+
+            /** QueryAllStrategyResponse pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+        }
+
+        /** Represents a QueryAllStrategyResponse. */
+        class QueryAllStrategyResponse implements IQueryAllStrategyResponse {
+
+            /**
+             * Constructs a new QueryAllStrategyResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryAllStrategyResponse);
+
+            /** QueryAllStrategyResponse strategies. */
+            public strategies: ununifi.yieldaggregator.IStrategy[];
+
+            /** QueryAllStrategyResponse pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+
+            /**
+             * Encodes the specified QueryAllStrategyResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryAllStrategyResponse.verify|verify} messages.
+             * @param message QueryAllStrategyResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryAllStrategyResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllStrategyResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryAllStrategyResponse.verify|verify} messages.
+             * @param message QueryAllStrategyResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryAllStrategyResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllStrategyResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllStrategyResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryAllStrategyResponse;
+
+            /**
+             * Decodes a QueryAllStrategyResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllStrategyResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryAllStrategyResponse;
+
+            /**
+             * Verifies a QueryAllStrategyResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllStrategyResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllStrategyResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryAllStrategyResponse;
+
+            /**
+             * Creates a plain object from a QueryAllStrategyResponse message. Also converts values to other types if specified.
+             * @param message QueryAllStrategyResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryAllStrategyResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllStrategyResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetStrategyRequest. */
+        interface IQueryGetStrategyRequest {
+
+            /** QueryGetStrategyRequest denom */
+            denom?: (string|null);
+
+            /** QueryGetStrategyRequest id */
+            id?: (Long|null);
+        }
+
+        /** Represents a QueryGetStrategyRequest. */
+        class QueryGetStrategyRequest implements IQueryGetStrategyRequest {
+
+            /**
+             * Constructs a new QueryGetStrategyRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryGetStrategyRequest);
+
+            /** QueryGetStrategyRequest denom. */
+            public denom: string;
+
+            /** QueryGetStrategyRequest id. */
+            public id: Long;
+
+            /**
+             * Encodes the specified QueryGetStrategyRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryGetStrategyRequest.verify|verify} messages.
+             * @param message QueryGetStrategyRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryGetStrategyRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetStrategyRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryGetStrategyRequest.verify|verify} messages.
+             * @param message QueryGetStrategyRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryGetStrategyRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetStrategyRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetStrategyRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryGetStrategyRequest;
+
+            /**
+             * Decodes a QueryGetStrategyRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetStrategyRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryGetStrategyRequest;
+
+            /**
+             * Verifies a QueryGetStrategyRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetStrategyRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetStrategyRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryGetStrategyRequest;
+
+            /**
+             * Creates a plain object from a QueryGetStrategyRequest message. Also converts values to other types if specified.
+             * @param message QueryGetStrategyRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryGetStrategyRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetStrategyRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetStrategyResponse. */
+        interface IQueryGetStrategyResponse {
+
+            /** QueryGetStrategyResponse strategy */
+            strategy?: (ununifi.yieldaggregator.IStrategy|null);
+        }
+
+        /** Represents a QueryGetStrategyResponse. */
+        class QueryGetStrategyResponse implements IQueryGetStrategyResponse {
+
+            /**
+             * Constructs a new QueryGetStrategyResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryGetStrategyResponse);
+
+            /** QueryGetStrategyResponse strategy. */
+            public strategy?: (ununifi.yieldaggregator.IStrategy|null);
+
+            /**
+             * Encodes the specified QueryGetStrategyResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryGetStrategyResponse.verify|verify} messages.
+             * @param message QueryGetStrategyResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryGetStrategyResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetStrategyResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryGetStrategyResponse.verify|verify} messages.
+             * @param message QueryGetStrategyResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryGetStrategyResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetStrategyResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetStrategyResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryGetStrategyResponse;
+
+            /**
+             * Decodes a QueryGetStrategyResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetStrategyResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryGetStrategyResponse;
+
+            /**
+             * Verifies a QueryGetStrategyResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetStrategyResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetStrategyResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryGetStrategyResponse;
+
+            /**
+             * Creates a plain object from a QueryGetStrategyResponse message. Also converts values to other types if specified.
+             * @param message QueryGetStrategyResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryGetStrategyResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetStrategyResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryEstimateMintAmountRequest. */
+        interface IQueryEstimateMintAmountRequest {
+
+            /** QueryEstimateMintAmountRequest id */
+            id?: (Long|null);
+
+            /** QueryEstimateMintAmountRequest deposit_amount */
+            deposit_amount?: (string|null);
+        }
+
+        /** Represents a QueryEstimateMintAmountRequest. */
+        class QueryEstimateMintAmountRequest implements IQueryEstimateMintAmountRequest {
+
+            /**
+             * Constructs a new QueryEstimateMintAmountRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryEstimateMintAmountRequest);
+
+            /** QueryEstimateMintAmountRequest id. */
+            public id: Long;
+
+            /** QueryEstimateMintAmountRequest deposit_amount. */
+            public deposit_amount: string;
+
+            /**
+             * Encodes the specified QueryEstimateMintAmountRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateMintAmountRequest.verify|verify} messages.
+             * @param message QueryEstimateMintAmountRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryEstimateMintAmountRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryEstimateMintAmountRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateMintAmountRequest.verify|verify} messages.
+             * @param message QueryEstimateMintAmountRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryEstimateMintAmountRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryEstimateMintAmountRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryEstimateMintAmountRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryEstimateMintAmountRequest;
+
+            /**
+             * Decodes a QueryEstimateMintAmountRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryEstimateMintAmountRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryEstimateMintAmountRequest;
+
+            /**
+             * Verifies a QueryEstimateMintAmountRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryEstimateMintAmountRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryEstimateMintAmountRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryEstimateMintAmountRequest;
+
+            /**
+             * Creates a plain object from a QueryEstimateMintAmountRequest message. Also converts values to other types if specified.
+             * @param message QueryEstimateMintAmountRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryEstimateMintAmountRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryEstimateMintAmountRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryEstimateMintAmountResponse. */
+        interface IQueryEstimateMintAmountResponse {
+
+            /** QueryEstimateMintAmountResponse mint_amount */
+            mint_amount?: (cosmos.base.v1beta1.ICoin|null);
+        }
+
+        /** Represents a QueryEstimateMintAmountResponse. */
+        class QueryEstimateMintAmountResponse implements IQueryEstimateMintAmountResponse {
+
+            /**
+             * Constructs a new QueryEstimateMintAmountResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryEstimateMintAmountResponse);
+
+            /** QueryEstimateMintAmountResponse mint_amount. */
+            public mint_amount?: (cosmos.base.v1beta1.ICoin|null);
+
+            /**
+             * Encodes the specified QueryEstimateMintAmountResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateMintAmountResponse.verify|verify} messages.
+             * @param message QueryEstimateMintAmountResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryEstimateMintAmountResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryEstimateMintAmountResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateMintAmountResponse.verify|verify} messages.
+             * @param message QueryEstimateMintAmountResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryEstimateMintAmountResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryEstimateMintAmountResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryEstimateMintAmountResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryEstimateMintAmountResponse;
+
+            /**
+             * Decodes a QueryEstimateMintAmountResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryEstimateMintAmountResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryEstimateMintAmountResponse;
+
+            /**
+             * Verifies a QueryEstimateMintAmountResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryEstimateMintAmountResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryEstimateMintAmountResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryEstimateMintAmountResponse;
+
+            /**
+             * Creates a plain object from a QueryEstimateMintAmountResponse message. Also converts values to other types if specified.
+             * @param message QueryEstimateMintAmountResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryEstimateMintAmountResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryEstimateMintAmountResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryEstimateRedeemAmountRequest. */
+        interface IQueryEstimateRedeemAmountRequest {
+
+            /** QueryEstimateRedeemAmountRequest id */
+            id?: (Long|null);
+
+            /** QueryEstimateRedeemAmountRequest burn_amount */
+            burn_amount?: (string|null);
+        }
+
+        /** Represents a QueryEstimateRedeemAmountRequest. */
+        class QueryEstimateRedeemAmountRequest implements IQueryEstimateRedeemAmountRequest {
+
+            /**
+             * Constructs a new QueryEstimateRedeemAmountRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryEstimateRedeemAmountRequest);
+
+            /** QueryEstimateRedeemAmountRequest id. */
+            public id: Long;
+
+            /** QueryEstimateRedeemAmountRequest burn_amount. */
+            public burn_amount: string;
+
+            /**
+             * Encodes the specified QueryEstimateRedeemAmountRequest message. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest.verify|verify} messages.
+             * @param message QueryEstimateRedeemAmountRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryEstimateRedeemAmountRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryEstimateRedeemAmountRequest message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest.verify|verify} messages.
+             * @param message QueryEstimateRedeemAmountRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryEstimateRedeemAmountRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryEstimateRedeemAmountRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryEstimateRedeemAmountRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest;
+
+            /**
+             * Decodes a QueryEstimateRedeemAmountRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryEstimateRedeemAmountRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest;
+
+            /**
+             * Verifies a QueryEstimateRedeemAmountRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryEstimateRedeemAmountRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryEstimateRedeemAmountRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest;
+
+            /**
+             * Creates a plain object from a QueryEstimateRedeemAmountRequest message. Also converts values to other types if specified.
+             * @param message QueryEstimateRedeemAmountRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryEstimateRedeemAmountRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryEstimateRedeemAmountRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryEstimateRedeemAmountResponse. */
+        interface IQueryEstimateRedeemAmountResponse {
+
+            /** QueryEstimateRedeemAmountResponse redeem_amount */
+            redeem_amount?: (cosmos.base.v1beta1.ICoin|null);
+        }
+
+        /** Represents a QueryEstimateRedeemAmountResponse. */
+        class QueryEstimateRedeemAmountResponse implements IQueryEstimateRedeemAmountResponse {
+
+            /**
+             * Constructs a new QueryEstimateRedeemAmountResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IQueryEstimateRedeemAmountResponse);
+
+            /** QueryEstimateRedeemAmountResponse redeem_amount. */
+            public redeem_amount?: (cosmos.base.v1beta1.ICoin|null);
+
+            /**
+             * Encodes the specified QueryEstimateRedeemAmountResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse.verify|verify} messages.
+             * @param message QueryEstimateRedeemAmountResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IQueryEstimateRedeemAmountResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryEstimateRedeemAmountResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse.verify|verify} messages.
+             * @param message QueryEstimateRedeemAmountResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IQueryEstimateRedeemAmountResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryEstimateRedeemAmountResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryEstimateRedeemAmountResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse;
+
+            /**
+             * Decodes a QueryEstimateRedeemAmountResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryEstimateRedeemAmountResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse;
+
+            /**
+             * Verifies a QueryEstimateRedeemAmountResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryEstimateRedeemAmountResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryEstimateRedeemAmountResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse;
+
+            /**
+             * Creates a plain object from a QueryEstimateRedeemAmountResponse message. Also converts values to other types if specified.
+             * @param message QueryEstimateRedeemAmountResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryEstimateRedeemAmountResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a Params. */
+        interface IParams {
+
+            /** Params commission_rate */
+            commission_rate?: (string|null);
+
+            /** Params vault_creation_fee */
+            vault_creation_fee?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** Params vault_creation_deposit */
+            vault_creation_deposit?: (cosmos.base.v1beta1.ICoin|null);
+        }
+
+        /** Represents a Params. */
+        class Params implements IParams {
+
+            /**
+             * Constructs a new Params.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IParams);
+
+            /** Params commission_rate. */
+            public commission_rate: string;
+
+            /** Params vault_creation_fee. */
+            public vault_creation_fee?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** Params vault_creation_deposit. */
+            public vault_creation_deposit?: (cosmos.base.v1beta1.ICoin|null);
+
+            /**
+             * Encodes the specified Params message. Does not implicitly {@link ununifi.yieldaggregator.Params.verify|verify} messages.
+             * @param message Params message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.Params.verify|verify} messages.
+             * @param message Params message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a Params message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.Params;
+
+            /**
+             * Decodes a Params message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.Params;
+
+            /**
+             * Verifies a Params message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a Params message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Params
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.Params;
+
+            /**
+             * Creates a plain object from a Params message. Also converts values to other types if specified.
+             * @param message Params
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Params to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a StrategyWeight. */
+        interface IStrategyWeight {
+
+            /** StrategyWeight strategy_id */
+            strategy_id?: (Long|null);
+
+            /** StrategyWeight weight */
+            weight?: (string|null);
+        }
+
+        /** Represents a StrategyWeight. */
+        class StrategyWeight implements IStrategyWeight {
+
+            /**
+             * Constructs a new StrategyWeight.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IStrategyWeight);
+
+            /** StrategyWeight strategy_id. */
+            public strategy_id: Long;
+
+            /** StrategyWeight weight. */
+            public weight: string;
+
+            /**
+             * Encodes the specified StrategyWeight message. Does not implicitly {@link ununifi.yieldaggregator.StrategyWeight.verify|verify} messages.
+             * @param message StrategyWeight message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IStrategyWeight, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified StrategyWeight message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.StrategyWeight.verify|verify} messages.
+             * @param message StrategyWeight message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IStrategyWeight, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a StrategyWeight message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns StrategyWeight
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.StrategyWeight;
+
+            /**
+             * Decodes a StrategyWeight message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns StrategyWeight
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.StrategyWeight;
+
+            /**
+             * Verifies a StrategyWeight message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a StrategyWeight message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns StrategyWeight
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.StrategyWeight;
+
+            /**
+             * Creates a plain object from a StrategyWeight message. Also converts values to other types if specified.
+             * @param message StrategyWeight
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.StrategyWeight, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this StrategyWeight to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a Vault. */
+        interface IVault {
+
+            /** Vault id */
+            id?: (Long|null);
+
+            /** Vault denom */
+            denom?: (string|null);
+
+            /** Vault owner */
+            owner?: (string|null);
+
+            /** Vault owner_deposit */
+            owner_deposit?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** Vault withdraw_commission_rate */
+            withdraw_commission_rate?: (string|null);
+
+            /** Vault withdraw_reserve_rate */
+            withdraw_reserve_rate?: (string|null);
+
+            /** Vault strategy_weights */
+            strategy_weights?: (ununifi.yieldaggregator.IStrategyWeight[]|null);
+        }
+
+        /** Represents a Vault. */
+        class Vault implements IVault {
+
+            /**
+             * Constructs a new Vault.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IVault);
+
+            /** Vault id. */
+            public id: Long;
+
+            /** Vault denom. */
+            public denom: string;
+
+            /** Vault owner. */
+            public owner: string;
+
+            /** Vault owner_deposit. */
+            public owner_deposit?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** Vault withdraw_commission_rate. */
+            public withdraw_commission_rate: string;
+
+            /** Vault withdraw_reserve_rate. */
+            public withdraw_reserve_rate: string;
+
+            /** Vault strategy_weights. */
+            public strategy_weights: ununifi.yieldaggregator.IStrategyWeight[];
+
+            /**
+             * Encodes the specified Vault message. Does not implicitly {@link ununifi.yieldaggregator.Vault.verify|verify} messages.
+             * @param message Vault message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Vault message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.Vault.verify|verify} messages.
+             * @param message Vault message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a Vault message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Vault
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.Vault;
+
+            /**
+             * Decodes a Vault message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Vault
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.Vault;
+
+            /**
+             * Verifies a Vault message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a Vault message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Vault
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.Vault;
+
+            /**
+             * Creates a plain object from a Vault message. Also converts values to other types if specified.
+             * @param message Vault
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.Vault, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Vault to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a Strategy. */
+        interface IStrategy {
+
+            /** Strategy denom */
+            denom?: (string|null);
+
+            /** Strategy id */
+            id?: (Long|null);
+
+            /** Strategy contract_address */
+            contract_address?: (string|null);
+
+            /** Strategy name */
+            name?: (string|null);
+        }
+
+        /** Represents a Strategy. */
+        class Strategy implements IStrategy {
+
+            /**
+             * Constructs a new Strategy.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IStrategy);
+
+            /** Strategy denom. */
+            public denom: string;
+
+            /** Strategy id. */
+            public id: Long;
+
+            /** Strategy contract_address. */
+            public contract_address: string;
+
+            /** Strategy name. */
+            public name: string;
+
+            /**
+             * Encodes the specified Strategy message. Does not implicitly {@link ununifi.yieldaggregator.Strategy.verify|verify} messages.
+             * @param message Strategy message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IStrategy, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Strategy message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.Strategy.verify|verify} messages.
+             * @param message Strategy message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IStrategy, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a Strategy message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Strategy
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.Strategy;
+
+            /**
+             * Decodes a Strategy message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Strategy
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.Strategy;
+
+            /**
+             * Verifies a Strategy message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a Strategy message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Strategy
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.Strategy;
+
+            /**
+             * Creates a plain object from a Strategy message. Also converts values to other types if specified.
+             * @param message Strategy
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.Strategy, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Strategy to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a VaultMetrics. */
+        interface IVaultMetrics {
+
+            /** VaultMetrics allocation */
+            allocation?: (string|null);
+
+            /** VaultMetrics apy */
+            apy?: (string|null);
+        }
+
+        /** Represents a VaultMetrics. */
+        class VaultMetrics implements IVaultMetrics {
+
+            /**
+             * Constructs a new VaultMetrics.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IVaultMetrics);
+
+            /** VaultMetrics allocation. */
+            public allocation: string;
+
+            /** VaultMetrics apy. */
+            public apy: string;
+
+            /**
+             * Encodes the specified VaultMetrics message. Does not implicitly {@link ununifi.yieldaggregator.VaultMetrics.verify|verify} messages.
+             * @param message VaultMetrics message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IVaultMetrics, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified VaultMetrics message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.VaultMetrics.verify|verify} messages.
+             * @param message VaultMetrics message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IVaultMetrics, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a VaultMetrics message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns VaultMetrics
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.VaultMetrics;
+
+            /**
+             * Decodes a VaultMetrics message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns VaultMetrics
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.VaultMetrics;
+
+            /**
+             * Verifies a VaultMetrics message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a VaultMetrics message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns VaultMetrics
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.VaultMetrics;
+
+            /**
+             * Creates a plain object from a VaultMetrics message. Also converts values to other types if specified.
+             * @param message VaultMetrics
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.VaultMetrics, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this VaultMetrics to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a StrategyMetrics. */
+        interface IStrategyMetrics {
+
+            /** StrategyMetrics allocation */
+            allocation?: (string|null);
+
+            /** StrategyMetrics apr */
+            apr?: (string|null);
+        }
+
+        /** Represents a StrategyMetrics. */
+        class StrategyMetrics implements IStrategyMetrics {
+
+            /**
+             * Constructs a new StrategyMetrics.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IStrategyMetrics);
+
+            /** StrategyMetrics allocation. */
+            public allocation: string;
+
+            /** StrategyMetrics apr. */
+            public apr: string;
+
+            /**
+             * Encodes the specified StrategyMetrics message. Does not implicitly {@link ununifi.yieldaggregator.StrategyMetrics.verify|verify} messages.
+             * @param message StrategyMetrics message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IStrategyMetrics, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified StrategyMetrics message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.StrategyMetrics.verify|verify} messages.
+             * @param message StrategyMetrics message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IStrategyMetrics, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a StrategyMetrics message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns StrategyMetrics
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.StrategyMetrics;
+
+            /**
+             * Decodes a StrategyMetrics message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns StrategyMetrics
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.StrategyMetrics;
+
+            /**
+             * Verifies a StrategyMetrics message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a StrategyMetrics message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns StrategyMetrics
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.StrategyMetrics;
+
+            /**
+             * Creates a plain object from a StrategyMetrics message. Also converts values to other types if specified.
+             * @param message StrategyMetrics
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.StrategyMetrics, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this StrategyMetrics to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Represents a Msg */
+        class Msg extends $protobuf.rpc.Service {
+
+            /**
+             * Constructs a new Msg service.
+             * @param rpcImpl RPC implementation
+             * @param [requestDelimited=false] Whether requests are length-delimited
+             * @param [responseDelimited=false] Whether responses are length-delimited
+             */
+            constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+            /**
+             * Calls DepositToVault.
+             * @param request MsgDepositToVault message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgDepositToVaultResponse
+             */
+            public depositToVault(request: ununifi.yieldaggregator.IMsgDepositToVault, callback: ununifi.yieldaggregator.Msg.DepositToVaultCallback): void;
+
+            /**
+             * Calls DepositToVault.
+             * @param request MsgDepositToVault message or plain object
+             * @returns Promise
+             */
+            public depositToVault(request: ununifi.yieldaggregator.IMsgDepositToVault): Promise<ununifi.yieldaggregator.MsgDepositToVaultResponse>;
+
+            /**
+             * Calls WithdrawFromVault.
+             * @param request MsgWithdrawFromVault message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgWithdrawFromVaultResponse
+             */
+            public withdrawFromVault(request: ununifi.yieldaggregator.IMsgWithdrawFromVault, callback: ununifi.yieldaggregator.Msg.WithdrawFromVaultCallback): void;
+
+            /**
+             * Calls WithdrawFromVault.
+             * @param request MsgWithdrawFromVault message or plain object
+             * @returns Promise
+             */
+            public withdrawFromVault(request: ununifi.yieldaggregator.IMsgWithdrawFromVault): Promise<ununifi.yieldaggregator.MsgWithdrawFromVaultResponse>;
+
+            /**
+             * Calls CreateVault.
+             * @param request MsgCreateVault message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgCreateVaultResponse
+             */
+            public createVault(request: ununifi.yieldaggregator.IMsgCreateVault, callback: ununifi.yieldaggregator.Msg.CreateVaultCallback): void;
+
+            /**
+             * Calls CreateVault.
+             * @param request MsgCreateVault message or plain object
+             * @returns Promise
+             */
+            public createVault(request: ununifi.yieldaggregator.IMsgCreateVault): Promise<ununifi.yieldaggregator.MsgCreateVaultResponse>;
+
+            /**
+             * Calls DeleteVault.
+             * @param request MsgDeleteVault message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgDeleteVaultResponse
+             */
+            public deleteVault(request: ununifi.yieldaggregator.IMsgDeleteVault, callback: ununifi.yieldaggregator.Msg.DeleteVaultCallback): void;
+
+            /**
+             * Calls DeleteVault.
+             * @param request MsgDeleteVault message or plain object
+             * @returns Promise
+             */
+            public deleteVault(request: ununifi.yieldaggregator.IMsgDeleteVault): Promise<ununifi.yieldaggregator.MsgDeleteVaultResponse>;
+
+            /**
+             * Calls TransferVaultOwnership.
+             * @param request MsgTransferVaultOwnership message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgTransferVaultOwnershipResponse
+             */
+            public transferVaultOwnership(request: ununifi.yieldaggregator.IMsgTransferVaultOwnership, callback: ununifi.yieldaggregator.Msg.TransferVaultOwnershipCallback): void;
+
+            /**
+             * Calls TransferVaultOwnership.
+             * @param request MsgTransferVaultOwnership message or plain object
+             * @returns Promise
+             */
+            public transferVaultOwnership(request: ununifi.yieldaggregator.IMsgTransferVaultOwnership): Promise<ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse>;
+        }
+
+        namespace Msg {
+
+            /**
+             * Callback as used by {@link ununifi.yieldaggregator.Msg#depositToVault}.
+             * @param error Error, if any
+             * @param [response] MsgDepositToVaultResponse
+             */
+            type DepositToVaultCallback = (error: (Error|null), response?: ununifi.yieldaggregator.MsgDepositToVaultResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.yieldaggregator.Msg#withdrawFromVault}.
+             * @param error Error, if any
+             * @param [response] MsgWithdrawFromVaultResponse
+             */
+            type WithdrawFromVaultCallback = (error: (Error|null), response?: ununifi.yieldaggregator.MsgWithdrawFromVaultResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.yieldaggregator.Msg#createVault}.
+             * @param error Error, if any
+             * @param [response] MsgCreateVaultResponse
+             */
+            type CreateVaultCallback = (error: (Error|null), response?: ununifi.yieldaggregator.MsgCreateVaultResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.yieldaggregator.Msg#deleteVault}.
+             * @param error Error, if any
+             * @param [response] MsgDeleteVaultResponse
+             */
+            type DeleteVaultCallback = (error: (Error|null), response?: ununifi.yieldaggregator.MsgDeleteVaultResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.yieldaggregator.Msg#transferVaultOwnership}.
+             * @param error Error, if any
+             * @param [response] MsgTransferVaultOwnershipResponse
+             */
+            type TransferVaultOwnershipCallback = (error: (Error|null), response?: ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse) => void;
+        }
+
+        /** Properties of a MsgDepositToVault. */
+        interface IMsgDepositToVault {
+
+            /** MsgDepositToVault sender */
+            sender?: (string|null);
+
+            /** MsgDepositToVault vault_id */
+            vault_id?: (Long|null);
+
+            /** MsgDepositToVault amount */
+            amount?: (cosmos.base.v1beta1.ICoin|null);
+        }
+
+        /** Represents a MsgDepositToVault. */
+        class MsgDepositToVault implements IMsgDepositToVault {
+
+            /**
+             * Constructs a new MsgDepositToVault.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IMsgDepositToVault);
+
+            /** MsgDepositToVault sender. */
+            public sender: string;
+
+            /** MsgDepositToVault vault_id. */
+            public vault_id: Long;
+
+            /** MsgDepositToVault amount. */
+            public amount?: (cosmos.base.v1beta1.ICoin|null);
+
+            /**
+             * Encodes the specified MsgDepositToVault message. Does not implicitly {@link ununifi.yieldaggregator.MsgDepositToVault.verify|verify} messages.
+             * @param message MsgDepositToVault message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IMsgDepositToVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgDepositToVault message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgDepositToVault.verify|verify} messages.
+             * @param message MsgDepositToVault message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IMsgDepositToVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgDepositToVault message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgDepositToVault
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.MsgDepositToVault;
+
+            /**
+             * Decodes a MsgDepositToVault message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgDepositToVault
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.MsgDepositToVault;
+
+            /**
+             * Verifies a MsgDepositToVault message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgDepositToVault message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgDepositToVault
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.MsgDepositToVault;
+
+            /**
+             * Creates a plain object from a MsgDepositToVault message. Also converts values to other types if specified.
+             * @param message MsgDepositToVault
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.MsgDepositToVault, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgDepositToVault to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgDepositToVaultResponse. */
+        interface IMsgDepositToVaultResponse {
+        }
+
+        /** Represents a MsgDepositToVaultResponse. */
+        class MsgDepositToVaultResponse implements IMsgDepositToVaultResponse {
+
+            /**
+             * Constructs a new MsgDepositToVaultResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IMsgDepositToVaultResponse);
+
+            /**
+             * Encodes the specified MsgDepositToVaultResponse message. Does not implicitly {@link ununifi.yieldaggregator.MsgDepositToVaultResponse.verify|verify} messages.
+             * @param message MsgDepositToVaultResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IMsgDepositToVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgDepositToVaultResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgDepositToVaultResponse.verify|verify} messages.
+             * @param message MsgDepositToVaultResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IMsgDepositToVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgDepositToVaultResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgDepositToVaultResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.MsgDepositToVaultResponse;
+
+            /**
+             * Decodes a MsgDepositToVaultResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgDepositToVaultResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.MsgDepositToVaultResponse;
+
+            /**
+             * Verifies a MsgDepositToVaultResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgDepositToVaultResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgDepositToVaultResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.MsgDepositToVaultResponse;
+
+            /**
+             * Creates a plain object from a MsgDepositToVaultResponse message. Also converts values to other types if specified.
+             * @param message MsgDepositToVaultResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.MsgDepositToVaultResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgDepositToVaultResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgWithdrawFromVault. */
+        interface IMsgWithdrawFromVault {
+
+            /** MsgWithdrawFromVault sender */
+            sender?: (string|null);
+
+            /** MsgWithdrawFromVault vault_id */
+            vault_id?: (Long|null);
+
+            /** MsgWithdrawFromVault lp_token_amount */
+            lp_token_amount?: (string|null);
+        }
+
+        /** Represents a MsgWithdrawFromVault. */
+        class MsgWithdrawFromVault implements IMsgWithdrawFromVault {
+
+            /**
+             * Constructs a new MsgWithdrawFromVault.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IMsgWithdrawFromVault);
+
+            /** MsgWithdrawFromVault sender. */
+            public sender: string;
+
+            /** MsgWithdrawFromVault vault_id. */
+            public vault_id: Long;
+
+            /** MsgWithdrawFromVault lp_token_amount. */
+            public lp_token_amount: string;
+
+            /**
+             * Encodes the specified MsgWithdrawFromVault message. Does not implicitly {@link ununifi.yieldaggregator.MsgWithdrawFromVault.verify|verify} messages.
+             * @param message MsgWithdrawFromVault message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IMsgWithdrawFromVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgWithdrawFromVault message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgWithdrawFromVault.verify|verify} messages.
+             * @param message MsgWithdrawFromVault message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IMsgWithdrawFromVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgWithdrawFromVault message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgWithdrawFromVault
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.MsgWithdrawFromVault;
+
+            /**
+             * Decodes a MsgWithdrawFromVault message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgWithdrawFromVault
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.MsgWithdrawFromVault;
+
+            /**
+             * Verifies a MsgWithdrawFromVault message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgWithdrawFromVault message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgWithdrawFromVault
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.MsgWithdrawFromVault;
+
+            /**
+             * Creates a plain object from a MsgWithdrawFromVault message. Also converts values to other types if specified.
+             * @param message MsgWithdrawFromVault
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.MsgWithdrawFromVault, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgWithdrawFromVault to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgWithdrawFromVaultResponse. */
+        interface IMsgWithdrawFromVaultResponse {
+        }
+
+        /** Represents a MsgWithdrawFromVaultResponse. */
+        class MsgWithdrawFromVaultResponse implements IMsgWithdrawFromVaultResponse {
+
+            /**
+             * Constructs a new MsgWithdrawFromVaultResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IMsgWithdrawFromVaultResponse);
+
+            /**
+             * Encodes the specified MsgWithdrawFromVaultResponse message. Does not implicitly {@link ununifi.yieldaggregator.MsgWithdrawFromVaultResponse.verify|verify} messages.
+             * @param message MsgWithdrawFromVaultResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IMsgWithdrawFromVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgWithdrawFromVaultResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgWithdrawFromVaultResponse.verify|verify} messages.
+             * @param message MsgWithdrawFromVaultResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IMsgWithdrawFromVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgWithdrawFromVaultResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgWithdrawFromVaultResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.MsgWithdrawFromVaultResponse;
+
+            /**
+             * Decodes a MsgWithdrawFromVaultResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgWithdrawFromVaultResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.MsgWithdrawFromVaultResponse;
+
+            /**
+             * Verifies a MsgWithdrawFromVaultResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgWithdrawFromVaultResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgWithdrawFromVaultResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.MsgWithdrawFromVaultResponse;
+
+            /**
+             * Creates a plain object from a MsgWithdrawFromVaultResponse message. Also converts values to other types if specified.
+             * @param message MsgWithdrawFromVaultResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.MsgWithdrawFromVaultResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgWithdrawFromVaultResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgCreateVault. */
+        interface IMsgCreateVault {
+
+            /** MsgCreateVault sender */
+            sender?: (string|null);
+
+            /** MsgCreateVault denom */
+            denom?: (string|null);
+
+            /** MsgCreateVault commission_rate */
+            commission_rate?: (string|null);
+
+            /** MsgCreateVault strategy_weights */
+            strategy_weights?: (ununifi.yieldaggregator.IStrategyWeight[]|null);
+
+            /** MsgCreateVault fee */
+            fee?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** MsgCreateVault deposit */
+            deposit?: (cosmos.base.v1beta1.ICoin|null);
+        }
+
+        /** Represents a MsgCreateVault. */
+        class MsgCreateVault implements IMsgCreateVault {
+
+            /**
+             * Constructs a new MsgCreateVault.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IMsgCreateVault);
+
+            /** MsgCreateVault sender. */
+            public sender: string;
+
+            /** MsgCreateVault denom. */
+            public denom: string;
+
+            /** MsgCreateVault commission_rate. */
+            public commission_rate: string;
+
+            /** MsgCreateVault strategy_weights. */
+            public strategy_weights: ununifi.yieldaggregator.IStrategyWeight[];
+
+            /** MsgCreateVault fee. */
+            public fee?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** MsgCreateVault deposit. */
+            public deposit?: (cosmos.base.v1beta1.ICoin|null);
+
+            /**
+             * Encodes the specified MsgCreateVault message. Does not implicitly {@link ununifi.yieldaggregator.MsgCreateVault.verify|verify} messages.
+             * @param message MsgCreateVault message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IMsgCreateVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgCreateVault message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgCreateVault.verify|verify} messages.
+             * @param message MsgCreateVault message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IMsgCreateVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgCreateVault message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgCreateVault
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.MsgCreateVault;
+
+            /**
+             * Decodes a MsgCreateVault message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgCreateVault
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.MsgCreateVault;
+
+            /**
+             * Verifies a MsgCreateVault message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgCreateVault message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgCreateVault
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.MsgCreateVault;
+
+            /**
+             * Creates a plain object from a MsgCreateVault message. Also converts values to other types if specified.
+             * @param message MsgCreateVault
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.MsgCreateVault, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgCreateVault to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgCreateVaultResponse. */
+        interface IMsgCreateVaultResponse {
+        }
+
+        /** Represents a MsgCreateVaultResponse. */
+        class MsgCreateVaultResponse implements IMsgCreateVaultResponse {
+
+            /**
+             * Constructs a new MsgCreateVaultResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IMsgCreateVaultResponse);
+
+            /**
+             * Encodes the specified MsgCreateVaultResponse message. Does not implicitly {@link ununifi.yieldaggregator.MsgCreateVaultResponse.verify|verify} messages.
+             * @param message MsgCreateVaultResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IMsgCreateVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgCreateVaultResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgCreateVaultResponse.verify|verify} messages.
+             * @param message MsgCreateVaultResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IMsgCreateVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgCreateVaultResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgCreateVaultResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.MsgCreateVaultResponse;
+
+            /**
+             * Decodes a MsgCreateVaultResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgCreateVaultResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.MsgCreateVaultResponse;
+
+            /**
+             * Verifies a MsgCreateVaultResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgCreateVaultResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgCreateVaultResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.MsgCreateVaultResponse;
+
+            /**
+             * Creates a plain object from a MsgCreateVaultResponse message. Also converts values to other types if specified.
+             * @param message MsgCreateVaultResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.MsgCreateVaultResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgCreateVaultResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgDeleteVault. */
+        interface IMsgDeleteVault {
+
+            /** MsgDeleteVault sender */
+            sender?: (string|null);
+
+            /** MsgDeleteVault vault_id */
+            vault_id?: (Long|null);
+        }
+
+        /** Represents a MsgDeleteVault. */
+        class MsgDeleteVault implements IMsgDeleteVault {
+
+            /**
+             * Constructs a new MsgDeleteVault.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IMsgDeleteVault);
+
+            /** MsgDeleteVault sender. */
+            public sender: string;
+
+            /** MsgDeleteVault vault_id. */
+            public vault_id: Long;
+
+            /**
+             * Encodes the specified MsgDeleteVault message. Does not implicitly {@link ununifi.yieldaggregator.MsgDeleteVault.verify|verify} messages.
+             * @param message MsgDeleteVault message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IMsgDeleteVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgDeleteVault message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgDeleteVault.verify|verify} messages.
+             * @param message MsgDeleteVault message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IMsgDeleteVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgDeleteVault message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgDeleteVault
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.MsgDeleteVault;
+
+            /**
+             * Decodes a MsgDeleteVault message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgDeleteVault
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.MsgDeleteVault;
+
+            /**
+             * Verifies a MsgDeleteVault message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgDeleteVault message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgDeleteVault
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.MsgDeleteVault;
+
+            /**
+             * Creates a plain object from a MsgDeleteVault message. Also converts values to other types if specified.
+             * @param message MsgDeleteVault
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.MsgDeleteVault, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgDeleteVault to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgDeleteVaultResponse. */
+        interface IMsgDeleteVaultResponse {
+        }
+
+        /** Represents a MsgDeleteVaultResponse. */
+        class MsgDeleteVaultResponse implements IMsgDeleteVaultResponse {
+
+            /**
+             * Constructs a new MsgDeleteVaultResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IMsgDeleteVaultResponse);
+
+            /**
+             * Encodes the specified MsgDeleteVaultResponse message. Does not implicitly {@link ununifi.yieldaggregator.MsgDeleteVaultResponse.verify|verify} messages.
+             * @param message MsgDeleteVaultResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IMsgDeleteVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgDeleteVaultResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgDeleteVaultResponse.verify|verify} messages.
+             * @param message MsgDeleteVaultResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IMsgDeleteVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgDeleteVaultResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgDeleteVaultResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.MsgDeleteVaultResponse;
+
+            /**
+             * Decodes a MsgDeleteVaultResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgDeleteVaultResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.MsgDeleteVaultResponse;
+
+            /**
+             * Verifies a MsgDeleteVaultResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgDeleteVaultResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgDeleteVaultResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.MsgDeleteVaultResponse;
+
+            /**
+             * Creates a plain object from a MsgDeleteVaultResponse message. Also converts values to other types if specified.
+             * @param message MsgDeleteVaultResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.MsgDeleteVaultResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgDeleteVaultResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgTransferVaultOwnership. */
+        interface IMsgTransferVaultOwnership {
+
+            /** MsgTransferVaultOwnership sender */
+            sender?: (string|null);
+
+            /** MsgTransferVaultOwnership vault_id */
+            vault_id?: (Long|null);
+
+            /** MsgTransferVaultOwnership recipient */
+            recipient?: (string|null);
+        }
+
+        /** Represents a MsgTransferVaultOwnership. */
+        class MsgTransferVaultOwnership implements IMsgTransferVaultOwnership {
+
+            /**
+             * Constructs a new MsgTransferVaultOwnership.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IMsgTransferVaultOwnership);
+
+            /** MsgTransferVaultOwnership sender. */
+            public sender: string;
+
+            /** MsgTransferVaultOwnership vault_id. */
+            public vault_id: Long;
+
+            /** MsgTransferVaultOwnership recipient. */
+            public recipient: string;
+
+            /**
+             * Encodes the specified MsgTransferVaultOwnership message. Does not implicitly {@link ununifi.yieldaggregator.MsgTransferVaultOwnership.verify|verify} messages.
+             * @param message MsgTransferVaultOwnership message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IMsgTransferVaultOwnership, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgTransferVaultOwnership message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgTransferVaultOwnership.verify|verify} messages.
+             * @param message MsgTransferVaultOwnership message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IMsgTransferVaultOwnership, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgTransferVaultOwnership message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgTransferVaultOwnership
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.MsgTransferVaultOwnership;
+
+            /**
+             * Decodes a MsgTransferVaultOwnership message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgTransferVaultOwnership
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.MsgTransferVaultOwnership;
+
+            /**
+             * Verifies a MsgTransferVaultOwnership message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgTransferVaultOwnership message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgTransferVaultOwnership
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.MsgTransferVaultOwnership;
+
+            /**
+             * Creates a plain object from a MsgTransferVaultOwnership message. Also converts values to other types if specified.
+             * @param message MsgTransferVaultOwnership
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.MsgTransferVaultOwnership, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgTransferVaultOwnership to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgTransferVaultOwnershipResponse. */
+        interface IMsgTransferVaultOwnershipResponse {
+        }
+
+        /** Represents a MsgTransferVaultOwnershipResponse. */
+        class MsgTransferVaultOwnershipResponse implements IMsgTransferVaultOwnershipResponse {
+
+            /**
+             * Constructs a new MsgTransferVaultOwnershipResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IMsgTransferVaultOwnershipResponse);
+
+            /**
+             * Encodes the specified MsgTransferVaultOwnershipResponse message. Does not implicitly {@link ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse.verify|verify} messages.
+             * @param message MsgTransferVaultOwnershipResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IMsgTransferVaultOwnershipResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgTransferVaultOwnershipResponse message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse.verify|verify} messages.
+             * @param message MsgTransferVaultOwnershipResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IMsgTransferVaultOwnershipResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgTransferVaultOwnershipResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgTransferVaultOwnershipResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse;
+
+            /**
+             * Decodes a MsgTransferVaultOwnershipResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgTransferVaultOwnershipResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse;
+
+            /**
+             * Verifies a MsgTransferVaultOwnershipResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgTransferVaultOwnershipResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgTransferVaultOwnershipResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse;
+
+            /**
+             * Creates a plain object from a MsgTransferVaultOwnershipResponse message. Also converts values to other types if specified.
+             * @param message MsgTransferVaultOwnershipResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.MsgTransferVaultOwnershipResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgTransferVaultOwnershipResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a GenesisState. */
+        interface IGenesisState {
+
+            /** GenesisState params */
+            params?: (ununifi.yieldaggregator.IParams|null);
+
+            /** GenesisState vaults */
+            vaults?: (ununifi.yieldaggregator.IVault[]|null);
+
+            /** GenesisState strategies */
+            strategies?: (ununifi.yieldaggregator.IStrategy[]|null);
+        }
+
+        /** Represents a GenesisState. */
+        class GenesisState implements IGenesisState {
+
+            /**
+             * Constructs a new GenesisState.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IGenesisState);
+
+            /** GenesisState params. */
+            public params?: (ununifi.yieldaggregator.IParams|null);
+
+            /** GenesisState vaults. */
+            public vaults: ununifi.yieldaggregator.IVault[];
+
+            /** GenesisState strategies. */
+            public strategies: ununifi.yieldaggregator.IStrategy[];
+
+            /**
+             * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.yieldaggregator.GenesisState.verify|verify} messages.
+             * @param message GenesisState message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.GenesisState.verify|verify} messages.
+             * @param message GenesisState message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a GenesisState message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns GenesisState
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.GenesisState;
+
+            /**
+             * Decodes a GenesisState message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns GenesisState
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.GenesisState;
+
+            /**
+             * Verifies a GenesisState message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a GenesisState message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns GenesisState
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.GenesisState;
+
+            /**
+             * Creates a plain object from a GenesisState message. Also converts values to other types if specified.
+             * @param message GenesisState
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.GenesisState, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this GenesisState to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a ProposalAddStrategy. */
+        interface IProposalAddStrategy {
+
+            /** ProposalAddStrategy title */
+            title?: (string|null);
+
+            /** ProposalAddStrategy description */
+            description?: (string|null);
+
+            /** ProposalAddStrategy denom */
+            denom?: (string|null);
+
+            /** ProposalAddStrategy contract_address */
+            contract_address?: (string|null);
+
+            /** ProposalAddStrategy name */
+            name?: (string|null);
+        }
+
+        /** Represents a ProposalAddStrategy. */
+        class ProposalAddStrategy implements IProposalAddStrategy {
+
+            /**
+             * Constructs a new ProposalAddStrategy.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.yieldaggregator.IProposalAddStrategy);
+
+            /** ProposalAddStrategy title. */
+            public title: string;
+
+            /** ProposalAddStrategy description. */
+            public description: string;
+
+            /** ProposalAddStrategy denom. */
+            public denom: string;
+
+            /** ProposalAddStrategy contract_address. */
+            public contract_address: string;
+
+            /** ProposalAddStrategy name. */
+            public name: string;
+
+            /**
+             * Encodes the specified ProposalAddStrategy message. Does not implicitly {@link ununifi.yieldaggregator.ProposalAddStrategy.verify|verify} messages.
+             * @param message ProposalAddStrategy message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.yieldaggregator.IProposalAddStrategy, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified ProposalAddStrategy message, length delimited. Does not implicitly {@link ununifi.yieldaggregator.ProposalAddStrategy.verify|verify} messages.
+             * @param message ProposalAddStrategy message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.yieldaggregator.IProposalAddStrategy, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a ProposalAddStrategy message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns ProposalAddStrategy
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.yieldaggregator.ProposalAddStrategy;
+
+            /**
+             * Decodes a ProposalAddStrategy message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns ProposalAddStrategy
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.yieldaggregator.ProposalAddStrategy;
+
+            /**
+             * Verifies a ProposalAddStrategy message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a ProposalAddStrategy message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns ProposalAddStrategy
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.yieldaggregator.ProposalAddStrategy;
+
+            /**
+             * Creates a plain object from a ProposalAddStrategy message. Also converts values to other types if specified.
+             * @param message ProposalAddStrategy
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.yieldaggregator.ProposalAddStrategy, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this ProposalAddStrategy to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+    }
+
     /** Namespace chain. */
     namespace chain {
-
-        /** Namespace yieldaggregator. */
-        namespace yieldaggregator {
-
-            /** Represents a Query */
-            class Query extends $protobuf.rpc.Service {
-
-                /**
-                 * Constructs a new Query service.
-                 * @param rpcImpl RPC implementation
-                 * @param [requestDelimited=false] Whether requests are length-delimited
-                 * @param [responseDelimited=false] Whether responses are length-delimited
-                 */
-                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
-
-                /**
-                 * Calls Params.
-                 * @param request QueryParamsRequest message or plain object
-                 * @param callback Node-style callback called with the error, if any, and QueryParamsResponse
-                 */
-                public params(request: ununifi.chain.yieldaggregator.IQueryParamsRequest, callback: ununifi.chain.yieldaggregator.Query.ParamsCallback): void;
-
-                /**
-                 * Calls Params.
-                 * @param request QueryParamsRequest message or plain object
-                 * @returns Promise
-                 */
-                public params(request: ununifi.chain.yieldaggregator.IQueryParamsRequest): Promise<ununifi.chain.yieldaggregator.QueryParamsResponse>;
-
-                /**
-                 * Calls VaultAll.
-                 * @param request QueryAllVaultRequest message or plain object
-                 * @param callback Node-style callback called with the error, if any, and QueryAllVaultResponse
-                 */
-                public vaultAll(request: ununifi.chain.yieldaggregator.IQueryAllVaultRequest, callback: ununifi.chain.yieldaggregator.Query.VaultAllCallback): void;
-
-                /**
-                 * Calls VaultAll.
-                 * @param request QueryAllVaultRequest message or plain object
-                 * @returns Promise
-                 */
-                public vaultAll(request: ununifi.chain.yieldaggregator.IQueryAllVaultRequest): Promise<ununifi.chain.yieldaggregator.QueryAllVaultResponse>;
-
-                /**
-                 * Calls Vault.
-                 * @param request QueryGetVaultRequest message or plain object
-                 * @param callback Node-style callback called with the error, if any, and QueryGetVaultResponse
-                 */
-                public vault(request: ununifi.chain.yieldaggregator.IQueryGetVaultRequest, callback: ununifi.chain.yieldaggregator.Query.VaultCallback): void;
-
-                /**
-                 * Calls Vault.
-                 * @param request QueryGetVaultRequest message or plain object
-                 * @returns Promise
-                 */
-                public vault(request: ununifi.chain.yieldaggregator.IQueryGetVaultRequest): Promise<ununifi.chain.yieldaggregator.QueryGetVaultResponse>;
-
-                /**
-                 * Calls StrategyAll.
-                 * @param request QueryAllStrategyRequest message or plain object
-                 * @param callback Node-style callback called with the error, if any, and QueryAllStrategyResponse
-                 */
-                public strategyAll(request: ununifi.chain.yieldaggregator.IQueryAllStrategyRequest, callback: ununifi.chain.yieldaggregator.Query.StrategyAllCallback): void;
-
-                /**
-                 * Calls StrategyAll.
-                 * @param request QueryAllStrategyRequest message or plain object
-                 * @returns Promise
-                 */
-                public strategyAll(request: ununifi.chain.yieldaggregator.IQueryAllStrategyRequest): Promise<ununifi.chain.yieldaggregator.QueryAllStrategyResponse>;
-
-                /**
-                 * Calls Strategy.
-                 * @param request QueryGetStrategyRequest message or plain object
-                 * @param callback Node-style callback called with the error, if any, and QueryGetStrategyResponse
-                 */
-                public strategy(request: ununifi.chain.yieldaggregator.IQueryGetStrategyRequest, callback: ununifi.chain.yieldaggregator.Query.StrategyCallback): void;
-
-                /**
-                 * Calls Strategy.
-                 * @param request QueryGetStrategyRequest message or plain object
-                 * @returns Promise
-                 */
-                public strategy(request: ununifi.chain.yieldaggregator.IQueryGetStrategyRequest): Promise<ununifi.chain.yieldaggregator.QueryGetStrategyResponse>;
-
-                /**
-                 * Calls EstimateMintAmount.
-                 * @param request QueryEstimateMintAmountRequest message or plain object
-                 * @param callback Node-style callback called with the error, if any, and QueryEstimateMintAmountResponse
-                 */
-                public estimateMintAmount(request: ununifi.chain.yieldaggregator.IQueryEstimateMintAmountRequest, callback: ununifi.chain.yieldaggregator.Query.EstimateMintAmountCallback): void;
-
-                /**
-                 * Calls EstimateMintAmount.
-                 * @param request QueryEstimateMintAmountRequest message or plain object
-                 * @returns Promise
-                 */
-                public estimateMintAmount(request: ununifi.chain.yieldaggregator.IQueryEstimateMintAmountRequest): Promise<ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse>;
-
-                /**
-                 * Calls EstimateRedeemAmount.
-                 * @param request QueryEstimateRedeemAmountRequest message or plain object
-                 * @param callback Node-style callback called with the error, if any, and QueryEstimateRedeemAmountResponse
-                 */
-                public estimateRedeemAmount(request: ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountRequest, callback: ununifi.chain.yieldaggregator.Query.EstimateRedeemAmountCallback): void;
-
-                /**
-                 * Calls EstimateRedeemAmount.
-                 * @param request QueryEstimateRedeemAmountRequest message or plain object
-                 * @returns Promise
-                 */
-                public estimateRedeemAmount(request: ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountRequest): Promise<ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse>;
-            }
-
-            namespace Query {
-
-                /**
-                 * Callback as used by {@link ununifi.chain.yieldaggregator.Query#params}.
-                 * @param error Error, if any
-                 * @param [response] QueryParamsResponse
-                 */
-                type ParamsCallback = (error: (Error|null), response?: ununifi.chain.yieldaggregator.QueryParamsResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.yieldaggregator.Query#vaultAll}.
-                 * @param error Error, if any
-                 * @param [response] QueryAllVaultResponse
-                 */
-                type VaultAllCallback = (error: (Error|null), response?: ununifi.chain.yieldaggregator.QueryAllVaultResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.yieldaggregator.Query#vault}.
-                 * @param error Error, if any
-                 * @param [response] QueryGetVaultResponse
-                 */
-                type VaultCallback = (error: (Error|null), response?: ununifi.chain.yieldaggregator.QueryGetVaultResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.yieldaggregator.Query#strategyAll}.
-                 * @param error Error, if any
-                 * @param [response] QueryAllStrategyResponse
-                 */
-                type StrategyAllCallback = (error: (Error|null), response?: ununifi.chain.yieldaggregator.QueryAllStrategyResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.yieldaggregator.Query#strategy}.
-                 * @param error Error, if any
-                 * @param [response] QueryGetStrategyResponse
-                 */
-                type StrategyCallback = (error: (Error|null), response?: ununifi.chain.yieldaggregator.QueryGetStrategyResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.yieldaggregator.Query#estimateMintAmount}.
-                 * @param error Error, if any
-                 * @param [response] QueryEstimateMintAmountResponse
-                 */
-                type EstimateMintAmountCallback = (error: (Error|null), response?: ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.yieldaggregator.Query#estimateRedeemAmount}.
-                 * @param error Error, if any
-                 * @param [response] QueryEstimateRedeemAmountResponse
-                 */
-                type EstimateRedeemAmountCallback = (error: (Error|null), response?: ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse) => void;
-            }
-
-            /** Properties of a QueryParamsRequest. */
-            interface IQueryParamsRequest {
-            }
-
-            /** Represents a QueryParamsRequest. */
-            class QueryParamsRequest implements IQueryParamsRequest {
-
-                /**
-                 * Constructs a new QueryParamsRequest.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryParamsRequest);
-
-                /**
-                 * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryParamsRequest.verify|verify} messages.
-                 * @param message QueryParamsRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryParamsRequest.verify|verify} messages.
-                 * @param message QueryParamsRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryParamsRequest message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryParamsRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryParamsRequest;
-
-                /**
-                 * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryParamsRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryParamsRequest;
-
-                /**
-                 * Verifies a QueryParamsRequest message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryParamsRequest
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryParamsRequest;
-
-                /**
-                 * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
-                 * @param message QueryParamsRequest
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryParamsRequest to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryParamsResponse. */
-            interface IQueryParamsResponse {
-
-                /** QueryParamsResponse params */
-                params?: (ununifi.chain.yieldaggregator.IParams|null);
-            }
-
-            /** Represents a QueryParamsResponse. */
-            class QueryParamsResponse implements IQueryParamsResponse {
-
-                /**
-                 * Constructs a new QueryParamsResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryParamsResponse);
-
-                /** QueryParamsResponse params. */
-                public params?: (ununifi.chain.yieldaggregator.IParams|null);
-
-                /**
-                 * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryParamsResponse.verify|verify} messages.
-                 * @param message QueryParamsResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryParamsResponse.verify|verify} messages.
-                 * @param message QueryParamsResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryParamsResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryParamsResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryParamsResponse;
-
-                /**
-                 * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryParamsResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryParamsResponse;
-
-                /**
-                 * Verifies a QueryParamsResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryParamsResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryParamsResponse;
-
-                /**
-                 * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
-                 * @param message QueryParamsResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryParamsResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryAllVaultRequest. */
-            interface IQueryAllVaultRequest {
-
-                /** QueryAllVaultRequest pagination */
-                pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-            }
-
-            /** Represents a QueryAllVaultRequest. */
-            class QueryAllVaultRequest implements IQueryAllVaultRequest {
-
-                /**
-                 * Constructs a new QueryAllVaultRequest.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryAllVaultRequest);
-
-                /** QueryAllVaultRequest pagination. */
-                public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-
-                /**
-                 * Encodes the specified QueryAllVaultRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllVaultRequest.verify|verify} messages.
-                 * @param message QueryAllVaultRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryAllVaultRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryAllVaultRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllVaultRequest.verify|verify} messages.
-                 * @param message QueryAllVaultRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryAllVaultRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryAllVaultRequest message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryAllVaultRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryAllVaultRequest;
-
-                /**
-                 * Decodes a QueryAllVaultRequest message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryAllVaultRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryAllVaultRequest;
-
-                /**
-                 * Verifies a QueryAllVaultRequest message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryAllVaultRequest message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryAllVaultRequest
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryAllVaultRequest;
-
-                /**
-                 * Creates a plain object from a QueryAllVaultRequest message. Also converts values to other types if specified.
-                 * @param message QueryAllVaultRequest
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryAllVaultRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryAllVaultRequest to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryAllVaultResponse. */
-            interface IQueryAllVaultResponse {
-
-                /** QueryAllVaultResponse vaults */
-                vaults?: (ununifi.chain.yieldaggregator.IVault[]|null);
-
-                /** QueryAllVaultResponse pagination */
-                pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-            }
-
-            /** Represents a QueryAllVaultResponse. */
-            class QueryAllVaultResponse implements IQueryAllVaultResponse {
-
-                /**
-                 * Constructs a new QueryAllVaultResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryAllVaultResponse);
-
-                /** QueryAllVaultResponse vaults. */
-                public vaults: ununifi.chain.yieldaggregator.IVault[];
-
-                /** QueryAllVaultResponse pagination. */
-                public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-
-                /**
-                 * Encodes the specified QueryAllVaultResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllVaultResponse.verify|verify} messages.
-                 * @param message QueryAllVaultResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryAllVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryAllVaultResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllVaultResponse.verify|verify} messages.
-                 * @param message QueryAllVaultResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryAllVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryAllVaultResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryAllVaultResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryAllVaultResponse;
-
-                /**
-                 * Decodes a QueryAllVaultResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryAllVaultResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryAllVaultResponse;
-
-                /**
-                 * Verifies a QueryAllVaultResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryAllVaultResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryAllVaultResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryAllVaultResponse;
-
-                /**
-                 * Creates a plain object from a QueryAllVaultResponse message. Also converts values to other types if specified.
-                 * @param message QueryAllVaultResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryAllVaultResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryAllVaultResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryGetVaultRequest. */
-            interface IQueryGetVaultRequest {
-
-                /** QueryGetVaultRequest id */
-                id?: (Long|null);
-            }
-
-            /** Represents a QueryGetVaultRequest. */
-            class QueryGetVaultRequest implements IQueryGetVaultRequest {
-
-                /**
-                 * Constructs a new QueryGetVaultRequest.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryGetVaultRequest);
-
-                /** QueryGetVaultRequest id. */
-                public id: Long;
-
-                /**
-                 * Encodes the specified QueryGetVaultRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetVaultRequest.verify|verify} messages.
-                 * @param message QueryGetVaultRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryGetVaultRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryGetVaultRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetVaultRequest.verify|verify} messages.
-                 * @param message QueryGetVaultRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryGetVaultRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryGetVaultRequest message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryGetVaultRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryGetVaultRequest;
-
-                /**
-                 * Decodes a QueryGetVaultRequest message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryGetVaultRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryGetVaultRequest;
-
-                /**
-                 * Verifies a QueryGetVaultRequest message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryGetVaultRequest message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryGetVaultRequest
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryGetVaultRequest;
-
-                /**
-                 * Creates a plain object from a QueryGetVaultRequest message. Also converts values to other types if specified.
-                 * @param message QueryGetVaultRequest
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryGetVaultRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryGetVaultRequest to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryGetVaultResponse. */
-            interface IQueryGetVaultResponse {
-
-                /** QueryGetVaultResponse vault */
-                vault?: (ununifi.chain.yieldaggregator.IVault|null);
-
-                /** QueryGetVaultResponse strategies */
-                strategies?: (ununifi.chain.yieldaggregator.IStrategy[]|null);
-            }
-
-            /** Represents a QueryGetVaultResponse. */
-            class QueryGetVaultResponse implements IQueryGetVaultResponse {
-
-                /**
-                 * Constructs a new QueryGetVaultResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryGetVaultResponse);
-
-                /** QueryGetVaultResponse vault. */
-                public vault?: (ununifi.chain.yieldaggregator.IVault|null);
-
-                /** QueryGetVaultResponse strategies. */
-                public strategies: ununifi.chain.yieldaggregator.IStrategy[];
-
-                /**
-                 * Encodes the specified QueryGetVaultResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetVaultResponse.verify|verify} messages.
-                 * @param message QueryGetVaultResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryGetVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryGetVaultResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetVaultResponse.verify|verify} messages.
-                 * @param message QueryGetVaultResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryGetVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryGetVaultResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryGetVaultResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryGetVaultResponse;
-
-                /**
-                 * Decodes a QueryGetVaultResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryGetVaultResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryGetVaultResponse;
-
-                /**
-                 * Verifies a QueryGetVaultResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryGetVaultResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryGetVaultResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryGetVaultResponse;
-
-                /**
-                 * Creates a plain object from a QueryGetVaultResponse message. Also converts values to other types if specified.
-                 * @param message QueryGetVaultResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryGetVaultResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryGetVaultResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryAllStrategyRequest. */
-            interface IQueryAllStrategyRequest {
-
-                /** QueryAllStrategyRequest denom */
-                denom?: (string|null);
-
-                /** QueryAllStrategyRequest pagination */
-                pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-            }
-
-            /** Represents a QueryAllStrategyRequest. */
-            class QueryAllStrategyRequest implements IQueryAllStrategyRequest {
-
-                /**
-                 * Constructs a new QueryAllStrategyRequest.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryAllStrategyRequest);
-
-                /** QueryAllStrategyRequest denom. */
-                public denom: string;
-
-                /** QueryAllStrategyRequest pagination. */
-                public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-
-                /**
-                 * Encodes the specified QueryAllStrategyRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllStrategyRequest.verify|verify} messages.
-                 * @param message QueryAllStrategyRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryAllStrategyRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryAllStrategyRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllStrategyRequest.verify|verify} messages.
-                 * @param message QueryAllStrategyRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryAllStrategyRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryAllStrategyRequest message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryAllStrategyRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryAllStrategyRequest;
-
-                /**
-                 * Decodes a QueryAllStrategyRequest message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryAllStrategyRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryAllStrategyRequest;
-
-                /**
-                 * Verifies a QueryAllStrategyRequest message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryAllStrategyRequest message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryAllStrategyRequest
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryAllStrategyRequest;
-
-                /**
-                 * Creates a plain object from a QueryAllStrategyRequest message. Also converts values to other types if specified.
-                 * @param message QueryAllStrategyRequest
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryAllStrategyRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryAllStrategyRequest to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryAllStrategyResponse. */
-            interface IQueryAllStrategyResponse {
-
-                /** QueryAllStrategyResponse strategies */
-                strategies?: (ununifi.chain.yieldaggregator.IStrategy[]|null);
-
-                /** QueryAllStrategyResponse pagination */
-                pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-            }
-
-            /** Represents a QueryAllStrategyResponse. */
-            class QueryAllStrategyResponse implements IQueryAllStrategyResponse {
-
-                /**
-                 * Constructs a new QueryAllStrategyResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryAllStrategyResponse);
-
-                /** QueryAllStrategyResponse strategies. */
-                public strategies: ununifi.chain.yieldaggregator.IStrategy[];
-
-                /** QueryAllStrategyResponse pagination. */
-                public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-
-                /**
-                 * Encodes the specified QueryAllStrategyResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllStrategyResponse.verify|verify} messages.
-                 * @param message QueryAllStrategyResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryAllStrategyResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryAllStrategyResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryAllStrategyResponse.verify|verify} messages.
-                 * @param message QueryAllStrategyResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryAllStrategyResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryAllStrategyResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryAllStrategyResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryAllStrategyResponse;
-
-                /**
-                 * Decodes a QueryAllStrategyResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryAllStrategyResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryAllStrategyResponse;
-
-                /**
-                 * Verifies a QueryAllStrategyResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryAllStrategyResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryAllStrategyResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryAllStrategyResponse;
-
-                /**
-                 * Creates a plain object from a QueryAllStrategyResponse message. Also converts values to other types if specified.
-                 * @param message QueryAllStrategyResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryAllStrategyResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryAllStrategyResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryGetStrategyRequest. */
-            interface IQueryGetStrategyRequest {
-
-                /** QueryGetStrategyRequest denom */
-                denom?: (string|null);
-
-                /** QueryGetStrategyRequest id */
-                id?: (Long|null);
-            }
-
-            /** Represents a QueryGetStrategyRequest. */
-            class QueryGetStrategyRequest implements IQueryGetStrategyRequest {
-
-                /**
-                 * Constructs a new QueryGetStrategyRequest.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryGetStrategyRequest);
-
-                /** QueryGetStrategyRequest denom. */
-                public denom: string;
-
-                /** QueryGetStrategyRequest id. */
-                public id: Long;
-
-                /**
-                 * Encodes the specified QueryGetStrategyRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetStrategyRequest.verify|verify} messages.
-                 * @param message QueryGetStrategyRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryGetStrategyRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryGetStrategyRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetStrategyRequest.verify|verify} messages.
-                 * @param message QueryGetStrategyRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryGetStrategyRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryGetStrategyRequest message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryGetStrategyRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryGetStrategyRequest;
-
-                /**
-                 * Decodes a QueryGetStrategyRequest message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryGetStrategyRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryGetStrategyRequest;
-
-                /**
-                 * Verifies a QueryGetStrategyRequest message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryGetStrategyRequest message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryGetStrategyRequest
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryGetStrategyRequest;
-
-                /**
-                 * Creates a plain object from a QueryGetStrategyRequest message. Also converts values to other types if specified.
-                 * @param message QueryGetStrategyRequest
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryGetStrategyRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryGetStrategyRequest to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryGetStrategyResponse. */
-            interface IQueryGetStrategyResponse {
-
-                /** QueryGetStrategyResponse strategy */
-                strategy?: (ununifi.chain.yieldaggregator.IStrategy|null);
-            }
-
-            /** Represents a QueryGetStrategyResponse. */
-            class QueryGetStrategyResponse implements IQueryGetStrategyResponse {
-
-                /**
-                 * Constructs a new QueryGetStrategyResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryGetStrategyResponse);
-
-                /** QueryGetStrategyResponse strategy. */
-                public strategy?: (ununifi.chain.yieldaggregator.IStrategy|null);
-
-                /**
-                 * Encodes the specified QueryGetStrategyResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetStrategyResponse.verify|verify} messages.
-                 * @param message QueryGetStrategyResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryGetStrategyResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryGetStrategyResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryGetStrategyResponse.verify|verify} messages.
-                 * @param message QueryGetStrategyResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryGetStrategyResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryGetStrategyResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryGetStrategyResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryGetStrategyResponse;
-
-                /**
-                 * Decodes a QueryGetStrategyResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryGetStrategyResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryGetStrategyResponse;
-
-                /**
-                 * Verifies a QueryGetStrategyResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryGetStrategyResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryGetStrategyResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryGetStrategyResponse;
-
-                /**
-                 * Creates a plain object from a QueryGetStrategyResponse message. Also converts values to other types if specified.
-                 * @param message QueryGetStrategyResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryGetStrategyResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryGetStrategyResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryEstimateMintAmountRequest. */
-            interface IQueryEstimateMintAmountRequest {
-
-                /** QueryEstimateMintAmountRequest id */
-                id?: (Long|null);
-
-                /** QueryEstimateMintAmountRequest deposit_amount */
-                deposit_amount?: (string|null);
-            }
-
-            /** Represents a QueryEstimateMintAmountRequest. */
-            class QueryEstimateMintAmountRequest implements IQueryEstimateMintAmountRequest {
-
-                /**
-                 * Constructs a new QueryEstimateMintAmountRequest.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryEstimateMintAmountRequest);
-
-                /** QueryEstimateMintAmountRequest id. */
-                public id: Long;
-
-                /** QueryEstimateMintAmountRequest deposit_amount. */
-                public deposit_amount: string;
-
-                /**
-                 * Encodes the specified QueryEstimateMintAmountRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest.verify|verify} messages.
-                 * @param message QueryEstimateMintAmountRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryEstimateMintAmountRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryEstimateMintAmountRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest.verify|verify} messages.
-                 * @param message QueryEstimateMintAmountRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryEstimateMintAmountRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryEstimateMintAmountRequest message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryEstimateMintAmountRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest;
-
-                /**
-                 * Decodes a QueryEstimateMintAmountRequest message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryEstimateMintAmountRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest;
-
-                /**
-                 * Verifies a QueryEstimateMintAmountRequest message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryEstimateMintAmountRequest message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryEstimateMintAmountRequest
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest;
-
-                /**
-                 * Creates a plain object from a QueryEstimateMintAmountRequest message. Also converts values to other types if specified.
-                 * @param message QueryEstimateMintAmountRequest
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryEstimateMintAmountRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryEstimateMintAmountRequest to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryEstimateMintAmountResponse. */
-            interface IQueryEstimateMintAmountResponse {
-
-                /** QueryEstimateMintAmountResponse mint_amount */
-                mint_amount?: (cosmos.base.v1beta1.ICoin|null);
-            }
-
-            /** Represents a QueryEstimateMintAmountResponse. */
-            class QueryEstimateMintAmountResponse implements IQueryEstimateMintAmountResponse {
-
-                /**
-                 * Constructs a new QueryEstimateMintAmountResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryEstimateMintAmountResponse);
-
-                /** QueryEstimateMintAmountResponse mint_amount. */
-                public mint_amount?: (cosmos.base.v1beta1.ICoin|null);
-
-                /**
-                 * Encodes the specified QueryEstimateMintAmountResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse.verify|verify} messages.
-                 * @param message QueryEstimateMintAmountResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryEstimateMintAmountResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryEstimateMintAmountResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse.verify|verify} messages.
-                 * @param message QueryEstimateMintAmountResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryEstimateMintAmountResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryEstimateMintAmountResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryEstimateMintAmountResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse;
-
-                /**
-                 * Decodes a QueryEstimateMintAmountResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryEstimateMintAmountResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse;
-
-                /**
-                 * Verifies a QueryEstimateMintAmountResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryEstimateMintAmountResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryEstimateMintAmountResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse;
-
-                /**
-                 * Creates a plain object from a QueryEstimateMintAmountResponse message. Also converts values to other types if specified.
-                 * @param message QueryEstimateMintAmountResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryEstimateMintAmountResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryEstimateRedeemAmountRequest. */
-            interface IQueryEstimateRedeemAmountRequest {
-
-                /** QueryEstimateRedeemAmountRequest id */
-                id?: (Long|null);
-
-                /** QueryEstimateRedeemAmountRequest burn_amount */
-                burn_amount?: (string|null);
-            }
-
-            /** Represents a QueryEstimateRedeemAmountRequest. */
-            class QueryEstimateRedeemAmountRequest implements IQueryEstimateRedeemAmountRequest {
-
-                /**
-                 * Constructs a new QueryEstimateRedeemAmountRequest.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountRequest);
-
-                /** QueryEstimateRedeemAmountRequest id. */
-                public id: Long;
-
-                /** QueryEstimateRedeemAmountRequest burn_amount. */
-                public burn_amount: string;
-
-                /**
-                 * Encodes the specified QueryEstimateRedeemAmountRequest message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest.verify|verify} messages.
-                 * @param message QueryEstimateRedeemAmountRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryEstimateRedeemAmountRequest message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest.verify|verify} messages.
-                 * @param message QueryEstimateRedeemAmountRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryEstimateRedeemAmountRequest message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryEstimateRedeemAmountRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest;
-
-                /**
-                 * Decodes a QueryEstimateRedeemAmountRequest message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryEstimateRedeemAmountRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest;
-
-                /**
-                 * Verifies a QueryEstimateRedeemAmountRequest message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryEstimateRedeemAmountRequest message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryEstimateRedeemAmountRequest
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest;
-
-                /**
-                 * Creates a plain object from a QueryEstimateRedeemAmountRequest message. Also converts values to other types if specified.
-                 * @param message QueryEstimateRedeemAmountRequest
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryEstimateRedeemAmountRequest to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryEstimateRedeemAmountResponse. */
-            interface IQueryEstimateRedeemAmountResponse {
-
-                /** QueryEstimateRedeemAmountResponse redeem_amount */
-                redeem_amount?: (cosmos.base.v1beta1.ICoin|null);
-            }
-
-            /** Represents a QueryEstimateRedeemAmountResponse. */
-            class QueryEstimateRedeemAmountResponse implements IQueryEstimateRedeemAmountResponse {
-
-                /**
-                 * Constructs a new QueryEstimateRedeemAmountResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountResponse);
-
-                /** QueryEstimateRedeemAmountResponse redeem_amount. */
-                public redeem_amount?: (cosmos.base.v1beta1.ICoin|null);
-
-                /**
-                 * Encodes the specified QueryEstimateRedeemAmountResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse.verify|verify} messages.
-                 * @param message QueryEstimateRedeemAmountResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryEstimateRedeemAmountResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse.verify|verify} messages.
-                 * @param message QueryEstimateRedeemAmountResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IQueryEstimateRedeemAmountResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryEstimateRedeemAmountResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryEstimateRedeemAmountResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse;
-
-                /**
-                 * Decodes a QueryEstimateRedeemAmountResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryEstimateRedeemAmountResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse;
-
-                /**
-                 * Verifies a QueryEstimateRedeemAmountResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryEstimateRedeemAmountResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryEstimateRedeemAmountResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse;
-
-                /**
-                 * Creates a plain object from a QueryEstimateRedeemAmountResponse message. Also converts values to other types if specified.
-                 * @param message QueryEstimateRedeemAmountResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryEstimateRedeemAmountResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a Params. */
-            interface IParams {
-
-                /** Params commission_rate */
-                commission_rate?: (string|null);
-
-                /** Params vault_creation_fee */
-                vault_creation_fee?: (cosmos.base.v1beta1.ICoin|null);
-
-                /** Params vault_creation_deposit */
-                vault_creation_deposit?: (cosmos.base.v1beta1.ICoin|null);
-            }
-
-            /** Represents a Params. */
-            class Params implements IParams {
-
-                /**
-                 * Constructs a new Params.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IParams);
-
-                /** Params commission_rate. */
-                public commission_rate: string;
-
-                /** Params vault_creation_fee. */
-                public vault_creation_fee?: (cosmos.base.v1beta1.ICoin|null);
-
-                /** Params vault_creation_deposit. */
-                public vault_creation_deposit?: (cosmos.base.v1beta1.ICoin|null);
-
-                /**
-                 * Encodes the specified Params message. Does not implicitly {@link ununifi.chain.yieldaggregator.Params.verify|verify} messages.
-                 * @param message Params message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.Params.verify|verify} messages.
-                 * @param message Params message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a Params message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns Params
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.Params;
-
-                /**
-                 * Decodes a Params message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns Params
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.Params;
-
-                /**
-                 * Verifies a Params message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a Params message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Params
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.Params;
-
-                /**
-                 * Creates a plain object from a Params message. Also converts values to other types if specified.
-                 * @param message Params
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this Params to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a StrategyWeight. */
-            interface IStrategyWeight {
-
-                /** StrategyWeight strategy_id */
-                strategy_id?: (Long|null);
-
-                /** StrategyWeight weight */
-                weight?: (string|null);
-            }
-
-            /** Represents a StrategyWeight. */
-            class StrategyWeight implements IStrategyWeight {
-
-                /**
-                 * Constructs a new StrategyWeight.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IStrategyWeight);
-
-                /** StrategyWeight strategy_id. */
-                public strategy_id: Long;
-
-                /** StrategyWeight weight. */
-                public weight: string;
-
-                /**
-                 * Encodes the specified StrategyWeight message. Does not implicitly {@link ununifi.chain.yieldaggregator.StrategyWeight.verify|verify} messages.
-                 * @param message StrategyWeight message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IStrategyWeight, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified StrategyWeight message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.StrategyWeight.verify|verify} messages.
-                 * @param message StrategyWeight message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IStrategyWeight, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a StrategyWeight message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns StrategyWeight
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.StrategyWeight;
-
-                /**
-                 * Decodes a StrategyWeight message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns StrategyWeight
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.StrategyWeight;
-
-                /**
-                 * Verifies a StrategyWeight message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a StrategyWeight message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns StrategyWeight
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.StrategyWeight;
-
-                /**
-                 * Creates a plain object from a StrategyWeight message. Also converts values to other types if specified.
-                 * @param message StrategyWeight
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.StrategyWeight, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this StrategyWeight to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a Vault. */
-            interface IVault {
-
-                /** Vault id */
-                id?: (Long|null);
-
-                /** Vault denom */
-                denom?: (string|null);
-
-                /** Vault owner */
-                owner?: (string|null);
-
-                /** Vault owner_deposit */
-                owner_deposit?: (cosmos.base.v1beta1.ICoin|null);
-
-                /** Vault withdraw_commission_rate */
-                withdraw_commission_rate?: (string|null);
-
-                /** Vault withdraw_reserve_rate */
-                withdraw_reserve_rate?: (string|null);
-
-                /** Vault strategy_weights */
-                strategy_weights?: (ununifi.chain.yieldaggregator.IStrategyWeight[]|null);
-            }
-
-            /** Represents a Vault. */
-            class Vault implements IVault {
-
-                /**
-                 * Constructs a new Vault.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IVault);
-
-                /** Vault id. */
-                public id: Long;
-
-                /** Vault denom. */
-                public denom: string;
-
-                /** Vault owner. */
-                public owner: string;
-
-                /** Vault owner_deposit. */
-                public owner_deposit?: (cosmos.base.v1beta1.ICoin|null);
-
-                /** Vault withdraw_commission_rate. */
-                public withdraw_commission_rate: string;
-
-                /** Vault withdraw_reserve_rate. */
-                public withdraw_reserve_rate: string;
-
-                /** Vault strategy_weights. */
-                public strategy_weights: ununifi.chain.yieldaggregator.IStrategyWeight[];
-
-                /**
-                 * Encodes the specified Vault message. Does not implicitly {@link ununifi.chain.yieldaggregator.Vault.verify|verify} messages.
-                 * @param message Vault message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IVault, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified Vault message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.Vault.verify|verify} messages.
-                 * @param message Vault message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IVault, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a Vault message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns Vault
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.Vault;
-
-                /**
-                 * Decodes a Vault message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns Vault
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.Vault;
-
-                /**
-                 * Verifies a Vault message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a Vault message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Vault
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.Vault;
-
-                /**
-                 * Creates a plain object from a Vault message. Also converts values to other types if specified.
-                 * @param message Vault
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.Vault, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this Vault to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a Strategy. */
-            interface IStrategy {
-
-                /** Strategy denom */
-                denom?: (string|null);
-
-                /** Strategy id */
-                id?: (Long|null);
-
-                /** Strategy contract_address */
-                contract_address?: (string|null);
-
-                /** Strategy name */
-                name?: (string|null);
-            }
-
-            /** Represents a Strategy. */
-            class Strategy implements IStrategy {
-
-                /**
-                 * Constructs a new Strategy.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IStrategy);
-
-                /** Strategy denom. */
-                public denom: string;
-
-                /** Strategy id. */
-                public id: Long;
-
-                /** Strategy contract_address. */
-                public contract_address: string;
-
-                /** Strategy name. */
-                public name: string;
-
-                /**
-                 * Encodes the specified Strategy message. Does not implicitly {@link ununifi.chain.yieldaggregator.Strategy.verify|verify} messages.
-                 * @param message Strategy message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IStrategy, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified Strategy message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.Strategy.verify|verify} messages.
-                 * @param message Strategy message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IStrategy, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a Strategy message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns Strategy
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.Strategy;
-
-                /**
-                 * Decodes a Strategy message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns Strategy
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.Strategy;
-
-                /**
-                 * Verifies a Strategy message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a Strategy message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Strategy
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.Strategy;
-
-                /**
-                 * Creates a plain object from a Strategy message. Also converts values to other types if specified.
-                 * @param message Strategy
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.Strategy, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this Strategy to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a VaultMetrics. */
-            interface IVaultMetrics {
-
-                /** VaultMetrics allocation */
-                allocation?: (string|null);
-
-                /** VaultMetrics apy */
-                apy?: (string|null);
-            }
-
-            /** Represents a VaultMetrics. */
-            class VaultMetrics implements IVaultMetrics {
-
-                /**
-                 * Constructs a new VaultMetrics.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IVaultMetrics);
-
-                /** VaultMetrics allocation. */
-                public allocation: string;
-
-                /** VaultMetrics apy. */
-                public apy: string;
-
-                /**
-                 * Encodes the specified VaultMetrics message. Does not implicitly {@link ununifi.chain.yieldaggregator.VaultMetrics.verify|verify} messages.
-                 * @param message VaultMetrics message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IVaultMetrics, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified VaultMetrics message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.VaultMetrics.verify|verify} messages.
-                 * @param message VaultMetrics message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IVaultMetrics, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a VaultMetrics message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns VaultMetrics
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.VaultMetrics;
-
-                /**
-                 * Decodes a VaultMetrics message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns VaultMetrics
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.VaultMetrics;
-
-                /**
-                 * Verifies a VaultMetrics message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a VaultMetrics message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns VaultMetrics
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.VaultMetrics;
-
-                /**
-                 * Creates a plain object from a VaultMetrics message. Also converts values to other types if specified.
-                 * @param message VaultMetrics
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.VaultMetrics, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this VaultMetrics to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a StrategyMetrics. */
-            interface IStrategyMetrics {
-
-                /** StrategyMetrics allocation */
-                allocation?: (string|null);
-
-                /** StrategyMetrics apr */
-                apr?: (string|null);
-            }
-
-            /** Represents a StrategyMetrics. */
-            class StrategyMetrics implements IStrategyMetrics {
-
-                /**
-                 * Constructs a new StrategyMetrics.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IStrategyMetrics);
-
-                /** StrategyMetrics allocation. */
-                public allocation: string;
-
-                /** StrategyMetrics apr. */
-                public apr: string;
-
-                /**
-                 * Encodes the specified StrategyMetrics message. Does not implicitly {@link ununifi.chain.yieldaggregator.StrategyMetrics.verify|verify} messages.
-                 * @param message StrategyMetrics message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IStrategyMetrics, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified StrategyMetrics message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.StrategyMetrics.verify|verify} messages.
-                 * @param message StrategyMetrics message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IStrategyMetrics, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a StrategyMetrics message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns StrategyMetrics
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.StrategyMetrics;
-
-                /**
-                 * Decodes a StrategyMetrics message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns StrategyMetrics
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.StrategyMetrics;
-
-                /**
-                 * Verifies a StrategyMetrics message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a StrategyMetrics message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns StrategyMetrics
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.StrategyMetrics;
-
-                /**
-                 * Creates a plain object from a StrategyMetrics message. Also converts values to other types if specified.
-                 * @param message StrategyMetrics
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.StrategyMetrics, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this StrategyMetrics to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Represents a Msg */
-            class Msg extends $protobuf.rpc.Service {
-
-                /**
-                 * Constructs a new Msg service.
-                 * @param rpcImpl RPC implementation
-                 * @param [requestDelimited=false] Whether requests are length-delimited
-                 * @param [responseDelimited=false] Whether responses are length-delimited
-                 */
-                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
-
-                /**
-                 * Calls DepositToVault.
-                 * @param request MsgDepositToVault message or plain object
-                 * @param callback Node-style callback called with the error, if any, and MsgDepositToVaultResponse
-                 */
-                public depositToVault(request: ununifi.chain.yieldaggregator.IMsgDepositToVault, callback: ununifi.chain.yieldaggregator.Msg.DepositToVaultCallback): void;
-
-                /**
-                 * Calls DepositToVault.
-                 * @param request MsgDepositToVault message or plain object
-                 * @returns Promise
-                 */
-                public depositToVault(request: ununifi.chain.yieldaggregator.IMsgDepositToVault): Promise<ununifi.chain.yieldaggregator.MsgDepositToVaultResponse>;
-
-                /**
-                 * Calls WithdrawFromVault.
-                 * @param request MsgWithdrawFromVault message or plain object
-                 * @param callback Node-style callback called with the error, if any, and MsgWithdrawFromVaultResponse
-                 */
-                public withdrawFromVault(request: ununifi.chain.yieldaggregator.IMsgWithdrawFromVault, callback: ununifi.chain.yieldaggregator.Msg.WithdrawFromVaultCallback): void;
-
-                /**
-                 * Calls WithdrawFromVault.
-                 * @param request MsgWithdrawFromVault message or plain object
-                 * @returns Promise
-                 */
-                public withdrawFromVault(request: ununifi.chain.yieldaggregator.IMsgWithdrawFromVault): Promise<ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse>;
-
-                /**
-                 * Calls CreateVault.
-                 * @param request MsgCreateVault message or plain object
-                 * @param callback Node-style callback called with the error, if any, and MsgCreateVaultResponse
-                 */
-                public createVault(request: ununifi.chain.yieldaggregator.IMsgCreateVault, callback: ununifi.chain.yieldaggregator.Msg.CreateVaultCallback): void;
-
-                /**
-                 * Calls CreateVault.
-                 * @param request MsgCreateVault message or plain object
-                 * @returns Promise
-                 */
-                public createVault(request: ununifi.chain.yieldaggregator.IMsgCreateVault): Promise<ununifi.chain.yieldaggregator.MsgCreateVaultResponse>;
-
-                /**
-                 * Calls DeleteVault.
-                 * @param request MsgDeleteVault message or plain object
-                 * @param callback Node-style callback called with the error, if any, and MsgDeleteVaultResponse
-                 */
-                public deleteVault(request: ununifi.chain.yieldaggregator.IMsgDeleteVault, callback: ununifi.chain.yieldaggregator.Msg.DeleteVaultCallback): void;
-
-                /**
-                 * Calls DeleteVault.
-                 * @param request MsgDeleteVault message or plain object
-                 * @returns Promise
-                 */
-                public deleteVault(request: ununifi.chain.yieldaggregator.IMsgDeleteVault): Promise<ununifi.chain.yieldaggregator.MsgDeleteVaultResponse>;
-
-                /**
-                 * Calls TransferVaultOwnership.
-                 * @param request MsgTransferVaultOwnership message or plain object
-                 * @param callback Node-style callback called with the error, if any, and MsgTransferVaultOwnershipResponse
-                 */
-                public transferVaultOwnership(request: ununifi.chain.yieldaggregator.IMsgTransferVaultOwnership, callback: ununifi.chain.yieldaggregator.Msg.TransferVaultOwnershipCallback): void;
-
-                /**
-                 * Calls TransferVaultOwnership.
-                 * @param request MsgTransferVaultOwnership message or plain object
-                 * @returns Promise
-                 */
-                public transferVaultOwnership(request: ununifi.chain.yieldaggregator.IMsgTransferVaultOwnership): Promise<ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse>;
-            }
-
-            namespace Msg {
-
-                /**
-                 * Callback as used by {@link ununifi.chain.yieldaggregator.Msg#depositToVault}.
-                 * @param error Error, if any
-                 * @param [response] MsgDepositToVaultResponse
-                 */
-                type DepositToVaultCallback = (error: (Error|null), response?: ununifi.chain.yieldaggregator.MsgDepositToVaultResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.yieldaggregator.Msg#withdrawFromVault}.
-                 * @param error Error, if any
-                 * @param [response] MsgWithdrawFromVaultResponse
-                 */
-                type WithdrawFromVaultCallback = (error: (Error|null), response?: ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.yieldaggregator.Msg#createVault}.
-                 * @param error Error, if any
-                 * @param [response] MsgCreateVaultResponse
-                 */
-                type CreateVaultCallback = (error: (Error|null), response?: ununifi.chain.yieldaggregator.MsgCreateVaultResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.yieldaggregator.Msg#deleteVault}.
-                 * @param error Error, if any
-                 * @param [response] MsgDeleteVaultResponse
-                 */
-                type DeleteVaultCallback = (error: (Error|null), response?: ununifi.chain.yieldaggregator.MsgDeleteVaultResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.yieldaggregator.Msg#transferVaultOwnership}.
-                 * @param error Error, if any
-                 * @param [response] MsgTransferVaultOwnershipResponse
-                 */
-                type TransferVaultOwnershipCallback = (error: (Error|null), response?: ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse) => void;
-            }
-
-            /** Properties of a MsgDepositToVault. */
-            interface IMsgDepositToVault {
-
-                /** MsgDepositToVault sender */
-                sender?: (string|null);
-
-                /** MsgDepositToVault vault_id */
-                vault_id?: (Long|null);
-
-                /** MsgDepositToVault amount */
-                amount?: (cosmos.base.v1beta1.ICoin|null);
-            }
-
-            /** Represents a MsgDepositToVault. */
-            class MsgDepositToVault implements IMsgDepositToVault {
-
-                /**
-                 * Constructs a new MsgDepositToVault.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IMsgDepositToVault);
-
-                /** MsgDepositToVault sender. */
-                public sender: string;
-
-                /** MsgDepositToVault vault_id. */
-                public vault_id: Long;
-
-                /** MsgDepositToVault amount. */
-                public amount?: (cosmos.base.v1beta1.ICoin|null);
-
-                /**
-                 * Encodes the specified MsgDepositToVault message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDepositToVault.verify|verify} messages.
-                 * @param message MsgDepositToVault message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IMsgDepositToVault, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgDepositToVault message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDepositToVault.verify|verify} messages.
-                 * @param message MsgDepositToVault message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IMsgDepositToVault, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgDepositToVault message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgDepositToVault
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.MsgDepositToVault;
-
-                /**
-                 * Decodes a MsgDepositToVault message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgDepositToVault
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.MsgDepositToVault;
-
-                /**
-                 * Verifies a MsgDepositToVault message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgDepositToVault message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgDepositToVault
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.MsgDepositToVault;
-
-                /**
-                 * Creates a plain object from a MsgDepositToVault message. Also converts values to other types if specified.
-                 * @param message MsgDepositToVault
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.MsgDepositToVault, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgDepositToVault to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgDepositToVaultResponse. */
-            interface IMsgDepositToVaultResponse {
-            }
-
-            /** Represents a MsgDepositToVaultResponse. */
-            class MsgDepositToVaultResponse implements IMsgDepositToVaultResponse {
-
-                /**
-                 * Constructs a new MsgDepositToVaultResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IMsgDepositToVaultResponse);
-
-                /**
-                 * Encodes the specified MsgDepositToVaultResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDepositToVaultResponse.verify|verify} messages.
-                 * @param message MsgDepositToVaultResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IMsgDepositToVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgDepositToVaultResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDepositToVaultResponse.verify|verify} messages.
-                 * @param message MsgDepositToVaultResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IMsgDepositToVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgDepositToVaultResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgDepositToVaultResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.MsgDepositToVaultResponse;
-
-                /**
-                 * Decodes a MsgDepositToVaultResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgDepositToVaultResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.MsgDepositToVaultResponse;
-
-                /**
-                 * Verifies a MsgDepositToVaultResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgDepositToVaultResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgDepositToVaultResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.MsgDepositToVaultResponse;
-
-                /**
-                 * Creates a plain object from a MsgDepositToVaultResponse message. Also converts values to other types if specified.
-                 * @param message MsgDepositToVaultResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.MsgDepositToVaultResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgDepositToVaultResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgWithdrawFromVault. */
-            interface IMsgWithdrawFromVault {
-
-                /** MsgWithdrawFromVault sender */
-                sender?: (string|null);
-
-                /** MsgWithdrawFromVault vault_id */
-                vault_id?: (Long|null);
-
-                /** MsgWithdrawFromVault lp_token_amount */
-                lp_token_amount?: (string|null);
-            }
-
-            /** Represents a MsgWithdrawFromVault. */
-            class MsgWithdrawFromVault implements IMsgWithdrawFromVault {
-
-                /**
-                 * Constructs a new MsgWithdrawFromVault.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IMsgWithdrawFromVault);
-
-                /** MsgWithdrawFromVault sender. */
-                public sender: string;
-
-                /** MsgWithdrawFromVault vault_id. */
-                public vault_id: Long;
-
-                /** MsgWithdrawFromVault lp_token_amount. */
-                public lp_token_amount: string;
-
-                /**
-                 * Encodes the specified MsgWithdrawFromVault message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgWithdrawFromVault.verify|verify} messages.
-                 * @param message MsgWithdrawFromVault message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IMsgWithdrawFromVault, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgWithdrawFromVault message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgWithdrawFromVault.verify|verify} messages.
-                 * @param message MsgWithdrawFromVault message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IMsgWithdrawFromVault, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgWithdrawFromVault message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgWithdrawFromVault
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.MsgWithdrawFromVault;
-
-                /**
-                 * Decodes a MsgWithdrawFromVault message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgWithdrawFromVault
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.MsgWithdrawFromVault;
-
-                /**
-                 * Verifies a MsgWithdrawFromVault message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgWithdrawFromVault message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgWithdrawFromVault
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.MsgWithdrawFromVault;
-
-                /**
-                 * Creates a plain object from a MsgWithdrawFromVault message. Also converts values to other types if specified.
-                 * @param message MsgWithdrawFromVault
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.MsgWithdrawFromVault, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgWithdrawFromVault to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgWithdrawFromVaultResponse. */
-            interface IMsgWithdrawFromVaultResponse {
-            }
-
-            /** Represents a MsgWithdrawFromVaultResponse. */
-            class MsgWithdrawFromVaultResponse implements IMsgWithdrawFromVaultResponse {
-
-                /**
-                 * Constructs a new MsgWithdrawFromVaultResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IMsgWithdrawFromVaultResponse);
-
-                /**
-                 * Encodes the specified MsgWithdrawFromVaultResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse.verify|verify} messages.
-                 * @param message MsgWithdrawFromVaultResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IMsgWithdrawFromVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgWithdrawFromVaultResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse.verify|verify} messages.
-                 * @param message MsgWithdrawFromVaultResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IMsgWithdrawFromVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgWithdrawFromVaultResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgWithdrawFromVaultResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse;
-
-                /**
-                 * Decodes a MsgWithdrawFromVaultResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgWithdrawFromVaultResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse;
-
-                /**
-                 * Verifies a MsgWithdrawFromVaultResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgWithdrawFromVaultResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgWithdrawFromVaultResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse;
-
-                /**
-                 * Creates a plain object from a MsgWithdrawFromVaultResponse message. Also converts values to other types if specified.
-                 * @param message MsgWithdrawFromVaultResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.MsgWithdrawFromVaultResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgWithdrawFromVaultResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgCreateVault. */
-            interface IMsgCreateVault {
-
-                /** MsgCreateVault sender */
-                sender?: (string|null);
-
-                /** MsgCreateVault denom */
-                denom?: (string|null);
-
-                /** MsgCreateVault commission_rate */
-                commission_rate?: (string|null);
-
-                /** MsgCreateVault strategy_weights */
-                strategy_weights?: (ununifi.chain.yieldaggregator.IStrategyWeight[]|null);
-
-                /** MsgCreateVault fee */
-                fee?: (cosmos.base.v1beta1.ICoin|null);
-
-                /** MsgCreateVault deposit */
-                deposit?: (cosmos.base.v1beta1.ICoin|null);
-            }
-
-            /** Represents a MsgCreateVault. */
-            class MsgCreateVault implements IMsgCreateVault {
-
-                /**
-                 * Constructs a new MsgCreateVault.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IMsgCreateVault);
-
-                /** MsgCreateVault sender. */
-                public sender: string;
-
-                /** MsgCreateVault denom. */
-                public denom: string;
-
-                /** MsgCreateVault commission_rate. */
-                public commission_rate: string;
-
-                /** MsgCreateVault strategy_weights. */
-                public strategy_weights: ununifi.chain.yieldaggregator.IStrategyWeight[];
-
-                /** MsgCreateVault fee. */
-                public fee?: (cosmos.base.v1beta1.ICoin|null);
-
-                /** MsgCreateVault deposit. */
-                public deposit?: (cosmos.base.v1beta1.ICoin|null);
-
-                /**
-                 * Encodes the specified MsgCreateVault message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgCreateVault.verify|verify} messages.
-                 * @param message MsgCreateVault message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IMsgCreateVault, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgCreateVault message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgCreateVault.verify|verify} messages.
-                 * @param message MsgCreateVault message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IMsgCreateVault, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgCreateVault message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgCreateVault
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.MsgCreateVault;
-
-                /**
-                 * Decodes a MsgCreateVault message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgCreateVault
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.MsgCreateVault;
-
-                /**
-                 * Verifies a MsgCreateVault message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgCreateVault message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgCreateVault
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.MsgCreateVault;
-
-                /**
-                 * Creates a plain object from a MsgCreateVault message. Also converts values to other types if specified.
-                 * @param message MsgCreateVault
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.MsgCreateVault, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgCreateVault to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgCreateVaultResponse. */
-            interface IMsgCreateVaultResponse {
-            }
-
-            /** Represents a MsgCreateVaultResponse. */
-            class MsgCreateVaultResponse implements IMsgCreateVaultResponse {
-
-                /**
-                 * Constructs a new MsgCreateVaultResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IMsgCreateVaultResponse);
-
-                /**
-                 * Encodes the specified MsgCreateVaultResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgCreateVaultResponse.verify|verify} messages.
-                 * @param message MsgCreateVaultResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IMsgCreateVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgCreateVaultResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgCreateVaultResponse.verify|verify} messages.
-                 * @param message MsgCreateVaultResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IMsgCreateVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgCreateVaultResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgCreateVaultResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.MsgCreateVaultResponse;
-
-                /**
-                 * Decodes a MsgCreateVaultResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgCreateVaultResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.MsgCreateVaultResponse;
-
-                /**
-                 * Verifies a MsgCreateVaultResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgCreateVaultResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgCreateVaultResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.MsgCreateVaultResponse;
-
-                /**
-                 * Creates a plain object from a MsgCreateVaultResponse message. Also converts values to other types if specified.
-                 * @param message MsgCreateVaultResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.MsgCreateVaultResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgCreateVaultResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgDeleteVault. */
-            interface IMsgDeleteVault {
-
-                /** MsgDeleteVault sender */
-                sender?: (string|null);
-
-                /** MsgDeleteVault vault_id */
-                vault_id?: (Long|null);
-            }
-
-            /** Represents a MsgDeleteVault. */
-            class MsgDeleteVault implements IMsgDeleteVault {
-
-                /**
-                 * Constructs a new MsgDeleteVault.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IMsgDeleteVault);
-
-                /** MsgDeleteVault sender. */
-                public sender: string;
-
-                /** MsgDeleteVault vault_id. */
-                public vault_id: Long;
-
-                /**
-                 * Encodes the specified MsgDeleteVault message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDeleteVault.verify|verify} messages.
-                 * @param message MsgDeleteVault message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IMsgDeleteVault, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgDeleteVault message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDeleteVault.verify|verify} messages.
-                 * @param message MsgDeleteVault message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IMsgDeleteVault, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgDeleteVault message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgDeleteVault
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.MsgDeleteVault;
-
-                /**
-                 * Decodes a MsgDeleteVault message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgDeleteVault
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.MsgDeleteVault;
-
-                /**
-                 * Verifies a MsgDeleteVault message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgDeleteVault message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgDeleteVault
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.MsgDeleteVault;
-
-                /**
-                 * Creates a plain object from a MsgDeleteVault message. Also converts values to other types if specified.
-                 * @param message MsgDeleteVault
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.MsgDeleteVault, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgDeleteVault to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgDeleteVaultResponse. */
-            interface IMsgDeleteVaultResponse {
-            }
-
-            /** Represents a MsgDeleteVaultResponse. */
-            class MsgDeleteVaultResponse implements IMsgDeleteVaultResponse {
-
-                /**
-                 * Constructs a new MsgDeleteVaultResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IMsgDeleteVaultResponse);
-
-                /**
-                 * Encodes the specified MsgDeleteVaultResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDeleteVaultResponse.verify|verify} messages.
-                 * @param message MsgDeleteVaultResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IMsgDeleteVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgDeleteVaultResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgDeleteVaultResponse.verify|verify} messages.
-                 * @param message MsgDeleteVaultResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IMsgDeleteVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgDeleteVaultResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgDeleteVaultResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.MsgDeleteVaultResponse;
-
-                /**
-                 * Decodes a MsgDeleteVaultResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgDeleteVaultResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.MsgDeleteVaultResponse;
-
-                /**
-                 * Verifies a MsgDeleteVaultResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgDeleteVaultResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgDeleteVaultResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.MsgDeleteVaultResponse;
-
-                /**
-                 * Creates a plain object from a MsgDeleteVaultResponse message. Also converts values to other types if specified.
-                 * @param message MsgDeleteVaultResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.MsgDeleteVaultResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgDeleteVaultResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgTransferVaultOwnership. */
-            interface IMsgTransferVaultOwnership {
-
-                /** MsgTransferVaultOwnership sender */
-                sender?: (string|null);
-
-                /** MsgTransferVaultOwnership vault_id */
-                vault_id?: (Long|null);
-
-                /** MsgTransferVaultOwnership recipient */
-                recipient?: (string|null);
-            }
-
-            /** Represents a MsgTransferVaultOwnership. */
-            class MsgTransferVaultOwnership implements IMsgTransferVaultOwnership {
-
-                /**
-                 * Constructs a new MsgTransferVaultOwnership.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IMsgTransferVaultOwnership);
-
-                /** MsgTransferVaultOwnership sender. */
-                public sender: string;
-
-                /** MsgTransferVaultOwnership vault_id. */
-                public vault_id: Long;
-
-                /** MsgTransferVaultOwnership recipient. */
-                public recipient: string;
-
-                /**
-                 * Encodes the specified MsgTransferVaultOwnership message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgTransferVaultOwnership.verify|verify} messages.
-                 * @param message MsgTransferVaultOwnership message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IMsgTransferVaultOwnership, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgTransferVaultOwnership message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgTransferVaultOwnership.verify|verify} messages.
-                 * @param message MsgTransferVaultOwnership message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IMsgTransferVaultOwnership, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgTransferVaultOwnership message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgTransferVaultOwnership
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.MsgTransferVaultOwnership;
-
-                /**
-                 * Decodes a MsgTransferVaultOwnership message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgTransferVaultOwnership
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.MsgTransferVaultOwnership;
-
-                /**
-                 * Verifies a MsgTransferVaultOwnership message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgTransferVaultOwnership message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgTransferVaultOwnership
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.MsgTransferVaultOwnership;
-
-                /**
-                 * Creates a plain object from a MsgTransferVaultOwnership message. Also converts values to other types if specified.
-                 * @param message MsgTransferVaultOwnership
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.MsgTransferVaultOwnership, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgTransferVaultOwnership to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgTransferVaultOwnershipResponse. */
-            interface IMsgTransferVaultOwnershipResponse {
-            }
-
-            /** Represents a MsgTransferVaultOwnershipResponse. */
-            class MsgTransferVaultOwnershipResponse implements IMsgTransferVaultOwnershipResponse {
-
-                /**
-                 * Constructs a new MsgTransferVaultOwnershipResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IMsgTransferVaultOwnershipResponse);
-
-                /**
-                 * Encodes the specified MsgTransferVaultOwnershipResponse message. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse.verify|verify} messages.
-                 * @param message MsgTransferVaultOwnershipResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IMsgTransferVaultOwnershipResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgTransferVaultOwnershipResponse message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse.verify|verify} messages.
-                 * @param message MsgTransferVaultOwnershipResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IMsgTransferVaultOwnershipResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgTransferVaultOwnershipResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgTransferVaultOwnershipResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse;
-
-                /**
-                 * Decodes a MsgTransferVaultOwnershipResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgTransferVaultOwnershipResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse;
-
-                /**
-                 * Verifies a MsgTransferVaultOwnershipResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgTransferVaultOwnershipResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgTransferVaultOwnershipResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse;
-
-                /**
-                 * Creates a plain object from a MsgTransferVaultOwnershipResponse message. Also converts values to other types if specified.
-                 * @param message MsgTransferVaultOwnershipResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.MsgTransferVaultOwnershipResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgTransferVaultOwnershipResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a GenesisState. */
-            interface IGenesisState {
-
-                /** GenesisState params */
-                params?: (ununifi.chain.yieldaggregator.IParams|null);
-
-                /** GenesisState vaults */
-                vaults?: (ununifi.chain.yieldaggregator.IVault[]|null);
-
-                /** GenesisState strategies */
-                strategies?: (ununifi.chain.yieldaggregator.IStrategy[]|null);
-            }
-
-            /** Represents a GenesisState. */
-            class GenesisState implements IGenesisState {
-
-                /**
-                 * Constructs a new GenesisState.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IGenesisState);
-
-                /** GenesisState params. */
-                public params?: (ununifi.chain.yieldaggregator.IParams|null);
-
-                /** GenesisState vaults. */
-                public vaults: ununifi.chain.yieldaggregator.IVault[];
-
-                /** GenesisState strategies. */
-                public strategies: ununifi.chain.yieldaggregator.IStrategy[];
-
-                /**
-                 * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.chain.yieldaggregator.GenesisState.verify|verify} messages.
-                 * @param message GenesisState message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.GenesisState.verify|verify} messages.
-                 * @param message GenesisState message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a GenesisState message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns GenesisState
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.GenesisState;
-
-                /**
-                 * Decodes a GenesisState message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns GenesisState
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.GenesisState;
-
-                /**
-                 * Verifies a GenesisState message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a GenesisState message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns GenesisState
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.GenesisState;
-
-                /**
-                 * Creates a plain object from a GenesisState message. Also converts values to other types if specified.
-                 * @param message GenesisState
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.GenesisState, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this GenesisState to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a ProposalAddStrategy. */
-            interface IProposalAddStrategy {
-
-                /** ProposalAddStrategy title */
-                title?: (string|null);
-
-                /** ProposalAddStrategy description */
-                description?: (string|null);
-
-                /** ProposalAddStrategy denom */
-                denom?: (string|null);
-
-                /** ProposalAddStrategy contract_address */
-                contract_address?: (string|null);
-
-                /** ProposalAddStrategy name */
-                name?: (string|null);
-            }
-
-            /** Represents a ProposalAddStrategy. */
-            class ProposalAddStrategy implements IProposalAddStrategy {
-
-                /**
-                 * Constructs a new ProposalAddStrategy.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.yieldaggregator.IProposalAddStrategy);
-
-                /** ProposalAddStrategy title. */
-                public title: string;
-
-                /** ProposalAddStrategy description. */
-                public description: string;
-
-                /** ProposalAddStrategy denom. */
-                public denom: string;
-
-                /** ProposalAddStrategy contract_address. */
-                public contract_address: string;
-
-                /** ProposalAddStrategy name. */
-                public name: string;
-
-                /**
-                 * Encodes the specified ProposalAddStrategy message. Does not implicitly {@link ununifi.chain.yieldaggregator.ProposalAddStrategy.verify|verify} messages.
-                 * @param message ProposalAddStrategy message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.yieldaggregator.IProposalAddStrategy, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified ProposalAddStrategy message, length delimited. Does not implicitly {@link ununifi.chain.yieldaggregator.ProposalAddStrategy.verify|verify} messages.
-                 * @param message ProposalAddStrategy message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.yieldaggregator.IProposalAddStrategy, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a ProposalAddStrategy message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns ProposalAddStrategy
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.yieldaggregator.ProposalAddStrategy;
-
-                /**
-                 * Decodes a ProposalAddStrategy message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns ProposalAddStrategy
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.yieldaggregator.ProposalAddStrategy;
-
-                /**
-                 * Verifies a ProposalAddStrategy message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a ProposalAddStrategy message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns ProposalAddStrategy
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.yieldaggregator.ProposalAddStrategy;
-
-                /**
-                 * Creates a plain object from a ProposalAddStrategy message. Also converts values to other types if specified.
-                 * @param message ProposalAddStrategy
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.yieldaggregator.ProposalAddStrategy, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this ProposalAddStrategy to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-        }
 
         /** Namespace yieldfarm. */
         namespace yieldfarm {

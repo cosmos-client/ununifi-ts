@@ -21,10 +21,10 @@ export function vault(sdk: cosmosclient.CosmosSDK, id: string) {
   return new QueryApi(undefined, sdk.url).vault(id);
 }
 
-export function estimateMintAmount(sdk: cosmosclient.CosmosSDK, id: string, amount: string) {
+export function estimateMintAmount(sdk: cosmosclient.CosmosSDK, id: string, amount?: string) {
   return new QueryApi(undefined, sdk.url).estimateMintAmount(id, amount);
 }
 
-export function estimateRedeemAmount(sdk: cosmosclient.CosmosSDK, id: string, amount: string) {
+export function estimateRedeemAmount(sdk: cosmosclient.CosmosSDK, id: string, amount?: string) {
   return new QueryApi(undefined, sdk.url).estimateRedeemAmount(id, amount);
 }

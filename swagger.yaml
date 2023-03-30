@@ -3826,6 +3826,12 @@ paths:
                       type: string
                     name:
                       type: string
+              total_bonded_amount:
+                type: string
+              total_unbonding_amount:
+                type: string
+              total_withdrawal_balance:
+                type: string
         default:
           description: An unexpected error response.
           schema:
@@ -5999,7 +6005,7 @@ definitions:
                     type: string
                 active:
                   type: boolean
-  ununifi.chain.yieldaggregator.Params:
+  ununifi.yieldaggregator.Params:
     type: object
     properties:
       commission_rate:
@@ -6029,7 +6035,7 @@ definitions:
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
     description: Params defines the parameters for the module.
-  ununifi.chain.yieldaggregator.QueryAllStrategyResponse:
+  ununifi.yieldaggregator.QueryAllStrategyResponse:
     type: object
     properties:
       strategies:
@@ -6071,7 +6077,7 @@ definitions:
                    repeated Bar results = 1;
                    PageResponse page = 2;
            }
-  ununifi.chain.yieldaggregator.QueryAllVaultResponse:
+  ununifi.yieldaggregator.QueryAllVaultResponse:
     type: object
     properties:
       vaults:
@@ -6140,7 +6146,7 @@ definitions:
                    repeated Bar results = 1;
                    PageResponse page = 2;
            }
-  ununifi.chain.yieldaggregator.QueryEstimateMintAmountResponse:
+  ununifi.yieldaggregator.QueryEstimateMintAmountResponse:
     type: object
     properties:
       mint_amount:
@@ -6155,7 +6161,7 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
-  ununifi.chain.yieldaggregator.QueryEstimateRedeemAmountResponse:
+  ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse:
     type: object
     properties:
       redeem_amount:
@@ -6170,7 +6176,7 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
-  ununifi.chain.yieldaggregator.QueryGetStrategyResponse:
+  ununifi.yieldaggregator.QueryGetStrategyResponse:
     type: object
     properties:
       strategy:
@@ -6185,7 +6191,7 @@ definitions:
             type: string
           name:
             type: string
-  ununifi.chain.yieldaggregator.QueryGetVaultResponse:
+  ununifi.yieldaggregator.QueryGetVaultResponse:
     type: object
     properties:
       vault:
@@ -6241,7 +6247,13 @@ definitions:
               type: string
             name:
               type: string
-  ununifi.chain.yieldaggregator.QueryParamsResponse:
+      total_bonded_amount:
+        type: string
+      total_unbonding_amount:
+        type: string
+      total_withdrawal_balance:
+        type: string
+  ununifi.yieldaggregator.QueryParamsResponse:
     type: object
     properties:
       params:
@@ -6281,7 +6293,7 @@ definitions:
 
               signatures required by gogoproto.
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  ununifi.chain.yieldaggregator.Strategy:
+  ununifi.yieldaggregator.Strategy:
     type: object
     properties:
       denom:
@@ -6293,7 +6305,7 @@ definitions:
         type: string
       name:
         type: string
-  ununifi.chain.yieldaggregator.StrategyWeight:
+  ununifi.yieldaggregator.StrategyWeight:
     type: object
     properties:
       strategy_id:
@@ -6301,7 +6313,7 @@ definitions:
         format: uint64
       weight:
         type: string
-  ununifi.chain.yieldaggregator.Vault:
+  ununifi.yieldaggregator.Vault:
     type: object
     properties:
       id:

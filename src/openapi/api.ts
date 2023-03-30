@@ -1553,239 +1553,6 @@ export interface UnunifiCdpQueryParamsResponse {
     'params'?: CdpParams200ResponseParams;
 }
 /**
- * Params defines the parameters for the module.
- * @export
- * @interface UnunifiChainYieldaggregatorParams
- */
-export interface UnunifiChainYieldaggregatorParams {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiChainYieldaggregatorParams
-     */
-    'commission_rate'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiChainYieldaggregatorParams
-     */
-    'vault_creation_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiChainYieldaggregatorParams
-     */
-    'vault_creation_deposit'?: CdpAll200ResponseCdpInnerCdpCollateral;
-}
-/**
- * 
- * @export
- * @interface UnunifiChainYieldaggregatorQueryAllStrategyResponse
- */
-export interface UnunifiChainYieldaggregatorQueryAllStrategyResponse {
-    /**
-     * 
-     * @type {Array<StrategyAll200ResponseStrategiesInner>}
-     * @memberof UnunifiChainYieldaggregatorQueryAllStrategyResponse
-     */
-    'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
-    /**
-     * 
-     * @type {AuctionAll200ResponsePagination}
-     * @memberof UnunifiChainYieldaggregatorQueryAllStrategyResponse
-     */
-    'pagination'?: AuctionAll200ResponsePagination;
-}
-/**
- * 
- * @export
- * @interface UnunifiChainYieldaggregatorQueryAllVaultResponse
- */
-export interface UnunifiChainYieldaggregatorQueryAllVaultResponse {
-    /**
-     * 
-     * @type {Array<VaultAll200ResponseVaultsInner>}
-     * @memberof UnunifiChainYieldaggregatorQueryAllVaultResponse
-     */
-    'vaults'?: Array<VaultAll200ResponseVaultsInner>;
-    /**
-     * 
-     * @type {AuctionAll200ResponsePagination}
-     * @memberof UnunifiChainYieldaggregatorQueryAllVaultResponse
-     */
-    'pagination'?: AuctionAll200ResponsePagination;
-}
-/**
- * 
- * @export
- * @interface UnunifiChainYieldaggregatorQueryEstimateMintAmountResponse
- */
-export interface UnunifiChainYieldaggregatorQueryEstimateMintAmountResponse {
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiChainYieldaggregatorQueryEstimateMintAmountResponse
-     */
-    'mint_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
-}
-/**
- * 
- * @export
- * @interface UnunifiChainYieldaggregatorQueryEstimateRedeemAmountResponse
- */
-export interface UnunifiChainYieldaggregatorQueryEstimateRedeemAmountResponse {
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiChainYieldaggregatorQueryEstimateRedeemAmountResponse
-     */
-    'redeem_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
-}
-/**
- * 
- * @export
- * @interface UnunifiChainYieldaggregatorQueryGetStrategyResponse
- */
-export interface UnunifiChainYieldaggregatorQueryGetStrategyResponse {
-    /**
-     * 
-     * @type {StrategyAll200ResponseStrategiesInner}
-     * @memberof UnunifiChainYieldaggregatorQueryGetStrategyResponse
-     */
-    'strategy'?: StrategyAll200ResponseStrategiesInner;
-}
-/**
- * 
- * @export
- * @interface UnunifiChainYieldaggregatorQueryGetVaultResponse
- */
-export interface UnunifiChainYieldaggregatorQueryGetVaultResponse {
-    /**
-     * 
-     * @type {VaultAll200ResponseVaultsInner}
-     * @memberof UnunifiChainYieldaggregatorQueryGetVaultResponse
-     */
-    'vault'?: VaultAll200ResponseVaultsInner;
-    /**
-     * 
-     * @type {Array<StrategyAll200ResponseStrategiesInner>}
-     * @memberof UnunifiChainYieldaggregatorQueryGetVaultResponse
-     */
-    'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
-}
-/**
- * QueryParamsResponse is response type for the Query/Params RPC method.
- * @export
- * @interface UnunifiChainYieldaggregatorQueryParamsResponse
- */
-export interface UnunifiChainYieldaggregatorQueryParamsResponse {
-    /**
-     * 
-     * @type {YieldAggregatorParams200ResponseParams}
-     * @memberof UnunifiChainYieldaggregatorQueryParamsResponse
-     */
-    'params'?: YieldAggregatorParams200ResponseParams;
-}
-/**
- * 
- * @export
- * @interface UnunifiChainYieldaggregatorStrategy
- */
-export interface UnunifiChainYieldaggregatorStrategy {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiChainYieldaggregatorStrategy
-     */
-    'denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiChainYieldaggregatorStrategy
-     */
-    'id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiChainYieldaggregatorStrategy
-     */
-    'contract_address'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiChainYieldaggregatorStrategy
-     */
-    'name'?: string;
-}
-/**
- * 
- * @export
- * @interface UnunifiChainYieldaggregatorStrategyWeight
- */
-export interface UnunifiChainYieldaggregatorStrategyWeight {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiChainYieldaggregatorStrategyWeight
-     */
-    'strategy_id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiChainYieldaggregatorStrategyWeight
-     */
-    'weight'?: string;
-}
-/**
- * 
- * @export
- * @interface UnunifiChainYieldaggregatorVault
- */
-export interface UnunifiChainYieldaggregatorVault {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiChainYieldaggregatorVault
-     */
-    'id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiChainYieldaggregatorVault
-     */
-    'denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiChainYieldaggregatorVault
-     */
-    'owner'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiChainYieldaggregatorVault
-     */
-    'owner_deposit'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiChainYieldaggregatorVault
-     */
-    'withdraw_commission_rate'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiChainYieldaggregatorVault
-     */
-    'withdraw_reserve_rate'?: string;
-    /**
-     * 
-     * @type {Array<VaultAll200ResponseVaultsInnerStrategyWeightsInner>}
-     * @memberof UnunifiChainYieldaggregatorVault
-     */
-    'strategy_weights'?: Array<VaultAll200ResponseVaultsInnerStrategyWeightsInner>;
-}
-/**
  * 
  * @export
  * @interface UnunifiIncentiveMultiplier
@@ -2158,6 +1925,257 @@ export interface UnunifiUnunifidistQueryParamsResponse {
     'params'?: UnunifidistParams200ResponseParams;
 }
 /**
+ * Params defines the parameters for the module.
+ * @export
+ * @interface UnunifiYieldaggregatorParams
+ */
+export interface UnunifiYieldaggregatorParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorParams
+     */
+    'commission_rate'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiYieldaggregatorParams
+     */
+    'vault_creation_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiYieldaggregatorParams
+     */
+    'vault_creation_deposit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorQueryAllStrategyResponse
+ */
+export interface UnunifiYieldaggregatorQueryAllStrategyResponse {
+    /**
+     * 
+     * @type {Array<StrategyAll200ResponseStrategiesInner>}
+     * @memberof UnunifiYieldaggregatorQueryAllStrategyResponse
+     */
+    'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof UnunifiYieldaggregatorQueryAllStrategyResponse
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorQueryAllVaultResponse
+ */
+export interface UnunifiYieldaggregatorQueryAllVaultResponse {
+    /**
+     * 
+     * @type {Array<VaultAll200ResponseVaultsInner>}
+     * @memberof UnunifiYieldaggregatorQueryAllVaultResponse
+     */
+    'vaults'?: Array<VaultAll200ResponseVaultsInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof UnunifiYieldaggregatorQueryAllVaultResponse
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorQueryEstimateMintAmountResponse
+ */
+export interface UnunifiYieldaggregatorQueryEstimateMintAmountResponse {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiYieldaggregatorQueryEstimateMintAmountResponse
+     */
+    'mint_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
+ */
+export interface UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
+     */
+    'redeem_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorQueryGetStrategyResponse
+ */
+export interface UnunifiYieldaggregatorQueryGetStrategyResponse {
+    /**
+     * 
+     * @type {StrategyAll200ResponseStrategiesInner}
+     * @memberof UnunifiYieldaggregatorQueryGetStrategyResponse
+     */
+    'strategy'?: StrategyAll200ResponseStrategiesInner;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorQueryGetVaultResponse
+ */
+export interface UnunifiYieldaggregatorQueryGetVaultResponse {
+    /**
+     * 
+     * @type {VaultAll200ResponseVaultsInner}
+     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
+     */
+    'vault'?: VaultAll200ResponseVaultsInner;
+    /**
+     * 
+     * @type {Array<StrategyAll200ResponseStrategiesInner>}
+     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
+     */
+    'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
+     */
+    'total_bonded_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
+     */
+    'total_unbonding_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
+     */
+    'total_withdrawal_balance'?: string;
+}
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @export
+ * @interface UnunifiYieldaggregatorQueryParamsResponse
+ */
+export interface UnunifiYieldaggregatorQueryParamsResponse {
+    /**
+     * 
+     * @type {YieldAggregatorParams200ResponseParams}
+     * @memberof UnunifiYieldaggregatorQueryParamsResponse
+     */
+    'params'?: YieldAggregatorParams200ResponseParams;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorStrategy
+ */
+export interface UnunifiYieldaggregatorStrategy {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategy
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategy
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategy
+     */
+    'contract_address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategy
+     */
+    'name'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorStrategyWeight
+ */
+export interface UnunifiYieldaggregatorStrategyWeight {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategyWeight
+     */
+    'strategy_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategyWeight
+     */
+    'weight'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorVault
+ */
+export interface UnunifiYieldaggregatorVault {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'owner'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'owner_deposit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'withdraw_commission_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'withdraw_reserve_rate'?: string;
+    /**
+     * 
+     * @type {Array<VaultAll200ResponseVaultsInnerStrategyWeightsInner>}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'strategy_weights'?: Array<VaultAll200ResponseVaultsInnerStrategyWeightsInner>;
+}
+/**
  * 
  * @export
  * @interface UnunifidistParams200Response
@@ -2232,6 +2250,24 @@ export interface Vault200Response {
      * @memberof Vault200Response
      */
     'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
+    /**
+     * 
+     * @type {string}
+     * @memberof Vault200Response
+     */
+    'total_bonded_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Vault200Response
+     */
+    'total_unbonding_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Vault200Response
+     */
+    'total_withdrawal_balance'?: string;
 }
 /**
  * 
