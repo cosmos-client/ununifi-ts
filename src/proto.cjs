@@ -20709,6 +20709,7 @@
                  * @interface IQueryGetVaultResponse
                  * @property {ununifi.yieldaggregator.IVault|null} [vault] QueryGetVaultResponse vault
                  * @property {Array.<ununifi.yieldaggregator.IStrategy>|null} [strategies] QueryGetVaultResponse strategies
+                 * @property {string|null} [vault_address] QueryGetVaultResponse vault_address
                  * @property {string|null} [total_bonded_amount] QueryGetVaultResponse total_bonded_amount
                  * @property {string|null} [total_unbonding_amount] QueryGetVaultResponse total_unbonding_amount
                  * @property {string|null} [total_withdrawal_balance] QueryGetVaultResponse total_withdrawal_balance
@@ -20745,6 +20746,14 @@
                  * @instance
                  */
                 QueryGetVaultResponse.prototype.strategies = $util.emptyArray;
+    
+                /**
+                 * QueryGetVaultResponse vault_address.
+                 * @member {string} vault_address
+                 * @memberof ununifi.yieldaggregator.QueryGetVaultResponse
+                 * @instance
+                 */
+                QueryGetVaultResponse.prototype.vault_address = "";
     
                 /**
                  * QueryGetVaultResponse total_bonded_amount.
@@ -20787,12 +20796,14 @@
                     if (message.strategies != null && message.strategies.length)
                         for (var i = 0; i < message.strategies.length; ++i)
                             $root.ununifi.yieldaggregator.Strategy.encode(message.strategies[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    if (message.vault_address != null && Object.hasOwnProperty.call(message, "vault_address"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.vault_address);
                     if (message.total_bonded_amount != null && Object.hasOwnProperty.call(message, "total_bonded_amount"))
-                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.total_bonded_amount);
+                        writer.uint32(/* id 4, wireType 2 =*/34).string(message.total_bonded_amount);
                     if (message.total_unbonding_amount != null && Object.hasOwnProperty.call(message, "total_unbonding_amount"))
-                        writer.uint32(/* id 4, wireType 2 =*/34).string(message.total_unbonding_amount);
+                        writer.uint32(/* id 5, wireType 2 =*/42).string(message.total_unbonding_amount);
                     if (message.total_withdrawal_balance != null && Object.hasOwnProperty.call(message, "total_withdrawal_balance"))
-                        writer.uint32(/* id 5, wireType 2 =*/42).string(message.total_withdrawal_balance);
+                        writer.uint32(/* id 6, wireType 2 =*/50).string(message.total_withdrawal_balance);
                     return writer;
                 };
     
@@ -20836,12 +20847,15 @@
                             message.strategies.push($root.ununifi.yieldaggregator.Strategy.decode(reader, reader.uint32()));
                             break;
                         case 3:
-                            message.total_bonded_amount = reader.string();
+                            message.vault_address = reader.string();
                             break;
                         case 4:
-                            message.total_unbonding_amount = reader.string();
+                            message.total_bonded_amount = reader.string();
                             break;
                         case 5:
+                            message.total_unbonding_amount = reader.string();
+                            break;
+                        case 6:
                             message.total_withdrawal_balance = reader.string();
                             break;
                         default:
@@ -20893,6 +20907,9 @@
                                 return "strategies." + error;
                         }
                     }
+                    if (message.vault_address != null && message.hasOwnProperty("vault_address"))
+                        if (!$util.isString(message.vault_address))
+                            return "vault_address: string expected";
                     if (message.total_bonded_amount != null && message.hasOwnProperty("total_bonded_amount"))
                         if (!$util.isString(message.total_bonded_amount))
                             return "total_bonded_amount: string expected";
@@ -20932,6 +20949,8 @@
                             message.strategies[i] = $root.ununifi.yieldaggregator.Strategy.fromObject(object.strategies[i]);
                         }
                     }
+                    if (object.vault_address != null)
+                        message.vault_address = String(object.vault_address);
                     if (object.total_bonded_amount != null)
                         message.total_bonded_amount = String(object.total_bonded_amount);
                     if (object.total_unbonding_amount != null)
@@ -20958,6 +20977,7 @@
                         object.strategies = [];
                     if (options.defaults) {
                         object.vault = null;
+                        object.vault_address = "";
                         object.total_bonded_amount = "";
                         object.total_unbonding_amount = "";
                         object.total_withdrawal_balance = "";
@@ -20969,6 +20989,8 @@
                         for (var j = 0; j < message.strategies.length; ++j)
                             object.strategies[j] = $root.ununifi.yieldaggregator.Strategy.toObject(message.strategies[j], options);
                     }
+                    if (message.vault_address != null && message.hasOwnProperty("vault_address"))
+                        object.vault_address = message.vault_address;
                     if (message.total_bonded_amount != null && message.hasOwnProperty("total_bonded_amount"))
                         object.total_bonded_amount = message.total_bonded_amount;
                     if (message.total_unbonding_amount != null && message.hasOwnProperty("total_unbonding_amount"))
@@ -25002,6 +25024,7 @@
                  * @property {string|null} [sender] MsgCreateVault sender
                  * @property {string|null} [denom] MsgCreateVault denom
                  * @property {string|null} [commission_rate] MsgCreateVault commission_rate
+                 * @property {string|null} [withdraw_reserve_rate] MsgCreateVault withdraw_reserve_rate
                  * @property {Array.<ununifi.yieldaggregator.IStrategyWeight>|null} [strategy_weights] MsgCreateVault strategy_weights
                  * @property {cosmos.base.v1beta1.ICoin|null} [fee] MsgCreateVault fee
                  * @property {cosmos.base.v1beta1.ICoin|null} [deposit] MsgCreateVault deposit
@@ -25048,6 +25071,14 @@
                 MsgCreateVault.prototype.commission_rate = "";
     
                 /**
+                 * MsgCreateVault withdraw_reserve_rate.
+                 * @member {string} withdraw_reserve_rate
+                 * @memberof ununifi.yieldaggregator.MsgCreateVault
+                 * @instance
+                 */
+                MsgCreateVault.prototype.withdraw_reserve_rate = "";
+    
+                /**
                  * MsgCreateVault strategy_weights.
                  * @member {Array.<ununifi.yieldaggregator.IStrategyWeight>} strategy_weights
                  * @memberof ununifi.yieldaggregator.MsgCreateVault
@@ -25089,13 +25120,15 @@
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message.denom);
                     if (message.commission_rate != null && Object.hasOwnProperty.call(message, "commission_rate"))
                         writer.uint32(/* id 3, wireType 2 =*/26).string(message.commission_rate);
+                    if (message.withdraw_reserve_rate != null && Object.hasOwnProperty.call(message, "withdraw_reserve_rate"))
+                        writer.uint32(/* id 4, wireType 2 =*/34).string(message.withdraw_reserve_rate);
                     if (message.strategy_weights != null && message.strategy_weights.length)
                         for (var i = 0; i < message.strategy_weights.length; ++i)
-                            $root.ununifi.yieldaggregator.StrategyWeight.encode(message.strategy_weights[i], writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+                            $root.ununifi.yieldaggregator.StrategyWeight.encode(message.strategy_weights[i], writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
                     if (message.fee != null && Object.hasOwnProperty.call(message, "fee"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.fee, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+                        $root.cosmos.base.v1beta1.Coin.encode(message.fee, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
                     if (message.deposit != null && Object.hasOwnProperty.call(message, "deposit"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.deposit, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
+                        $root.cosmos.base.v1beta1.Coin.encode(message.deposit, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
                     return writer;
                 };
     
@@ -25140,14 +25173,17 @@
                             message.commission_rate = reader.string();
                             break;
                         case 4:
+                            message.withdraw_reserve_rate = reader.string();
+                            break;
+                        case 5:
                             if (!(message.strategy_weights && message.strategy_weights.length))
                                 message.strategy_weights = [];
                             message.strategy_weights.push($root.ununifi.yieldaggregator.StrategyWeight.decode(reader, reader.uint32()));
                             break;
-                        case 5:
+                        case 6:
                             message.fee = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
-                        case 6:
+                        case 7:
                             message.deposit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         default:
@@ -25194,6 +25230,9 @@
                     if (message.commission_rate != null && message.hasOwnProperty("commission_rate"))
                         if (!$util.isString(message.commission_rate))
                             return "commission_rate: string expected";
+                    if (message.withdraw_reserve_rate != null && message.hasOwnProperty("withdraw_reserve_rate"))
+                        if (!$util.isString(message.withdraw_reserve_rate))
+                            return "withdraw_reserve_rate: string expected";
                     if (message.strategy_weights != null && message.hasOwnProperty("strategy_weights")) {
                         if (!Array.isArray(message.strategy_weights))
                             return "strategy_weights: array expected";
@@ -25234,6 +25273,8 @@
                         message.denom = String(object.denom);
                     if (object.commission_rate != null)
                         message.commission_rate = String(object.commission_rate);
+                    if (object.withdraw_reserve_rate != null)
+                        message.withdraw_reserve_rate = String(object.withdraw_reserve_rate);
                     if (object.strategy_weights) {
                         if (!Array.isArray(object.strategy_weights))
                             throw TypeError(".ununifi.yieldaggregator.MsgCreateVault.strategy_weights: array expected");
@@ -25276,6 +25317,7 @@
                         object.sender = "";
                         object.denom = "";
                         object.commission_rate = "";
+                        object.withdraw_reserve_rate = "";
                         object.fee = null;
                         object.deposit = null;
                     }
@@ -25285,6 +25327,8 @@
                         object.denom = message.denom;
                     if (message.commission_rate != null && message.hasOwnProperty("commission_rate"))
                         object.commission_rate = message.commission_rate;
+                    if (message.withdraw_reserve_rate != null && message.hasOwnProperty("withdraw_reserve_rate"))
+                        object.withdraw_reserve_rate = message.withdraw_reserve_rate;
                     if (message.strategy_weights && message.strategy_weights.length) {
                         object.strategy_weights = [];
                         for (var j = 0; j < message.strategy_weights.length; ++j)

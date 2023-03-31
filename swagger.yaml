@@ -3826,6 +3826,8 @@ paths:
                       type: string
                     name:
                       type: string
+              vault_address:
+                type: string
               total_bonded_amount:
                 type: string
               total_unbonding_amount:
@@ -6247,6 +6249,8 @@ definitions:
               type: string
             name:
               type: string
+      vault_address:
+        type: string
       total_bonded_amount:
         type: string
       total_unbonding_amount:

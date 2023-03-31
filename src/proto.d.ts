@@ -9072,6 +9072,9 @@ export namespace ununifi {
             /** QueryGetVaultResponse strategies */
             strategies?: (ununifi.yieldaggregator.IStrategy[]|null);
 
+            /** QueryGetVaultResponse vault_address */
+            vault_address?: (string|null);
+
             /** QueryGetVaultResponse total_bonded_amount */
             total_bonded_amount?: (string|null);
 
@@ -9096,6 +9099,9 @@ export namespace ununifi {
 
             /** QueryGetVaultResponse strategies. */
             public strategies: ununifi.yieldaggregator.IStrategy[];
+
+            /** QueryGetVaultResponse vault_address. */
+            public vault_address: string;
 
             /** QueryGetVaultResponse total_bonded_amount. */
             public total_bonded_amount: string;
@@ -10922,6 +10928,9 @@ export namespace ununifi {
             /** MsgCreateVault commission_rate */
             commission_rate?: (string|null);
 
+            /** MsgCreateVault withdraw_reserve_rate */
+            withdraw_reserve_rate?: (string|null);
+
             /** MsgCreateVault strategy_weights */
             strategy_weights?: (ununifi.yieldaggregator.IStrategyWeight[]|null);
 
@@ -10949,6 +10958,9 @@ export namespace ununifi {
 
             /** MsgCreateVault commission_rate. */
             public commission_rate: string;
+
+            /** MsgCreateVault withdraw_reserve_rate. */
+            public withdraw_reserve_rate: string;
 
             /** MsgCreateVault strategy_weights. */
             public strategy_weights: ununifi.yieldaggregator.IStrategyWeight[];

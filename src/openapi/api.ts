@@ -2049,6 +2049,12 @@ export interface UnunifiYieldaggregatorQueryGetVaultResponse {
      * @type {string}
      * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
      */
+    'vault_address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
+     */
     'total_bonded_amount'?: string;
     /**
      * 
@@ -2250,6 +2256,12 @@ export interface Vault200Response {
      * @memberof Vault200Response
      */
     'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
+    /**
+     * 
+     * @type {string}
+     * @memberof Vault200Response
+     */
+    'vault_address'?: string;
     /**
      * 
      * @type {string}
