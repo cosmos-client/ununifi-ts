@@ -7320,11 +7320,11 @@ export namespace ununifi {
         /** Properties of a QueryEstimateDLPTokenAmountResponse. */
         interface IQueryEstimateDLPTokenAmountResponse {
 
-            /** QueryEstimateDLPTokenAmountResponse amount */
-            amount?: (cosmos.base.v1beta1.ICoin|null);
+            /** QueryEstimateDLPTokenAmountResponse estimated_dlp_amount */
+            estimated_dlp_amount?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** QueryEstimateDLPTokenAmountResponse fee */
-            fee?: (cosmos.base.v1beta1.ICoin|null);
+            /** QueryEstimateDLPTokenAmountResponse deposit_fee */
+            deposit_fee?: (cosmos.base.v1beta1.ICoin|null);
         }
 
         /** Represents a QueryEstimateDLPTokenAmountResponse. */
@@ -7336,11 +7336,11 @@ export namespace ununifi {
              */
             constructor(properties?: ununifi.derivatives.IQueryEstimateDLPTokenAmountResponse);
 
-            /** QueryEstimateDLPTokenAmountResponse amount. */
-            public amount?: (cosmos.base.v1beta1.ICoin|null);
+            /** QueryEstimateDLPTokenAmountResponse estimated_dlp_amount. */
+            public estimated_dlp_amount?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** QueryEstimateDLPTokenAmountResponse fee. */
-            public fee?: (cosmos.base.v1beta1.ICoin|null);
+            /** QueryEstimateDLPTokenAmountResponse deposit_fee. */
+            public deposit_fee?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
              * Encodes the specified QueryEstimateDLPTokenAmountResponse message. Does not implicitly {@link ununifi.derivatives.QueryEstimateDLPTokenAmountResponse.verify|verify} messages.
@@ -8520,6 +8520,9 @@ export namespace ununifi {
 
             /** PerpetualFuturesParams markets */
             markets?: (ununifi.derivatives.IMarket[]|null);
+
+            /** PerpetualFuturesParams max_leverage */
+            max_leverage?: (number|null);
         }
 
         /** Represents a PerpetualFuturesParams. */
@@ -8542,6 +8545,9 @@ export namespace ununifi {
 
             /** PerpetualFuturesParams markets. */
             public markets: ununifi.derivatives.IMarket[];
+
+            /** PerpetualFuturesParams max_leverage. */
+            public max_leverage: number;
 
             /**
              * Encodes the specified PerpetualFuturesParams message. Does not implicitly {@link ununifi.derivatives.PerpetualFuturesParams.verify|verify} messages.
@@ -8753,6 +8759,9 @@ export namespace ununifi {
             /** PerpetualFuturesPositionInstance size */
             size?: (string|null);
 
+            /** PerpetualFuturesPositionInstance size_in_micro */
+            size_in_micro?: (string|null);
+
             /** PerpetualFuturesPositionInstance leverage */
             leverage?: (number|null);
         }
@@ -8771,6 +8780,9 @@ export namespace ununifi {
 
             /** PerpetualFuturesPositionInstance size. */
             public size: string;
+
+            /** PerpetualFuturesPositionInstance size_in_micro. */
+            public size_in_micro: string;
 
             /** PerpetualFuturesPositionInstance leverage. */
             public leverage: number;
@@ -8845,8 +8857,8 @@ export namespace ununifi {
             /** PerpetualFuturesNetPositionOfMarket market */
             market?: (ununifi.derivatives.IMarket|null);
 
-            /** PerpetualFuturesNetPositionOfMarket position_size */
-            position_size?: (string|null);
+            /** PerpetualFuturesNetPositionOfMarket position_size_in_micro */
+            position_size_in_micro?: (string|null);
         }
 
         /** Represents a PerpetualFuturesNetPositionOfMarket. */
@@ -8861,8 +8873,8 @@ export namespace ununifi {
             /** PerpetualFuturesNetPositionOfMarket market. */
             public market?: (ununifi.derivatives.IMarket|null);
 
-            /** PerpetualFuturesNetPositionOfMarket position_size. */
-            public position_size: string;
+            /** PerpetualFuturesNetPositionOfMarket position_size_in_micro. */
+            public position_size_in_micro: string;
 
             /**
              * Encodes the specified PerpetualFuturesNetPositionOfMarket message. Does not implicitly {@link ununifi.derivatives.PerpetualFuturesNetPositionOfMarket.verify|verify} messages.
@@ -9031,6 +9043,9 @@ export namespace ununifi {
 
             /** EventPerpetualFuturesPositionClosed trade_amount */
             trade_amount?: (string|null);
+
+            /** EventPerpetualFuturesPositionClosed returning_amount */
+            returning_amount?: (string|null);
         }
 
         /** Represents an EventPerpetualFuturesPositionClosed. */
@@ -9053,6 +9068,9 @@ export namespace ununifi {
 
             /** EventPerpetualFuturesPositionClosed trade_amount. */
             public trade_amount: string;
+
+            /** EventPerpetualFuturesPositionClosed returning_amount. */
+            public returning_amount: string;
 
             /**
              * Encodes the specified EventPerpetualFuturesPositionClosed message. Does not implicitly {@link ununifi.derivatives.EventPerpetualFuturesPositionClosed.verify|verify} messages.
@@ -9320,6 +9338,95 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
+        /** Properties of an EventLossToLP. */
+        interface IEventLossToLP {
+
+            /** EventLossToLP position_id */
+            position_id?: (string|null);
+
+            /** EventLossToLP loss_amount */
+            loss_amount?: (string|null);
+        }
+
+        /** Represents an EventLossToLP. */
+        class EventLossToLP implements IEventLossToLP {
+
+            /**
+             * Constructs a new EventLossToLP.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.derivatives.IEventLossToLP);
+
+            /** EventLossToLP position_id. */
+            public position_id: string;
+
+            /** EventLossToLP loss_amount. */
+            public loss_amount: string;
+
+            /**
+             * Encodes the specified EventLossToLP message. Does not implicitly {@link ununifi.derivatives.EventLossToLP.verify|verify} messages.
+             * @param message EventLossToLP message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.derivatives.IEventLossToLP, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified EventLossToLP message, length delimited. Does not implicitly {@link ununifi.derivatives.EventLossToLP.verify|verify} messages.
+             * @param message EventLossToLP message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.derivatives.IEventLossToLP, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an EventLossToLP message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns EventLossToLP
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.derivatives.EventLossToLP;
+
+            /**
+             * Decodes an EventLossToLP message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns EventLossToLP
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.derivatives.EventLossToLP;
+
+            /**
+             * Verifies an EventLossToLP message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an EventLossToLP message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns EventLossToLP
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.derivatives.EventLossToLP;
+
+            /**
+             * Creates a plain object from an EventLossToLP message. Also converts values to other types if specified.
+             * @param message EventLossToLP
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.derivatives.EventLossToLP, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this EventLossToLP to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
         /** Properties of a PerpetualOptionsParams. */
         interface IPerpetualOptionsParams {
 
@@ -9547,32 +9654,32 @@ export namespace ununifi {
             constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
 
             /**
-             * Calls MintLiquidityProviderToken.
-             * @param request MsgMintLiquidityProviderToken message or plain object
-             * @param callback Node-style callback called with the error, if any, and MsgMintLiquidityProviderTokenResponse
+             * Calls DepositToPool.
+             * @param request MsgDepositToPool message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgDepositToPoolResponse
              */
-            public mintLiquidityProviderToken(request: ununifi.derivatives.IMsgMintLiquidityProviderToken, callback: ununifi.derivatives.Msg.MintLiquidityProviderTokenCallback): void;
+            public depositToPool(request: ununifi.derivatives.IMsgDepositToPool, callback: ununifi.derivatives.Msg.DepositToPoolCallback): void;
 
             /**
-             * Calls MintLiquidityProviderToken.
-             * @param request MsgMintLiquidityProviderToken message or plain object
+             * Calls DepositToPool.
+             * @param request MsgDepositToPool message or plain object
              * @returns Promise
              */
-            public mintLiquidityProviderToken(request: ununifi.derivatives.IMsgMintLiquidityProviderToken): Promise<ununifi.derivatives.MsgMintLiquidityProviderTokenResponse>;
+            public depositToPool(request: ununifi.derivatives.IMsgDepositToPool): Promise<ununifi.derivatives.MsgDepositToPoolResponse>;
 
             /**
-             * Calls BurnLiquidityProviderToken.
-             * @param request MsgBurnLiquidityProviderToken message or plain object
-             * @param callback Node-style callback called with the error, if any, and MsgBurnLiquidityProviderTokenResponse
+             * Calls WithdrawFromPool.
+             * @param request MsgWithdrawFromPool message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgWithdrawFromPoolResponse
              */
-            public burnLiquidityProviderToken(request: ununifi.derivatives.IMsgBurnLiquidityProviderToken, callback: ununifi.derivatives.Msg.BurnLiquidityProviderTokenCallback): void;
+            public withdrawFromPool(request: ununifi.derivatives.IMsgWithdrawFromPool, callback: ununifi.derivatives.Msg.WithdrawFromPoolCallback): void;
 
             /**
-             * Calls BurnLiquidityProviderToken.
-             * @param request MsgBurnLiquidityProviderToken message or plain object
+             * Calls WithdrawFromPool.
+             * @param request MsgWithdrawFromPool message or plain object
              * @returns Promise
              */
-            public burnLiquidityProviderToken(request: ununifi.derivatives.IMsgBurnLiquidityProviderToken): Promise<ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse>;
+            public withdrawFromPool(request: ununifi.derivatives.IMsgWithdrawFromPool): Promise<ununifi.derivatives.MsgWithdrawFromPoolResponse>;
 
             /**
              * Calls OpenPosition.
@@ -9634,18 +9741,18 @@ export namespace ununifi {
         namespace Msg {
 
             /**
-             * Callback as used by {@link ununifi.derivatives.Msg#mintLiquidityProviderToken}.
+             * Callback as used by {@link ununifi.derivatives.Msg#depositToPool}.
              * @param error Error, if any
-             * @param [response] MsgMintLiquidityProviderTokenResponse
+             * @param [response] MsgDepositToPoolResponse
              */
-            type MintLiquidityProviderTokenCallback = (error: (Error|null), response?: ununifi.derivatives.MsgMintLiquidityProviderTokenResponse) => void;
+            type DepositToPoolCallback = (error: (Error|null), response?: ununifi.derivatives.MsgDepositToPoolResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.derivatives.Msg#burnLiquidityProviderToken}.
+             * Callback as used by {@link ununifi.derivatives.Msg#withdrawFromPool}.
              * @param error Error, if any
-             * @param [response] MsgBurnLiquidityProviderTokenResponse
+             * @param [response] MsgWithdrawFromPoolResponse
              */
-            type BurnLiquidityProviderTokenCallback = (error: (Error|null), response?: ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse) => void;
+            type WithdrawFromPoolCallback = (error: (Error|null), response?: ununifi.derivatives.MsgWithdrawFromPoolResponse) => void;
 
             /**
              * Callback as used by {@link ununifi.derivatives.Msg#openPosition}.
@@ -9676,339 +9783,339 @@ export namespace ununifi {
             type ReportLevyPeriodCallback = (error: (Error|null), response?: ununifi.derivatives.MsgReportLevyPeriodResponse) => void;
         }
 
-        /** Properties of a MsgMintLiquidityProviderToken. */
-        interface IMsgMintLiquidityProviderToken {
+        /** Properties of a MsgDepositToPool. */
+        interface IMsgDepositToPool {
 
-            /** MsgMintLiquidityProviderToken sender */
+            /** MsgDepositToPool sender */
             sender?: (string|null);
 
-            /** MsgMintLiquidityProviderToken amount */
+            /** MsgDepositToPool amount */
             amount?: (cosmos.base.v1beta1.ICoin|null);
         }
 
-        /** Represents a MsgMintLiquidityProviderToken. */
-        class MsgMintLiquidityProviderToken implements IMsgMintLiquidityProviderToken {
+        /** Represents a MsgDepositToPool. */
+        class MsgDepositToPool implements IMsgDepositToPool {
 
             /**
-             * Constructs a new MsgMintLiquidityProviderToken.
+             * Constructs a new MsgDepositToPool.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.derivatives.IMsgMintLiquidityProviderToken);
+            constructor(properties?: ununifi.derivatives.IMsgDepositToPool);
 
-            /** MsgMintLiquidityProviderToken sender. */
+            /** MsgDepositToPool sender. */
             public sender: string;
 
-            /** MsgMintLiquidityProviderToken amount. */
+            /** MsgDepositToPool amount. */
             public amount?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
-             * Encodes the specified MsgMintLiquidityProviderToken message. Does not implicitly {@link ununifi.derivatives.MsgMintLiquidityProviderToken.verify|verify} messages.
-             * @param message MsgMintLiquidityProviderToken message or plain object to encode
+             * Encodes the specified MsgDepositToPool message. Does not implicitly {@link ununifi.derivatives.MsgDepositToPool.verify|verify} messages.
+             * @param message MsgDepositToPool message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.derivatives.IMsgMintLiquidityProviderToken, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.derivatives.IMsgDepositToPool, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgMintLiquidityProviderToken message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgMintLiquidityProviderToken.verify|verify} messages.
-             * @param message MsgMintLiquidityProviderToken message or plain object to encode
+             * Encodes the specified MsgDepositToPool message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgDepositToPool.verify|verify} messages.
+             * @param message MsgDepositToPool message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.derivatives.IMsgMintLiquidityProviderToken, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.derivatives.IMsgDepositToPool, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a MsgMintLiquidityProviderToken message from the specified reader or buffer.
+             * Decodes a MsgDepositToPool message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns MsgMintLiquidityProviderToken
+             * @returns MsgDepositToPool
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.derivatives.MsgMintLiquidityProviderToken;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.derivatives.MsgDepositToPool;
 
             /**
-             * Decodes a MsgMintLiquidityProviderToken message from the specified reader or buffer, length delimited.
+             * Decodes a MsgDepositToPool message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns MsgMintLiquidityProviderToken
+             * @returns MsgDepositToPool
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.derivatives.MsgMintLiquidityProviderToken;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.derivatives.MsgDepositToPool;
 
             /**
-             * Verifies a MsgMintLiquidityProviderToken message.
+             * Verifies a MsgDepositToPool message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a MsgMintLiquidityProviderToken message from a plain object. Also converts values to their respective internal types.
+             * Creates a MsgDepositToPool message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns MsgMintLiquidityProviderToken
+             * @returns MsgDepositToPool
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgMintLiquidityProviderToken;
+            public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgDepositToPool;
 
             /**
-             * Creates a plain object from a MsgMintLiquidityProviderToken message. Also converts values to other types if specified.
-             * @param message MsgMintLiquidityProviderToken
+             * Creates a plain object from a MsgDepositToPool message. Also converts values to other types if specified.
+             * @param message MsgDepositToPool
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.derivatives.MsgMintLiquidityProviderToken, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.derivatives.MsgDepositToPool, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this MsgMintLiquidityProviderToken to JSON.
+             * Converts this MsgDepositToPool to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a MsgMintLiquidityProviderTokenResponse. */
-        interface IMsgMintLiquidityProviderTokenResponse {
+        /** Properties of a MsgDepositToPoolResponse. */
+        interface IMsgDepositToPoolResponse {
         }
 
-        /** Represents a MsgMintLiquidityProviderTokenResponse. */
-        class MsgMintLiquidityProviderTokenResponse implements IMsgMintLiquidityProviderTokenResponse {
+        /** Represents a MsgDepositToPoolResponse. */
+        class MsgDepositToPoolResponse implements IMsgDepositToPoolResponse {
 
             /**
-             * Constructs a new MsgMintLiquidityProviderTokenResponse.
+             * Constructs a new MsgDepositToPoolResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.derivatives.IMsgMintLiquidityProviderTokenResponse);
+            constructor(properties?: ununifi.derivatives.IMsgDepositToPoolResponse);
 
             /**
-             * Encodes the specified MsgMintLiquidityProviderTokenResponse message. Does not implicitly {@link ununifi.derivatives.MsgMintLiquidityProviderTokenResponse.verify|verify} messages.
-             * @param message MsgMintLiquidityProviderTokenResponse message or plain object to encode
+             * Encodes the specified MsgDepositToPoolResponse message. Does not implicitly {@link ununifi.derivatives.MsgDepositToPoolResponse.verify|verify} messages.
+             * @param message MsgDepositToPoolResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.derivatives.IMsgMintLiquidityProviderTokenResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.derivatives.IMsgDepositToPoolResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgMintLiquidityProviderTokenResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgMintLiquidityProviderTokenResponse.verify|verify} messages.
-             * @param message MsgMintLiquidityProviderTokenResponse message or plain object to encode
+             * Encodes the specified MsgDepositToPoolResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgDepositToPoolResponse.verify|verify} messages.
+             * @param message MsgDepositToPoolResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.derivatives.IMsgMintLiquidityProviderTokenResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.derivatives.IMsgDepositToPoolResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a MsgMintLiquidityProviderTokenResponse message from the specified reader or buffer.
+             * Decodes a MsgDepositToPoolResponse message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns MsgMintLiquidityProviderTokenResponse
+             * @returns MsgDepositToPoolResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.derivatives.MsgMintLiquidityProviderTokenResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.derivatives.MsgDepositToPoolResponse;
 
             /**
-             * Decodes a MsgMintLiquidityProviderTokenResponse message from the specified reader or buffer, length delimited.
+             * Decodes a MsgDepositToPoolResponse message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns MsgMintLiquidityProviderTokenResponse
+             * @returns MsgDepositToPoolResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.derivatives.MsgMintLiquidityProviderTokenResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.derivatives.MsgDepositToPoolResponse;
 
             /**
-             * Verifies a MsgMintLiquidityProviderTokenResponse message.
+             * Verifies a MsgDepositToPoolResponse message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a MsgMintLiquidityProviderTokenResponse message from a plain object. Also converts values to their respective internal types.
+             * Creates a MsgDepositToPoolResponse message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns MsgMintLiquidityProviderTokenResponse
+             * @returns MsgDepositToPoolResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgMintLiquidityProviderTokenResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgDepositToPoolResponse;
 
             /**
-             * Creates a plain object from a MsgMintLiquidityProviderTokenResponse message. Also converts values to other types if specified.
-             * @param message MsgMintLiquidityProviderTokenResponse
+             * Creates a plain object from a MsgDepositToPoolResponse message. Also converts values to other types if specified.
+             * @param message MsgDepositToPoolResponse
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.derivatives.MsgMintLiquidityProviderTokenResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.derivatives.MsgDepositToPoolResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this MsgMintLiquidityProviderTokenResponse to JSON.
+             * Converts this MsgDepositToPoolResponse to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a MsgBurnLiquidityProviderToken. */
-        interface IMsgBurnLiquidityProviderToken {
+        /** Properties of a MsgWithdrawFromPool. */
+        interface IMsgWithdrawFromPool {
 
-            /** MsgBurnLiquidityProviderToken sender */
+            /** MsgWithdrawFromPool sender */
             sender?: (string|null);
 
-            /** MsgBurnLiquidityProviderToken amount */
-            amount?: (string|null);
+            /** MsgWithdrawFromPool lpt_amount */
+            lpt_amount?: (string|null);
 
-            /** MsgBurnLiquidityProviderToken redeem_denom */
+            /** MsgWithdrawFromPool redeem_denom */
             redeem_denom?: (string|null);
         }
 
-        /** Represents a MsgBurnLiquidityProviderToken. */
-        class MsgBurnLiquidityProviderToken implements IMsgBurnLiquidityProviderToken {
+        /** Represents a MsgWithdrawFromPool. */
+        class MsgWithdrawFromPool implements IMsgWithdrawFromPool {
 
             /**
-             * Constructs a new MsgBurnLiquidityProviderToken.
+             * Constructs a new MsgWithdrawFromPool.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.derivatives.IMsgBurnLiquidityProviderToken);
+            constructor(properties?: ununifi.derivatives.IMsgWithdrawFromPool);
 
-            /** MsgBurnLiquidityProviderToken sender. */
+            /** MsgWithdrawFromPool sender. */
             public sender: string;
 
-            /** MsgBurnLiquidityProviderToken amount. */
-            public amount: string;
+            /** MsgWithdrawFromPool lpt_amount. */
+            public lpt_amount: string;
 
-            /** MsgBurnLiquidityProviderToken redeem_denom. */
+            /** MsgWithdrawFromPool redeem_denom. */
             public redeem_denom: string;
 
             /**
-             * Encodes the specified MsgBurnLiquidityProviderToken message. Does not implicitly {@link ununifi.derivatives.MsgBurnLiquidityProviderToken.verify|verify} messages.
-             * @param message MsgBurnLiquidityProviderToken message or plain object to encode
+             * Encodes the specified MsgWithdrawFromPool message. Does not implicitly {@link ununifi.derivatives.MsgWithdrawFromPool.verify|verify} messages.
+             * @param message MsgWithdrawFromPool message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.derivatives.IMsgBurnLiquidityProviderToken, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.derivatives.IMsgWithdrawFromPool, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgBurnLiquidityProviderToken message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgBurnLiquidityProviderToken.verify|verify} messages.
-             * @param message MsgBurnLiquidityProviderToken message or plain object to encode
+             * Encodes the specified MsgWithdrawFromPool message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgWithdrawFromPool.verify|verify} messages.
+             * @param message MsgWithdrawFromPool message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.derivatives.IMsgBurnLiquidityProviderToken, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.derivatives.IMsgWithdrawFromPool, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a MsgBurnLiquidityProviderToken message from the specified reader or buffer.
+             * Decodes a MsgWithdrawFromPool message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns MsgBurnLiquidityProviderToken
+             * @returns MsgWithdrawFromPool
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.derivatives.MsgBurnLiquidityProviderToken;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.derivatives.MsgWithdrawFromPool;
 
             /**
-             * Decodes a MsgBurnLiquidityProviderToken message from the specified reader or buffer, length delimited.
+             * Decodes a MsgWithdrawFromPool message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns MsgBurnLiquidityProviderToken
+             * @returns MsgWithdrawFromPool
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.derivatives.MsgBurnLiquidityProviderToken;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.derivatives.MsgWithdrawFromPool;
 
             /**
-             * Verifies a MsgBurnLiquidityProviderToken message.
+             * Verifies a MsgWithdrawFromPool message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a MsgBurnLiquidityProviderToken message from a plain object. Also converts values to their respective internal types.
+             * Creates a MsgWithdrawFromPool message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns MsgBurnLiquidityProviderToken
+             * @returns MsgWithdrawFromPool
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgBurnLiquidityProviderToken;
+            public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgWithdrawFromPool;
 
             /**
-             * Creates a plain object from a MsgBurnLiquidityProviderToken message. Also converts values to other types if specified.
-             * @param message MsgBurnLiquidityProviderToken
+             * Creates a plain object from a MsgWithdrawFromPool message. Also converts values to other types if specified.
+             * @param message MsgWithdrawFromPool
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.derivatives.MsgBurnLiquidityProviderToken, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.derivatives.MsgWithdrawFromPool, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this MsgBurnLiquidityProviderToken to JSON.
+             * Converts this MsgWithdrawFromPool to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a MsgBurnLiquidityProviderTokenResponse. */
-        interface IMsgBurnLiquidityProviderTokenResponse {
+        /** Properties of a MsgWithdrawFromPoolResponse. */
+        interface IMsgWithdrawFromPoolResponse {
         }
 
-        /** Represents a MsgBurnLiquidityProviderTokenResponse. */
-        class MsgBurnLiquidityProviderTokenResponse implements IMsgBurnLiquidityProviderTokenResponse {
+        /** Represents a MsgWithdrawFromPoolResponse. */
+        class MsgWithdrawFromPoolResponse implements IMsgWithdrawFromPoolResponse {
 
             /**
-             * Constructs a new MsgBurnLiquidityProviderTokenResponse.
+             * Constructs a new MsgWithdrawFromPoolResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.derivatives.IMsgBurnLiquidityProviderTokenResponse);
+            constructor(properties?: ununifi.derivatives.IMsgWithdrawFromPoolResponse);
 
             /**
-             * Encodes the specified MsgBurnLiquidityProviderTokenResponse message. Does not implicitly {@link ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse.verify|verify} messages.
-             * @param message MsgBurnLiquidityProviderTokenResponse message or plain object to encode
+             * Encodes the specified MsgWithdrawFromPoolResponse message. Does not implicitly {@link ununifi.derivatives.MsgWithdrawFromPoolResponse.verify|verify} messages.
+             * @param message MsgWithdrawFromPoolResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.derivatives.IMsgBurnLiquidityProviderTokenResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.derivatives.IMsgWithdrawFromPoolResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgBurnLiquidityProviderTokenResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse.verify|verify} messages.
-             * @param message MsgBurnLiquidityProviderTokenResponse message or plain object to encode
+             * Encodes the specified MsgWithdrawFromPoolResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.MsgWithdrawFromPoolResponse.verify|verify} messages.
+             * @param message MsgWithdrawFromPoolResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.derivatives.IMsgBurnLiquidityProviderTokenResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.derivatives.IMsgWithdrawFromPoolResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a MsgBurnLiquidityProviderTokenResponse message from the specified reader or buffer.
+             * Decodes a MsgWithdrawFromPoolResponse message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns MsgBurnLiquidityProviderTokenResponse
+             * @returns MsgWithdrawFromPoolResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.derivatives.MsgWithdrawFromPoolResponse;
 
             /**
-             * Decodes a MsgBurnLiquidityProviderTokenResponse message from the specified reader or buffer, length delimited.
+             * Decodes a MsgWithdrawFromPoolResponse message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns MsgBurnLiquidityProviderTokenResponse
+             * @returns MsgWithdrawFromPoolResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.derivatives.MsgWithdrawFromPoolResponse;
 
             /**
-             * Verifies a MsgBurnLiquidityProviderTokenResponse message.
+             * Verifies a MsgWithdrawFromPoolResponse message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a MsgBurnLiquidityProviderTokenResponse message from a plain object. Also converts values to their respective internal types.
+             * Creates a MsgWithdrawFromPoolResponse message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns MsgBurnLiquidityProviderTokenResponse
+             * @returns MsgWithdrawFromPoolResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.derivatives.MsgWithdrawFromPoolResponse;
 
             /**
-             * Creates a plain object from a MsgBurnLiquidityProviderTokenResponse message. Also converts values to other types if specified.
-             * @param message MsgBurnLiquidityProviderTokenResponse
+             * Creates a plain object from a MsgWithdrawFromPoolResponse message. Also converts values to other types if specified.
+             * @param message MsgWithdrawFromPoolResponse
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.derivatives.MsgBurnLiquidityProviderTokenResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.derivatives.MsgWithdrawFromPoolResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this MsgBurnLiquidityProviderTokenResponse to JSON.
+             * Converts this MsgWithdrawFromPoolResponse to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -16588,11 +16695,100 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
+        /** Properties of a NftListingDetail. */
+        interface INftListingDetail {
+
+            /** NftListingDetail listing */
+            listing?: (ununifi.nftmarket.INftListing|null);
+
+            /** NftListingDetail nft_info */
+            nft_info?: (ununifi.nftmarket.INftInfo|null);
+        }
+
+        /** Represents a NftListingDetail. */
+        class NftListingDetail implements INftListingDetail {
+
+            /**
+             * Constructs a new NftListingDetail.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.nftmarket.INftListingDetail);
+
+            /** NftListingDetail listing. */
+            public listing?: (ununifi.nftmarket.INftListing|null);
+
+            /** NftListingDetail nft_info. */
+            public nft_info?: (ununifi.nftmarket.INftInfo|null);
+
+            /**
+             * Encodes the specified NftListingDetail message. Does not implicitly {@link ununifi.nftmarket.NftListingDetail.verify|verify} messages.
+             * @param message NftListingDetail message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.nftmarket.INftListingDetail, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified NftListingDetail message, length delimited. Does not implicitly {@link ununifi.nftmarket.NftListingDetail.verify|verify} messages.
+             * @param message NftListingDetail message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.nftmarket.INftListingDetail, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a NftListingDetail message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns NftListingDetail
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.NftListingDetail;
+
+            /**
+             * Decodes a NftListingDetail message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns NftListingDetail
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.NftListingDetail;
+
+            /**
+             * Verifies a NftListingDetail message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a NftListingDetail message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns NftListingDetail
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.NftListingDetail;
+
+            /**
+             * Creates a plain object from a NftListingDetail message. Also converts values to other types if specified.
+             * @param message NftListingDetail
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.nftmarket.NftListingDetail, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this NftListingDetail to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
         /** Properties of a QueryListedNftsResponse. */
         interface IQueryListedNftsResponse {
 
             /** QueryListedNftsResponse listings */
-            listings?: (ununifi.nftmarket.INftListing[]|null);
+            listings?: (ununifi.nftmarket.INftListingDetail[]|null);
         }
 
         /** Represents a QueryListedNftsResponse. */
@@ -16605,7 +16801,7 @@ export namespace ununifi {
             constructor(properties?: ununifi.nftmarket.IQueryListedNftsResponse);
 
             /** QueryListedNftsResponse listings. */
-            public listings: ununifi.nftmarket.INftListing[];
+            public listings: ununifi.nftmarket.INftListingDetail[];
 
             /**
              * Encodes the specified QueryListedNftsResponse message. Does not implicitly {@link ununifi.nftmarket.QueryListedNftsResponse.verify|verify} messages.
@@ -16776,7 +16972,7 @@ export namespace ununifi {
             urihash?: (string|null);
 
             /** QueryListedClassResponse nfts */
-            nfts?: (ununifi.nftmarket.IListedNft[]|null);
+            nfts?: (ununifi.nftmarket.INftInfo[]|null);
 
             /** QueryListedClassResponse nft_count */
             nft_count?: (Long|null);
@@ -16810,7 +17006,7 @@ export namespace ununifi {
             public urihash: string;
 
             /** QueryListedClassResponse nfts. */
-            public nfts: ununifi.nftmarket.IListedNft[];
+            public nfts: ununifi.nftmarket.INftInfo[];
 
             /** QueryListedClassResponse nft_count. */
             public nft_count: Long;
@@ -18597,96 +18793,96 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a ListedNft. */
-        interface IListedNft {
+        /** Properties of a NftInfo. */
+        interface INftInfo {
 
-            /** ListedNft id */
+            /** NftInfo id */
             id?: (string|null);
 
-            /** ListedNft uri */
+            /** NftInfo uri */
             uri?: (string|null);
 
-            /** ListedNft uri_hash */
+            /** NftInfo uri_hash */
             uri_hash?: (string|null);
         }
 
-        /** Represents a ListedNft. */
-        class ListedNft implements IListedNft {
+        /** Represents a NftInfo. */
+        class NftInfo implements INftInfo {
 
             /**
-             * Constructs a new ListedNft.
+             * Constructs a new NftInfo.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IListedNft);
+            constructor(properties?: ununifi.nftmarket.INftInfo);
 
-            /** ListedNft id. */
+            /** NftInfo id. */
             public id: string;
 
-            /** ListedNft uri. */
+            /** NftInfo uri. */
             public uri: string;
 
-            /** ListedNft uri_hash. */
+            /** NftInfo uri_hash. */
             public uri_hash: string;
 
             /**
-             * Encodes the specified ListedNft message. Does not implicitly {@link ununifi.nftmarket.ListedNft.verify|verify} messages.
-             * @param message ListedNft message or plain object to encode
+             * Encodes the specified NftInfo message. Does not implicitly {@link ununifi.nftmarket.NftInfo.verify|verify} messages.
+             * @param message NftInfo message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IListedNft, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftmarket.INftInfo, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified ListedNft message, length delimited. Does not implicitly {@link ununifi.nftmarket.ListedNft.verify|verify} messages.
-             * @param message ListedNft message or plain object to encode
+             * Encodes the specified NftInfo message, length delimited. Does not implicitly {@link ununifi.nftmarket.NftInfo.verify|verify} messages.
+             * @param message NftInfo message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IListedNft, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftmarket.INftInfo, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a ListedNft message from the specified reader or buffer.
+             * Decodes a NftInfo message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns ListedNft
+             * @returns NftInfo
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.ListedNft;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.NftInfo;
 
             /**
-             * Decodes a ListedNft message from the specified reader or buffer, length delimited.
+             * Decodes a NftInfo message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns ListedNft
+             * @returns NftInfo
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.ListedNft;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.NftInfo;
 
             /**
-             * Verifies a ListedNft message.
+             * Verifies a NftInfo message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a ListedNft message from a plain object. Also converts values to their respective internal types.
+             * Creates a NftInfo message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns ListedNft
+             * @returns NftInfo
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.ListedNft;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.NftInfo;
 
             /**
-             * Creates a plain object from a ListedNft message. Also converts values to other types if specified.
-             * @param message ListedNft
+             * Creates a plain object from a NftInfo message. Also converts values to other types if specified.
+             * @param message NftInfo
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.ListedNft, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftmarket.NftInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this ListedNft to JSON.
+             * Converts this NftInfo to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -18733,6 +18929,9 @@ export namespace ununifi {
 
             /** NftListing collected_amount */
             collected_amount?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** NftListing minimum_bidding_period */
+            minimum_bidding_period?: (google.protobuf.IDuration|null);
         }
 
         /** Represents a NftListing. */
@@ -18782,6 +18981,9 @@ export namespace ununifi {
 
             /** NftListing collected_amount. */
             public collected_amount?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** NftListing minimum_bidding_period. */
+            public minimum_bidding_period?: (google.protobuf.IDuration|null);
 
             /**
              * Encodes the specified NftListing message. Does not implicitly {@link ununifi.nftmarket.NftListing.verify|verify} messages.
@@ -21071,6 +21273,9 @@ export namespace ununifi {
 
             /** MsgListNft automatic_refinancing */
             automatic_refinancing?: (boolean|null);
+
+            /** MsgListNft minimum_bidding_period */
+            minimum_bidding_period?: (google.protobuf.IDuration|null);
         }
 
         /** Represents a MsgListNft. */
@@ -21099,6 +21304,9 @@ export namespace ununifi {
 
             /** MsgListNft automatic_refinancing. */
             public automatic_refinancing: boolean;
+
+            /** MsgListNft minimum_bidding_period. */
+            public minimum_bidding_period?: (google.protobuf.IDuration|null);
 
             /**
              * Encodes the specified MsgListNft message. Does not implicitly {@link ununifi.nftmarket.MsgListNft.verify|verify} messages.

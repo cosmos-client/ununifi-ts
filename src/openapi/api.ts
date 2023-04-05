@@ -13,13 +13,15 @@
  */
 
 
-import { Configuration } from './configuration';
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { Configuration } from './configuration';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from './common';
+import type { RequestArgs } from './base';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
+import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
 
 /**
  * 
@@ -1101,6 +1103,12 @@ export interface DerivativesParams200ResponseParamsPerpetualFutures {
      * @memberof DerivativesParams200ResponseParamsPerpetualFutures
      */
     'markets'?: Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>;
+    /**
+     * 
+     * @type {number}
+     * @memberof DerivativesParams200ResponseParamsPerpetualFutures
+     */
+    'max_leverage'?: number;
 }
 /**
  * 
@@ -1275,11 +1283,30 @@ export interface EstimateDLPTokenAmount200Response {
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof EstimateDLPTokenAmount200Response
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'estimated_dlp_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
     /**
      * 
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof EstimateDLPTokenAmount200Response
+     */
+    'deposit_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface EstimateRedeemAmount200Response
+ */
+export interface EstimateRedeemAmount200Response {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof EstimateRedeemAmount200Response
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof EstimateRedeemAmount200Response
      */
     'fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
@@ -1744,92 +1771,117 @@ export interface ListedNfts200Response {
 export interface ListedNfts200ResponseListingsInner {
     /**
      * 
-     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @type {ListedNfts200ResponseListingsInnerListing}
      * @memberof ListedNfts200ResponseListingsInner
+     */
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
+    /**
+     * 
+     * @type {ListedClass200ResponseNftsInner}
+     * @memberof ListedNfts200ResponseListingsInner
+     */
+    'nft_info'?: ListedClass200ResponseNftsInner;
+}
+/**
+ * 
+ * @export
+ * @interface ListedNfts200ResponseListingsInnerListing
+ */
+export interface ListedNfts200ResponseListingsInnerListing {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'nft_id'?: BidderBids200ResponseBidsInnerNftId;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'owner'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
-    'listing_type'?: ListedNfts200ResponseListingsInnerListingTypeEnum;
+    'listing_type'?: ListedNfts200ResponseListingsInnerListingListingTypeEnum;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
-    'state'?: ListedNfts200ResponseListingsInnerStateEnum;
+    'state'?: ListedNfts200ResponseListingsInnerListingStateEnum;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'bid_token'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'minimum_deposit_rate'?: string;
     /**
      * 
      * @type {boolean}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'automatic_refinancing'?: boolean;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'started_at'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'end_at'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'full_payment_end_at'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'successful_bid_end_at'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'auto_relisted_count'?: string;
     /**
      * 
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'collected_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'minimum_bidding_period'?: string;
 }
 
-export const ListedNfts200ResponseListingsInnerListingTypeEnum = {
+export const ListedNfts200ResponseListingsInnerListingListingTypeEnum = {
     DirectAssetBorrow: 'DIRECT_ASSET_BORROW',
     SyntheticAssetCreation: 'SYNTHETIC_ASSET_CREATION',
     LateShipping: 'LATE_SHIPPING'
 } as const;
 
-export type ListedNfts200ResponseListingsInnerListingTypeEnum = typeof ListedNfts200ResponseListingsInnerListingTypeEnum[keyof typeof ListedNfts200ResponseListingsInnerListingTypeEnum];
-export const ListedNfts200ResponseListingsInnerStateEnum = {
+export type ListedNfts200ResponseListingsInnerListingListingTypeEnum = typeof ListedNfts200ResponseListingsInnerListingListingTypeEnum[keyof typeof ListedNfts200ResponseListingsInnerListingListingTypeEnum];
+export const ListedNfts200ResponseListingsInnerListingStateEnum = {
     Listing: 'LISTING',
     Bidding: 'BIDDING',
     SellingDecision: 'SELLING_DECISION',
@@ -1837,7 +1889,7 @@ export const ListedNfts200ResponseListingsInnerStateEnum = {
     SuccessfulBid: 'SUCCESSFUL_BID'
 } as const;
 
-export type ListedNfts200ResponseListingsInnerStateEnum = typeof ListedNfts200ResponseListingsInnerStateEnum[keyof typeof ListedNfts200ResponseListingsInnerStateEnum];
+export type ListedNfts200ResponseListingsInnerListingStateEnum = typeof ListedNfts200ResponseListingsInnerListingStateEnum[keyof typeof ListedNfts200ResponseListingsInnerListingStateEnum];
 
 /**
  * 
@@ -1992,10 +2044,10 @@ export interface NFTMinter200Response {
 export interface NftListing200Response {
     /**
      * 
-     * @type {ListedNfts200ResponseListingsInner}
+     * @type {ListedNfts200ResponseListingsInnerListing}
      * @memberof NftListing200Response
      */
-    'listing'?: ListedNfts200ResponseListingsInner;
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
 }
 /**
  * 
@@ -3229,6 +3281,12 @@ export interface UnunifiDerivativesPerpetualFuturesParams {
      * @memberof UnunifiDerivativesPerpetualFuturesParams
      */
     'markets'?: Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>;
+    /**
+     * 
+     * @type {number}
+     * @memberof UnunifiDerivativesPerpetualFuturesParams
+     */
+    'max_leverage'?: number;
 }
 /**
  * 
@@ -3572,13 +3630,13 @@ export interface UnunifiDerivativesQueryEstimateDLPTokenAmountResponse {
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'estimated_dlp_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
     /**
      * 
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
      */
-    'fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'deposit_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 /**
  * 
@@ -4215,31 +4273,6 @@ export interface UnunifiNftmarketLiquidations {
 /**
  * 
  * @export
- * @interface UnunifiNftmarketListedNft
- */
-export interface UnunifiNftmarketListedNft {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftmarketListedNft
-     */
-    'id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftmarketListedNft
-     */
-    'uri'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftmarketListedNft
-     */
-    'uri_hash'?: string;
-}
-/**
- * 
- * @export
  * @enum {string}
  */
 
@@ -4389,6 +4422,31 @@ export interface UnunifiNftmarketNftIdentifier {
 /**
  * 
  * @export
+ * @interface UnunifiNftmarketNftInfo
+ */
+export interface UnunifiNftmarketNftInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftInfo
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftInfo
+     */
+    'uri'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftInfo
+     */
+    'uri_hash'?: string;
+}
+/**
+ * 
+ * @export
  * @interface UnunifiNftmarketNftListing
  */
 export interface UnunifiNftmarketNftListing {
@@ -4470,6 +4528,12 @@ export interface UnunifiNftmarketNftListing {
      * @memberof UnunifiNftmarketNftListing
      */
     'collected_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'minimum_bidding_period'?: string;
 }
 
 export const UnunifiNftmarketNftListingListingTypeEnum = {
@@ -4489,6 +4553,25 @@ export const UnunifiNftmarketNftListingStateEnum = {
 
 export type UnunifiNftmarketNftListingStateEnum = typeof UnunifiNftmarketNftListingStateEnum[keyof typeof UnunifiNftmarketNftListingStateEnum];
 
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketNftListingDetail
+ */
+export interface UnunifiNftmarketNftListingDetail {
+    /**
+     * 
+     * @type {ListedNfts200ResponseListingsInnerListing}
+     * @memberof UnunifiNftmarketNftListingDetail
+     */
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
+    /**
+     * 
+     * @type {ListedClass200ResponseNftsInner}
+     * @memberof UnunifiNftmarketNftListingDetail
+     */
+    'nft_info'?: ListedClass200ResponseNftsInner;
+}
 /**
  * 
  * @export
@@ -4830,10 +4913,10 @@ export interface UnunifiNftmarketQueryNftBidsResponse {
 export interface UnunifiNftmarketQueryNftListingResponse {
     /**
      * 
-     * @type {ListedNfts200ResponseListingsInner}
+     * @type {ListedNfts200ResponseListingsInnerListing}
      * @memberof UnunifiNftmarketQueryNftListingResponse
      */
-    'listing'?: ListedNfts200ResponseListingsInner;
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
 }
 /**
  * 
@@ -7670,7 +7753,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async estimateRedeemAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateDLPTokenAmount200Response>> {
+        async estimateRedeemAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRedeemAmount200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemAmount(redeemDenom, lptAmount, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -8255,7 +8338,7 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        estimateRedeemAmount(redeemDenom: string, lptAmount: string, options?: any): AxiosPromise<EstimateDLPTokenAmount200Response> {
+        estimateRedeemAmount(redeemDenom: string, lptAmount: string, options?: any): AxiosPromise<EstimateRedeemAmount200Response> {
             return localVarFp.estimateRedeemAmount(redeemDenom, lptAmount, options).then((request) => request(axios, basePath));
         },
         /**
