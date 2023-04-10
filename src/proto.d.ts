@@ -8759,9 +8759,6 @@ export namespace ununifi {
             /** PerpetualFuturesPositionInstance size */
             size?: (string|null);
 
-            /** PerpetualFuturesPositionInstance size_in_micro */
-            size_in_micro?: (string|null);
-
             /** PerpetualFuturesPositionInstance leverage */
             leverage?: (number|null);
         }
@@ -8780,9 +8777,6 @@ export namespace ununifi {
 
             /** PerpetualFuturesPositionInstance size. */
             public size: string;
-
-            /** PerpetualFuturesPositionInstance size_in_micro. */
-            public size_in_micro: string;
 
             /** PerpetualFuturesPositionInstance leverage. */
             public leverage: number;
@@ -8857,8 +8851,11 @@ export namespace ununifi {
             /** PerpetualFuturesNetPositionOfMarket market */
             market?: (ununifi.derivatives.IMarket|null);
 
-            /** PerpetualFuturesNetPositionOfMarket position_size_in_micro */
-            position_size_in_micro?: (string|null);
+            /** PerpetualFuturesNetPositionOfMarket position_type */
+            position_type?: (ununifi.derivatives.PositionType|null);
+
+            /** PerpetualFuturesNetPositionOfMarket position_size_in_denom_exponent */
+            position_size_in_denom_exponent?: (string|null);
         }
 
         /** Represents a PerpetualFuturesNetPositionOfMarket. */
@@ -8873,8 +8870,11 @@ export namespace ununifi {
             /** PerpetualFuturesNetPositionOfMarket market. */
             public market?: (ununifi.derivatives.IMarket|null);
 
-            /** PerpetualFuturesNetPositionOfMarket position_size_in_micro. */
-            public position_size_in_micro: string;
+            /** PerpetualFuturesNetPositionOfMarket position_type. */
+            public position_type: ununifi.derivatives.PositionType;
+
+            /** PerpetualFuturesNetPositionOfMarket position_size_in_denom_exponent. */
+            public position_size_in_denom_exponent: string;
 
             /**
              * Encodes the specified PerpetualFuturesNetPositionOfMarket message. Does not implicitly {@link ununifi.derivatives.PerpetualFuturesNetPositionOfMarket.verify|verify} messages.
