@@ -7,3 +7,4 @@ export * from './nftmarket';
 export * from './nftmint';
 export * from './ecosystem-incentive';
 export * from './derivatives';
+export * from './copy-trading';
