@@ -4635,2526 +4635,2522 @@ export namespace ununifi {
         }
     }
 
-    /** Namespace chain. */
-    namespace chain {
-
-        /** Namespace copytrading. */
-        namespace copytrading {
-
-            /** Represents a Query */
-            class Query extends $protobuf.rpc.Service {
-
-                /**
-                 * Constructs a new Query service.
-                 * @param rpcImpl RPC implementation
-                 * @param [requestDelimited=false] Whether requests are length-delimited
-                 * @param [responseDelimited=false] Whether responses are length-delimited
-                 */
-                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
-
-                /**
-                 * Calls Params.
-                 * @param request QueryParamsRequest message or plain object
-                 * @param callback Node-style callback called with the error, if any, and QueryParamsResponse
-                 */
-                public params(request: ununifi.chain.copytrading.IQueryParamsRequest, callback: ununifi.chain.copytrading.Query.ParamsCallback): void;
-
-                /**
-                 * Calls Params.
-                 * @param request QueryParamsRequest message or plain object
-                 * @returns Promise
-                 */
-                public params(request: ununifi.chain.copytrading.IQueryParamsRequest): Promise<ununifi.chain.copytrading.QueryParamsResponse>;
-
-                /**
-                 * Calls ExemplaryTrader.
-                 * @param request QueryGetExemplaryTraderRequest message or plain object
-                 * @param callback Node-style callback called with the error, if any, and QueryGetExemplaryTraderResponse
-                 */
-                public exemplaryTrader(request: ununifi.chain.copytrading.IQueryGetExemplaryTraderRequest, callback: ununifi.chain.copytrading.Query.ExemplaryTraderCallback): void;
-
-                /**
-                 * Calls ExemplaryTrader.
-                 * @param request QueryGetExemplaryTraderRequest message or plain object
-                 * @returns Promise
-                 */
-                public exemplaryTrader(request: ununifi.chain.copytrading.IQueryGetExemplaryTraderRequest): Promise<ununifi.chain.copytrading.QueryGetExemplaryTraderResponse>;
-
-                /**
-                 * Calls ExemplaryTraderAll.
-                 * @param request QueryAllExemplaryTraderRequest message or plain object
-                 * @param callback Node-style callback called with the error, if any, and QueryAllExemplaryTraderResponse
-                 */
-                public exemplaryTraderAll(request: ununifi.chain.copytrading.IQueryAllExemplaryTraderRequest, callback: ununifi.chain.copytrading.Query.ExemplaryTraderAllCallback): void;
-
-                /**
-                 * Calls ExemplaryTraderAll.
-                 * @param request QueryAllExemplaryTraderRequest message or plain object
-                 * @returns Promise
-                 */
-                public exemplaryTraderAll(request: ununifi.chain.copytrading.IQueryAllExemplaryTraderRequest): Promise<ununifi.chain.copytrading.QueryAllExemplaryTraderResponse>;
-
-                /**
-                 * Calls ExemplaryTraderTracing.
-                 * @param request QueryGetExemplaryTraderTracingRequest message or plain object
-                 * @param callback Node-style callback called with the error, if any, and QueryGetExemplaryTraderTracingResponse
-                 */
-                public exemplaryTraderTracing(request: ununifi.chain.copytrading.IQueryGetExemplaryTraderTracingRequest, callback: ununifi.chain.copytrading.Query.ExemplaryTraderTracingCallback): void;
-
-                /**
-                 * Calls ExemplaryTraderTracing.
-                 * @param request QueryGetExemplaryTraderTracingRequest message or plain object
-                 * @returns Promise
-                 */
-                public exemplaryTraderTracing(request: ununifi.chain.copytrading.IQueryGetExemplaryTraderTracingRequest): Promise<ununifi.chain.copytrading.QueryGetExemplaryTraderTracingResponse>;
-
-                /**
-                 * Calls Tracing.
-                 * @param request QueryGetTracingRequest message or plain object
-                 * @param callback Node-style callback called with the error, if any, and QueryGetTracingResponse
-                 */
-                public tracing(request: ununifi.chain.copytrading.IQueryGetTracingRequest, callback: ununifi.chain.copytrading.Query.TracingCallback): void;
-
-                /**
-                 * Calls Tracing.
-                 * @param request QueryGetTracingRequest message or plain object
-                 * @returns Promise
-                 */
-                public tracing(request: ununifi.chain.copytrading.IQueryGetTracingRequest): Promise<ununifi.chain.copytrading.QueryGetTracingResponse>;
-
-                /**
-                 * Calls TracingAll.
-                 * @param request QueryAllTracingRequest message or plain object
-                 * @param callback Node-style callback called with the error, if any, and QueryAllTracingResponse
-                 */
-                public tracingAll(request: ununifi.chain.copytrading.IQueryAllTracingRequest, callback: ununifi.chain.copytrading.Query.TracingAllCallback): void;
-
-                /**
-                 * Calls TracingAll.
-                 * @param request QueryAllTracingRequest message or plain object
-                 * @returns Promise
-                 */
-                public tracingAll(request: ununifi.chain.copytrading.IQueryAllTracingRequest): Promise<ununifi.chain.copytrading.QueryAllTracingResponse>;
-            }
-
-            namespace Query {
-
-                /**
-                 * Callback as used by {@link ununifi.chain.copytrading.Query#params}.
-                 * @param error Error, if any
-                 * @param [response] QueryParamsResponse
-                 */
-                type ParamsCallback = (error: (Error|null), response?: ununifi.chain.copytrading.QueryParamsResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.copytrading.Query#exemplaryTrader}.
-                 * @param error Error, if any
-                 * @param [response] QueryGetExemplaryTraderResponse
-                 */
-                type ExemplaryTraderCallback = (error: (Error|null), response?: ununifi.chain.copytrading.QueryGetExemplaryTraderResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.copytrading.Query#exemplaryTraderAll}.
-                 * @param error Error, if any
-                 * @param [response] QueryAllExemplaryTraderResponse
-                 */
-                type ExemplaryTraderAllCallback = (error: (Error|null), response?: ununifi.chain.copytrading.QueryAllExemplaryTraderResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.copytrading.Query#exemplaryTraderTracing}.
-                 * @param error Error, if any
-                 * @param [response] QueryGetExemplaryTraderTracingResponse
-                 */
-                type ExemplaryTraderTracingCallback = (error: (Error|null), response?: ununifi.chain.copytrading.QueryGetExemplaryTraderTracingResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.copytrading.Query#tracing}.
-                 * @param error Error, if any
-                 * @param [response] QueryGetTracingResponse
-                 */
-                type TracingCallback = (error: (Error|null), response?: ununifi.chain.copytrading.QueryGetTracingResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.copytrading.Query#tracingAll}.
-                 * @param error Error, if any
-                 * @param [response] QueryAllTracingResponse
-                 */
-                type TracingAllCallback = (error: (Error|null), response?: ununifi.chain.copytrading.QueryAllTracingResponse) => void;
-            }
-
-            /** Properties of a QueryParamsRequest. */
-            interface IQueryParamsRequest {
-            }
-
-            /** Represents a QueryParamsRequest. */
-            class QueryParamsRequest implements IQueryParamsRequest {
-
-                /**
-                 * Constructs a new QueryParamsRequest.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IQueryParamsRequest);
-
-                /**
-                 * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.chain.copytrading.QueryParamsRequest.verify|verify} messages.
-                 * @param message QueryParamsRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.QueryParamsRequest.verify|verify} messages.
-                 * @param message QueryParamsRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryParamsRequest message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryParamsRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.QueryParamsRequest;
-
-                /**
-                 * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryParamsRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.QueryParamsRequest;
-
-                /**
-                 * Verifies a QueryParamsRequest message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryParamsRequest
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.QueryParamsRequest;
-
-                /**
-                 * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
-                 * @param message QueryParamsRequest
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryParamsRequest to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryParamsResponse. */
-            interface IQueryParamsResponse {
-
-                /** QueryParamsResponse params */
-                params?: (ununifi.chain.copytrading.IParams|null);
-            }
-
-            /** Represents a QueryParamsResponse. */
-            class QueryParamsResponse implements IQueryParamsResponse {
-
-                /**
-                 * Constructs a new QueryParamsResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IQueryParamsResponse);
-
-                /** QueryParamsResponse params. */
-                public params?: (ununifi.chain.copytrading.IParams|null);
-
-                /**
-                 * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.chain.copytrading.QueryParamsResponse.verify|verify} messages.
-                 * @param message QueryParamsResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.QueryParamsResponse.verify|verify} messages.
-                 * @param message QueryParamsResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryParamsResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryParamsResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.QueryParamsResponse;
-
-                /**
-                 * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryParamsResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.QueryParamsResponse;
-
-                /**
-                 * Verifies a QueryParamsResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryParamsResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.QueryParamsResponse;
-
-                /**
-                 * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
-                 * @param message QueryParamsResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.QueryParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryParamsResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryGetExemplaryTraderRequest. */
-            interface IQueryGetExemplaryTraderRequest {
-
-                /** QueryGetExemplaryTraderRequest address */
-                address?: (string|null);
-            }
-
-            /** Represents a QueryGetExemplaryTraderRequest. */
-            class QueryGetExemplaryTraderRequest implements IQueryGetExemplaryTraderRequest {
-
-                /**
-                 * Constructs a new QueryGetExemplaryTraderRequest.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IQueryGetExemplaryTraderRequest);
-
-                /** QueryGetExemplaryTraderRequest address. */
-                public address: string;
-
-                /**
-                 * Encodes the specified QueryGetExemplaryTraderRequest message. Does not implicitly {@link ununifi.chain.copytrading.QueryGetExemplaryTraderRequest.verify|verify} messages.
-                 * @param message QueryGetExemplaryTraderRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IQueryGetExemplaryTraderRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryGetExemplaryTraderRequest message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.QueryGetExemplaryTraderRequest.verify|verify} messages.
-                 * @param message QueryGetExemplaryTraderRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IQueryGetExemplaryTraderRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryGetExemplaryTraderRequest message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryGetExemplaryTraderRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.QueryGetExemplaryTraderRequest;
-
-                /**
-                 * Decodes a QueryGetExemplaryTraderRequest message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryGetExemplaryTraderRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.QueryGetExemplaryTraderRequest;
-
-                /**
-                 * Verifies a QueryGetExemplaryTraderRequest message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryGetExemplaryTraderRequest message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryGetExemplaryTraderRequest
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.QueryGetExemplaryTraderRequest;
-
-                /**
-                 * Creates a plain object from a QueryGetExemplaryTraderRequest message. Also converts values to other types if specified.
-                 * @param message QueryGetExemplaryTraderRequest
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.QueryGetExemplaryTraderRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryGetExemplaryTraderRequest to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryGetExemplaryTraderResponse. */
-            interface IQueryGetExemplaryTraderResponse {
-
-                /** QueryGetExemplaryTraderResponse exemplaryTrader */
-                exemplaryTrader?: (ununifi.chain.copytrading.IExemplaryTrader|null);
-            }
-
-            /** Represents a QueryGetExemplaryTraderResponse. */
-            class QueryGetExemplaryTraderResponse implements IQueryGetExemplaryTraderResponse {
-
-                /**
-                 * Constructs a new QueryGetExemplaryTraderResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IQueryGetExemplaryTraderResponse);
-
-                /** QueryGetExemplaryTraderResponse exemplaryTrader. */
-                public exemplaryTrader?: (ununifi.chain.copytrading.IExemplaryTrader|null);
-
-                /**
-                 * Encodes the specified QueryGetExemplaryTraderResponse message. Does not implicitly {@link ununifi.chain.copytrading.QueryGetExemplaryTraderResponse.verify|verify} messages.
-                 * @param message QueryGetExemplaryTraderResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IQueryGetExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryGetExemplaryTraderResponse message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.QueryGetExemplaryTraderResponse.verify|verify} messages.
-                 * @param message QueryGetExemplaryTraderResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IQueryGetExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryGetExemplaryTraderResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryGetExemplaryTraderResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.QueryGetExemplaryTraderResponse;
-
-                /**
-                 * Decodes a QueryGetExemplaryTraderResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryGetExemplaryTraderResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.QueryGetExemplaryTraderResponse;
-
-                /**
-                 * Verifies a QueryGetExemplaryTraderResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryGetExemplaryTraderResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryGetExemplaryTraderResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.QueryGetExemplaryTraderResponse;
-
-                /**
-                 * Creates a plain object from a QueryGetExemplaryTraderResponse message. Also converts values to other types if specified.
-                 * @param message QueryGetExemplaryTraderResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.QueryGetExemplaryTraderResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryGetExemplaryTraderResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryAllExemplaryTraderRequest. */
-            interface IQueryAllExemplaryTraderRequest {
-
-                /** QueryAllExemplaryTraderRequest pagination */
-                pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-            }
-
-            /** Represents a QueryAllExemplaryTraderRequest. */
-            class QueryAllExemplaryTraderRequest implements IQueryAllExemplaryTraderRequest {
-
-                /**
-                 * Constructs a new QueryAllExemplaryTraderRequest.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IQueryAllExemplaryTraderRequest);
-
-                /** QueryAllExemplaryTraderRequest pagination. */
-                public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-
-                /**
-                 * Encodes the specified QueryAllExemplaryTraderRequest message. Does not implicitly {@link ununifi.chain.copytrading.QueryAllExemplaryTraderRequest.verify|verify} messages.
-                 * @param message QueryAllExemplaryTraderRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IQueryAllExemplaryTraderRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryAllExemplaryTraderRequest message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.QueryAllExemplaryTraderRequest.verify|verify} messages.
-                 * @param message QueryAllExemplaryTraderRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IQueryAllExemplaryTraderRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryAllExemplaryTraderRequest message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryAllExemplaryTraderRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.QueryAllExemplaryTraderRequest;
-
-                /**
-                 * Decodes a QueryAllExemplaryTraderRequest message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryAllExemplaryTraderRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.QueryAllExemplaryTraderRequest;
-
-                /**
-                 * Verifies a QueryAllExemplaryTraderRequest message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryAllExemplaryTraderRequest message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryAllExemplaryTraderRequest
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.QueryAllExemplaryTraderRequest;
-
-                /**
-                 * Creates a plain object from a QueryAllExemplaryTraderRequest message. Also converts values to other types if specified.
-                 * @param message QueryAllExemplaryTraderRequest
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.QueryAllExemplaryTraderRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryAllExemplaryTraderRequest to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryAllExemplaryTraderResponse. */
-            interface IQueryAllExemplaryTraderResponse {
-
-                /** QueryAllExemplaryTraderResponse exemplaryTrader */
-                exemplaryTrader?: (ununifi.chain.copytrading.IExemplaryTrader[]|null);
-
-                /** QueryAllExemplaryTraderResponse pagination */
-                pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-            }
-
-            /** Represents a QueryAllExemplaryTraderResponse. */
-            class QueryAllExemplaryTraderResponse implements IQueryAllExemplaryTraderResponse {
-
-                /**
-                 * Constructs a new QueryAllExemplaryTraderResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IQueryAllExemplaryTraderResponse);
-
-                /** QueryAllExemplaryTraderResponse exemplaryTrader. */
-                public exemplaryTrader: ununifi.chain.copytrading.IExemplaryTrader[];
-
-                /** QueryAllExemplaryTraderResponse pagination. */
-                public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-
-                /**
-                 * Encodes the specified QueryAllExemplaryTraderResponse message. Does not implicitly {@link ununifi.chain.copytrading.QueryAllExemplaryTraderResponse.verify|verify} messages.
-                 * @param message QueryAllExemplaryTraderResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IQueryAllExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryAllExemplaryTraderResponse message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.QueryAllExemplaryTraderResponse.verify|verify} messages.
-                 * @param message QueryAllExemplaryTraderResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IQueryAllExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryAllExemplaryTraderResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryAllExemplaryTraderResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.QueryAllExemplaryTraderResponse;
-
-                /**
-                 * Decodes a QueryAllExemplaryTraderResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryAllExemplaryTraderResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.QueryAllExemplaryTraderResponse;
-
-                /**
-                 * Verifies a QueryAllExemplaryTraderResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryAllExemplaryTraderResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryAllExemplaryTraderResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.QueryAllExemplaryTraderResponse;
-
-                /**
-                 * Creates a plain object from a QueryAllExemplaryTraderResponse message. Also converts values to other types if specified.
-                 * @param message QueryAllExemplaryTraderResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.QueryAllExemplaryTraderResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryAllExemplaryTraderResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryGetExemplaryTraderTracingRequest. */
-            interface IQueryGetExemplaryTraderTracingRequest {
-
-                /** QueryGetExemplaryTraderTracingRequest address */
-                address?: (string|null);
-
-                /** QueryGetExemplaryTraderTracingRequest pagination */
-                pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-            }
-
-            /** Represents a QueryGetExemplaryTraderTracingRequest. */
-            class QueryGetExemplaryTraderTracingRequest implements IQueryGetExemplaryTraderTracingRequest {
-
-                /**
-                 * Constructs a new QueryGetExemplaryTraderTracingRequest.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IQueryGetExemplaryTraderTracingRequest);
-
-                /** QueryGetExemplaryTraderTracingRequest address. */
-                public address: string;
-
-                /** QueryGetExemplaryTraderTracingRequest pagination. */
-                public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-
-                /**
-                 * Encodes the specified QueryGetExemplaryTraderTracingRequest message. Does not implicitly {@link ununifi.chain.copytrading.QueryGetExemplaryTraderTracingRequest.verify|verify} messages.
-                 * @param message QueryGetExemplaryTraderTracingRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IQueryGetExemplaryTraderTracingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryGetExemplaryTraderTracingRequest message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.QueryGetExemplaryTraderTracingRequest.verify|verify} messages.
-                 * @param message QueryGetExemplaryTraderTracingRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IQueryGetExemplaryTraderTracingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryGetExemplaryTraderTracingRequest message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryGetExemplaryTraderTracingRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.QueryGetExemplaryTraderTracingRequest;
-
-                /**
-                 * Decodes a QueryGetExemplaryTraderTracingRequest message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryGetExemplaryTraderTracingRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.QueryGetExemplaryTraderTracingRequest;
-
-                /**
-                 * Verifies a QueryGetExemplaryTraderTracingRequest message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryGetExemplaryTraderTracingRequest message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryGetExemplaryTraderTracingRequest
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.QueryGetExemplaryTraderTracingRequest;
-
-                /**
-                 * Creates a plain object from a QueryGetExemplaryTraderTracingRequest message. Also converts values to other types if specified.
-                 * @param message QueryGetExemplaryTraderTracingRequest
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.QueryGetExemplaryTraderTracingRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryGetExemplaryTraderTracingRequest to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryGetExemplaryTraderTracingResponse. */
-            interface IQueryGetExemplaryTraderTracingResponse {
-
-                /** QueryGetExemplaryTraderTracingResponse tracing */
-                tracing?: (ununifi.chain.copytrading.ITracing[]|null);
-
-                /** QueryGetExemplaryTraderTracingResponse pagination */
-                pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-            }
-
-            /** Represents a QueryGetExemplaryTraderTracingResponse. */
-            class QueryGetExemplaryTraderTracingResponse implements IQueryGetExemplaryTraderTracingResponse {
-
-                /**
-                 * Constructs a new QueryGetExemplaryTraderTracingResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IQueryGetExemplaryTraderTracingResponse);
-
-                /** QueryGetExemplaryTraderTracingResponse tracing. */
-                public tracing: ununifi.chain.copytrading.ITracing[];
-
-                /** QueryGetExemplaryTraderTracingResponse pagination. */
-                public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-
-                /**
-                 * Encodes the specified QueryGetExemplaryTraderTracingResponse message. Does not implicitly {@link ununifi.chain.copytrading.QueryGetExemplaryTraderTracingResponse.verify|verify} messages.
-                 * @param message QueryGetExemplaryTraderTracingResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IQueryGetExemplaryTraderTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryGetExemplaryTraderTracingResponse message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.QueryGetExemplaryTraderTracingResponse.verify|verify} messages.
-                 * @param message QueryGetExemplaryTraderTracingResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IQueryGetExemplaryTraderTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryGetExemplaryTraderTracingResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryGetExemplaryTraderTracingResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.QueryGetExemplaryTraderTracingResponse;
-
-                /**
-                 * Decodes a QueryGetExemplaryTraderTracingResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryGetExemplaryTraderTracingResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.QueryGetExemplaryTraderTracingResponse;
-
-                /**
-                 * Verifies a QueryGetExemplaryTraderTracingResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryGetExemplaryTraderTracingResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryGetExemplaryTraderTracingResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.QueryGetExemplaryTraderTracingResponse;
-
-                /**
-                 * Creates a plain object from a QueryGetExemplaryTraderTracingResponse message. Also converts values to other types if specified.
-                 * @param message QueryGetExemplaryTraderTracingResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.QueryGetExemplaryTraderTracingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryGetExemplaryTraderTracingResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryGetTracingRequest. */
-            interface IQueryGetTracingRequest {
-
-                /** QueryGetTracingRequest address */
-                address?: (string|null);
-            }
-
-            /** Represents a QueryGetTracingRequest. */
-            class QueryGetTracingRequest implements IQueryGetTracingRequest {
-
-                /**
-                 * Constructs a new QueryGetTracingRequest.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IQueryGetTracingRequest);
-
-                /** QueryGetTracingRequest address. */
-                public address: string;
-
-                /**
-                 * Encodes the specified QueryGetTracingRequest message. Does not implicitly {@link ununifi.chain.copytrading.QueryGetTracingRequest.verify|verify} messages.
-                 * @param message QueryGetTracingRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IQueryGetTracingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryGetTracingRequest message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.QueryGetTracingRequest.verify|verify} messages.
-                 * @param message QueryGetTracingRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IQueryGetTracingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryGetTracingRequest message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryGetTracingRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.QueryGetTracingRequest;
-
-                /**
-                 * Decodes a QueryGetTracingRequest message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryGetTracingRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.QueryGetTracingRequest;
-
-                /**
-                 * Verifies a QueryGetTracingRequest message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryGetTracingRequest message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryGetTracingRequest
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.QueryGetTracingRequest;
-
-                /**
-                 * Creates a plain object from a QueryGetTracingRequest message. Also converts values to other types if specified.
-                 * @param message QueryGetTracingRequest
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.QueryGetTracingRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryGetTracingRequest to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryGetTracingResponse. */
-            interface IQueryGetTracingResponse {
-
-                /** QueryGetTracingResponse tracing */
-                tracing?: (ununifi.chain.copytrading.ITracing|null);
-            }
-
-            /** Represents a QueryGetTracingResponse. */
-            class QueryGetTracingResponse implements IQueryGetTracingResponse {
-
-                /**
-                 * Constructs a new QueryGetTracingResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IQueryGetTracingResponse);
-
-                /** QueryGetTracingResponse tracing. */
-                public tracing?: (ununifi.chain.copytrading.ITracing|null);
-
-                /**
-                 * Encodes the specified QueryGetTracingResponse message. Does not implicitly {@link ununifi.chain.copytrading.QueryGetTracingResponse.verify|verify} messages.
-                 * @param message QueryGetTracingResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IQueryGetTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryGetTracingResponse message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.QueryGetTracingResponse.verify|verify} messages.
-                 * @param message QueryGetTracingResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IQueryGetTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryGetTracingResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryGetTracingResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.QueryGetTracingResponse;
-
-                /**
-                 * Decodes a QueryGetTracingResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryGetTracingResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.QueryGetTracingResponse;
-
-                /**
-                 * Verifies a QueryGetTracingResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryGetTracingResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryGetTracingResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.QueryGetTracingResponse;
-
-                /**
-                 * Creates a plain object from a QueryGetTracingResponse message. Also converts values to other types if specified.
-                 * @param message QueryGetTracingResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.QueryGetTracingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryGetTracingResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryAllTracingRequest. */
-            interface IQueryAllTracingRequest {
-
-                /** QueryAllTracingRequest pagination */
-                pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-            }
-
-            /** Represents a QueryAllTracingRequest. */
-            class QueryAllTracingRequest implements IQueryAllTracingRequest {
-
-                /**
-                 * Constructs a new QueryAllTracingRequest.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IQueryAllTracingRequest);
-
-                /** QueryAllTracingRequest pagination. */
-                public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
-
-                /**
-                 * Encodes the specified QueryAllTracingRequest message. Does not implicitly {@link ununifi.chain.copytrading.QueryAllTracingRequest.verify|verify} messages.
-                 * @param message QueryAllTracingRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IQueryAllTracingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryAllTracingRequest message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.QueryAllTracingRequest.verify|verify} messages.
-                 * @param message QueryAllTracingRequest message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IQueryAllTracingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryAllTracingRequest message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryAllTracingRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.QueryAllTracingRequest;
-
-                /**
-                 * Decodes a QueryAllTracingRequest message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryAllTracingRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.QueryAllTracingRequest;
-
-                /**
-                 * Verifies a QueryAllTracingRequest message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryAllTracingRequest message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryAllTracingRequest
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.QueryAllTracingRequest;
-
-                /**
-                 * Creates a plain object from a QueryAllTracingRequest message. Also converts values to other types if specified.
-                 * @param message QueryAllTracingRequest
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.QueryAllTracingRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryAllTracingRequest to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a QueryAllTracingResponse. */
-            interface IQueryAllTracingResponse {
-
-                /** QueryAllTracingResponse tracing */
-                tracing?: (ununifi.chain.copytrading.ITracing[]|null);
-
-                /** QueryAllTracingResponse pagination */
-                pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-            }
-
-            /** Represents a QueryAllTracingResponse. */
-            class QueryAllTracingResponse implements IQueryAllTracingResponse {
-
-                /**
-                 * Constructs a new QueryAllTracingResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IQueryAllTracingResponse);
-
-                /** QueryAllTracingResponse tracing. */
-                public tracing: ununifi.chain.copytrading.ITracing[];
-
-                /** QueryAllTracingResponse pagination. */
-                public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
-
-                /**
-                 * Encodes the specified QueryAllTracingResponse message. Does not implicitly {@link ununifi.chain.copytrading.QueryAllTracingResponse.verify|verify} messages.
-                 * @param message QueryAllTracingResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IQueryAllTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified QueryAllTracingResponse message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.QueryAllTracingResponse.verify|verify} messages.
-                 * @param message QueryAllTracingResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IQueryAllTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a QueryAllTracingResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns QueryAllTracingResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.QueryAllTracingResponse;
-
-                /**
-                 * Decodes a QueryAllTracingResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns QueryAllTracingResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.QueryAllTracingResponse;
-
-                /**
-                 * Verifies a QueryAllTracingResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a QueryAllTracingResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns QueryAllTracingResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.QueryAllTracingResponse;
-
-                /**
-                 * Creates a plain object from a QueryAllTracingResponse message. Also converts values to other types if specified.
-                 * @param message QueryAllTracingResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.QueryAllTracingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this QueryAllTracingResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a Params. */
-            interface IParams {
-            }
-
-            /** Represents a Params. */
-            class Params implements IParams {
-
-                /**
-                 * Constructs a new Params.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IParams);
-
-                /**
-                 * Encodes the specified Params message. Does not implicitly {@link ununifi.chain.copytrading.Params.verify|verify} messages.
-                 * @param message Params message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.Params.verify|verify} messages.
-                 * @param message Params message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a Params message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns Params
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.Params;
-
-                /**
-                 * Decodes a Params message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns Params
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.Params;
-
-                /**
-                 * Verifies a Params message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a Params message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Params
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.Params;
-
-                /**
-                 * Creates a plain object from a Params message. Also converts values to other types if specified.
-                 * @param message Params
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this Params to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of an ExemplaryTrader. */
-            interface IExemplaryTrader {
-
-                /** ExemplaryTrader address */
-                address?: (string|null);
-
-                /** ExemplaryTrader name */
-                name?: (string|null);
-
-                /** ExemplaryTrader description */
-                description?: (string|null);
-
-                /** ExemplaryTrader profit_commission_rate */
-                profit_commission_rate?: (string|null);
-            }
-
-            /** Represents an ExemplaryTrader. */
-            class ExemplaryTrader implements IExemplaryTrader {
-
-                /**
-                 * Constructs a new ExemplaryTrader.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IExemplaryTrader);
-
-                /** ExemplaryTrader address. */
-                public address: string;
-
-                /** ExemplaryTrader name. */
-                public name: string;
-
-                /** ExemplaryTrader description. */
-                public description: string;
-
-                /** ExemplaryTrader profit_commission_rate. */
-                public profit_commission_rate: string;
-
-                /**
-                 * Encodes the specified ExemplaryTrader message. Does not implicitly {@link ununifi.chain.copytrading.ExemplaryTrader.verify|verify} messages.
-                 * @param message ExemplaryTrader message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified ExemplaryTrader message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.ExemplaryTrader.verify|verify} messages.
-                 * @param message ExemplaryTrader message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes an ExemplaryTrader message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns ExemplaryTrader
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.ExemplaryTrader;
-
-                /**
-                 * Decodes an ExemplaryTrader message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns ExemplaryTrader
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.ExemplaryTrader;
-
-                /**
-                 * Verifies an ExemplaryTrader message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates an ExemplaryTrader message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns ExemplaryTrader
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.ExemplaryTrader;
-
-                /**
-                 * Creates a plain object from an ExemplaryTrader message. Also converts values to other types if specified.
-                 * @param message ExemplaryTrader
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.ExemplaryTrader, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this ExemplaryTrader to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a Tracing. */
-            interface ITracing {
-
-                /** Tracing address */
-                address?: (string|null);
-
-                /** Tracing exemplary_trader */
-                exemplary_trader?: (string|null);
-
-                /** Tracing size_coefficient */
-                size_coefficient?: (string|null);
-
-                /** Tracing leverage_coefficient */
-                leverage_coefficient?: (string|null);
-
-                /** Tracing reverse */
-                reverse?: (boolean|null);
-            }
-
-            /** Represents a Tracing. */
-            class Tracing implements ITracing {
-
-                /**
-                 * Constructs a new Tracing.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.ITracing);
-
-                /** Tracing address. */
-                public address: string;
-
-                /** Tracing exemplary_trader. */
-                public exemplary_trader: string;
-
-                /** Tracing size_coefficient. */
-                public size_coefficient: string;
-
-                /** Tracing leverage_coefficient. */
-                public leverage_coefficient: string;
-
-                /** Tracing reverse. */
-                public reverse: boolean;
-
-                /**
-                 * Encodes the specified Tracing message. Does not implicitly {@link ununifi.chain.copytrading.Tracing.verify|verify} messages.
-                 * @param message Tracing message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.ITracing, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified Tracing message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.Tracing.verify|verify} messages.
-                 * @param message Tracing message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.ITracing, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a Tracing message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns Tracing
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.Tracing;
-
-                /**
-                 * Decodes a Tracing message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns Tracing
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.Tracing;
-
-                /**
-                 * Verifies a Tracing message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a Tracing message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Tracing
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.Tracing;
-
-                /**
-                 * Creates a plain object from a Tracing message. Also converts values to other types if specified.
-                 * @param message Tracing
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.Tracing, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this Tracing to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Represents a Msg */
-            class Msg extends $protobuf.rpc.Service {
-
-                /**
-                 * Constructs a new Msg service.
-                 * @param rpcImpl RPC implementation
-                 * @param [requestDelimited=false] Whether requests are length-delimited
-                 * @param [responseDelimited=false] Whether responses are length-delimited
-                 */
-                constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
-
-                /**
-                 * Calls CreateExemplaryTrader.
-                 * @param request MsgCreateExemplaryTrader message or plain object
-                 * @param callback Node-style callback called with the error, if any, and MsgCreateExemplaryTraderResponse
-                 */
-                public createExemplaryTrader(request: ununifi.chain.copytrading.IMsgCreateExemplaryTrader, callback: ununifi.chain.copytrading.Msg.CreateExemplaryTraderCallback): void;
-
-                /**
-                 * Calls CreateExemplaryTrader.
-                 * @param request MsgCreateExemplaryTrader message or plain object
-                 * @returns Promise
-                 */
-                public createExemplaryTrader(request: ununifi.chain.copytrading.IMsgCreateExemplaryTrader): Promise<ununifi.chain.copytrading.MsgCreateExemplaryTraderResponse>;
-
-                /**
-                 * Calls UpdateExemplaryTrader.
-                 * @param request MsgUpdateExemplaryTrader message or plain object
-                 * @param callback Node-style callback called with the error, if any, and MsgUpdateExemplaryTraderResponse
-                 */
-                public updateExemplaryTrader(request: ununifi.chain.copytrading.IMsgUpdateExemplaryTrader, callback: ununifi.chain.copytrading.Msg.UpdateExemplaryTraderCallback): void;
-
-                /**
-                 * Calls UpdateExemplaryTrader.
-                 * @param request MsgUpdateExemplaryTrader message or plain object
-                 * @returns Promise
-                 */
-                public updateExemplaryTrader(request: ununifi.chain.copytrading.IMsgUpdateExemplaryTrader): Promise<ununifi.chain.copytrading.MsgUpdateExemplaryTraderResponse>;
-
-                /**
-                 * Calls DeleteExemplaryTrader.
-                 * @param request MsgDeleteExemplaryTrader message or plain object
-                 * @param callback Node-style callback called with the error, if any, and MsgDeleteExemplaryTraderResponse
-                 */
-                public deleteExemplaryTrader(request: ununifi.chain.copytrading.IMsgDeleteExemplaryTrader, callback: ununifi.chain.copytrading.Msg.DeleteExemplaryTraderCallback): void;
-
-                /**
-                 * Calls DeleteExemplaryTrader.
-                 * @param request MsgDeleteExemplaryTrader message or plain object
-                 * @returns Promise
-                 */
-                public deleteExemplaryTrader(request: ununifi.chain.copytrading.IMsgDeleteExemplaryTrader): Promise<ununifi.chain.copytrading.MsgDeleteExemplaryTraderResponse>;
-
-                /**
-                 * Calls CreateTracing.
-                 * @param request MsgCreateTracing message or plain object
-                 * @param callback Node-style callback called with the error, if any, and MsgCreateTracingResponse
-                 */
-                public createTracing(request: ununifi.chain.copytrading.IMsgCreateTracing, callback: ununifi.chain.copytrading.Msg.CreateTracingCallback): void;
-
-                /**
-                 * Calls CreateTracing.
-                 * @param request MsgCreateTracing message or plain object
-                 * @returns Promise
-                 */
-                public createTracing(request: ununifi.chain.copytrading.IMsgCreateTracing): Promise<ununifi.chain.copytrading.MsgCreateTracingResponse>;
-
-                /**
-                 * Calls DeleteTracing.
-                 * @param request MsgDeleteTracing message or plain object
-                 * @param callback Node-style callback called with the error, if any, and MsgDeleteTracingResponse
-                 */
-                public deleteTracing(request: ununifi.chain.copytrading.IMsgDeleteTracing, callback: ununifi.chain.copytrading.Msg.DeleteTracingCallback): void;
-
-                /**
-                 * Calls DeleteTracing.
-                 * @param request MsgDeleteTracing message or plain object
-                 * @returns Promise
-                 */
-                public deleteTracing(request: ununifi.chain.copytrading.IMsgDeleteTracing): Promise<ununifi.chain.copytrading.MsgDeleteTracingResponse>;
-            }
-
-            namespace Msg {
-
-                /**
-                 * Callback as used by {@link ununifi.chain.copytrading.Msg#createExemplaryTrader}.
-                 * @param error Error, if any
-                 * @param [response] MsgCreateExemplaryTraderResponse
-                 */
-                type CreateExemplaryTraderCallback = (error: (Error|null), response?: ununifi.chain.copytrading.MsgCreateExemplaryTraderResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.copytrading.Msg#updateExemplaryTrader}.
-                 * @param error Error, if any
-                 * @param [response] MsgUpdateExemplaryTraderResponse
-                 */
-                type UpdateExemplaryTraderCallback = (error: (Error|null), response?: ununifi.chain.copytrading.MsgUpdateExemplaryTraderResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.copytrading.Msg#deleteExemplaryTrader}.
-                 * @param error Error, if any
-                 * @param [response] MsgDeleteExemplaryTraderResponse
-                 */
-                type DeleteExemplaryTraderCallback = (error: (Error|null), response?: ununifi.chain.copytrading.MsgDeleteExemplaryTraderResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.copytrading.Msg#createTracing}.
-                 * @param error Error, if any
-                 * @param [response] MsgCreateTracingResponse
-                 */
-                type CreateTracingCallback = (error: (Error|null), response?: ununifi.chain.copytrading.MsgCreateTracingResponse) => void;
-
-                /**
-                 * Callback as used by {@link ununifi.chain.copytrading.Msg#deleteTracing}.
-                 * @param error Error, if any
-                 * @param [response] MsgDeleteTracingResponse
-                 */
-                type DeleteTracingCallback = (error: (Error|null), response?: ununifi.chain.copytrading.MsgDeleteTracingResponse) => void;
-            }
-
-            /** Properties of a MsgCreateExemplaryTrader. */
-            interface IMsgCreateExemplaryTrader {
-
-                /** MsgCreateExemplaryTrader sender */
-                sender?: (string|null);
-
-                /** MsgCreateExemplaryTrader name */
-                name?: (string|null);
-
-                /** MsgCreateExemplaryTrader description */
-                description?: (string|null);
-
-                /** MsgCreateExemplaryTrader profit_commission_rate */
-                profit_commission_rate?: (string|null);
-            }
-
-            /** Represents a MsgCreateExemplaryTrader. */
-            class MsgCreateExemplaryTrader implements IMsgCreateExemplaryTrader {
-
-                /**
-                 * Constructs a new MsgCreateExemplaryTrader.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IMsgCreateExemplaryTrader);
-
-                /** MsgCreateExemplaryTrader sender. */
-                public sender: string;
-
-                /** MsgCreateExemplaryTrader name. */
-                public name: string;
-
-                /** MsgCreateExemplaryTrader description. */
-                public description: string;
-
-                /** MsgCreateExemplaryTrader profit_commission_rate. */
-                public profit_commission_rate: string;
-
-                /**
-                 * Encodes the specified MsgCreateExemplaryTrader message. Does not implicitly {@link ununifi.chain.copytrading.MsgCreateExemplaryTrader.verify|verify} messages.
-                 * @param message MsgCreateExemplaryTrader message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IMsgCreateExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgCreateExemplaryTrader message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.MsgCreateExemplaryTrader.verify|verify} messages.
-                 * @param message MsgCreateExemplaryTrader message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IMsgCreateExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgCreateExemplaryTrader message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgCreateExemplaryTrader
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.MsgCreateExemplaryTrader;
-
-                /**
-                 * Decodes a MsgCreateExemplaryTrader message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgCreateExemplaryTrader
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.MsgCreateExemplaryTrader;
-
-                /**
-                 * Verifies a MsgCreateExemplaryTrader message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgCreateExemplaryTrader message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgCreateExemplaryTrader
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.MsgCreateExemplaryTrader;
-
-                /**
-                 * Creates a plain object from a MsgCreateExemplaryTrader message. Also converts values to other types if specified.
-                 * @param message MsgCreateExemplaryTrader
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.MsgCreateExemplaryTrader, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgCreateExemplaryTrader to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgCreateExemplaryTraderResponse. */
-            interface IMsgCreateExemplaryTraderResponse {
-            }
-
-            /** Represents a MsgCreateExemplaryTraderResponse. */
-            class MsgCreateExemplaryTraderResponse implements IMsgCreateExemplaryTraderResponse {
-
-                /**
-                 * Constructs a new MsgCreateExemplaryTraderResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IMsgCreateExemplaryTraderResponse);
-
-                /**
-                 * Encodes the specified MsgCreateExemplaryTraderResponse message. Does not implicitly {@link ununifi.chain.copytrading.MsgCreateExemplaryTraderResponse.verify|verify} messages.
-                 * @param message MsgCreateExemplaryTraderResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IMsgCreateExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgCreateExemplaryTraderResponse message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.MsgCreateExemplaryTraderResponse.verify|verify} messages.
-                 * @param message MsgCreateExemplaryTraderResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IMsgCreateExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgCreateExemplaryTraderResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgCreateExemplaryTraderResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.MsgCreateExemplaryTraderResponse;
-
-                /**
-                 * Decodes a MsgCreateExemplaryTraderResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgCreateExemplaryTraderResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.MsgCreateExemplaryTraderResponse;
-
-                /**
-                 * Verifies a MsgCreateExemplaryTraderResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgCreateExemplaryTraderResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgCreateExemplaryTraderResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.MsgCreateExemplaryTraderResponse;
-
-                /**
-                 * Creates a plain object from a MsgCreateExemplaryTraderResponse message. Also converts values to other types if specified.
-                 * @param message MsgCreateExemplaryTraderResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.MsgCreateExemplaryTraderResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgCreateExemplaryTraderResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgUpdateExemplaryTrader. */
-            interface IMsgUpdateExemplaryTrader {
-
-                /** MsgUpdateExemplaryTrader sender */
-                sender?: (string|null);
-
-                /** MsgUpdateExemplaryTrader name */
-                name?: (string|null);
-
-                /** MsgUpdateExemplaryTrader description */
-                description?: (string|null);
-
-                /** MsgUpdateExemplaryTrader profit_commission_rate */
-                profit_commission_rate?: (string|null);
-            }
-
-            /** Represents a MsgUpdateExemplaryTrader. */
-            class MsgUpdateExemplaryTrader implements IMsgUpdateExemplaryTrader {
-
-                /**
-                 * Constructs a new MsgUpdateExemplaryTrader.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IMsgUpdateExemplaryTrader);
-
-                /** MsgUpdateExemplaryTrader sender. */
-                public sender: string;
-
-                /** MsgUpdateExemplaryTrader name. */
-                public name: string;
-
-                /** MsgUpdateExemplaryTrader description. */
-                public description: string;
-
-                /** MsgUpdateExemplaryTrader profit_commission_rate. */
-                public profit_commission_rate: string;
-
-                /**
-                 * Encodes the specified MsgUpdateExemplaryTrader message. Does not implicitly {@link ununifi.chain.copytrading.MsgUpdateExemplaryTrader.verify|verify} messages.
-                 * @param message MsgUpdateExemplaryTrader message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IMsgUpdateExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgUpdateExemplaryTrader message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.MsgUpdateExemplaryTrader.verify|verify} messages.
-                 * @param message MsgUpdateExemplaryTrader message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IMsgUpdateExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgUpdateExemplaryTrader message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgUpdateExemplaryTrader
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.MsgUpdateExemplaryTrader;
-
-                /**
-                 * Decodes a MsgUpdateExemplaryTrader message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgUpdateExemplaryTrader
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.MsgUpdateExemplaryTrader;
-
-                /**
-                 * Verifies a MsgUpdateExemplaryTrader message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgUpdateExemplaryTrader message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgUpdateExemplaryTrader
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.MsgUpdateExemplaryTrader;
-
-                /**
-                 * Creates a plain object from a MsgUpdateExemplaryTrader message. Also converts values to other types if specified.
-                 * @param message MsgUpdateExemplaryTrader
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.MsgUpdateExemplaryTrader, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgUpdateExemplaryTrader to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgUpdateExemplaryTraderResponse. */
-            interface IMsgUpdateExemplaryTraderResponse {
-            }
-
-            /** Represents a MsgUpdateExemplaryTraderResponse. */
-            class MsgUpdateExemplaryTraderResponse implements IMsgUpdateExemplaryTraderResponse {
-
-                /**
-                 * Constructs a new MsgUpdateExemplaryTraderResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IMsgUpdateExemplaryTraderResponse);
-
-                /**
-                 * Encodes the specified MsgUpdateExemplaryTraderResponse message. Does not implicitly {@link ununifi.chain.copytrading.MsgUpdateExemplaryTraderResponse.verify|verify} messages.
-                 * @param message MsgUpdateExemplaryTraderResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IMsgUpdateExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgUpdateExemplaryTraderResponse message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.MsgUpdateExemplaryTraderResponse.verify|verify} messages.
-                 * @param message MsgUpdateExemplaryTraderResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IMsgUpdateExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgUpdateExemplaryTraderResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgUpdateExemplaryTraderResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.MsgUpdateExemplaryTraderResponse;
-
-                /**
-                 * Decodes a MsgUpdateExemplaryTraderResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgUpdateExemplaryTraderResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.MsgUpdateExemplaryTraderResponse;
-
-                /**
-                 * Verifies a MsgUpdateExemplaryTraderResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgUpdateExemplaryTraderResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgUpdateExemplaryTraderResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.MsgUpdateExemplaryTraderResponse;
-
-                /**
-                 * Creates a plain object from a MsgUpdateExemplaryTraderResponse message. Also converts values to other types if specified.
-                 * @param message MsgUpdateExemplaryTraderResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.MsgUpdateExemplaryTraderResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgUpdateExemplaryTraderResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgDeleteExemplaryTrader. */
-            interface IMsgDeleteExemplaryTrader {
-
-                /** MsgDeleteExemplaryTrader sender */
-                sender?: (string|null);
-            }
-
-            /** Represents a MsgDeleteExemplaryTrader. */
-            class MsgDeleteExemplaryTrader implements IMsgDeleteExemplaryTrader {
-
-                /**
-                 * Constructs a new MsgDeleteExemplaryTrader.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IMsgDeleteExemplaryTrader);
-
-                /** MsgDeleteExemplaryTrader sender. */
-                public sender: string;
-
-                /**
-                 * Encodes the specified MsgDeleteExemplaryTrader message. Does not implicitly {@link ununifi.chain.copytrading.MsgDeleteExemplaryTrader.verify|verify} messages.
-                 * @param message MsgDeleteExemplaryTrader message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IMsgDeleteExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgDeleteExemplaryTrader message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.MsgDeleteExemplaryTrader.verify|verify} messages.
-                 * @param message MsgDeleteExemplaryTrader message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IMsgDeleteExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgDeleteExemplaryTrader message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgDeleteExemplaryTrader
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.MsgDeleteExemplaryTrader;
-
-                /**
-                 * Decodes a MsgDeleteExemplaryTrader message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgDeleteExemplaryTrader
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.MsgDeleteExemplaryTrader;
-
-                /**
-                 * Verifies a MsgDeleteExemplaryTrader message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgDeleteExemplaryTrader message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgDeleteExemplaryTrader
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.MsgDeleteExemplaryTrader;
-
-                /**
-                 * Creates a plain object from a MsgDeleteExemplaryTrader message. Also converts values to other types if specified.
-                 * @param message MsgDeleteExemplaryTrader
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.MsgDeleteExemplaryTrader, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgDeleteExemplaryTrader to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgDeleteExemplaryTraderResponse. */
-            interface IMsgDeleteExemplaryTraderResponse {
-            }
-
-            /** Represents a MsgDeleteExemplaryTraderResponse. */
-            class MsgDeleteExemplaryTraderResponse implements IMsgDeleteExemplaryTraderResponse {
-
-                /**
-                 * Constructs a new MsgDeleteExemplaryTraderResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IMsgDeleteExemplaryTraderResponse);
-
-                /**
-                 * Encodes the specified MsgDeleteExemplaryTraderResponse message. Does not implicitly {@link ununifi.chain.copytrading.MsgDeleteExemplaryTraderResponse.verify|verify} messages.
-                 * @param message MsgDeleteExemplaryTraderResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IMsgDeleteExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgDeleteExemplaryTraderResponse message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.MsgDeleteExemplaryTraderResponse.verify|verify} messages.
-                 * @param message MsgDeleteExemplaryTraderResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IMsgDeleteExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgDeleteExemplaryTraderResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgDeleteExemplaryTraderResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.MsgDeleteExemplaryTraderResponse;
-
-                /**
-                 * Decodes a MsgDeleteExemplaryTraderResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgDeleteExemplaryTraderResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.MsgDeleteExemplaryTraderResponse;
-
-                /**
-                 * Verifies a MsgDeleteExemplaryTraderResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgDeleteExemplaryTraderResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgDeleteExemplaryTraderResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.MsgDeleteExemplaryTraderResponse;
-
-                /**
-                 * Creates a plain object from a MsgDeleteExemplaryTraderResponse message. Also converts values to other types if specified.
-                 * @param message MsgDeleteExemplaryTraderResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.MsgDeleteExemplaryTraderResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgDeleteExemplaryTraderResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgCreateTracing. */
-            interface IMsgCreateTracing {
-
-                /** MsgCreateTracing sender */
-                sender?: (string|null);
-
-                /** MsgCreateTracing exemplary_trader */
-                exemplary_trader?: (string|null);
-
-                /** MsgCreateTracing size_coefficient */
-                size_coefficient?: (string|null);
-
-                /** MsgCreateTracing leverage_coefficient */
-                leverage_coefficient?: (string|null);
-
-                /** MsgCreateTracing reverse */
-                reverse?: (boolean|null);
-            }
-
-            /** Represents a MsgCreateTracing. */
-            class MsgCreateTracing implements IMsgCreateTracing {
-
-                /**
-                 * Constructs a new MsgCreateTracing.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IMsgCreateTracing);
-
-                /** MsgCreateTracing sender. */
-                public sender: string;
-
-                /** MsgCreateTracing exemplary_trader. */
-                public exemplary_trader: string;
-
-                /** MsgCreateTracing size_coefficient. */
-                public size_coefficient: string;
-
-                /** MsgCreateTracing leverage_coefficient. */
-                public leverage_coefficient: string;
-
-                /** MsgCreateTracing reverse. */
-                public reverse: boolean;
-
-                /**
-                 * Encodes the specified MsgCreateTracing message. Does not implicitly {@link ununifi.chain.copytrading.MsgCreateTracing.verify|verify} messages.
-                 * @param message MsgCreateTracing message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IMsgCreateTracing, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgCreateTracing message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.MsgCreateTracing.verify|verify} messages.
-                 * @param message MsgCreateTracing message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IMsgCreateTracing, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgCreateTracing message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgCreateTracing
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.MsgCreateTracing;
-
-                /**
-                 * Decodes a MsgCreateTracing message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgCreateTracing
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.MsgCreateTracing;
-
-                /**
-                 * Verifies a MsgCreateTracing message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgCreateTracing message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgCreateTracing
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.MsgCreateTracing;
-
-                /**
-                 * Creates a plain object from a MsgCreateTracing message. Also converts values to other types if specified.
-                 * @param message MsgCreateTracing
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.MsgCreateTracing, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgCreateTracing to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgCreateTracingResponse. */
-            interface IMsgCreateTracingResponse {
-            }
-
-            /** Represents a MsgCreateTracingResponse. */
-            class MsgCreateTracingResponse implements IMsgCreateTracingResponse {
-
-                /**
-                 * Constructs a new MsgCreateTracingResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IMsgCreateTracingResponse);
-
-                /**
-                 * Encodes the specified MsgCreateTracingResponse message. Does not implicitly {@link ununifi.chain.copytrading.MsgCreateTracingResponse.verify|verify} messages.
-                 * @param message MsgCreateTracingResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IMsgCreateTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgCreateTracingResponse message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.MsgCreateTracingResponse.verify|verify} messages.
-                 * @param message MsgCreateTracingResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IMsgCreateTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgCreateTracingResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgCreateTracingResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.MsgCreateTracingResponse;
-
-                /**
-                 * Decodes a MsgCreateTracingResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgCreateTracingResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.MsgCreateTracingResponse;
-
-                /**
-                 * Verifies a MsgCreateTracingResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgCreateTracingResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgCreateTracingResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.MsgCreateTracingResponse;
-
-                /**
-                 * Creates a plain object from a MsgCreateTracingResponse message. Also converts values to other types if specified.
-                 * @param message MsgCreateTracingResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.MsgCreateTracingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgCreateTracingResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgDeleteTracing. */
-            interface IMsgDeleteTracing {
-
-                /** MsgDeleteTracing sender */
-                sender?: (string|null);
-            }
-
-            /** Represents a MsgDeleteTracing. */
-            class MsgDeleteTracing implements IMsgDeleteTracing {
-
-                /**
-                 * Constructs a new MsgDeleteTracing.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IMsgDeleteTracing);
-
-                /** MsgDeleteTracing sender. */
-                public sender: string;
-
-                /**
-                 * Encodes the specified MsgDeleteTracing message. Does not implicitly {@link ununifi.chain.copytrading.MsgDeleteTracing.verify|verify} messages.
-                 * @param message MsgDeleteTracing message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IMsgDeleteTracing, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgDeleteTracing message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.MsgDeleteTracing.verify|verify} messages.
-                 * @param message MsgDeleteTracing message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IMsgDeleteTracing, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgDeleteTracing message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgDeleteTracing
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.MsgDeleteTracing;
-
-                /**
-                 * Decodes a MsgDeleteTracing message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgDeleteTracing
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.MsgDeleteTracing;
-
-                /**
-                 * Verifies a MsgDeleteTracing message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgDeleteTracing message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgDeleteTracing
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.MsgDeleteTracing;
-
-                /**
-                 * Creates a plain object from a MsgDeleteTracing message. Also converts values to other types if specified.
-                 * @param message MsgDeleteTracing
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.MsgDeleteTracing, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgDeleteTracing to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a MsgDeleteTracingResponse. */
-            interface IMsgDeleteTracingResponse {
-            }
-
-            /** Represents a MsgDeleteTracingResponse. */
-            class MsgDeleteTracingResponse implements IMsgDeleteTracingResponse {
-
-                /**
-                 * Constructs a new MsgDeleteTracingResponse.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IMsgDeleteTracingResponse);
-
-                /**
-                 * Encodes the specified MsgDeleteTracingResponse message. Does not implicitly {@link ununifi.chain.copytrading.MsgDeleteTracingResponse.verify|verify} messages.
-                 * @param message MsgDeleteTracingResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IMsgDeleteTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified MsgDeleteTracingResponse message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.MsgDeleteTracingResponse.verify|verify} messages.
-                 * @param message MsgDeleteTracingResponse message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IMsgDeleteTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a MsgDeleteTracingResponse message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns MsgDeleteTracingResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.MsgDeleteTracingResponse;
-
-                /**
-                 * Decodes a MsgDeleteTracingResponse message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns MsgDeleteTracingResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.MsgDeleteTracingResponse;
-
-                /**
-                 * Verifies a MsgDeleteTracingResponse message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a MsgDeleteTracingResponse message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns MsgDeleteTracingResponse
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.MsgDeleteTracingResponse;
-
-                /**
-                 * Creates a plain object from a MsgDeleteTracingResponse message. Also converts values to other types if specified.
-                 * @param message MsgDeleteTracingResponse
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.MsgDeleteTracingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this MsgDeleteTracingResponse to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a GenesisState. */
-            interface IGenesisState {
-
-                /** GenesisState params */
-                params?: (ununifi.chain.copytrading.IParams|null);
-
-                /** GenesisState exemplaryTraderList */
-                exemplaryTraderList?: (ununifi.chain.copytrading.IExemplaryTrader[]|null);
-
-                /** GenesisState tracingList */
-                tracingList?: (ununifi.chain.copytrading.ITracing[]|null);
-            }
-
-            /** Represents a GenesisState. */
-            class GenesisState implements IGenesisState {
-
-                /**
-                 * Constructs a new GenesisState.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: ununifi.chain.copytrading.IGenesisState);
-
-                /** GenesisState params. */
-                public params?: (ununifi.chain.copytrading.IParams|null);
-
-                /** GenesisState exemplaryTraderList. */
-                public exemplaryTraderList: ununifi.chain.copytrading.IExemplaryTrader[];
-
-                /** GenesisState tracingList. */
-                public tracingList: ununifi.chain.copytrading.ITracing[];
-
-                /**
-                 * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.chain.copytrading.GenesisState.verify|verify} messages.
-                 * @param message GenesisState message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: ununifi.chain.copytrading.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.chain.copytrading.GenesisState.verify|verify} messages.
-                 * @param message GenesisState message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: ununifi.chain.copytrading.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a GenesisState message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns GenesisState
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.chain.copytrading.GenesisState;
-
-                /**
-                 * Decodes a GenesisState message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns GenesisState
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.chain.copytrading.GenesisState;
-
-                /**
-                 * Verifies a GenesisState message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a GenesisState message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns GenesisState
-                 */
-                public static fromObject(object: { [k: string]: any }): ununifi.chain.copytrading.GenesisState;
-
-                /**
-                 * Creates a plain object from a GenesisState message. Also converts values to other types if specified.
-                 * @param message GenesisState
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: ununifi.chain.copytrading.GenesisState, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this GenesisState to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
+    /** Namespace copytrading. */
+    namespace copytrading {
+
+        /** Represents a Query */
+        class Query extends $protobuf.rpc.Service {
+
+            /**
+             * Constructs a new Query service.
+             * @param rpcImpl RPC implementation
+             * @param [requestDelimited=false] Whether requests are length-delimited
+             * @param [responseDelimited=false] Whether responses are length-delimited
+             */
+            constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+            /**
+             * Calls Params.
+             * @param request QueryParamsRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryParamsResponse
+             */
+            public params(request: ununifi.copytrading.IQueryParamsRequest, callback: ununifi.copytrading.Query.ParamsCallback): void;
+
+            /**
+             * Calls Params.
+             * @param request QueryParamsRequest message or plain object
+             * @returns Promise
+             */
+            public params(request: ununifi.copytrading.IQueryParamsRequest): Promise<ununifi.copytrading.QueryParamsResponse>;
+
+            /**
+             * Calls ExemplaryTrader.
+             * @param request QueryGetExemplaryTraderRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryGetExemplaryTraderResponse
+             */
+            public exemplaryTrader(request: ununifi.copytrading.IQueryGetExemplaryTraderRequest, callback: ununifi.copytrading.Query.ExemplaryTraderCallback): void;
+
+            /**
+             * Calls ExemplaryTrader.
+             * @param request QueryGetExemplaryTraderRequest message or plain object
+             * @returns Promise
+             */
+            public exemplaryTrader(request: ununifi.copytrading.IQueryGetExemplaryTraderRequest): Promise<ununifi.copytrading.QueryGetExemplaryTraderResponse>;
+
+            /**
+             * Calls ExemplaryTraderAll.
+             * @param request QueryAllExemplaryTraderRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryAllExemplaryTraderResponse
+             */
+            public exemplaryTraderAll(request: ununifi.copytrading.IQueryAllExemplaryTraderRequest, callback: ununifi.copytrading.Query.ExemplaryTraderAllCallback): void;
+
+            /**
+             * Calls ExemplaryTraderAll.
+             * @param request QueryAllExemplaryTraderRequest message or plain object
+             * @returns Promise
+             */
+            public exemplaryTraderAll(request: ununifi.copytrading.IQueryAllExemplaryTraderRequest): Promise<ununifi.copytrading.QueryAllExemplaryTraderResponse>;
+
+            /**
+             * Calls ExemplaryTraderTracing.
+             * @param request QueryGetExemplaryTraderTracingRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryGetExemplaryTraderTracingResponse
+             */
+            public exemplaryTraderTracing(request: ununifi.copytrading.IQueryGetExemplaryTraderTracingRequest, callback: ununifi.copytrading.Query.ExemplaryTraderTracingCallback): void;
+
+            /**
+             * Calls ExemplaryTraderTracing.
+             * @param request QueryGetExemplaryTraderTracingRequest message or plain object
+             * @returns Promise
+             */
+            public exemplaryTraderTracing(request: ununifi.copytrading.IQueryGetExemplaryTraderTracingRequest): Promise<ununifi.copytrading.QueryGetExemplaryTraderTracingResponse>;
+
+            /**
+             * Calls Tracing.
+             * @param request QueryGetTracingRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryGetTracingResponse
+             */
+            public tracing(request: ununifi.copytrading.IQueryGetTracingRequest, callback: ununifi.copytrading.Query.TracingCallback): void;
+
+            /**
+             * Calls Tracing.
+             * @param request QueryGetTracingRequest message or plain object
+             * @returns Promise
+             */
+            public tracing(request: ununifi.copytrading.IQueryGetTracingRequest): Promise<ununifi.copytrading.QueryGetTracingResponse>;
+
+            /**
+             * Calls TracingAll.
+             * @param request QueryAllTracingRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryAllTracingResponse
+             */
+            public tracingAll(request: ununifi.copytrading.IQueryAllTracingRequest, callback: ununifi.copytrading.Query.TracingAllCallback): void;
+
+            /**
+             * Calls TracingAll.
+             * @param request QueryAllTracingRequest message or plain object
+             * @returns Promise
+             */
+            public tracingAll(request: ununifi.copytrading.IQueryAllTracingRequest): Promise<ununifi.copytrading.QueryAllTracingResponse>;
+        }
+
+        namespace Query {
+
+            /**
+             * Callback as used by {@link ununifi.copytrading.Query#params}.
+             * @param error Error, if any
+             * @param [response] QueryParamsResponse
+             */
+            type ParamsCallback = (error: (Error|null), response?: ununifi.copytrading.QueryParamsResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.copytrading.Query#exemplaryTrader}.
+             * @param error Error, if any
+             * @param [response] QueryGetExemplaryTraderResponse
+             */
+            type ExemplaryTraderCallback = (error: (Error|null), response?: ununifi.copytrading.QueryGetExemplaryTraderResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.copytrading.Query#exemplaryTraderAll}.
+             * @param error Error, if any
+             * @param [response] QueryAllExemplaryTraderResponse
+             */
+            type ExemplaryTraderAllCallback = (error: (Error|null), response?: ununifi.copytrading.QueryAllExemplaryTraderResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.copytrading.Query#exemplaryTraderTracing}.
+             * @param error Error, if any
+             * @param [response] QueryGetExemplaryTraderTracingResponse
+             */
+            type ExemplaryTraderTracingCallback = (error: (Error|null), response?: ununifi.copytrading.QueryGetExemplaryTraderTracingResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.copytrading.Query#tracing}.
+             * @param error Error, if any
+             * @param [response] QueryGetTracingResponse
+             */
+            type TracingCallback = (error: (Error|null), response?: ununifi.copytrading.QueryGetTracingResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.copytrading.Query#tracingAll}.
+             * @param error Error, if any
+             * @param [response] QueryAllTracingResponse
+             */
+            type TracingAllCallback = (error: (Error|null), response?: ununifi.copytrading.QueryAllTracingResponse) => void;
+        }
+
+        /** Properties of a QueryParamsRequest. */
+        interface IQueryParamsRequest {
+        }
+
+        /** Represents a QueryParamsRequest. */
+        class QueryParamsRequest implements IQueryParamsRequest {
+
+            /**
+             * Constructs a new QueryParamsRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IQueryParamsRequest);
+
+            /**
+             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.copytrading.QueryParamsRequest.verify|verify} messages.
+             * @param message QueryParamsRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.copytrading.QueryParamsRequest.verify|verify} messages.
+             * @param message QueryParamsRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryParamsRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryParamsRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.QueryParamsRequest;
+
+            /**
+             * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryParamsRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.QueryParamsRequest;
+
+            /**
+             * Verifies a QueryParamsRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryParamsRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.QueryParamsRequest;
+
+            /**
+             * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
+             * @param message QueryParamsRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryParamsRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryParamsResponse. */
+        interface IQueryParamsResponse {
+
+            /** QueryParamsResponse params */
+            params?: (ununifi.copytrading.IParams|null);
+        }
+
+        /** Represents a QueryParamsResponse. */
+        class QueryParamsResponse implements IQueryParamsResponse {
+
+            /**
+             * Constructs a new QueryParamsResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IQueryParamsResponse);
+
+            /** QueryParamsResponse params. */
+            public params?: (ununifi.copytrading.IParams|null);
+
+            /**
+             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.copytrading.QueryParamsResponse.verify|verify} messages.
+             * @param message QueryParamsResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.copytrading.QueryParamsResponse.verify|verify} messages.
+             * @param message QueryParamsResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryParamsResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryParamsResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.QueryParamsResponse;
+
+            /**
+             * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryParamsResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.QueryParamsResponse;
+
+            /**
+             * Verifies a QueryParamsResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryParamsResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.QueryParamsResponse;
+
+            /**
+             * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
+             * @param message QueryParamsResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.QueryParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryParamsResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetExemplaryTraderRequest. */
+        interface IQueryGetExemplaryTraderRequest {
+
+            /** QueryGetExemplaryTraderRequest address */
+            address?: (string|null);
+        }
+
+        /** Represents a QueryGetExemplaryTraderRequest. */
+        class QueryGetExemplaryTraderRequest implements IQueryGetExemplaryTraderRequest {
+
+            /**
+             * Constructs a new QueryGetExemplaryTraderRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IQueryGetExemplaryTraderRequest);
+
+            /** QueryGetExemplaryTraderRequest address. */
+            public address: string;
+
+            /**
+             * Encodes the specified QueryGetExemplaryTraderRequest message. Does not implicitly {@link ununifi.copytrading.QueryGetExemplaryTraderRequest.verify|verify} messages.
+             * @param message QueryGetExemplaryTraderRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IQueryGetExemplaryTraderRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetExemplaryTraderRequest message, length delimited. Does not implicitly {@link ununifi.copytrading.QueryGetExemplaryTraderRequest.verify|verify} messages.
+             * @param message QueryGetExemplaryTraderRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IQueryGetExemplaryTraderRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetExemplaryTraderRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetExemplaryTraderRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.QueryGetExemplaryTraderRequest;
+
+            /**
+             * Decodes a QueryGetExemplaryTraderRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetExemplaryTraderRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.QueryGetExemplaryTraderRequest;
+
+            /**
+             * Verifies a QueryGetExemplaryTraderRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetExemplaryTraderRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetExemplaryTraderRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.QueryGetExemplaryTraderRequest;
+
+            /**
+             * Creates a plain object from a QueryGetExemplaryTraderRequest message. Also converts values to other types if specified.
+             * @param message QueryGetExemplaryTraderRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.QueryGetExemplaryTraderRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetExemplaryTraderRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetExemplaryTraderResponse. */
+        interface IQueryGetExemplaryTraderResponse {
+
+            /** QueryGetExemplaryTraderResponse exemplaryTrader */
+            exemplaryTrader?: (ununifi.copytrading.IExemplaryTrader|null);
+        }
+
+        /** Represents a QueryGetExemplaryTraderResponse. */
+        class QueryGetExemplaryTraderResponse implements IQueryGetExemplaryTraderResponse {
+
+            /**
+             * Constructs a new QueryGetExemplaryTraderResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IQueryGetExemplaryTraderResponse);
+
+            /** QueryGetExemplaryTraderResponse exemplaryTrader. */
+            public exemplaryTrader?: (ununifi.copytrading.IExemplaryTrader|null);
+
+            /**
+             * Encodes the specified QueryGetExemplaryTraderResponse message. Does not implicitly {@link ununifi.copytrading.QueryGetExemplaryTraderResponse.verify|verify} messages.
+             * @param message QueryGetExemplaryTraderResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IQueryGetExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetExemplaryTraderResponse message, length delimited. Does not implicitly {@link ununifi.copytrading.QueryGetExemplaryTraderResponse.verify|verify} messages.
+             * @param message QueryGetExemplaryTraderResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IQueryGetExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetExemplaryTraderResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetExemplaryTraderResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.QueryGetExemplaryTraderResponse;
+
+            /**
+             * Decodes a QueryGetExemplaryTraderResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetExemplaryTraderResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.QueryGetExemplaryTraderResponse;
+
+            /**
+             * Verifies a QueryGetExemplaryTraderResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetExemplaryTraderResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetExemplaryTraderResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.QueryGetExemplaryTraderResponse;
+
+            /**
+             * Creates a plain object from a QueryGetExemplaryTraderResponse message. Also converts values to other types if specified.
+             * @param message QueryGetExemplaryTraderResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.QueryGetExemplaryTraderResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetExemplaryTraderResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllExemplaryTraderRequest. */
+        interface IQueryAllExemplaryTraderRequest {
+
+            /** QueryAllExemplaryTraderRequest pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+        }
+
+        /** Represents a QueryAllExemplaryTraderRequest. */
+        class QueryAllExemplaryTraderRequest implements IQueryAllExemplaryTraderRequest {
+
+            /**
+             * Constructs a new QueryAllExemplaryTraderRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IQueryAllExemplaryTraderRequest);
+
+            /** QueryAllExemplaryTraderRequest pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+
+            /**
+             * Encodes the specified QueryAllExemplaryTraderRequest message. Does not implicitly {@link ununifi.copytrading.QueryAllExemplaryTraderRequest.verify|verify} messages.
+             * @param message QueryAllExemplaryTraderRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IQueryAllExemplaryTraderRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllExemplaryTraderRequest message, length delimited. Does not implicitly {@link ununifi.copytrading.QueryAllExemplaryTraderRequest.verify|verify} messages.
+             * @param message QueryAllExemplaryTraderRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IQueryAllExemplaryTraderRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllExemplaryTraderRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllExemplaryTraderRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.QueryAllExemplaryTraderRequest;
+
+            /**
+             * Decodes a QueryAllExemplaryTraderRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllExemplaryTraderRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.QueryAllExemplaryTraderRequest;
+
+            /**
+             * Verifies a QueryAllExemplaryTraderRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllExemplaryTraderRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllExemplaryTraderRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.QueryAllExemplaryTraderRequest;
+
+            /**
+             * Creates a plain object from a QueryAllExemplaryTraderRequest message. Also converts values to other types if specified.
+             * @param message QueryAllExemplaryTraderRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.QueryAllExemplaryTraderRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllExemplaryTraderRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllExemplaryTraderResponse. */
+        interface IQueryAllExemplaryTraderResponse {
+
+            /** QueryAllExemplaryTraderResponse exemplaryTrader */
+            exemplaryTrader?: (ununifi.copytrading.IExemplaryTrader[]|null);
+
+            /** QueryAllExemplaryTraderResponse pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+        }
+
+        /** Represents a QueryAllExemplaryTraderResponse. */
+        class QueryAllExemplaryTraderResponse implements IQueryAllExemplaryTraderResponse {
+
+            /**
+             * Constructs a new QueryAllExemplaryTraderResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IQueryAllExemplaryTraderResponse);
+
+            /** QueryAllExemplaryTraderResponse exemplaryTrader. */
+            public exemplaryTrader: ununifi.copytrading.IExemplaryTrader[];
+
+            /** QueryAllExemplaryTraderResponse pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+
+            /**
+             * Encodes the specified QueryAllExemplaryTraderResponse message. Does not implicitly {@link ununifi.copytrading.QueryAllExemplaryTraderResponse.verify|verify} messages.
+             * @param message QueryAllExemplaryTraderResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IQueryAllExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllExemplaryTraderResponse message, length delimited. Does not implicitly {@link ununifi.copytrading.QueryAllExemplaryTraderResponse.verify|verify} messages.
+             * @param message QueryAllExemplaryTraderResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IQueryAllExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllExemplaryTraderResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllExemplaryTraderResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.QueryAllExemplaryTraderResponse;
+
+            /**
+             * Decodes a QueryAllExemplaryTraderResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllExemplaryTraderResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.QueryAllExemplaryTraderResponse;
+
+            /**
+             * Verifies a QueryAllExemplaryTraderResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllExemplaryTraderResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllExemplaryTraderResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.QueryAllExemplaryTraderResponse;
+
+            /**
+             * Creates a plain object from a QueryAllExemplaryTraderResponse message. Also converts values to other types if specified.
+             * @param message QueryAllExemplaryTraderResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.QueryAllExemplaryTraderResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllExemplaryTraderResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetExemplaryTraderTracingRequest. */
+        interface IQueryGetExemplaryTraderTracingRequest {
+
+            /** QueryGetExemplaryTraderTracingRequest address */
+            address?: (string|null);
+
+            /** QueryGetExemplaryTraderTracingRequest pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+        }
+
+        /** Represents a QueryGetExemplaryTraderTracingRequest. */
+        class QueryGetExemplaryTraderTracingRequest implements IQueryGetExemplaryTraderTracingRequest {
+
+            /**
+             * Constructs a new QueryGetExemplaryTraderTracingRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IQueryGetExemplaryTraderTracingRequest);
+
+            /** QueryGetExemplaryTraderTracingRequest address. */
+            public address: string;
+
+            /** QueryGetExemplaryTraderTracingRequest pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+
+            /**
+             * Encodes the specified QueryGetExemplaryTraderTracingRequest message. Does not implicitly {@link ununifi.copytrading.QueryGetExemplaryTraderTracingRequest.verify|verify} messages.
+             * @param message QueryGetExemplaryTraderTracingRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IQueryGetExemplaryTraderTracingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetExemplaryTraderTracingRequest message, length delimited. Does not implicitly {@link ununifi.copytrading.QueryGetExemplaryTraderTracingRequest.verify|verify} messages.
+             * @param message QueryGetExemplaryTraderTracingRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IQueryGetExemplaryTraderTracingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetExemplaryTraderTracingRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetExemplaryTraderTracingRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.QueryGetExemplaryTraderTracingRequest;
+
+            /**
+             * Decodes a QueryGetExemplaryTraderTracingRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetExemplaryTraderTracingRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.QueryGetExemplaryTraderTracingRequest;
+
+            /**
+             * Verifies a QueryGetExemplaryTraderTracingRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetExemplaryTraderTracingRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetExemplaryTraderTracingRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.QueryGetExemplaryTraderTracingRequest;
+
+            /**
+             * Creates a plain object from a QueryGetExemplaryTraderTracingRequest message. Also converts values to other types if specified.
+             * @param message QueryGetExemplaryTraderTracingRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.QueryGetExemplaryTraderTracingRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetExemplaryTraderTracingRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetExemplaryTraderTracingResponse. */
+        interface IQueryGetExemplaryTraderTracingResponse {
+
+            /** QueryGetExemplaryTraderTracingResponse tracing */
+            tracing?: (ununifi.copytrading.ITracing[]|null);
+
+            /** QueryGetExemplaryTraderTracingResponse pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+        }
+
+        /** Represents a QueryGetExemplaryTraderTracingResponse. */
+        class QueryGetExemplaryTraderTracingResponse implements IQueryGetExemplaryTraderTracingResponse {
+
+            /**
+             * Constructs a new QueryGetExemplaryTraderTracingResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IQueryGetExemplaryTraderTracingResponse);
+
+            /** QueryGetExemplaryTraderTracingResponse tracing. */
+            public tracing: ununifi.copytrading.ITracing[];
+
+            /** QueryGetExemplaryTraderTracingResponse pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+
+            /**
+             * Encodes the specified QueryGetExemplaryTraderTracingResponse message. Does not implicitly {@link ununifi.copytrading.QueryGetExemplaryTraderTracingResponse.verify|verify} messages.
+             * @param message QueryGetExemplaryTraderTracingResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IQueryGetExemplaryTraderTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetExemplaryTraderTracingResponse message, length delimited. Does not implicitly {@link ununifi.copytrading.QueryGetExemplaryTraderTracingResponse.verify|verify} messages.
+             * @param message QueryGetExemplaryTraderTracingResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IQueryGetExemplaryTraderTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetExemplaryTraderTracingResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetExemplaryTraderTracingResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.QueryGetExemplaryTraderTracingResponse;
+
+            /**
+             * Decodes a QueryGetExemplaryTraderTracingResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetExemplaryTraderTracingResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.QueryGetExemplaryTraderTracingResponse;
+
+            /**
+             * Verifies a QueryGetExemplaryTraderTracingResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetExemplaryTraderTracingResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetExemplaryTraderTracingResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.QueryGetExemplaryTraderTracingResponse;
+
+            /**
+             * Creates a plain object from a QueryGetExemplaryTraderTracingResponse message. Also converts values to other types if specified.
+             * @param message QueryGetExemplaryTraderTracingResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.QueryGetExemplaryTraderTracingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetExemplaryTraderTracingResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetTracingRequest. */
+        interface IQueryGetTracingRequest {
+
+            /** QueryGetTracingRequest address */
+            address?: (string|null);
+        }
+
+        /** Represents a QueryGetTracingRequest. */
+        class QueryGetTracingRequest implements IQueryGetTracingRequest {
+
+            /**
+             * Constructs a new QueryGetTracingRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IQueryGetTracingRequest);
+
+            /** QueryGetTracingRequest address. */
+            public address: string;
+
+            /**
+             * Encodes the specified QueryGetTracingRequest message. Does not implicitly {@link ununifi.copytrading.QueryGetTracingRequest.verify|verify} messages.
+             * @param message QueryGetTracingRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IQueryGetTracingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetTracingRequest message, length delimited. Does not implicitly {@link ununifi.copytrading.QueryGetTracingRequest.verify|verify} messages.
+             * @param message QueryGetTracingRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IQueryGetTracingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetTracingRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetTracingRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.QueryGetTracingRequest;
+
+            /**
+             * Decodes a QueryGetTracingRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetTracingRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.QueryGetTracingRequest;
+
+            /**
+             * Verifies a QueryGetTracingRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetTracingRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetTracingRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.QueryGetTracingRequest;
+
+            /**
+             * Creates a plain object from a QueryGetTracingRequest message. Also converts values to other types if specified.
+             * @param message QueryGetTracingRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.QueryGetTracingRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetTracingRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryGetTracingResponse. */
+        interface IQueryGetTracingResponse {
+
+            /** QueryGetTracingResponse tracing */
+            tracing?: (ununifi.copytrading.ITracing|null);
+        }
+
+        /** Represents a QueryGetTracingResponse. */
+        class QueryGetTracingResponse implements IQueryGetTracingResponse {
+
+            /**
+             * Constructs a new QueryGetTracingResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IQueryGetTracingResponse);
+
+            /** QueryGetTracingResponse tracing. */
+            public tracing?: (ununifi.copytrading.ITracing|null);
+
+            /**
+             * Encodes the specified QueryGetTracingResponse message. Does not implicitly {@link ununifi.copytrading.QueryGetTracingResponse.verify|verify} messages.
+             * @param message QueryGetTracingResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IQueryGetTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryGetTracingResponse message, length delimited. Does not implicitly {@link ununifi.copytrading.QueryGetTracingResponse.verify|verify} messages.
+             * @param message QueryGetTracingResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IQueryGetTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryGetTracingResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryGetTracingResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.QueryGetTracingResponse;
+
+            /**
+             * Decodes a QueryGetTracingResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryGetTracingResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.QueryGetTracingResponse;
+
+            /**
+             * Verifies a QueryGetTracingResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryGetTracingResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryGetTracingResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.QueryGetTracingResponse;
+
+            /**
+             * Creates a plain object from a QueryGetTracingResponse message. Also converts values to other types if specified.
+             * @param message QueryGetTracingResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.QueryGetTracingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryGetTracingResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllTracingRequest. */
+        interface IQueryAllTracingRequest {
+
+            /** QueryAllTracingRequest pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+        }
+
+        /** Represents a QueryAllTracingRequest. */
+        class QueryAllTracingRequest implements IQueryAllTracingRequest {
+
+            /**
+             * Constructs a new QueryAllTracingRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IQueryAllTracingRequest);
+
+            /** QueryAllTracingRequest pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageRequest|null);
+
+            /**
+             * Encodes the specified QueryAllTracingRequest message. Does not implicitly {@link ununifi.copytrading.QueryAllTracingRequest.verify|verify} messages.
+             * @param message QueryAllTracingRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IQueryAllTracingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllTracingRequest message, length delimited. Does not implicitly {@link ununifi.copytrading.QueryAllTracingRequest.verify|verify} messages.
+             * @param message QueryAllTracingRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IQueryAllTracingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllTracingRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllTracingRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.QueryAllTracingRequest;
+
+            /**
+             * Decodes a QueryAllTracingRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllTracingRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.QueryAllTracingRequest;
+
+            /**
+             * Verifies a QueryAllTracingRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllTracingRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllTracingRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.QueryAllTracingRequest;
+
+            /**
+             * Creates a plain object from a QueryAllTracingRequest message. Also converts values to other types if specified.
+             * @param message QueryAllTracingRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.QueryAllTracingRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllTracingRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryAllTracingResponse. */
+        interface IQueryAllTracingResponse {
+
+            /** QueryAllTracingResponse tracing */
+            tracing?: (ununifi.copytrading.ITracing[]|null);
+
+            /** QueryAllTracingResponse pagination */
+            pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+        }
+
+        /** Represents a QueryAllTracingResponse. */
+        class QueryAllTracingResponse implements IQueryAllTracingResponse {
+
+            /**
+             * Constructs a new QueryAllTracingResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IQueryAllTracingResponse);
+
+            /** QueryAllTracingResponse tracing. */
+            public tracing: ununifi.copytrading.ITracing[];
+
+            /** QueryAllTracingResponse pagination. */
+            public pagination?: (cosmos.base.query.v1beta1.IPageResponse|null);
+
+            /**
+             * Encodes the specified QueryAllTracingResponse message. Does not implicitly {@link ununifi.copytrading.QueryAllTracingResponse.verify|verify} messages.
+             * @param message QueryAllTracingResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IQueryAllTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryAllTracingResponse message, length delimited. Does not implicitly {@link ununifi.copytrading.QueryAllTracingResponse.verify|verify} messages.
+             * @param message QueryAllTracingResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IQueryAllTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryAllTracingResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryAllTracingResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.QueryAllTracingResponse;
+
+            /**
+             * Decodes a QueryAllTracingResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryAllTracingResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.QueryAllTracingResponse;
+
+            /**
+             * Verifies a QueryAllTracingResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryAllTracingResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryAllTracingResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.QueryAllTracingResponse;
+
+            /**
+             * Creates a plain object from a QueryAllTracingResponse message. Also converts values to other types if specified.
+             * @param message QueryAllTracingResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.QueryAllTracingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryAllTracingResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a Params. */
+        interface IParams {
+        }
+
+        /** Represents a Params. */
+        class Params implements IParams {
+
+            /**
+             * Constructs a new Params.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IParams);
+
+            /**
+             * Encodes the specified Params message. Does not implicitly {@link ununifi.copytrading.Params.verify|verify} messages.
+             * @param message Params message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.copytrading.Params.verify|verify} messages.
+             * @param message Params message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a Params message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.Params;
+
+            /**
+             * Decodes a Params message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Params
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.Params;
+
+            /**
+             * Verifies a Params message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a Params message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Params
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.Params;
+
+            /**
+             * Creates a plain object from a Params message. Also converts values to other types if specified.
+             * @param message Params
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Params to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of an ExemplaryTrader. */
+        interface IExemplaryTrader {
+
+            /** ExemplaryTrader address */
+            address?: (string|null);
+
+            /** ExemplaryTrader name */
+            name?: (string|null);
+
+            /** ExemplaryTrader description */
+            description?: (string|null);
+
+            /** ExemplaryTrader profit_commission_rate */
+            profit_commission_rate?: (string|null);
+        }
+
+        /** Represents an ExemplaryTrader. */
+        class ExemplaryTrader implements IExemplaryTrader {
+
+            /**
+             * Constructs a new ExemplaryTrader.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IExemplaryTrader);
+
+            /** ExemplaryTrader address. */
+            public address: string;
+
+            /** ExemplaryTrader name. */
+            public name: string;
+
+            /** ExemplaryTrader description. */
+            public description: string;
+
+            /** ExemplaryTrader profit_commission_rate. */
+            public profit_commission_rate: string;
+
+            /**
+             * Encodes the specified ExemplaryTrader message. Does not implicitly {@link ununifi.copytrading.ExemplaryTrader.verify|verify} messages.
+             * @param message ExemplaryTrader message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified ExemplaryTrader message, length delimited. Does not implicitly {@link ununifi.copytrading.ExemplaryTrader.verify|verify} messages.
+             * @param message ExemplaryTrader message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an ExemplaryTrader message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns ExemplaryTrader
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.ExemplaryTrader;
+
+            /**
+             * Decodes an ExemplaryTrader message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns ExemplaryTrader
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.ExemplaryTrader;
+
+            /**
+             * Verifies an ExemplaryTrader message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an ExemplaryTrader message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns ExemplaryTrader
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.ExemplaryTrader;
+
+            /**
+             * Creates a plain object from an ExemplaryTrader message. Also converts values to other types if specified.
+             * @param message ExemplaryTrader
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.ExemplaryTrader, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this ExemplaryTrader to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a Tracing. */
+        interface ITracing {
+
+            /** Tracing address */
+            address?: (string|null);
+
+            /** Tracing exemplary_trader */
+            exemplary_trader?: (string|null);
+
+            /** Tracing size_coefficient */
+            size_coefficient?: (string|null);
+
+            /** Tracing leverage_coefficient */
+            leverage_coefficient?: (string|null);
+
+            /** Tracing reverse */
+            reverse?: (boolean|null);
+        }
+
+        /** Represents a Tracing. */
+        class Tracing implements ITracing {
+
+            /**
+             * Constructs a new Tracing.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.ITracing);
+
+            /** Tracing address. */
+            public address: string;
+
+            /** Tracing exemplary_trader. */
+            public exemplary_trader: string;
+
+            /** Tracing size_coefficient. */
+            public size_coefficient: string;
+
+            /** Tracing leverage_coefficient. */
+            public leverage_coefficient: string;
+
+            /** Tracing reverse. */
+            public reverse: boolean;
+
+            /**
+             * Encodes the specified Tracing message. Does not implicitly {@link ununifi.copytrading.Tracing.verify|verify} messages.
+             * @param message Tracing message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.ITracing, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Tracing message, length delimited. Does not implicitly {@link ununifi.copytrading.Tracing.verify|verify} messages.
+             * @param message Tracing message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.ITracing, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a Tracing message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Tracing
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.Tracing;
+
+            /**
+             * Decodes a Tracing message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Tracing
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.Tracing;
+
+            /**
+             * Verifies a Tracing message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a Tracing message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Tracing
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.Tracing;
+
+            /**
+             * Creates a plain object from a Tracing message. Also converts values to other types if specified.
+             * @param message Tracing
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.Tracing, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Tracing to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Represents a Msg */
+        class Msg extends $protobuf.rpc.Service {
+
+            /**
+             * Constructs a new Msg service.
+             * @param rpcImpl RPC implementation
+             * @param [requestDelimited=false] Whether requests are length-delimited
+             * @param [responseDelimited=false] Whether responses are length-delimited
+             */
+            constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+            /**
+             * Calls CreateExemplaryTrader.
+             * @param request MsgCreateExemplaryTrader message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgCreateExemplaryTraderResponse
+             */
+            public createExemplaryTrader(request: ununifi.copytrading.IMsgCreateExemplaryTrader, callback: ununifi.copytrading.Msg.CreateExemplaryTraderCallback): void;
+
+            /**
+             * Calls CreateExemplaryTrader.
+             * @param request MsgCreateExemplaryTrader message or plain object
+             * @returns Promise
+             */
+            public createExemplaryTrader(request: ununifi.copytrading.IMsgCreateExemplaryTrader): Promise<ununifi.copytrading.MsgCreateExemplaryTraderResponse>;
+
+            /**
+             * Calls UpdateExemplaryTrader.
+             * @param request MsgUpdateExemplaryTrader message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgUpdateExemplaryTraderResponse
+             */
+            public updateExemplaryTrader(request: ununifi.copytrading.IMsgUpdateExemplaryTrader, callback: ununifi.copytrading.Msg.UpdateExemplaryTraderCallback): void;
+
+            /**
+             * Calls UpdateExemplaryTrader.
+             * @param request MsgUpdateExemplaryTrader message or plain object
+             * @returns Promise
+             */
+            public updateExemplaryTrader(request: ununifi.copytrading.IMsgUpdateExemplaryTrader): Promise<ununifi.copytrading.MsgUpdateExemplaryTraderResponse>;
+
+            /**
+             * Calls DeleteExemplaryTrader.
+             * @param request MsgDeleteExemplaryTrader message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgDeleteExemplaryTraderResponse
+             */
+            public deleteExemplaryTrader(request: ununifi.copytrading.IMsgDeleteExemplaryTrader, callback: ununifi.copytrading.Msg.DeleteExemplaryTraderCallback): void;
+
+            /**
+             * Calls DeleteExemplaryTrader.
+             * @param request MsgDeleteExemplaryTrader message or plain object
+             * @returns Promise
+             */
+            public deleteExemplaryTrader(request: ununifi.copytrading.IMsgDeleteExemplaryTrader): Promise<ununifi.copytrading.MsgDeleteExemplaryTraderResponse>;
+
+            /**
+             * Calls CreateTracing.
+             * @param request MsgCreateTracing message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgCreateTracingResponse
+             */
+            public createTracing(request: ununifi.copytrading.IMsgCreateTracing, callback: ununifi.copytrading.Msg.CreateTracingCallback): void;
+
+            /**
+             * Calls CreateTracing.
+             * @param request MsgCreateTracing message or plain object
+             * @returns Promise
+             */
+            public createTracing(request: ununifi.copytrading.IMsgCreateTracing): Promise<ununifi.copytrading.MsgCreateTracingResponse>;
+
+            /**
+             * Calls DeleteTracing.
+             * @param request MsgDeleteTracing message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgDeleteTracingResponse
+             */
+            public deleteTracing(request: ununifi.copytrading.IMsgDeleteTracing, callback: ununifi.copytrading.Msg.DeleteTracingCallback): void;
+
+            /**
+             * Calls DeleteTracing.
+             * @param request MsgDeleteTracing message or plain object
+             * @returns Promise
+             */
+            public deleteTracing(request: ununifi.copytrading.IMsgDeleteTracing): Promise<ununifi.copytrading.MsgDeleteTracingResponse>;
+        }
+
+        namespace Msg {
+
+            /**
+             * Callback as used by {@link ununifi.copytrading.Msg#createExemplaryTrader}.
+             * @param error Error, if any
+             * @param [response] MsgCreateExemplaryTraderResponse
+             */
+            type CreateExemplaryTraderCallback = (error: (Error|null), response?: ununifi.copytrading.MsgCreateExemplaryTraderResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.copytrading.Msg#updateExemplaryTrader}.
+             * @param error Error, if any
+             * @param [response] MsgUpdateExemplaryTraderResponse
+             */
+            type UpdateExemplaryTraderCallback = (error: (Error|null), response?: ununifi.copytrading.MsgUpdateExemplaryTraderResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.copytrading.Msg#deleteExemplaryTrader}.
+             * @param error Error, if any
+             * @param [response] MsgDeleteExemplaryTraderResponse
+             */
+            type DeleteExemplaryTraderCallback = (error: (Error|null), response?: ununifi.copytrading.MsgDeleteExemplaryTraderResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.copytrading.Msg#createTracing}.
+             * @param error Error, if any
+             * @param [response] MsgCreateTracingResponse
+             */
+            type CreateTracingCallback = (error: (Error|null), response?: ununifi.copytrading.MsgCreateTracingResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.copytrading.Msg#deleteTracing}.
+             * @param error Error, if any
+             * @param [response] MsgDeleteTracingResponse
+             */
+            type DeleteTracingCallback = (error: (Error|null), response?: ununifi.copytrading.MsgDeleteTracingResponse) => void;
+        }
+
+        /** Properties of a MsgCreateExemplaryTrader. */
+        interface IMsgCreateExemplaryTrader {
+
+            /** MsgCreateExemplaryTrader sender */
+            sender?: (string|null);
+
+            /** MsgCreateExemplaryTrader name */
+            name?: (string|null);
+
+            /** MsgCreateExemplaryTrader description */
+            description?: (string|null);
+
+            /** MsgCreateExemplaryTrader profit_commission_rate */
+            profit_commission_rate?: (string|null);
+        }
+
+        /** Represents a MsgCreateExemplaryTrader. */
+        class MsgCreateExemplaryTrader implements IMsgCreateExemplaryTrader {
+
+            /**
+             * Constructs a new MsgCreateExemplaryTrader.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IMsgCreateExemplaryTrader);
+
+            /** MsgCreateExemplaryTrader sender. */
+            public sender: string;
+
+            /** MsgCreateExemplaryTrader name. */
+            public name: string;
+
+            /** MsgCreateExemplaryTrader description. */
+            public description: string;
+
+            /** MsgCreateExemplaryTrader profit_commission_rate. */
+            public profit_commission_rate: string;
+
+            /**
+             * Encodes the specified MsgCreateExemplaryTrader message. Does not implicitly {@link ununifi.copytrading.MsgCreateExemplaryTrader.verify|verify} messages.
+             * @param message MsgCreateExemplaryTrader message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IMsgCreateExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgCreateExemplaryTrader message, length delimited. Does not implicitly {@link ununifi.copytrading.MsgCreateExemplaryTrader.verify|verify} messages.
+             * @param message MsgCreateExemplaryTrader message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IMsgCreateExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgCreateExemplaryTrader message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgCreateExemplaryTrader
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.MsgCreateExemplaryTrader;
+
+            /**
+             * Decodes a MsgCreateExemplaryTrader message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgCreateExemplaryTrader
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.MsgCreateExemplaryTrader;
+
+            /**
+             * Verifies a MsgCreateExemplaryTrader message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgCreateExemplaryTrader message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgCreateExemplaryTrader
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.MsgCreateExemplaryTrader;
+
+            /**
+             * Creates a plain object from a MsgCreateExemplaryTrader message. Also converts values to other types if specified.
+             * @param message MsgCreateExemplaryTrader
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.MsgCreateExemplaryTrader, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgCreateExemplaryTrader to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgCreateExemplaryTraderResponse. */
+        interface IMsgCreateExemplaryTraderResponse {
+        }
+
+        /** Represents a MsgCreateExemplaryTraderResponse. */
+        class MsgCreateExemplaryTraderResponse implements IMsgCreateExemplaryTraderResponse {
+
+            /**
+             * Constructs a new MsgCreateExemplaryTraderResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IMsgCreateExemplaryTraderResponse);
+
+            /**
+             * Encodes the specified MsgCreateExemplaryTraderResponse message. Does not implicitly {@link ununifi.copytrading.MsgCreateExemplaryTraderResponse.verify|verify} messages.
+             * @param message MsgCreateExemplaryTraderResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IMsgCreateExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgCreateExemplaryTraderResponse message, length delimited. Does not implicitly {@link ununifi.copytrading.MsgCreateExemplaryTraderResponse.verify|verify} messages.
+             * @param message MsgCreateExemplaryTraderResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IMsgCreateExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgCreateExemplaryTraderResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgCreateExemplaryTraderResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.MsgCreateExemplaryTraderResponse;
+
+            /**
+             * Decodes a MsgCreateExemplaryTraderResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgCreateExemplaryTraderResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.MsgCreateExemplaryTraderResponse;
+
+            /**
+             * Verifies a MsgCreateExemplaryTraderResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgCreateExemplaryTraderResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgCreateExemplaryTraderResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.MsgCreateExemplaryTraderResponse;
+
+            /**
+             * Creates a plain object from a MsgCreateExemplaryTraderResponse message. Also converts values to other types if specified.
+             * @param message MsgCreateExemplaryTraderResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.MsgCreateExemplaryTraderResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgCreateExemplaryTraderResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgUpdateExemplaryTrader. */
+        interface IMsgUpdateExemplaryTrader {
+
+            /** MsgUpdateExemplaryTrader sender */
+            sender?: (string|null);
+
+            /** MsgUpdateExemplaryTrader name */
+            name?: (string|null);
+
+            /** MsgUpdateExemplaryTrader description */
+            description?: (string|null);
+
+            /** MsgUpdateExemplaryTrader profit_commission_rate */
+            profit_commission_rate?: (string|null);
+        }
+
+        /** Represents a MsgUpdateExemplaryTrader. */
+        class MsgUpdateExemplaryTrader implements IMsgUpdateExemplaryTrader {
+
+            /**
+             * Constructs a new MsgUpdateExemplaryTrader.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IMsgUpdateExemplaryTrader);
+
+            /** MsgUpdateExemplaryTrader sender. */
+            public sender: string;
+
+            /** MsgUpdateExemplaryTrader name. */
+            public name: string;
+
+            /** MsgUpdateExemplaryTrader description. */
+            public description: string;
+
+            /** MsgUpdateExemplaryTrader profit_commission_rate. */
+            public profit_commission_rate: string;
+
+            /**
+             * Encodes the specified MsgUpdateExemplaryTrader message. Does not implicitly {@link ununifi.copytrading.MsgUpdateExemplaryTrader.verify|verify} messages.
+             * @param message MsgUpdateExemplaryTrader message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IMsgUpdateExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgUpdateExemplaryTrader message, length delimited. Does not implicitly {@link ununifi.copytrading.MsgUpdateExemplaryTrader.verify|verify} messages.
+             * @param message MsgUpdateExemplaryTrader message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IMsgUpdateExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgUpdateExemplaryTrader message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgUpdateExemplaryTrader
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.MsgUpdateExemplaryTrader;
+
+            /**
+             * Decodes a MsgUpdateExemplaryTrader message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgUpdateExemplaryTrader
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.MsgUpdateExemplaryTrader;
+
+            /**
+             * Verifies a MsgUpdateExemplaryTrader message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgUpdateExemplaryTrader message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgUpdateExemplaryTrader
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.MsgUpdateExemplaryTrader;
+
+            /**
+             * Creates a plain object from a MsgUpdateExemplaryTrader message. Also converts values to other types if specified.
+             * @param message MsgUpdateExemplaryTrader
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.MsgUpdateExemplaryTrader, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgUpdateExemplaryTrader to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgUpdateExemplaryTraderResponse. */
+        interface IMsgUpdateExemplaryTraderResponse {
+        }
+
+        /** Represents a MsgUpdateExemplaryTraderResponse. */
+        class MsgUpdateExemplaryTraderResponse implements IMsgUpdateExemplaryTraderResponse {
+
+            /**
+             * Constructs a new MsgUpdateExemplaryTraderResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IMsgUpdateExemplaryTraderResponse);
+
+            /**
+             * Encodes the specified MsgUpdateExemplaryTraderResponse message. Does not implicitly {@link ununifi.copytrading.MsgUpdateExemplaryTraderResponse.verify|verify} messages.
+             * @param message MsgUpdateExemplaryTraderResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IMsgUpdateExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgUpdateExemplaryTraderResponse message, length delimited. Does not implicitly {@link ununifi.copytrading.MsgUpdateExemplaryTraderResponse.verify|verify} messages.
+             * @param message MsgUpdateExemplaryTraderResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IMsgUpdateExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgUpdateExemplaryTraderResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgUpdateExemplaryTraderResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.MsgUpdateExemplaryTraderResponse;
+
+            /**
+             * Decodes a MsgUpdateExemplaryTraderResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgUpdateExemplaryTraderResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.MsgUpdateExemplaryTraderResponse;
+
+            /**
+             * Verifies a MsgUpdateExemplaryTraderResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgUpdateExemplaryTraderResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgUpdateExemplaryTraderResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.MsgUpdateExemplaryTraderResponse;
+
+            /**
+             * Creates a plain object from a MsgUpdateExemplaryTraderResponse message. Also converts values to other types if specified.
+             * @param message MsgUpdateExemplaryTraderResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.MsgUpdateExemplaryTraderResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgUpdateExemplaryTraderResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgDeleteExemplaryTrader. */
+        interface IMsgDeleteExemplaryTrader {
+
+            /** MsgDeleteExemplaryTrader sender */
+            sender?: (string|null);
+        }
+
+        /** Represents a MsgDeleteExemplaryTrader. */
+        class MsgDeleteExemplaryTrader implements IMsgDeleteExemplaryTrader {
+
+            /**
+             * Constructs a new MsgDeleteExemplaryTrader.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IMsgDeleteExemplaryTrader);
+
+            /** MsgDeleteExemplaryTrader sender. */
+            public sender: string;
+
+            /**
+             * Encodes the specified MsgDeleteExemplaryTrader message. Does not implicitly {@link ununifi.copytrading.MsgDeleteExemplaryTrader.verify|verify} messages.
+             * @param message MsgDeleteExemplaryTrader message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IMsgDeleteExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgDeleteExemplaryTrader message, length delimited. Does not implicitly {@link ununifi.copytrading.MsgDeleteExemplaryTrader.verify|verify} messages.
+             * @param message MsgDeleteExemplaryTrader message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IMsgDeleteExemplaryTrader, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgDeleteExemplaryTrader message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgDeleteExemplaryTrader
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.MsgDeleteExemplaryTrader;
+
+            /**
+             * Decodes a MsgDeleteExemplaryTrader message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgDeleteExemplaryTrader
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.MsgDeleteExemplaryTrader;
+
+            /**
+             * Verifies a MsgDeleteExemplaryTrader message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgDeleteExemplaryTrader message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgDeleteExemplaryTrader
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.MsgDeleteExemplaryTrader;
+
+            /**
+             * Creates a plain object from a MsgDeleteExemplaryTrader message. Also converts values to other types if specified.
+             * @param message MsgDeleteExemplaryTrader
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.MsgDeleteExemplaryTrader, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgDeleteExemplaryTrader to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgDeleteExemplaryTraderResponse. */
+        interface IMsgDeleteExemplaryTraderResponse {
+        }
+
+        /** Represents a MsgDeleteExemplaryTraderResponse. */
+        class MsgDeleteExemplaryTraderResponse implements IMsgDeleteExemplaryTraderResponse {
+
+            /**
+             * Constructs a new MsgDeleteExemplaryTraderResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IMsgDeleteExemplaryTraderResponse);
+
+            /**
+             * Encodes the specified MsgDeleteExemplaryTraderResponse message. Does not implicitly {@link ununifi.copytrading.MsgDeleteExemplaryTraderResponse.verify|verify} messages.
+             * @param message MsgDeleteExemplaryTraderResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IMsgDeleteExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgDeleteExemplaryTraderResponse message, length delimited. Does not implicitly {@link ununifi.copytrading.MsgDeleteExemplaryTraderResponse.verify|verify} messages.
+             * @param message MsgDeleteExemplaryTraderResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IMsgDeleteExemplaryTraderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgDeleteExemplaryTraderResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgDeleteExemplaryTraderResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.MsgDeleteExemplaryTraderResponse;
+
+            /**
+             * Decodes a MsgDeleteExemplaryTraderResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgDeleteExemplaryTraderResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.MsgDeleteExemplaryTraderResponse;
+
+            /**
+             * Verifies a MsgDeleteExemplaryTraderResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgDeleteExemplaryTraderResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgDeleteExemplaryTraderResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.MsgDeleteExemplaryTraderResponse;
+
+            /**
+             * Creates a plain object from a MsgDeleteExemplaryTraderResponse message. Also converts values to other types if specified.
+             * @param message MsgDeleteExemplaryTraderResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.MsgDeleteExemplaryTraderResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgDeleteExemplaryTraderResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgCreateTracing. */
+        interface IMsgCreateTracing {
+
+            /** MsgCreateTracing sender */
+            sender?: (string|null);
+
+            /** MsgCreateTracing exemplary_trader */
+            exemplary_trader?: (string|null);
+
+            /** MsgCreateTracing size_coefficient */
+            size_coefficient?: (string|null);
+
+            /** MsgCreateTracing leverage_coefficient */
+            leverage_coefficient?: (string|null);
+
+            /** MsgCreateTracing reverse */
+            reverse?: (boolean|null);
+        }
+
+        /** Represents a MsgCreateTracing. */
+        class MsgCreateTracing implements IMsgCreateTracing {
+
+            /**
+             * Constructs a new MsgCreateTracing.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IMsgCreateTracing);
+
+            /** MsgCreateTracing sender. */
+            public sender: string;
+
+            /** MsgCreateTracing exemplary_trader. */
+            public exemplary_trader: string;
+
+            /** MsgCreateTracing size_coefficient. */
+            public size_coefficient: string;
+
+            /** MsgCreateTracing leverage_coefficient. */
+            public leverage_coefficient: string;
+
+            /** MsgCreateTracing reverse. */
+            public reverse: boolean;
+
+            /**
+             * Encodes the specified MsgCreateTracing message. Does not implicitly {@link ununifi.copytrading.MsgCreateTracing.verify|verify} messages.
+             * @param message MsgCreateTracing message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IMsgCreateTracing, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgCreateTracing message, length delimited. Does not implicitly {@link ununifi.copytrading.MsgCreateTracing.verify|verify} messages.
+             * @param message MsgCreateTracing message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IMsgCreateTracing, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgCreateTracing message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgCreateTracing
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.MsgCreateTracing;
+
+            /**
+             * Decodes a MsgCreateTracing message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgCreateTracing
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.MsgCreateTracing;
+
+            /**
+             * Verifies a MsgCreateTracing message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgCreateTracing message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgCreateTracing
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.MsgCreateTracing;
+
+            /**
+             * Creates a plain object from a MsgCreateTracing message. Also converts values to other types if specified.
+             * @param message MsgCreateTracing
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.MsgCreateTracing, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgCreateTracing to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgCreateTracingResponse. */
+        interface IMsgCreateTracingResponse {
+        }
+
+        /** Represents a MsgCreateTracingResponse. */
+        class MsgCreateTracingResponse implements IMsgCreateTracingResponse {
+
+            /**
+             * Constructs a new MsgCreateTracingResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IMsgCreateTracingResponse);
+
+            /**
+             * Encodes the specified MsgCreateTracingResponse message. Does not implicitly {@link ununifi.copytrading.MsgCreateTracingResponse.verify|verify} messages.
+             * @param message MsgCreateTracingResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IMsgCreateTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgCreateTracingResponse message, length delimited. Does not implicitly {@link ununifi.copytrading.MsgCreateTracingResponse.verify|verify} messages.
+             * @param message MsgCreateTracingResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IMsgCreateTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgCreateTracingResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgCreateTracingResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.MsgCreateTracingResponse;
+
+            /**
+             * Decodes a MsgCreateTracingResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgCreateTracingResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.MsgCreateTracingResponse;
+
+            /**
+             * Verifies a MsgCreateTracingResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgCreateTracingResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgCreateTracingResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.MsgCreateTracingResponse;
+
+            /**
+             * Creates a plain object from a MsgCreateTracingResponse message. Also converts values to other types if specified.
+             * @param message MsgCreateTracingResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.MsgCreateTracingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgCreateTracingResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgDeleteTracing. */
+        interface IMsgDeleteTracing {
+
+            /** MsgDeleteTracing sender */
+            sender?: (string|null);
+        }
+
+        /** Represents a MsgDeleteTracing. */
+        class MsgDeleteTracing implements IMsgDeleteTracing {
+
+            /**
+             * Constructs a new MsgDeleteTracing.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IMsgDeleteTracing);
+
+            /** MsgDeleteTracing sender. */
+            public sender: string;
+
+            /**
+             * Encodes the specified MsgDeleteTracing message. Does not implicitly {@link ununifi.copytrading.MsgDeleteTracing.verify|verify} messages.
+             * @param message MsgDeleteTracing message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IMsgDeleteTracing, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgDeleteTracing message, length delimited. Does not implicitly {@link ununifi.copytrading.MsgDeleteTracing.verify|verify} messages.
+             * @param message MsgDeleteTracing message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IMsgDeleteTracing, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgDeleteTracing message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgDeleteTracing
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.MsgDeleteTracing;
+
+            /**
+             * Decodes a MsgDeleteTracing message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgDeleteTracing
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.MsgDeleteTracing;
+
+            /**
+             * Verifies a MsgDeleteTracing message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgDeleteTracing message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgDeleteTracing
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.MsgDeleteTracing;
+
+            /**
+             * Creates a plain object from a MsgDeleteTracing message. Also converts values to other types if specified.
+             * @param message MsgDeleteTracing
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.MsgDeleteTracing, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgDeleteTracing to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a MsgDeleteTracingResponse. */
+        interface IMsgDeleteTracingResponse {
+        }
+
+        /** Represents a MsgDeleteTracingResponse. */
+        class MsgDeleteTracingResponse implements IMsgDeleteTracingResponse {
+
+            /**
+             * Constructs a new MsgDeleteTracingResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IMsgDeleteTracingResponse);
+
+            /**
+             * Encodes the specified MsgDeleteTracingResponse message. Does not implicitly {@link ununifi.copytrading.MsgDeleteTracingResponse.verify|verify} messages.
+             * @param message MsgDeleteTracingResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IMsgDeleteTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified MsgDeleteTracingResponse message, length delimited. Does not implicitly {@link ununifi.copytrading.MsgDeleteTracingResponse.verify|verify} messages.
+             * @param message MsgDeleteTracingResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IMsgDeleteTracingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a MsgDeleteTracingResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns MsgDeleteTracingResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.MsgDeleteTracingResponse;
+
+            /**
+             * Decodes a MsgDeleteTracingResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns MsgDeleteTracingResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.MsgDeleteTracingResponse;
+
+            /**
+             * Verifies a MsgDeleteTracingResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a MsgDeleteTracingResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns MsgDeleteTracingResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.MsgDeleteTracingResponse;
+
+            /**
+             * Creates a plain object from a MsgDeleteTracingResponse message. Also converts values to other types if specified.
+             * @param message MsgDeleteTracingResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.MsgDeleteTracingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this MsgDeleteTracingResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a GenesisState. */
+        interface IGenesisState {
+
+            /** GenesisState params */
+            params?: (ununifi.copytrading.IParams|null);
+
+            /** GenesisState exemplaryTraderList */
+            exemplaryTraderList?: (ununifi.copytrading.IExemplaryTrader[]|null);
+
+            /** GenesisState tracingList */
+            tracingList?: (ununifi.copytrading.ITracing[]|null);
+        }
+
+        /** Represents a GenesisState. */
+        class GenesisState implements IGenesisState {
+
+            /**
+             * Constructs a new GenesisState.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.copytrading.IGenesisState);
+
+            /** GenesisState params. */
+            public params?: (ununifi.copytrading.IParams|null);
+
+            /** GenesisState exemplaryTraderList. */
+            public exemplaryTraderList: ununifi.copytrading.IExemplaryTrader[];
+
+            /** GenesisState tracingList. */
+            public tracingList: ununifi.copytrading.ITracing[];
+
+            /**
+             * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.copytrading.GenesisState.verify|verify} messages.
+             * @param message GenesisState message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.copytrading.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.copytrading.GenesisState.verify|verify} messages.
+             * @param message GenesisState message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.copytrading.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a GenesisState message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns GenesisState
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.copytrading.GenesisState;
+
+            /**
+             * Decodes a GenesisState message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns GenesisState
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.copytrading.GenesisState;
+
+            /**
+             * Verifies a GenesisState message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a GenesisState message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns GenesisState
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.copytrading.GenesisState;
+
+            /**
+             * Creates a plain object from a GenesisState message. Also converts values to other types if specified.
+             * @param message GenesisState
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.copytrading.GenesisState, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this GenesisState to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
         }
     }
 

@@ -910,6 +910,19 @@ export interface ClassIdsByOwner200ResponseOwningClassIdList {
     'class_id'?: Array<string>;
 }
 /**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @export
+ * @interface CopyTradingParams200Response
+ */
+export interface CopyTradingParams200Response {
+    /**
+     * params holds all the parameters of this module.
+     * @type {object}
+     * @memberof CopyTradingParams200Response
+     */
+    'params'?: object;
+}
+/**
  * message SomeRequest {          Foo some_parameter = 1;          PageRequest pagination = 2;  }
  * @export
  * @interface CosmosBaseQueryV1beta1PageRequest
@@ -1290,6 +1303,125 @@ export interface EstimateDLPTokenAmount200Response {
      * @memberof EstimateDLPTokenAmount200Response
      */
     'fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface ExemplaryTrader200Response
+ */
+export interface ExemplaryTrader200Response {
+    /**
+     * 
+     * @type {ExemplaryTraderAll200ResponseExemplaryTraderInner}
+     * @memberof ExemplaryTrader200Response
+     */
+    'exemplaryTrader'?: ExemplaryTraderAll200ResponseExemplaryTraderInner;
+}
+/**
+ * 
+ * @export
+ * @interface ExemplaryTraderAll200Response
+ */
+export interface ExemplaryTraderAll200Response {
+    /**
+     * 
+     * @type {Array<ExemplaryTraderAll200ResponseExemplaryTraderInner>}
+     * @memberof ExemplaryTraderAll200Response
+     */
+    'exemplaryTrader'?: Array<ExemplaryTraderAll200ResponseExemplaryTraderInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof ExemplaryTraderAll200Response
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface ExemplaryTraderAll200ResponseExemplaryTraderInner
+ */
+export interface ExemplaryTraderAll200ResponseExemplaryTraderInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof ExemplaryTraderAll200ResponseExemplaryTraderInner
+     */
+    'address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ExemplaryTraderAll200ResponseExemplaryTraderInner
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ExemplaryTraderAll200ResponseExemplaryTraderInner
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ExemplaryTraderAll200ResponseExemplaryTraderInner
+     */
+    'profit_commission_rate'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface ExemplaryTraderTracing200Response
+ */
+export interface ExemplaryTraderTracing200Response {
+    /**
+     * 
+     * @type {Array<ExemplaryTraderTracing200ResponseTracingInner>}
+     * @memberof ExemplaryTraderTracing200Response
+     */
+    'tracing'?: Array<ExemplaryTraderTracing200ResponseTracingInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof ExemplaryTraderTracing200Response
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface ExemplaryTraderTracing200ResponseTracingInner
+ */
+export interface ExemplaryTraderTracing200ResponseTracingInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof ExemplaryTraderTracing200ResponseTracingInner
+     */
+    'address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ExemplaryTraderTracing200ResponseTracingInner
+     */
+    'exemplary_trader'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ExemplaryTraderTracing200ResponseTracingInner
+     */
+    'size_coefficient'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ExemplaryTraderTracing200ResponseTracingInner
+     */
+    'leverage_coefficient'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ExemplaryTraderTracing200ResponseTracingInner
+     */
+    'reverse'?: boolean;
 }
 /**
  * `Any` contains an arbitrary serialized protocol buffer message along with a URL that describes the type of the serialized message.  Protobuf library provides support to pack/unpack Any values in the form of utility functions or additional generated methods of the Any type.  Example 1: Pack and unpack a message in C++.      Foo foo = ...;     Any any;     any.PackFrom(foo);     ...     if (any.UnpackTo(&foo)) {       ...     }  Example 2: Pack and unpack a message in Java.      Foo foo = ...;     Any any = Any.pack(foo);     ...     if (any.is(Foo.class)) {       foo = any.unpack(Foo.class);     }   Example 3: Pack and unpack a message in Python.      foo = Foo(...)     any = Any()     any.Pack(foo)     ...     if any.Is(Foo.DESCRIPTOR):       any.Unpack(foo)       ...   Example 4: Pack and unpack a message in Go       foo := &pb.Foo{...}      any, err := ptypes.MarshalAny(foo)      ...      foo := &pb.Foo{}      if err := ptypes.UnmarshalAny(any, foo); err != nil {        ...      }  The pack methods provided by protobuf library will by default use \'type.googleapis.com/full.type.name\' as the type URL and the unpack methods only use the fully qualified type name after the last \'/\' in the type URL, for example \"foo.bar.com/x/y.z\" will yield type name \"y.z\".   JSON ==== The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:      package google.profile;     message Person {       string first_name = 1;       string last_name = 2;     }      {       \"@type\": \"type.googleapis.com/google.profile.Person\",       \"firstName\": <string>,       \"lastName\": <string>     }  If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message [google.protobuf.Duration][]):      {       \"@type\": \"type.googleapis.com/google.protobuf.Duration\",       \"value\": \"1.212s\"     }
@@ -2756,6 +2888,19 @@ export interface TodoRemoveNftIdBidderThenUseIt {
 /**
  * 
  * @export
+ * @interface Tracing200Response
+ */
+export interface Tracing200Response {
+    /**
+     * 
+     * @type {ExemplaryTraderTracing200ResponseTracingInner}
+     * @memberof Tracing200Response
+     */
+    'tracing'?: ExemplaryTraderTracing200ResponseTracingInner;
+}
+/**
+ * 
+ * @export
  * @interface UnunifiAuctionParams
  */
 export interface UnunifiAuctionParams {
@@ -3187,6 +3332,170 @@ export interface UnunifiCdpQueryParamsResponse {
      * @memberof UnunifiCdpQueryParamsResponse
      */
     'params'?: CdpParams200ResponseParams;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiCopytradingExemplaryTrader
+ */
+export interface UnunifiCopytradingExemplaryTrader {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiCopytradingExemplaryTrader
+     */
+    'address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiCopytradingExemplaryTrader
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiCopytradingExemplaryTrader
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiCopytradingExemplaryTrader
+     */
+    'profit_commission_rate'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiCopytradingQueryAllExemplaryTraderResponse
+ */
+export interface UnunifiCopytradingQueryAllExemplaryTraderResponse {
+    /**
+     * 
+     * @type {Array<ExemplaryTraderAll200ResponseExemplaryTraderInner>}
+     * @memberof UnunifiCopytradingQueryAllExemplaryTraderResponse
+     */
+    'exemplaryTrader'?: Array<ExemplaryTraderAll200ResponseExemplaryTraderInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof UnunifiCopytradingQueryAllExemplaryTraderResponse
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiCopytradingQueryAllTracingResponse
+ */
+export interface UnunifiCopytradingQueryAllTracingResponse {
+    /**
+     * 
+     * @type {Array<ExemplaryTraderTracing200ResponseTracingInner>}
+     * @memberof UnunifiCopytradingQueryAllTracingResponse
+     */
+    'tracing'?: Array<ExemplaryTraderTracing200ResponseTracingInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof UnunifiCopytradingQueryAllTracingResponse
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiCopytradingQueryGetExemplaryTraderResponse
+ */
+export interface UnunifiCopytradingQueryGetExemplaryTraderResponse {
+    /**
+     * 
+     * @type {ExemplaryTraderAll200ResponseExemplaryTraderInner}
+     * @memberof UnunifiCopytradingQueryGetExemplaryTraderResponse
+     */
+    'exemplaryTrader'?: ExemplaryTraderAll200ResponseExemplaryTraderInner;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiCopytradingQueryGetExemplaryTraderTracingResponse
+ */
+export interface UnunifiCopytradingQueryGetExemplaryTraderTracingResponse {
+    /**
+     * 
+     * @type {Array<ExemplaryTraderTracing200ResponseTracingInner>}
+     * @memberof UnunifiCopytradingQueryGetExemplaryTraderTracingResponse
+     */
+    'tracing'?: Array<ExemplaryTraderTracing200ResponseTracingInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof UnunifiCopytradingQueryGetExemplaryTraderTracingResponse
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiCopytradingQueryGetTracingResponse
+ */
+export interface UnunifiCopytradingQueryGetTracingResponse {
+    /**
+     * 
+     * @type {ExemplaryTraderTracing200ResponseTracingInner}
+     * @memberof UnunifiCopytradingQueryGetTracingResponse
+     */
+    'tracing'?: ExemplaryTraderTracing200ResponseTracingInner;
+}
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @export
+ * @interface UnunifiCopytradingQueryParamsResponse
+ */
+export interface UnunifiCopytradingQueryParamsResponse {
+    /**
+     * params holds all the parameters of this module.
+     * @type {object}
+     * @memberof UnunifiCopytradingQueryParamsResponse
+     */
+    'params'?: object;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiCopytradingTracing
+ */
+export interface UnunifiCopytradingTracing {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiCopytradingTracing
+     */
+    'address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiCopytradingTracing
+     */
+    'exemplary_trader'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiCopytradingTracing
+     */
+    'size_coefficient'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiCopytradingTracing
+     */
+    'leverage_coefficient'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof UnunifiCopytradingTracing
+     */
+    'reverse'?: boolean;
 }
 /**
  * 
@@ -6070,6 +6379,36 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @summary Parameters queries the parameters of the module.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        copyTradingParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/UnUniFi/copy-trading/params`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6256,6 +6595,143 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary Queries a ExemplaryTrader by index.
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exemplaryTrader: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'address' is not null or undefined
+            assertParamExists('exemplaryTrader', 'address', address)
+            const localVarPath = `/UnUniFi/copy-trading/exemplary_traders/{address}`
+                .replace(`{${"address"}}`, encodeURIComponent(String(address)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary Queries a list of ExemplaryTrader items.
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exemplaryTraderAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/UnUniFi/copy-trading/exemplary_traders`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (paginationKey !== undefined) {
+                localVarQueryParameter['pagination.key'] = paginationKey;
+            }
+
+            if (paginationOffset !== undefined) {
+                localVarQueryParameter['pagination.offset'] = paginationOffset;
+            }
+
+            if (paginationLimit !== undefined) {
+                localVarQueryParameter['pagination.limit'] = paginationLimit;
+            }
+
+            if (paginationCountTotal !== undefined) {
+                localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} address 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exemplaryTraderTracing: async (address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'address' is not null or undefined
+            assertParamExists('exemplaryTraderTracing', 'address', address)
+            const localVarPath = `/UnUniFi/copy-trading/exemplary_traders/{address}/tracing`
+                .replace(`{${"address"}}`, encodeURIComponent(String(address)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (paginationKey !== undefined) {
+                localVarQueryParameter['pagination.key'] = paginationKey;
+            }
+
+            if (paginationOffset !== undefined) {
+                localVarQueryParameter['pagination.offset'] = paginationOffset;
+            }
+
+            if (paginationLimit !== undefined) {
+                localVarQueryParameter['pagination.limit'] = paginationLimit;
+            }
+
+            if (paginationCountTotal !== undefined) {
+                localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
+            }
 
 
     
@@ -7467,6 +7943,90 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @summary Queries a Tracing by index.
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tracing: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'address' is not null or undefined
+            assertParamExists('tracing', 'address', address)
+            const localVarPath = `/UnUniFi/copy-trading/tracing/{address}`
+                .replace(`{${"address"}}`, encodeURIComponent(String(address)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary Queries a list of Tracing items.
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tracingAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/UnUniFi/copy-trading/tracing`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (paginationKey !== undefined) {
+                localVarQueryParameter['pagination.key'] = paginationKey;
+            }
+
+            if (paginationOffset !== undefined) {
+                localVarQueryParameter['pagination.offset'] = paginationOffset;
+            }
+
+            if (paginationLimit !== undefined) {
+                localVarQueryParameter['pagination.limit'] = paginationLimit;
+            }
+
+            if (paginationCountTotal !== undefined) {
+                localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -7678,6 +8238,16 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @summary Parameters queries the parameters of the module.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async copyTradingParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CopyTradingParams200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.copyTradingParams(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -7736,6 +8306,45 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async estimateRedeemAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateDLPTokenAmount200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemAmount(redeemDenom, lptAmount, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary Queries a ExemplaryTrader by index.
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exemplaryTrader(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExemplaryTrader200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.exemplaryTrader(address, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary Queries a list of ExemplaryTrader items.
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exemplaryTraderAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExemplaryTraderAll200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.exemplaryTraderAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} address 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exemplaryTraderTracing(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExemplaryTraderTracing200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.exemplaryTraderTracing(address, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -8093,6 +8702,31 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @summary Queries a Tracing by index.
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async tracing(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tracing200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tracing(address, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary Queries a list of Tracing items.
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async tracingAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExemplaryTraderTracing200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tracingAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -8268,6 +8902,15 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @summary Parameters queries the parameters of the module.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        copyTradingParams(options?: any): AxiosPromise<CopyTradingParams200Response> {
+            return localVarFp.copyTradingParams(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -8321,6 +8964,42 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         estimateRedeemAmount(redeemDenom: string, lptAmount: string, options?: any): AxiosPromise<EstimateDLPTokenAmount200Response> {
             return localVarFp.estimateRedeemAmount(redeemDenom, lptAmount, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary Queries a ExemplaryTrader by index.
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exemplaryTrader(address: string, options?: any): AxiosPromise<ExemplaryTrader200Response> {
+            return localVarFp.exemplaryTrader(address, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary Queries a list of ExemplaryTrader items.
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exemplaryTraderAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<ExemplaryTraderAll200Response> {
+            return localVarFp.exemplaryTraderAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} address 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exemplaryTraderTracing(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<ExemplaryTraderTracing200Response> {
+            return localVarFp.exemplaryTraderTracing(address, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -8644,6 +9323,29 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @summary Queries a Tracing by index.
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tracing(address: string, options?: any): AxiosPromise<Tracing200Response> {
+            return localVarFp.tracing(address, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary Queries a list of Tracing items.
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tracingAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<ExemplaryTraderTracing200Response> {
+            return localVarFp.tracingAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -8850,6 +9552,17 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @summary Parameters queries the parameters of the module.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public copyTradingParams(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).copyTradingParams(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
@@ -8914,6 +9627,48 @@ export class QueryApi extends BaseAPI {
      */
     public estimateRedeemAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).estimateRedeemAmount(redeemDenom, lptAmount, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Queries a ExemplaryTrader by index.
+     * @param {string} address 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public exemplaryTrader(address: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).exemplaryTrader(address, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Queries a list of ExemplaryTrader items.
+     * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+     * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+     * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+     * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public exemplaryTraderAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).exemplaryTraderAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} address 
+     * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+     * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+     * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+     * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public exemplaryTraderTracing(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).exemplaryTraderTracing(address, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -9300,6 +10055,33 @@ export class QueryApi extends BaseAPI {
      */
     public rewards(address: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).rewards(address, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Queries a Tracing by index.
+     * @param {string} address 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public tracing(address: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).tracing(address, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Queries a list of Tracing items.
+     * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+     * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+     * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+     * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public tracingAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).tracingAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
