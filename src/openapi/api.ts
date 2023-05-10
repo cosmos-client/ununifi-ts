@@ -13,13 +13,15 @@
  */
 
 
-import { Configuration } from './configuration';
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { Configuration } from './configuration';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from './common';
+import type { RequestArgs } from './base';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
+import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
 
 /**
  * 
@@ -33,6 +35,161 @@ export interface AccountAll200Response {
      * @memberof AccountAll200Response
      */
     'accounts'?: Array<AuctionAll200ResponseAuctionsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface AllPositions200Response
+ */
+export interface AllPositions200Response {
+    /**
+     * 
+     * @type {Array<AllPositions200ResponsePositionsInner>}
+     * @memberof AllPositions200Response
+     */
+    'positions'?: Array<AllPositions200ResponsePositionsInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof AllPositions200Response
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface AllPositions200ResponsePositionsInner
+ */
+export interface AllPositions200ResponsePositionsInner {
+    /**
+     * 
+     * @type {AllPositions200ResponsePositionsInnerPosition}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'position'?: AllPositions200ResponsePositionsInnerPosition;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'valuation_profit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'remaining_margin_value'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'effective_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'margin_maintenance_rate'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface AllPositions200ResponsePositionsInnerPosition
+ */
+export interface AllPositions200ResponsePositionsInnerPosition {
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInnerPosition
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner}
+     * @memberof AllPositions200ResponsePositionsInnerPosition
+     */
+    'market'?: DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInnerPosition
+     */
+    'address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInnerPosition
+     */
+    'opened_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInnerPosition
+     */
+    'opened_height'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInnerPosition
+     */
+    'opened_base_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInnerPosition
+     */
+    'opened_quote_rate'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof AllPositions200ResponsePositionsInnerPosition
+     */
+    'remaining_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInnerPosition
+     */
+    'last_levied_at'?: string;
+    /**
+     * 
+     * @type {AuctionAll200ResponseAuctionsInner}
+     * @memberof AllPositions200ResponsePositionsInnerPosition
+     */
+    'position_instance'?: AuctionAll200ResponseAuctionsInner;
+}
+/**
+ * 
+ * @export
+ * @interface AllRewards200Response
+ */
+export interface AllRewards200Response {
+    /**
+     * 
+     * @type {AllRewards200ResponseRewards}
+     * @memberof AllRewards200Response
+     */
+    'rewards'?: AllRewards200ResponseRewards;
+}
+/**
+ * 
+ * @export
+ * @interface AllRewards200ResponseRewards
+ */
+export interface AllRewards200ResponseRewards {
+    /**
+     * 
+     * @type {string}
+     * @memberof AllRewards200ResponseRewards
+     */
+    'subject_addr'?: string;
+    /**
+     * 
+     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @memberof AllRewards200ResponseRewards
+     */
+    'rewards'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
 }
 /**
  * 
@@ -188,6 +345,32 @@ export interface AuctionParams200ResponseParams {
 /**
  * 
  * @export
+ * @interface AvailableAssetInPoolByDenom200Response
+ */
+export interface AvailableAssetInPoolByDenom200Response {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof AvailableAssetInPoolByDenom200Response
+     */
+    'available_asset'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface AvailableAssetsInPool200Response
+ */
+export interface AvailableAssetsInPool200Response {
+    /**
+     * 
+     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @memberof AvailableAssetsInPool200Response
+     */
+    'available_assets'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+}
+/**
+ * 
+ * @export
  * @interface Balances200Response
  */
 export interface Balances200Response {
@@ -197,6 +380,117 @@ export interface Balances200Response {
      * @memberof Balances200Response
      */
     'balances'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+}
+/**
+ * 
+ * @export
+ * @interface BidderBids200Response
+ */
+export interface BidderBids200Response {
+    /**
+     * 
+     * @type {Array<BidderBids200ResponseBidsInner>}
+     * @memberof BidderBids200Response
+     */
+    'bids'?: Array<BidderBids200ResponseBidsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface BidderBids200ResponseBidsInner
+ */
+export interface BidderBids200ResponseBidsInner {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    /**
+     * 
+     * @type {string}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'bidder'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'bid_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'deposit_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'paid_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'bidding_period'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'deposit_lending_rate'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'automatic_payment'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'bid_time'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'interest_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {Array<ListerBorrowingBidderInfoInner>}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'borrowings'?: Array<ListerBorrowingBidderInfoInner>;
+    /**
+     * 
+     * @type {TodoRemoveNftIdBidderThenUseIt}
+     * @memberof BidderBids200ResponseBidsInner
+     */
+    'id'?: TodoRemoveNftIdBidderThenUseIt;
+}
+/**
+ * 
+ * @export
+ * @interface BidderBids200ResponseBidsInnerNftId
+ */
+export interface BidderBids200ResponseBidsInnerNftId {
+    /**
+     * 
+     * @type {string}
+     * @memberof BidderBids200ResponseBidsInnerNftId
+     */
+    'class_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof BidderBids200ResponseBidsInnerNftId
+     */
+    'nft_id'?: string;
 }
 /**
  * 
@@ -520,6 +814,128 @@ export interface CdpParams200ResponseParamsDebtParamsInner {
     'circuit_breaker'?: boolean;
 }
 /**
+ * 
+ * @export
+ * @interface ClassAttributes200Response
+ */
+export interface ClassAttributes200Response {
+    /**
+     * 
+     * @type {ClassAttributes200ResponseClassAttributes}
+     * @memberof ClassAttributes200Response
+     */
+    'class_attributes'?: ClassAttributes200ResponseClassAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ClassAttributes200ResponseClassAttributes
+ */
+export interface ClassAttributes200ResponseClassAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ClassAttributes200ResponseClassAttributes
+     */
+    'class_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ClassAttributes200ResponseClassAttributes
+     */
+    'owner'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ClassAttributes200ResponseClassAttributes
+     */
+    'base_token_uri'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ClassAttributes200ResponseClassAttributes
+     */
+    'minting_permission'?: ClassAttributes200ResponseClassAttributesMintingPermissionEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ClassAttributes200ResponseClassAttributes
+     */
+    'token_supply_cap'?: string;
+}
+
+export const ClassAttributes200ResponseClassAttributesMintingPermissionEnum = {
+    OnlyOwner: 'OnlyOwner',
+    Anyone: 'Anyone'
+} as const;
+
+export type ClassAttributes200ResponseClassAttributesMintingPermissionEnum = typeof ClassAttributes200ResponseClassAttributesMintingPermissionEnum[keyof typeof ClassAttributes200ResponseClassAttributesMintingPermissionEnum];
+
+/**
+ * 
+ * @export
+ * @interface ClassIdsByName200Response
+ */
+export interface ClassIdsByName200Response {
+    /**
+     * 
+     * @type {ClassIdsByName200ResponseClassNameIdList}
+     * @memberof ClassIdsByName200Response
+     */
+    'class_name_id_list'?: ClassIdsByName200ResponseClassNameIdList;
+}
+/**
+ * 
+ * @export
+ * @interface ClassIdsByName200ResponseClassNameIdList
+ */
+export interface ClassIdsByName200ResponseClassNameIdList {
+    /**
+     * 
+     * @type {string}
+     * @memberof ClassIdsByName200ResponseClassNameIdList
+     */
+    'class_name'?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ClassIdsByName200ResponseClassNameIdList
+     */
+    'class_id'?: Array<string>;
+}
+/**
+ * 
+ * @export
+ * @interface ClassIdsByOwner200Response
+ */
+export interface ClassIdsByOwner200Response {
+    /**
+     * 
+     * @type {ClassIdsByOwner200ResponseOwningClassIdList}
+     * @memberof ClassIdsByOwner200Response
+     */
+    'owning_class_id_list'?: ClassIdsByOwner200ResponseOwningClassIdList;
+}
+/**
+ * 
+ * @export
+ * @interface ClassIdsByOwner200ResponseOwningClassIdList
+ */
+export interface ClassIdsByOwner200ResponseOwningClassIdList {
+    /**
+     * 
+     * @type {string}
+     * @memberof ClassIdsByOwner200ResponseOwningClassIdList
+     */
+    'owner'?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ClassIdsByOwner200ResponseOwningClassIdList
+     */
+    'class_id'?: Array<string>;
+}
+/**
  * message SomeRequest {          Foo some_parameter = 1;          PageRequest pagination = 2;  }
  * @export
  * @interface CosmosBaseQueryV1beta1PageRequest
@@ -591,6 +1007,25 @@ export interface CosmosBaseV1beta1Coin {
 /**
  * 
  * @export
+ * @interface DLPTokenRates200Response
+ */
+export interface DLPTokenRates200Response {
+    /**
+     * 
+     * @type {string}
+     * @memberof DLPTokenRates200Response
+     */
+    'symbol'?: string;
+    /**
+     * 
+     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @memberof DLPTokenRates200Response
+     */
+    'rates'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+}
+/**
+ * 
+ * @export
  * @interface DepositAll200Response
  */
 export interface DepositAll200Response {
@@ -627,6 +1062,262 @@ export interface DepositAll200ResponseDepositsInner {
     'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 /**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @export
+ * @interface DerivativesParams200Response
+ */
+export interface DerivativesParams200Response {
+    /**
+     * 
+     * @type {DerivativesParams200ResponseParams}
+     * @memberof DerivativesParams200Response
+     */
+    'params'?: DerivativesParams200ResponseParams;
+}
+/**
+ * params holds all the parameters of this module.
+ * @export
+ * @interface DerivativesParams200ResponseParams
+ */
+export interface DerivativesParams200ResponseParams {
+    /**
+     * 
+     * @type {DerivativesParams200ResponseParamsPoolParams}
+     * @memberof DerivativesParams200ResponseParams
+     */
+    'pool_params'?: DerivativesParams200ResponseParamsPoolParams;
+    /**
+     * 
+     * @type {DerivativesParams200ResponseParamsPerpetualFutures}
+     * @memberof DerivativesParams200ResponseParams
+     */
+    'perpetual_futures'?: DerivativesParams200ResponseParamsPerpetualFutures;
+    /**
+     * 
+     * @type {DerivativesParams200ResponseParamsPerpetualOptions}
+     * @memberof DerivativesParams200ResponseParams
+     */
+    'perpetual_options'?: DerivativesParams200ResponseParamsPerpetualOptions;
+}
+/**
+ * 
+ * @export
+ * @interface DerivativesParams200ResponseParamsPerpetualFutures
+ */
+export interface DerivativesParams200ResponseParamsPerpetualFutures {
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPerpetualFutures
+     */
+    'commission_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPerpetualFutures
+     */
+    'margin_maintenance_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPerpetualFutures
+     */
+    'imaginary_funding_rate_proportional_coefficient'?: string;
+    /**
+     * 
+     * @type {Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>}
+     * @memberof DerivativesParams200ResponseParamsPerpetualFutures
+     */
+    'markets'?: Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>;
+    /**
+     * 
+     * @type {number}
+     * @memberof DerivativesParams200ResponseParamsPerpetualFutures
+     */
+    'max_leverage'?: number;
+}
+/**
+ * 
+ * @export
+ * @interface DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner
+ */
+export interface DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner
+     */
+    'base_denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner
+     */
+    'quote_denom'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface DerivativesParams200ResponseParamsPerpetualOptions
+ */
+export interface DerivativesParams200ResponseParamsPerpetualOptions {
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPerpetualOptions
+     */
+    'premium_commission_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPerpetualOptions
+     */
+    'strike_commission_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPerpetualOptions
+     */
+    'margin_maintenance_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPerpetualOptions
+     */
+    'imaginary_funding_rate_proportional_coefficient'?: string;
+    /**
+     * 
+     * @type {Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>}
+     * @memberof DerivativesParams200ResponseParamsPerpetualOptions
+     */
+    'markets'?: Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface DerivativesParams200ResponseParamsPoolParams
+ */
+export interface DerivativesParams200ResponseParamsPoolParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPoolParams
+     */
+    'quote_ticker'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPoolParams
+     */
+    'base_lpt_mint_fee'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPoolParams
+     */
+    'base_lpt_redeem_fee'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPoolParams
+     */
+    'borrowing_fee_rate_per_hour'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPoolParams
+     */
+    'report_liquidation_reward_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPoolParams
+     */
+    'report_levy_period_reward_rate'?: string;
+    /**
+     * 
+     * @type {Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner>}
+     * @memberof DerivativesParams200ResponseParamsPoolParams
+     */
+    'accepted_assets_conf'?: Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner>;
+}
+/**
+ * 
+ * @export
+ * @interface DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner
+ */
+export interface DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner
+     */
+    'target_weight'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface EcosystemincentiveParams200Response
+ */
+export interface EcosystemincentiveParams200Response {
+    /**
+     * 
+     * @type {EcosystemincentiveParams200ResponseParams}
+     * @memberof EcosystemincentiveParams200Response
+     */
+    'params'?: EcosystemincentiveParams200ResponseParams;
+}
+/**
+ * params holds all the parameters of this module.
+ * @export
+ * @interface EcosystemincentiveParams200ResponseParams
+ */
+export interface EcosystemincentiveParams200ResponseParams {
+    /**
+     * 
+     * @type {Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>}
+     * @memberof EcosystemincentiveParams200ResponseParams
+     */
+    'reward_params'?: Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>;
+    /**
+     * 
+     * @type {string}
+     * @memberof EcosystemincentiveParams200ResponseParams
+     */
+    'max_incentive_unit_id_len'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof EcosystemincentiveParams200ResponseParams
+     */
+    'max_subject_info_num_in_unit'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface EstimateDLPTokenAmount200Response
+ */
+export interface EstimateDLPTokenAmount200Response {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof EstimateDLPTokenAmount200Response
+     */
+    'estimated_dlp_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof EstimateDLPTokenAmount200Response
+     */
+    'deposit_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
  * 
  * @export
  * @interface EstimateMintAmount200Response
@@ -651,6 +1342,25 @@ export interface EstimateRedeemAmount200Response {
      * @memberof EstimateRedeemAmount200Response
      */
     'redeem_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface EstimateRedeemTokenAmount200Response
+ */
+export interface EstimateRedeemTokenAmount200Response {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof EstimateRedeemTokenAmount200Response
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof EstimateRedeemTokenAmount200Response
+     */
+    'fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 /**
  * `Any` contains an arbitrary serialized protocol buffer message along with a URL that describes the type of the serialized message.  Protobuf library provides support to pack/unpack Any values in the form of utility functions or additional generated methods of the Any type.  Example 1: Pack and unpack a message in C++.      Foo foo = ...;     Any any;     any.PackFrom(foo);     ...     if (any.UnpackTo(&foo)) {       ...     }  Example 2: Pack and unpack a message in Java.      Foo foo = ...;     Any any = Any.pack(foo);     ...     if (any.is(Foo.class)) {       foo = any.unpack(Foo.class);     }   Example 3: Pack and unpack a message in Python.      foo = Foo(...)     any = Any()     any.Pack(foo)     ...     if any.Is(Foo.DESCRIPTOR):       any.Unpack(foo)       ...   Example 4: Pack and unpack a message in Go       foo := &pb.Foo{...}      any, err := ptypes.MarshalAny(foo)      ...      foo := &pb.Foo{}      if err := ptypes.UnmarshalAny(any, foo); err != nil {        ...      }  The pack methods provided by protobuf library will by default use \'type.googleapis.com/full.type.name\' as the type URL and the unpack methods only use the fully qualified type name after the last \'/\' in the type URL, for example \"foo.bar.com/x/y.z\" will yield type name \"y.z\".   JSON ==== The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:      package google.profile;     message Person {       string first_name = 1;       string last_name = 2;     }      {       \"@type\": \"type.googleapis.com/google.profile.Person\",       \"firstName\": <string>,       \"lastName\": <string>     }  If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message [google.protobuf.Duration][]):      {       \"@type\": \"type.googleapis.com/google.protobuf.Duration\",       \"value\": \"1.212s\"     }
@@ -855,6 +1565,463 @@ export interface IncentiveParamsDefaultResponseDetailsInner {
 /**
  * 
  * @export
+ * @interface IncentiveUnit200Response
+ */
+export interface IncentiveUnit200Response {
+    /**
+     * 
+     * @type {IncentiveUnit200ResponseIncentiveUnit}
+     * @memberof IncentiveUnit200Response
+     */
+    'incentive_unit'?: IncentiveUnit200ResponseIncentiveUnit;
+}
+/**
+ * 
+ * @export
+ * @interface IncentiveUnit200ResponseIncentiveUnit
+ */
+export interface IncentiveUnit200ResponseIncentiveUnit {
+    /**
+     * 
+     * @type {string}
+     * @memberof IncentiveUnit200ResponseIncentiveUnit
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {Array<IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner>}
+     * @memberof IncentiveUnit200ResponseIncentiveUnit
+     */
+    'subject_info_lists'?: Array<IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner
+ */
+export interface IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner
+     */
+    'subject_addr'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner
+     */
+    'weight'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface IncentiveUnitIdsByAddr200Response
+ */
+export interface IncentiveUnitIdsByAddr200Response {
+    /**
+     * 
+     * @type {IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr}
+     * @memberof IncentiveUnitIdsByAddr200Response
+     */
+    'incentive_unit_ids_by_addr'?: IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr;
+}
+/**
+ * 
+ * @export
+ * @interface IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr
+ */
+export interface IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr {
+    /**
+     * 
+     * @type {string}
+     * @memberof IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr
+     */
+    'address'?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr
+     */
+    'incentive_unit_ids'?: Array<string>;
+}
+/**
+ * 
+ * @export
+ * @interface Liquidation200Response
+ */
+export interface Liquidation200Response {
+    /**
+     * 
+     * @type {Liquidation200ResponseLiquidations}
+     * @memberof Liquidation200Response
+     */
+    'liquidations'?: Liquidation200ResponseLiquidations;
+}
+/**
+ * 
+ * @export
+ * @interface Liquidation200ResponseLiquidations
+ */
+export interface Liquidation200ResponseLiquidations {
+    /**
+     * 
+     * @type {Liquidation200ResponseLiquidationsLiquidation}
+     * @memberof Liquidation200ResponseLiquidations
+     */
+    'liquidation'?: Liquidation200ResponseLiquidationsLiquidation;
+    /**
+     * 
+     * @type {Array<Liquidation200ResponseLiquidationsLiquidation>}
+     * @memberof Liquidation200ResponseLiquidations
+     */
+    'next_liquidation'?: Array<Liquidation200ResponseLiquidationsLiquidation>;
+}
+/**
+ * 
+ * @export
+ * @interface Liquidation200ResponseLiquidationsLiquidation
+ */
+export interface Liquidation200ResponseLiquidationsLiquidation {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof Liquidation200ResponseLiquidationsLiquidation
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof Liquidation200ResponseLiquidationsLiquidation
+     */
+    'liquidation_date'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface LiquidityProviderTokenNominalAPY200Response
+ */
+export interface LiquidityProviderTokenNominalAPY200Response {
+    /**
+     * 
+     * @type {string}
+     * @memberof LiquidityProviderTokenNominalAPY200Response
+     */
+    'apy'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface ListedClass200Response
+ */
+export interface ListedClass200Response {
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedClass200Response
+     */
+    'class_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedClass200Response
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedClass200Response
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedClass200Response
+     */
+    'symbol'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedClass200Response
+     */
+    'uri'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedClass200Response
+     */
+    'urihash'?: string;
+    /**
+     * 
+     * @type {Array<ListedClass200ResponseNftsInner>}
+     * @memberof ListedClass200Response
+     */
+    'nfts'?: Array<ListedClass200ResponseNftsInner>;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedClass200Response
+     */
+    'nft_count'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface ListedClass200ResponseNftsInner
+ */
+export interface ListedClass200ResponseNftsInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedClass200ResponseNftsInner
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedClass200ResponseNftsInner
+     */
+    'uri'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedClass200ResponseNftsInner
+     */
+    'uri_hash'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface ListedClasses200Response
+ */
+export interface ListedClasses200Response {
+    /**
+     * 
+     * @type {Array<ListedClass200Response>}
+     * @memberof ListedClasses200Response
+     */
+    'classes'?: Array<ListedClass200Response>;
+}
+/**
+ * 
+ * @export
+ * @interface ListedNfts200Response
+ */
+export interface ListedNfts200Response {
+    /**
+     * 
+     * @type {Array<ListedNfts200ResponseListingsInner>}
+     * @memberof ListedNfts200Response
+     */
+    'listings'?: Array<ListedNfts200ResponseListingsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface ListedNfts200ResponseListingsInner
+ */
+export interface ListedNfts200ResponseListingsInner {
+    /**
+     * 
+     * @type {ListedNfts200ResponseListingsInnerListing}
+     * @memberof ListedNfts200ResponseListingsInner
+     */
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
+    /**
+     * 
+     * @type {ListedClass200ResponseNftsInner}
+     * @memberof ListedNfts200ResponseListingsInner
+     */
+    'nft_info'?: ListedClass200ResponseNftsInner;
+}
+/**
+ * 
+ * @export
+ * @interface ListedNfts200ResponseListingsInnerListing
+ */
+export interface ListedNfts200ResponseListingsInnerListing {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'owner'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'listing_type'?: ListedNfts200ResponseListingsInnerListingListingTypeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'state'?: ListedNfts200ResponseListingsInnerListingStateEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'bid_token'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'minimum_deposit_rate'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'automatic_refinancing'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'started_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'end_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'full_payment_end_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'successful_bid_end_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'auto_relisted_count'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'collected_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'minimum_bidding_period'?: string;
+}
+
+export const ListedNfts200ResponseListingsInnerListingListingTypeEnum = {
+    DirectAssetBorrow: 'DIRECT_ASSET_BORROW',
+    SyntheticAssetCreation: 'SYNTHETIC_ASSET_CREATION',
+    LateShipping: 'LATE_SHIPPING'
+} as const;
+
+export type ListedNfts200ResponseListingsInnerListingListingTypeEnum = typeof ListedNfts200ResponseListingsInnerListingListingTypeEnum[keyof typeof ListedNfts200ResponseListingsInnerListingListingTypeEnum];
+export const ListedNfts200ResponseListingsInnerListingStateEnum = {
+    Listing: 'LISTING',
+    Bidding: 'BIDDING',
+    SellingDecision: 'SELLING_DECISION',
+    EndListing: 'END_LISTING',
+    SuccessfulBid: 'SUCCESSFUL_BID'
+} as const;
+
+export type ListedNfts200ResponseListingsInnerListingStateEnum = typeof ListedNfts200ResponseListingsInnerListingStateEnum[keyof typeof ListedNfts200ResponseListingsInnerListingStateEnum];
+
+/**
+ * 
+ * @export
+ * @interface ListerBorrowingBidderInfoInner
+ */
+export interface ListerBorrowingBidderInfoInner {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof ListerBorrowingBidderInfoInner
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof ListerBorrowingBidderInfoInner
+     */
+    'paid_interest_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListerBorrowingBidderInfoInner
+     */
+    'start_at'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface Loan200Response
+ */
+export interface Loan200Response {
+    /**
+     * 
+     * @type {Loans200ResponseLoansInner}
+     * @memberof Loan200Response
+     */
+    'loan'?: Loans200ResponseLoansInner;
+    /**
+     * 
+     * @type {string}
+     * @memberof Loan200Response
+     */
+    'borrowing_limit'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface Loans200Response
+ */
+export interface Loans200Response {
+    /**
+     * 
+     * @type {Array<Loans200ResponseLoansInner>}
+     * @memberof Loans200Response
+     */
+    'loans'?: Array<Loans200ResponseLoansInner>;
+}
+/**
+ * 
+ * @export
+ * @interface Loans200ResponseLoansInner
+ */
+export interface Loans200ResponseLoansInner {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof Loans200ResponseLoansInner
+     */
+    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof Loans200ResponseLoansInner
+     */
+    'loan'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
  * @interface MarketAll200Response
  */
 export interface MarketAll200Response {
@@ -911,6 +2078,222 @@ export interface MarketAll200ResponseMarketsInner {
 /**
  * 
  * @export
+ * @interface NFTMinter200Response
+ */
+export interface NFTMinter200Response {
+    /**
+     * 
+     * @type {string}
+     * @memberof NFTMinter200Response
+     */
+    'minter'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface NftListing200Response
+ */
+export interface NftListing200Response {
+    /**
+     * 
+     * @type {ListedNfts200ResponseListingsInnerListing}
+     * @memberof NftListing200Response
+     */
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
+}
+/**
+ * 
+ * @export
+ * @interface NftmarketParams200Response
+ */
+export interface NftmarketParams200Response {
+    /**
+     * 
+     * @type {NftmarketParams200ResponseParams}
+     * @memberof NftmarketParams200Response
+     */
+    'params'?: NftmarketParams200ResponseParams;
+}
+/**
+ * 
+ * @export
+ * @interface NftmarketParams200ResponseParams
+ */
+export interface NftmarketParams200ResponseParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'min_staking_for_listing'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'default_bid_active_rank'?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'bid_tokens'?: Array<string>;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'auto_relisting_count_if_no_bid'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'nft_listing_delay_seconds'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'nft_listing_period_initial'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'nft_listing_cancel_required_seconds'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'nft_listing_cancel_fee_percentage'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'nft_listing_gap_time'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'bid_cancel_required_seconds'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'bid_token_disburse_seconds_after_cancel'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'nft_listing_full_payment_period'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'nft_listing_nft_delivery_period'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'nft_creator_share_percentage'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'market_administrator'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'nft_listing_commission_fee'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'nft_listing_extend_seconds'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof NftmarketParams200ResponseParams
+     */
+    'nft_listing_period_extend_fee_per_hour'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface NftmintParams200Response
+ */
+export interface NftmintParams200Response {
+    /**
+     * 
+     * @type {NftmintParams200ResponseParams}
+     * @memberof NftmintParams200Response
+     */
+    'params'?: NftmintParams200ResponseParams;
+}
+/**
+ * 
+ * @export
+ * @interface NftmintParams200ResponseParams
+ */
+export interface NftmintParams200ResponseParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmintParams200ResponseParams
+     */
+    'MaxNFTSupplyCap'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmintParams200ResponseParams
+     */
+    'MinClassNameLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmintParams200ResponseParams
+     */
+    'MaxClassNameLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmintParams200ResponseParams
+     */
+    'MinUriLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmintParams200ResponseParams
+     */
+    'MaxUriLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmintParams200ResponseParams
+     */
+    'MaxSymbolLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftmintParams200ResponseParams
+     */
+    'MaxDescriptionLen'?: string;
+}
+/**
+ * 
+ * @export
  * @interface OracleAll200Response
  */
 export interface OracleAll200Response {
@@ -926,6 +2309,296 @@ export interface OracleAll200Response {
      * @memberof OracleAll200Response
      */
     'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface PaymentStatus200Response
+ */
+export interface PaymentStatus200Response {
+    /**
+     * 
+     * @type {PaymentStatus200ResponsePaymentStatus}
+     * @memberof PaymentStatus200Response
+     */
+    'paymentStatus'?: PaymentStatus200ResponsePaymentStatus;
+}
+/**
+ * 
+ * @export
+ * @interface PaymentStatus200ResponsePaymentStatus
+ */
+export interface PaymentStatus200ResponsePaymentStatus {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof PaymentStatus200ResponsePaymentStatus
+     */
+    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    /**
+     * 
+     * @type {string}
+     * @memberof PaymentStatus200ResponsePaymentStatus
+     */
+    'bidder'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof PaymentStatus200ResponsePaymentStatus
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PaymentStatus200ResponsePaymentStatus
+     */
+    'automatic_payment'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof PaymentStatus200ResponsePaymentStatus
+     */
+    'paid_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PaymentStatus200ResponsePaymentStatus
+     */
+    'bid_time'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PaymentStatus200ResponsePaymentStatus
+     */
+    'state'?: PaymentStatus200ResponsePaymentStatusStateEnum;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PaymentStatus200ResponsePaymentStatus
+     */
+    'all_paid'?: boolean;
+}
+
+export const PaymentStatus200ResponsePaymentStatusStateEnum = {
+    Listing: 'LISTING',
+    Bidding: 'BIDDING',
+    SellingDecision: 'SELLING_DECISION',
+    EndListing: 'END_LISTING',
+    SuccessfulBid: 'SUCCESSFUL_BID'
+} as const;
+
+export type PaymentStatus200ResponsePaymentStatusStateEnum = typeof PaymentStatus200ResponsePaymentStatusStateEnum[keyof typeof PaymentStatus200ResponsePaymentStatusStateEnum];
+
+/**
+ * 
+ * @export
+ * @interface PerpetualFutures200Response
+ */
+export interface PerpetualFutures200Response {
+    /**
+     * 
+     * @type {string}
+     * @memberof PerpetualFutures200Response
+     */
+    'metrics_quote_ticker'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PerpetualFutures200Response
+     */
+    'volume_24hours'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PerpetualFutures200Response
+     */
+    'fees_24hours'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof PerpetualFutures200Response
+     */
+    'long_positions'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof PerpetualFutures200Response
+     */
+    'short_positions'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface PerpetualFuturesMarket200Response
+ */
+export interface PerpetualFuturesMarket200Response {
+    /**
+     * 
+     * @type {string}
+     * @memberof PerpetualFuturesMarket200Response
+     */
+    'price'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PerpetualFuturesMarket200Response
+     */
+    'metrics_quote_ticker'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PerpetualFuturesMarket200Response
+     */
+    'volume_24hours'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PerpetualFuturesMarket200Response
+     */
+    'fees_24hours'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PerpetualFuturesMarket200Response
+     */
+    'long_positions'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PerpetualFuturesMarket200Response
+     */
+    'short_positions'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface PerpetualFuturesPositionSize200Response
+ */
+export interface PerpetualFuturesPositionSize200Response {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof PerpetualFuturesPositionSize200Response
+     */
+    'total_position_size_usd'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface Pool200Response
+ */
+export interface Pool200Response {
+    /**
+     * 
+     * @type {string}
+     * @memberof Pool200Response
+     */
+    'metrics_quote_ticker'?: string;
+    /**
+     * 
+     * @type {Pool200ResponsePoolMarketCap}
+     * @memberof Pool200Response
+     */
+    'pool_market_cap'?: Pool200ResponsePoolMarketCap;
+    /**
+     * 
+     * @type {string}
+     * @memberof Pool200Response
+     */
+    'volume_24hours'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Pool200Response
+     */
+    'fees_24hours'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface Pool200ResponsePoolMarketCap
+ */
+export interface Pool200ResponsePoolMarketCap {
+    /**
+     * 
+     * @type {string}
+     * @memberof Pool200ResponsePoolMarketCap
+     */
+    'quote_ticker'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Pool200ResponsePoolMarketCap
+     */
+    'total'?: string;
+    /**
+     * 
+     * @type {Array<Pool200ResponsePoolMarketCapAssetInfoInner>}
+     * @memberof Pool200ResponsePoolMarketCap
+     */
+    'asset_info'?: Array<Pool200ResponsePoolMarketCapAssetInfoInner>;
+}
+/**
+ * 
+ * @export
+ * @interface Pool200ResponsePoolMarketCapAssetInfoInner
+ */
+export interface Pool200ResponsePoolMarketCapAssetInfoInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof Pool200ResponsePoolMarketCapAssetInfoInner
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Pool200ResponsePoolMarketCapAssetInfoInner
+     */
+    'amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Pool200ResponsePoolMarketCapAssetInfoInner
+     */
+    'price'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Pool200ResponsePoolMarketCapAssetInfoInner
+     */
+    'reserved'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface Position200Response
+ */
+export interface Position200Response {
+    /**
+     * 
+     * @type {AllPositions200ResponsePositionsInnerPosition}
+     * @memberof Position200Response
+     */
+    'position'?: AllPositions200ResponsePositionsInnerPosition;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof Position200Response
+     */
+    'valuation_profit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof Position200Response
+     */
+    'margin_maintenance_rate'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof Position200Response
+     */
+    'effective_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 /**
  * 
@@ -1057,6 +2730,90 @@ export interface RawPriceAll200ResponsePricesInner {
 /**
  * 
  * @export
+ * @interface RecordedIncentiveUnitId200Response
+ */
+export interface RecordedIncentiveUnitId200Response {
+    /**
+     * 
+     * @type {string}
+     * @memberof RecordedIncentiveUnitId200Response
+     */
+    'incentive_unit_id'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface Reward200Response
+ */
+export interface Reward200Response {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof Reward200Response
+     */
+    'reward'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1
+ */
+export interface RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1 {
+    /**
+     * 
+     * @type {string}
+     * @memberof RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1
+     */
+    'module_name'?: string;
+    /**
+     * 
+     * @type {Array<RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1>}
+     * @memberof RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1
+     */
+    'reward_rate'?: Array<RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1>;
+}
+/**
+ * 
+ * @export
+ * @interface RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1
+ */
+export interface RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1 {
+    /**
+     * At first, we go with this one type. NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
+     * @type {string}
+     * @memberof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1
+     */
+    'reward_type'?: RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1
+     */
+    'rate'?: string;
+}
+
+export const RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum = {
+    NftmarketFrontend: 'NFTMARKET_FRONTEND'
+} as const;
+
+export type RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum = typeof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum[keyof typeof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface Rewards200Response
+ */
+export interface Rewards200Response {
+    /**
+     * 
+     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @memberof Rewards200Response
+     */
+    'rewards'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+}
+/**
+ * 
+ * @export
  * @interface Strategy200Response
  */
 export interface Strategy200Response {
@@ -1116,6 +2873,25 @@ export interface StrategyAll200ResponseStrategiesInner {
      * @memberof StrategyAll200ResponseStrategiesInner
      */
     'name'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface TodoRemoveNftIdBidderThenUseIt
+ */
+export interface TodoRemoveNftIdBidderThenUseIt {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof TodoRemoveNftIdBidderThenUseIt
+     */
+    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    /**
+     * 
+     * @type {string}
+     * @memberof TodoRemoveNftIdBidderThenUseIt
+     */
+    'bidder'?: string;
 }
 /**
  * 
@@ -1555,6 +3331,919 @@ export interface UnunifiCdpQueryParamsResponse {
 /**
  * 
  * @export
+ * @interface UnunifiDerivativesMarket
+ */
+export interface UnunifiDerivativesMarket {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesMarket
+     */
+    'base_denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesMarket
+     */
+    'quote_denom'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesParams
+ */
+export interface UnunifiDerivativesParams {
+    /**
+     * 
+     * @type {DerivativesParams200ResponseParamsPoolParams}
+     * @memberof UnunifiDerivativesParams
+     */
+    'pool_params'?: DerivativesParams200ResponseParamsPoolParams;
+    /**
+     * 
+     * @type {DerivativesParams200ResponseParamsPerpetualFutures}
+     * @memberof UnunifiDerivativesParams
+     */
+    'perpetual_futures'?: DerivativesParams200ResponseParamsPerpetualFutures;
+    /**
+     * 
+     * @type {DerivativesParams200ResponseParamsPerpetualOptions}
+     * @memberof UnunifiDerivativesParams
+     */
+    'perpetual_options'?: DerivativesParams200ResponseParamsPerpetualOptions;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesPerpetualFuturesParams
+ */
+export interface UnunifiDerivativesPerpetualFuturesParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPerpetualFuturesParams
+     */
+    'commission_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPerpetualFuturesParams
+     */
+    'margin_maintenance_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPerpetualFuturesParams
+     */
+    'imaginary_funding_rate_proportional_coefficient'?: string;
+    /**
+     * 
+     * @type {Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>}
+     * @memberof UnunifiDerivativesPerpetualFuturesParams
+     */
+    'markets'?: Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>;
+    /**
+     * 
+     * @type {number}
+     * @memberof UnunifiDerivativesPerpetualFuturesParams
+     */
+    'max_leverage'?: number;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesPerpetualOptionsParams
+ */
+export interface UnunifiDerivativesPerpetualOptionsParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPerpetualOptionsParams
+     */
+    'premium_commission_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPerpetualOptionsParams
+     */
+    'strike_commission_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPerpetualOptionsParams
+     */
+    'margin_maintenance_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPerpetualOptionsParams
+     */
+    'imaginary_funding_rate_proportional_coefficient'?: string;
+    /**
+     * 
+     * @type {Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>}
+     * @memberof UnunifiDerivativesPerpetualOptionsParams
+     */
+    'markets'?: Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesPoolAssetConf
+ */
+export interface UnunifiDerivativesPoolAssetConf {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolAssetConf
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolAssetConf
+     */
+    'target_weight'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesPoolMarketCap
+ */
+export interface UnunifiDerivativesPoolMarketCap {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolMarketCap
+     */
+    'quote_ticker'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolMarketCap
+     */
+    'total'?: string;
+    /**
+     * 
+     * @type {Array<Pool200ResponsePoolMarketCapAssetInfoInner>}
+     * @memberof UnunifiDerivativesPoolMarketCap
+     */
+    'asset_info'?: Array<Pool200ResponsePoolMarketCapAssetInfoInner>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesPoolMarketCapAssetInfo
+ */
+export interface UnunifiDerivativesPoolMarketCapAssetInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolMarketCapAssetInfo
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolMarketCapAssetInfo
+     */
+    'amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolMarketCapAssetInfo
+     */
+    'price'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolMarketCapAssetInfo
+     */
+    'reserved'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesPoolParams
+ */
+export interface UnunifiDerivativesPoolParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'quote_ticker'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'base_lpt_mint_fee'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'base_lpt_redeem_fee'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'borrowing_fee_rate_per_hour'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'report_liquidation_reward_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'report_levy_period_reward_rate'?: string;
+    /**
+     * 
+     * @type {Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner>}
+     * @memberof UnunifiDerivativesPoolParams
+     */
+    'accepted_assets_conf'?: Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesPosition
+ */
+export interface UnunifiDerivativesPosition {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'market'?: DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'opened_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'opened_height'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'opened_base_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'opened_quote_rate'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'remaining_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'last_levied_at'?: string;
+    /**
+     * 
+     * @type {AuctionAll200ResponseAuctionsInner}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'position_instance'?: AuctionAll200ResponseAuctionsInner;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export const UnunifiDerivativesPositionType = {
+    PositionUnknown: 'POSITION_UNKNOWN',
+    Long: 'LONG',
+    Short: 'SHORT'
+} as const;
+
+export type UnunifiDerivativesPositionType = typeof UnunifiDerivativesPositionType[keyof typeof UnunifiDerivativesPositionType];
+
+
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueriedPosition
+ */
+export interface UnunifiDerivativesQueriedPosition {
+    /**
+     * 
+     * @type {AllPositions200ResponsePositionsInnerPosition}
+     * @memberof UnunifiDerivativesQueriedPosition
+     */
+    'position'?: AllPositions200ResponsePositionsInnerPosition;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueriedPosition
+     */
+    'valuation_profit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueriedPosition
+     */
+    'remaining_margin_value'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueriedPosition
+     */
+    'effective_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueriedPosition
+     */
+    'margin_maintenance_rate'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryAddressPositionsResponse
+ */
+export interface UnunifiDerivativesQueryAddressPositionsResponse {
+    /**
+     * 
+     * @type {Array<AllPositions200ResponsePositionsInner>}
+     * @memberof UnunifiDerivativesQueryAddressPositionsResponse
+     */
+    'positions'?: Array<AllPositions200ResponsePositionsInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof UnunifiDerivativesQueryAddressPositionsResponse
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryAllPositionsResponse
+ */
+export interface UnunifiDerivativesQueryAllPositionsResponse {
+    /**
+     * 
+     * @type {Array<AllPositions200ResponsePositionsInner>}
+     * @memberof UnunifiDerivativesQueryAllPositionsResponse
+     */
+    'positions'?: Array<AllPositions200ResponsePositionsInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof UnunifiDerivativesQueryAllPositionsResponse
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse
+ */
+export interface UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse
+     */
+    'available_asset'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryAvailableAssetsInPoolResponse
+ */
+export interface UnunifiDerivativesQueryAvailableAssetsInPoolResponse {
+    /**
+     * 
+     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @memberof UnunifiDerivativesQueryAvailableAssetsInPoolResponse
+     */
+    'available_assets'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryDLPTokenRateResponse
+ */
+export interface UnunifiDerivativesQueryDLPTokenRateResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryDLPTokenRateResponse
+     */
+    'symbol'?: string;
+    /**
+     * 
+     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @memberof UnunifiDerivativesQueryDLPTokenRateResponse
+     */
+    'rates'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
+ */
+export interface UnunifiDerivativesQueryEstimateDLPTokenAmountResponse {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
+     */
+    'estimated_dlp_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
+     */
+    'deposit_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse
+ */
+export interface UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse
+     */
+    'fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryLiquidityProviderTokenNominalAPYResponse
+ */
+export interface UnunifiDerivativesQueryLiquidityProviderTokenNominalAPYResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryLiquidityProviderTokenNominalAPYResponse
+     */
+    'apy'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryLiquidityProviderTokenRealAPYResponse
+ */
+export interface UnunifiDerivativesQueryLiquidityProviderTokenRealAPYResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryLiquidityProviderTokenRealAPYResponse
+     */
+    'apy'?: string;
+}
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @export
+ * @interface UnunifiDerivativesQueryParamsResponse
+ */
+export interface UnunifiDerivativesQueryParamsResponse {
+    /**
+     * 
+     * @type {DerivativesParams200ResponseParams}
+     * @memberof UnunifiDerivativesQueryParamsResponse
+     */
+    'params'?: DerivativesParams200ResponseParams;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryPerpetualFuturesMarketResponse
+ */
+export interface UnunifiDerivativesQueryPerpetualFuturesMarketResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
+     */
+    'price'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
+     */
+    'metrics_quote_ticker'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
+     */
+    'volume_24hours'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
+     */
+    'fees_24hours'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
+     */
+    'long_positions'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
+     */
+    'short_positions'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryPerpetualFuturesPositionSizeResponse
+ */
+export interface UnunifiDerivativesQueryPerpetualFuturesPositionSizeResponse {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryPerpetualFuturesPositionSizeResponse
+     */
+    'total_position_size_usd'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryPerpetualFuturesResponse
+ */
+export interface UnunifiDerivativesQueryPerpetualFuturesResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
+     */
+    'metrics_quote_ticker'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
+     */
+    'volume_24hours'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
+     */
+    'fees_24hours'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
+     */
+    'long_positions'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
+     */
+    'short_positions'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryPoolResponse
+ */
+export interface UnunifiDerivativesQueryPoolResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPoolResponse
+     */
+    'metrics_quote_ticker'?: string;
+    /**
+     * 
+     * @type {Pool200ResponsePoolMarketCap}
+     * @memberof UnunifiDerivativesQueryPoolResponse
+     */
+    'pool_market_cap'?: Pool200ResponsePoolMarketCap;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPoolResponse
+     */
+    'volume_24hours'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPoolResponse
+     */
+    'fees_24hours'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryPositionResponse
+ */
+export interface UnunifiDerivativesQueryPositionResponse {
+    /**
+     * 
+     * @type {AllPositions200ResponsePositionsInnerPosition}
+     * @memberof UnunifiDerivativesQueryPositionResponse
+     */
+    'position'?: AllPositions200ResponsePositionsInnerPosition;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryPositionResponse
+     */
+    'valuation_profit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesQueryPositionResponse
+     */
+    'margin_maintenance_rate'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryPositionResponse
+     */
+    'effective_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveIncentiveUnit
+ */
+export interface UnunifiEcosystemincentiveIncentiveUnit {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiEcosystemincentiveIncentiveUnit
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {Array<IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner>}
+     * @memberof UnunifiEcosystemincentiveIncentiveUnit
+     */
+    'subject_info_lists'?: Array<IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveIncentiveUnitIdsByAddr
+ */
+export interface UnunifiEcosystemincentiveIncentiveUnitIdsByAddr {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiEcosystemincentiveIncentiveUnitIdsByAddr
+     */
+    'address'?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof UnunifiEcosystemincentiveIncentiveUnitIdsByAddr
+     */
+    'incentive_unit_ids'?: Array<string>;
+}
+/**
+ * Params defines the parameters for the module.
+ * @export
+ * @interface UnunifiEcosystemincentiveParams
+ */
+export interface UnunifiEcosystemincentiveParams {
+    /**
+     * 
+     * @type {Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>}
+     * @memberof UnunifiEcosystemincentiveParams
+     */
+    'reward_params'?: Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiEcosystemincentiveParams
+     */
+    'max_incentive_unit_id_len'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiEcosystemincentiveParams
+     */
+    'max_subject_info_num_in_unit'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveQueryAllRewardsResponse
+ */
+export interface UnunifiEcosystemincentiveQueryAllRewardsResponse {
+    /**
+     * 
+     * @type {AllRewards200ResponseRewards}
+     * @memberof UnunifiEcosystemincentiveQueryAllRewardsResponse
+     */
+    'rewards'?: AllRewards200ResponseRewards;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveQueryIncentiveUnitIdsByAddrResponse
+ */
+export interface UnunifiEcosystemincentiveQueryIncentiveUnitIdsByAddrResponse {
+    /**
+     * 
+     * @type {IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr}
+     * @memberof UnunifiEcosystemincentiveQueryIncentiveUnitIdsByAddrResponse
+     */
+    'incentive_unit_ids_by_addr'?: IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveQueryIncentiveUnitResponse
+ */
+export interface UnunifiEcosystemincentiveQueryIncentiveUnitResponse {
+    /**
+     * 
+     * @type {IncentiveUnit200ResponseIncentiveUnit}
+     * @memberof UnunifiEcosystemincentiveQueryIncentiveUnitResponse
+     */
+    'incentive_unit'?: IncentiveUnit200ResponseIncentiveUnit;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveQueryParamsResponse
+ */
+export interface UnunifiEcosystemincentiveQueryParamsResponse {
+    /**
+     * 
+     * @type {EcosystemincentiveParams200ResponseParams}
+     * @memberof UnunifiEcosystemincentiveQueryParamsResponse
+     */
+    'params'?: EcosystemincentiveParams200ResponseParams;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveQueryRecordedIncentiveUnitIdResponse
+ */
+export interface UnunifiEcosystemincentiveQueryRecordedIncentiveUnitIdResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiEcosystemincentiveQueryRecordedIncentiveUnitIdResponse
+     */
+    'incentive_unit_id'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveQueryRewardResponse
+ */
+export interface UnunifiEcosystemincentiveQueryRewardResponse {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiEcosystemincentiveQueryRewardResponse
+     */
+    'reward'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveRewardParams
+ */
+export interface UnunifiEcosystemincentiveRewardParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiEcosystemincentiveRewardParams
+     */
+    'module_name'?: string;
+    /**
+     * 
+     * @type {Array<RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1>}
+     * @memberof UnunifiEcosystemincentiveRewardParams
+     */
+    'reward_rate'?: Array<RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveRewardRate
+ */
+export interface UnunifiEcosystemincentiveRewardRate {
+    /**
+     * At first, we go with this one type. NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
+     * @type {string}
+     * @memberof UnunifiEcosystemincentiveRewardRate
+     */
+    'reward_type'?: UnunifiEcosystemincentiveRewardRateRewardTypeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiEcosystemincentiveRewardRate
+     */
+    'rate'?: string;
+}
+
+export const UnunifiEcosystemincentiveRewardRateRewardTypeEnum = {
+    NftmarketFrontend: 'NFTMARKET_FRONTEND'
+} as const;
+
+export type UnunifiEcosystemincentiveRewardRateRewardTypeEnum = typeof UnunifiEcosystemincentiveRewardRateRewardTypeEnum[keyof typeof UnunifiEcosystemincentiveRewardRateRewardTypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveRewardStore
+ */
+export interface UnunifiEcosystemincentiveRewardStore {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiEcosystemincentiveRewardStore
+     */
+    'subject_addr'?: string;
+    /**
+     * 
+     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @memberof UnunifiEcosystemincentiveRewardStore
+     */
+    'rewards'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+}
+/**
+ * At first, we go with this one type. NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
+ * @export
+ * @enum {string}
+ */
+
+export const UnunifiEcosystemincentiveRewardType = {
+    NftmarketFrontend: 'NFTMARKET_FRONTEND'
+} as const;
+
+export type UnunifiEcosystemincentiveRewardType = typeof UnunifiEcosystemincentiveRewardType[keyof typeof UnunifiEcosystemincentiveRewardType];
+
+
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveSubjectInfo
+ */
+export interface UnunifiEcosystemincentiveSubjectInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiEcosystemincentiveSubjectInfo
+     */
+    'subject_addr'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiEcosystemincentiveSubjectInfo
+     */
+    'weight'?: string;
+}
+/**
+ * 
+ * @export
  * @interface UnunifiIncentiveMultiplier
  */
 export interface UnunifiIncentiveMultiplier {
@@ -1651,6 +4340,986 @@ export interface UnunifiIncentiveRewardPeriod {
      * @memberof UnunifiIncentiveRewardPeriod
      */
     'rewards_per_second'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketBidId
+ */
+export interface UnunifiNftmarketBidId {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof UnunifiNftmarketBidId
+     */
+    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketBidId
+     */
+    'bidder'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketBorrowing
+ */
+export interface UnunifiNftmarketBorrowing {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketBorrowing
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketBorrowing
+     */
+    'paid_interest_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketBorrowing
+     */
+    'start_at'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketLiquidation
+ */
+export interface UnunifiNftmarketLiquidation {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketLiquidation
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketLiquidation
+     */
+    'liquidation_date'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketLiquidations
+ */
+export interface UnunifiNftmarketLiquidations {
+    /**
+     * 
+     * @type {Liquidation200ResponseLiquidationsLiquidation}
+     * @memberof UnunifiNftmarketLiquidations
+     */
+    'liquidation'?: Liquidation200ResponseLiquidationsLiquidation;
+    /**
+     * 
+     * @type {Array<Liquidation200ResponseLiquidationsLiquidation>}
+     * @memberof UnunifiNftmarketLiquidations
+     */
+    'next_liquidation'?: Array<Liquidation200ResponseLiquidationsLiquidation>;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export const UnunifiNftmarketListingState = {
+    Listing: 'LISTING',
+    Bidding: 'BIDDING',
+    SellingDecision: 'SELLING_DECISION',
+    EndListing: 'END_LISTING',
+    SuccessfulBid: 'SUCCESSFUL_BID'
+} as const;
+
+export type UnunifiNftmarketListingState = typeof UnunifiNftmarketListingState[keyof typeof UnunifiNftmarketListingState];
+
+
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export const UnunifiNftmarketListingType = {
+    DirectAssetBorrow: 'DIRECT_ASSET_BORROW',
+    SyntheticAssetCreation: 'SYNTHETIC_ASSET_CREATION',
+    LateShipping: 'LATE_SHIPPING'
+} as const;
+
+export type UnunifiNftmarketListingType = typeof UnunifiNftmarketListingType[keyof typeof UnunifiNftmarketListingType];
+
+
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketLoan
+ */
+export interface UnunifiNftmarketLoan {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof UnunifiNftmarketLoan
+     */
+    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketLoan
+     */
+    'loan'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketNftBid
+ */
+export interface UnunifiNftmarketNftBid {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'bidder'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'bid_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'deposit_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'paid_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'bidding_period'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'deposit_lending_rate'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'automatic_payment'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'bid_time'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'interest_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {Array<ListerBorrowingBidderInfoInner>}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'borrowings'?: Array<ListerBorrowingBidderInfoInner>;
+    /**
+     * 
+     * @type {TodoRemoveNftIdBidderThenUseIt}
+     * @memberof UnunifiNftmarketNftBid
+     */
+    'id'?: TodoRemoveNftIdBidderThenUseIt;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketNftIdentifier
+ */
+export interface UnunifiNftmarketNftIdentifier {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftIdentifier
+     */
+    'class_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftIdentifier
+     */
+    'nft_id'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketNftInfo
+ */
+export interface UnunifiNftmarketNftInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftInfo
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftInfo
+     */
+    'uri'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftInfo
+     */
+    'uri_hash'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketNftListing
+ */
+export interface UnunifiNftmarketNftListing {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'owner'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'listing_type'?: UnunifiNftmarketNftListingListingTypeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'state'?: UnunifiNftmarketNftListingStateEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'bid_token'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'minimum_deposit_rate'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'automatic_refinancing'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'started_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'end_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'full_payment_end_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'successful_bid_end_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'auto_relisted_count'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'collected_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'minimum_bidding_period'?: string;
+}
+
+export const UnunifiNftmarketNftListingListingTypeEnum = {
+    DirectAssetBorrow: 'DIRECT_ASSET_BORROW',
+    SyntheticAssetCreation: 'SYNTHETIC_ASSET_CREATION',
+    LateShipping: 'LATE_SHIPPING'
+} as const;
+
+export type UnunifiNftmarketNftListingListingTypeEnum = typeof UnunifiNftmarketNftListingListingTypeEnum[keyof typeof UnunifiNftmarketNftListingListingTypeEnum];
+export const UnunifiNftmarketNftListingStateEnum = {
+    Listing: 'LISTING',
+    Bidding: 'BIDDING',
+    SellingDecision: 'SELLING_DECISION',
+    EndListing: 'END_LISTING',
+    SuccessfulBid: 'SUCCESSFUL_BID'
+} as const;
+
+export type UnunifiNftmarketNftListingStateEnum = typeof UnunifiNftmarketNftListingStateEnum[keyof typeof UnunifiNftmarketNftListingStateEnum];
+
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketNftListingDetail
+ */
+export interface UnunifiNftmarketNftListingDetail {
+    /**
+     * 
+     * @type {ListedNfts200ResponseListingsInnerListing}
+     * @memberof UnunifiNftmarketNftListingDetail
+     */
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
+    /**
+     * 
+     * @type {ListedClass200ResponseNftsInner}
+     * @memberof UnunifiNftmarketNftListingDetail
+     */
+    'nft_info'?: ListedClass200ResponseNftsInner;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketParams
+ */
+export interface UnunifiNftmarketParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'min_staking_for_listing'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'default_bid_active_rank'?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof UnunifiNftmarketParams
+     */
+    'bid_tokens'?: Array<string>;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'auto_relisting_count_if_no_bid'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'nft_listing_delay_seconds'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'nft_listing_period_initial'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'nft_listing_cancel_required_seconds'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'nft_listing_cancel_fee_percentage'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'nft_listing_gap_time'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'bid_cancel_required_seconds'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'bid_token_disburse_seconds_after_cancel'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'nft_listing_full_payment_period'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'nft_listing_nft_delivery_period'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'nft_creator_share_percentage'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'market_administrator'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'nft_listing_commission_fee'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketParams
+     */
+    'nft_listing_extend_seconds'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketParams
+     */
+    'nft_listing_period_extend_fee_per_hour'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketPaymentStatus
+ */
+export interface UnunifiNftmarketPaymentStatus {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof UnunifiNftmarketPaymentStatus
+     */
+    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketPaymentStatus
+     */
+    'bidder'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiNftmarketPaymentStatus
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof UnunifiNftmarketPaymentStatus
+     */
+    'automatic_payment'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketPaymentStatus
+     */
+    'paid_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketPaymentStatus
+     */
+    'bid_time'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketPaymentStatus
+     */
+    'state'?: UnunifiNftmarketPaymentStatusStateEnum;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof UnunifiNftmarketPaymentStatus
+     */
+    'all_paid'?: boolean;
+}
+
+export const UnunifiNftmarketPaymentStatusStateEnum = {
+    Listing: 'LISTING',
+    Bidding: 'BIDDING',
+    SellingDecision: 'SELLING_DECISION',
+    EndListing: 'END_LISTING',
+    SuccessfulBid: 'SUCCESSFUL_BID'
+} as const;
+
+export type UnunifiNftmarketPaymentStatusStateEnum = typeof UnunifiNftmarketPaymentStatusStateEnum[keyof typeof UnunifiNftmarketPaymentStatusStateEnum];
+
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketQueryBidderBidsResponse
+ */
+export interface UnunifiNftmarketQueryBidderBidsResponse {
+    /**
+     * 
+     * @type {Array<BidderBids200ResponseBidsInner>}
+     * @memberof UnunifiNftmarketQueryBidderBidsResponse
+     */
+    'bids'?: Array<BidderBids200ResponseBidsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketQueryLiquidationResponse
+ */
+export interface UnunifiNftmarketQueryLiquidationResponse {
+    /**
+     * 
+     * @type {Liquidation200ResponseLiquidations}
+     * @memberof UnunifiNftmarketQueryLiquidationResponse
+     */
+    'liquidations'?: Liquidation200ResponseLiquidations;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketQueryListedClassResponse
+ */
+export interface UnunifiNftmarketQueryListedClassResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketQueryListedClassResponse
+     */
+    'class_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketQueryListedClassResponse
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketQueryListedClassResponse
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketQueryListedClassResponse
+     */
+    'symbol'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketQueryListedClassResponse
+     */
+    'uri'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketQueryListedClassResponse
+     */
+    'urihash'?: string;
+    /**
+     * 
+     * @type {Array<ListedClass200ResponseNftsInner>}
+     * @memberof UnunifiNftmarketQueryListedClassResponse
+     */
+    'nfts'?: Array<ListedClass200ResponseNftsInner>;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketQueryListedClassResponse
+     */
+    'nft_count'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketQueryListedClassesResponse
+ */
+export interface UnunifiNftmarketQueryListedClassesResponse {
+    /**
+     * 
+     * @type {Array<ListedClass200Response>}
+     * @memberof UnunifiNftmarketQueryListedClassesResponse
+     */
+    'classes'?: Array<ListedClass200Response>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketQueryListedNftsResponse
+ */
+export interface UnunifiNftmarketQueryListedNftsResponse {
+    /**
+     * 
+     * @type {Array<ListedNfts200ResponseListingsInner>}
+     * @memberof UnunifiNftmarketQueryListedNftsResponse
+     */
+    'listings'?: Array<ListedNfts200ResponseListingsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketQueryLoanResponse
+ */
+export interface UnunifiNftmarketQueryLoanResponse {
+    /**
+     * 
+     * @type {Loans200ResponseLoansInner}
+     * @memberof UnunifiNftmarketQueryLoanResponse
+     */
+    'loan'?: Loans200ResponseLoansInner;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketQueryLoanResponse
+     */
+    'borrowing_limit'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketQueryLoansResponse
+ */
+export interface UnunifiNftmarketQueryLoansResponse {
+    /**
+     * 
+     * @type {Array<Loans200ResponseLoansInner>}
+     * @memberof UnunifiNftmarketQueryLoansResponse
+     */
+    'loans'?: Array<Loans200ResponseLoansInner>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketQueryNftBidsResponse
+ */
+export interface UnunifiNftmarketQueryNftBidsResponse {
+    /**
+     * 
+     * @type {Array<BidderBids200ResponseBidsInner>}
+     * @memberof UnunifiNftmarketQueryNftBidsResponse
+     */
+    'bids'?: Array<BidderBids200ResponseBidsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketQueryNftListingResponse
+ */
+export interface UnunifiNftmarketQueryNftListingResponse {
+    /**
+     * 
+     * @type {ListedNfts200ResponseListingsInnerListing}
+     * @memberof UnunifiNftmarketQueryNftListingResponse
+     */
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketQueryParamsResponse
+ */
+export interface UnunifiNftmarketQueryParamsResponse {
+    /**
+     * 
+     * @type {NftmarketParams200ResponseParams}
+     * @memberof UnunifiNftmarketQueryParamsResponse
+     */
+    'params'?: NftmarketParams200ResponseParams;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketQueryPaymentStatusResponse
+ */
+export interface UnunifiNftmarketQueryPaymentStatusResponse {
+    /**
+     * 
+     * @type {PaymentStatus200ResponsePaymentStatus}
+     * @memberof UnunifiNftmarketQueryPaymentStatusResponse
+     */
+    'paymentStatus'?: PaymentStatus200ResponsePaymentStatus;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketQueryRewardsResponse
+ */
+export interface UnunifiNftmarketQueryRewardsResponse {
+    /**
+     * 
+     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @memberof UnunifiNftmarketQueryRewardsResponse
+     */
+    'rewards'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmintClassAttributes
+ */
+export interface UnunifiNftmintClassAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintClassAttributes
+     */
+    'class_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintClassAttributes
+     */
+    'owner'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintClassAttributes
+     */
+    'base_token_uri'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintClassAttributes
+     */
+    'minting_permission'?: UnunifiNftmintClassAttributesMintingPermissionEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintClassAttributes
+     */
+    'token_supply_cap'?: string;
+}
+
+export const UnunifiNftmintClassAttributesMintingPermissionEnum = {
+    OnlyOwner: 'OnlyOwner',
+    Anyone: 'Anyone'
+} as const;
+
+export type UnunifiNftmintClassAttributesMintingPermissionEnum = typeof UnunifiNftmintClassAttributesMintingPermissionEnum[keyof typeof UnunifiNftmintClassAttributesMintingPermissionEnum];
+
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmintClassNameIdList
+ */
+export interface UnunifiNftmintClassNameIdList {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintClassNameIdList
+     */
+    'class_name'?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof UnunifiNftmintClassNameIdList
+     */
+    'class_id'?: Array<string>;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export const UnunifiNftmintMintingPermission = {
+    OnlyOwner: 'OnlyOwner',
+    Anyone: 'Anyone'
+} as const;
+
+export type UnunifiNftmintMintingPermission = typeof UnunifiNftmintMintingPermission[keyof typeof UnunifiNftmintMintingPermission];
+
+
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmintOwningClassIdList
+ */
+export interface UnunifiNftmintOwningClassIdList {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintOwningClassIdList
+     */
+    'owner'?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof UnunifiNftmintOwningClassIdList
+     */
+    'class_id'?: Array<string>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmintParams
+ */
+export interface UnunifiNftmintParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintParams
+     */
+    'MaxNFTSupplyCap'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintParams
+     */
+    'MinClassNameLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintParams
+     */
+    'MaxClassNameLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintParams
+     */
+    'MinUriLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintParams
+     */
+    'MaxUriLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintParams
+     */
+    'MaxSymbolLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintParams
+     */
+    'MaxDescriptionLen'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmintQueryClassAttributesResponse
+ */
+export interface UnunifiNftmintQueryClassAttributesResponse {
+    /**
+     * 
+     * @type {ClassAttributes200ResponseClassAttributes}
+     * @memberof UnunifiNftmintQueryClassAttributesResponse
+     */
+    'class_attributes'?: ClassAttributes200ResponseClassAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmintQueryClassIdsByNameResponse
+ */
+export interface UnunifiNftmintQueryClassIdsByNameResponse {
+    /**
+     * 
+     * @type {ClassIdsByName200ResponseClassNameIdList}
+     * @memberof UnunifiNftmintQueryClassIdsByNameResponse
+     */
+    'class_name_id_list'?: ClassIdsByName200ResponseClassNameIdList;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmintQueryClassIdsByOwnerResponse
+ */
+export interface UnunifiNftmintQueryClassIdsByOwnerResponse {
+    /**
+     * 
+     * @type {ClassIdsByOwner200ResponseOwningClassIdList}
+     * @memberof UnunifiNftmintQueryClassIdsByOwnerResponse
+     */
+    'owning_class_id_list'?: ClassIdsByOwner200ResponseOwningClassIdList;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmintQueryNFTMinterResponse
+ */
+export interface UnunifiNftmintQueryNFTMinterResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmintQueryNFTMinterResponse
+     */
+    'minter'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmintQueryParamsResponse
+ */
+export interface UnunifiNftmintQueryParamsResponse {
+    /**
+     * 
+     * @type {NftmintParams200ResponseParams}
+     * @memberof UnunifiNftmintQueryParamsResponse
+     */
+    'params'?: NftmintParams200ResponseParams;
 }
 /**
  * 
@@ -2444,6 +6113,141 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} address 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        addressPositions: async (address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'address' is not null or undefined
+            assertParamExists('addressPositions', 'address', address)
+            const localVarPath = `/ununifi/derivatives/{address}/positions`
+                .replace(`{${"address"}}`, encodeURIComponent(String(address)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (paginationKey !== undefined) {
+                localVarQueryParameter['pagination.key'] = paginationKey;
+            }
+
+            if (paginationOffset !== undefined) {
+                localVarQueryParameter['pagination.offset'] = paginationOffset;
+            }
+
+            if (paginationLimit !== undefined) {
+                localVarQueryParameter['pagination.limit'] = paginationLimit;
+            }
+
+            if (paginationCountTotal !== undefined) {
+                localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        allPositions: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/positions`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (paginationKey !== undefined) {
+                localVarQueryParameter['pagination.key'] = paginationKey;
+            }
+
+            if (paginationOffset !== undefined) {
+                localVarQueryParameter['pagination.offset'] = paginationOffset;
+            }
+
+            if (paginationLimit !== undefined) {
+                localVarQueryParameter['pagination.limit'] = paginationLimit;
+            }
+
+            if (paginationCountTotal !== undefined) {
+                localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} subjectAddr 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        allRewards: async (subjectAddr: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'subjectAddr' is not null or undefined
+            assertParamExists('allRewards', 'subjectAddr', subjectAddr)
+            const localVarPath = `/ununifi/ecosystem_incentive/all_rewards/{subject_addr}`
+                .replace(`{${"subject_addr"}}`, encodeURIComponent(String(subjectAddr)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @summary this line is used by starport scaffolding # 2
          * @param {string} id 
          * @param {*} [options] Override http request option.
@@ -2556,12 +6360,136 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} denom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        availableAssetInPoolByDenom: async (denom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'denom' is not null or undefined
+            assertParamExists('availableAssetInPoolByDenom', 'denom', denom)
+            const localVarPath = `/ununifi/derivatives/pools/available-asset/{denom}`
+                .replace(`{${"denom"}}`, encodeURIComponent(String(denom)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        availableAssetsInPool: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/pools/available-assets`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @summary this line is used by starport scaffolding # 2
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         balances: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/ununifidist/balances`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} bidder 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        bidderBids: async (bidder: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'bidder' is not null or undefined
+            assertParamExists('bidderBids', 'bidder', bidder)
+            const localVarPath = `/ununifi/nftmarket/bidder_bids/{bidder}`
+                .replace(`{${"bidder"}}`, encodeURIComponent(String(bidder)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        cDPsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/nftmarket/cdps_list`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2702,6 +6630,134 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} classId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        classAttributes: async (classId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'classId' is not null or undefined
+            assertParamExists('classAttributes', 'classId', classId)
+            const localVarPath = `/ununifi/nftmint/class_owner/{class_id}`
+                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} className 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        classIdsByName: async (className: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'className' is not null or undefined
+            assertParamExists('classIdsByName', 'className', className)
+            const localVarPath = `/ununifi/nftmint/class_ids_by_name/{class_name}`
+                .replace(`{${"class_name"}}`, encodeURIComponent(String(className)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} owner 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        classIdsByOwner: async (owner: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'owner' is not null or undefined
+            assertParamExists('classIdsByOwner', 'owner', owner)
+            const localVarPath = `/ununifi/nftmint/class_ids_by_owner/{owner}`
+                .replace(`{${"owner"}}`, encodeURIComponent(String(owner)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        dLPTokenRates: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/pools/dlp`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} owner 
          * @param {string} collateralType 
          * @param {*} [options] Override http request option.
@@ -2715,6 +6771,103 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarPath = `/ununifi/cdp/deposits/owners/{owner}/collateral-types/{collateral_type}`
                 .replace(`{${"owner"}}`, encodeURIComponent(String(owner)))
                 .replace(`{${"collateral_type"}}`, encodeURIComponent(String(collateralType)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary Parameters queries the parameters of the module.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        derivativesParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/params`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary Parameters queries the parameters of the module.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ecosystemincentiveParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/ecosystem_incentive/params`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} mintDenom 
+         * @param {string} amount 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateDLPTokenAmount: async (mintDenom: string, amount: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'mintDenom' is not null or undefined
+            assertParamExists('estimateDLPTokenAmount', 'mintDenom', mintDenom)
+            // verify required parameter 'amount' is not null or undefined
+            assertParamExists('estimateDLPTokenAmount', 'amount', amount)
+            const localVarPath = `/ununifi/derivatives/estimate-dlp-token-amount/{mint_denom}/{amount}`
+                .replace(`{${"mint_denom"}}`, encodeURIComponent(String(mintDenom)))
+                .replace(`{${"amount"}}`, encodeURIComponent(String(amount)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2815,11 +6968,400 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} redeemDenom 
+         * @param {string} lptAmount 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateRedeemTokenAmount: async (redeemDenom: string, lptAmount: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'redeemDenom' is not null or undefined
+            assertParamExists('estimateRedeemTokenAmount', 'redeemDenom', redeemDenom)
+            // verify required parameter 'lptAmount' is not null or undefined
+            assertParamExists('estimateRedeemTokenAmount', 'lptAmount', lptAmount)
+            const localVarPath = `/ununifi/derivatives/estimate-redeem-amount/{redeem_denom}/{lpt_amount}`
+                .replace(`{${"redeem_denom"}}`, encodeURIComponent(String(redeemDenom)))
+                .replace(`{${"lpt_amount"}}`, encodeURIComponent(String(lptAmount)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         incentiveParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/incentive/params`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} incentiveUnitId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        incentiveUnit: async (incentiveUnitId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'incentiveUnitId' is not null or undefined
+            assertParamExists('incentiveUnit', 'incentiveUnitId', incentiveUnitId)
+            const localVarPath = `/ununifi/ecosystem_incentive/incentive_unit/{incentive_unit_id}`
+                .replace(`{${"incentive_unit_id"}}`, encodeURIComponent(String(incentiveUnitId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        incentiveUnitIdsByAddr: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'address' is not null or undefined
+            assertParamExists('incentiveUnitIdsByAddr', 'address', address)
+            const localVarPath = `/ununifi/ecosystem_incentive/incentive_unit_ids_by_addr/{address}`
+                .replace(`{${"address"}}`, encodeURIComponent(String(address)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        liquidation: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'classId' is not null or undefined
+            assertParamExists('liquidation', 'classId', classId)
+            // verify required parameter 'nftId' is not null or undefined
+            assertParamExists('liquidation', 'nftId', nftId)
+            const localVarPath = `/ununifi/nftmarket/liquidation/{class_id}/{nft_id}`
+                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
+                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [beforeHeight] 
+         * @param {string} [afterHeight] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        liquidityProviderTokenNominalAPY: async (beforeHeight?: string, afterHeight?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/liquidity-providers/nominal-apy`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (beforeHeight !== undefined) {
+                localVarQueryParameter['before_height'] = beforeHeight;
+            }
+
+            if (afterHeight !== undefined) {
+                localVarQueryParameter['after_height'] = afterHeight;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [beforeHeight] 
+         * @param {string} [afterHeight] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        liquidityProviderTokenRealAPY: async (beforeHeight?: string, afterHeight?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/liquidity-providers/real-apy`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (beforeHeight !== undefined) {
+                localVarQueryParameter['before_height'] = beforeHeight;
+            }
+
+            if (afterHeight !== undefined) {
+                localVarQueryParameter['after_height'] = afterHeight;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {number} nftLimit 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listedClass: async (classId: string, nftLimit: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'classId' is not null or undefined
+            assertParamExists('listedClass', 'classId', classId)
+            // verify required parameter 'nftLimit' is not null or undefined
+            assertParamExists('listedClass', 'nftLimit', nftLimit)
+            const localVarPath = `/ununifi/nftmarket/listed_class/{class_id}/{nft_limit}`
+                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
+                .replace(`{${"nft_limit"}}`, encodeURIComponent(String(nftLimit)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {number} [nftLimit] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listedClasses: async (nftLimit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/nftmarket/listed_classes`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (nftLimit !== undefined) {
+                localVarQueryParameter['nft_limit'] = nftLimit;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [owner] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listedNfts: async (owner?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/nftmarket/listed_nfts`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (owner !== undefined) {
+                localVarQueryParameter['owner'] = owner;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        loan: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'classId' is not null or undefined
+            assertParamExists('loan', 'classId', classId)
+            // verify required parameter 'nftId' is not null or undefined
+            assertParamExists('loan', 'nftId', nftId)
+            const localVarPath = `/ununifi/nftmarket/loans/{class_id}/{nft_id}`
+                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
+                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        loans: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/nftmarket/loans`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2894,6 +7436,175 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nFTMinter: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'classId' is not null or undefined
+            assertParamExists('nFTMinter', 'classId', classId)
+            // verify required parameter 'nftId' is not null or undefined
+            assertParamExists('nFTMinter', 'nftId', nftId)
+            const localVarPath = `/ununifi/nftmint/nft_minter/{class_id}/{nft_id}`
+                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
+                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nftBids: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'classId' is not null or undefined
+            assertParamExists('nftBids', 'classId', classId)
+            // verify required parameter 'nftId' is not null or undefined
+            assertParamExists('nftBids', 'nftId', nftId)
+            const localVarPath = `/ununifi/nftmarket/nft_bids/{class_id}/{nft_id}`
+                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
+                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nftListing: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'classId' is not null or undefined
+            assertParamExists('nftListing', 'classId', classId)
+            // verify required parameter 'nftId' is not null or undefined
+            assertParamExists('nftListing', 'nftId', nftId)
+            const localVarPath = `/ununifi/nftmarket/nft_listing/{class_id}/{nft_id}`
+                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
+                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nftmarketParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/nftmarket/params`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nftmintParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/nftmint/params`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} marketId 
          * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
          * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
@@ -2933,6 +7644,279 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             if (paginationCountTotal !== undefined) {
                 localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
             }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {string} bidder 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        paymentStatus: async (classId: string, nftId: string, bidder: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'classId' is not null or undefined
+            assertParamExists('paymentStatus', 'classId', classId)
+            // verify required parameter 'nftId' is not null or undefined
+            assertParamExists('paymentStatus', 'nftId', nftId)
+            // verify required parameter 'bidder' is not null or undefined
+            assertParamExists('paymentStatus', 'bidder', bidder)
+            const localVarPath = `/ununifi/nftmarket/payment_status/{class_id}/{nft_id}/{bidder}`
+                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
+                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)))
+                .replace(`{${"bidder"}}`, encodeURIComponent(String(bidder)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        perpetualFutures: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/perpetual-futures`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} baseDenom 
+         * @param {string} quoteDenom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        perpetualFuturesMarket: async (baseDenom: string, quoteDenom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'baseDenom' is not null or undefined
+            assertParamExists('perpetualFuturesMarket', 'baseDenom', baseDenom)
+            // verify required parameter 'quoteDenom' is not null or undefined
+            assertParamExists('perpetualFuturesMarket', 'quoteDenom', quoteDenom)
+            const localVarPath = `/ununifi/derivatives/perpetual-futures/{base_denom}/{quote_denom}`
+                .replace(`{${"base_denom"}}`, encodeURIComponent(String(baseDenom)))
+                .replace(`{${"quote_denom"}}`, encodeURIComponent(String(quoteDenom)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {'POSITION_UNKNOWN' | 'LONG' | 'SHORT'} positionType 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        perpetualFuturesPositionSize: async (positionType: 'POSITION_UNKNOWN' | 'LONG' | 'SHORT', address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'positionType' is not null or undefined
+            assertParamExists('perpetualFuturesPositionSize', 'positionType', positionType)
+            // verify required parameter 'address' is not null or undefined
+            assertParamExists('perpetualFuturesPositionSize', 'address', address)
+            const localVarPath = `/ununifi/derivatives/positions/perpetual-futures/{position_type}/{address}`
+                .replace(`{${"position_type"}}`, encodeURIComponent(String(positionType)))
+                .replace(`{${"address"}}`, encodeURIComponent(String(address)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        perpetualOptions: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/perpetual-options`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} baseDenom 
+         * @param {string} quoteDenom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        perpetualOptionsMarket: async (baseDenom: string, quoteDenom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'baseDenom' is not null or undefined
+            assertParamExists('perpetualOptionsMarket', 'baseDenom', baseDenom)
+            // verify required parameter 'quoteDenom' is not null or undefined
+            assertParamExists('perpetualOptionsMarket', 'quoteDenom', quoteDenom)
+            const localVarPath = `/ununifi/derivatives/perpetual-options/{base_denom}/{quote_denom}`
+                .replace(`{${"base_denom"}}`, encodeURIComponent(String(baseDenom)))
+                .replace(`{${"quote_denom"}}`, encodeURIComponent(String(quoteDenom)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary this line is used by starport scaffolding # 2
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pool: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/pool`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} positionId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        position: async (positionId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'positionId' is not null or undefined
+            assertParamExists('position', 'positionId', positionId)
+            const localVarPath = `/ununifi/derivatives/positions/{position_id}`
+                .replace(`{${"position_id"}}`, encodeURIComponent(String(positionId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
 
 
     
@@ -3097,6 +8081,113 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             if (paginationCountTotal !== undefined) {
                 localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
             }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        recordedIncentiveUnitId: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'classId' is not null or undefined
+            assertParamExists('recordedIncentiveUnitId', 'classId', classId)
+            // verify required parameter 'nftId' is not null or undefined
+            assertParamExists('recordedIncentiveUnitId', 'nftId', nftId)
+            const localVarPath = `/ununifi/ecosystem_incentive/recorded_incentive_unit_id/{class_id}/{nft_id}`
+                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
+                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} subjectAddr 
+         * @param {string} denom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        reward: async (subjectAddr: string, denom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'subjectAddr' is not null or undefined
+            assertParamExists('reward', 'subjectAddr', subjectAddr)
+            // verify required parameter 'denom' is not null or undefined
+            assertParamExists('reward', 'denom', denom)
+            const localVarPath = `/ununifi/ecosystem_incentive/reward/{subject_addr}/{denom}`
+                .replace(`{${"subject_addr"}}`, encodeURIComponent(String(subjectAddr)))
+                .replace(`{${"denom"}}`, encodeURIComponent(String(denom)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        rewards: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'address' is not null or undefined
+            assertParamExists('rewards', 'address', address)
+            const localVarPath = `/ununifi/nftmarket/rewards/{address}`
+                .replace(`{${"address"}}`, encodeURIComponent(String(address)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
 
 
     
@@ -3364,6 +8455,43 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} address 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async addressPositions(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllPositions200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.addressPositions(address, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async allPositions(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllPositions200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.allPositions(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} subjectAddr 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async allRewards(subjectAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllRewards200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.allRewards(subjectAddr, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @summary this line is used by starport scaffolding # 2
          * @param {string} id 
          * @param {*} [options] Override http request option.
@@ -3397,12 +8525,50 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} denom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async availableAssetInPoolByDenom(denom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AvailableAssetInPoolByDenom200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.availableAssetInPoolByDenom(denom, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async availableAssetsInPool(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AvailableAssetsInPool200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.availableAssetsInPool(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @summary this line is used by starport scaffolding # 2
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         async balances(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Balances200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.balances(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} bidder 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async bidderBids(bidder: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BidderBids200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.bidderBids(bidder, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async cDPsList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.cDPsList(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3441,6 +8607,45 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} classId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async classAttributes(classId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClassAttributes200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.classAttributes(classId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} className 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async classIdsByName(className: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClassIdsByName200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.classIdsByName(className, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} owner 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async classIdsByOwner(owner: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ClassIdsByOwner200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.classIdsByOwner(owner, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async dLPTokenRates(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DLPTokenRates200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.dLPTokenRates(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} owner 
          * @param {string} collateralType 
          * @param {*} [options] Override http request option.
@@ -3448,6 +8653,37 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async depositAll(owner: string, collateralType: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DepositAll200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.depositAll(owner, collateralType, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary Parameters queries the parameters of the module.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async derivativesParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DerivativesParams200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.derivativesParams(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary Parameters queries the parameters of the module.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ecosystemincentiveParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EcosystemincentiveParams200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.ecosystemincentiveParams(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} mintDenom 
+         * @param {string} amount 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async estimateDLPTokenAmount(mintDenom: string, amount: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateDLPTokenAmount200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.estimateDLPTokenAmount(mintDenom, amount, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3474,11 +8710,126 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} redeemDenom 
+         * @param {string} lptAmount 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRedeemTokenAmount200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemTokenAmount(redeemDenom, lptAmount, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         async incentiveParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IncentiveParams200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.incentiveParams(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} incentiveUnitId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async incentiveUnit(incentiveUnitId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IncentiveUnit200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.incentiveUnit(incentiveUnitId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async incentiveUnitIdsByAddr(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IncentiveUnitIdsByAddr200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.incentiveUnitIdsByAddr(address, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async liquidation(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Liquidation200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.liquidation(classId, nftId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [beforeHeight] 
+         * @param {string} [afterHeight] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async liquidityProviderTokenNominalAPY(beforeHeight?: string, afterHeight?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LiquidityProviderTokenNominalAPY200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.liquidityProviderTokenNominalAPY(beforeHeight, afterHeight, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [beforeHeight] 
+         * @param {string} [afterHeight] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async liquidityProviderTokenRealAPY(beforeHeight?: string, afterHeight?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LiquidityProviderTokenNominalAPY200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.liquidityProviderTokenRealAPY(beforeHeight, afterHeight, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {number} nftLimit 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listedClass(classId: string, nftLimit: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListedClass200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listedClass(classId, nftLimit, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {number} [nftLimit] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listedClasses(nftLimit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListedClasses200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listedClasses(nftLimit, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [owner] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listedNfts(owner?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListedNfts200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listedNfts(owner, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async loan(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Loan200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.loan(classId, nftId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async loans(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Loans200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.loans(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3497,6 +8848,57 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async nFTMinter(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NFTMinter200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.nFTMinter(classId, nftId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async nftBids(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BidderBids200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.nftBids(classId, nftId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async nftListing(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NftListing200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.nftListing(classId, nftId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async nftmarketParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NftmarketParams200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.nftmarketParams(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async nftmintParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NftmintParams200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.nftmintParams(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} marketId 
          * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
          * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
@@ -3507,6 +8909,89 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async oracleAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OracleAll200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.oracleAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {string} bidder 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async paymentStatus(classId: string, nftId: string, bidder: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaymentStatus200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.paymentStatus(classId, nftId, bidder, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async perpetualFutures(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PerpetualFutures200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualFutures(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} baseDenom 
+         * @param {string} quoteDenom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async perpetualFuturesMarket(baseDenom: string, quoteDenom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PerpetualFuturesMarket200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualFuturesMarket(baseDenom, quoteDenom, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {'POSITION_UNKNOWN' | 'LONG' | 'SHORT'} positionType 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async perpetualFuturesPositionSize(positionType: 'POSITION_UNKNOWN' | 'LONG' | 'SHORT', address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PerpetualFuturesPositionSize200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualFuturesPositionSize(positionType, address, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async perpetualOptions(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualOptions(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} baseDenom 
+         * @param {string} quoteDenom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async perpetualOptionsMarket(baseDenom: string, quoteDenom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualOptionsMarket(baseDenom, quoteDenom, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary this line is used by starport scaffolding # 2
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async pool(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Pool200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.pool(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} positionId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async position(positionId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Position200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.position(positionId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3553,6 +9038,38 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async rawPriceAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RawPriceAll200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.rawPriceAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async recordedIncentiveUnitId(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RecordedIncentiveUnitId200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.recordedIncentiveUnitId(classId, nftId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} subjectAddr 
+         * @param {string} denom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async reward(subjectAddr: string, denom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Reward200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.reward(subjectAddr, denom, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async rewards(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rewards200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.rewards(address, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3643,6 +9160,40 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {string} address 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        addressPositions(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<AllPositions200Response> {
+            return localVarFp.addressPositions(address, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        allPositions(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<AllPositions200Response> {
+            return localVarFp.allPositions(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} subjectAddr 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        allRewards(subjectAddr: string, options?: any): AxiosPromise<AllRewards200Response> {
+            return localVarFp.allRewards(subjectAddr, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @summary this line is used by starport scaffolding # 2
          * @param {string} id 
          * @param {*} [options] Override http request option.
@@ -3673,12 +9224,46 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {string} denom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        availableAssetInPoolByDenom(denom: string, options?: any): AxiosPromise<AvailableAssetInPoolByDenom200Response> {
+            return localVarFp.availableAssetInPoolByDenom(denom, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        availableAssetsInPool(options?: any): AxiosPromise<AvailableAssetsInPool200Response> {
+            return localVarFp.availableAssetsInPool(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @summary this line is used by starport scaffolding # 2
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         balances(options?: any): AxiosPromise<Balances200Response> {
             return localVarFp.balances(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} bidder 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        bidderBids(bidder: string, options?: any): AxiosPromise<BidderBids200Response> {
+            return localVarFp.bidderBids(bidder, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        cDPsList(options?: any): AxiosPromise<object> {
+            return localVarFp.cDPsList(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3713,6 +9298,41 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {string} classId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        classAttributes(classId: string, options?: any): AxiosPromise<ClassAttributes200Response> {
+            return localVarFp.classAttributes(classId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} className 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        classIdsByName(className: string, options?: any): AxiosPromise<ClassIdsByName200Response> {
+            return localVarFp.classIdsByName(className, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} owner 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        classIdsByOwner(owner: string, options?: any): AxiosPromise<ClassIdsByOwner200Response> {
+            return localVarFp.classIdsByOwner(owner, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        dLPTokenRates(options?: any): AxiosPromise<DLPTokenRates200Response> {
+            return localVarFp.dLPTokenRates(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {string} owner 
          * @param {string} collateralType 
          * @param {*} [options] Override http request option.
@@ -3720,6 +9340,34 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         depositAll(owner: string, collateralType: string, options?: any): AxiosPromise<DepositAll200Response> {
             return localVarFp.depositAll(owner, collateralType, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary Parameters queries the parameters of the module.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        derivativesParams(options?: any): AxiosPromise<DerivativesParams200Response> {
+            return localVarFp.derivativesParams(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary Parameters queries the parameters of the module.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ecosystemincentiveParams(options?: any): AxiosPromise<EcosystemincentiveParams200Response> {
+            return localVarFp.ecosystemincentiveParams(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} mintDenom 
+         * @param {string} amount 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateDLPTokenAmount(mintDenom: string, amount: string, options?: any): AxiosPromise<EstimateDLPTokenAmount200Response> {
+            return localVarFp.estimateDLPTokenAmount(mintDenom, amount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3743,11 +9391,115 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {string} redeemDenom 
+         * @param {string} lptAmount 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: any): AxiosPromise<EstimateRedeemTokenAmount200Response> {
+            return localVarFp.estimateRedeemTokenAmount(redeemDenom, lptAmount, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         incentiveParams(options?: any): AxiosPromise<IncentiveParams200Response> {
             return localVarFp.incentiveParams(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} incentiveUnitId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        incentiveUnit(incentiveUnitId: string, options?: any): AxiosPromise<IncentiveUnit200Response> {
+            return localVarFp.incentiveUnit(incentiveUnitId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        incentiveUnitIdsByAddr(address: string, options?: any): AxiosPromise<IncentiveUnitIdsByAddr200Response> {
+            return localVarFp.incentiveUnitIdsByAddr(address, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        liquidation(classId: string, nftId: string, options?: any): AxiosPromise<Liquidation200Response> {
+            return localVarFp.liquidation(classId, nftId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [beforeHeight] 
+         * @param {string} [afterHeight] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        liquidityProviderTokenNominalAPY(beforeHeight?: string, afterHeight?: string, options?: any): AxiosPromise<LiquidityProviderTokenNominalAPY200Response> {
+            return localVarFp.liquidityProviderTokenNominalAPY(beforeHeight, afterHeight, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [beforeHeight] 
+         * @param {string} [afterHeight] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        liquidityProviderTokenRealAPY(beforeHeight?: string, afterHeight?: string, options?: any): AxiosPromise<LiquidityProviderTokenNominalAPY200Response> {
+            return localVarFp.liquidityProviderTokenRealAPY(beforeHeight, afterHeight, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {number} nftLimit 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listedClass(classId: string, nftLimit: number, options?: any): AxiosPromise<ListedClass200Response> {
+            return localVarFp.listedClass(classId, nftLimit, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {number} [nftLimit] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listedClasses(nftLimit?: number, options?: any): AxiosPromise<ListedClasses200Response> {
+            return localVarFp.listedClasses(nftLimit, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [owner] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listedNfts(owner?: string, options?: any): AxiosPromise<ListedNfts200Response> {
+            return localVarFp.listedNfts(owner, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        loan(classId: string, nftId: string, options?: any): AxiosPromise<Loan200Response> {
+            return localVarFp.loan(classId, nftId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        loans(options?: any): AxiosPromise<Loans200Response> {
+            return localVarFp.loans(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3764,6 +9516,52 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nFTMinter(classId: string, nftId: string, options?: any): AxiosPromise<NFTMinter200Response> {
+            return localVarFp.nFTMinter(classId, nftId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nftBids(classId: string, nftId: string, options?: any): AxiosPromise<BidderBids200Response> {
+            return localVarFp.nftBids(classId, nftId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nftListing(classId: string, nftId: string, options?: any): AxiosPromise<NftListing200Response> {
+            return localVarFp.nftListing(classId, nftId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nftmarketParams(options?: any): AxiosPromise<NftmarketParams200Response> {
+            return localVarFp.nftmarketParams(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nftmintParams(options?: any): AxiosPromise<NftmintParams200Response> {
+            return localVarFp.nftmintParams(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {string} marketId 
          * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
          * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
@@ -3774,6 +9572,81 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         oracleAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<OracleAll200Response> {
             return localVarFp.oracleAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {string} bidder 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        paymentStatus(classId: string, nftId: string, bidder: string, options?: any): AxiosPromise<PaymentStatus200Response> {
+            return localVarFp.paymentStatus(classId, nftId, bidder, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        perpetualFutures(options?: any): AxiosPromise<PerpetualFutures200Response> {
+            return localVarFp.perpetualFutures(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} baseDenom 
+         * @param {string} quoteDenom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        perpetualFuturesMarket(baseDenom: string, quoteDenom: string, options?: any): AxiosPromise<PerpetualFuturesMarket200Response> {
+            return localVarFp.perpetualFuturesMarket(baseDenom, quoteDenom, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {'POSITION_UNKNOWN' | 'LONG' | 'SHORT'} positionType 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        perpetualFuturesPositionSize(positionType: 'POSITION_UNKNOWN' | 'LONG' | 'SHORT', address: string, options?: any): AxiosPromise<PerpetualFuturesPositionSize200Response> {
+            return localVarFp.perpetualFuturesPositionSize(positionType, address, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        perpetualOptions(options?: any): AxiosPromise<object> {
+            return localVarFp.perpetualOptions(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} baseDenom 
+         * @param {string} quoteDenom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        perpetualOptionsMarket(baseDenom: string, quoteDenom: string, options?: any): AxiosPromise<object> {
+            return localVarFp.perpetualOptionsMarket(baseDenom, quoteDenom, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary this line is used by starport scaffolding # 2
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pool(options?: any): AxiosPromise<Pool200Response> {
+            return localVarFp.pool(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} positionId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        position(positionId: string, options?: any): AxiosPromise<Position200Response> {
+            return localVarFp.position(positionId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3816,6 +9689,35 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         rawPriceAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<RawPriceAll200Response> {
             return localVarFp.rawPriceAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} classId 
+         * @param {string} nftId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        recordedIncentiveUnitId(classId: string, nftId: string, options?: any): AxiosPromise<RecordedIncentiveUnitId200Response> {
+            return localVarFp.recordedIncentiveUnitId(classId, nftId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} subjectAddr 
+         * @param {string} denom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        reward(subjectAddr: string, denom: string, options?: any): AxiosPromise<Reward200Response> {
+            return localVarFp.reward(subjectAddr, denom, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        rewards(address: string, options?: any): AxiosPromise<Rewards200Response> {
+            return localVarFp.rewards(address, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3901,6 +9803,46 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} address 
+     * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+     * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+     * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+     * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public addressPositions(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).addressPositions(address, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+     * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+     * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+     * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public allPositions(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).allPositions(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} subjectAddr 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public allRewards(subjectAddr: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).allRewards(subjectAddr, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @summary this line is used by starport scaffolding # 2
      * @param {string} id 
      * @param {*} [options] Override http request option.
@@ -3937,6 +9879,27 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} denom 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public availableAssetInPoolByDenom(denom: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).availableAssetInPoolByDenom(denom, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public availableAssetsInPool(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).availableAssetsInPool(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @summary this line is used by starport scaffolding # 2
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3944,6 +9907,27 @@ export class QueryApi extends BaseAPI {
      */
     public balances(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).balances(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} bidder 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public bidderBids(bidder: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).bidderBids(bidder, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public cDPsList(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).cDPsList(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3985,6 +9969,49 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} classId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public classAttributes(classId: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).classAttributes(classId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} className 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public classIdsByName(className: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).classIdsByName(className, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} owner 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public classIdsByOwner(owner: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).classIdsByOwner(owner, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public dLPTokenRates(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).dLPTokenRates(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {string} owner 
      * @param {string} collateralType 
      * @param {*} [options] Override http request option.
@@ -3993,6 +10020,40 @@ export class QueryApi extends BaseAPI {
      */
     public depositAll(owner: string, collateralType: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).depositAll(owner, collateralType, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Parameters queries the parameters of the module.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public derivativesParams(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).derivativesParams(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Parameters queries the parameters of the module.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public ecosystemincentiveParams(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).ecosystemincentiveParams(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} mintDenom 
+     * @param {string} amount 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public estimateDLPTokenAmount(mintDenom: string, amount: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).estimateDLPTokenAmount(mintDenom, amount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4021,12 +10082,138 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} redeemDenom 
+     * @param {string} lptAmount 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).estimateRedeemTokenAmount(redeemDenom, lptAmount, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
     public incentiveParams(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).incentiveParams(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} incentiveUnitId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public incentiveUnit(incentiveUnitId: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).incentiveUnit(incentiveUnitId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} address 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public incentiveUnitIdsByAddr(address: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).incentiveUnitIdsByAddr(address, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} classId 
+     * @param {string} nftId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public liquidation(classId: string, nftId: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).liquidation(classId, nftId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [beforeHeight] 
+     * @param {string} [afterHeight] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public liquidityProviderTokenNominalAPY(beforeHeight?: string, afterHeight?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).liquidityProviderTokenNominalAPY(beforeHeight, afterHeight, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [beforeHeight] 
+     * @param {string} [afterHeight] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public liquidityProviderTokenRealAPY(beforeHeight?: string, afterHeight?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).liquidityProviderTokenRealAPY(beforeHeight, afterHeight, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} classId 
+     * @param {number} nftLimit 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public listedClass(classId: string, nftLimit: number, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).listedClass(classId, nftLimit, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {number} [nftLimit] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public listedClasses(nftLimit?: number, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).listedClasses(nftLimit, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [owner] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public listedNfts(owner?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).listedNfts(owner, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} classId 
+     * @param {string} nftId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public loan(classId: string, nftId: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).loan(classId, nftId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public loans(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).loans(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4046,6 +10233,62 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} classId 
+     * @param {string} nftId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public nFTMinter(classId: string, nftId: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).nFTMinter(classId, nftId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} classId 
+     * @param {string} nftId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public nftBids(classId: string, nftId: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).nftBids(classId, nftId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} classId 
+     * @param {string} nftId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public nftListing(classId: string, nftId: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).nftListing(classId, nftId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public nftmarketParams(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).nftmarketParams(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public nftmintParams(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).nftmintParams(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {string} marketId 
      * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
      * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
@@ -4057,6 +10300,97 @@ export class QueryApi extends BaseAPI {
      */
     public oracleAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).oracleAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} classId 
+     * @param {string} nftId 
+     * @param {string} bidder 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public paymentStatus(classId: string, nftId: string, bidder: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).paymentStatus(classId, nftId, bidder, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public perpetualFutures(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).perpetualFutures(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} baseDenom 
+     * @param {string} quoteDenom 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public perpetualFuturesMarket(baseDenom: string, quoteDenom: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).perpetualFuturesMarket(baseDenom, quoteDenom, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {'POSITION_UNKNOWN' | 'LONG' | 'SHORT'} positionType 
+     * @param {string} address 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public perpetualFuturesPositionSize(positionType: 'POSITION_UNKNOWN' | 'LONG' | 'SHORT', address: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).perpetualFuturesPositionSize(positionType, address, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public perpetualOptions(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).perpetualOptions(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} baseDenom 
+     * @param {string} quoteDenom 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public perpetualOptionsMarket(baseDenom: string, quoteDenom: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).perpetualOptionsMarket(baseDenom, quoteDenom, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary this line is used by starport scaffolding # 2
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public pool(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).pool(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} positionId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public position(positionId: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).position(positionId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4107,6 +10441,41 @@ export class QueryApi extends BaseAPI {
      */
     public rawPriceAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).rawPriceAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} classId 
+     * @param {string} nftId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public recordedIncentiveUnitId(classId: string, nftId: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).recordedIncentiveUnitId(classId, nftId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} subjectAddr 
+     * @param {string} denom 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public reward(subjectAddr: string, denom: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).reward(subjectAddr, denom, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} address 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public rewards(address: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).rewards(address, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
