@@ -9,8 +9,8 @@ export function estimateDLPTokenAmount(sdk: cosmosclient.CosmosSDK, mintDenom: s
   return new QueryApi(undefined, sdk.url).estimateDLPTokenAmount(mintDenom, mintAmount);
 }
 
-export function estimateRedeemAmount(sdk: cosmosclient.CosmosSDK, redeemDenom: string, lptAmount: string) {
-  return new QueryApi(undefined, sdk.url).estimateRedeemAmount(redeemDenom, lptAmount);
+export function estimateRedeemTokenAmount(sdk: cosmosclient.CosmosSDK, redeemDenom: string, lptAmount: string) {
+  return new QueryApi(undefined, sdk.url).estimateRedeemTokenAmount(redeemDenom, lptAmount);
 }
 
 export function nominalAPY(sdk: cosmosclient.CosmosSDK) {
