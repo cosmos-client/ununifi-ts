@@ -13,13 +13,15 @@
  */
 
 
-import { Configuration } from './configuration';
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { Configuration } from './configuration';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from './common';
+import type { RequestArgs } from './base';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
+import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
 
 /**
  * 
@@ -339,6 +341,32 @@ export interface AuctionParams200ResponseParams {
      * @memberof AuctionParams200ResponseParams
      */
     'increment_collateral'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface AvailableAssetInPoolByDenom200Response
+ */
+export interface AvailableAssetInPoolByDenom200Response {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof AvailableAssetInPoolByDenom200Response
+     */
+    'available_asset'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface AvailableAssetsInPool200Response
+ */
+export interface AvailableAssetsInPool200Response {
+    /**
+     * 
+     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @memberof AvailableAssetsInPool200Response
+     */
+    'available_assets'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
 }
 /**
  * 
@@ -1101,6 +1129,12 @@ export interface DerivativesParams200ResponseParamsPerpetualFutures {
      * @memberof DerivativesParams200ResponseParamsPerpetualFutures
      */
     'markets'?: Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>;
+    /**
+     * 
+     * @type {number}
+     * @memberof DerivativesParams200ResponseParamsPerpetualFutures
+     */
+    'max_leverage'?: number;
 }
 /**
  * 
@@ -1202,27 +1236,27 @@ export interface DerivativesParams200ResponseParamsPoolParams {
     'report_levy_period_reward_rate'?: string;
     /**
      * 
-     * @type {Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner>}
+     * @type {Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner>}
      * @memberof DerivativesParams200ResponseParamsPoolParams
      */
-    'accepted_assets'?: Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner>;
+    'accepted_assets_conf'?: Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner>;
 }
 /**
  * 
  * @export
- * @interface DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner
+ * @interface DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner
  */
-export interface DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner {
+export interface DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner {
     /**
      * 
      * @type {string}
-     * @memberof DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner
+     * @memberof DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner
      */
     'denom'?: string;
     /**
      * 
      * @type {string}
-     * @memberof DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner
+     * @memberof DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner
      */
     'target_weight'?: string;
 }
@@ -1275,11 +1309,56 @@ export interface EstimateDLPTokenAmount200Response {
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof EstimateDLPTokenAmount200Response
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'estimated_dlp_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
     /**
      * 
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof EstimateDLPTokenAmount200Response
+     */
+    'deposit_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface EstimateMintAmount200Response
+ */
+export interface EstimateMintAmount200Response {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof EstimateMintAmount200Response
+     */
+    'mint_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface EstimateRedeemAmount200Response
+ */
+export interface EstimateRedeemAmount200Response {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof EstimateRedeemAmount200Response
+     */
+    'redeem_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface EstimateRedeemTokenAmount200Response
+ */
+export interface EstimateRedeemTokenAmount200Response {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof EstimateRedeemTokenAmount200Response
+     */
+    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof EstimateRedeemTokenAmount200Response
      */
     'fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
@@ -1744,92 +1823,117 @@ export interface ListedNfts200Response {
 export interface ListedNfts200ResponseListingsInner {
     /**
      * 
-     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @type {ListedNfts200ResponseListingsInnerListing}
      * @memberof ListedNfts200ResponseListingsInner
+     */
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
+    /**
+     * 
+     * @type {ListedClass200ResponseNftsInner}
+     * @memberof ListedNfts200ResponseListingsInner
+     */
+    'nft_info'?: ListedClass200ResponseNftsInner;
+}
+/**
+ * 
+ * @export
+ * @interface ListedNfts200ResponseListingsInnerListing
+ */
+export interface ListedNfts200ResponseListingsInnerListing {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'nft_id'?: BidderBids200ResponseBidsInnerNftId;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'owner'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
-    'listing_type'?: ListedNfts200ResponseListingsInnerListingTypeEnum;
+    'listing_type'?: ListedNfts200ResponseListingsInnerListingListingTypeEnum;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
-    'state'?: ListedNfts200ResponseListingsInnerStateEnum;
+    'state'?: ListedNfts200ResponseListingsInnerListingStateEnum;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'bid_token'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'minimum_deposit_rate'?: string;
     /**
      * 
      * @type {boolean}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'automatic_refinancing'?: boolean;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'started_at'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'end_at'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'full_payment_end_at'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'successful_bid_end_at'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'auto_relisted_count'?: string;
     /**
      * 
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof ListedNfts200ResponseListingsInner
+     * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'collected_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'minimum_bidding_period'?: string;
 }
 
-export const ListedNfts200ResponseListingsInnerListingTypeEnum = {
+export const ListedNfts200ResponseListingsInnerListingListingTypeEnum = {
     DirectAssetBorrow: 'DIRECT_ASSET_BORROW',
     SyntheticAssetCreation: 'SYNTHETIC_ASSET_CREATION',
     LateShipping: 'LATE_SHIPPING'
 } as const;
 
-export type ListedNfts200ResponseListingsInnerListingTypeEnum = typeof ListedNfts200ResponseListingsInnerListingTypeEnum[keyof typeof ListedNfts200ResponseListingsInnerListingTypeEnum];
-export const ListedNfts200ResponseListingsInnerStateEnum = {
+export type ListedNfts200ResponseListingsInnerListingListingTypeEnum = typeof ListedNfts200ResponseListingsInnerListingListingTypeEnum[keyof typeof ListedNfts200ResponseListingsInnerListingListingTypeEnum];
+export const ListedNfts200ResponseListingsInnerListingStateEnum = {
     Listing: 'LISTING',
     Bidding: 'BIDDING',
     SellingDecision: 'SELLING_DECISION',
@@ -1837,7 +1941,7 @@ export const ListedNfts200ResponseListingsInnerStateEnum = {
     SuccessfulBid: 'SUCCESSFUL_BID'
 } as const;
 
-export type ListedNfts200ResponseListingsInnerStateEnum = typeof ListedNfts200ResponseListingsInnerStateEnum[keyof typeof ListedNfts200ResponseListingsInnerStateEnum];
+export type ListedNfts200ResponseListingsInnerListingStateEnum = typeof ListedNfts200ResponseListingsInnerListingStateEnum[keyof typeof ListedNfts200ResponseListingsInnerListingStateEnum];
 
 /**
  * 
@@ -1992,10 +2096,10 @@ export interface NFTMinter200Response {
 export interface NftListing200Response {
     /**
      * 
-     * @type {ListedNfts200ResponseListingsInner}
+     * @type {ListedNfts200ResponseListingsInnerListing}
      * @memberof NftListing200Response
      */
-    'listing'?: ListedNfts200ResponseListingsInner;
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
 }
 /**
  * 
@@ -2429,35 +2533,41 @@ export interface Pool200ResponsePoolMarketCap {
     'total'?: string;
     /**
      * 
-     * @type {Array<Pool200ResponsePoolMarketCapBreakdownInner>}
+     * @type {Array<Pool200ResponsePoolMarketCapAssetInfoInner>}
      * @memberof Pool200ResponsePoolMarketCap
      */
-    'breakdown'?: Array<Pool200ResponsePoolMarketCapBreakdownInner>;
+    'asset_info'?: Array<Pool200ResponsePoolMarketCapAssetInfoInner>;
 }
 /**
  * 
  * @export
- * @interface Pool200ResponsePoolMarketCapBreakdownInner
+ * @interface Pool200ResponsePoolMarketCapAssetInfoInner
  */
-export interface Pool200ResponsePoolMarketCapBreakdownInner {
+export interface Pool200ResponsePoolMarketCapAssetInfoInner {
     /**
      * 
      * @type {string}
-     * @memberof Pool200ResponsePoolMarketCapBreakdownInner
+     * @memberof Pool200ResponsePoolMarketCapAssetInfoInner
      */
     'denom'?: string;
     /**
      * 
      * @type {string}
-     * @memberof Pool200ResponsePoolMarketCapBreakdownInner
+     * @memberof Pool200ResponsePoolMarketCapAssetInfoInner
      */
     'amount'?: string;
     /**
      * 
      * @type {string}
-     * @memberof Pool200ResponsePoolMarketCapBreakdownInner
+     * @memberof Pool200ResponsePoolMarketCapAssetInfoInner
      */
     'price'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Pool200ResponsePoolMarketCapAssetInfoInner
+     */
+    'reserved'?: string;
 }
 /**
  * 
@@ -2700,6 +2810,69 @@ export interface Rewards200Response {
      * @memberof Rewards200Response
      */
     'rewards'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+}
+/**
+ * 
+ * @export
+ * @interface Strategy200Response
+ */
+export interface Strategy200Response {
+    /**
+     * 
+     * @type {StrategyAll200ResponseStrategiesInner}
+     * @memberof Strategy200Response
+     */
+    'strategy'?: StrategyAll200ResponseStrategiesInner;
+}
+/**
+ * 
+ * @export
+ * @interface StrategyAll200Response
+ */
+export interface StrategyAll200Response {
+    /**
+     * 
+     * @type {Array<StrategyAll200ResponseStrategiesInner>}
+     * @memberof StrategyAll200Response
+     */
+    'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof StrategyAll200Response
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface StrategyAll200ResponseStrategiesInner
+ */
+export interface StrategyAll200ResponseStrategiesInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof StrategyAll200ResponseStrategiesInner
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof StrategyAll200ResponseStrategiesInner
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof StrategyAll200ResponseStrategiesInner
+     */
+    'contract_address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof StrategyAll200ResponseStrategiesInner
+     */
+    'name'?: string;
 }
 /**
  * 
@@ -3229,6 +3402,12 @@ export interface UnunifiDerivativesPerpetualFuturesParams {
      * @memberof UnunifiDerivativesPerpetualFuturesParams
      */
     'markets'?: Array<DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner>;
+    /**
+     * 
+     * @type {number}
+     * @memberof UnunifiDerivativesPerpetualFuturesParams
+     */
+    'max_leverage'?: number;
 }
 /**
  * 
@@ -3270,6 +3449,25 @@ export interface UnunifiDerivativesPerpetualOptionsParams {
 /**
  * 
  * @export
+ * @interface UnunifiDerivativesPoolAssetConf
+ */
+export interface UnunifiDerivativesPoolAssetConf {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolAssetConf
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolAssetConf
+     */
+    'target_weight'?: string;
+}
+/**
+ * 
+ * @export
  * @interface UnunifiDerivativesPoolMarketCap
  */
 export interface UnunifiDerivativesPoolMarketCap {
@@ -3287,35 +3485,41 @@ export interface UnunifiDerivativesPoolMarketCap {
     'total'?: string;
     /**
      * 
-     * @type {Array<Pool200ResponsePoolMarketCapBreakdownInner>}
+     * @type {Array<Pool200ResponsePoolMarketCapAssetInfoInner>}
      * @memberof UnunifiDerivativesPoolMarketCap
      */
-    'breakdown'?: Array<Pool200ResponsePoolMarketCapBreakdownInner>;
+    'asset_info'?: Array<Pool200ResponsePoolMarketCapAssetInfoInner>;
 }
 /**
  * 
  * @export
- * @interface UnunifiDerivativesPoolMarketCapBreakdown
+ * @interface UnunifiDerivativesPoolMarketCapAssetInfo
  */
-export interface UnunifiDerivativesPoolMarketCapBreakdown {
+export interface UnunifiDerivativesPoolMarketCapAssetInfo {
     /**
      * 
      * @type {string}
-     * @memberof UnunifiDerivativesPoolMarketCapBreakdown
+     * @memberof UnunifiDerivativesPoolMarketCapAssetInfo
      */
     'denom'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiDerivativesPoolMarketCapBreakdown
+     * @memberof UnunifiDerivativesPoolMarketCapAssetInfo
      */
     'amount'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiDerivativesPoolMarketCapBreakdown
+     * @memberof UnunifiDerivativesPoolMarketCapAssetInfo
      */
     'price'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiDerivativesPoolMarketCapAssetInfo
+     */
+    'reserved'?: string;
 }
 /**
  * 
@@ -3361,29 +3565,10 @@ export interface UnunifiDerivativesPoolParams {
     'report_levy_period_reward_rate'?: string;
     /**
      * 
-     * @type {Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner>}
+     * @type {Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner>}
      * @memberof UnunifiDerivativesPoolParams
      */
-    'accepted_assets'?: Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsInner>;
-}
-/**
- * 
- * @export
- * @interface UnunifiDerivativesPoolParamsAsset
- */
-export interface UnunifiDerivativesPoolParamsAsset {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesPoolParamsAsset
-     */
-    'denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesPoolParamsAsset
-     */
-    'target_weight'?: string;
+    'accepted_assets_conf'?: Array<DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfInner>;
 }
 /**
  * 
@@ -3545,6 +3730,32 @@ export interface UnunifiDerivativesQueryAllPositionsResponse {
 /**
  * 
  * @export
+ * @interface UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse
+ */
+export interface UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse
+     */
+    'available_asset'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiDerivativesQueryAvailableAssetsInPoolResponse
+ */
+export interface UnunifiDerivativesQueryAvailableAssetsInPoolResponse {
+    /**
+     * 
+     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @memberof UnunifiDerivativesQueryAvailableAssetsInPoolResponse
+     */
+    'available_assets'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+}
+/**
+ * 
+ * @export
  * @interface UnunifiDerivativesQueryDLPTokenRateResponse
  */
 export interface UnunifiDerivativesQueryDLPTokenRateResponse {
@@ -3572,30 +3783,30 @@ export interface UnunifiDerivativesQueryEstimateDLPTokenAmountResponse {
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'estimated_dlp_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
     /**
      * 
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
      * @memberof UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
      */
-    'fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'deposit_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 /**
  * 
  * @export
- * @interface UnunifiDerivativesQueryEstimateRedeemAmountResponse
+ * @interface UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse
  */
-export interface UnunifiDerivativesQueryEstimateRedeemAmountResponse {
+export interface UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse {
     /**
      * 
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiDerivativesQueryEstimateRedeemAmountResponse
+     * @memberof UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse
      */
     'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
     /**
      * 
      * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiDerivativesQueryEstimateRedeemAmountResponse
+     * @memberof UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse
      */
     'fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
@@ -4215,31 +4426,6 @@ export interface UnunifiNftmarketLiquidations {
 /**
  * 
  * @export
- * @interface UnunifiNftmarketListedNft
- */
-export interface UnunifiNftmarketListedNft {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftmarketListedNft
-     */
-    'id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftmarketListedNft
-     */
-    'uri'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftmarketListedNft
-     */
-    'uri_hash'?: string;
-}
-/**
- * 
- * @export
  * @enum {string}
  */
 
@@ -4389,6 +4575,31 @@ export interface UnunifiNftmarketNftIdentifier {
 /**
  * 
  * @export
+ * @interface UnunifiNftmarketNftInfo
+ */
+export interface UnunifiNftmarketNftInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftInfo
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftInfo
+     */
+    'uri'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftInfo
+     */
+    'uri_hash'?: string;
+}
+/**
+ * 
+ * @export
  * @interface UnunifiNftmarketNftListing
  */
 export interface UnunifiNftmarketNftListing {
@@ -4470,6 +4681,12 @@ export interface UnunifiNftmarketNftListing {
      * @memberof UnunifiNftmarketNftListing
      */
     'collected_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiNftmarketNftListing
+     */
+    'minimum_bidding_period'?: string;
 }
 
 export const UnunifiNftmarketNftListingListingTypeEnum = {
@@ -4489,6 +4706,25 @@ export const UnunifiNftmarketNftListingStateEnum = {
 
 export type UnunifiNftmarketNftListingStateEnum = typeof UnunifiNftmarketNftListingStateEnum[keyof typeof UnunifiNftmarketNftListingStateEnum];
 
+/**
+ * 
+ * @export
+ * @interface UnunifiNftmarketNftListingDetail
+ */
+export interface UnunifiNftmarketNftListingDetail {
+    /**
+     * 
+     * @type {ListedNfts200ResponseListingsInnerListing}
+     * @memberof UnunifiNftmarketNftListingDetail
+     */
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
+    /**
+     * 
+     * @type {ListedClass200ResponseNftsInner}
+     * @memberof UnunifiNftmarketNftListingDetail
+     */
+    'nft_info'?: ListedClass200ResponseNftsInner;
+}
 /**
  * 
  * @export
@@ -4830,10 +5066,10 @@ export interface UnunifiNftmarketQueryNftBidsResponse {
 export interface UnunifiNftmarketQueryNftListingResponse {
     /**
      * 
-     * @type {ListedNfts200ResponseListingsInner}
+     * @type {ListedNfts200ResponseListingsInnerListing}
      * @memberof UnunifiNftmarketQueryNftListingResponse
      */
-    'listing'?: ListedNfts200ResponseListingsInner;
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
 }
 /**
  * 
@@ -5358,6 +5594,263 @@ export interface UnunifiUnunifidistQueryParamsResponse {
     'params'?: UnunifidistParams200ResponseParams;
 }
 /**
+ * Params defines the parameters for the module.
+ * @export
+ * @interface UnunifiYieldaggregatorParams
+ */
+export interface UnunifiYieldaggregatorParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorParams
+     */
+    'commission_rate'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiYieldaggregatorParams
+     */
+    'vault_creation_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiYieldaggregatorParams
+     */
+    'vault_creation_deposit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorQueryAllStrategyResponse
+ */
+export interface UnunifiYieldaggregatorQueryAllStrategyResponse {
+    /**
+     * 
+     * @type {Array<StrategyAll200ResponseStrategiesInner>}
+     * @memberof UnunifiYieldaggregatorQueryAllStrategyResponse
+     */
+    'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof UnunifiYieldaggregatorQueryAllStrategyResponse
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorQueryAllVaultResponse
+ */
+export interface UnunifiYieldaggregatorQueryAllVaultResponse {
+    /**
+     * 
+     * @type {Array<VaultAll200ResponseVaultsInner>}
+     * @memberof UnunifiYieldaggregatorQueryAllVaultResponse
+     */
+    'vaults'?: Array<VaultAll200ResponseVaultsInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof UnunifiYieldaggregatorQueryAllVaultResponse
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorQueryEstimateMintAmountResponse
+ */
+export interface UnunifiYieldaggregatorQueryEstimateMintAmountResponse {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiYieldaggregatorQueryEstimateMintAmountResponse
+     */
+    'mint_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
+ */
+export interface UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse {
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
+     */
+    'redeem_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorQueryGetStrategyResponse
+ */
+export interface UnunifiYieldaggregatorQueryGetStrategyResponse {
+    /**
+     * 
+     * @type {StrategyAll200ResponseStrategiesInner}
+     * @memberof UnunifiYieldaggregatorQueryGetStrategyResponse
+     */
+    'strategy'?: StrategyAll200ResponseStrategiesInner;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorQueryGetVaultResponse
+ */
+export interface UnunifiYieldaggregatorQueryGetVaultResponse {
+    /**
+     * 
+     * @type {VaultAll200ResponseVaultsInner}
+     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
+     */
+    'vault'?: VaultAll200ResponseVaultsInner;
+    /**
+     * 
+     * @type {Array<StrategyAll200ResponseStrategiesInner>}
+     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
+     */
+    'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
+     */
+    'vault_address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
+     */
+    'total_bonded_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
+     */
+    'total_unbonding_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
+     */
+    'total_withdrawal_balance'?: string;
+}
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @export
+ * @interface UnunifiYieldaggregatorQueryParamsResponse
+ */
+export interface UnunifiYieldaggregatorQueryParamsResponse {
+    /**
+     * 
+     * @type {YieldAggregatorParams200ResponseParams}
+     * @memberof UnunifiYieldaggregatorQueryParamsResponse
+     */
+    'params'?: YieldAggregatorParams200ResponseParams;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorStrategy
+ */
+export interface UnunifiYieldaggregatorStrategy {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategy
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategy
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategy
+     */
+    'contract_address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategy
+     */
+    'name'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorStrategyWeight
+ */
+export interface UnunifiYieldaggregatorStrategyWeight {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategyWeight
+     */
+    'strategy_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategyWeight
+     */
+    'weight'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorVault
+ */
+export interface UnunifiYieldaggregatorVault {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'owner'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'owner_deposit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'withdraw_commission_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'withdraw_reserve_rate'?: string;
+    /**
+     * 
+     * @type {Array<VaultAll200ResponseVaultsInnerStrategyWeightsInner>}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'strategy_weights'?: Array<VaultAll200ResponseVaultsInnerStrategyWeightsInner>;
+}
+/**
  * 
  * @export
  * @interface UnunifidistParams200Response
@@ -5413,6 +5906,174 @@ export interface UnunifidistParams200ResponseParamsPeriodsInner {
      * @memberof UnunifidistParams200ResponseParamsPeriodsInner
      */
     'inflation'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface Vault200Response
+ */
+export interface Vault200Response {
+    /**
+     * 
+     * @type {VaultAll200ResponseVaultsInner}
+     * @memberof Vault200Response
+     */
+    'vault'?: VaultAll200ResponseVaultsInner;
+    /**
+     * 
+     * @type {Array<StrategyAll200ResponseStrategiesInner>}
+     * @memberof Vault200Response
+     */
+    'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
+    /**
+     * 
+     * @type {string}
+     * @memberof Vault200Response
+     */
+    'vault_address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Vault200Response
+     */
+    'total_bonded_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Vault200Response
+     */
+    'total_unbonding_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Vault200Response
+     */
+    'total_withdrawal_balance'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface VaultAll200Response
+ */
+export interface VaultAll200Response {
+    /**
+     * 
+     * @type {Array<VaultAll200ResponseVaultsInner>}
+     * @memberof VaultAll200Response
+     */
+    'vaults'?: Array<VaultAll200ResponseVaultsInner>;
+    /**
+     * 
+     * @type {AuctionAll200ResponsePagination}
+     * @memberof VaultAll200Response
+     */
+    'pagination'?: AuctionAll200ResponsePagination;
+}
+/**
+ * 
+ * @export
+ * @interface VaultAll200ResponseVaultsInner
+ */
+export interface VaultAll200ResponseVaultsInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof VaultAll200ResponseVaultsInner
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VaultAll200ResponseVaultsInner
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VaultAll200ResponseVaultsInner
+     */
+    'owner'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof VaultAll200ResponseVaultsInner
+     */
+    'owner_deposit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {string}
+     * @memberof VaultAll200ResponseVaultsInner
+     */
+    'withdraw_commission_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VaultAll200ResponseVaultsInner
+     */
+    'withdraw_reserve_rate'?: string;
+    /**
+     * 
+     * @type {Array<VaultAll200ResponseVaultsInnerStrategyWeightsInner>}
+     * @memberof VaultAll200ResponseVaultsInner
+     */
+    'strategy_weights'?: Array<VaultAll200ResponseVaultsInnerStrategyWeightsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface VaultAll200ResponseVaultsInnerStrategyWeightsInner
+ */
+export interface VaultAll200ResponseVaultsInnerStrategyWeightsInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof VaultAll200ResponseVaultsInnerStrategyWeightsInner
+     */
+    'strategy_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VaultAll200ResponseVaultsInnerStrategyWeightsInner
+     */
+    'weight'?: string;
+}
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @export
+ * @interface YieldAggregatorParams200Response
+ */
+export interface YieldAggregatorParams200Response {
+    /**
+     * 
+     * @type {YieldAggregatorParams200ResponseParams}
+     * @memberof YieldAggregatorParams200Response
+     */
+    'params'?: YieldAggregatorParams200ResponseParams;
+}
+/**
+ * params holds all the parameters of this module.
+ * @export
+ * @interface YieldAggregatorParams200ResponseParams
+ */
+export interface YieldAggregatorParams200ResponseParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof YieldAggregatorParams200ResponseParams
+     */
+    'commission_rate'?: string;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof YieldAggregatorParams200ResponseParams
+     */
+    'vault_creation_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    /**
+     * 
+     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @memberof YieldAggregatorParams200ResponseParams
+     */
+    'vault_creation_deposit'?: CdpAll200ResponseCdpInnerCdpCollateral;
 }
 
 /**
@@ -5675,6 +6336,68 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          */
         auctionParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/auction/params`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} denom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        availableAssetInPoolByDenom: async (denom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'denom' is not null or undefined
+            assertParamExists('availableAssetInPoolByDenom', 'denom', denom)
+            const localVarPath = `/ununifi/derivatives/pools/available-asset/{denom}`
+                .replace(`{${"denom"}}`, encodeURIComponent(String(denom)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        availableAssetsInPool: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/pools/available-assets`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -6169,16 +6892,92 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} id 
+         * @param {string} [depositAmount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateMintAmount: async (id: string, depositAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('estimateMintAmount', 'id', id)
+            const localVarPath = `/ununifi/yield-aggregator/vaults/{id}/estimate-mint-amount`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (depositAmount !== undefined) {
+                localVarQueryParameter['deposit_amount'] = depositAmount;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {string} [burnAmount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateRedeemAmount: async (id: string, burnAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('estimateRedeemAmount', 'id', id)
+            const localVarPath = `/ununifi/yield-aggregator/vaults/{id}/estimate-redeem-amount`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (burnAmount !== undefined) {
+                localVarQueryParameter['burn_amount'] = burnAmount;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} redeemDenom 
          * @param {string} lptAmount 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        estimateRedeemAmount: async (redeemDenom: string, lptAmount: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        estimateRedeemTokenAmount: async (redeemDenom: string, lptAmount: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'redeemDenom' is not null or undefined
-            assertParamExists('estimateRedeemAmount', 'redeemDenom', redeemDenom)
+            assertParamExists('estimateRedeemTokenAmount', 'redeemDenom', redeemDenom)
             // verify required parameter 'lptAmount' is not null or undefined
-            assertParamExists('estimateRedeemAmount', 'lptAmount', lptAmount)
+            assertParamExists('estimateRedeemTokenAmount', 'lptAmount', lptAmount)
             const localVarPath = `/ununifi/derivatives/estimate-redeem-amount/{redeem_denom}/{lpt_amount}`
                 .replace(`{${"redeem_denom"}}`, encodeURIComponent(String(redeemDenom)))
                 .replace(`{${"lpt_amount"}}`, encodeURIComponent(String(lptAmount)));
@@ -7403,11 +8202,216 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} id 
+         * @param {string} [denom] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        strategy: async (id: string, denom?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('strategy', 'id', id)
+            const localVarPath = `/ununifi/yield-aggregator/strategies/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (denom !== undefined) {
+                localVarQueryParameter['denom'] = denom;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [denom] 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        strategyAll: async (denom?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/yield-aggregator/strategies/query-param`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (denom !== undefined) {
+                localVarQueryParameter['denom'] = denom;
+            }
+
+            if (paginationKey !== undefined) {
+                localVarQueryParameter['pagination.key'] = paginationKey;
+            }
+
+            if (paginationOffset !== undefined) {
+                localVarQueryParameter['pagination.offset'] = paginationOffset;
+            }
+
+            if (paginationLimit !== undefined) {
+                localVarQueryParameter['pagination.limit'] = paginationLimit;
+            }
+
+            if (paginationCountTotal !== undefined) {
+                localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         ununifidistParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/ununifidist/params`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        vault: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('vault', 'id', id)
+            const localVarPath = `/ununifi/yield-aggregator/vaults/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary this line is used by starport scaffolding # 2
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        vaultAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/yield-aggregator/vaults`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (paginationKey !== undefined) {
+                localVarQueryParameter['pagination.key'] = paginationKey;
+            }
+
+            if (paginationOffset !== undefined) {
+                localVarQueryParameter['pagination.offset'] = paginationOffset;
+            }
+
+            if (paginationLimit !== undefined) {
+                localVarQueryParameter['pagination.limit'] = paginationLimit;
+            }
+
+            if (paginationCountTotal !== undefined) {
+                localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary Parameters queries the parameters of the module.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        yieldAggregatorParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/yield-aggregator/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -7517,6 +8521,25 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async auctionParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuctionParams200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.auctionParams(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} denom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async availableAssetInPoolByDenom(denom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AvailableAssetInPoolByDenom200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.availableAssetInPoolByDenom(denom, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async availableAssetsInPool(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AvailableAssetsInPool200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.availableAssetsInPool(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -7665,13 +8688,35 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} id 
+         * @param {string} [depositAmount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async estimateMintAmount(id: string, depositAmount?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateMintAmount200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.estimateMintAmount(id, depositAmount, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {string} [burnAmount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async estimateRedeemAmount(id: string, burnAmount?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRedeemAmount200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemAmount(id, burnAmount, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} redeemDenom 
          * @param {string} lptAmount 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async estimateRedeemAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateDLPTokenAmount200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemAmount(redeemDenom, lptAmount, options);
+        async estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRedeemTokenAmount200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemTokenAmount(redeemDenom, lptAmount, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -8029,11 +9074,70 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} id 
+         * @param {string} [denom] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async strategy(id: string, denom?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Strategy200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.strategy(id, denom, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [denom] 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async strategyAll(denom?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StrategyAll200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.strategyAll(denom, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         async ununifidistParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UnunifidistParams200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.ununifidistParams(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async vault(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Vault200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.vault(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary this line is used by starport scaffolding # 2
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async vaultAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VaultAll200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.vaultAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary Parameters queries the parameters of the module.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async yieldAggregatorParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<YieldAggregatorParams200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.yieldAggregatorParams(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -8117,6 +9221,23 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         auctionParams(options?: any): AxiosPromise<AuctionParams200Response> {
             return localVarFp.auctionParams(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} denom 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        availableAssetInPoolByDenom(denom: string, options?: any): AxiosPromise<AvailableAssetInPoolByDenom200Response> {
+            return localVarFp.availableAssetInPoolByDenom(denom, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        availableAssetsInPool(options?: any): AxiosPromise<AvailableAssetsInPool200Response> {
+            return localVarFp.availableAssetsInPool(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -8250,13 +9371,33 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {string} id 
+         * @param {string} [depositAmount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateMintAmount(id: string, depositAmount?: string, options?: any): AxiosPromise<EstimateMintAmount200Response> {
+            return localVarFp.estimateMintAmount(id, depositAmount, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {string} [burnAmount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateRedeemAmount(id: string, burnAmount?: string, options?: any): AxiosPromise<EstimateRedeemAmount200Response> {
+            return localVarFp.estimateRedeemAmount(id, burnAmount, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {string} redeemDenom 
          * @param {string} lptAmount 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        estimateRedeemAmount(redeemDenom: string, lptAmount: string, options?: any): AxiosPromise<EstimateDLPTokenAmount200Response> {
-            return localVarFp.estimateRedeemAmount(redeemDenom, lptAmount, options).then((request) => request(axios, basePath));
+        estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: any): AxiosPromise<EstimateRedeemTokenAmount200Response> {
+            return localVarFp.estimateRedeemTokenAmount(redeemDenom, lptAmount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -8580,11 +9721,65 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {string} id 
+         * @param {string} [denom] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        strategy(id: string, denom?: string, options?: any): AxiosPromise<Strategy200Response> {
+            return localVarFp.strategy(id, denom, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [denom] 
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        strategyAll(denom?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<StrategyAll200Response> {
+            return localVarFp.strategyAll(denom, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         ununifidistParams(options?: any): AxiosPromise<UnunifidistParams200Response> {
             return localVarFp.ununifidistParams(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        vault(id: string, options?: any): AxiosPromise<Vault200Response> {
+            return localVarFp.vault(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary this line is used by starport scaffolding # 2
+         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        vaultAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<VaultAll200Response> {
+            return localVarFp.vaultAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary Parameters queries the parameters of the module.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        yieldAggregatorParams(options?: any): AxiosPromise<YieldAggregatorParams200Response> {
+            return localVarFp.yieldAggregatorParams(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -8680,6 +9875,27 @@ export class QueryApi extends BaseAPI {
      */
     public auctionParams(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).auctionParams(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} denom 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public availableAssetInPoolByDenom(denom: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).availableAssetInPoolByDenom(denom, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public availableAssetsInPool(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).availableAssetsInPool(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8842,14 +10058,38 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} id 
+     * @param {string} [depositAmount] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public estimateMintAmount(id: string, depositAmount?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).estimateMintAmount(id, depositAmount, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id 
+     * @param {string} [burnAmount] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public estimateRedeemAmount(id: string, burnAmount?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).estimateRedeemAmount(id, burnAmount, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {string} redeemDenom 
      * @param {string} lptAmount 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public estimateRedeemAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).estimateRedeemAmount(redeemDenom, lptAmount, options).then((request) => request(this.axios, this.basePath));
+    public estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).estimateRedeemTokenAmount(redeemDenom, lptAmount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -9240,12 +10480,76 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} id 
+     * @param {string} [denom] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public strategy(id: string, denom?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).strategy(id, denom, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [denom] 
+     * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+     * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+     * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+     * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public strategyAll(denom?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).strategyAll(denom, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
     public ununifidistParams(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).ununifidistParams(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public vault(id: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).vault(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary this line is used by starport scaffolding # 2
+     * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
+     * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
+     * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
+     * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public vaultAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).vaultAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Parameters queries the parameters of the module.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public yieldAggregatorParams(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).yieldAggregatorParams(options).then((request) => request(this.axios, this.basePath));
     }
 }
 
