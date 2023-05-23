@@ -26,15 +26,52 @@ import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
 /**
  * 
  * @export
- * @interface AccountAll200Response
+ * @interface AddressPositions200Response
  */
-export interface AccountAll200Response {
+export interface AddressPositions200Response {
     /**
      * 
-     * @type {Array<AuctionAll200ResponseAuctionsInner>}
-     * @memberof AccountAll200Response
+     * @type {Array<AddressPositions200ResponsePositionsInner>}
+     * @memberof AddressPositions200Response
      */
-    'accounts'?: Array<AuctionAll200ResponseAuctionsInner>;
+    'positions'?: Array<AddressPositions200ResponsePositionsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface AddressPositions200ResponsePositionsInner
+ */
+export interface AddressPositions200ResponsePositionsInner {
+    /**
+     * 
+     * @type {Position200ResponsePosition}
+     * @memberof AddressPositions200ResponsePositionsInner
+     */
+    'position'?: Position200ResponsePosition;
+    /**
+     * 
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @memberof AddressPositions200ResponsePositionsInner
+     */
+    'valuation_profit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    /**
+     * 
+     * @type {string}
+     * @memberof AddressPositions200ResponsePositionsInner
+     */
+    'remaining_margin_value'?: string;
+    /**
+     * 
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @memberof AddressPositions200ResponsePositionsInner
+     */
+    'effective_margin'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    /**
+     * 
+     * @type {string}
+     * @memberof AddressPositions200ResponsePositionsInner
+     */
+    'margin_maintenance_rate'?: string;
 }
 /**
  * 
@@ -44,120 +81,16 @@ export interface AccountAll200Response {
 export interface AllPositions200Response {
     /**
      * 
-     * @type {Array<AllPositions200ResponsePositionsInner>}
+     * @type {Array<EstimateDLPTokenAmountDefaultResponseDetailsInner>}
      * @memberof AllPositions200Response
      */
-    'positions'?: Array<AllPositions200ResponsePositionsInner>;
+    'positions'?: Array<EstimateDLPTokenAmountDefaultResponseDetailsInner>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof AllPositions200Response
      */
-    'pagination'?: AuctionAll200ResponsePagination;
-}
-/**
- * 
- * @export
- * @interface AllPositions200ResponsePositionsInner
- */
-export interface AllPositions200ResponsePositionsInner {
-    /**
-     * 
-     * @type {AllPositions200ResponsePositionsInnerPosition}
-     * @memberof AllPositions200ResponsePositionsInner
-     */
-    'position'?: AllPositions200ResponsePositionsInnerPosition;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof AllPositions200ResponsePositionsInner
-     */
-    'valuation_profit'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {string}
-     * @memberof AllPositions200ResponsePositionsInner
-     */
-    'remaining_margin_value'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof AllPositions200ResponsePositionsInner
-     */
-    'effective_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {string}
-     * @memberof AllPositions200ResponsePositionsInner
-     */
-    'margin_maintenance_rate'?: string;
-}
-/**
- * 
- * @export
- * @interface AllPositions200ResponsePositionsInnerPosition
- */
-export interface AllPositions200ResponsePositionsInnerPosition {
-    /**
-     * 
-     * @type {string}
-     * @memberof AllPositions200ResponsePositionsInnerPosition
-     */
-    'id'?: string;
-    /**
-     * 
-     * @type {DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner}
-     * @memberof AllPositions200ResponsePositionsInnerPosition
-     */
-    'market'?: DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner;
-    /**
-     * 
-     * @type {string}
-     * @memberof AllPositions200ResponsePositionsInnerPosition
-     */
-    'address'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AllPositions200ResponsePositionsInnerPosition
-     */
-    'opened_at'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AllPositions200ResponsePositionsInnerPosition
-     */
-    'opened_height'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AllPositions200ResponsePositionsInnerPosition
-     */
-    'opened_base_rate'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AllPositions200ResponsePositionsInnerPosition
-     */
-    'opened_quote_rate'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof AllPositions200ResponsePositionsInnerPosition
-     */
-    'remaining_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {string}
-     * @memberof AllPositions200ResponsePositionsInnerPosition
-     */
-    'last_levied_at'?: string;
-    /**
-     * 
-     * @type {AuctionAll200ResponseAuctionsInner}
-     * @memberof AllPositions200ResponsePositionsInnerPosition
-     */
-    'position_instance'?: AuctionAll200ResponseAuctionsInner;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -186,161 +119,10 @@ export interface AllRewards200ResponseRewards {
     'subject_addr'?: string;
     /**
      * 
-     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
      * @memberof AllRewards200ResponseRewards
      */
-    'rewards'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
-}
-/**
- * 
- * @export
- * @interface Auction200Response
- */
-export interface Auction200Response {
-    /**
-     * 
-     * @type {AuctionAll200ResponseAuctionsInner}
-     * @memberof Auction200Response
-     */
-    'auction'?: AuctionAll200ResponseAuctionsInner;
-}
-/**
- * 
- * @export
- * @interface AuctionAll200Response
- */
-export interface AuctionAll200Response {
-    /**
-     * 
-     * @type {Array<AuctionAll200ResponseAuctionsInner>}
-     * @memberof AuctionAll200Response
-     */
-    'auctions'?: Array<AuctionAll200ResponseAuctionsInner>;
-    /**
-     * 
-     * @type {AuctionAll200ResponsePagination}
-     * @memberof AuctionAll200Response
-     */
-    'pagination'?: AuctionAll200ResponsePagination;
-}
-/**
- * `Any` contains an arbitrary serialized protocol buffer message along with a URL that describes the type of the serialized message.  Protobuf library provides support to pack/unpack Any values in the form of utility functions or additional generated methods of the Any type.  Example 1: Pack and unpack a message in C++.      Foo foo = ...;     Any any;     any.PackFrom(foo);     ...     if (any.UnpackTo(&foo)) {       ...     }  Example 2: Pack and unpack a message in Java.      Foo foo = ...;     Any any = Any.pack(foo);     ...     if (any.is(Foo.class)) {       foo = any.unpack(Foo.class);     }   Example 3: Pack and unpack a message in Python.      foo = Foo(...)     any = Any()     any.Pack(foo)     ...     if any.Is(Foo.DESCRIPTOR):       any.Unpack(foo)       ...   Example 4: Pack and unpack a message in Go       foo := &pb.Foo{...}      any, err := ptypes.MarshalAny(foo)      ...      foo := &pb.Foo{}      if err := ptypes.UnmarshalAny(any, foo); err != nil {        ...      }  The pack methods provided by protobuf library will by default use \'type.googleapis.com/full.type.name\' as the type URL and the unpack methods only use the fully qualified type name after the last \'/\' in the type URL, for example \"foo.bar.com/x/y.z\" will yield type name \"y.z\".   JSON ==== The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:      package google.profile;     message Person {       string first_name = 1;       string last_name = 2;     }      {       \"@type\": \"type.googleapis.com/google.profile.Person\",       \"firstName\": <string>,       \"lastName\": <string>     }  If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message [google.protobuf.Duration][]):      {       \"@type\": \"type.googleapis.com/google.protobuf.Duration\",       \"value\": \"1.212s\"     }
- * @export
- * @interface AuctionAll200ResponseAuctionsInner
- */
-export interface AuctionAll200ResponseAuctionsInner {
-    /**
-     * A URL/resource name that uniquely identifies the type of the serialized protocol buffer message. This string must contain at least one \"/\" character. The last segment of the URL\'s path must represent the fully qualified name of the type (as in `path/google.protobuf.Duration`). The name should be in a canonical form (e.g., leading \".\" is not accepted).  In practice, teams usually precompile into the binary all types that they expect it to use in the context of Any. However, for URLs which use the scheme `http`, `https`, or no scheme, one can optionally set up a type server that maps type URLs to message definitions as follows:  * If no scheme is provided, `https` is assumed. * An HTTP GET on the URL must yield a [google.protobuf.Type][]   value in binary format, or produce an error. * Applications are allowed to cache lookup results based on the   URL, or have them precompiled into a binary to avoid any   lookup. Therefore, binary compatibility needs to be preserved   on changes to types. (Use versioned type names to manage   breaking changes.)  Note: this functionality is not currently available in the official protobuf release, and it is not used for type URLs beginning with type.googleapis.com.  Schemes other than `http`, `https` (or the empty scheme) might be used with implementation specific semantics.
-     * @type {string}
-     * @memberof AuctionAll200ResponseAuctionsInner
-     */
-    'type_url'?: string;
-    /**
-     * Must be a valid serialized protocol buffer of the above specified type.
-     * @type {string}
-     * @memberof AuctionAll200ResponseAuctionsInner
-     */
-    'value'?: string;
-}
-/**
- * PageResponse is to be embedded in gRPC response messages where the corresponding request message has used PageRequest.   message SomeResponse {          repeated Bar results = 1;          PageResponse page = 2;  }
- * @export
- * @interface AuctionAll200ResponsePagination
- */
-export interface AuctionAll200ResponsePagination {
-    /**
-     * 
-     * @type {string}
-     * @memberof AuctionAll200ResponsePagination
-     */
-    'next_key'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuctionAll200ResponsePagination
-     */
-    'total'?: string;
-}
-/**
- * 
- * @export
- * @interface AuctionAllDefaultResponse
- */
-export interface AuctionAllDefaultResponse {
-    /**
-     * 
-     * @type {string}
-     * @memberof AuctionAllDefaultResponse
-     */
-    'error'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof AuctionAllDefaultResponse
-     */
-    'code'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuctionAllDefaultResponse
-     */
-    'message'?: string;
-    /**
-     * 
-     * @type {Array<AuctionAll200ResponseAuctionsInner>}
-     * @memberof AuctionAllDefaultResponse
-     */
-    'details'?: Array<AuctionAll200ResponseAuctionsInner>;
-}
-/**
- * 
- * @export
- * @interface AuctionParams200Response
- */
-export interface AuctionParams200Response {
-    /**
-     * 
-     * @type {AuctionParams200ResponseParams}
-     * @memberof AuctionParams200Response
-     */
-    'params'?: AuctionParams200ResponseParams;
-}
-/**
- * 
- * @export
- * @interface AuctionParams200ResponseParams
- */
-export interface AuctionParams200ResponseParams {
-    /**
-     * 
-     * @type {string}
-     * @memberof AuctionParams200ResponseParams
-     */
-    'max_auction_duration'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuctionParams200ResponseParams
-     */
-    'bid_duration'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuctionParams200ResponseParams
-     */
-    'increment_surplus'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuctionParams200ResponseParams
-     */
-    'increment_debt'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuctionParams200ResponseParams
-     */
-    'increment_collateral'?: string;
+    'rewards'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
 }
 /**
  * 
@@ -350,10 +132,10 @@ export interface AuctionParams200ResponseParams {
 export interface AvailableAssetInPoolByDenom200Response {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof AvailableAssetInPoolByDenom200Response
      */
-    'available_asset'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'available_asset'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -363,23 +145,10 @@ export interface AvailableAssetInPoolByDenom200Response {
 export interface AvailableAssetsInPool200Response {
     /**
      * 
-     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
      * @memberof AvailableAssetsInPool200Response
      */
-    'available_assets'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
-}
-/**
- * 
- * @export
- * @interface Balances200Response
- */
-export interface Balances200Response {
-    /**
-     * 
-     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
-     * @memberof Balances200Response
-     */
-    'balances'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+    'available_assets'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
 }
 /**
  * 
@@ -414,22 +183,22 @@ export interface BidderBids200ResponseBidsInner {
     'bidder'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'bid_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'bid_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'deposit_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'deposit_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'paid_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'paid_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -456,10 +225,10 @@ export interface BidderBids200ResponseBidsInner {
     'bid_time'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'interest_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'interest_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {Array<ListerBorrowingBidderInfoInner>}
@@ -491,327 +260,6 @@ export interface BidderBids200ResponseBidsInnerNftId {
      * @memberof BidderBids200ResponseBidsInnerNftId
      */
     'nft_id'?: string;
-}
-/**
- * 
- * @export
- * @interface Cdp200Response
- */
-export interface Cdp200Response {
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInner}
-     * @memberof Cdp200Response
-     */
-    'cdp'?: CdpAll200ResponseCdpInner;
-}
-/**
- * 
- * @export
- * @interface CdpAll200Response
- */
-export interface CdpAll200Response {
-    /**
-     * 
-     * @type {Array<CdpAll200ResponseCdpInner>}
-     * @memberof CdpAll200Response
-     */
-    'cdp'?: Array<CdpAll200ResponseCdpInner>;
-    /**
-     * 
-     * @type {AuctionAll200ResponsePagination}
-     * @memberof CdpAll200Response
-     */
-    'pagination'?: AuctionAll200ResponsePagination;
-}
-/**
- * 
- * @export
- * @interface CdpAll200ResponseCdpInner
- */
-export interface CdpAll200ResponseCdpInner {
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdp}
-     * @memberof CdpAll200ResponseCdpInner
-     */
-    'cdp'?: CdpAll200ResponseCdpInnerCdp;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof CdpAll200ResponseCdpInner
-     */
-    'collateral_value'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpAll200ResponseCdpInner
-     */
-    'collateralization_ratio'?: string;
-}
-/**
- * 
- * @export
- * @interface CdpAll200ResponseCdpInnerCdp
- */
-export interface CdpAll200ResponseCdpInnerCdp {
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpAll200ResponseCdpInnerCdp
-     */
-    'id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpAll200ResponseCdpInnerCdp
-     */
-    'owner'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpAll200ResponseCdpInnerCdp
-     */
-    'type'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof CdpAll200ResponseCdpInnerCdp
-     */
-    'collateral'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof CdpAll200ResponseCdpInnerCdp
-     */
-    'principal'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof CdpAll200ResponseCdpInnerCdp
-     */
-    'accumulated_fees'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpAll200ResponseCdpInnerCdp
-     */
-    'fees_updated'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpAll200ResponseCdpInnerCdp
-     */
-    'interest_factor'?: string;
-}
-/**
- * Coin defines a token with a denomination and an amount.  NOTE: The amount field is an Int which implements the custom method signatures required by gogoproto.
- * @export
- * @interface CdpAll200ResponseCdpInnerCdpCollateral
- */
-export interface CdpAll200ResponseCdpInnerCdpCollateral {
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpAll200ResponseCdpInnerCdpCollateral
-     */
-    'denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpAll200ResponseCdpInnerCdpCollateral
-     */
-    'amount'?: string;
-}
-/**
- * 
- * @export
- * @interface CdpParams200Response
- */
-export interface CdpParams200Response {
-    /**
-     * 
-     * @type {CdpParams200ResponseParams}
-     * @memberof CdpParams200Response
-     */
-    'params'?: CdpParams200ResponseParams;
-}
-/**
- * 
- * @export
- * @interface CdpParams200ResponseParams
- */
-export interface CdpParams200ResponseParams {
-    /**
-     * 
-     * @type {Array<CdpParams200ResponseParamsCollateralParamsInner>}
-     * @memberof CdpParams200ResponseParams
-     */
-    'collateral_params'?: Array<CdpParams200ResponseParamsCollateralParamsInner>;
-    /**
-     * 
-     * @type {Array<CdpParams200ResponseParamsDebtParamsInner>}
-     * @memberof CdpParams200ResponseParams
-     */
-    'debt_params'?: Array<CdpParams200ResponseParamsDebtParamsInner>;
-}
-/**
- * 
- * @export
- * @interface CdpParams200ResponseParamsCollateralParamsInner
- */
-export interface CdpParams200ResponseParamsCollateralParamsInner {
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsCollateralParamsInner
-     */
-    'denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsCollateralParamsInner
-     */
-    'type'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsCollateralParamsInner
-     */
-    'liquidation_ratio'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof CdpParams200ResponseParamsCollateralParamsInner
-     */
-    'debt_limit'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsCollateralParamsInner
-     */
-    'stability_fee'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsCollateralParamsInner
-     */
-    'auction_size'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsCollateralParamsInner
-     */
-    'liquidation_penalty'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof CdpParams200ResponseParamsCollateralParamsInner
-     */
-    'prefix'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsCollateralParamsInner
-     */
-    'spot_market_id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsCollateralParamsInner
-     */
-    'liquidation_market_id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsCollateralParamsInner
-     */
-    'keeper_reward_percentage'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsCollateralParamsInner
-     */
-    'check_collateralization_index_count'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsCollateralParamsInner
-     */
-    'conversion_factor'?: string;
-}
-/**
- * 
- * @export
- * @interface CdpParams200ResponseParamsDebtParamsInner
- */
-export interface CdpParams200ResponseParamsDebtParamsInner {
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsDebtParamsInner
-     */
-    'denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsDebtParamsInner
-     */
-    'reference_asset'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsDebtParamsInner
-     */
-    'conversion_factor'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsDebtParamsInner
-     */
-    'debt_floor'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof CdpParams200ResponseParamsDebtParamsInner
-     */
-    'global_debt_limit'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsDebtParamsInner
-     */
-    'debt_denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsDebtParamsInner
-     */
-    'surplus_auction_threshold'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsDebtParamsInner
-     */
-    'surplus_auction_lot'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsDebtParamsInner
-     */
-    'debt_auction_threshold'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CdpParams200ResponseParamsDebtParamsInner
-     */
-    'debt_auction_lot'?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof CdpParams200ResponseParamsDebtParamsInner
-     */
-    'circuit_breaker'?: boolean;
 }
 /**
  * 
@@ -1018,48 +466,10 @@ export interface DLPTokenRates200Response {
     'symbol'?: string;
     /**
      * 
-     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
      * @memberof DLPTokenRates200Response
      */
-    'rates'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
-}
-/**
- * 
- * @export
- * @interface DepositAll200Response
- */
-export interface DepositAll200Response {
-    /**
-     * 
-     * @type {Array<DepositAll200ResponseDepositsInner>}
-     * @memberof DepositAll200Response
-     */
-    'deposits'?: Array<DepositAll200ResponseDepositsInner>;
-}
-/**
- * 
- * @export
- * @interface DepositAll200ResponseDepositsInner
- */
-export interface DepositAll200ResponseDepositsInner {
-    /**
-     * 
-     * @type {string}
-     * @memberof DepositAll200ResponseDepositsInner
-     */
-    'cdp_id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof DepositAll200ResponseDepositsInner
-     */
-    'depositor'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof DepositAll200ResponseDepositsInner
-     */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'rates'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
 }
 /**
  * QueryParamsResponse is response type for the Query/Params RPC method.
@@ -1306,16 +716,66 @@ export interface EcosystemincentiveParams200ResponseParams {
 export interface EstimateDLPTokenAmount200Response {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof EstimateDLPTokenAmount200Response
      */
-    'estimated_dlp_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'estimated_dlp_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof EstimateDLPTokenAmount200Response
      */
-    'deposit_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'deposit_fee'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+}
+/**
+ * 
+ * @export
+ * @interface EstimateDLPTokenAmountDefaultResponse
+ */
+export interface EstimateDLPTokenAmountDefaultResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof EstimateDLPTokenAmountDefaultResponse
+     */
+    'error'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof EstimateDLPTokenAmountDefaultResponse
+     */
+    'code'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof EstimateDLPTokenAmountDefaultResponse
+     */
+    'message'?: string;
+    /**
+     * 
+     * @type {Array<EstimateDLPTokenAmountDefaultResponseDetailsInner>}
+     * @memberof EstimateDLPTokenAmountDefaultResponse
+     */
+    'details'?: Array<EstimateDLPTokenAmountDefaultResponseDetailsInner>;
+}
+/**
+ * `Any` contains an arbitrary serialized protocol buffer message along with a URL that describes the type of the serialized message.  Protobuf library provides support to pack/unpack Any values in the form of utility functions or additional generated methods of the Any type.  Example 1: Pack and unpack a message in C++.      Foo foo = ...;     Any any;     any.PackFrom(foo);     ...     if (any.UnpackTo(&foo)) {       ...     }  Example 2: Pack and unpack a message in Java.      Foo foo = ...;     Any any = Any.pack(foo);     ...     if (any.is(Foo.class)) {       foo = any.unpack(Foo.class);     }  Example 3: Pack and unpack a message in Python.      foo = Foo(...)     any = Any()     any.Pack(foo)     ...     if any.Is(Foo.DESCRIPTOR):       any.Unpack(foo)       ...  Example 4: Pack and unpack a message in Go       foo := &pb.Foo{...}      any, err := anypb.New(foo)      if err != nil {        ...      }      ...      foo := &pb.Foo{}      if err := any.UnmarshalTo(foo); err != nil {        ...      }  The pack methods provided by protobuf library will by default use \'type.googleapis.com/full.type.name\' as the type URL and the unpack methods only use the fully qualified type name after the last \'/\' in the type URL, for example \"foo.bar.com/x/y.z\" will yield type name \"y.z\".   JSON  The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:      package google.profile;     message Person {       string first_name = 1;       string last_name = 2;     }      {       \"@type\": \"type.googleapis.com/google.profile.Person\",       \"firstName\": <string>,       \"lastName\": <string>     }  If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message [google.protobuf.Duration][]):      {       \"@type\": \"type.googleapis.com/google.protobuf.Duration\",       \"value\": \"1.212s\"     }
+ * @export
+ * @interface EstimateDLPTokenAmountDefaultResponseDetailsInner
+ */
+export interface EstimateDLPTokenAmountDefaultResponseDetailsInner {
+    /**
+     * A URL/resource name that uniquely identifies the type of the serialized protocol buffer message. This string must contain at least one \"/\" character. The last segment of the URL\'s path must represent the fully qualified name of the type (as in `path/google.protobuf.Duration`). The name should be in a canonical form (e.g., leading \".\" is not accepted).  In practice, teams usually precompile into the binary all types that they expect it to use in the context of Any. However, for URLs which use the scheme `http`, `https`, or no scheme, one can optionally set up a type server that maps type URLs to message definitions as follows:  * If no scheme is provided, `https` is assumed. * An HTTP GET on the URL must yield a [google.protobuf.Type][]   value in binary format, or produce an error. * Applications are allowed to cache lookup results based on the   URL, or have them precompiled into a binary to avoid any   lookup. Therefore, binary compatibility needs to be preserved   on changes to types. (Use versioned type names to manage   breaking changes.)  Note: this functionality is not currently available in the official protobuf release, and it is not used for type URLs beginning with type.googleapis.com.  Schemes other than `http`, `https` (or the empty scheme) might be used with implementation specific semantics.
+     * @type {string}
+     * @memberof EstimateDLPTokenAmountDefaultResponseDetailsInner
+     */
+    'type_url'?: string;
+    /**
+     * Must be a valid serialized protocol buffer of the above specified type.
+     * @type {string}
+     * @memberof EstimateDLPTokenAmountDefaultResponseDetailsInner
+     */
+    'value'?: string;
 }
 /**
  * 
@@ -1325,10 +785,10 @@ export interface EstimateDLPTokenAmount200Response {
 export interface EstimateMintAmount200Response {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof EstimateMintAmount200Response
      */
-    'mint_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'mint_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -1338,10 +798,10 @@ export interface EstimateMintAmount200Response {
 export interface EstimateRedeemAmount200Response {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof EstimateRedeemAmount200Response
      */
-    'redeem_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'redeem_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -1351,19 +811,19 @@ export interface EstimateRedeemAmount200Response {
 export interface EstimateRedeemTokenAmount200Response {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof EstimateRedeemTokenAmount200Response
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof EstimateRedeemTokenAmount200Response
      */
-    'fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'fee'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
- * `Any` contains an arbitrary serialized protocol buffer message along with a URL that describes the type of the serialized message.  Protobuf library provides support to pack/unpack Any values in the form of utility functions or additional generated methods of the Any type.  Example 1: Pack and unpack a message in C++.      Foo foo = ...;     Any any;     any.PackFrom(foo);     ...     if (any.UnpackTo(&foo)) {       ...     }  Example 2: Pack and unpack a message in Java.      Foo foo = ...;     Any any = Any.pack(foo);     ...     if (any.is(Foo.class)) {       foo = any.unpack(Foo.class);     }   Example 3: Pack and unpack a message in Python.      foo = Foo(...)     any = Any()     any.Pack(foo)     ...     if any.Is(Foo.DESCRIPTOR):       any.Unpack(foo)       ...   Example 4: Pack and unpack a message in Go       foo := &pb.Foo{...}      any, err := ptypes.MarshalAny(foo)      ...      foo := &pb.Foo{}      if err := ptypes.UnmarshalAny(any, foo); err != nil {        ...      }  The pack methods provided by protobuf library will by default use \'type.googleapis.com/full.type.name\' as the type URL and the unpack methods only use the fully qualified type name after the last \'/\' in the type URL, for example \"foo.bar.com/x/y.z\" will yield type name \"y.z\".   JSON ==== The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:      package google.profile;     message Person {       string first_name = 1;       string last_name = 2;     }      {       \"@type\": \"type.googleapis.com/google.profile.Person\",       \"firstName\": <string>,       \"lastName\": <string>     }  If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message [google.protobuf.Duration][]):      {       \"@type\": \"type.googleapis.com/google.protobuf.Duration\",       \"value\": \"1.212s\"     }
+ * `Any` contains an arbitrary serialized protocol buffer message along with a URL that describes the type of the serialized message.  Protobuf library provides support to pack/unpack Any values in the form of utility functions or additional generated methods of the Any type.  Example 1: Pack and unpack a message in C++.      Foo foo = ...;     Any any;     any.PackFrom(foo);     ...     if (any.UnpackTo(&foo)) {       ...     }  Example 2: Pack and unpack a message in Java.      Foo foo = ...;     Any any = Any.pack(foo);     ...     if (any.is(Foo.class)) {       foo = any.unpack(Foo.class);     }  Example 3: Pack and unpack a message in Python.      foo = Foo(...)     any = Any()     any.Pack(foo)     ...     if any.Is(Foo.DESCRIPTOR):       any.Unpack(foo)       ...  Example 4: Pack and unpack a message in Go       foo := &pb.Foo{...}      any, err := anypb.New(foo)      if err != nil {        ...      }      ...      foo := &pb.Foo{}      if err := any.UnmarshalTo(foo); err != nil {        ...      }  The pack methods provided by protobuf library will by default use \'type.googleapis.com/full.type.name\' as the type URL and the unpack methods only use the fully qualified type name after the last \'/\' in the type URL, for example \"foo.bar.com/x/y.z\" will yield type name \"y.z\".   JSON  The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:      package google.profile;     message Person {       string first_name = 1;       string last_name = 2;     }      {       \"@type\": \"type.googleapis.com/google.profile.Person\",       \"firstName\": <string>,       \"lastName\": <string>     }  If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message [google.protobuf.Duration][]):      {       \"@type\": \"type.googleapis.com/google.protobuf.Duration\",       \"value\": \"1.212s\"     }
  * @export
  * @interface GoogleProtobufAny
  */
@@ -1407,160 +867,10 @@ export interface GrpcGatewayRuntimeError {
     'message'?: string;
     /**
      * 
-     * @type {Array<AuctionAll200ResponseAuctionsInner>}
+     * @type {Array<EstimateDLPTokenAmountDefaultResponseDetailsInner>}
      * @memberof GrpcGatewayRuntimeError
      */
-    'details'?: Array<AuctionAll200ResponseAuctionsInner>;
-}
-/**
- * 
- * @export
- * @interface IncentiveParams200Response
- */
-export interface IncentiveParams200Response {
-    /**
-     * 
-     * @type {IncentiveParams200ResponseParams}
-     * @memberof IncentiveParams200Response
-     */
-    'params'?: IncentiveParams200ResponseParams;
-}
-/**
- * 
- * @export
- * @interface IncentiveParams200ResponseParams
- */
-export interface IncentiveParams200ResponseParams {
-    /**
-     * 
-     * @type {Array<IncentiveParams200ResponseParamsCdpMintingRewardPeriodsInner>}
-     * @memberof IncentiveParams200ResponseParams
-     */
-    'cdp_minting_reward_periods'?: Array<IncentiveParams200ResponseParamsCdpMintingRewardPeriodsInner>;
-    /**
-     * 
-     * @type {Array<IncentiveParams200ResponseParamsClaimMultipliersInner>}
-     * @memberof IncentiveParams200ResponseParams
-     */
-    'claim_multipliers'?: Array<IncentiveParams200ResponseParamsClaimMultipliersInner>;
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveParams200ResponseParams
-     */
-    'claim_end'?: string;
-}
-/**
- * 
- * @export
- * @interface IncentiveParams200ResponseParamsCdpMintingRewardPeriodsInner
- */
-export interface IncentiveParams200ResponseParamsCdpMintingRewardPeriodsInner {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof IncentiveParams200ResponseParamsCdpMintingRewardPeriodsInner
-     */
-    'active'?: boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveParams200ResponseParamsCdpMintingRewardPeriodsInner
-     */
-    'collateral_type'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveParams200ResponseParamsCdpMintingRewardPeriodsInner
-     */
-    'start'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveParams200ResponseParamsCdpMintingRewardPeriodsInner
-     */
-    'end'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof IncentiveParams200ResponseParamsCdpMintingRewardPeriodsInner
-     */
-    'rewards_per_second'?: CdpAll200ResponseCdpInnerCdpCollateral;
-}
-/**
- * 
- * @export
- * @interface IncentiveParams200ResponseParamsClaimMultipliersInner
- */
-export interface IncentiveParams200ResponseParamsClaimMultipliersInner {
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveParams200ResponseParamsClaimMultipliersInner
-     */
-    'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveParams200ResponseParamsClaimMultipliersInner
-     */
-    'months_lockup'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveParams200ResponseParamsClaimMultipliersInner
-     */
-    'factor'?: string;
-}
-/**
- * 
- * @export
- * @interface IncentiveParamsDefaultResponse
- */
-export interface IncentiveParamsDefaultResponse {
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveParamsDefaultResponse
-     */
-    'error'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof IncentiveParamsDefaultResponse
-     */
-    'code'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveParamsDefaultResponse
-     */
-    'message'?: string;
-    /**
-     * 
-     * @type {Array<IncentiveParamsDefaultResponseDetailsInner>}
-     * @memberof IncentiveParamsDefaultResponse
-     */
-    'details'?: Array<IncentiveParamsDefaultResponseDetailsInner>;
-}
-/**
- * 
- * @export
- * @interface IncentiveParamsDefaultResponseDetailsInner
- */
-export interface IncentiveParamsDefaultResponseDetailsInner {
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveParamsDefaultResponseDetailsInner
-     */
-    'type_url'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveParamsDefaultResponseDetailsInner
-     */
-    'value'?: string;
+    'details'?: Array<EstimateDLPTokenAmountDefaultResponseDetailsInner>;
 }
 /**
  * 
@@ -1685,10 +995,10 @@ export interface Liquidation200ResponseLiquidations {
 export interface Liquidation200ResponseLiquidationsLiquidation {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof Liquidation200ResponseLiquidationsLiquidation
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -1914,10 +1224,10 @@ export interface ListedNfts200ResponseListingsInnerListing {
     'auto_relisted_count'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof ListedNfts200ResponseListingsInnerListing
      */
-    'collected_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'collected_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -1951,16 +1261,16 @@ export type ListedNfts200ResponseListingsInnerListingStateEnum = typeof ListedNf
 export interface ListerBorrowingBidderInfoInner {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof ListerBorrowingBidderInfoInner
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof ListerBorrowingBidderInfoInner
      */
-    'paid_interest_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'paid_interest_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -2014,10 +1324,10 @@ export interface Loans200ResponseLoansInner {
     'nft_id'?: BidderBids200ResponseBidsInnerNftId;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof Loans200ResponseLoansInner
      */
-    'loan'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'loan'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -2033,10 +1343,10 @@ export interface MarketAll200Response {
     'markets'?: Array<MarketAll200ResponseMarketsInner>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof MarketAll200Response
      */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -2074,6 +1384,75 @@ export interface MarketAll200ResponseMarketsInner {
      * @memberof MarketAll200ResponseMarketsInner
      */
     'active'?: boolean;
+}
+/**
+ * PageResponse is to be embedded in gRPC response messages where the corresponding request message has used PageRequest.   message SomeResponse {          repeated Bar results = 1;          PageResponse page = 2;  }
+ * @export
+ * @interface MarketAll200ResponsePagination
+ */
+export interface MarketAll200ResponsePagination {
+    /**
+     * 
+     * @type {string}
+     * @memberof MarketAll200ResponsePagination
+     */
+    'next_key'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MarketAll200ResponsePagination
+     */
+    'total'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface MarketAllDefaultResponse
+ */
+export interface MarketAllDefaultResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof MarketAllDefaultResponse
+     */
+    'error'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof MarketAllDefaultResponse
+     */
+    'code'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof MarketAllDefaultResponse
+     */
+    'message'?: string;
+    /**
+     * 
+     * @type {Array<MarketAllDefaultResponseDetailsInner>}
+     * @memberof MarketAllDefaultResponse
+     */
+    'details'?: Array<MarketAllDefaultResponseDetailsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface MarketAllDefaultResponseDetailsInner
+ */
+export interface MarketAllDefaultResponseDetailsInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof MarketAllDefaultResponseDetailsInner
+     */
+    'type_url'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MarketAllDefaultResponseDetailsInner
+     */
+    'value'?: string;
 }
 /**
  * 
@@ -2224,10 +1603,10 @@ export interface NftmarketParams200ResponseParams {
     'nft_listing_extend_seconds'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof NftmarketParams200ResponseParams
      */
-    'nft_listing_period_extend_fee_per_hour'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'nft_listing_period_extend_fee_per_hour'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -2305,10 +1684,10 @@ export interface OracleAll200Response {
     'oracles'?: Array<string>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof OracleAll200Response
      */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -2343,10 +1722,10 @@ export interface PaymentStatus200ResponsePaymentStatus {
     'bidder'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof PaymentStatus200ResponsePaymentStatus
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {boolean}
@@ -2415,16 +1794,16 @@ export interface PerpetualFutures200Response {
     'fees_24hours'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof PerpetualFutures200Response
      */
-    'long_positions'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'long_positions'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof PerpetualFutures200Response
      */
-    'short_positions'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'short_positions'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -2477,10 +1856,10 @@ export interface PerpetualFuturesMarket200Response {
 export interface PerpetualFuturesPositionSize200Response {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof PerpetualFuturesPositionSize200Response
      */
-    'total_position_size_usd'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'total_position_size_usd'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -2577,16 +1956,16 @@ export interface Pool200ResponsePoolMarketCapAssetInfoInner {
 export interface Position200Response {
     /**
      * 
-     * @type {AllPositions200ResponsePositionsInnerPosition}
+     * @type {Position200ResponsePosition}
      * @memberof Position200Response
      */
-    'position'?: AllPositions200ResponsePositionsInnerPosition;
+    'position'?: Position200ResponsePosition;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof Position200Response
      */
-    'valuation_profit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'valuation_profit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -2595,10 +1974,77 @@ export interface Position200Response {
     'margin_maintenance_rate'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof Position200Response
      */
-    'effective_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'effective_margin'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+}
+/**
+ * 
+ * @export
+ * @interface Position200ResponsePosition
+ */
+export interface Position200ResponsePosition {
+    /**
+     * 
+     * @type {string}
+     * @memberof Position200ResponsePosition
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner}
+     * @memberof Position200ResponsePosition
+     */
+    'market'?: DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner;
+    /**
+     * 
+     * @type {string}
+     * @memberof Position200ResponsePosition
+     */
+    'address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Position200ResponsePosition
+     */
+    'opened_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Position200ResponsePosition
+     */
+    'opened_height'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Position200ResponsePosition
+     */
+    'opened_base_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Position200ResponsePosition
+     */
+    'opened_quote_rate'?: string;
+    /**
+     * 
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @memberof Position200ResponsePosition
+     */
+    'remaining_margin'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    /**
+     * 
+     * @type {string}
+     * @memberof Position200ResponsePosition
+     */
+    'last_levied_at'?: string;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmountDefaultResponseDetailsInner}
+     * @memberof Position200ResponsePosition
+     */
+    'position_instance'?: EstimateDLPTokenAmountDefaultResponseDetailsInner;
 }
 /**
  * 
@@ -2646,10 +2092,10 @@ export interface PriceAll200Response {
     'prices'?: Array<Price200ResponsePrice>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof PriceAll200Response
      */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -2691,10 +2137,10 @@ export interface RawPriceAll200Response {
     'prices'?: Array<RawPriceAll200ResponsePricesInner>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof RawPriceAll200Response
      */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -2748,10 +2194,10 @@ export interface RecordedIncentiveUnitId200Response {
 export interface Reward200Response {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof Reward200Response
      */
-    'reward'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'reward'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -2806,10 +2252,10 @@ export type RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalS
 export interface Rewards200Response {
     /**
      * 
-     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
      * @memberof Rewards200Response
      */
-    'rewards'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+    'rewards'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
 }
 /**
  * 
@@ -2838,10 +2284,10 @@ export interface StrategyAll200Response {
     'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof StrategyAll200Response
      */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -2873,6 +2319,12 @@ export interface StrategyAll200ResponseStrategiesInner {
      * @memberof StrategyAll200ResponseStrategiesInner
      */
     'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof StrategyAll200ResponseStrategiesInner
+     */
+    'git_url'?: string;
 }
 /**
  * 
@@ -2892,441 +2344,6 @@ export interface TodoRemoveNftIdBidderThenUseIt {
      * @memberof TodoRemoveNftIdBidderThenUseIt
      */
     'bidder'?: string;
-}
-/**
- * 
- * @export
- * @interface UnunifiAuctionParams
- */
-export interface UnunifiAuctionParams {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiAuctionParams
-     */
-    'max_auction_duration'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiAuctionParams
-     */
-    'bid_duration'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiAuctionParams
-     */
-    'increment_surplus'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiAuctionParams
-     */
-    'increment_debt'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiAuctionParams
-     */
-    'increment_collateral'?: string;
-}
-/**
- * 
- * @export
- * @interface UnunifiAuctionQueryAllAuctionResponse
- */
-export interface UnunifiAuctionQueryAllAuctionResponse {
-    /**
-     * 
-     * @type {Array<AuctionAll200ResponseAuctionsInner>}
-     * @memberof UnunifiAuctionQueryAllAuctionResponse
-     */
-    'auctions'?: Array<AuctionAll200ResponseAuctionsInner>;
-    /**
-     * 
-     * @type {AuctionAll200ResponsePagination}
-     * @memberof UnunifiAuctionQueryAllAuctionResponse
-     */
-    'pagination'?: AuctionAll200ResponsePagination;
-}
-/**
- * 
- * @export
- * @interface UnunifiAuctionQueryGetAuctionResponse
- */
-export interface UnunifiAuctionQueryGetAuctionResponse {
-    /**
-     * 
-     * @type {AuctionAll200ResponseAuctionsInner}
-     * @memberof UnunifiAuctionQueryGetAuctionResponse
-     */
-    'auction'?: AuctionAll200ResponseAuctionsInner;
-}
-/**
- * 
- * @export
- * @interface UnunifiAuctionQueryParamsResponse
- */
-export interface UnunifiAuctionQueryParamsResponse {
-    /**
-     * 
-     * @type {AuctionParams200ResponseParams}
-     * @memberof UnunifiAuctionQueryParamsResponse
-     */
-    'params'?: AuctionParams200ResponseParams;
-}
-/**
- * 
- * @export
- * @interface UnunifiCdpAugmentedCdp
- */
-export interface UnunifiCdpAugmentedCdp {
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdp}
-     * @memberof UnunifiCdpAugmentedCdp
-     */
-    'cdp'?: CdpAll200ResponseCdpInnerCdp;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiCdpAugmentedCdp
-     */
-    'collateral_value'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpAugmentedCdp
-     */
-    'collateralization_ratio'?: string;
-}
-/**
- * 
- * @export
- * @interface UnunifiCdpCdp
- */
-export interface UnunifiCdpCdp {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCdp
-     */
-    'id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCdp
-     */
-    'owner'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCdp
-     */
-    'type'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiCdpCdp
-     */
-    'collateral'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiCdpCdp
-     */
-    'principal'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiCdpCdp
-     */
-    'accumulated_fees'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCdp
-     */
-    'fees_updated'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCdp
-     */
-    'interest_factor'?: string;
-}
-/**
- * 
- * @export
- * @interface UnunifiCdpCollateralParam
- */
-export interface UnunifiCdpCollateralParam {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCollateralParam
-     */
-    'denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCollateralParam
-     */
-    'type'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCollateralParam
-     */
-    'liquidation_ratio'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiCdpCollateralParam
-     */
-    'debt_limit'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCollateralParam
-     */
-    'stability_fee'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCollateralParam
-     */
-    'auction_size'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCollateralParam
-     */
-    'liquidation_penalty'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UnunifiCdpCollateralParam
-     */
-    'prefix'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCollateralParam
-     */
-    'spot_market_id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCollateralParam
-     */
-    'liquidation_market_id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCollateralParam
-     */
-    'keeper_reward_percentage'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCollateralParam
-     */
-    'check_collateralization_index_count'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpCollateralParam
-     */
-    'conversion_factor'?: string;
-}
-/**
- * 
- * @export
- * @interface UnunifiCdpDebtParam
- */
-export interface UnunifiCdpDebtParam {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpDebtParam
-     */
-    'denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpDebtParam
-     */
-    'reference_asset'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpDebtParam
-     */
-    'conversion_factor'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpDebtParam
-     */
-    'debt_floor'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiCdpDebtParam
-     */
-    'global_debt_limit'?: CdpAll200ResponseCdpInnerCdpCollateral;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpDebtParam
-     */
-    'debt_denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpDebtParam
-     */
-    'surplus_auction_threshold'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpDebtParam
-     */
-    'surplus_auction_lot'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpDebtParam
-     */
-    'debt_auction_threshold'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpDebtParam
-     */
-    'debt_auction_lot'?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof UnunifiCdpDebtParam
-     */
-    'circuit_breaker'?: boolean;
-}
-/**
- * 
- * @export
- * @interface UnunifiCdpDeposit
- */
-export interface UnunifiCdpDeposit {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpDeposit
-     */
-    'cdp_id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiCdpDeposit
-     */
-    'depositor'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiCdpDeposit
-     */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
-}
-/**
- * 
- * @export
- * @interface UnunifiCdpParams
- */
-export interface UnunifiCdpParams {
-    /**
-     * 
-     * @type {Array<CdpParams200ResponseParamsCollateralParamsInner>}
-     * @memberof UnunifiCdpParams
-     */
-    'collateral_params'?: Array<CdpParams200ResponseParamsCollateralParamsInner>;
-    /**
-     * 
-     * @type {Array<CdpParams200ResponseParamsDebtParamsInner>}
-     * @memberof UnunifiCdpParams
-     */
-    'debt_params'?: Array<CdpParams200ResponseParamsDebtParamsInner>;
-}
-/**
- * 
- * @export
- * @interface UnunifiCdpQueryAllAccountResponse
- */
-export interface UnunifiCdpQueryAllAccountResponse {
-    /**
-     * 
-     * @type {Array<AuctionAll200ResponseAuctionsInner>}
-     * @memberof UnunifiCdpQueryAllAccountResponse
-     */
-    'accounts'?: Array<AuctionAll200ResponseAuctionsInner>;
-}
-/**
- * 
- * @export
- * @interface UnunifiCdpQueryAllCdpResponse
- */
-export interface UnunifiCdpQueryAllCdpResponse {
-    /**
-     * 
-     * @type {Array<CdpAll200ResponseCdpInner>}
-     * @memberof UnunifiCdpQueryAllCdpResponse
-     */
-    'cdp'?: Array<CdpAll200ResponseCdpInner>;
-    /**
-     * 
-     * @type {AuctionAll200ResponsePagination}
-     * @memberof UnunifiCdpQueryAllCdpResponse
-     */
-    'pagination'?: AuctionAll200ResponsePagination;
-}
-/**
- * 
- * @export
- * @interface UnunifiCdpQueryAllDepositResponse
- */
-export interface UnunifiCdpQueryAllDepositResponse {
-    /**
-     * 
-     * @type {Array<DepositAll200ResponseDepositsInner>}
-     * @memberof UnunifiCdpQueryAllDepositResponse
-     */
-    'deposits'?: Array<DepositAll200ResponseDepositsInner>;
-}
-/**
- * 
- * @export
- * @interface UnunifiCdpQueryGetCdpResponse
- */
-export interface UnunifiCdpQueryGetCdpResponse {
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInner}
-     * @memberof UnunifiCdpQueryGetCdpResponse
-     */
-    'cdp'?: CdpAll200ResponseCdpInner;
-}
-/**
- * 
- * @export
- * @interface UnunifiCdpQueryParamsResponse
- */
-export interface UnunifiCdpQueryParamsResponse {
-    /**
-     * 
-     * @type {CdpParams200ResponseParams}
-     * @memberof UnunifiCdpQueryParamsResponse
-     */
-    'params'?: CdpParams200ResponseParams;
 }
 /**
  * 
@@ -3620,10 +2637,10 @@ export interface UnunifiDerivativesPosition {
     'opened_quote_rate'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiDerivativesPosition
      */
-    'remaining_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'remaining_margin'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -3632,10 +2649,10 @@ export interface UnunifiDerivativesPosition {
     'last_levied_at'?: string;
     /**
      * 
-     * @type {AuctionAll200ResponseAuctionsInner}
+     * @type {EstimateDLPTokenAmountDefaultResponseDetailsInner}
      * @memberof UnunifiDerivativesPosition
      */
-    'position_instance'?: AuctionAll200ResponseAuctionsInner;
+    'position_instance'?: EstimateDLPTokenAmountDefaultResponseDetailsInner;
 }
 /**
  * 
@@ -3660,16 +2677,16 @@ export type UnunifiDerivativesPositionType = typeof UnunifiDerivativesPositionTy
 export interface UnunifiDerivativesQueriedPosition {
     /**
      * 
-     * @type {AllPositions200ResponsePositionsInnerPosition}
+     * @type {Position200ResponsePosition}
      * @memberof UnunifiDerivativesQueriedPosition
      */
-    'position'?: AllPositions200ResponsePositionsInnerPosition;
+    'position'?: Position200ResponsePosition;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiDerivativesQueriedPosition
      */
-    'valuation_profit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'valuation_profit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -3678,10 +2695,10 @@ export interface UnunifiDerivativesQueriedPosition {
     'remaining_margin_value'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiDerivativesQueriedPosition
      */
-    'effective_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'effective_margin'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -3697,16 +2714,10 @@ export interface UnunifiDerivativesQueriedPosition {
 export interface UnunifiDerivativesQueryAddressPositionsResponse {
     /**
      * 
-     * @type {Array<AllPositions200ResponsePositionsInner>}
+     * @type {Array<AddressPositions200ResponsePositionsInner>}
      * @memberof UnunifiDerivativesQueryAddressPositionsResponse
      */
-    'positions'?: Array<AllPositions200ResponsePositionsInner>;
-    /**
-     * 
-     * @type {AuctionAll200ResponsePagination}
-     * @memberof UnunifiDerivativesQueryAddressPositionsResponse
-     */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'positions'?: Array<AddressPositions200ResponsePositionsInner>;
 }
 /**
  * 
@@ -3716,16 +2727,16 @@ export interface UnunifiDerivativesQueryAddressPositionsResponse {
 export interface UnunifiDerivativesQueryAllPositionsResponse {
     /**
      * 
-     * @type {Array<AllPositions200ResponsePositionsInner>}
+     * @type {Array<EstimateDLPTokenAmountDefaultResponseDetailsInner>}
      * @memberof UnunifiDerivativesQueryAllPositionsResponse
      */
-    'positions'?: Array<AllPositions200ResponsePositionsInner>;
+    'positions'?: Array<EstimateDLPTokenAmountDefaultResponseDetailsInner>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof UnunifiDerivativesQueryAllPositionsResponse
      */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -3735,10 +2746,10 @@ export interface UnunifiDerivativesQueryAllPositionsResponse {
 export interface UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse
      */
-    'available_asset'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'available_asset'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -3748,10 +2759,10 @@ export interface UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse {
 export interface UnunifiDerivativesQueryAvailableAssetsInPoolResponse {
     /**
      * 
-     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
      * @memberof UnunifiDerivativesQueryAvailableAssetsInPoolResponse
      */
-    'available_assets'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+    'available_assets'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
 }
 /**
  * 
@@ -3767,10 +2778,10 @@ export interface UnunifiDerivativesQueryDLPTokenRateResponse {
     'symbol'?: string;
     /**
      * 
-     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
      * @memberof UnunifiDerivativesQueryDLPTokenRateResponse
      */
-    'rates'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+    'rates'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
 }
 /**
  * 
@@ -3780,16 +2791,16 @@ export interface UnunifiDerivativesQueryDLPTokenRateResponse {
 export interface UnunifiDerivativesQueryEstimateDLPTokenAmountResponse {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
      */
-    'estimated_dlp_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'estimated_dlp_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
      */
-    'deposit_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'deposit_fee'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -3799,16 +2810,16 @@ export interface UnunifiDerivativesQueryEstimateDLPTokenAmountResponse {
 export interface UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse
      */
-    'fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'fee'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -3900,10 +2911,10 @@ export interface UnunifiDerivativesQueryPerpetualFuturesMarketResponse {
 export interface UnunifiDerivativesQueryPerpetualFuturesPositionSizeResponse {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiDerivativesQueryPerpetualFuturesPositionSizeResponse
      */
-    'total_position_size_usd'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'total_position_size_usd'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -3931,16 +2942,16 @@ export interface UnunifiDerivativesQueryPerpetualFuturesResponse {
     'fees_24hours'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
      */
-    'long_positions'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'long_positions'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
      */
-    'short_positions'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'short_positions'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -3981,16 +2992,16 @@ export interface UnunifiDerivativesQueryPoolResponse {
 export interface UnunifiDerivativesQueryPositionResponse {
     /**
      * 
-     * @type {AllPositions200ResponsePositionsInnerPosition}
+     * @type {Position200ResponsePosition}
      * @memberof UnunifiDerivativesQueryPositionResponse
      */
-    'position'?: AllPositions200ResponsePositionsInnerPosition;
+    'position'?: Position200ResponsePosition;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiDerivativesQueryPositionResponse
      */
-    'valuation_profit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'valuation_profit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -3999,10 +3010,10 @@ export interface UnunifiDerivativesQueryPositionResponse {
     'margin_maintenance_rate'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiDerivativesQueryPositionResponse
      */
-    'effective_margin'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'effective_margin'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -4140,10 +3151,10 @@ export interface UnunifiEcosystemincentiveQueryRecordedIncentiveUnitIdResponse {
 export interface UnunifiEcosystemincentiveQueryRewardResponse {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiEcosystemincentiveQueryRewardResponse
      */
-    'reward'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'reward'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -4204,10 +3215,10 @@ export interface UnunifiEcosystemincentiveRewardStore {
     'subject_addr'?: string;
     /**
      * 
-     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
      * @memberof UnunifiEcosystemincentiveRewardStore
      */
-    'rewards'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+    'rewards'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
 }
 /**
  * At first, we go with this one type. NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
@@ -4244,106 +3255,6 @@ export interface UnunifiEcosystemincentiveSubjectInfo {
 /**
  * 
  * @export
- * @interface UnunifiIncentiveMultiplier
- */
-export interface UnunifiIncentiveMultiplier {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiIncentiveMultiplier
-     */
-    'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiIncentiveMultiplier
-     */
-    'months_lockup'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiIncentiveMultiplier
-     */
-    'factor'?: string;
-}
-/**
- * 
- * @export
- * @interface UnunifiIncentiveParams
- */
-export interface UnunifiIncentiveParams {
-    /**
-     * 
-     * @type {Array<IncentiveParams200ResponseParamsCdpMintingRewardPeriodsInner>}
-     * @memberof UnunifiIncentiveParams
-     */
-    'cdp_minting_reward_periods'?: Array<IncentiveParams200ResponseParamsCdpMintingRewardPeriodsInner>;
-    /**
-     * 
-     * @type {Array<IncentiveParams200ResponseParamsClaimMultipliersInner>}
-     * @memberof UnunifiIncentiveParams
-     */
-    'claim_multipliers'?: Array<IncentiveParams200ResponseParamsClaimMultipliersInner>;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiIncentiveParams
-     */
-    'claim_end'?: string;
-}
-/**
- * 
- * @export
- * @interface UnunifiIncentiveQueryParamsResponse
- */
-export interface UnunifiIncentiveQueryParamsResponse {
-    /**
-     * 
-     * @type {IncentiveParams200ResponseParams}
-     * @memberof UnunifiIncentiveQueryParamsResponse
-     */
-    'params'?: IncentiveParams200ResponseParams;
-}
-/**
- * 
- * @export
- * @interface UnunifiIncentiveRewardPeriod
- */
-export interface UnunifiIncentiveRewardPeriod {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof UnunifiIncentiveRewardPeriod
-     */
-    'active'?: boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiIncentiveRewardPeriod
-     */
-    'collateral_type'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiIncentiveRewardPeriod
-     */
-    'start'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiIncentiveRewardPeriod
-     */
-    'end'?: string;
-    /**
-     * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
-     * @memberof UnunifiIncentiveRewardPeriod
-     */
-    'rewards_per_second'?: CdpAll200ResponseCdpInnerCdpCollateral;
-}
-/**
- * 
- * @export
  * @interface UnunifiNftmarketBidId
  */
 export interface UnunifiNftmarketBidId {
@@ -4368,16 +3279,16 @@ export interface UnunifiNftmarketBidId {
 export interface UnunifiNftmarketBorrowing {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiNftmarketBorrowing
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiNftmarketBorrowing
      */
-    'paid_interest_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'paid_interest_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -4393,10 +3304,10 @@ export interface UnunifiNftmarketBorrowing {
 export interface UnunifiNftmarketLiquidation {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiNftmarketLiquidation
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -4469,10 +3380,10 @@ export interface UnunifiNftmarketLoan {
     'nft_id'?: BidderBids200ResponseBidsInnerNftId;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiNftmarketLoan
      */
-    'loan'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'loan'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -4494,22 +3405,22 @@ export interface UnunifiNftmarketNftBid {
     'bidder'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiNftmarketNftBid
      */
-    'bid_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'bid_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiNftmarketNftBid
      */
-    'deposit_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'deposit_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiNftmarketNftBid
      */
-    'paid_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'paid_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -4536,10 +3447,10 @@ export interface UnunifiNftmarketNftBid {
     'bid_time'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiNftmarketNftBid
      */
-    'interest_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'interest_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {Array<ListerBorrowingBidderInfoInner>}
@@ -4677,10 +3588,10 @@ export interface UnunifiNftmarketNftListing {
     'auto_relisted_count'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiNftmarketNftListing
      */
-    'collected_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'collected_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -4835,10 +3746,10 @@ export interface UnunifiNftmarketParams {
     'nft_listing_extend_seconds'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiNftmarketParams
      */
-    'nft_listing_period_extend_fee_per_hour'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'nft_listing_period_extend_fee_per_hour'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -4860,10 +3771,10 @@ export interface UnunifiNftmarketPaymentStatus {
     'bidder'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiNftmarketPaymentStatus
      */
-    'amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {boolean}
@@ -5105,10 +4016,10 @@ export interface UnunifiNftmarketQueryPaymentStatusResponse {
 export interface UnunifiNftmarketQueryRewardsResponse {
     /**
      * 
-     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
+     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
      * @memberof UnunifiNftmarketQueryRewardsResponse
      */
-    'rewards'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
+    'rewards'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
 }
 /**
  * 
@@ -5435,10 +4346,10 @@ export interface UnunifiPricefeedQueryAllMarketResponse {
     'markets'?: Array<MarketAll200ResponseMarketsInner>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof UnunifiPricefeedQueryAllMarketResponse
      */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -5454,10 +4365,10 @@ export interface UnunifiPricefeedQueryAllOracleResponse {
     'oracles'?: Array<string>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof UnunifiPricefeedQueryAllOracleResponse
      */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -5473,10 +4384,10 @@ export interface UnunifiPricefeedQueryAllPriceResponse {
     'prices'?: Array<Price200ResponsePrice>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof UnunifiPricefeedQueryAllPriceResponse
      */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -5492,10 +4403,10 @@ export interface UnunifiPricefeedQueryAllRawPriceResponse {
     'prices'?: Array<RawPriceAll200ResponsePricesInner>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof UnunifiPricefeedQueryAllRawPriceResponse
      */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -5524,76 +4435,6 @@ export interface UnunifiPricefeedQueryParamsResponse {
     'params'?: PricefeedParams200ResponseParams;
 }
 /**
- * 
- * @export
- * @interface UnunifiUnunifidistParams
- */
-export interface UnunifiUnunifidistParams {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof UnunifiUnunifidistParams
-     */
-    'active'?: boolean;
-    /**
-     * 
-     * @type {Array<UnunifidistParams200ResponseParamsPeriodsInner>}
-     * @memberof UnunifiUnunifidistParams
-     */
-    'periods'?: Array<UnunifidistParams200ResponseParamsPeriodsInner>;
-}
-/**
- * 
- * @export
- * @interface UnunifiUnunifidistPeriod
- */
-export interface UnunifiUnunifidistPeriod {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiUnunifidistPeriod
-     */
-    'start'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiUnunifidistPeriod
-     */
-    'end'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiUnunifidistPeriod
-     */
-    'inflation'?: string;
-}
-/**
- * 
- * @export
- * @interface UnunifiUnunifidistQueryGetBalancesResponse
- */
-export interface UnunifiUnunifidistQueryGetBalancesResponse {
-    /**
-     * 
-     * @type {Array<CdpAll200ResponseCdpInnerCdpCollateral>}
-     * @memberof UnunifiUnunifidistQueryGetBalancesResponse
-     */
-    'balances'?: Array<CdpAll200ResponseCdpInnerCdpCollateral>;
-}
-/**
- * 
- * @export
- * @interface UnunifiUnunifidistQueryParamsResponse
- */
-export interface UnunifiUnunifidistQueryParamsResponse {
-    /**
-     * 
-     * @type {UnunifidistParams200ResponseParams}
-     * @memberof UnunifiUnunifidistQueryParamsResponse
-     */
-    'params'?: UnunifidistParams200ResponseParams;
-}
-/**
  * Params defines the parameters for the module.
  * @export
  * @interface UnunifiYieldaggregatorParams
@@ -5607,16 +4448,16 @@ export interface UnunifiYieldaggregatorParams {
     'commission_rate'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiYieldaggregatorParams
      */
-    'vault_creation_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'vault_creation_fee'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiYieldaggregatorParams
      */
-    'vault_creation_deposit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'vault_creation_deposit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -5632,10 +4473,10 @@ export interface UnunifiYieldaggregatorQueryAllStrategyResponse {
     'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof UnunifiYieldaggregatorQueryAllStrategyResponse
      */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -5651,10 +4492,10 @@ export interface UnunifiYieldaggregatorQueryAllVaultResponse {
     'vaults'?: Array<VaultAll200ResponseVaultsInner>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof UnunifiYieldaggregatorQueryAllVaultResponse
      */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -5664,10 +4505,10 @@ export interface UnunifiYieldaggregatorQueryAllVaultResponse {
 export interface UnunifiYieldaggregatorQueryEstimateMintAmountResponse {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiYieldaggregatorQueryEstimateMintAmountResponse
      */
-    'mint_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'mint_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -5677,10 +4518,10 @@ export interface UnunifiYieldaggregatorQueryEstimateMintAmountResponse {
 export interface UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse {
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
      */
-    'redeem_amount'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'redeem_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
 }
 /**
  * 
@@ -5781,6 +4622,12 @@ export interface UnunifiYieldaggregatorStrategy {
      * @memberof UnunifiYieldaggregatorStrategy
      */
     'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategy
+     */
+    'git_url'?: string;
 }
 /**
  * 
@@ -5827,10 +4674,10 @@ export interface UnunifiYieldaggregatorVault {
     'owner'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof UnunifiYieldaggregatorVault
      */
-    'owner_deposit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'owner_deposit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -5849,63 +4696,6 @@ export interface UnunifiYieldaggregatorVault {
      * @memberof UnunifiYieldaggregatorVault
      */
     'strategy_weights'?: Array<VaultAll200ResponseVaultsInnerStrategyWeightsInner>;
-}
-/**
- * 
- * @export
- * @interface UnunifidistParams200Response
- */
-export interface UnunifidistParams200Response {
-    /**
-     * 
-     * @type {UnunifidistParams200ResponseParams}
-     * @memberof UnunifidistParams200Response
-     */
-    'params'?: UnunifidistParams200ResponseParams;
-}
-/**
- * 
- * @export
- * @interface UnunifidistParams200ResponseParams
- */
-export interface UnunifidistParams200ResponseParams {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof UnunifidistParams200ResponseParams
-     */
-    'active'?: boolean;
-    /**
-     * 
-     * @type {Array<UnunifidistParams200ResponseParamsPeriodsInner>}
-     * @memberof UnunifidistParams200ResponseParams
-     */
-    'periods'?: Array<UnunifidistParams200ResponseParamsPeriodsInner>;
-}
-/**
- * 
- * @export
- * @interface UnunifidistParams200ResponseParamsPeriodsInner
- */
-export interface UnunifidistParams200ResponseParamsPeriodsInner {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifidistParams200ResponseParamsPeriodsInner
-     */
-    'start'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifidistParams200ResponseParamsPeriodsInner
-     */
-    'end'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifidistParams200ResponseParamsPeriodsInner
-     */
-    'inflation'?: string;
 }
 /**
  * 
@@ -5964,10 +4754,10 @@ export interface VaultAll200Response {
     'vaults'?: Array<VaultAll200ResponseVaultsInner>;
     /**
      * 
-     * @type {AuctionAll200ResponsePagination}
+     * @type {MarketAll200ResponsePagination}
      * @memberof VaultAll200Response
      */
-    'pagination'?: AuctionAll200ResponsePagination;
+    'pagination'?: MarketAll200ResponsePagination;
 }
 /**
  * 
@@ -5995,10 +4785,10 @@ export interface VaultAll200ResponseVaultsInner {
     'owner'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof VaultAll200ResponseVaultsInner
      */
-    'owner_deposit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'owner_deposit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
      * @type {string}
@@ -6064,16 +4854,35 @@ export interface YieldAggregatorParams200ResponseParams {
     'commission_rate'?: string;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof YieldAggregatorParams200ResponseParams
      */
-    'vault_creation_fee'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'vault_creation_fee'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
     /**
      * 
-     * @type {CdpAll200ResponseCdpInnerCdpCollateral}
+     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
      * @memberof YieldAggregatorParams200ResponseParams
      */
-    'vault_creation_deposit'?: CdpAll200ResponseCdpInnerCdpCollateral;
+    'vault_creation_deposit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+}
+/**
+ * Coin defines a token with a denomination and an amount.  NOTE: The amount field is an Int which implements the custom method signatures required by gogoproto.
+ * @export
+ * @interface YieldAggregatorParams200ResponseParamsVaultCreationFee
+ */
+export interface YieldAggregatorParams200ResponseParamsVaultCreationFee {
+    /**
+     * 
+     * @type {string}
+     * @memberof YieldAggregatorParams200ResponseParamsVaultCreationFee
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof YieldAggregatorParams200ResponseParamsVaultCreationFee
+     */
+    'amount'?: string;
 }
 
 /**
@@ -6084,44 +4893,11 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     return {
         /**
          * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        accountAll: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/cdp/accounts`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {string} address 
-         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
-         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
-         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
-         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addressPositions: async (address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        addressPositions: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'address' is not null or undefined
             assertParamExists('addressPositions', 'address', address)
             const localVarPath = `/ununifi/derivatives/{address}/positions`
@@ -6136,22 +4912,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            if (paginationKey !== undefined) {
-                localVarQueryParameter['pagination.key'] = paginationKey;
-            }
-
-            if (paginationOffset !== undefined) {
-                localVarQueryParameter['pagination.offset'] = paginationOffset;
-            }
-
-            if (paginationLimit !== undefined) {
-                localVarQueryParameter['pagination.limit'] = paginationLimit;
-            }
-
-            if (paginationCountTotal !== undefined) {
-                localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
-            }
 
 
     
@@ -6248,118 +5008,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @summary this line is used by starport scaffolding # 2
-         * @param {string} id 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        auction: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('auction', 'id', id)
-            const localVarPath = `/ununifi/auction/auctions/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
-         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
-         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
-         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        auctionAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/auction/auctions`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (paginationKey !== undefined) {
-                localVarQueryParameter['pagination.key'] = paginationKey;
-            }
-
-            if (paginationOffset !== undefined) {
-                localVarQueryParameter['pagination.offset'] = paginationOffset;
-            }
-
-            if (paginationLimit !== undefined) {
-                localVarQueryParameter['pagination.limit'] = paginationLimit;
-            }
-
-            if (paginationCountTotal !== undefined) {
-                localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        auctionParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/auction/params`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {string} denom 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -6422,36 +5070,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @summary this line is used by starport scaffolding # 2
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        balances: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/ununifidist/balances`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {string} bidder 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -6490,122 +5108,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          */
         cDPsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/nftmarket/cdps_list`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary this line is used by starport scaffolding # 2
-         * @param {string} owner 
-         * @param {string} collateralType 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        cdp: async (owner: string, collateralType: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'owner' is not null or undefined
-            assertParamExists('cdp', 'owner', owner)
-            // verify required parameter 'collateralType' is not null or undefined
-            assertParamExists('cdp', 'collateralType', collateralType)
-            const localVarPath = `/ununifi/cdp/cdps/owners/{owner}/collateral-types/{collateral_type}/cdp`
-                .replace(`{${"owner"}}`, encodeURIComponent(String(owner)))
-                .replace(`{${"collateral_type"}}`, encodeURIComponent(String(collateralType)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
-         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
-         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
-         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        cdpAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/cdp/cdps`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (paginationKey !== undefined) {
-                localVarQueryParameter['pagination.key'] = paginationKey;
-            }
-
-            if (paginationOffset !== undefined) {
-                localVarQueryParameter['pagination.offset'] = paginationOffset;
-            }
-
-            if (paginationLimit !== undefined) {
-                localVarQueryParameter['pagination.limit'] = paginationLimit;
-            }
-
-            if (paginationCountTotal !== undefined) {
-                localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        cdpParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/cdp/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -6734,43 +5236,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          */
         dLPTokenRates: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/derivatives/pools/dlp`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} owner 
-         * @param {string} collateralType 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        depositAll: async (owner: string, collateralType: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'owner' is not null or undefined
-            assertParamExists('depositAll', 'owner', owner)
-            // verify required parameter 'collateralType' is not null or undefined
-            assertParamExists('depositAll', 'collateralType', collateralType)
-            const localVarPath = `/ununifi/cdp/deposits/owners/{owner}/collateral-types/{collateral_type}`
-                .replace(`{${"owner"}}`, encodeURIComponent(String(owner)))
-                .replace(`{${"collateral_type"}}`, encodeURIComponent(String(collateralType)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -6981,35 +5446,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarPath = `/ununifi/derivatives/estimate-redeem-amount/{redeem_denom}/{lpt_amount}`
                 .replace(`{${"redeem_denom"}}`, encodeURIComponent(String(redeemDenom)))
                 .replace(`{${"lpt_amount"}}`, encodeURIComponent(String(lptAmount)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        incentiveParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/incentive/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -8294,35 +6730,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        ununifidistParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/ununifidist/params`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {string} id 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -8446,25 +6853,12 @@ export const QueryApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async accountAll(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountAll200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.accountAll(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @param {string} address 
-         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
-         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
-         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
-         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async addressPositions(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllPositions200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.addressPositions(address, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
+        async addressPositions(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AddressPositions200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.addressPositions(address, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -8492,39 +6886,6 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @summary this line is used by starport scaffolding # 2
-         * @param {string} id 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async auction(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Auction200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.auction(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
-         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
-         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
-         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async auctionAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuctionAll200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.auctionAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async auctionParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuctionParams200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.auctionParams(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @param {string} denom 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -8544,16 +6905,6 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @summary this line is used by starport scaffolding # 2
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async balances(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Balances200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.balances(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @param {string} bidder 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -8569,40 +6920,6 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async cDPsList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.cDPsList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @summary this line is used by starport scaffolding # 2
-         * @param {string} owner 
-         * @param {string} collateralType 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async cdp(owner: string, collateralType: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Cdp200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.cdp(owner, collateralType, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
-         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
-         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
-         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async cdpAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CdpAll200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.cdpAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async cdpParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CdpParams200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.cdpParams(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -8642,17 +6959,6 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async dLPTokenRates(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DLPTokenRates200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.dLPTokenRates(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} owner 
-         * @param {string} collateralType 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async depositAll(owner: string, collateralType: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DepositAll200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.depositAll(owner, collateralType, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -8717,15 +7023,6 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRedeemTokenAmount200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemTokenAmount(redeemDenom, lptAmount, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async incentiveParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IncentiveParams200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.incentiveParams(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -9099,15 +7396,6 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async ununifidistParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UnunifidistParams200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.ununifidistParams(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @param {string} id 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -9152,24 +7440,12 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     return {
         /**
          * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        accountAll(options?: any): AxiosPromise<AccountAll200Response> {
-            return localVarFp.accountAll(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @param {string} address 
-         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
-         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
-         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
-         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addressPositions(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<AllPositions200Response> {
-            return localVarFp.addressPositions(address, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
+        addressPositions(address: string, options?: any): AxiosPromise<AddressPositions200Response> {
+            return localVarFp.addressPositions(address, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -9194,36 +7470,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @summary this line is used by starport scaffolding # 2
-         * @param {string} id 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        auction(id: string, options?: any): AxiosPromise<Auction200Response> {
-            return localVarFp.auction(id, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
-         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
-         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
-         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        auctionAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<AuctionAll200Response> {
-            return localVarFp.auctionAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        auctionParams(options?: any): AxiosPromise<AuctionParams200Response> {
-            return localVarFp.auctionParams(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @param {string} denom 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -9241,15 +7487,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @summary this line is used by starport scaffolding # 2
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        balances(options?: any): AxiosPromise<Balances200Response> {
-            return localVarFp.balances(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @param {string} bidder 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -9264,37 +7501,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         cDPsList(options?: any): AxiosPromise<object> {
             return localVarFp.cDPsList(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @summary this line is used by starport scaffolding # 2
-         * @param {string} owner 
-         * @param {string} collateralType 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        cdp(owner: string, collateralType: string, options?: any): AxiosPromise<Cdp200Response> {
-            return localVarFp.cdp(owner, collateralType, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
-         * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
-         * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
-         * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        cdpAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<CdpAll200Response> {
-            return localVarFp.cdpAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        cdpParams(options?: any): AxiosPromise<CdpParams200Response> {
-            return localVarFp.cdpParams(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -9330,16 +7536,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         dLPTokenRates(options?: any): AxiosPromise<DLPTokenRates200Response> {
             return localVarFp.dLPTokenRates(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} owner 
-         * @param {string} collateralType 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        depositAll(owner: string, collateralType: string, options?: any): AxiosPromise<DepositAll200Response> {
-            return localVarFp.depositAll(owner, collateralType, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -9398,14 +7594,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: any): AxiosPromise<EstimateRedeemTokenAmount200Response> {
             return localVarFp.estimateRedeemTokenAmount(redeemDenom, lptAmount, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        incentiveParams(options?: any): AxiosPromise<IncentiveParams200Response> {
-            return localVarFp.incentiveParams(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -9744,14 +7932,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        ununifidistParams(options?: any): AxiosPromise<UnunifidistParams200Response> {
-            return localVarFp.ununifidistParams(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @param {string} id 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -9793,27 +7973,13 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
 export class QueryApi extends BaseAPI {
     /**
      * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public accountAll(options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).accountAll(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @param {string} address 
-     * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
-     * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
-     * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
-     * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public addressPositions(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).addressPositions(address, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
+    public addressPositions(address: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).addressPositions(address, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -9843,42 +8009,6 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @summary this line is used by starport scaffolding # 2
-     * @param {string} id 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public auction(id: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).auction(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
-     * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
-     * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
-     * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public auctionAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).auctionAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public auctionParams(options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).auctionParams(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @param {string} denom 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -9900,17 +8030,6 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @summary this line is used by starport scaffolding # 2
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public balances(options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).balances(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @param {string} bidder 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -9928,43 +8047,6 @@ export class QueryApi extends BaseAPI {
      */
     public cDPsList(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).cDPsList(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @summary this line is used by starport scaffolding # 2
-     * @param {string} owner 
-     * @param {string} collateralType 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public cdp(owner: string, collateralType: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).cdp(owner, collateralType, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
-     * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
-     * @param {string} [paginationLimit] limit is the total number of results to be returned in the result page. If left empty it will default to a value to be set by each app.
-     * @param {boolean} [paginationCountTotal] count_total is set to true  to indicate that the result set should include a count of the total number of items available for pagination in UIs. count_total is only respected when offset is used. It is ignored when key is set.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public cdpAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).cdpAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public cdpParams(options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).cdpParams(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -10008,18 +8090,6 @@ export class QueryApi extends BaseAPI {
      */
     public dLPTokenRates(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).dLPTokenRates(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} owner 
-     * @param {string} collateralType 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public depositAll(owner: string, collateralType: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).depositAll(owner, collateralType, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -10090,16 +8160,6 @@ export class QueryApi extends BaseAPI {
      */
     public estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).estimateRedeemTokenAmount(redeemDenom, lptAmount, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public incentiveParams(options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).incentiveParams(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -10503,16 +8563,6 @@ export class QueryApi extends BaseAPI {
      */
     public strategyAll(denom?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).strategyAll(denom, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public ununifidistParams(options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).ununifidistParams(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
