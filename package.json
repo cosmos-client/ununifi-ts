@@ -1,6 +1,6 @@
 {
   "name": "ununifi-client",
-  "version": "0.47.1-rc3",
+  "version": "2.1.0",
   "description": "REST API Client for UnUniFi Blockchain",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
@@ -36,7 +36,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
-    "@cosmos-client/core": "^0.47.1-rc1",
+    "@cosmos-client/core": "^0.47.1",
     "@types/axios": "^0.14.0",
     "@types/jest": "^27.0.2",
     "@types/long": "^4.0.1",
@@ -59,6 +59,6 @@
     "webpack-cli": "^4.10.0"
   },
   "peerDependencies": {
-    "@cosmos-client/core": "^0.47.1-rc1"
+    "@cosmos-client/core": "^0.47.1"
   }
 }
