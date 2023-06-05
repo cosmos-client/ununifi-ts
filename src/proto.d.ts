@@ -6666,18 +6666,18 @@ export namespace ununifi {
             public params(request: ununifi.ecosystemincentive.IQueryParamsRequest): Promise<ununifi.ecosystemincentive.QueryParamsResponse>;
 
             /**
-             * Calls IncentiveUnit.
-             * @param request QueryIncentiveUnitRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryIncentiveUnitResponse
+             * Calls RecipientContainer.
+             * @param request QueryRecipientContainerRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryRecipientContainerResponse
              */
-            public incentiveUnit(request: ununifi.ecosystemincentive.IQueryIncentiveUnitRequest, callback: ununifi.ecosystemincentive.Query.IncentiveUnitCallback): void;
+            public recipientContainer(request: ununifi.ecosystemincentive.IQueryRecipientContainerRequest, callback: ununifi.ecosystemincentive.Query.RecipientContainerCallback): void;
 
             /**
-             * Calls IncentiveUnit.
-             * @param request QueryIncentiveUnitRequest message or plain object
+             * Calls RecipientContainer.
+             * @param request QueryRecipientContainerRequest message or plain object
              * @returns Promise
              */
-            public incentiveUnit(request: ununifi.ecosystemincentive.IQueryIncentiveUnitRequest): Promise<ununifi.ecosystemincentive.QueryIncentiveUnitResponse>;
+            public recipientContainer(request: ununifi.ecosystemincentive.IQueryRecipientContainerRequest): Promise<ununifi.ecosystemincentive.QueryRecipientContainerResponse>;
 
             /**
              * Calls AllRewards.
@@ -6708,32 +6708,32 @@ export namespace ununifi {
             public reward(request: ununifi.ecosystemincentive.IQueryRewardRequest): Promise<ununifi.ecosystemincentive.QueryRewardResponse>;
 
             /**
-             * Calls RecordedIncentiveUnitId.
-             * @param request QueryRecordedIncentiveUnitIdRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryRecordedIncentiveUnitIdResponse
+             * Calls RecordedRecipientContainerId.
+             * @param request QueryRecordedRecipientContainerIdRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryRecordedRecipientContainerIdResponse
              */
-            public recordedIncentiveUnitId(request: ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdRequest, callback: ununifi.ecosystemincentive.Query.RecordedIncentiveUnitIdCallback): void;
+            public recordedRecipientContainerId(request: ununifi.ecosystemincentive.IQueryRecordedRecipientContainerIdRequest, callback: ununifi.ecosystemincentive.Query.RecordedRecipientContainerIdCallback): void;
 
             /**
-             * Calls RecordedIncentiveUnitId.
-             * @param request QueryRecordedIncentiveUnitIdRequest message or plain object
+             * Calls RecordedRecipientContainerId.
+             * @param request QueryRecordedRecipientContainerIdRequest message or plain object
              * @returns Promise
              */
-            public recordedIncentiveUnitId(request: ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdRequest): Promise<ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse>;
+            public recordedRecipientContainerId(request: ununifi.ecosystemincentive.IQueryRecordedRecipientContainerIdRequest): Promise<ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdResponse>;
 
             /**
-             * Calls IncentiveUnitIdsByAddr.
-             * @param request QueryIncentiveUnitIdsByAddrRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryIncentiveUnitIdsByAddrResponse
+             * Calls BelongingRecipientContainerIdsByAddr.
+             * @param request QueryBelongingRecipientContainerIdsByAddrRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryBelongingRecipientContainerIdsByAddrResponse
              */
-            public incentiveUnitIdsByAddr(request: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest, callback: ununifi.ecosystemincentive.Query.IncentiveUnitIdsByAddrCallback): void;
+            public belongingRecipientContainerIdsByAddr(request: ununifi.ecosystemincentive.IQueryBelongingRecipientContainerIdsByAddrRequest, callback: ununifi.ecosystemincentive.Query.BelongingRecipientContainerIdsByAddrCallback): void;
 
             /**
-             * Calls IncentiveUnitIdsByAddr.
-             * @param request QueryIncentiveUnitIdsByAddrRequest message or plain object
+             * Calls BelongingRecipientContainerIdsByAddr.
+             * @param request QueryBelongingRecipientContainerIdsByAddrRequest message or plain object
              * @returns Promise
              */
-            public incentiveUnitIdsByAddr(request: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest): Promise<ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse>;
+            public belongingRecipientContainerIdsByAddr(request: ununifi.ecosystemincentive.IQueryBelongingRecipientContainerIdsByAddrRequest): Promise<ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrResponse>;
         }
 
         namespace Query {
@@ -6746,11 +6746,11 @@ export namespace ununifi {
             type ParamsCallback = (error: (Error|null), response?: ununifi.ecosystemincentive.QueryParamsResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.ecosystemincentive.Query#incentiveUnit}.
+             * Callback as used by {@link ununifi.ecosystemincentive.Query#recipientContainer}.
              * @param error Error, if any
-             * @param [response] QueryIncentiveUnitResponse
+             * @param [response] QueryRecipientContainerResponse
              */
-            type IncentiveUnitCallback = (error: (Error|null), response?: ununifi.ecosystemincentive.QueryIncentiveUnitResponse) => void;
+            type RecipientContainerCallback = (error: (Error|null), response?: ununifi.ecosystemincentive.QueryRecipientContainerResponse) => void;
 
             /**
              * Callback as used by {@link ununifi.ecosystemincentive.Query#allRewards}.
@@ -6767,18 +6767,18 @@ export namespace ununifi {
             type RewardCallback = (error: (Error|null), response?: ununifi.ecosystemincentive.QueryRewardResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.ecosystemincentive.Query#recordedIncentiveUnitId}.
+             * Callback as used by {@link ununifi.ecosystemincentive.Query#recordedRecipientContainerId}.
              * @param error Error, if any
-             * @param [response] QueryRecordedIncentiveUnitIdResponse
+             * @param [response] QueryRecordedRecipientContainerIdResponse
              */
-            type RecordedIncentiveUnitIdCallback = (error: (Error|null), response?: ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse) => void;
+            type RecordedRecipientContainerIdCallback = (error: (Error|null), response?: ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.ecosystemincentive.Query#incentiveUnitIdsByAddr}.
+             * Callback as used by {@link ununifi.ecosystemincentive.Query#belongingRecipientContainerIdsByAddr}.
              * @param error Error, if any
-             * @param [response] QueryIncentiveUnitIdsByAddrResponse
+             * @param [response] QueryBelongingRecipientContainerIdsByAddrResponse
              */
-            type IncentiveUnitIdsByAddrCallback = (error: (Error|null), response?: ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse) => void;
+            type BelongingRecipientContainerIdsByAddrCallback = (error: (Error|null), response?: ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrResponse) => void;
         }
 
         /** Properties of a QueryParamsRequest. */
@@ -6941,167 +6941,167 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a QueryIncentiveUnitRequest. */
-        interface IQueryIncentiveUnitRequest {
+        /** Properties of a QueryRecipientContainerRequest. */
+        interface IQueryRecipientContainerRequest {
 
-            /** QueryIncentiveUnitRequest incentive_unit_id */
-            incentive_unit_id?: (string|null);
+            /** QueryRecipientContainerRequest id */
+            id?: (string|null);
         }
 
-        /** Represents a QueryIncentiveUnitRequest. */
-        class QueryIncentiveUnitRequest implements IQueryIncentiveUnitRequest {
+        /** Represents a QueryRecipientContainerRequest. */
+        class QueryRecipientContainerRequest implements IQueryRecipientContainerRequest {
 
             /**
-             * Constructs a new QueryIncentiveUnitRequest.
+             * Constructs a new QueryRecipientContainerRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ecosystemincentive.IQueryIncentiveUnitRequest);
+            constructor(properties?: ununifi.ecosystemincentive.IQueryRecipientContainerRequest);
 
-            /** QueryIncentiveUnitRequest incentive_unit_id. */
-            public incentive_unit_id: string;
+            /** QueryRecipientContainerRequest id. */
+            public id: string;
 
             /**
-             * Encodes the specified QueryIncentiveUnitRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitRequest.verify|verify} messages.
-             * @param message QueryIncentiveUnitRequest message or plain object to encode
+             * Encodes the specified QueryRecipientContainerRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecipientContainerRequest.verify|verify} messages.
+             * @param message QueryRecipientContainerRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ecosystemincentive.IQueryIncentiveUnitRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.IQueryRecipientContainerRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryIncentiveUnitRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitRequest.verify|verify} messages.
-             * @param message QueryIncentiveUnitRequest message or plain object to encode
+             * Encodes the specified QueryRecipientContainerRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecipientContainerRequest.verify|verify} messages.
+             * @param message QueryRecipientContainerRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ecosystemincentive.IQueryIncentiveUnitRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.IQueryRecipientContainerRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a QueryIncentiveUnitRequest message from the specified reader or buffer.
+             * Decodes a QueryRecipientContainerRequest message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns QueryIncentiveUnitRequest
+             * @returns QueryRecipientContainerRequest
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.QueryIncentiveUnitRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.QueryRecipientContainerRequest;
 
             /**
-             * Decodes a QueryIncentiveUnitRequest message from the specified reader or buffer, length delimited.
+             * Decodes a QueryRecipientContainerRequest message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns QueryIncentiveUnitRequest
+             * @returns QueryRecipientContainerRequest
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.QueryIncentiveUnitRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.QueryRecipientContainerRequest;
 
             /**
-             * Verifies a QueryIncentiveUnitRequest message.
+             * Verifies a QueryRecipientContainerRequest message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a QueryIncentiveUnitRequest message from a plain object. Also converts values to their respective internal types.
+             * Creates a QueryRecipientContainerRequest message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns QueryIncentiveUnitRequest
+             * @returns QueryRecipientContainerRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryIncentiveUnitRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryRecipientContainerRequest;
 
             /**
-             * Creates a plain object from a QueryIncentiveUnitRequest message. Also converts values to other types if specified.
-             * @param message QueryIncentiveUnitRequest
+             * Creates a plain object from a QueryRecipientContainerRequest message. Also converts values to other types if specified.
+             * @param message QueryRecipientContainerRequest
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ecosystemincentive.QueryIncentiveUnitRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.QueryRecipientContainerRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this QueryIncentiveUnitRequest to JSON.
+             * Converts this QueryRecipientContainerRequest to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a QueryIncentiveUnitResponse. */
-        interface IQueryIncentiveUnitResponse {
+        /** Properties of a QueryRecipientContainerResponse. */
+        interface IQueryRecipientContainerResponse {
 
-            /** QueryIncentiveUnitResponse incentive_unit */
-            incentive_unit?: (ununifi.ecosystemincentive.IIncentiveUnit|null);
+            /** QueryRecipientContainerResponse recipient_container */
+            recipient_container?: (ununifi.ecosystemincentive.IRecipientContainer|null);
         }
 
-        /** Represents a QueryIncentiveUnitResponse. */
-        class QueryIncentiveUnitResponse implements IQueryIncentiveUnitResponse {
+        /** Represents a QueryRecipientContainerResponse. */
+        class QueryRecipientContainerResponse implements IQueryRecipientContainerResponse {
 
             /**
-             * Constructs a new QueryIncentiveUnitResponse.
+             * Constructs a new QueryRecipientContainerResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ecosystemincentive.IQueryIncentiveUnitResponse);
+            constructor(properties?: ununifi.ecosystemincentive.IQueryRecipientContainerResponse);
 
-            /** QueryIncentiveUnitResponse incentive_unit. */
-            public incentive_unit?: (ununifi.ecosystemincentive.IIncentiveUnit|null);
+            /** QueryRecipientContainerResponse recipient_container. */
+            public recipient_container?: (ununifi.ecosystemincentive.IRecipientContainer|null);
 
             /**
-             * Encodes the specified QueryIncentiveUnitResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitResponse.verify|verify} messages.
-             * @param message QueryIncentiveUnitResponse message or plain object to encode
+             * Encodes the specified QueryRecipientContainerResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecipientContainerResponse.verify|verify} messages.
+             * @param message QueryRecipientContainerResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ecosystemincentive.IQueryIncentiveUnitResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.IQueryRecipientContainerResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryIncentiveUnitResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitResponse.verify|verify} messages.
-             * @param message QueryIncentiveUnitResponse message or plain object to encode
+             * Encodes the specified QueryRecipientContainerResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecipientContainerResponse.verify|verify} messages.
+             * @param message QueryRecipientContainerResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ecosystemincentive.IQueryIncentiveUnitResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.IQueryRecipientContainerResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a QueryIncentiveUnitResponse message from the specified reader or buffer.
+             * Decodes a QueryRecipientContainerResponse message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns QueryIncentiveUnitResponse
+             * @returns QueryRecipientContainerResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.QueryIncentiveUnitResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.QueryRecipientContainerResponse;
 
             /**
-             * Decodes a QueryIncentiveUnitResponse message from the specified reader or buffer, length delimited.
+             * Decodes a QueryRecipientContainerResponse message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns QueryIncentiveUnitResponse
+             * @returns QueryRecipientContainerResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.QueryIncentiveUnitResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.QueryRecipientContainerResponse;
 
             /**
-             * Verifies a QueryIncentiveUnitResponse message.
+             * Verifies a QueryRecipientContainerResponse message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a QueryIncentiveUnitResponse message from a plain object. Also converts values to their respective internal types.
+             * Creates a QueryRecipientContainerResponse message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns QueryIncentiveUnitResponse
+             * @returns QueryRecipientContainerResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryIncentiveUnitResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryRecipientContainerResponse;
 
             /**
-             * Creates a plain object from a QueryIncentiveUnitResponse message. Also converts values to other types if specified.
-             * @param message QueryIncentiveUnitResponse
+             * Creates a plain object from a QueryRecipientContainerResponse message. Also converts values to other types if specified.
+             * @param message QueryRecipientContainerResponse
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ecosystemincentive.QueryIncentiveUnitResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.QueryRecipientContainerResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this QueryIncentiveUnitResponse to JSON.
+             * Converts this QueryRecipientContainerResponse to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -7110,8 +7110,8 @@ export namespace ununifi {
         /** Properties of a QueryAllRewardsRequest. */
         interface IQueryAllRewardsRequest {
 
-            /** QueryAllRewardsRequest subject_addr */
-            subject_addr?: (string|null);
+            /** QueryAllRewardsRequest address */
+            address?: (string|null);
         }
 
         /** Represents a QueryAllRewardsRequest. */
@@ -7123,8 +7123,8 @@ export namespace ununifi {
              */
             constructor(properties?: ununifi.ecosystemincentive.IQueryAllRewardsRequest);
 
-            /** QueryAllRewardsRequest subject_addr. */
-            public subject_addr: string;
+            /** QueryAllRewardsRequest address. */
+            public address: string;
 
             /**
              * Encodes the specified QueryAllRewardsRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryAllRewardsRequest.verify|verify} messages.
@@ -7276,8 +7276,8 @@ export namespace ununifi {
         /** Properties of a QueryRewardRequest. */
         interface IQueryRewardRequest {
 
-            /** QueryRewardRequest subject_addr */
-            subject_addr?: (string|null);
+            /** QueryRewardRequest address */
+            address?: (string|null);
 
             /** QueryRewardRequest denom */
             denom?: (string|null);
@@ -7292,8 +7292,8 @@ export namespace ununifi {
              */
             constructor(properties?: ununifi.ecosystemincentive.IQueryRewardRequest);
 
-            /** QueryRewardRequest subject_addr. */
-            public subject_addr: string;
+            /** QueryRewardRequest address. */
+            public address: string;
 
             /** QueryRewardRequest denom. */
             public denom: string;
@@ -7445,339 +7445,339 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a QueryRecordedIncentiveUnitIdRequest. */
-        interface IQueryRecordedIncentiveUnitIdRequest {
+        /** Properties of a QueryRecordedRecipientContainerIdRequest. */
+        interface IQueryRecordedRecipientContainerIdRequest {
 
-            /** QueryRecordedIncentiveUnitIdRequest class_id */
+            /** QueryRecordedRecipientContainerIdRequest class_id */
             class_id?: (string|null);
 
-            /** QueryRecordedIncentiveUnitIdRequest nft_id */
+            /** QueryRecordedRecipientContainerIdRequest nft_id */
             nft_id?: (string|null);
         }
 
-        /** Represents a QueryRecordedIncentiveUnitIdRequest. */
-        class QueryRecordedIncentiveUnitIdRequest implements IQueryRecordedIncentiveUnitIdRequest {
+        /** Represents a QueryRecordedRecipientContainerIdRequest. */
+        class QueryRecordedRecipientContainerIdRequest implements IQueryRecordedRecipientContainerIdRequest {
 
             /**
-             * Constructs a new QueryRecordedIncentiveUnitIdRequest.
+             * Constructs a new QueryRecordedRecipientContainerIdRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdRequest);
+            constructor(properties?: ununifi.ecosystemincentive.IQueryRecordedRecipientContainerIdRequest);
 
-            /** QueryRecordedIncentiveUnitIdRequest class_id. */
+            /** QueryRecordedRecipientContainerIdRequest class_id. */
             public class_id: string;
 
-            /** QueryRecordedIncentiveUnitIdRequest nft_id. */
+            /** QueryRecordedRecipientContainerIdRequest nft_id. */
             public nft_id: string;
 
             /**
-             * Encodes the specified QueryRecordedIncentiveUnitIdRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest.verify|verify} messages.
-             * @param message QueryRecordedIncentiveUnitIdRequest message or plain object to encode
+             * Encodes the specified QueryRecordedRecipientContainerIdRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdRequest.verify|verify} messages.
+             * @param message QueryRecordedRecipientContainerIdRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.IQueryRecordedRecipientContainerIdRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryRecordedIncentiveUnitIdRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest.verify|verify} messages.
-             * @param message QueryRecordedIncentiveUnitIdRequest message or plain object to encode
+             * Encodes the specified QueryRecordedRecipientContainerIdRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdRequest.verify|verify} messages.
+             * @param message QueryRecordedRecipientContainerIdRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.IQueryRecordedRecipientContainerIdRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a QueryRecordedIncentiveUnitIdRequest message from the specified reader or buffer.
+             * Decodes a QueryRecordedRecipientContainerIdRequest message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns QueryRecordedIncentiveUnitIdRequest
+             * @returns QueryRecordedRecipientContainerIdRequest
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdRequest;
 
             /**
-             * Decodes a QueryRecordedIncentiveUnitIdRequest message from the specified reader or buffer, length delimited.
+             * Decodes a QueryRecordedRecipientContainerIdRequest message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns QueryRecordedIncentiveUnitIdRequest
+             * @returns QueryRecordedRecipientContainerIdRequest
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdRequest;
 
             /**
-             * Verifies a QueryRecordedIncentiveUnitIdRequest message.
+             * Verifies a QueryRecordedRecipientContainerIdRequest message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a QueryRecordedIncentiveUnitIdRequest message from a plain object. Also converts values to their respective internal types.
+             * Creates a QueryRecordedRecipientContainerIdRequest message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns QueryRecordedIncentiveUnitIdRequest
+             * @returns QueryRecordedRecipientContainerIdRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdRequest;
 
             /**
-             * Creates a plain object from a QueryRecordedIncentiveUnitIdRequest message. Also converts values to other types if specified.
-             * @param message QueryRecordedIncentiveUnitIdRequest
+             * Creates a plain object from a QueryRecordedRecipientContainerIdRequest message. Also converts values to other types if specified.
+             * @param message QueryRecordedRecipientContainerIdRequest
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this QueryRecordedIncentiveUnitIdRequest to JSON.
+             * Converts this QueryRecordedRecipientContainerIdRequest to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a QueryRecordedIncentiveUnitIdResponse. */
-        interface IQueryRecordedIncentiveUnitIdResponse {
+        /** Properties of a QueryRecordedRecipientContainerIdResponse. */
+        interface IQueryRecordedRecipientContainerIdResponse {
 
-            /** QueryRecordedIncentiveUnitIdResponse incentive_unit_id */
-            incentive_unit_id?: (string|null);
+            /** QueryRecordedRecipientContainerIdResponse recipient_container_id */
+            recipient_container_id?: (string|null);
         }
 
-        /** Represents a QueryRecordedIncentiveUnitIdResponse. */
-        class QueryRecordedIncentiveUnitIdResponse implements IQueryRecordedIncentiveUnitIdResponse {
+        /** Represents a QueryRecordedRecipientContainerIdResponse. */
+        class QueryRecordedRecipientContainerIdResponse implements IQueryRecordedRecipientContainerIdResponse {
 
             /**
-             * Constructs a new QueryRecordedIncentiveUnitIdResponse.
+             * Constructs a new QueryRecordedRecipientContainerIdResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdResponse);
+            constructor(properties?: ununifi.ecosystemincentive.IQueryRecordedRecipientContainerIdResponse);
 
-            /** QueryRecordedIncentiveUnitIdResponse incentive_unit_id. */
-            public incentive_unit_id: string;
+            /** QueryRecordedRecipientContainerIdResponse recipient_container_id. */
+            public recipient_container_id: string;
 
             /**
-             * Encodes the specified QueryRecordedIncentiveUnitIdResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse.verify|verify} messages.
-             * @param message QueryRecordedIncentiveUnitIdResponse message or plain object to encode
+             * Encodes the specified QueryRecordedRecipientContainerIdResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdResponse.verify|verify} messages.
+             * @param message QueryRecordedRecipientContainerIdResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.IQueryRecordedRecipientContainerIdResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryRecordedIncentiveUnitIdResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse.verify|verify} messages.
-             * @param message QueryRecordedIncentiveUnitIdResponse message or plain object to encode
+             * Encodes the specified QueryRecordedRecipientContainerIdResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdResponse.verify|verify} messages.
+             * @param message QueryRecordedRecipientContainerIdResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ecosystemincentive.IQueryRecordedIncentiveUnitIdResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.IQueryRecordedRecipientContainerIdResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a QueryRecordedIncentiveUnitIdResponse message from the specified reader or buffer.
+             * Decodes a QueryRecordedRecipientContainerIdResponse message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns QueryRecordedIncentiveUnitIdResponse
+             * @returns QueryRecordedRecipientContainerIdResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdResponse;
 
             /**
-             * Decodes a QueryRecordedIncentiveUnitIdResponse message from the specified reader or buffer, length delimited.
+             * Decodes a QueryRecordedRecipientContainerIdResponse message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns QueryRecordedIncentiveUnitIdResponse
+             * @returns QueryRecordedRecipientContainerIdResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdResponse;
 
             /**
-             * Verifies a QueryRecordedIncentiveUnitIdResponse message.
+             * Verifies a QueryRecordedRecipientContainerIdResponse message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a QueryRecordedIncentiveUnitIdResponse message from a plain object. Also converts values to their respective internal types.
+             * Creates a QueryRecordedRecipientContainerIdResponse message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns QueryRecordedIncentiveUnitIdResponse
+             * @returns QueryRecordedRecipientContainerIdResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdResponse;
 
             /**
-             * Creates a plain object from a QueryRecordedIncentiveUnitIdResponse message. Also converts values to other types if specified.
-             * @param message QueryRecordedIncentiveUnitIdResponse
+             * Creates a plain object from a QueryRecordedRecipientContainerIdResponse message. Also converts values to other types if specified.
+             * @param message QueryRecordedRecipientContainerIdResponse
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ecosystemincentive.QueryRecordedIncentiveUnitIdResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.QueryRecordedRecipientContainerIdResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this QueryRecordedIncentiveUnitIdResponse to JSON.
+             * Converts this QueryRecordedRecipientContainerIdResponse to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a QueryIncentiveUnitIdsByAddrRequest. */
-        interface IQueryIncentiveUnitIdsByAddrRequest {
+        /** Properties of a QueryBelongingRecipientContainerIdsByAddrRequest. */
+        interface IQueryBelongingRecipientContainerIdsByAddrRequest {
 
-            /** QueryIncentiveUnitIdsByAddrRequest address */
+            /** QueryBelongingRecipientContainerIdsByAddrRequest address */
             address?: (string|null);
         }
 
-        /** Represents a QueryIncentiveUnitIdsByAddrRequest. */
-        class QueryIncentiveUnitIdsByAddrRequest implements IQueryIncentiveUnitIdsByAddrRequest {
+        /** Represents a QueryBelongingRecipientContainerIdsByAddrRequest. */
+        class QueryBelongingRecipientContainerIdsByAddrRequest implements IQueryBelongingRecipientContainerIdsByAddrRequest {
 
             /**
-             * Constructs a new QueryIncentiveUnitIdsByAddrRequest.
+             * Constructs a new QueryBelongingRecipientContainerIdsByAddrRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest);
+            constructor(properties?: ununifi.ecosystemincentive.IQueryBelongingRecipientContainerIdsByAddrRequest);
 
-            /** QueryIncentiveUnitIdsByAddrRequest address. */
+            /** QueryBelongingRecipientContainerIdsByAddrRequest address. */
             public address: string;
 
             /**
-             * Encodes the specified QueryIncentiveUnitIdsByAddrRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest.verify|verify} messages.
-             * @param message QueryIncentiveUnitIdsByAddrRequest message or plain object to encode
+             * Encodes the specified QueryBelongingRecipientContainerIdsByAddrRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrRequest.verify|verify} messages.
+             * @param message QueryBelongingRecipientContainerIdsByAddrRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.IQueryBelongingRecipientContainerIdsByAddrRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryIncentiveUnitIdsByAddrRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest.verify|verify} messages.
-             * @param message QueryIncentiveUnitIdsByAddrRequest message or plain object to encode
+             * Encodes the specified QueryBelongingRecipientContainerIdsByAddrRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrRequest.verify|verify} messages.
+             * @param message QueryBelongingRecipientContainerIdsByAddrRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.IQueryBelongingRecipientContainerIdsByAddrRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a QueryIncentiveUnitIdsByAddrRequest message from the specified reader or buffer.
+             * Decodes a QueryBelongingRecipientContainerIdsByAddrRequest message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns QueryIncentiveUnitIdsByAddrRequest
+             * @returns QueryBelongingRecipientContainerIdsByAddrRequest
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrRequest;
 
             /**
-             * Decodes a QueryIncentiveUnitIdsByAddrRequest message from the specified reader or buffer, length delimited.
+             * Decodes a QueryBelongingRecipientContainerIdsByAddrRequest message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns QueryIncentiveUnitIdsByAddrRequest
+             * @returns QueryBelongingRecipientContainerIdsByAddrRequest
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrRequest;
 
             /**
-             * Verifies a QueryIncentiveUnitIdsByAddrRequest message.
+             * Verifies a QueryBelongingRecipientContainerIdsByAddrRequest message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a QueryIncentiveUnitIdsByAddrRequest message from a plain object. Also converts values to their respective internal types.
+             * Creates a QueryBelongingRecipientContainerIdsByAddrRequest message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns QueryIncentiveUnitIdsByAddrRequest
+             * @returns QueryBelongingRecipientContainerIdsByAddrRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrRequest;
 
             /**
-             * Creates a plain object from a QueryIncentiveUnitIdsByAddrRequest message. Also converts values to other types if specified.
-             * @param message QueryIncentiveUnitIdsByAddrRequest
+             * Creates a plain object from a QueryBelongingRecipientContainerIdsByAddrRequest message. Also converts values to other types if specified.
+             * @param message QueryBelongingRecipientContainerIdsByAddrRequest
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this QueryIncentiveUnitIdsByAddrRequest to JSON.
+             * Converts this QueryBelongingRecipientContainerIdsByAddrRequest to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a QueryIncentiveUnitIdsByAddrResponse. */
-        interface IQueryIncentiveUnitIdsByAddrResponse {
+        /** Properties of a QueryBelongingRecipientContainerIdsByAddrResponse. */
+        interface IQueryBelongingRecipientContainerIdsByAddrResponse {
 
-            /** QueryIncentiveUnitIdsByAddrResponse incentive_unit_ids_by_addr */
-            incentive_unit_ids_by_addr?: (ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr|null);
+            /** QueryBelongingRecipientContainerIdsByAddrResponse recipient_container_ids */
+            recipient_container_ids?: (string[]|null);
         }
 
-        /** Represents a QueryIncentiveUnitIdsByAddrResponse. */
-        class QueryIncentiveUnitIdsByAddrResponse implements IQueryIncentiveUnitIdsByAddrResponse {
+        /** Represents a QueryBelongingRecipientContainerIdsByAddrResponse. */
+        class QueryBelongingRecipientContainerIdsByAddrResponse implements IQueryBelongingRecipientContainerIdsByAddrResponse {
 
             /**
-             * Constructs a new QueryIncentiveUnitIdsByAddrResponse.
+             * Constructs a new QueryBelongingRecipientContainerIdsByAddrResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrResponse);
+            constructor(properties?: ununifi.ecosystemincentive.IQueryBelongingRecipientContainerIdsByAddrResponse);
 
-            /** QueryIncentiveUnitIdsByAddrResponse incentive_unit_ids_by_addr. */
-            public incentive_unit_ids_by_addr?: (ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr|null);
+            /** QueryBelongingRecipientContainerIdsByAddrResponse recipient_container_ids. */
+            public recipient_container_ids: string[];
 
             /**
-             * Encodes the specified QueryIncentiveUnitIdsByAddrResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse.verify|verify} messages.
-             * @param message QueryIncentiveUnitIdsByAddrResponse message or plain object to encode
+             * Encodes the specified QueryBelongingRecipientContainerIdsByAddrResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrResponse.verify|verify} messages.
+             * @param message QueryBelongingRecipientContainerIdsByAddrResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.IQueryBelongingRecipientContainerIdsByAddrResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryIncentiveUnitIdsByAddrResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse.verify|verify} messages.
-             * @param message QueryIncentiveUnitIdsByAddrResponse message or plain object to encode
+             * Encodes the specified QueryBelongingRecipientContainerIdsByAddrResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrResponse.verify|verify} messages.
+             * @param message QueryBelongingRecipientContainerIdsByAddrResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ecosystemincentive.IQueryIncentiveUnitIdsByAddrResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.IQueryBelongingRecipientContainerIdsByAddrResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a QueryIncentiveUnitIdsByAddrResponse message from the specified reader or buffer.
+             * Decodes a QueryBelongingRecipientContainerIdsByAddrResponse message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns QueryIncentiveUnitIdsByAddrResponse
+             * @returns QueryBelongingRecipientContainerIdsByAddrResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrResponse;
 
             /**
-             * Decodes a QueryIncentiveUnitIdsByAddrResponse message from the specified reader or buffer, length delimited.
+             * Decodes a QueryBelongingRecipientContainerIdsByAddrResponse message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns QueryIncentiveUnitIdsByAddrResponse
+             * @returns QueryBelongingRecipientContainerIdsByAddrResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrResponse;
 
             /**
-             * Verifies a QueryIncentiveUnitIdsByAddrResponse message.
+             * Verifies a QueryBelongingRecipientContainerIdsByAddrResponse message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a QueryIncentiveUnitIdsByAddrResponse message from a plain object. Also converts values to their respective internal types.
+             * Creates a QueryBelongingRecipientContainerIdsByAddrResponse message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns QueryIncentiveUnitIdsByAddrResponse
+             * @returns QueryBelongingRecipientContainerIdsByAddrResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrResponse;
 
             /**
-             * Creates a plain object from a QueryIncentiveUnitIdsByAddrResponse message. Also converts values to other types if specified.
-             * @param message QueryIncentiveUnitIdsByAddrResponse
+             * Creates a plain object from a QueryBelongingRecipientContainerIdsByAddrResponse message. Also converts values to other types if specified.
+             * @param message QueryBelongingRecipientContainerIdsByAddrResponse
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ecosystemincentive.QueryIncentiveUnitIdsByAddrResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.QueryBelongingRecipientContainerIdsByAddrResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this QueryIncentiveUnitIdsByAddrResponse to JSON.
+             * Converts this QueryBelongingRecipientContainerIdsByAddrResponse to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -7788,12 +7788,6 @@ export namespace ununifi {
 
             /** Params reward_params */
             reward_params?: (ununifi.ecosystemincentive.IRewardParams[]|null);
-
-            /** Params max_incentive_unit_id_len */
-            max_incentive_unit_id_len?: (Long|null);
-
-            /** Params max_subject_info_num_in_unit */
-            max_subject_info_num_in_unit?: (Long|null);
         }
 
         /** Represents a Params. */
@@ -7807,12 +7801,6 @@ export namespace ununifi {
 
             /** Params reward_params. */
             public reward_params: ununifi.ecosystemincentive.IRewardParams[];
-
-            /** Params max_incentive_unit_id_len. */
-            public max_incentive_unit_id_len: Long;
-
-            /** Params max_subject_info_num_in_unit. */
-            public max_subject_info_num_in_unit: Long;
 
             /**
              * Encodes the specified Params message. Does not implicitly {@link ununifi.ecosystemincentive.Params.verify|verify} messages.
@@ -8058,182 +8046,184 @@ export namespace ununifi {
 
         /** RewardType enum. */
         enum RewardType {
-            NFTMARKET_FRONTEND = 0
+            UNKNOWN = 0,
+            STAKERS = 1,
+            FRONTEND_DEVELOPERS = 2
         }
 
-        /** Properties of an IncentiveUnit. */
-        interface IIncentiveUnit {
+        /** Properties of a RecipientContainer. */
+        interface IRecipientContainer {
 
-            /** IncentiveUnit id */
+            /** RecipientContainer id */
             id?: (string|null);
 
-            /** IncentiveUnit subject_info_lists */
-            subject_info_lists?: (ununifi.ecosystemincentive.ISubjectInfo[]|null);
+            /** RecipientContainer weighted_addresses */
+            weighted_addresses?: (ununifi.ecosystemincentive.IWeightedAddress[]|null);
         }
 
-        /** Represents an IncentiveUnit. */
-        class IncentiveUnit implements IIncentiveUnit {
+        /** Represents a RecipientContainer. */
+        class RecipientContainer implements IRecipientContainer {
 
             /**
-             * Constructs a new IncentiveUnit.
+             * Constructs a new RecipientContainer.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ecosystemincentive.IIncentiveUnit);
+            constructor(properties?: ununifi.ecosystemincentive.IRecipientContainer);
 
-            /** IncentiveUnit id. */
+            /** RecipientContainer id. */
             public id: string;
 
-            /** IncentiveUnit subject_info_lists. */
-            public subject_info_lists: ununifi.ecosystemincentive.ISubjectInfo[];
+            /** RecipientContainer weighted_addresses. */
+            public weighted_addresses: ununifi.ecosystemincentive.IWeightedAddress[];
 
             /**
-             * Encodes the specified IncentiveUnit message. Does not implicitly {@link ununifi.ecosystemincentive.IncentiveUnit.verify|verify} messages.
-             * @param message IncentiveUnit message or plain object to encode
+             * Encodes the specified RecipientContainer message. Does not implicitly {@link ununifi.ecosystemincentive.RecipientContainer.verify|verify} messages.
+             * @param message RecipientContainer message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ecosystemincentive.IIncentiveUnit, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.IRecipientContainer, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified IncentiveUnit message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.IncentiveUnit.verify|verify} messages.
-             * @param message IncentiveUnit message or plain object to encode
+             * Encodes the specified RecipientContainer message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.RecipientContainer.verify|verify} messages.
+             * @param message RecipientContainer message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ecosystemincentive.IIncentiveUnit, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.IRecipientContainer, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes an IncentiveUnit message from the specified reader or buffer.
+             * Decodes a RecipientContainer message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns IncentiveUnit
+             * @returns RecipientContainer
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.IncentiveUnit;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.RecipientContainer;
 
             /**
-             * Decodes an IncentiveUnit message from the specified reader or buffer, length delimited.
+             * Decodes a RecipientContainer message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns IncentiveUnit
+             * @returns RecipientContainer
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.IncentiveUnit;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.RecipientContainer;
 
             /**
-             * Verifies an IncentiveUnit message.
+             * Verifies a RecipientContainer message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates an IncentiveUnit message from a plain object. Also converts values to their respective internal types.
+             * Creates a RecipientContainer message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns IncentiveUnit
+             * @returns RecipientContainer
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.IncentiveUnit;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.RecipientContainer;
 
             /**
-             * Creates a plain object from an IncentiveUnit message. Also converts values to other types if specified.
-             * @param message IncentiveUnit
+             * Creates a plain object from a RecipientContainer message. Also converts values to other types if specified.
+             * @param message RecipientContainer
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ecosystemincentive.IncentiveUnit, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.RecipientContainer, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this IncentiveUnit to JSON.
+             * Converts this RecipientContainer to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a SubjectInfo. */
-        interface ISubjectInfo {
+        /** Properties of a WeightedAddress. */
+        interface IWeightedAddress {
 
-            /** SubjectInfo subject_addr */
-            subject_addr?: (string|null);
+            /** WeightedAddress address */
+            address?: (string|null);
 
-            /** SubjectInfo weight */
+            /** WeightedAddress weight */
             weight?: (string|null);
         }
 
-        /** Represents a SubjectInfo. */
-        class SubjectInfo implements ISubjectInfo {
+        /** Represents a WeightedAddress. */
+        class WeightedAddress implements IWeightedAddress {
 
             /**
-             * Constructs a new SubjectInfo.
+             * Constructs a new WeightedAddress.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ecosystemincentive.ISubjectInfo);
+            constructor(properties?: ununifi.ecosystemincentive.IWeightedAddress);
 
-            /** SubjectInfo subject_addr. */
-            public subject_addr: string;
+            /** WeightedAddress address. */
+            public address: string;
 
-            /** SubjectInfo weight. */
+            /** WeightedAddress weight. */
             public weight: string;
 
             /**
-             * Encodes the specified SubjectInfo message. Does not implicitly {@link ununifi.ecosystemincentive.SubjectInfo.verify|verify} messages.
-             * @param message SubjectInfo message or plain object to encode
+             * Encodes the specified WeightedAddress message. Does not implicitly {@link ununifi.ecosystemincentive.WeightedAddress.verify|verify} messages.
+             * @param message WeightedAddress message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ecosystemincentive.ISubjectInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.IWeightedAddress, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified SubjectInfo message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.SubjectInfo.verify|verify} messages.
-             * @param message SubjectInfo message or plain object to encode
+             * Encodes the specified WeightedAddress message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.WeightedAddress.verify|verify} messages.
+             * @param message WeightedAddress message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ecosystemincentive.ISubjectInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.IWeightedAddress, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a SubjectInfo message from the specified reader or buffer.
+             * Decodes a WeightedAddress message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns SubjectInfo
+             * @returns WeightedAddress
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.SubjectInfo;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.WeightedAddress;
 
             /**
-             * Decodes a SubjectInfo message from the specified reader or buffer, length delimited.
+             * Decodes a WeightedAddress message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns SubjectInfo
+             * @returns WeightedAddress
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.SubjectInfo;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.WeightedAddress;
 
             /**
-             * Verifies a SubjectInfo message.
+             * Verifies a WeightedAddress message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a SubjectInfo message from a plain object. Also converts values to their respective internal types.
+             * Creates a WeightedAddress message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns SubjectInfo
+             * @returns WeightedAddress
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.SubjectInfo;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.WeightedAddress;
 
             /**
-             * Creates a plain object from a SubjectInfo message. Also converts values to other types if specified.
-             * @param message SubjectInfo
+             * Creates a plain object from a WeightedAddress message. Also converts values to other types if specified.
+             * @param message WeightedAddress
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ecosystemincentive.SubjectInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.WeightedAddress, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this SubjectInfo to JSON.
+             * Converts this WeightedAddress to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -8242,8 +8232,8 @@ export namespace ununifi {
         /** Properties of a RewardStore. */
         interface IRewardStore {
 
-            /** RewardStore subject_addr */
-            subject_addr?: (string|null);
+            /** RewardStore address */
+            address?: (string|null);
 
             /** RewardStore rewards */
             rewards?: (cosmos.base.v1beta1.ICoin[]|null);
@@ -8258,8 +8248,8 @@ export namespace ununifi {
              */
             constructor(properties?: ununifi.ecosystemincentive.IRewardStore);
 
-            /** RewardStore subject_addr. */
-            public subject_addr: string;
+            /** RewardStore address. */
+            public address: string;
 
             /** RewardStore rewards. */
             public rewards: cosmos.base.v1beta1.ICoin[];
@@ -8328,179 +8318,179 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of an IncentiveUnitIdsByAddr. */
-        interface IIncentiveUnitIdsByAddr {
+        /** Properties of a BelongingRecipientContainers. */
+        interface IBelongingRecipientContainers {
 
-            /** IncentiveUnitIdsByAddr address */
+            /** BelongingRecipientContainers address */
             address?: (string|null);
 
-            /** IncentiveUnitIdsByAddr incentive_unit_ids */
-            incentive_unit_ids?: (string[]|null);
+            /** BelongingRecipientContainers recipient_container_ids */
+            recipient_container_ids?: (string[]|null);
         }
 
-        /** Represents an IncentiveUnitIdsByAddr. */
-        class IncentiveUnitIdsByAddr implements IIncentiveUnitIdsByAddr {
+        /** Represents a BelongingRecipientContainers. */
+        class BelongingRecipientContainers implements IBelongingRecipientContainers {
 
             /**
-             * Constructs a new IncentiveUnitIdsByAddr.
+             * Constructs a new BelongingRecipientContainers.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr);
+            constructor(properties?: ununifi.ecosystemincentive.IBelongingRecipientContainers);
 
-            /** IncentiveUnitIdsByAddr address. */
+            /** BelongingRecipientContainers address. */
             public address: string;
 
-            /** IncentiveUnitIdsByAddr incentive_unit_ids. */
-            public incentive_unit_ids: string[];
+            /** BelongingRecipientContainers recipient_container_ids. */
+            public recipient_container_ids: string[];
 
             /**
-             * Encodes the specified IncentiveUnitIdsByAddr message. Does not implicitly {@link ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.verify|verify} messages.
-             * @param message IncentiveUnitIdsByAddr message or plain object to encode
+             * Encodes the specified BelongingRecipientContainers message. Does not implicitly {@link ununifi.ecosystemincentive.BelongingRecipientContainers.verify|verify} messages.
+             * @param message BelongingRecipientContainers message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.IBelongingRecipientContainers, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified IncentiveUnitIdsByAddr message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.IncentiveUnitIdsByAddr.verify|verify} messages.
-             * @param message IncentiveUnitIdsByAddr message or plain object to encode
+             * Encodes the specified BelongingRecipientContainers message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.BelongingRecipientContainers.verify|verify} messages.
+             * @param message BelongingRecipientContainers message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ecosystemincentive.IIncentiveUnitIdsByAddr, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.IBelongingRecipientContainers, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes an IncentiveUnitIdsByAddr message from the specified reader or buffer.
+             * Decodes a BelongingRecipientContainers message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns IncentiveUnitIdsByAddr
+             * @returns BelongingRecipientContainers
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.IncentiveUnitIdsByAddr;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.BelongingRecipientContainers;
 
             /**
-             * Decodes an IncentiveUnitIdsByAddr message from the specified reader or buffer, length delimited.
+             * Decodes a BelongingRecipientContainers message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns IncentiveUnitIdsByAddr
+             * @returns BelongingRecipientContainers
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.IncentiveUnitIdsByAddr;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.BelongingRecipientContainers;
 
             /**
-             * Verifies an IncentiveUnitIdsByAddr message.
+             * Verifies a BelongingRecipientContainers message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates an IncentiveUnitIdsByAddr message from a plain object. Also converts values to their respective internal types.
+             * Creates a BelongingRecipientContainers message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns IncentiveUnitIdsByAddr
+             * @returns BelongingRecipientContainers
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.IncentiveUnitIdsByAddr;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.BelongingRecipientContainers;
 
             /**
-             * Creates a plain object from an IncentiveUnitIdsByAddr message. Also converts values to other types if specified.
-             * @param message IncentiveUnitIdsByAddr
+             * Creates a plain object from a BelongingRecipientContainers message. Also converts values to other types if specified.
+             * @param message BelongingRecipientContainers
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ecosystemincentive.IncentiveUnitIdsByAddr, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.BelongingRecipientContainers, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this IncentiveUnitIdsByAddr to JSON.
+             * Converts this BelongingRecipientContainers to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a MemoInputs. */
-        interface IMemoInputs {
+        /** Properties of a TxMemoData. */
+        interface ITxMemoData {
 
-            /** MemoInputs version */
+            /** TxMemoData version */
             version?: (string|null);
 
-            /** MemoInputs incentive_unit_id */
-            incentive_unit_id?: (string|null);
+            /** TxMemoData recipient_container_id */
+            recipient_container_id?: (string|null);
         }
 
-        /** Represents a MemoInputs. */
-        class MemoInputs implements IMemoInputs {
+        /** Represents a TxMemoData. */
+        class TxMemoData implements ITxMemoData {
 
             /**
-             * Constructs a new MemoInputs.
+             * Constructs a new TxMemoData.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ecosystemincentive.IMemoInputs);
+            constructor(properties?: ununifi.ecosystemincentive.ITxMemoData);
 
-            /** MemoInputs version. */
+            /** TxMemoData version. */
             public version: string;
 
-            /** MemoInputs incentive_unit_id. */
-            public incentive_unit_id: string;
+            /** TxMemoData recipient_container_id. */
+            public recipient_container_id: string;
 
             /**
-             * Encodes the specified MemoInputs message. Does not implicitly {@link ununifi.ecosystemincentive.MemoInputs.verify|verify} messages.
-             * @param message MemoInputs message or plain object to encode
+             * Encodes the specified TxMemoData message. Does not implicitly {@link ununifi.ecosystemincentive.TxMemoData.verify|verify} messages.
+             * @param message TxMemoData message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ecosystemincentive.IMemoInputs, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.ITxMemoData, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MemoInputs message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.MemoInputs.verify|verify} messages.
-             * @param message MemoInputs message or plain object to encode
+             * Encodes the specified TxMemoData message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.TxMemoData.verify|verify} messages.
+             * @param message TxMemoData message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ecosystemincentive.IMemoInputs, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.ITxMemoData, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a MemoInputs message from the specified reader or buffer.
+             * Decodes a TxMemoData message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns MemoInputs
+             * @returns TxMemoData
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.MemoInputs;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.TxMemoData;
 
             /**
-             * Decodes a MemoInputs message from the specified reader or buffer, length delimited.
+             * Decodes a TxMemoData message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns MemoInputs
+             * @returns TxMemoData
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.MemoInputs;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.TxMemoData;
 
             /**
-             * Verifies a MemoInputs message.
+             * Verifies a TxMemoData message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a MemoInputs message from a plain object. Also converts values to their respective internal types.
+             * Creates a TxMemoData message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns MemoInputs
+             * @returns TxMemoData
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.MemoInputs;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.TxMemoData;
 
             /**
-             * Creates a plain object from a MemoInputs message. Also converts values to other types if specified.
-             * @param message MemoInputs
+             * Creates a plain object from a TxMemoData message. Also converts values to other types if specified.
+             * @param message TxMemoData
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ecosystemincentive.MemoInputs, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.TxMemoData, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this MemoInputs to JSON.
+             * Converts this TxMemoData to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -8590,11 +8580,11 @@ export namespace ununifi {
             /** MsgRegister sender */
             sender?: (string|null);
 
-            /** MsgRegister incentive_unit_id */
-            incentive_unit_id?: (string|null);
+            /** MsgRegister recipient_container_id */
+            recipient_container_id?: (string|null);
 
-            /** MsgRegister subject_addrs */
-            subject_addrs?: (string[]|null);
+            /** MsgRegister addresses */
+            addresses?: (string[]|null);
 
             /** MsgRegister weights */
             weights?: (string[]|null);
@@ -8612,11 +8602,11 @@ export namespace ununifi {
             /** MsgRegister sender. */
             public sender: string;
 
-            /** MsgRegister incentive_unit_id. */
-            public incentive_unit_id: string;
+            /** MsgRegister recipient_container_id. */
+            public recipient_container_id: string;
 
-            /** MsgRegister subject_addrs. */
-            public subject_addrs: string[];
+            /** MsgRegister addresses. */
+            public addresses: string[];
 
             /** MsgRegister weights. */
             public weights: string[];
@@ -9094,8 +9084,8 @@ export namespace ununifi {
             /** GenesisState params */
             params?: (ununifi.ecosystemincentive.IParams|null);
 
-            /** GenesisState incentive_units */
-            incentive_units?: (ununifi.ecosystemincentive.IIncentiveUnit[]|null);
+            /** GenesisState recipient_containers */
+            recipient_containers?: (ununifi.ecosystemincentive.IRecipientContainer[]|null);
 
             /** GenesisState reward_stores */
             reward_stores?: (ununifi.ecosystemincentive.IRewardStore[]|null);
@@ -9113,8 +9103,8 @@ export namespace ununifi {
             /** GenesisState params. */
             public params?: (ununifi.ecosystemincentive.IParams|null);
 
-            /** GenesisState incentive_units. */
-            public incentive_units: ununifi.ecosystemincentive.IIncentiveUnit[];
+            /** GenesisState recipient_containers. */
+            public recipient_containers: ununifi.ecosystemincentive.IRecipientContainer[];
 
             /** GenesisState reward_stores. */
             public reward_stores: ununifi.ecosystemincentive.IRewardStore[];
@@ -9186,11 +9176,11 @@ export namespace ununifi {
         /** Properties of an EventRegister. */
         interface IEventRegister {
 
-            /** EventRegister incentive_unit_id */
-            incentive_unit_id?: (string|null);
+            /** EventRegister recipient_container_id */
+            recipient_container_id?: (string|null);
 
-            /** EventRegister subject_info_lists */
-            subject_info_lists?: (ununifi.ecosystemincentive.ISubjectInfo[]|null);
+            /** EventRegister weighted_addresses */
+            weighted_addresses?: (ununifi.ecosystemincentive.IWeightedAddress[]|null);
         }
 
         /** Represents an EventRegister. */
@@ -9202,11 +9192,11 @@ export namespace ununifi {
              */
             constructor(properties?: ununifi.ecosystemincentive.IEventRegister);
 
-            /** EventRegister incentive_unit_id. */
-            public incentive_unit_id: string;
+            /** EventRegister recipient_container_id. */
+            public recipient_container_id: string;
 
-            /** EventRegister subject_info_lists. */
-            public subject_info_lists: ununifi.ecosystemincentive.ISubjectInfo[];
+            /** EventRegister weighted_addresses. */
+            public weighted_addresses: ununifi.ecosystemincentive.IWeightedAddress[];
 
             /**
              * Encodes the specified EventRegister message. Does not implicitly {@link ununifi.ecosystemincentive.EventRegister.verify|verify} messages.
@@ -9450,191 +9440,191 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of an EventFailedParsingMemoInputs. */
-        interface IEventFailedParsingMemoInputs {
+        /** Properties of an EventFailedParsingTxMemoData. */
+        interface IEventFailedParsingTxMemoData {
 
-            /** EventFailedParsingMemoInputs class_id */
+            /** EventFailedParsingTxMemoData class_id */
             class_id?: (string|null);
 
-            /** EventFailedParsingMemoInputs nft_id */
+            /** EventFailedParsingTxMemoData nft_id */
             nft_id?: (string|null);
 
-            /** EventFailedParsingMemoInputs memo */
+            /** EventFailedParsingTxMemoData memo */
             memo?: (string|null);
         }
 
-        /** Represents an EventFailedParsingMemoInputs. */
-        class EventFailedParsingMemoInputs implements IEventFailedParsingMemoInputs {
+        /** Represents an EventFailedParsingTxMemoData. */
+        class EventFailedParsingTxMemoData implements IEventFailedParsingTxMemoData {
 
             /**
-             * Constructs a new EventFailedParsingMemoInputs.
+             * Constructs a new EventFailedParsingTxMemoData.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ecosystemincentive.IEventFailedParsingMemoInputs);
+            constructor(properties?: ununifi.ecosystemincentive.IEventFailedParsingTxMemoData);
 
-            /** EventFailedParsingMemoInputs class_id. */
+            /** EventFailedParsingTxMemoData class_id. */
             public class_id: string;
 
-            /** EventFailedParsingMemoInputs nft_id. */
+            /** EventFailedParsingTxMemoData nft_id. */
             public nft_id: string;
 
-            /** EventFailedParsingMemoInputs memo. */
+            /** EventFailedParsingTxMemoData memo. */
             public memo: string;
 
             /**
-             * Encodes the specified EventFailedParsingMemoInputs message. Does not implicitly {@link ununifi.ecosystemincentive.EventFailedParsingMemoInputs.verify|verify} messages.
-             * @param message EventFailedParsingMemoInputs message or plain object to encode
+             * Encodes the specified EventFailedParsingTxMemoData message. Does not implicitly {@link ununifi.ecosystemincentive.EventFailedParsingTxMemoData.verify|verify} messages.
+             * @param message EventFailedParsingTxMemoData message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ecosystemincentive.IEventFailedParsingMemoInputs, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.IEventFailedParsingTxMemoData, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventFailedParsingMemoInputs message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventFailedParsingMemoInputs.verify|verify} messages.
-             * @param message EventFailedParsingMemoInputs message or plain object to encode
+             * Encodes the specified EventFailedParsingTxMemoData message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventFailedParsingTxMemoData.verify|verify} messages.
+             * @param message EventFailedParsingTxMemoData message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ecosystemincentive.IEventFailedParsingMemoInputs, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.IEventFailedParsingTxMemoData, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes an EventFailedParsingMemoInputs message from the specified reader or buffer.
+             * Decodes an EventFailedParsingTxMemoData message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns EventFailedParsingMemoInputs
+             * @returns EventFailedParsingTxMemoData
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.EventFailedParsingMemoInputs;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.EventFailedParsingTxMemoData;
 
             /**
-             * Decodes an EventFailedParsingMemoInputs message from the specified reader or buffer, length delimited.
+             * Decodes an EventFailedParsingTxMemoData message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns EventFailedParsingMemoInputs
+             * @returns EventFailedParsingTxMemoData
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.EventFailedParsingMemoInputs;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.EventFailedParsingTxMemoData;
 
             /**
-             * Verifies an EventFailedParsingMemoInputs message.
+             * Verifies an EventFailedParsingTxMemoData message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates an EventFailedParsingMemoInputs message from a plain object. Also converts values to their respective internal types.
+             * Creates an EventFailedParsingTxMemoData message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns EventFailedParsingMemoInputs
+             * @returns EventFailedParsingTxMemoData
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.EventFailedParsingMemoInputs;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.EventFailedParsingTxMemoData;
 
             /**
-             * Creates a plain object from an EventFailedParsingMemoInputs message. Also converts values to other types if specified.
-             * @param message EventFailedParsingMemoInputs
+             * Creates a plain object from an EventFailedParsingTxMemoData message. Also converts values to other types if specified.
+             * @param message EventFailedParsingTxMemoData
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ecosystemincentive.EventFailedParsingMemoInputs, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.EventFailedParsingTxMemoData, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this EventFailedParsingMemoInputs to JSON.
+             * Converts this EventFailedParsingTxMemoData to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of an EventRecordedIncentiveUnitId. */
-        interface IEventRecordedIncentiveUnitId {
+        /** Properties of an EventRecordedRecipientContainerId. */
+        interface IEventRecordedRecipientContainerId {
 
-            /** EventRecordedIncentiveUnitId incentive_unit_id */
-            incentive_unit_id?: (string|null);
+            /** EventRecordedRecipientContainerId recipient_container_id */
+            recipient_container_id?: (string|null);
 
-            /** EventRecordedIncentiveUnitId class_id */
+            /** EventRecordedRecipientContainerId class_id */
             class_id?: (string|null);
 
-            /** EventRecordedIncentiveUnitId nft_id */
+            /** EventRecordedRecipientContainerId nft_id */
             nft_id?: (string|null);
         }
 
-        /** Represents an EventRecordedIncentiveUnitId. */
-        class EventRecordedIncentiveUnitId implements IEventRecordedIncentiveUnitId {
+        /** Represents an EventRecordedRecipientContainerId. */
+        class EventRecordedRecipientContainerId implements IEventRecordedRecipientContainerId {
 
             /**
-             * Constructs a new EventRecordedIncentiveUnitId.
+             * Constructs a new EventRecordedRecipientContainerId.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ecosystemincentive.IEventRecordedIncentiveUnitId);
+            constructor(properties?: ununifi.ecosystemincentive.IEventRecordedRecipientContainerId);
 
-            /** EventRecordedIncentiveUnitId incentive_unit_id. */
-            public incentive_unit_id: string;
+            /** EventRecordedRecipientContainerId recipient_container_id. */
+            public recipient_container_id: string;
 
-            /** EventRecordedIncentiveUnitId class_id. */
+            /** EventRecordedRecipientContainerId class_id. */
             public class_id: string;
 
-            /** EventRecordedIncentiveUnitId nft_id. */
+            /** EventRecordedRecipientContainerId nft_id. */
             public nft_id: string;
 
             /**
-             * Encodes the specified EventRecordedIncentiveUnitId message. Does not implicitly {@link ununifi.ecosystemincentive.EventRecordedIncentiveUnitId.verify|verify} messages.
-             * @param message EventRecordedIncentiveUnitId message or plain object to encode
+             * Encodes the specified EventRecordedRecipientContainerId message. Does not implicitly {@link ununifi.ecosystemincentive.EventRecordedRecipientContainerId.verify|verify} messages.
+             * @param message EventRecordedRecipientContainerId message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ecosystemincentive.IEventRecordedIncentiveUnitId, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.IEventRecordedRecipientContainerId, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventRecordedIncentiveUnitId message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventRecordedIncentiveUnitId.verify|verify} messages.
-             * @param message EventRecordedIncentiveUnitId message or plain object to encode
+             * Encodes the specified EventRecordedRecipientContainerId message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventRecordedRecipientContainerId.verify|verify} messages.
+             * @param message EventRecordedRecipientContainerId message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ecosystemincentive.IEventRecordedIncentiveUnitId, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.IEventRecordedRecipientContainerId, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes an EventRecordedIncentiveUnitId message from the specified reader or buffer.
+             * Decodes an EventRecordedRecipientContainerId message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns EventRecordedIncentiveUnitId
+             * @returns EventRecordedRecipientContainerId
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.EventRecordedIncentiveUnitId;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.EventRecordedRecipientContainerId;
 
             /**
-             * Decodes an EventRecordedIncentiveUnitId message from the specified reader or buffer, length delimited.
+             * Decodes an EventRecordedRecipientContainerId message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns EventRecordedIncentiveUnitId
+             * @returns EventRecordedRecipientContainerId
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.EventRecordedIncentiveUnitId;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.EventRecordedRecipientContainerId;
 
             /**
-             * Verifies an EventRecordedIncentiveUnitId message.
+             * Verifies an EventRecordedRecipientContainerId message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates an EventRecordedIncentiveUnitId message from a plain object. Also converts values to their respective internal types.
+             * Creates an EventRecordedRecipientContainerId message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns EventRecordedIncentiveUnitId
+             * @returns EventRecordedRecipientContainerId
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.EventRecordedIncentiveUnitId;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.EventRecordedRecipientContainerId;
 
             /**
-             * Creates a plain object from an EventRecordedIncentiveUnitId message. Also converts values to other types if specified.
-             * @param message EventRecordedIncentiveUnitId
+             * Creates a plain object from an EventRecordedRecipientContainerId message. Also converts values to other types if specified.
+             * @param message EventRecordedRecipientContainerId
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ecosystemincentive.EventRecordedIncentiveUnitId, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.EventRecordedRecipientContainerId, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this EventRecordedIncentiveUnitId to JSON.
+             * Converts this EventRecordedRecipientContainerId to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -9643,8 +9633,8 @@ export namespace ununifi {
         /** Properties of an EventDeletedNftIdRecordedForFrontendReward. */
         interface IEventDeletedNftIdRecordedForFrontendReward {
 
-            /** EventDeletedNftIdRecordedForFrontendReward incentive_unit_id */
-            incentive_unit_id?: (string|null);
+            /** EventDeletedNftIdRecordedForFrontendReward recipient_container_id */
+            recipient_container_id?: (string|null);
 
             /** EventDeletedNftIdRecordedForFrontendReward class_id */
             class_id?: (string|null);
@@ -9662,8 +9652,8 @@ export namespace ununifi {
              */
             constructor(properties?: ununifi.ecosystemincentive.IEventDeletedNftIdRecordedForFrontendReward);
 
-            /** EventDeletedNftIdRecordedForFrontendReward incentive_unit_id. */
-            public incentive_unit_id: string;
+            /** EventDeletedNftIdRecordedForFrontendReward recipient_container_id. */
+            public recipient_container_id: string;
 
             /** EventDeletedNftIdRecordedForFrontendReward class_id. */
             public class_id: string;
@@ -9735,96 +9725,96 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of an EventNotRegisteredIncentiveUnitId. */
-        interface IEventNotRegisteredIncentiveUnitId {
+        /** Properties of an EventNotRegisteredRecipientContainerId. */
+        interface IEventNotRegisteredRecipientContainerId {
 
-            /** EventNotRegisteredIncentiveUnitId incentive_unit_id */
-            incentive_unit_id?: (string|null);
+            /** EventNotRegisteredRecipientContainerId recipient_container_id */
+            recipient_container_id?: (string|null);
 
-            /** EventNotRegisteredIncentiveUnitId class_id */
+            /** EventNotRegisteredRecipientContainerId class_id */
             class_id?: (string|null);
 
-            /** EventNotRegisteredIncentiveUnitId nft_id */
+            /** EventNotRegisteredRecipientContainerId nft_id */
             nft_id?: (string|null);
         }
 
-        /** Represents an EventNotRegisteredIncentiveUnitId. */
-        class EventNotRegisteredIncentiveUnitId implements IEventNotRegisteredIncentiveUnitId {
+        /** Represents an EventNotRegisteredRecipientContainerId. */
+        class EventNotRegisteredRecipientContainerId implements IEventNotRegisteredRecipientContainerId {
 
             /**
-             * Constructs a new EventNotRegisteredIncentiveUnitId.
+             * Constructs a new EventNotRegisteredRecipientContainerId.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ecosystemincentive.IEventNotRegisteredIncentiveUnitId);
+            constructor(properties?: ununifi.ecosystemincentive.IEventNotRegisteredRecipientContainerId);
 
-            /** EventNotRegisteredIncentiveUnitId incentive_unit_id. */
-            public incentive_unit_id: string;
+            /** EventNotRegisteredRecipientContainerId recipient_container_id. */
+            public recipient_container_id: string;
 
-            /** EventNotRegisteredIncentiveUnitId class_id. */
+            /** EventNotRegisteredRecipientContainerId class_id. */
             public class_id: string;
 
-            /** EventNotRegisteredIncentiveUnitId nft_id. */
+            /** EventNotRegisteredRecipientContainerId nft_id. */
             public nft_id: string;
 
             /**
-             * Encodes the specified EventNotRegisteredIncentiveUnitId message. Does not implicitly {@link ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId.verify|verify} messages.
-             * @param message EventNotRegisteredIncentiveUnitId message or plain object to encode
+             * Encodes the specified EventNotRegisteredRecipientContainerId message. Does not implicitly {@link ununifi.ecosystemincentive.EventNotRegisteredRecipientContainerId.verify|verify} messages.
+             * @param message EventNotRegisteredRecipientContainerId message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ecosystemincentive.IEventNotRegisteredIncentiveUnitId, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.IEventNotRegisteredRecipientContainerId, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventNotRegisteredIncentiveUnitId message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId.verify|verify} messages.
-             * @param message EventNotRegisteredIncentiveUnitId message or plain object to encode
+             * Encodes the specified EventNotRegisteredRecipientContainerId message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventNotRegisteredRecipientContainerId.verify|verify} messages.
+             * @param message EventNotRegisteredRecipientContainerId message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ecosystemincentive.IEventNotRegisteredIncentiveUnitId, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.IEventNotRegisteredRecipientContainerId, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes an EventNotRegisteredIncentiveUnitId message from the specified reader or buffer.
+             * Decodes an EventNotRegisteredRecipientContainerId message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns EventNotRegisteredIncentiveUnitId
+             * @returns EventNotRegisteredRecipientContainerId
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.EventNotRegisteredRecipientContainerId;
 
             /**
-             * Decodes an EventNotRegisteredIncentiveUnitId message from the specified reader or buffer, length delimited.
+             * Decodes an EventNotRegisteredRecipientContainerId message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns EventNotRegisteredIncentiveUnitId
+             * @returns EventNotRegisteredRecipientContainerId
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.EventNotRegisteredRecipientContainerId;
 
             /**
-             * Verifies an EventNotRegisteredIncentiveUnitId message.
+             * Verifies an EventNotRegisteredRecipientContainerId message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates an EventNotRegisteredIncentiveUnitId message from a plain object. Also converts values to their respective internal types.
+             * Creates an EventNotRegisteredRecipientContainerId message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns EventNotRegisteredIncentiveUnitId
+             * @returns EventNotRegisteredRecipientContainerId
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.EventNotRegisteredRecipientContainerId;
 
             /**
-             * Creates a plain object from an EventNotRegisteredIncentiveUnitId message. Also converts values to other types if specified.
-             * @param message EventNotRegisteredIncentiveUnitId
+             * Creates a plain object from an EventNotRegisteredRecipientContainerId message. Also converts values to other types if specified.
+             * @param message EventNotRegisteredRecipientContainerId
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ecosystemincentive.EventNotRegisteredIncentiveUnitId, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.EventNotRegisteredRecipientContainerId, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this EventNotRegisteredIncentiveUnitId to JSON.
+             * Converts this EventNotRegisteredRecipientContainerId to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -9922,8 +9912,8 @@ export namespace ununifi {
         /** Properties of an EventUpdatedReward. */
         interface IEventUpdatedReward {
 
-            /** EventUpdatedReward incentive_unit_id */
-            incentive_unit_id?: (string|null);
+            /** EventUpdatedReward recipient_container_id */
+            recipient_container_id?: (string|null);
 
             /** EventUpdatedReward earned_reward */
             earned_reward?: (cosmos.base.v1beta1.ICoin|null);
@@ -9938,8 +9928,8 @@ export namespace ununifi {
              */
             constructor(properties?: ununifi.ecosystemincentive.IEventUpdatedReward);
 
-            /** EventUpdatedReward incentive_unit_id. */
-            public incentive_unit_id: string;
+            /** EventUpdatedReward recipient_container_id. */
+            public recipient_container_id: string;
 
             /** EventUpdatedReward earned_reward. */
             public earned_reward?: (cosmos.base.v1beta1.ICoin|null);
@@ -10102,115 +10092,186 @@ export namespace ununifi {
              */
             public toJSON(): { [k: string]: any };
         }
-    }
 
-    /** Namespace ethereum. */
-    namespace ethereum {
+        /** Properties of an EventDistributionForStakers. */
+        interface IEventDistributionForStakers {
 
-        /** Properties of a SignDocForMetamask. */
-        interface ISignDocForMetamask {
+            /** EventDistributionForStakers distributed_amount */
+            distributed_amount?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** SignDocForMetamask body */
-            body?: (cosmos.tx.v1beta1.ITxBody|null);
-
-            /** SignDocForMetamask auth_info */
-            auth_info?: (cosmos.tx.v1beta1.IAuthInfo|null);
-
-            /** SignDocForMetamask chain_id */
-            chain_id?: (string|null);
-
-            /** SignDocForMetamask account_number */
-            account_number?: (Long|null);
+            /** EventDistributionForStakers block_height */
+            block_height?: (Long|null);
         }
 
-        /** Represents a SignDocForMetamask. */
-        class SignDocForMetamask implements ISignDocForMetamask {
+        /** Represents an EventDistributionForStakers. */
+        class EventDistributionForStakers implements IEventDistributionForStakers {
 
             /**
-             * Constructs a new SignDocForMetamask.
+             * Constructs a new EventDistributionForStakers.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.ethereum.ISignDocForMetamask);
+            constructor(properties?: ununifi.ecosystemincentive.IEventDistributionForStakers);
 
-            /** SignDocForMetamask body. */
-            public body?: (cosmos.tx.v1beta1.ITxBody|null);
+            /** EventDistributionForStakers distributed_amount. */
+            public distributed_amount?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** SignDocForMetamask auth_info. */
-            public auth_info?: (cosmos.tx.v1beta1.IAuthInfo|null);
-
-            /** SignDocForMetamask chain_id. */
-            public chain_id: string;
-
-            /** SignDocForMetamask account_number. */
-            public account_number: Long;
+            /** EventDistributionForStakers block_height. */
+            public block_height: Long;
 
             /**
-             * Encodes the specified SignDocForMetamask message. Does not implicitly {@link ununifi.ethereum.SignDocForMetamask.verify|verify} messages.
-             * @param message SignDocForMetamask message or plain object to encode
+             * Encodes the specified EventDistributionForStakers message. Does not implicitly {@link ununifi.ecosystemincentive.EventDistributionForStakers.verify|verify} messages.
+             * @param message EventDistributionForStakers message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.ethereum.ISignDocForMetamask, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.ecosystemincentive.IEventDistributionForStakers, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified SignDocForMetamask message, length delimited. Does not implicitly {@link ununifi.ethereum.SignDocForMetamask.verify|verify} messages.
-             * @param message SignDocForMetamask message or plain object to encode
+             * Encodes the specified EventDistributionForStakers message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventDistributionForStakers.verify|verify} messages.
+             * @param message EventDistributionForStakers message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.ethereum.ISignDocForMetamask, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.ecosystemincentive.IEventDistributionForStakers, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a SignDocForMetamask message from the specified reader or buffer.
+             * Decodes an EventDistributionForStakers message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns SignDocForMetamask
+             * @returns EventDistributionForStakers
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ethereum.SignDocForMetamask;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.ecosystemincentive.EventDistributionForStakers;
 
             /**
-             * Decodes a SignDocForMetamask message from the specified reader or buffer, length delimited.
+             * Decodes an EventDistributionForStakers message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns SignDocForMetamask
+             * @returns EventDistributionForStakers
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ethereum.SignDocForMetamask;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.ecosystemincentive.EventDistributionForStakers;
 
             /**
-             * Verifies a SignDocForMetamask message.
+             * Verifies an EventDistributionForStakers message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a SignDocForMetamask message from a plain object. Also converts values to their respective internal types.
+             * Creates an EventDistributionForStakers message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns SignDocForMetamask
+             * @returns EventDistributionForStakers
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.ethereum.SignDocForMetamask;
+            public static fromObject(object: { [k: string]: any }): ununifi.ecosystemincentive.EventDistributionForStakers;
 
             /**
-             * Creates a plain object from a SignDocForMetamask message. Also converts values to other types if specified.
-             * @param message SignDocForMetamask
+             * Creates a plain object from an EventDistributionForStakers message. Also converts values to other types if specified.
+             * @param message EventDistributionForStakers
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.ethereum.SignDocForMetamask, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.ecosystemincentive.EventDistributionForStakers, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this SignDocForMetamask to JSON.
+             * Converts this EventDistributionForStakers to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
     }
 
-    /** Namespace nftmarket. */
-    namespace nftmarket {
+    /** Namespace nft. */
+    namespace nft {
+
+        /** Properties of a NftData. */
+        interface INftData {
+
+            /** NftData send_disabled */
+            send_disabled?: (boolean|null);
+        }
+
+        /** Represents a NftData. */
+        class NftData implements INftData {
+
+            /**
+             * Constructs a new NftData.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.nft.INftData);
+
+            /** NftData send_disabled. */
+            public send_disabled: boolean;
+
+            /**
+             * Encodes the specified NftData message. Does not implicitly {@link ununifi.nft.NftData.verify|verify} messages.
+             * @param message NftData message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.nft.INftData, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified NftData message, length delimited. Does not implicitly {@link ununifi.nft.NftData.verify|verify} messages.
+             * @param message NftData message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.nft.INftData, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a NftData message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns NftData
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nft.NftData;
+
+            /**
+             * Decodes a NftData message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns NftData
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nft.NftData;
+
+            /**
+             * Verifies a NftData message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a NftData message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns NftData
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.nft.NftData;
+
+            /**
+             * Creates a plain object from a NftData message. Also converts values to other types if specified.
+             * @param message NftData
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.nft.NftData, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this NftData to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+    }
+
+    /** Namespace nftbackedloan. */
+    namespace nftbackedloan {
 
         /** Represents a Query */
         class Query extends $protobuf.rpc.Service {
@@ -10228,276 +10289,276 @@ export namespace ununifi {
              * @param request QueryParamsRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryParamsResponse
              */
-            public params(request: ununifi.nftmarket.IQueryParamsRequest, callback: ununifi.nftmarket.Query.ParamsCallback): void;
+            public params(request: ununifi.nftbackedloan.IQueryParamsRequest, callback: ununifi.nftbackedloan.Query.ParamsCallback): void;
 
             /**
              * Calls Params.
              * @param request QueryParamsRequest message or plain object
              * @returns Promise
              */
-            public params(request: ununifi.nftmarket.IQueryParamsRequest): Promise<ununifi.nftmarket.QueryParamsResponse>;
+            public params(request: ununifi.nftbackedloan.IQueryParamsRequest): Promise<ununifi.nftbackedloan.QueryParamsResponse>;
 
             /**
              * Calls NftListing.
              * @param request QueryNftListingRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryNftListingResponse
              */
-            public nftListing(request: ununifi.nftmarket.IQueryNftListingRequest, callback: ununifi.nftmarket.Query.NftListingCallback): void;
+            public nftListing(request: ununifi.nftbackedloan.IQueryNftListingRequest, callback: ununifi.nftbackedloan.Query.NftListingCallback): void;
 
             /**
              * Calls NftListing.
              * @param request QueryNftListingRequest message or plain object
              * @returns Promise
              */
-            public nftListing(request: ununifi.nftmarket.IQueryNftListingRequest): Promise<ununifi.nftmarket.QueryNftListingResponse>;
+            public nftListing(request: ununifi.nftbackedloan.IQueryNftListingRequest): Promise<ununifi.nftbackedloan.QueryNftListingResponse>;
 
             /**
              * Calls ListedNfts.
              * @param request QueryListedNftsRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryListedNftsResponse
              */
-            public listedNfts(request: ununifi.nftmarket.IQueryListedNftsRequest, callback: ununifi.nftmarket.Query.ListedNftsCallback): void;
+            public listedNfts(request: ununifi.nftbackedloan.IQueryListedNftsRequest, callback: ununifi.nftbackedloan.Query.ListedNftsCallback): void;
 
             /**
              * Calls ListedNfts.
              * @param request QueryListedNftsRequest message or plain object
              * @returns Promise
              */
-            public listedNfts(request: ununifi.nftmarket.IQueryListedNftsRequest): Promise<ununifi.nftmarket.QueryListedNftsResponse>;
+            public listedNfts(request: ununifi.nftbackedloan.IQueryListedNftsRequest): Promise<ununifi.nftbackedloan.QueryListedNftsResponse>;
 
             /**
              * Calls ListedClasses.
              * @param request QueryListedClassesRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryListedClassesResponse
              */
-            public listedClasses(request: ununifi.nftmarket.IQueryListedClassesRequest, callback: ununifi.nftmarket.Query.ListedClassesCallback): void;
+            public listedClasses(request: ununifi.nftbackedloan.IQueryListedClassesRequest, callback: ununifi.nftbackedloan.Query.ListedClassesCallback): void;
 
             /**
              * Calls ListedClasses.
              * @param request QueryListedClassesRequest message or plain object
              * @returns Promise
              */
-            public listedClasses(request: ununifi.nftmarket.IQueryListedClassesRequest): Promise<ununifi.nftmarket.QueryListedClassesResponse>;
+            public listedClasses(request: ununifi.nftbackedloan.IQueryListedClassesRequest): Promise<ununifi.nftbackedloan.QueryListedClassesResponse>;
 
             /**
              * Calls ListedClass.
              * @param request QueryListedClassRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryListedClassResponse
              */
-            public listedClass(request: ununifi.nftmarket.IQueryListedClassRequest, callback: ununifi.nftmarket.Query.ListedClassCallback): void;
+            public listedClass(request: ununifi.nftbackedloan.IQueryListedClassRequest, callback: ununifi.nftbackedloan.Query.ListedClassCallback): void;
 
             /**
              * Calls ListedClass.
              * @param request QueryListedClassRequest message or plain object
              * @returns Promise
              */
-            public listedClass(request: ununifi.nftmarket.IQueryListedClassRequest): Promise<ununifi.nftmarket.QueryListedClassResponse>;
+            public listedClass(request: ununifi.nftbackedloan.IQueryListedClassRequest): Promise<ununifi.nftbackedloan.QueryListedClassResponse>;
 
             /**
              * Calls Loans.
              * @param request QueryLoansRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryLoansResponse
              */
-            public loans(request: ununifi.nftmarket.IQueryLoansRequest, callback: ununifi.nftmarket.Query.LoansCallback): void;
+            public loans(request: ununifi.nftbackedloan.IQueryLoansRequest, callback: ununifi.nftbackedloan.Query.LoansCallback): void;
 
             /**
              * Calls Loans.
              * @param request QueryLoansRequest message or plain object
              * @returns Promise
              */
-            public loans(request: ununifi.nftmarket.IQueryLoansRequest): Promise<ununifi.nftmarket.QueryLoansResponse>;
+            public loans(request: ununifi.nftbackedloan.IQueryLoansRequest): Promise<ununifi.nftbackedloan.QueryLoansResponse>;
 
             /**
              * Calls Loan.
              * @param request QueryLoanRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryLoanResponse
              */
-            public loan(request: ununifi.nftmarket.IQueryLoanRequest, callback: ununifi.nftmarket.Query.LoanCallback): void;
+            public loan(request: ununifi.nftbackedloan.IQueryLoanRequest, callback: ununifi.nftbackedloan.Query.LoanCallback): void;
 
             /**
              * Calls Loan.
              * @param request QueryLoanRequest message or plain object
              * @returns Promise
              */
-            public loan(request: ununifi.nftmarket.IQueryLoanRequest): Promise<ununifi.nftmarket.QueryLoanResponse>;
+            public loan(request: ununifi.nftbackedloan.IQueryLoanRequest): Promise<ununifi.nftbackedloan.QueryLoanResponse>;
 
             /**
              * Calls CDPsList.
              * @param request QueryCDPsListRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryCDPsListResponse
              */
-            public cDPsList(request: ununifi.nftmarket.IQueryCDPsListRequest, callback: ununifi.nftmarket.Query.CDPsListCallback): void;
+            public cDPsList(request: ununifi.nftbackedloan.IQueryCDPsListRequest, callback: ununifi.nftbackedloan.Query.CDPsListCallback): void;
 
             /**
              * Calls CDPsList.
              * @param request QueryCDPsListRequest message or plain object
              * @returns Promise
              */
-            public cDPsList(request: ununifi.nftmarket.IQueryCDPsListRequest): Promise<ununifi.nftmarket.QueryCDPsListResponse>;
+            public cDPsList(request: ununifi.nftbackedloan.IQueryCDPsListRequest): Promise<ununifi.nftbackedloan.QueryCDPsListResponse>;
 
             /**
              * Calls NftBids.
              * @param request QueryNftBidsRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryNftBidsResponse
              */
-            public nftBids(request: ununifi.nftmarket.IQueryNftBidsRequest, callback: ununifi.nftmarket.Query.NftBidsCallback): void;
+            public nftBids(request: ununifi.nftbackedloan.IQueryNftBidsRequest, callback: ununifi.nftbackedloan.Query.NftBidsCallback): void;
 
             /**
              * Calls NftBids.
              * @param request QueryNftBidsRequest message or plain object
              * @returns Promise
              */
-            public nftBids(request: ununifi.nftmarket.IQueryNftBidsRequest): Promise<ununifi.nftmarket.QueryNftBidsResponse>;
+            public nftBids(request: ununifi.nftbackedloan.IQueryNftBidsRequest): Promise<ununifi.nftbackedloan.QueryNftBidsResponse>;
 
             /**
              * Calls BidderBids.
              * @param request QueryBidderBidsRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryBidderBidsResponse
              */
-            public bidderBids(request: ununifi.nftmarket.IQueryBidderBidsRequest, callback: ununifi.nftmarket.Query.BidderBidsCallback): void;
+            public bidderBids(request: ununifi.nftbackedloan.IQueryBidderBidsRequest, callback: ununifi.nftbackedloan.Query.BidderBidsCallback): void;
 
             /**
              * Calls BidderBids.
              * @param request QueryBidderBidsRequest message or plain object
              * @returns Promise
              */
-            public bidderBids(request: ununifi.nftmarket.IQueryBidderBidsRequest): Promise<ununifi.nftmarket.QueryBidderBidsResponse>;
+            public bidderBids(request: ununifi.nftbackedloan.IQueryBidderBidsRequest): Promise<ununifi.nftbackedloan.QueryBidderBidsResponse>;
 
             /**
              * Calls PaymentStatus.
              * @param request QueryPaymentStatusRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryPaymentStatusResponse
              */
-            public paymentStatus(request: ununifi.nftmarket.IQueryPaymentStatusRequest, callback: ununifi.nftmarket.Query.PaymentStatusCallback): void;
+            public paymentStatus(request: ununifi.nftbackedloan.IQueryPaymentStatusRequest, callback: ununifi.nftbackedloan.Query.PaymentStatusCallback): void;
 
             /**
              * Calls PaymentStatus.
              * @param request QueryPaymentStatusRequest message or plain object
              * @returns Promise
              */
-            public paymentStatus(request: ununifi.nftmarket.IQueryPaymentStatusRequest): Promise<ununifi.nftmarket.QueryPaymentStatusResponse>;
+            public paymentStatus(request: ununifi.nftbackedloan.IQueryPaymentStatusRequest): Promise<ununifi.nftbackedloan.QueryPaymentStatusResponse>;
 
             /**
              * Calls Rewards.
              * @param request QueryRewardsRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryRewardsResponse
              */
-            public rewards(request: ununifi.nftmarket.IQueryRewardsRequest, callback: ununifi.nftmarket.Query.RewardsCallback): void;
+            public rewards(request: ununifi.nftbackedloan.IQueryRewardsRequest, callback: ununifi.nftbackedloan.Query.RewardsCallback): void;
 
             /**
              * Calls Rewards.
              * @param request QueryRewardsRequest message or plain object
              * @returns Promise
              */
-            public rewards(request: ununifi.nftmarket.IQueryRewardsRequest): Promise<ununifi.nftmarket.QueryRewardsResponse>;
+            public rewards(request: ununifi.nftbackedloan.IQueryRewardsRequest): Promise<ununifi.nftbackedloan.QueryRewardsResponse>;
 
             /**
              * Calls Liquidation.
              * @param request QueryLiquidationRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryLiquidationResponse
              */
-            public liquidation(request: ununifi.nftmarket.IQueryLiquidationRequest, callback: ununifi.nftmarket.Query.LiquidationCallback): void;
+            public liquidation(request: ununifi.nftbackedloan.IQueryLiquidationRequest, callback: ununifi.nftbackedloan.Query.LiquidationCallback): void;
 
             /**
              * Calls Liquidation.
              * @param request QueryLiquidationRequest message or plain object
              * @returns Promise
              */
-            public liquidation(request: ununifi.nftmarket.IQueryLiquidationRequest): Promise<ununifi.nftmarket.QueryLiquidationResponse>;
+            public liquidation(request: ununifi.nftbackedloan.IQueryLiquidationRequest): Promise<ununifi.nftbackedloan.QueryLiquidationResponse>;
         }
 
         namespace Query {
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Query#params}.
+             * Callback as used by {@link ununifi.nftbackedloan.Query#params}.
              * @param error Error, if any
              * @param [response] QueryParamsResponse
              */
-            type ParamsCallback = (error: (Error|null), response?: ununifi.nftmarket.QueryParamsResponse) => void;
+            type ParamsCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryParamsResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Query#nftListing}.
+             * Callback as used by {@link ununifi.nftbackedloan.Query#nftListing}.
              * @param error Error, if any
              * @param [response] QueryNftListingResponse
              */
-            type NftListingCallback = (error: (Error|null), response?: ununifi.nftmarket.QueryNftListingResponse) => void;
+            type NftListingCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryNftListingResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Query#listedNfts}.
+             * Callback as used by {@link ununifi.nftbackedloan.Query#listedNfts}.
              * @param error Error, if any
              * @param [response] QueryListedNftsResponse
              */
-            type ListedNftsCallback = (error: (Error|null), response?: ununifi.nftmarket.QueryListedNftsResponse) => void;
+            type ListedNftsCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryListedNftsResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Query#listedClasses}.
+             * Callback as used by {@link ununifi.nftbackedloan.Query#listedClasses}.
              * @param error Error, if any
              * @param [response] QueryListedClassesResponse
              */
-            type ListedClassesCallback = (error: (Error|null), response?: ununifi.nftmarket.QueryListedClassesResponse) => void;
+            type ListedClassesCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryListedClassesResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Query#listedClass}.
+             * Callback as used by {@link ununifi.nftbackedloan.Query#listedClass}.
              * @param error Error, if any
              * @param [response] QueryListedClassResponse
              */
-            type ListedClassCallback = (error: (Error|null), response?: ununifi.nftmarket.QueryListedClassResponse) => void;
+            type ListedClassCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryListedClassResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Query#loans}.
+             * Callback as used by {@link ununifi.nftbackedloan.Query#loans}.
              * @param error Error, if any
              * @param [response] QueryLoansResponse
              */
-            type LoansCallback = (error: (Error|null), response?: ununifi.nftmarket.QueryLoansResponse) => void;
+            type LoansCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryLoansResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Query#loan}.
+             * Callback as used by {@link ununifi.nftbackedloan.Query#loan}.
              * @param error Error, if any
              * @param [response] QueryLoanResponse
              */
-            type LoanCallback = (error: (Error|null), response?: ununifi.nftmarket.QueryLoanResponse) => void;
+            type LoanCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryLoanResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Query#cDPsList}.
+             * Callback as used by {@link ununifi.nftbackedloan.Query#cDPsList}.
              * @param error Error, if any
              * @param [response] QueryCDPsListResponse
              */
-            type CDPsListCallback = (error: (Error|null), response?: ununifi.nftmarket.QueryCDPsListResponse) => void;
+            type CDPsListCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryCDPsListResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Query#nftBids}.
+             * Callback as used by {@link ununifi.nftbackedloan.Query#nftBids}.
              * @param error Error, if any
              * @param [response] QueryNftBidsResponse
              */
-            type NftBidsCallback = (error: (Error|null), response?: ununifi.nftmarket.QueryNftBidsResponse) => void;
+            type NftBidsCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryNftBidsResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Query#bidderBids}.
+             * Callback as used by {@link ununifi.nftbackedloan.Query#bidderBids}.
              * @param error Error, if any
              * @param [response] QueryBidderBidsResponse
              */
-            type BidderBidsCallback = (error: (Error|null), response?: ununifi.nftmarket.QueryBidderBidsResponse) => void;
+            type BidderBidsCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryBidderBidsResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Query#paymentStatus}.
+             * Callback as used by {@link ununifi.nftbackedloan.Query#paymentStatus}.
              * @param error Error, if any
              * @param [response] QueryPaymentStatusResponse
              */
-            type PaymentStatusCallback = (error: (Error|null), response?: ununifi.nftmarket.QueryPaymentStatusResponse) => void;
+            type PaymentStatusCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryPaymentStatusResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Query#rewards}.
+             * Callback as used by {@link ununifi.nftbackedloan.Query#rewards}.
              * @param error Error, if any
              * @param [response] QueryRewardsResponse
              */
-            type RewardsCallback = (error: (Error|null), response?: ununifi.nftmarket.QueryRewardsResponse) => void;
+            type RewardsCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryRewardsResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Query#liquidation}.
+             * Callback as used by {@link ununifi.nftbackedloan.Query#liquidation}.
              * @param error Error, if any
              * @param [response] QueryLiquidationResponse
              */
-            type LiquidationCallback = (error: (Error|null), response?: ununifi.nftmarket.QueryLiquidationResponse) => void;
+            type LiquidationCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryLiquidationResponse) => void;
         }
 
         /** Properties of a QueryParamsRequest. */
@@ -10511,23 +10572,23 @@ export namespace ununifi {
              * Constructs a new QueryParamsRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryParamsRequest);
+            constructor(properties?: ununifi.nftbackedloan.IQueryParamsRequest);
 
             /**
-             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.nftmarket.QueryParamsRequest.verify|verify} messages.
+             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryParamsRequest.verify|verify} messages.
              * @param message QueryParamsRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryParamsRequest.verify|verify} messages.
+             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryParamsRequest.verify|verify} messages.
              * @param message QueryParamsRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryParamsRequest message from the specified reader or buffer.
@@ -10537,7 +10598,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryParamsRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryParamsRequest;
 
             /**
              * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
@@ -10546,7 +10607,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryParamsRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryParamsRequest;
 
             /**
              * Verifies a QueryParamsRequest message.
@@ -10560,7 +10621,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryParamsRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryParamsRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryParamsRequest;
 
             /**
              * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
@@ -10568,7 +10629,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryParamsRequest to JSON.
@@ -10581,7 +10642,7 @@ export namespace ununifi {
         interface IQueryParamsResponse {
 
             /** QueryParamsResponse params */
-            params?: (ununifi.nftmarket.IParams|null);
+            params?: (ununifi.nftbackedloan.IParams|null);
         }
 
         /** Represents a QueryParamsResponse. */
@@ -10591,26 +10652,26 @@ export namespace ununifi {
              * Constructs a new QueryParamsResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryParamsResponse);
+            constructor(properties?: ununifi.nftbackedloan.IQueryParamsResponse);
 
             /** QueryParamsResponse params. */
-            public params?: (ununifi.nftmarket.IParams|null);
+            public params?: (ununifi.nftbackedloan.IParams|null);
 
             /**
-             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.nftmarket.QueryParamsResponse.verify|verify} messages.
+             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryParamsResponse.verify|verify} messages.
              * @param message QueryParamsResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryParamsResponse.verify|verify} messages.
+             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryParamsResponse.verify|verify} messages.
              * @param message QueryParamsResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryParamsResponse message from the specified reader or buffer.
@@ -10620,7 +10681,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryParamsResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryParamsResponse;
 
             /**
              * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
@@ -10629,7 +10690,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryParamsResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryParamsResponse;
 
             /**
              * Verifies a QueryParamsResponse message.
@@ -10643,7 +10704,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryParamsResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryParamsResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryParamsResponse;
 
             /**
              * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
@@ -10651,7 +10712,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryParamsResponse to JSON.
@@ -10677,7 +10738,7 @@ export namespace ununifi {
              * Constructs a new QueryNftListingRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryNftListingRequest);
+            constructor(properties?: ununifi.nftbackedloan.IQueryNftListingRequest);
 
             /** QueryNftListingRequest class_id. */
             public class_id: string;
@@ -10686,20 +10747,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified QueryNftListingRequest message. Does not implicitly {@link ununifi.nftmarket.QueryNftListingRequest.verify|verify} messages.
+             * Encodes the specified QueryNftListingRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryNftListingRequest.verify|verify} messages.
              * @param message QueryNftListingRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryNftListingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryNftListingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryNftListingRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryNftListingRequest.verify|verify} messages.
+             * Encodes the specified QueryNftListingRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryNftListingRequest.verify|verify} messages.
              * @param message QueryNftListingRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryNftListingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryNftListingRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryNftListingRequest message from the specified reader or buffer.
@@ -10709,7 +10770,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryNftListingRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryNftListingRequest;
 
             /**
              * Decodes a QueryNftListingRequest message from the specified reader or buffer, length delimited.
@@ -10718,7 +10779,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryNftListingRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryNftListingRequest;
 
             /**
              * Verifies a QueryNftListingRequest message.
@@ -10732,7 +10793,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryNftListingRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryNftListingRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryNftListingRequest;
 
             /**
              * Creates a plain object from a QueryNftListingRequest message. Also converts values to other types if specified.
@@ -10740,7 +10801,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryNftListingRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryNftListingRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryNftListingRequest to JSON.
@@ -10753,7 +10814,7 @@ export namespace ununifi {
         interface IQueryNftListingResponse {
 
             /** QueryNftListingResponse listing */
-            listing?: (ununifi.nftmarket.INftListing|null);
+            listing?: (ununifi.nftbackedloan.INftListing|null);
         }
 
         /** Represents a QueryNftListingResponse. */
@@ -10763,26 +10824,26 @@ export namespace ununifi {
              * Constructs a new QueryNftListingResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryNftListingResponse);
+            constructor(properties?: ununifi.nftbackedloan.IQueryNftListingResponse);
 
             /** QueryNftListingResponse listing. */
-            public listing?: (ununifi.nftmarket.INftListing|null);
+            public listing?: (ununifi.nftbackedloan.INftListing|null);
 
             /**
-             * Encodes the specified QueryNftListingResponse message. Does not implicitly {@link ununifi.nftmarket.QueryNftListingResponse.verify|verify} messages.
+             * Encodes the specified QueryNftListingResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryNftListingResponse.verify|verify} messages.
              * @param message QueryNftListingResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryNftListingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryNftListingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryNftListingResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryNftListingResponse.verify|verify} messages.
+             * Encodes the specified QueryNftListingResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryNftListingResponse.verify|verify} messages.
              * @param message QueryNftListingResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryNftListingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryNftListingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryNftListingResponse message from the specified reader or buffer.
@@ -10792,7 +10853,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryNftListingResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryNftListingResponse;
 
             /**
              * Decodes a QueryNftListingResponse message from the specified reader or buffer, length delimited.
@@ -10801,7 +10862,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryNftListingResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryNftListingResponse;
 
             /**
              * Verifies a QueryNftListingResponse message.
@@ -10815,7 +10876,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryNftListingResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryNftListingResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryNftListingResponse;
 
             /**
              * Creates a plain object from a QueryNftListingResponse message. Also converts values to other types if specified.
@@ -10823,7 +10884,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryNftListingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryNftListingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryNftListingResponse to JSON.
@@ -10846,26 +10907,26 @@ export namespace ununifi {
              * Constructs a new QueryListedNftsRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryListedNftsRequest);
+            constructor(properties?: ununifi.nftbackedloan.IQueryListedNftsRequest);
 
             /** QueryListedNftsRequest owner. */
             public owner: string;
 
             /**
-             * Encodes the specified QueryListedNftsRequest message. Does not implicitly {@link ununifi.nftmarket.QueryListedNftsRequest.verify|verify} messages.
+             * Encodes the specified QueryListedNftsRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryListedNftsRequest.verify|verify} messages.
              * @param message QueryListedNftsRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryListedNftsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryListedNftsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryListedNftsRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryListedNftsRequest.verify|verify} messages.
+             * Encodes the specified QueryListedNftsRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryListedNftsRequest.verify|verify} messages.
              * @param message QueryListedNftsRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryListedNftsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryListedNftsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryListedNftsRequest message from the specified reader or buffer.
@@ -10875,7 +10936,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryListedNftsRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryListedNftsRequest;
 
             /**
              * Decodes a QueryListedNftsRequest message from the specified reader or buffer, length delimited.
@@ -10884,7 +10945,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryListedNftsRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryListedNftsRequest;
 
             /**
              * Verifies a QueryListedNftsRequest message.
@@ -10898,7 +10959,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryListedNftsRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryListedNftsRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryListedNftsRequest;
 
             /**
              * Creates a plain object from a QueryListedNftsRequest message. Also converts values to other types if specified.
@@ -10906,7 +10967,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryListedNftsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryListedNftsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryListedNftsRequest to JSON.
@@ -10929,26 +10990,26 @@ export namespace ununifi {
              * Constructs a new QueryListedClassesRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryListedClassesRequest);
+            constructor(properties?: ununifi.nftbackedloan.IQueryListedClassesRequest);
 
             /** QueryListedClassesRequest nft_limit. */
             public nft_limit: number;
 
             /**
-             * Encodes the specified QueryListedClassesRequest message. Does not implicitly {@link ununifi.nftmarket.QueryListedClassesRequest.verify|verify} messages.
+             * Encodes the specified QueryListedClassesRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryListedClassesRequest.verify|verify} messages.
              * @param message QueryListedClassesRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryListedClassesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryListedClassesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryListedClassesRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryListedClassesRequest.verify|verify} messages.
+             * Encodes the specified QueryListedClassesRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryListedClassesRequest.verify|verify} messages.
              * @param message QueryListedClassesRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryListedClassesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryListedClassesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryListedClassesRequest message from the specified reader or buffer.
@@ -10958,7 +11019,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryListedClassesRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryListedClassesRequest;
 
             /**
              * Decodes a QueryListedClassesRequest message from the specified reader or buffer, length delimited.
@@ -10967,7 +11028,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryListedClassesRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryListedClassesRequest;
 
             /**
              * Verifies a QueryListedClassesRequest message.
@@ -10981,7 +11042,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryListedClassesRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryListedClassesRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryListedClassesRequest;
 
             /**
              * Creates a plain object from a QueryListedClassesRequest message. Also converts values to other types if specified.
@@ -10989,7 +11050,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryListedClassesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryListedClassesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryListedClassesRequest to JSON.
@@ -11015,7 +11076,7 @@ export namespace ununifi {
              * Constructs a new QueryListedClassRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryListedClassRequest);
+            constructor(properties?: ununifi.nftbackedloan.IQueryListedClassRequest);
 
             /** QueryListedClassRequest class_id. */
             public class_id: string;
@@ -11024,20 +11085,20 @@ export namespace ununifi {
             public nft_limit: number;
 
             /**
-             * Encodes the specified QueryListedClassRequest message. Does not implicitly {@link ununifi.nftmarket.QueryListedClassRequest.verify|verify} messages.
+             * Encodes the specified QueryListedClassRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryListedClassRequest.verify|verify} messages.
              * @param message QueryListedClassRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryListedClassRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryListedClassRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryListedClassRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryListedClassRequest.verify|verify} messages.
+             * Encodes the specified QueryListedClassRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryListedClassRequest.verify|verify} messages.
              * @param message QueryListedClassRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryListedClassRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryListedClassRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryListedClassRequest message from the specified reader or buffer.
@@ -11047,7 +11108,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryListedClassRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryListedClassRequest;
 
             /**
              * Decodes a QueryListedClassRequest message from the specified reader or buffer, length delimited.
@@ -11056,7 +11117,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryListedClassRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryListedClassRequest;
 
             /**
              * Verifies a QueryListedClassRequest message.
@@ -11070,7 +11131,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryListedClassRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryListedClassRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryListedClassRequest;
 
             /**
              * Creates a plain object from a QueryListedClassRequest message. Also converts values to other types if specified.
@@ -11078,7 +11139,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryListedClassRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryListedClassRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryListedClassRequest to JSON.
@@ -11091,10 +11152,10 @@ export namespace ununifi {
         interface INftListingDetail {
 
             /** NftListingDetail listing */
-            listing?: (ununifi.nftmarket.INftListing|null);
+            listing?: (ununifi.nftbackedloan.INftListing|null);
 
             /** NftListingDetail nft_info */
-            nft_info?: (ununifi.nftmarket.INftInfo|null);
+            nft_info?: (ununifi.nftbackedloan.INftInfo|null);
         }
 
         /** Represents a NftListingDetail. */
@@ -11104,29 +11165,29 @@ export namespace ununifi {
              * Constructs a new NftListingDetail.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.INftListingDetail);
+            constructor(properties?: ununifi.nftbackedloan.INftListingDetail);
 
             /** NftListingDetail listing. */
-            public listing?: (ununifi.nftmarket.INftListing|null);
+            public listing?: (ununifi.nftbackedloan.INftListing|null);
 
             /** NftListingDetail nft_info. */
-            public nft_info?: (ununifi.nftmarket.INftInfo|null);
+            public nft_info?: (ununifi.nftbackedloan.INftInfo|null);
 
             /**
-             * Encodes the specified NftListingDetail message. Does not implicitly {@link ununifi.nftmarket.NftListingDetail.verify|verify} messages.
+             * Encodes the specified NftListingDetail message. Does not implicitly {@link ununifi.nftbackedloan.NftListingDetail.verify|verify} messages.
              * @param message NftListingDetail message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.INftListingDetail, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.INftListingDetail, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified NftListingDetail message, length delimited. Does not implicitly {@link ununifi.nftmarket.NftListingDetail.verify|verify} messages.
+             * Encodes the specified NftListingDetail message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.NftListingDetail.verify|verify} messages.
              * @param message NftListingDetail message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.INftListingDetail, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.INftListingDetail, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a NftListingDetail message from the specified reader or buffer.
@@ -11136,7 +11197,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.NftListingDetail;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.NftListingDetail;
 
             /**
              * Decodes a NftListingDetail message from the specified reader or buffer, length delimited.
@@ -11145,7 +11206,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.NftListingDetail;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.NftListingDetail;
 
             /**
              * Verifies a NftListingDetail message.
@@ -11159,7 +11220,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns NftListingDetail
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.NftListingDetail;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.NftListingDetail;
 
             /**
              * Creates a plain object from a NftListingDetail message. Also converts values to other types if specified.
@@ -11167,7 +11228,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.NftListingDetail, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.NftListingDetail, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this NftListingDetail to JSON.
@@ -11180,7 +11241,7 @@ export namespace ununifi {
         interface IQueryListedNftsResponse {
 
             /** QueryListedNftsResponse listings */
-            listings?: (ununifi.nftmarket.INftListingDetail[]|null);
+            listings?: (ununifi.nftbackedloan.INftListingDetail[]|null);
         }
 
         /** Represents a QueryListedNftsResponse. */
@@ -11190,26 +11251,26 @@ export namespace ununifi {
              * Constructs a new QueryListedNftsResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryListedNftsResponse);
+            constructor(properties?: ununifi.nftbackedloan.IQueryListedNftsResponse);
 
             /** QueryListedNftsResponse listings. */
-            public listings: ununifi.nftmarket.INftListingDetail[];
+            public listings: ununifi.nftbackedloan.INftListingDetail[];
 
             /**
-             * Encodes the specified QueryListedNftsResponse message. Does not implicitly {@link ununifi.nftmarket.QueryListedNftsResponse.verify|verify} messages.
+             * Encodes the specified QueryListedNftsResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryListedNftsResponse.verify|verify} messages.
              * @param message QueryListedNftsResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryListedNftsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryListedNftsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryListedNftsResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryListedNftsResponse.verify|verify} messages.
+             * Encodes the specified QueryListedNftsResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryListedNftsResponse.verify|verify} messages.
              * @param message QueryListedNftsResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryListedNftsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryListedNftsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryListedNftsResponse message from the specified reader or buffer.
@@ -11219,7 +11280,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryListedNftsResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryListedNftsResponse;
 
             /**
              * Decodes a QueryListedNftsResponse message from the specified reader or buffer, length delimited.
@@ -11228,7 +11289,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryListedNftsResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryListedNftsResponse;
 
             /**
              * Verifies a QueryListedNftsResponse message.
@@ -11242,7 +11303,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryListedNftsResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryListedNftsResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryListedNftsResponse;
 
             /**
              * Creates a plain object from a QueryListedNftsResponse message. Also converts values to other types if specified.
@@ -11250,7 +11311,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryListedNftsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryListedNftsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryListedNftsResponse to JSON.
@@ -11263,7 +11324,7 @@ export namespace ununifi {
         interface IQueryListedClassesResponse {
 
             /** QueryListedClassesResponse classes */
-            classes?: (ununifi.nftmarket.IQueryListedClassResponse[]|null);
+            classes?: (ununifi.nftbackedloan.IQueryListedClassResponse[]|null);
         }
 
         /** Represents a QueryListedClassesResponse. */
@@ -11273,26 +11334,26 @@ export namespace ununifi {
              * Constructs a new QueryListedClassesResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryListedClassesResponse);
+            constructor(properties?: ununifi.nftbackedloan.IQueryListedClassesResponse);
 
             /** QueryListedClassesResponse classes. */
-            public classes: ununifi.nftmarket.IQueryListedClassResponse[];
+            public classes: ununifi.nftbackedloan.IQueryListedClassResponse[];
 
             /**
-             * Encodes the specified QueryListedClassesResponse message. Does not implicitly {@link ununifi.nftmarket.QueryListedClassesResponse.verify|verify} messages.
+             * Encodes the specified QueryListedClassesResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryListedClassesResponse.verify|verify} messages.
              * @param message QueryListedClassesResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryListedClassesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryListedClassesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryListedClassesResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryListedClassesResponse.verify|verify} messages.
+             * Encodes the specified QueryListedClassesResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryListedClassesResponse.verify|verify} messages.
              * @param message QueryListedClassesResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryListedClassesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryListedClassesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryListedClassesResponse message from the specified reader or buffer.
@@ -11302,7 +11363,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryListedClassesResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryListedClassesResponse;
 
             /**
              * Decodes a QueryListedClassesResponse message from the specified reader or buffer, length delimited.
@@ -11311,7 +11372,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryListedClassesResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryListedClassesResponse;
 
             /**
              * Verifies a QueryListedClassesResponse message.
@@ -11325,7 +11386,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryListedClassesResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryListedClassesResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryListedClassesResponse;
 
             /**
              * Creates a plain object from a QueryListedClassesResponse message. Also converts values to other types if specified.
@@ -11333,7 +11394,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryListedClassesResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryListedClassesResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryListedClassesResponse to JSON.
@@ -11364,7 +11425,7 @@ export namespace ununifi {
             urihash?: (string|null);
 
             /** QueryListedClassResponse nfts */
-            nfts?: (ununifi.nftmarket.INftInfo[]|null);
+            nfts?: (ununifi.nftbackedloan.INftInfo[]|null);
 
             /** QueryListedClassResponse nft_count */
             nft_count?: (Long|null);
@@ -11377,7 +11438,7 @@ export namespace ununifi {
              * Constructs a new QueryListedClassResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryListedClassResponse);
+            constructor(properties?: ununifi.nftbackedloan.IQueryListedClassResponse);
 
             /** QueryListedClassResponse class_id. */
             public class_id: string;
@@ -11398,26 +11459,26 @@ export namespace ununifi {
             public urihash: string;
 
             /** QueryListedClassResponse nfts. */
-            public nfts: ununifi.nftmarket.INftInfo[];
+            public nfts: ununifi.nftbackedloan.INftInfo[];
 
             /** QueryListedClassResponse nft_count. */
             public nft_count: Long;
 
             /**
-             * Encodes the specified QueryListedClassResponse message. Does not implicitly {@link ununifi.nftmarket.QueryListedClassResponse.verify|verify} messages.
+             * Encodes the specified QueryListedClassResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryListedClassResponse.verify|verify} messages.
              * @param message QueryListedClassResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryListedClassResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryListedClassResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryListedClassResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryListedClassResponse.verify|verify} messages.
+             * Encodes the specified QueryListedClassResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryListedClassResponse.verify|verify} messages.
              * @param message QueryListedClassResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryListedClassResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryListedClassResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryListedClassResponse message from the specified reader or buffer.
@@ -11427,7 +11488,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryListedClassResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryListedClassResponse;
 
             /**
              * Decodes a QueryListedClassResponse message from the specified reader or buffer, length delimited.
@@ -11436,7 +11497,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryListedClassResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryListedClassResponse;
 
             /**
              * Verifies a QueryListedClassResponse message.
@@ -11450,7 +11511,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryListedClassResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryListedClassResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryListedClassResponse;
 
             /**
              * Creates a plain object from a QueryListedClassResponse message. Also converts values to other types if specified.
@@ -11458,7 +11519,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryListedClassResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryListedClassResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryListedClassResponse to JSON.
@@ -11478,23 +11539,23 @@ export namespace ununifi {
              * Constructs a new QueryLoansRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryLoansRequest);
+            constructor(properties?: ununifi.nftbackedloan.IQueryLoansRequest);
 
             /**
-             * Encodes the specified QueryLoansRequest message. Does not implicitly {@link ununifi.nftmarket.QueryLoansRequest.verify|verify} messages.
+             * Encodes the specified QueryLoansRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryLoansRequest.verify|verify} messages.
              * @param message QueryLoansRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryLoansRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryLoansRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryLoansRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryLoansRequest.verify|verify} messages.
+             * Encodes the specified QueryLoansRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryLoansRequest.verify|verify} messages.
              * @param message QueryLoansRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryLoansRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryLoansRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryLoansRequest message from the specified reader or buffer.
@@ -11504,7 +11565,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryLoansRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryLoansRequest;
 
             /**
              * Decodes a QueryLoansRequest message from the specified reader or buffer, length delimited.
@@ -11513,7 +11574,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryLoansRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryLoansRequest;
 
             /**
              * Verifies a QueryLoansRequest message.
@@ -11527,7 +11588,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryLoansRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryLoansRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryLoansRequest;
 
             /**
              * Creates a plain object from a QueryLoansRequest message. Also converts values to other types if specified.
@@ -11535,7 +11596,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryLoansRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryLoansRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryLoansRequest to JSON.
@@ -11548,7 +11609,7 @@ export namespace ununifi {
         interface IQueryLoansResponse {
 
             /** QueryLoansResponse loans */
-            loans?: (ununifi.nftmarket.ILoan[]|null);
+            loans?: (ununifi.nftbackedloan.ILoan[]|null);
         }
 
         /** Represents a QueryLoansResponse. */
@@ -11558,26 +11619,26 @@ export namespace ununifi {
              * Constructs a new QueryLoansResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryLoansResponse);
+            constructor(properties?: ununifi.nftbackedloan.IQueryLoansResponse);
 
             /** QueryLoansResponse loans. */
-            public loans: ununifi.nftmarket.ILoan[];
+            public loans: ununifi.nftbackedloan.ILoan[];
 
             /**
-             * Encodes the specified QueryLoansResponse message. Does not implicitly {@link ununifi.nftmarket.QueryLoansResponse.verify|verify} messages.
+             * Encodes the specified QueryLoansResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryLoansResponse.verify|verify} messages.
              * @param message QueryLoansResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryLoansResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryLoansResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryLoansResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryLoansResponse.verify|verify} messages.
+             * Encodes the specified QueryLoansResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryLoansResponse.verify|verify} messages.
              * @param message QueryLoansResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryLoansResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryLoansResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryLoansResponse message from the specified reader or buffer.
@@ -11587,7 +11648,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryLoansResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryLoansResponse;
 
             /**
              * Decodes a QueryLoansResponse message from the specified reader or buffer, length delimited.
@@ -11596,7 +11657,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryLoansResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryLoansResponse;
 
             /**
              * Verifies a QueryLoansResponse message.
@@ -11610,7 +11671,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryLoansResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryLoansResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryLoansResponse;
 
             /**
              * Creates a plain object from a QueryLoansResponse message. Also converts values to other types if specified.
@@ -11618,7 +11679,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryLoansResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryLoansResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryLoansResponse to JSON.
@@ -11644,7 +11705,7 @@ export namespace ununifi {
              * Constructs a new QueryLoanRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryLoanRequest);
+            constructor(properties?: ununifi.nftbackedloan.IQueryLoanRequest);
 
             /** QueryLoanRequest class_id. */
             public class_id: string;
@@ -11653,20 +11714,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified QueryLoanRequest message. Does not implicitly {@link ununifi.nftmarket.QueryLoanRequest.verify|verify} messages.
+             * Encodes the specified QueryLoanRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryLoanRequest.verify|verify} messages.
              * @param message QueryLoanRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryLoanRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryLoanRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryLoanRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryLoanRequest.verify|verify} messages.
+             * Encodes the specified QueryLoanRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryLoanRequest.verify|verify} messages.
              * @param message QueryLoanRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryLoanRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryLoanRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryLoanRequest message from the specified reader or buffer.
@@ -11676,7 +11737,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryLoanRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryLoanRequest;
 
             /**
              * Decodes a QueryLoanRequest message from the specified reader or buffer, length delimited.
@@ -11685,7 +11746,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryLoanRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryLoanRequest;
 
             /**
              * Verifies a QueryLoanRequest message.
@@ -11699,7 +11760,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryLoanRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryLoanRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryLoanRequest;
 
             /**
              * Creates a plain object from a QueryLoanRequest message. Also converts values to other types if specified.
@@ -11707,7 +11768,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryLoanRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryLoanRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryLoanRequest to JSON.
@@ -11720,7 +11781,7 @@ export namespace ununifi {
         interface IQueryLoanResponse {
 
             /** QueryLoanResponse loan */
-            loan?: (ununifi.nftmarket.ILoan|null);
+            loan?: (ununifi.nftbackedloan.ILoan|null);
 
             /** QueryLoanResponse borrowing_limit */
             borrowing_limit?: (string|null);
@@ -11733,29 +11794,29 @@ export namespace ununifi {
              * Constructs a new QueryLoanResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryLoanResponse);
+            constructor(properties?: ununifi.nftbackedloan.IQueryLoanResponse);
 
             /** QueryLoanResponse loan. */
-            public loan?: (ununifi.nftmarket.ILoan|null);
+            public loan?: (ununifi.nftbackedloan.ILoan|null);
 
             /** QueryLoanResponse borrowing_limit. */
             public borrowing_limit: string;
 
             /**
-             * Encodes the specified QueryLoanResponse message. Does not implicitly {@link ununifi.nftmarket.QueryLoanResponse.verify|verify} messages.
+             * Encodes the specified QueryLoanResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryLoanResponse.verify|verify} messages.
              * @param message QueryLoanResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryLoanResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryLoanResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryLoanResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryLoanResponse.verify|verify} messages.
+             * Encodes the specified QueryLoanResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryLoanResponse.verify|verify} messages.
              * @param message QueryLoanResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryLoanResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryLoanResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryLoanResponse message from the specified reader or buffer.
@@ -11765,7 +11826,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryLoanResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryLoanResponse;
 
             /**
              * Decodes a QueryLoanResponse message from the specified reader or buffer, length delimited.
@@ -11774,7 +11835,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryLoanResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryLoanResponse;
 
             /**
              * Verifies a QueryLoanResponse message.
@@ -11788,7 +11849,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryLoanResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryLoanResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryLoanResponse;
 
             /**
              * Creates a plain object from a QueryLoanResponse message. Also converts values to other types if specified.
@@ -11796,7 +11857,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryLoanResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryLoanResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryLoanResponse to JSON.
@@ -11816,23 +11877,23 @@ export namespace ununifi {
              * Constructs a new QueryCDPsListRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryCDPsListRequest);
+            constructor(properties?: ununifi.nftbackedloan.IQueryCDPsListRequest);
 
             /**
-             * Encodes the specified QueryCDPsListRequest message. Does not implicitly {@link ununifi.nftmarket.QueryCDPsListRequest.verify|verify} messages.
+             * Encodes the specified QueryCDPsListRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryCDPsListRequest.verify|verify} messages.
              * @param message QueryCDPsListRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryCDPsListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryCDPsListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryCDPsListRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryCDPsListRequest.verify|verify} messages.
+             * Encodes the specified QueryCDPsListRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryCDPsListRequest.verify|verify} messages.
              * @param message QueryCDPsListRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryCDPsListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryCDPsListRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryCDPsListRequest message from the specified reader or buffer.
@@ -11842,7 +11903,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryCDPsListRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryCDPsListRequest;
 
             /**
              * Decodes a QueryCDPsListRequest message from the specified reader or buffer, length delimited.
@@ -11851,7 +11912,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryCDPsListRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryCDPsListRequest;
 
             /**
              * Verifies a QueryCDPsListRequest message.
@@ -11865,7 +11926,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryCDPsListRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryCDPsListRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryCDPsListRequest;
 
             /**
              * Creates a plain object from a QueryCDPsListRequest message. Also converts values to other types if specified.
@@ -11873,7 +11934,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryCDPsListRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryCDPsListRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryCDPsListRequest to JSON.
@@ -11893,23 +11954,23 @@ export namespace ununifi {
              * Constructs a new QueryCDPsListResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryCDPsListResponse);
+            constructor(properties?: ununifi.nftbackedloan.IQueryCDPsListResponse);
 
             /**
-             * Encodes the specified QueryCDPsListResponse message. Does not implicitly {@link ununifi.nftmarket.QueryCDPsListResponse.verify|verify} messages.
+             * Encodes the specified QueryCDPsListResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryCDPsListResponse.verify|verify} messages.
              * @param message QueryCDPsListResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryCDPsListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryCDPsListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryCDPsListResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryCDPsListResponse.verify|verify} messages.
+             * Encodes the specified QueryCDPsListResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryCDPsListResponse.verify|verify} messages.
              * @param message QueryCDPsListResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryCDPsListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryCDPsListResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryCDPsListResponse message from the specified reader or buffer.
@@ -11919,7 +11980,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryCDPsListResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryCDPsListResponse;
 
             /**
              * Decodes a QueryCDPsListResponse message from the specified reader or buffer, length delimited.
@@ -11928,7 +11989,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryCDPsListResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryCDPsListResponse;
 
             /**
              * Verifies a QueryCDPsListResponse message.
@@ -11942,7 +12003,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryCDPsListResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryCDPsListResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryCDPsListResponse;
 
             /**
              * Creates a plain object from a QueryCDPsListResponse message. Also converts values to other types if specified.
@@ -11950,7 +12011,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryCDPsListResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryCDPsListResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryCDPsListResponse to JSON.
@@ -11976,7 +12037,7 @@ export namespace ununifi {
              * Constructs a new QueryNftBidsRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryNftBidsRequest);
+            constructor(properties?: ununifi.nftbackedloan.IQueryNftBidsRequest);
 
             /** QueryNftBidsRequest class_id. */
             public class_id: string;
@@ -11985,20 +12046,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified QueryNftBidsRequest message. Does not implicitly {@link ununifi.nftmarket.QueryNftBidsRequest.verify|verify} messages.
+             * Encodes the specified QueryNftBidsRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryNftBidsRequest.verify|verify} messages.
              * @param message QueryNftBidsRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryNftBidsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryNftBidsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryNftBidsRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryNftBidsRequest.verify|verify} messages.
+             * Encodes the specified QueryNftBidsRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryNftBidsRequest.verify|verify} messages.
              * @param message QueryNftBidsRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryNftBidsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryNftBidsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryNftBidsRequest message from the specified reader or buffer.
@@ -12008,7 +12069,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryNftBidsRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryNftBidsRequest;
 
             /**
              * Decodes a QueryNftBidsRequest message from the specified reader or buffer, length delimited.
@@ -12017,7 +12078,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryNftBidsRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryNftBidsRequest;
 
             /**
              * Verifies a QueryNftBidsRequest message.
@@ -12031,7 +12092,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryNftBidsRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryNftBidsRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryNftBidsRequest;
 
             /**
              * Creates a plain object from a QueryNftBidsRequest message. Also converts values to other types if specified.
@@ -12039,7 +12100,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryNftBidsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryNftBidsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryNftBidsRequest to JSON.
@@ -12052,7 +12113,7 @@ export namespace ununifi {
         interface IQueryNftBidsResponse {
 
             /** QueryNftBidsResponse bids */
-            bids?: (ununifi.nftmarket.INftBid[]|null);
+            bids?: (ununifi.nftbackedloan.INftBid[]|null);
         }
 
         /** Represents a QueryNftBidsResponse. */
@@ -12062,26 +12123,26 @@ export namespace ununifi {
              * Constructs a new QueryNftBidsResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryNftBidsResponse);
+            constructor(properties?: ununifi.nftbackedloan.IQueryNftBidsResponse);
 
             /** QueryNftBidsResponse bids. */
-            public bids: ununifi.nftmarket.INftBid[];
+            public bids: ununifi.nftbackedloan.INftBid[];
 
             /**
-             * Encodes the specified QueryNftBidsResponse message. Does not implicitly {@link ununifi.nftmarket.QueryNftBidsResponse.verify|verify} messages.
+             * Encodes the specified QueryNftBidsResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryNftBidsResponse.verify|verify} messages.
              * @param message QueryNftBidsResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryNftBidsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryNftBidsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryNftBidsResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryNftBidsResponse.verify|verify} messages.
+             * Encodes the specified QueryNftBidsResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryNftBidsResponse.verify|verify} messages.
              * @param message QueryNftBidsResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryNftBidsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryNftBidsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryNftBidsResponse message from the specified reader or buffer.
@@ -12091,7 +12152,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryNftBidsResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryNftBidsResponse;
 
             /**
              * Decodes a QueryNftBidsResponse message from the specified reader or buffer, length delimited.
@@ -12100,7 +12161,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryNftBidsResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryNftBidsResponse;
 
             /**
              * Verifies a QueryNftBidsResponse message.
@@ -12114,7 +12175,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryNftBidsResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryNftBidsResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryNftBidsResponse;
 
             /**
              * Creates a plain object from a QueryNftBidsResponse message. Also converts values to other types if specified.
@@ -12122,7 +12183,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryNftBidsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryNftBidsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryNftBidsResponse to JSON.
@@ -12151,7 +12212,7 @@ export namespace ununifi {
              * Constructs a new QueryPaymentStatusRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryPaymentStatusRequest);
+            constructor(properties?: ununifi.nftbackedloan.IQueryPaymentStatusRequest);
 
             /** QueryPaymentStatusRequest class_id. */
             public class_id: string;
@@ -12163,20 +12224,20 @@ export namespace ununifi {
             public bidder: string;
 
             /**
-             * Encodes the specified QueryPaymentStatusRequest message. Does not implicitly {@link ununifi.nftmarket.QueryPaymentStatusRequest.verify|verify} messages.
+             * Encodes the specified QueryPaymentStatusRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryPaymentStatusRequest.verify|verify} messages.
              * @param message QueryPaymentStatusRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryPaymentStatusRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryPaymentStatusRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryPaymentStatusRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryPaymentStatusRequest.verify|verify} messages.
+             * Encodes the specified QueryPaymentStatusRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryPaymentStatusRequest.verify|verify} messages.
              * @param message QueryPaymentStatusRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryPaymentStatusRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryPaymentStatusRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryPaymentStatusRequest message from the specified reader or buffer.
@@ -12186,7 +12247,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryPaymentStatusRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryPaymentStatusRequest;
 
             /**
              * Decodes a QueryPaymentStatusRequest message from the specified reader or buffer, length delimited.
@@ -12195,7 +12256,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryPaymentStatusRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryPaymentStatusRequest;
 
             /**
              * Verifies a QueryPaymentStatusRequest message.
@@ -12209,7 +12270,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryPaymentStatusRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryPaymentStatusRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryPaymentStatusRequest;
 
             /**
              * Creates a plain object from a QueryPaymentStatusRequest message. Also converts values to other types if specified.
@@ -12217,7 +12278,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryPaymentStatusRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryPaymentStatusRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryPaymentStatusRequest to JSON.
@@ -12230,7 +12291,7 @@ export namespace ununifi {
         interface IQueryPaymentStatusResponse {
 
             /** QueryPaymentStatusResponse paymentStatus */
-            paymentStatus?: (ununifi.nftmarket.IPaymentStatus|null);
+            paymentStatus?: (ununifi.nftbackedloan.IPaymentStatus|null);
         }
 
         /** Represents a QueryPaymentStatusResponse. */
@@ -12240,26 +12301,26 @@ export namespace ununifi {
              * Constructs a new QueryPaymentStatusResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryPaymentStatusResponse);
+            constructor(properties?: ununifi.nftbackedloan.IQueryPaymentStatusResponse);
 
             /** QueryPaymentStatusResponse paymentStatus. */
-            public paymentStatus?: (ununifi.nftmarket.IPaymentStatus|null);
+            public paymentStatus?: (ununifi.nftbackedloan.IPaymentStatus|null);
 
             /**
-             * Encodes the specified QueryPaymentStatusResponse message. Does not implicitly {@link ununifi.nftmarket.QueryPaymentStatusResponse.verify|verify} messages.
+             * Encodes the specified QueryPaymentStatusResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryPaymentStatusResponse.verify|verify} messages.
              * @param message QueryPaymentStatusResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryPaymentStatusResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryPaymentStatusResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryPaymentStatusResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryPaymentStatusResponse.verify|verify} messages.
+             * Encodes the specified QueryPaymentStatusResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryPaymentStatusResponse.verify|verify} messages.
              * @param message QueryPaymentStatusResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryPaymentStatusResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryPaymentStatusResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryPaymentStatusResponse message from the specified reader or buffer.
@@ -12269,7 +12330,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryPaymentStatusResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryPaymentStatusResponse;
 
             /**
              * Decodes a QueryPaymentStatusResponse message from the specified reader or buffer, length delimited.
@@ -12278,7 +12339,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryPaymentStatusResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryPaymentStatusResponse;
 
             /**
              * Verifies a QueryPaymentStatusResponse message.
@@ -12292,7 +12353,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryPaymentStatusResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryPaymentStatusResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryPaymentStatusResponse;
 
             /**
              * Creates a plain object from a QueryPaymentStatusResponse message. Also converts values to other types if specified.
@@ -12300,7 +12361,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryPaymentStatusResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryPaymentStatusResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryPaymentStatusResponse to JSON.
@@ -12323,26 +12384,26 @@ export namespace ununifi {
              * Constructs a new QueryBidderBidsRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryBidderBidsRequest);
+            constructor(properties?: ununifi.nftbackedloan.IQueryBidderBidsRequest);
 
             /** QueryBidderBidsRequest bidder. */
             public bidder: string;
 
             /**
-             * Encodes the specified QueryBidderBidsRequest message. Does not implicitly {@link ununifi.nftmarket.QueryBidderBidsRequest.verify|verify} messages.
+             * Encodes the specified QueryBidderBidsRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryBidderBidsRequest.verify|verify} messages.
              * @param message QueryBidderBidsRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryBidderBidsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryBidderBidsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryBidderBidsRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryBidderBidsRequest.verify|verify} messages.
+             * Encodes the specified QueryBidderBidsRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryBidderBidsRequest.verify|verify} messages.
              * @param message QueryBidderBidsRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryBidderBidsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryBidderBidsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryBidderBidsRequest message from the specified reader or buffer.
@@ -12352,7 +12413,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryBidderBidsRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryBidderBidsRequest;
 
             /**
              * Decodes a QueryBidderBidsRequest message from the specified reader or buffer, length delimited.
@@ -12361,7 +12422,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryBidderBidsRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryBidderBidsRequest;
 
             /**
              * Verifies a QueryBidderBidsRequest message.
@@ -12375,7 +12436,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryBidderBidsRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryBidderBidsRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryBidderBidsRequest;
 
             /**
              * Creates a plain object from a QueryBidderBidsRequest message. Also converts values to other types if specified.
@@ -12383,7 +12444,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryBidderBidsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryBidderBidsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryBidderBidsRequest to JSON.
@@ -12396,7 +12457,7 @@ export namespace ununifi {
         interface IQueryBidderBidsResponse {
 
             /** QueryBidderBidsResponse bids */
-            bids?: (ununifi.nftmarket.INftBid[]|null);
+            bids?: (ununifi.nftbackedloan.INftBid[]|null);
         }
 
         /** Represents a QueryBidderBidsResponse. */
@@ -12406,26 +12467,26 @@ export namespace ununifi {
              * Constructs a new QueryBidderBidsResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryBidderBidsResponse);
+            constructor(properties?: ununifi.nftbackedloan.IQueryBidderBidsResponse);
 
             /** QueryBidderBidsResponse bids. */
-            public bids: ununifi.nftmarket.INftBid[];
+            public bids: ununifi.nftbackedloan.INftBid[];
 
             /**
-             * Encodes the specified QueryBidderBidsResponse message. Does not implicitly {@link ununifi.nftmarket.QueryBidderBidsResponse.verify|verify} messages.
+             * Encodes the specified QueryBidderBidsResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryBidderBidsResponse.verify|verify} messages.
              * @param message QueryBidderBidsResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryBidderBidsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryBidderBidsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryBidderBidsResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryBidderBidsResponse.verify|verify} messages.
+             * Encodes the specified QueryBidderBidsResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryBidderBidsResponse.verify|verify} messages.
              * @param message QueryBidderBidsResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryBidderBidsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryBidderBidsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryBidderBidsResponse message from the specified reader or buffer.
@@ -12435,7 +12496,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryBidderBidsResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryBidderBidsResponse;
 
             /**
              * Decodes a QueryBidderBidsResponse message from the specified reader or buffer, length delimited.
@@ -12444,7 +12505,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryBidderBidsResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryBidderBidsResponse;
 
             /**
              * Verifies a QueryBidderBidsResponse message.
@@ -12458,7 +12519,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryBidderBidsResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryBidderBidsResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryBidderBidsResponse;
 
             /**
              * Creates a plain object from a QueryBidderBidsResponse message. Also converts values to other types if specified.
@@ -12466,7 +12527,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryBidderBidsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryBidderBidsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryBidderBidsResponse to JSON.
@@ -12489,26 +12550,26 @@ export namespace ununifi {
              * Constructs a new QueryRewardsRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryRewardsRequest);
+            constructor(properties?: ununifi.nftbackedloan.IQueryRewardsRequest);
 
             /** QueryRewardsRequest address. */
             public address: Long;
 
             /**
-             * Encodes the specified QueryRewardsRequest message. Does not implicitly {@link ununifi.nftmarket.QueryRewardsRequest.verify|verify} messages.
+             * Encodes the specified QueryRewardsRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryRewardsRequest.verify|verify} messages.
              * @param message QueryRewardsRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryRewardsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryRewardsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryRewardsRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryRewardsRequest.verify|verify} messages.
+             * Encodes the specified QueryRewardsRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryRewardsRequest.verify|verify} messages.
              * @param message QueryRewardsRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryRewardsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryRewardsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryRewardsRequest message from the specified reader or buffer.
@@ -12518,7 +12579,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryRewardsRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryRewardsRequest;
 
             /**
              * Decodes a QueryRewardsRequest message from the specified reader or buffer, length delimited.
@@ -12527,7 +12588,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryRewardsRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryRewardsRequest;
 
             /**
              * Verifies a QueryRewardsRequest message.
@@ -12541,7 +12602,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryRewardsRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryRewardsRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryRewardsRequest;
 
             /**
              * Creates a plain object from a QueryRewardsRequest message. Also converts values to other types if specified.
@@ -12549,7 +12610,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryRewardsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryRewardsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryRewardsRequest to JSON.
@@ -12572,26 +12633,26 @@ export namespace ununifi {
              * Constructs a new QueryRewardsResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryRewardsResponse);
+            constructor(properties?: ununifi.nftbackedloan.IQueryRewardsResponse);
 
             /** QueryRewardsResponse rewards. */
             public rewards: cosmos.base.v1beta1.ICoin[];
 
             /**
-             * Encodes the specified QueryRewardsResponse message. Does not implicitly {@link ununifi.nftmarket.QueryRewardsResponse.verify|verify} messages.
+             * Encodes the specified QueryRewardsResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryRewardsResponse.verify|verify} messages.
              * @param message QueryRewardsResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryRewardsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryRewardsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryRewardsResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryRewardsResponse.verify|verify} messages.
+             * Encodes the specified QueryRewardsResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryRewardsResponse.verify|verify} messages.
              * @param message QueryRewardsResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryRewardsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryRewardsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryRewardsResponse message from the specified reader or buffer.
@@ -12601,7 +12662,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryRewardsResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryRewardsResponse;
 
             /**
              * Decodes a QueryRewardsResponse message from the specified reader or buffer, length delimited.
@@ -12610,7 +12671,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryRewardsResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryRewardsResponse;
 
             /**
              * Verifies a QueryRewardsResponse message.
@@ -12624,7 +12685,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryRewardsResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryRewardsResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryRewardsResponse;
 
             /**
              * Creates a plain object from a QueryRewardsResponse message. Also converts values to other types if specified.
@@ -12632,7 +12693,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryRewardsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryRewardsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryRewardsResponse to JSON.
@@ -12658,7 +12719,7 @@ export namespace ununifi {
              * Constructs a new QueryLiquidationRequest.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryLiquidationRequest);
+            constructor(properties?: ununifi.nftbackedloan.IQueryLiquidationRequest);
 
             /** QueryLiquidationRequest class_id. */
             public class_id: string;
@@ -12667,20 +12728,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified QueryLiquidationRequest message. Does not implicitly {@link ununifi.nftmarket.QueryLiquidationRequest.verify|verify} messages.
+             * Encodes the specified QueryLiquidationRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryLiquidationRequest.verify|verify} messages.
              * @param message QueryLiquidationRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryLiquidationRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryLiquidationRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryLiquidationRequest message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryLiquidationRequest.verify|verify} messages.
+             * Encodes the specified QueryLiquidationRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryLiquidationRequest.verify|verify} messages.
              * @param message QueryLiquidationRequest message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryLiquidationRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryLiquidationRequest, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryLiquidationRequest message from the specified reader or buffer.
@@ -12690,7 +12751,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryLiquidationRequest;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryLiquidationRequest;
 
             /**
              * Decodes a QueryLiquidationRequest message from the specified reader or buffer, length delimited.
@@ -12699,7 +12760,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryLiquidationRequest;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryLiquidationRequest;
 
             /**
              * Verifies a QueryLiquidationRequest message.
@@ -12713,7 +12774,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryLiquidationRequest
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryLiquidationRequest;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryLiquidationRequest;
 
             /**
              * Creates a plain object from a QueryLiquidationRequest message. Also converts values to other types if specified.
@@ -12721,7 +12782,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryLiquidationRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryLiquidationRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryLiquidationRequest to JSON.
@@ -12734,7 +12795,7 @@ export namespace ununifi {
         interface IQueryLiquidationResponse {
 
             /** QueryLiquidationResponse liquidations */
-            liquidations?: (ununifi.nftmarket.ILiquidations|null);
+            liquidations?: (ununifi.nftbackedloan.ILiquidations|null);
         }
 
         /** Represents a QueryLiquidationResponse. */
@@ -12744,26 +12805,26 @@ export namespace ununifi {
              * Constructs a new QueryLiquidationResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IQueryLiquidationResponse);
+            constructor(properties?: ununifi.nftbackedloan.IQueryLiquidationResponse);
 
             /** QueryLiquidationResponse liquidations. */
-            public liquidations?: (ununifi.nftmarket.ILiquidations|null);
+            public liquidations?: (ununifi.nftbackedloan.ILiquidations|null);
 
             /**
-             * Encodes the specified QueryLiquidationResponse message. Does not implicitly {@link ununifi.nftmarket.QueryLiquidationResponse.verify|verify} messages.
+             * Encodes the specified QueryLiquidationResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryLiquidationResponse.verify|verify} messages.
              * @param message QueryLiquidationResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IQueryLiquidationResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IQueryLiquidationResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified QueryLiquidationResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.QueryLiquidationResponse.verify|verify} messages.
+             * Encodes the specified QueryLiquidationResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryLiquidationResponse.verify|verify} messages.
              * @param message QueryLiquidationResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IQueryLiquidationResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryLiquidationResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a QueryLiquidationResponse message from the specified reader or buffer.
@@ -12773,7 +12834,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.QueryLiquidationResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryLiquidationResponse;
 
             /**
              * Decodes a QueryLiquidationResponse message from the specified reader or buffer, length delimited.
@@ -12782,7 +12843,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.QueryLiquidationResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryLiquidationResponse;
 
             /**
              * Verifies a QueryLiquidationResponse message.
@@ -12796,7 +12857,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns QueryLiquidationResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.QueryLiquidationResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryLiquidationResponse;
 
             /**
              * Creates a plain object from a QueryLiquidationResponse message. Also converts values to other types if specified.
@@ -12804,7 +12865,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.QueryLiquidationResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.QueryLiquidationResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this QueryLiquidationResponse to JSON.
@@ -12846,7 +12907,7 @@ export namespace ununifi {
              * Constructs a new NftIdentifier.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.INftIdentifier);
+            constructor(properties?: ununifi.nftbackedloan.INftIdentifier);
 
             /** NftIdentifier class_id. */
             public class_id: string;
@@ -12855,20 +12916,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified NftIdentifier message. Does not implicitly {@link ununifi.nftmarket.NftIdentifier.verify|verify} messages.
+             * Encodes the specified NftIdentifier message. Does not implicitly {@link ununifi.nftbackedloan.NftIdentifier.verify|verify} messages.
              * @param message NftIdentifier message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.INftIdentifier, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.INftIdentifier, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified NftIdentifier message, length delimited. Does not implicitly {@link ununifi.nftmarket.NftIdentifier.verify|verify} messages.
+             * Encodes the specified NftIdentifier message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.NftIdentifier.verify|verify} messages.
              * @param message NftIdentifier message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.INftIdentifier, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.INftIdentifier, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a NftIdentifier message from the specified reader or buffer.
@@ -12878,7 +12939,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.NftIdentifier;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.NftIdentifier;
 
             /**
              * Decodes a NftIdentifier message from the specified reader or buffer, length delimited.
@@ -12887,7 +12948,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.NftIdentifier;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.NftIdentifier;
 
             /**
              * Verifies a NftIdentifier message.
@@ -12901,7 +12962,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns NftIdentifier
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.NftIdentifier;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.NftIdentifier;
 
             /**
              * Creates a plain object from a NftIdentifier message. Also converts values to other types if specified.
@@ -12909,7 +12970,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.NftIdentifier, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.NftIdentifier, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this NftIdentifier to JSON.
@@ -12922,7 +12983,7 @@ export namespace ununifi {
         interface IBidId {
 
             /** BidId nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** BidId bidder */
             bidder?: (string|null);
@@ -12935,29 +12996,29 @@ export namespace ununifi {
              * Constructs a new BidId.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IBidId);
+            constructor(properties?: ununifi.nftbackedloan.IBidId);
 
             /** BidId nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** BidId bidder. */
             public bidder: string;
 
             /**
-             * Encodes the specified BidId message. Does not implicitly {@link ununifi.nftmarket.BidId.verify|verify} messages.
+             * Encodes the specified BidId message. Does not implicitly {@link ununifi.nftbackedloan.BidId.verify|verify} messages.
              * @param message BidId message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IBidId, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IBidId, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified BidId message, length delimited. Does not implicitly {@link ununifi.nftmarket.BidId.verify|verify} messages.
+             * Encodes the specified BidId message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.BidId.verify|verify} messages.
              * @param message BidId message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IBidId, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IBidId, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a BidId message from the specified reader or buffer.
@@ -12967,7 +13028,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.BidId;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.BidId;
 
             /**
              * Decodes a BidId message from the specified reader or buffer, length delimited.
@@ -12976,7 +13037,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.BidId;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.BidId;
 
             /**
              * Verifies a BidId message.
@@ -12990,7 +13051,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns BidId
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.BidId;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.BidId;
 
             /**
              * Creates a plain object from a BidId message. Also converts values to other types if specified.
@@ -12998,7 +13059,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.BidId, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.BidId, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this BidId to JSON.
@@ -13011,7 +13072,7 @@ export namespace ununifi {
         interface ILoan {
 
             /** Loan nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** Loan loan */
             loan?: (cosmos.base.v1beta1.ICoin|null);
@@ -13024,29 +13085,29 @@ export namespace ununifi {
              * Constructs a new Loan.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.ILoan);
+            constructor(properties?: ununifi.nftbackedloan.ILoan);
 
             /** Loan nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** Loan loan. */
             public loan?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
-             * Encodes the specified Loan message. Does not implicitly {@link ununifi.nftmarket.Loan.verify|verify} messages.
+             * Encodes the specified Loan message. Does not implicitly {@link ununifi.nftbackedloan.Loan.verify|verify} messages.
              * @param message Loan message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.ILoan, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.ILoan, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified Loan message, length delimited. Does not implicitly {@link ununifi.nftmarket.Loan.verify|verify} messages.
+             * Encodes the specified Loan message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.Loan.verify|verify} messages.
              * @param message Loan message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.ILoan, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.ILoan, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a Loan message from the specified reader or buffer.
@@ -13056,7 +13117,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.Loan;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.Loan;
 
             /**
              * Decodes a Loan message from the specified reader or buffer, length delimited.
@@ -13065,7 +13126,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.Loan;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.Loan;
 
             /**
              * Verifies a Loan message.
@@ -13079,7 +13140,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns Loan
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.Loan;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.Loan;
 
             /**
              * Creates a plain object from a Loan message. Also converts values to other types if specified.
@@ -13087,7 +13148,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.Loan, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.Loan, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this Loan to JSON.
@@ -13113,7 +13174,7 @@ export namespace ununifi {
              * Constructs a new ListedClass.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IListedClass);
+            constructor(properties?: ununifi.nftbackedloan.IListedClass);
 
             /** ListedClass class_id. */
             public class_id: string;
@@ -13122,20 +13183,20 @@ export namespace ununifi {
             public nft_ids: string[];
 
             /**
-             * Encodes the specified ListedClass message. Does not implicitly {@link ununifi.nftmarket.ListedClass.verify|verify} messages.
+             * Encodes the specified ListedClass message. Does not implicitly {@link ununifi.nftbackedloan.ListedClass.verify|verify} messages.
              * @param message ListedClass message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IListedClass, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IListedClass, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified ListedClass message, length delimited. Does not implicitly {@link ununifi.nftmarket.ListedClass.verify|verify} messages.
+             * Encodes the specified ListedClass message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.ListedClass.verify|verify} messages.
              * @param message ListedClass message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IListedClass, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IListedClass, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a ListedClass message from the specified reader or buffer.
@@ -13145,7 +13206,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.ListedClass;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.ListedClass;
 
             /**
              * Decodes a ListedClass message from the specified reader or buffer, length delimited.
@@ -13154,7 +13215,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.ListedClass;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.ListedClass;
 
             /**
              * Verifies a ListedClass message.
@@ -13168,7 +13229,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns ListedClass
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.ListedClass;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.ListedClass;
 
             /**
              * Creates a plain object from a ListedClass message. Also converts values to other types if specified.
@@ -13176,7 +13237,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.ListedClass, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.ListedClass, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this ListedClass to JSON.
@@ -13205,7 +13266,7 @@ export namespace ununifi {
              * Constructs a new NftInfo.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.INftInfo);
+            constructor(properties?: ununifi.nftbackedloan.INftInfo);
 
             /** NftInfo id. */
             public id: string;
@@ -13217,20 +13278,20 @@ export namespace ununifi {
             public uri_hash: string;
 
             /**
-             * Encodes the specified NftInfo message. Does not implicitly {@link ununifi.nftmarket.NftInfo.verify|verify} messages.
+             * Encodes the specified NftInfo message. Does not implicitly {@link ununifi.nftbackedloan.NftInfo.verify|verify} messages.
              * @param message NftInfo message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.INftInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.INftInfo, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified NftInfo message, length delimited. Does not implicitly {@link ununifi.nftmarket.NftInfo.verify|verify} messages.
+             * Encodes the specified NftInfo message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.NftInfo.verify|verify} messages.
              * @param message NftInfo message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.INftInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.INftInfo, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a NftInfo message from the specified reader or buffer.
@@ -13240,7 +13301,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.NftInfo;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.NftInfo;
 
             /**
              * Decodes a NftInfo message from the specified reader or buffer, length delimited.
@@ -13249,7 +13310,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.NftInfo;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.NftInfo;
 
             /**
              * Verifies a NftInfo message.
@@ -13263,7 +13324,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns NftInfo
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.NftInfo;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.NftInfo;
 
             /**
              * Creates a plain object from a NftInfo message. Also converts values to other types if specified.
@@ -13271,7 +13332,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.NftInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.NftInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this NftInfo to JSON.
@@ -13284,16 +13345,16 @@ export namespace ununifi {
         interface INftListing {
 
             /** NftListing nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** NftListing owner */
             owner?: (string|null);
 
             /** NftListing listing_type */
-            listing_type?: (ununifi.nftmarket.ListingType|null);
+            listing_type?: (ununifi.nftbackedloan.ListingType|null);
 
             /** NftListing state */
-            state?: (ununifi.nftmarket.ListingState|null);
+            state?: (ununifi.nftbackedloan.ListingState|null);
 
             /** NftListing bid_token */
             bid_token?: (string|null);
@@ -13333,19 +13394,19 @@ export namespace ununifi {
              * Constructs a new NftListing.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.INftListing);
+            constructor(properties?: ununifi.nftbackedloan.INftListing);
 
             /** NftListing nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** NftListing owner. */
             public owner: string;
 
             /** NftListing listing_type. */
-            public listing_type: ununifi.nftmarket.ListingType;
+            public listing_type: ununifi.nftbackedloan.ListingType;
 
             /** NftListing state. */
-            public state: ununifi.nftmarket.ListingState;
+            public state: ununifi.nftbackedloan.ListingState;
 
             /** NftListing bid_token. */
             public bid_token: string;
@@ -13378,20 +13439,20 @@ export namespace ununifi {
             public minimum_bidding_period?: (google.protobuf.IDuration|null);
 
             /**
-             * Encodes the specified NftListing message. Does not implicitly {@link ununifi.nftmarket.NftListing.verify|verify} messages.
+             * Encodes the specified NftListing message. Does not implicitly {@link ununifi.nftbackedloan.NftListing.verify|verify} messages.
              * @param message NftListing message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.INftListing, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.INftListing, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified NftListing message, length delimited. Does not implicitly {@link ununifi.nftmarket.NftListing.verify|verify} messages.
+             * Encodes the specified NftListing message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.NftListing.verify|verify} messages.
              * @param message NftListing message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.INftListing, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.INftListing, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a NftListing message from the specified reader or buffer.
@@ -13401,7 +13462,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.NftListing;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.NftListing;
 
             /**
              * Decodes a NftListing message from the specified reader or buffer, length delimited.
@@ -13410,7 +13471,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.NftListing;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.NftListing;
 
             /**
              * Verifies a NftListing message.
@@ -13424,7 +13485,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns NftListing
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.NftListing;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.NftListing;
 
             /**
              * Creates a plain object from a NftListing message. Also converts values to other types if specified.
@@ -13432,7 +13493,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.NftListing, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.NftListing, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this NftListing to JSON.
@@ -13461,7 +13522,7 @@ export namespace ununifi {
              * Constructs a new borrowing.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.Iborrowing);
+            constructor(properties?: ununifi.nftbackedloan.Iborrowing);
 
             /** borrowing amount. */
             public amount?: (cosmos.base.v1beta1.ICoin|null);
@@ -13473,20 +13534,20 @@ export namespace ununifi {
             public start_at?: (google.protobuf.ITimestamp|null);
 
             /**
-             * Encodes the specified borrowing message. Does not implicitly {@link ununifi.nftmarket.borrowing.verify|verify} messages.
+             * Encodes the specified borrowing message. Does not implicitly {@link ununifi.nftbackedloan.borrowing.verify|verify} messages.
              * @param message borrowing message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.Iborrowing, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.Iborrowing, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified borrowing message, length delimited. Does not implicitly {@link ununifi.nftmarket.borrowing.verify|verify} messages.
+             * Encodes the specified borrowing message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.borrowing.verify|verify} messages.
              * @param message borrowing message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.Iborrowing, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.Iborrowing, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a borrowing message from the specified reader or buffer.
@@ -13496,7 +13557,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.borrowing;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.borrowing;
 
             /**
              * Decodes a borrowing message from the specified reader or buffer, length delimited.
@@ -13505,7 +13566,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.borrowing;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.borrowing;
 
             /**
              * Verifies a borrowing message.
@@ -13519,7 +13580,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns borrowing
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.borrowing;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.borrowing;
 
             /**
              * Creates a plain object from a borrowing message. Also converts values to other types if specified.
@@ -13527,7 +13588,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.borrowing, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.borrowing, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this borrowing to JSON.
@@ -13540,7 +13601,7 @@ export namespace ununifi {
         interface INftBid {
 
             /** NftBid nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** NftBid bidder */
             bidder?: (string|null);
@@ -13570,10 +13631,10 @@ export namespace ununifi {
             interest_amount?: (cosmos.base.v1beta1.ICoin|null);
 
             /** NftBid borrowings */
-            borrowings?: (ununifi.nftmarket.Iborrowing[]|null);
+            borrowings?: (ununifi.nftbackedloan.Iborrowing[]|null);
 
             /** NftBid id */
-            id?: (ununifi.nftmarket.IBidId|null);
+            id?: (ununifi.nftbackedloan.IBidId|null);
         }
 
         /** Represents a NftBid. */
@@ -13583,10 +13644,10 @@ export namespace ununifi {
              * Constructs a new NftBid.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.INftBid);
+            constructor(properties?: ununifi.nftbackedloan.INftBid);
 
             /** NftBid nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** NftBid bidder. */
             public bidder: string;
@@ -13616,26 +13677,26 @@ export namespace ununifi {
             public interest_amount?: (cosmos.base.v1beta1.ICoin|null);
 
             /** NftBid borrowings. */
-            public borrowings: ununifi.nftmarket.Iborrowing[];
+            public borrowings: ununifi.nftbackedloan.Iborrowing[];
 
             /** NftBid id. */
-            public id?: (ununifi.nftmarket.IBidId|null);
+            public id?: (ununifi.nftbackedloan.IBidId|null);
 
             /**
-             * Encodes the specified NftBid message. Does not implicitly {@link ununifi.nftmarket.NftBid.verify|verify} messages.
+             * Encodes the specified NftBid message. Does not implicitly {@link ununifi.nftbackedloan.NftBid.verify|verify} messages.
              * @param message NftBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.INftBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.INftBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified NftBid message, length delimited. Does not implicitly {@link ununifi.nftmarket.NftBid.verify|verify} messages.
+             * Encodes the specified NftBid message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.NftBid.verify|verify} messages.
              * @param message NftBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.INftBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.INftBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a NftBid message from the specified reader or buffer.
@@ -13645,7 +13706,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.NftBid;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.NftBid;
 
             /**
              * Decodes a NftBid message from the specified reader or buffer, length delimited.
@@ -13654,7 +13715,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.NftBid;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.NftBid;
 
             /**
              * Verifies a NftBid message.
@@ -13668,7 +13729,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns NftBid
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.NftBid;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.NftBid;
 
             /**
              * Creates a plain object from a NftBid message. Also converts values to other types if specified.
@@ -13676,7 +13737,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.NftBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.NftBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this NftBid to JSON.
@@ -13750,7 +13811,7 @@ export namespace ununifi {
              * Constructs a new Params.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IParams);
+            constructor(properties?: ununifi.nftbackedloan.IParams);
 
             /** Params min_staking_for_listing. */
             public min_staking_for_listing: string;
@@ -13807,20 +13868,20 @@ export namespace ununifi {
             public nft_listing_period_extend_fee_per_hour?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
-             * Encodes the specified Params message. Does not implicitly {@link ununifi.nftmarket.Params.verify|verify} messages.
+             * Encodes the specified Params message. Does not implicitly {@link ununifi.nftbackedloan.Params.verify|verify} messages.
              * @param message Params message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.nftmarket.Params.verify|verify} messages.
+             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.Params.verify|verify} messages.
              * @param message Params message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a Params message from the specified reader or buffer.
@@ -13830,7 +13891,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.Params;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.Params;
 
             /**
              * Decodes a Params message from the specified reader or buffer, length delimited.
@@ -13839,7 +13900,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.Params;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.Params;
 
             /**
              * Verifies a Params message.
@@ -13853,7 +13914,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns Params
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.Params;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.Params;
 
             /**
              * Creates a plain object from a Params message. Also converts values to other types if specified.
@@ -13861,7 +13922,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this Params to JSON.
@@ -13890,7 +13951,7 @@ export namespace ununifi {
              * Constructs a new EventListNft.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IEventListNft);
+            constructor(properties?: ununifi.nftbackedloan.IEventListNft);
 
             /** EventListNft owner. */
             public owner: string;
@@ -13902,20 +13963,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified EventListNft message. Does not implicitly {@link ununifi.nftmarket.EventListNft.verify|verify} messages.
+             * Encodes the specified EventListNft message. Does not implicitly {@link ununifi.nftbackedloan.EventListNft.verify|verify} messages.
              * @param message EventListNft message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IEventListNft, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IEventListNft, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventListNft message, length delimited. Does not implicitly {@link ununifi.nftmarket.EventListNft.verify|verify} messages.
+             * Encodes the specified EventListNft message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventListNft.verify|verify} messages.
              * @param message EventListNft message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IEventListNft, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IEventListNft, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventListNft message from the specified reader or buffer.
@@ -13925,7 +13986,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.EventListNft;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.EventListNft;
 
             /**
              * Decodes an EventListNft message from the specified reader or buffer, length delimited.
@@ -13934,7 +13995,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.EventListNft;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.EventListNft;
 
             /**
              * Verifies an EventListNft message.
@@ -13948,7 +14009,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventListNft
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.EventListNft;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.EventListNft;
 
             /**
              * Creates a plain object from an EventListNft message. Also converts values to other types if specified.
@@ -13956,7 +14017,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.EventListNft, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.EventListNft, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventListNft to JSON.
@@ -13985,7 +14046,7 @@ export namespace ununifi {
              * Constructs a new EventCancelListNfting.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IEventCancelListNfting);
+            constructor(properties?: ununifi.nftbackedloan.IEventCancelListNfting);
 
             /** EventCancelListNfting owner. */
             public owner: string;
@@ -13997,20 +14058,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified EventCancelListNfting message. Does not implicitly {@link ununifi.nftmarket.EventCancelListNfting.verify|verify} messages.
+             * Encodes the specified EventCancelListNfting message. Does not implicitly {@link ununifi.nftbackedloan.EventCancelListNfting.verify|verify} messages.
              * @param message EventCancelListNfting message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IEventCancelListNfting, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IEventCancelListNfting, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventCancelListNfting message, length delimited. Does not implicitly {@link ununifi.nftmarket.EventCancelListNfting.verify|verify} messages.
+             * Encodes the specified EventCancelListNfting message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventCancelListNfting.verify|verify} messages.
              * @param message EventCancelListNfting message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IEventCancelListNfting, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IEventCancelListNfting, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventCancelListNfting message from the specified reader or buffer.
@@ -14020,7 +14081,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.EventCancelListNfting;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.EventCancelListNfting;
 
             /**
              * Decodes an EventCancelListNfting message from the specified reader or buffer, length delimited.
@@ -14029,7 +14090,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.EventCancelListNfting;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.EventCancelListNfting;
 
             /**
              * Verifies an EventCancelListNfting message.
@@ -14043,7 +14104,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventCancelListNfting
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.EventCancelListNfting;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.EventCancelListNfting;
 
             /**
              * Creates a plain object from an EventCancelListNfting message. Also converts values to other types if specified.
@@ -14051,7 +14112,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.EventCancelListNfting, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.EventCancelListNfting, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventCancelListNfting to JSON.
@@ -14080,7 +14141,7 @@ export namespace ununifi {
              * Constructs a new EventExpandListingPeriod.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IEventExpandListingPeriod);
+            constructor(properties?: ununifi.nftbackedloan.IEventExpandListingPeriod);
 
             /** EventExpandListingPeriod owner. */
             public owner: string;
@@ -14092,20 +14153,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified EventExpandListingPeriod message. Does not implicitly {@link ununifi.nftmarket.EventExpandListingPeriod.verify|verify} messages.
+             * Encodes the specified EventExpandListingPeriod message. Does not implicitly {@link ununifi.nftbackedloan.EventExpandListingPeriod.verify|verify} messages.
              * @param message EventExpandListingPeriod message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IEventExpandListingPeriod, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IEventExpandListingPeriod, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventExpandListingPeriod message, length delimited. Does not implicitly {@link ununifi.nftmarket.EventExpandListingPeriod.verify|verify} messages.
+             * Encodes the specified EventExpandListingPeriod message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventExpandListingPeriod.verify|verify} messages.
              * @param message EventExpandListingPeriod message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IEventExpandListingPeriod, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IEventExpandListingPeriod, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventExpandListingPeriod message from the specified reader or buffer.
@@ -14115,7 +14176,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.EventExpandListingPeriod;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.EventExpandListingPeriod;
 
             /**
              * Decodes an EventExpandListingPeriod message from the specified reader or buffer, length delimited.
@@ -14124,7 +14185,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.EventExpandListingPeriod;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.EventExpandListingPeriod;
 
             /**
              * Verifies an EventExpandListingPeriod message.
@@ -14138,7 +14199,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventExpandListingPeriod
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.EventExpandListingPeriod;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.EventExpandListingPeriod;
 
             /**
              * Creates a plain object from an EventExpandListingPeriod message. Also converts values to other types if specified.
@@ -14146,7 +14207,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.EventExpandListingPeriod, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.EventExpandListingPeriod, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventExpandListingPeriod to JSON.
@@ -14175,7 +14236,7 @@ export namespace ununifi {
              * Constructs a new EventSellingDecision.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IEventSellingDecision);
+            constructor(properties?: ununifi.nftbackedloan.IEventSellingDecision);
 
             /** EventSellingDecision owner. */
             public owner: string;
@@ -14187,20 +14248,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified EventSellingDecision message. Does not implicitly {@link ununifi.nftmarket.EventSellingDecision.verify|verify} messages.
+             * Encodes the specified EventSellingDecision message. Does not implicitly {@link ununifi.nftbackedloan.EventSellingDecision.verify|verify} messages.
              * @param message EventSellingDecision message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IEventSellingDecision, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IEventSellingDecision, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventSellingDecision message, length delimited. Does not implicitly {@link ununifi.nftmarket.EventSellingDecision.verify|verify} messages.
+             * Encodes the specified EventSellingDecision message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventSellingDecision.verify|verify} messages.
              * @param message EventSellingDecision message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IEventSellingDecision, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IEventSellingDecision, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventSellingDecision message from the specified reader or buffer.
@@ -14210,7 +14271,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.EventSellingDecision;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.EventSellingDecision;
 
             /**
              * Decodes an EventSellingDecision message from the specified reader or buffer, length delimited.
@@ -14219,7 +14280,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.EventSellingDecision;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.EventSellingDecision;
 
             /**
              * Verifies an EventSellingDecision message.
@@ -14233,7 +14294,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventSellingDecision
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.EventSellingDecision;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.EventSellingDecision;
 
             /**
              * Creates a plain object from an EventSellingDecision message. Also converts values to other types if specified.
@@ -14241,7 +14302,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.EventSellingDecision, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.EventSellingDecision, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventSellingDecision to JSON.
@@ -14270,7 +14331,7 @@ export namespace ununifi {
              * Constructs a new EventEndListNfting.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IEventEndListNfting);
+            constructor(properties?: ununifi.nftbackedloan.IEventEndListNfting);
 
             /** EventEndListNfting owner. */
             public owner: string;
@@ -14282,20 +14343,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified EventEndListNfting message. Does not implicitly {@link ununifi.nftmarket.EventEndListNfting.verify|verify} messages.
+             * Encodes the specified EventEndListNfting message. Does not implicitly {@link ununifi.nftbackedloan.EventEndListNfting.verify|verify} messages.
              * @param message EventEndListNfting message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IEventEndListNfting, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IEventEndListNfting, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventEndListNfting message, length delimited. Does not implicitly {@link ununifi.nftmarket.EventEndListNfting.verify|verify} messages.
+             * Encodes the specified EventEndListNfting message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventEndListNfting.verify|verify} messages.
              * @param message EventEndListNfting message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IEventEndListNfting, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IEventEndListNfting, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventEndListNfting message from the specified reader or buffer.
@@ -14305,7 +14366,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.EventEndListNfting;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.EventEndListNfting;
 
             /**
              * Decodes an EventEndListNfting message from the specified reader or buffer, length delimited.
@@ -14314,7 +14375,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.EventEndListNfting;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.EventEndListNfting;
 
             /**
              * Verifies an EventEndListNfting message.
@@ -14328,7 +14389,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventEndListNfting
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.EventEndListNfting;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.EventEndListNfting;
 
             /**
              * Creates a plain object from an EventEndListNfting message. Also converts values to other types if specified.
@@ -14336,7 +14397,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.EventEndListNfting, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.EventEndListNfting, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventEndListNfting to JSON.
@@ -14368,7 +14429,7 @@ export namespace ununifi {
              * Constructs a new EventPlaceBid.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IEventPlaceBid);
+            constructor(properties?: ununifi.nftbackedloan.IEventPlaceBid);
 
             /** EventPlaceBid bidder. */
             public bidder: string;
@@ -14383,20 +14444,20 @@ export namespace ununifi {
             public amount: string;
 
             /**
-             * Encodes the specified EventPlaceBid message. Does not implicitly {@link ununifi.nftmarket.EventPlaceBid.verify|verify} messages.
+             * Encodes the specified EventPlaceBid message. Does not implicitly {@link ununifi.nftbackedloan.EventPlaceBid.verify|verify} messages.
              * @param message EventPlaceBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IEventPlaceBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IEventPlaceBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventPlaceBid message, length delimited. Does not implicitly {@link ununifi.nftmarket.EventPlaceBid.verify|verify} messages.
+             * Encodes the specified EventPlaceBid message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventPlaceBid.verify|verify} messages.
              * @param message EventPlaceBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IEventPlaceBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IEventPlaceBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventPlaceBid message from the specified reader or buffer.
@@ -14406,7 +14467,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.EventPlaceBid;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.EventPlaceBid;
 
             /**
              * Decodes an EventPlaceBid message from the specified reader or buffer, length delimited.
@@ -14415,7 +14476,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.EventPlaceBid;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.EventPlaceBid;
 
             /**
              * Verifies an EventPlaceBid message.
@@ -14429,7 +14490,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventPlaceBid
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.EventPlaceBid;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.EventPlaceBid;
 
             /**
              * Creates a plain object from an EventPlaceBid message. Also converts values to other types if specified.
@@ -14437,7 +14498,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.EventPlaceBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.EventPlaceBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventPlaceBid to JSON.
@@ -14466,7 +14527,7 @@ export namespace ununifi {
              * Constructs a new EventCancelBid.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IEventCancelBid);
+            constructor(properties?: ununifi.nftbackedloan.IEventCancelBid);
 
             /** EventCancelBid bidder. */
             public bidder: string;
@@ -14478,20 +14539,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified EventCancelBid message. Does not implicitly {@link ununifi.nftmarket.EventCancelBid.verify|verify} messages.
+             * Encodes the specified EventCancelBid message. Does not implicitly {@link ununifi.nftbackedloan.EventCancelBid.verify|verify} messages.
              * @param message EventCancelBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IEventCancelBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IEventCancelBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventCancelBid message, length delimited. Does not implicitly {@link ununifi.nftmarket.EventCancelBid.verify|verify} messages.
+             * Encodes the specified EventCancelBid message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventCancelBid.verify|verify} messages.
              * @param message EventCancelBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IEventCancelBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IEventCancelBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventCancelBid message from the specified reader or buffer.
@@ -14501,7 +14562,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.EventCancelBid;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.EventCancelBid;
 
             /**
              * Decodes an EventCancelBid message from the specified reader or buffer, length delimited.
@@ -14510,7 +14571,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.EventCancelBid;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.EventCancelBid;
 
             /**
              * Verifies an EventCancelBid message.
@@ -14524,7 +14585,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventCancelBid
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.EventCancelBid;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.EventCancelBid;
 
             /**
              * Creates a plain object from an EventCancelBid message. Also converts values to other types if specified.
@@ -14532,7 +14593,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.EventCancelBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.EventCancelBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventCancelBid to JSON.
@@ -14561,7 +14622,7 @@ export namespace ununifi {
              * Constructs a new EventPayFullBid.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IEventPayFullBid);
+            constructor(properties?: ununifi.nftbackedloan.IEventPayFullBid);
 
             /** EventPayFullBid bidder. */
             public bidder: string;
@@ -14573,20 +14634,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified EventPayFullBid message. Does not implicitly {@link ununifi.nftmarket.EventPayFullBid.verify|verify} messages.
+             * Encodes the specified EventPayFullBid message. Does not implicitly {@link ununifi.nftbackedloan.EventPayFullBid.verify|verify} messages.
              * @param message EventPayFullBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IEventPayFullBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IEventPayFullBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventPayFullBid message, length delimited. Does not implicitly {@link ununifi.nftmarket.EventPayFullBid.verify|verify} messages.
+             * Encodes the specified EventPayFullBid message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventPayFullBid.verify|verify} messages.
              * @param message EventPayFullBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IEventPayFullBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IEventPayFullBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventPayFullBid message from the specified reader or buffer.
@@ -14596,7 +14657,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.EventPayFullBid;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.EventPayFullBid;
 
             /**
              * Decodes an EventPayFullBid message from the specified reader or buffer, length delimited.
@@ -14605,7 +14666,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.EventPayFullBid;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.EventPayFullBid;
 
             /**
              * Verifies an EventPayFullBid message.
@@ -14619,7 +14680,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventPayFullBid
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.EventPayFullBid;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.EventPayFullBid;
 
             /**
              * Creates a plain object from an EventPayFullBid message. Also converts values to other types if specified.
@@ -14627,7 +14688,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.EventPayFullBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.EventPayFullBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventPayFullBid to JSON.
@@ -14659,7 +14720,7 @@ export namespace ununifi {
              * Constructs a new EventBorrow.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IEventBorrow);
+            constructor(properties?: ununifi.nftbackedloan.IEventBorrow);
 
             /** EventBorrow borrower. */
             public borrower: string;
@@ -14674,20 +14735,20 @@ export namespace ununifi {
             public amount: string;
 
             /**
-             * Encodes the specified EventBorrow message. Does not implicitly {@link ununifi.nftmarket.EventBorrow.verify|verify} messages.
+             * Encodes the specified EventBorrow message. Does not implicitly {@link ununifi.nftbackedloan.EventBorrow.verify|verify} messages.
              * @param message EventBorrow message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IEventBorrow, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IEventBorrow, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventBorrow message, length delimited. Does not implicitly {@link ununifi.nftmarket.EventBorrow.verify|verify} messages.
+             * Encodes the specified EventBorrow message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventBorrow.verify|verify} messages.
              * @param message EventBorrow message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IEventBorrow, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IEventBorrow, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventBorrow message from the specified reader or buffer.
@@ -14697,7 +14758,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.EventBorrow;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.EventBorrow;
 
             /**
              * Decodes an EventBorrow message from the specified reader or buffer, length delimited.
@@ -14706,7 +14767,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.EventBorrow;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.EventBorrow;
 
             /**
              * Verifies an EventBorrow message.
@@ -14720,7 +14781,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventBorrow
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.EventBorrow;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.EventBorrow;
 
             /**
              * Creates a plain object from an EventBorrow message. Also converts values to other types if specified.
@@ -14728,7 +14789,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.EventBorrow, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.EventBorrow, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventBorrow to JSON.
@@ -14760,7 +14821,7 @@ export namespace ununifi {
              * Constructs a new EventRepay.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IEventRepay);
+            constructor(properties?: ununifi.nftbackedloan.IEventRepay);
 
             /** EventRepay repayer. */
             public repayer: string;
@@ -14775,20 +14836,20 @@ export namespace ununifi {
             public amount: string;
 
             /**
-             * Encodes the specified EventRepay message. Does not implicitly {@link ununifi.nftmarket.EventRepay.verify|verify} messages.
+             * Encodes the specified EventRepay message. Does not implicitly {@link ununifi.nftbackedloan.EventRepay.verify|verify} messages.
              * @param message EventRepay message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IEventRepay, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IEventRepay, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventRepay message, length delimited. Does not implicitly {@link ununifi.nftmarket.EventRepay.verify|verify} messages.
+             * Encodes the specified EventRepay message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventRepay.verify|verify} messages.
              * @param message EventRepay message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IEventRepay, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IEventRepay, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventRepay message from the specified reader or buffer.
@@ -14798,7 +14859,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.EventRepay;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.EventRepay;
 
             /**
              * Decodes an EventRepay message from the specified reader or buffer, length delimited.
@@ -14807,7 +14868,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.EventRepay;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.EventRepay;
 
             /**
              * Verifies an EventRepay message.
@@ -14821,7 +14882,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventRepay
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.EventRepay;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.EventRepay;
 
             /**
              * Creates a plain object from an EventRepay message. Also converts values to other types if specified.
@@ -14829,7 +14890,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.EventRepay, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.EventRepay, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventRepay to JSON.
@@ -14858,7 +14919,7 @@ export namespace ununifi {
              * Constructs a new EventLiquidate.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IEventLiquidate);
+            constructor(properties?: ununifi.nftbackedloan.IEventLiquidate);
 
             /** EventLiquidate liquidator. */
             public liquidator: string;
@@ -14870,20 +14931,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified EventLiquidate message. Does not implicitly {@link ununifi.nftmarket.EventLiquidate.verify|verify} messages.
+             * Encodes the specified EventLiquidate message. Does not implicitly {@link ununifi.nftbackedloan.EventLiquidate.verify|verify} messages.
              * @param message EventLiquidate message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IEventLiquidate, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IEventLiquidate, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventLiquidate message, length delimited. Does not implicitly {@link ununifi.nftmarket.EventLiquidate.verify|verify} messages.
+             * Encodes the specified EventLiquidate message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventLiquidate.verify|verify} messages.
              * @param message EventLiquidate message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IEventLiquidate, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IEventLiquidate, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventLiquidate message from the specified reader or buffer.
@@ -14893,7 +14954,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.EventLiquidate;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.EventLiquidate;
 
             /**
              * Decodes an EventLiquidate message from the specified reader or buffer, length delimited.
@@ -14902,7 +14963,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.EventLiquidate;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.EventLiquidate;
 
             /**
              * Verifies an EventLiquidate message.
@@ -14916,7 +14977,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventLiquidate
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.EventLiquidate;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.EventLiquidate;
 
             /**
              * Creates a plain object from an EventLiquidate message. Also converts values to other types if specified.
@@ -14924,7 +14985,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.EventLiquidate, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.EventLiquidate, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventLiquidate to JSON.
@@ -14937,7 +14998,7 @@ export namespace ununifi {
         interface IPaymentStatus {
 
             /** PaymentStatus nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** PaymentStatus bidder */
             bidder?: (string|null);
@@ -14955,7 +15016,7 @@ export namespace ununifi {
             bid_time?: (google.protobuf.ITimestamp|null);
 
             /** PaymentStatus state */
-            state?: (ununifi.nftmarket.ListingState|null);
+            state?: (ununifi.nftbackedloan.ListingState|null);
 
             /** PaymentStatus all_paid */
             all_paid?: (boolean|null);
@@ -14968,10 +15029,10 @@ export namespace ununifi {
              * Constructs a new PaymentStatus.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IPaymentStatus);
+            constructor(properties?: ununifi.nftbackedloan.IPaymentStatus);
 
             /** PaymentStatus nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** PaymentStatus bidder. */
             public bidder: string;
@@ -14989,26 +15050,26 @@ export namespace ununifi {
             public bid_time?: (google.protobuf.ITimestamp|null);
 
             /** PaymentStatus state. */
-            public state: ununifi.nftmarket.ListingState;
+            public state: ununifi.nftbackedloan.ListingState;
 
             /** PaymentStatus all_paid. */
             public all_paid: boolean;
 
             /**
-             * Encodes the specified PaymentStatus message. Does not implicitly {@link ununifi.nftmarket.PaymentStatus.verify|verify} messages.
+             * Encodes the specified PaymentStatus message. Does not implicitly {@link ununifi.nftbackedloan.PaymentStatus.verify|verify} messages.
              * @param message PaymentStatus message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IPaymentStatus, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IPaymentStatus, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified PaymentStatus message, length delimited. Does not implicitly {@link ununifi.nftmarket.PaymentStatus.verify|verify} messages.
+             * Encodes the specified PaymentStatus message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.PaymentStatus.verify|verify} messages.
              * @param message PaymentStatus message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IPaymentStatus, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IPaymentStatus, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a PaymentStatus message from the specified reader or buffer.
@@ -15018,7 +15079,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.PaymentStatus;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.PaymentStatus;
 
             /**
              * Decodes a PaymentStatus message from the specified reader or buffer, length delimited.
@@ -15027,7 +15088,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.PaymentStatus;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.PaymentStatus;
 
             /**
              * Verifies a PaymentStatus message.
@@ -15041,7 +15102,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns PaymentStatus
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.PaymentStatus;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.PaymentStatus;
 
             /**
              * Creates a plain object from a PaymentStatus message. Also converts values to other types if specified.
@@ -15049,7 +15110,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.PaymentStatus, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.PaymentStatus, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this PaymentStatus to JSON.
@@ -15075,7 +15136,7 @@ export namespace ununifi {
              * Constructs a new Liquidation.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.ILiquidation);
+            constructor(properties?: ununifi.nftbackedloan.ILiquidation);
 
             /** Liquidation amount. */
             public amount?: (cosmos.base.v1beta1.ICoin|null);
@@ -15084,20 +15145,20 @@ export namespace ununifi {
             public liquidation_date?: (google.protobuf.ITimestamp|null);
 
             /**
-             * Encodes the specified Liquidation message. Does not implicitly {@link ununifi.nftmarket.Liquidation.verify|verify} messages.
+             * Encodes the specified Liquidation message. Does not implicitly {@link ununifi.nftbackedloan.Liquidation.verify|verify} messages.
              * @param message Liquidation message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.ILiquidation, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.ILiquidation, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified Liquidation message, length delimited. Does not implicitly {@link ununifi.nftmarket.Liquidation.verify|verify} messages.
+             * Encodes the specified Liquidation message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.Liquidation.verify|verify} messages.
              * @param message Liquidation message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.ILiquidation, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.ILiquidation, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a Liquidation message from the specified reader or buffer.
@@ -15107,7 +15168,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.Liquidation;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.Liquidation;
 
             /**
              * Decodes a Liquidation message from the specified reader or buffer, length delimited.
@@ -15116,7 +15177,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.Liquidation;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.Liquidation;
 
             /**
              * Verifies a Liquidation message.
@@ -15130,7 +15191,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns Liquidation
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.Liquidation;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.Liquidation;
 
             /**
              * Creates a plain object from a Liquidation message. Also converts values to other types if specified.
@@ -15138,7 +15199,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.Liquidation, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.Liquidation, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this Liquidation to JSON.
@@ -15151,10 +15212,10 @@ export namespace ununifi {
         interface ILiquidations {
 
             /** Liquidations liquidation */
-            liquidation?: (ununifi.nftmarket.ILiquidation|null);
+            liquidation?: (ununifi.nftbackedloan.ILiquidation|null);
 
             /** Liquidations next_liquidation */
-            next_liquidation?: (ununifi.nftmarket.ILiquidation[]|null);
+            next_liquidation?: (ununifi.nftbackedloan.ILiquidation[]|null);
         }
 
         /** Represents a Liquidations. */
@@ -15164,29 +15225,29 @@ export namespace ununifi {
              * Constructs a new Liquidations.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.ILiquidations);
+            constructor(properties?: ununifi.nftbackedloan.ILiquidations);
 
             /** Liquidations liquidation. */
-            public liquidation?: (ununifi.nftmarket.ILiquidation|null);
+            public liquidation?: (ununifi.nftbackedloan.ILiquidation|null);
 
             /** Liquidations next_liquidation. */
-            public next_liquidation: ununifi.nftmarket.ILiquidation[];
+            public next_liquidation: ununifi.nftbackedloan.ILiquidation[];
 
             /**
-             * Encodes the specified Liquidations message. Does not implicitly {@link ununifi.nftmarket.Liquidations.verify|verify} messages.
+             * Encodes the specified Liquidations message. Does not implicitly {@link ununifi.nftbackedloan.Liquidations.verify|verify} messages.
              * @param message Liquidations message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.ILiquidations, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.ILiquidations, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified Liquidations message, length delimited. Does not implicitly {@link ununifi.nftmarket.Liquidations.verify|verify} messages.
+             * Encodes the specified Liquidations message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.Liquidations.verify|verify} messages.
              * @param message Liquidations message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.ILiquidations, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.ILiquidations, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a Liquidations message from the specified reader or buffer.
@@ -15196,7 +15257,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.Liquidations;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.Liquidations;
 
             /**
              * Decodes a Liquidations message from the specified reader or buffer, length delimited.
@@ -15205,7 +15266,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.Liquidations;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.Liquidations;
 
             /**
              * Verifies a Liquidations message.
@@ -15219,7 +15280,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns Liquidations
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.Liquidations;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.Liquidations;
 
             /**
              * Creates a plain object from a Liquidations message. Also converts values to other types if specified.
@@ -15227,7 +15288,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.Liquidations, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.Liquidations, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this Liquidations to JSON.
@@ -15252,213 +15313,213 @@ export namespace ununifi {
              * @param request MsgMintNft message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgMintNftResponse
              */
-            public mintNft(request: ununifi.nftmarket.IMsgMintNft, callback: ununifi.nftmarket.Msg.MintNftCallback): void;
+            public mintNft(request: ununifi.nftbackedloan.IMsgMintNft, callback: ununifi.nftbackedloan.Msg.MintNftCallback): void;
 
             /**
              * Calls MintNft.
              * @param request MsgMintNft message or plain object
              * @returns Promise
              */
-            public mintNft(request: ununifi.nftmarket.IMsgMintNft): Promise<ununifi.nftmarket.MsgMintNftResponse>;
+            public mintNft(request: ununifi.nftbackedloan.IMsgMintNft): Promise<ununifi.nftbackedloan.MsgMintNftResponse>;
 
             /**
              * Calls ListNft.
              * @param request MsgListNft message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgListNftResponse
              */
-            public listNft(request: ununifi.nftmarket.IMsgListNft, callback: ununifi.nftmarket.Msg.ListNftCallback): void;
+            public listNft(request: ununifi.nftbackedloan.IMsgListNft, callback: ununifi.nftbackedloan.Msg.ListNftCallback): void;
 
             /**
              * Calls ListNft.
              * @param request MsgListNft message or plain object
              * @returns Promise
              */
-            public listNft(request: ununifi.nftmarket.IMsgListNft): Promise<ununifi.nftmarket.MsgListNftResponse>;
+            public listNft(request: ununifi.nftbackedloan.IMsgListNft): Promise<ununifi.nftbackedloan.MsgListNftResponse>;
 
             /**
              * Calls CancelNftListing.
              * @param request MsgCancelNftListing message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgCancelNftListingResponse
              */
-            public cancelNftListing(request: ununifi.nftmarket.IMsgCancelNftListing, callback: ununifi.nftmarket.Msg.CancelNftListingCallback): void;
+            public cancelNftListing(request: ununifi.nftbackedloan.IMsgCancelNftListing, callback: ununifi.nftbackedloan.Msg.CancelNftListingCallback): void;
 
             /**
              * Calls CancelNftListing.
              * @param request MsgCancelNftListing message or plain object
              * @returns Promise
              */
-            public cancelNftListing(request: ununifi.nftmarket.IMsgCancelNftListing): Promise<ununifi.nftmarket.MsgCancelNftListingResponse>;
+            public cancelNftListing(request: ununifi.nftbackedloan.IMsgCancelNftListing): Promise<ununifi.nftbackedloan.MsgCancelNftListingResponse>;
 
             /**
              * Calls PlaceBid.
              * @param request MsgPlaceBid message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgPlaceBidResponse
              */
-            public placeBid(request: ununifi.nftmarket.IMsgPlaceBid, callback: ununifi.nftmarket.Msg.PlaceBidCallback): void;
+            public placeBid(request: ununifi.nftbackedloan.IMsgPlaceBid, callback: ununifi.nftbackedloan.Msg.PlaceBidCallback): void;
 
             /**
              * Calls PlaceBid.
              * @param request MsgPlaceBid message or plain object
              * @returns Promise
              */
-            public placeBid(request: ununifi.nftmarket.IMsgPlaceBid): Promise<ununifi.nftmarket.MsgPlaceBidResponse>;
+            public placeBid(request: ununifi.nftbackedloan.IMsgPlaceBid): Promise<ununifi.nftbackedloan.MsgPlaceBidResponse>;
 
             /**
              * Calls CancelBid.
              * @param request MsgCancelBid message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgCancelBidResponse
              */
-            public cancelBid(request: ununifi.nftmarket.IMsgCancelBid, callback: ununifi.nftmarket.Msg.CancelBidCallback): void;
+            public cancelBid(request: ununifi.nftbackedloan.IMsgCancelBid, callback: ununifi.nftbackedloan.Msg.CancelBidCallback): void;
 
             /**
              * Calls CancelBid.
              * @param request MsgCancelBid message or plain object
              * @returns Promise
              */
-            public cancelBid(request: ununifi.nftmarket.IMsgCancelBid): Promise<ununifi.nftmarket.MsgCancelBidResponse>;
+            public cancelBid(request: ununifi.nftbackedloan.IMsgCancelBid): Promise<ununifi.nftbackedloan.MsgCancelBidResponse>;
 
             /**
              * Calls SellingDecision.
              * @param request MsgSellingDecision message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgSellingDecisionResponse
              */
-            public sellingDecision(request: ununifi.nftmarket.IMsgSellingDecision, callback: ununifi.nftmarket.Msg.SellingDecisionCallback): void;
+            public sellingDecision(request: ununifi.nftbackedloan.IMsgSellingDecision, callback: ununifi.nftbackedloan.Msg.SellingDecisionCallback): void;
 
             /**
              * Calls SellingDecision.
              * @param request MsgSellingDecision message or plain object
              * @returns Promise
              */
-            public sellingDecision(request: ununifi.nftmarket.IMsgSellingDecision): Promise<ununifi.nftmarket.MsgSellingDecisionResponse>;
+            public sellingDecision(request: ununifi.nftbackedloan.IMsgSellingDecision): Promise<ununifi.nftbackedloan.MsgSellingDecisionResponse>;
 
             /**
              * Calls EndNftListing.
              * @param request MsgEndNftListing message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgEndNftListingResponse
              */
-            public endNftListing(request: ununifi.nftmarket.IMsgEndNftListing, callback: ununifi.nftmarket.Msg.EndNftListingCallback): void;
+            public endNftListing(request: ununifi.nftbackedloan.IMsgEndNftListing, callback: ununifi.nftbackedloan.Msg.EndNftListingCallback): void;
 
             /**
              * Calls EndNftListing.
              * @param request MsgEndNftListing message or plain object
              * @returns Promise
              */
-            public endNftListing(request: ununifi.nftmarket.IMsgEndNftListing): Promise<ununifi.nftmarket.MsgEndNftListingResponse>;
+            public endNftListing(request: ununifi.nftbackedloan.IMsgEndNftListing): Promise<ununifi.nftbackedloan.MsgEndNftListingResponse>;
 
             /**
              * Calls PayFullBid.
              * @param request MsgPayFullBid message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgPayFullBidResponse
              */
-            public payFullBid(request: ununifi.nftmarket.IMsgPayFullBid, callback: ununifi.nftmarket.Msg.PayFullBidCallback): void;
+            public payFullBid(request: ununifi.nftbackedloan.IMsgPayFullBid, callback: ununifi.nftbackedloan.Msg.PayFullBidCallback): void;
 
             /**
              * Calls PayFullBid.
              * @param request MsgPayFullBid message or plain object
              * @returns Promise
              */
-            public payFullBid(request: ununifi.nftmarket.IMsgPayFullBid): Promise<ununifi.nftmarket.MsgPayFullBidResponse>;
+            public payFullBid(request: ununifi.nftbackedloan.IMsgPayFullBid): Promise<ununifi.nftbackedloan.MsgPayFullBidResponse>;
 
             /**
              * Calls Borrow.
              * @param request MsgBorrow message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgBorrowResponse
              */
-            public borrow(request: ununifi.nftmarket.IMsgBorrow, callback: ununifi.nftmarket.Msg.BorrowCallback): void;
+            public borrow(request: ununifi.nftbackedloan.IMsgBorrow, callback: ununifi.nftbackedloan.Msg.BorrowCallback): void;
 
             /**
              * Calls Borrow.
              * @param request MsgBorrow message or plain object
              * @returns Promise
              */
-            public borrow(request: ununifi.nftmarket.IMsgBorrow): Promise<ununifi.nftmarket.MsgBorrowResponse>;
+            public borrow(request: ununifi.nftbackedloan.IMsgBorrow): Promise<ununifi.nftbackedloan.MsgBorrowResponse>;
 
             /**
              * Calls Repay.
              * @param request MsgRepay message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgRepayResponse
              */
-            public repay(request: ununifi.nftmarket.IMsgRepay, callback: ununifi.nftmarket.Msg.RepayCallback): void;
+            public repay(request: ununifi.nftbackedloan.IMsgRepay, callback: ununifi.nftbackedloan.Msg.RepayCallback): void;
 
             /**
              * Calls Repay.
              * @param request MsgRepay message or plain object
              * @returns Promise
              */
-            public repay(request: ununifi.nftmarket.IMsgRepay): Promise<ununifi.nftmarket.MsgRepayResponse>;
+            public repay(request: ununifi.nftbackedloan.IMsgRepay): Promise<ununifi.nftbackedloan.MsgRepayResponse>;
         }
 
         namespace Msg {
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Msg#mintNft}.
+             * Callback as used by {@link ununifi.nftbackedloan.Msg#mintNft}.
              * @param error Error, if any
              * @param [response] MsgMintNftResponse
              */
-            type MintNftCallback = (error: (Error|null), response?: ununifi.nftmarket.MsgMintNftResponse) => void;
+            type MintNftCallback = (error: (Error|null), response?: ununifi.nftbackedloan.MsgMintNftResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Msg#listNft}.
+             * Callback as used by {@link ununifi.nftbackedloan.Msg#listNft}.
              * @param error Error, if any
              * @param [response] MsgListNftResponse
              */
-            type ListNftCallback = (error: (Error|null), response?: ununifi.nftmarket.MsgListNftResponse) => void;
+            type ListNftCallback = (error: (Error|null), response?: ununifi.nftbackedloan.MsgListNftResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Msg#cancelNftListing}.
+             * Callback as used by {@link ununifi.nftbackedloan.Msg#cancelNftListing}.
              * @param error Error, if any
              * @param [response] MsgCancelNftListingResponse
              */
-            type CancelNftListingCallback = (error: (Error|null), response?: ununifi.nftmarket.MsgCancelNftListingResponse) => void;
+            type CancelNftListingCallback = (error: (Error|null), response?: ununifi.nftbackedloan.MsgCancelNftListingResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Msg#placeBid}.
+             * Callback as used by {@link ununifi.nftbackedloan.Msg#placeBid}.
              * @param error Error, if any
              * @param [response] MsgPlaceBidResponse
              */
-            type PlaceBidCallback = (error: (Error|null), response?: ununifi.nftmarket.MsgPlaceBidResponse) => void;
+            type PlaceBidCallback = (error: (Error|null), response?: ununifi.nftbackedloan.MsgPlaceBidResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Msg#cancelBid}.
+             * Callback as used by {@link ununifi.nftbackedloan.Msg#cancelBid}.
              * @param error Error, if any
              * @param [response] MsgCancelBidResponse
              */
-            type CancelBidCallback = (error: (Error|null), response?: ununifi.nftmarket.MsgCancelBidResponse) => void;
+            type CancelBidCallback = (error: (Error|null), response?: ununifi.nftbackedloan.MsgCancelBidResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Msg#sellingDecision}.
+             * Callback as used by {@link ununifi.nftbackedloan.Msg#sellingDecision}.
              * @param error Error, if any
              * @param [response] MsgSellingDecisionResponse
              */
-            type SellingDecisionCallback = (error: (Error|null), response?: ununifi.nftmarket.MsgSellingDecisionResponse) => void;
+            type SellingDecisionCallback = (error: (Error|null), response?: ununifi.nftbackedloan.MsgSellingDecisionResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Msg#endNftListing}.
+             * Callback as used by {@link ununifi.nftbackedloan.Msg#endNftListing}.
              * @param error Error, if any
              * @param [response] MsgEndNftListingResponse
              */
-            type EndNftListingCallback = (error: (Error|null), response?: ununifi.nftmarket.MsgEndNftListingResponse) => void;
+            type EndNftListingCallback = (error: (Error|null), response?: ununifi.nftbackedloan.MsgEndNftListingResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Msg#payFullBid}.
+             * Callback as used by {@link ununifi.nftbackedloan.Msg#payFullBid}.
              * @param error Error, if any
              * @param [response] MsgPayFullBidResponse
              */
-            type PayFullBidCallback = (error: (Error|null), response?: ununifi.nftmarket.MsgPayFullBidResponse) => void;
+            type PayFullBidCallback = (error: (Error|null), response?: ununifi.nftbackedloan.MsgPayFullBidResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Msg#borrow}.
+             * Callback as used by {@link ununifi.nftbackedloan.Msg#borrow}.
              * @param error Error, if any
              * @param [response] MsgBorrowResponse
              */
-            type BorrowCallback = (error: (Error|null), response?: ununifi.nftmarket.MsgBorrowResponse) => void;
+            type BorrowCallback = (error: (Error|null), response?: ununifi.nftbackedloan.MsgBorrowResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmarket.Msg#repay}.
+             * Callback as used by {@link ununifi.nftbackedloan.Msg#repay}.
              * @param error Error, if any
              * @param [response] MsgRepayResponse
              */
-            type RepayCallback = (error: (Error|null), response?: ununifi.nftmarket.MsgRepayResponse) => void;
+            type RepayCallback = (error: (Error|null), response?: ununifi.nftbackedloan.MsgRepayResponse) => void;
         }
 
         /** Properties of a MsgMintNft. */
@@ -15487,7 +15548,7 @@ export namespace ununifi {
              * Constructs a new MsgMintNft.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgMintNft);
+            constructor(properties?: ununifi.nftbackedloan.IMsgMintNft);
 
             /** MsgMintNft sender. */
             public sender: string;
@@ -15505,20 +15566,20 @@ export namespace ununifi {
             public nftUriHash: string;
 
             /**
-             * Encodes the specified MsgMintNft message. Does not implicitly {@link ununifi.nftmarket.MsgMintNft.verify|verify} messages.
+             * Encodes the specified MsgMintNft message. Does not implicitly {@link ununifi.nftbackedloan.MsgMintNft.verify|verify} messages.
              * @param message MsgMintNft message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgMintNft, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgMintNft, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgMintNft message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgMintNft.verify|verify} messages.
+             * Encodes the specified MsgMintNft message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgMintNft.verify|verify} messages.
              * @param message MsgMintNft message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgMintNft, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgMintNft, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgMintNft message from the specified reader or buffer.
@@ -15528,7 +15589,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgMintNft;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgMintNft;
 
             /**
              * Decodes a MsgMintNft message from the specified reader or buffer, length delimited.
@@ -15537,7 +15598,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgMintNft;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgMintNft;
 
             /**
              * Verifies a MsgMintNft message.
@@ -15551,7 +15612,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgMintNft
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgMintNft;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgMintNft;
 
             /**
              * Creates a plain object from a MsgMintNft message. Also converts values to other types if specified.
@@ -15559,7 +15620,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgMintNft, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgMintNft, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgMintNft to JSON.
@@ -15579,23 +15640,23 @@ export namespace ununifi {
              * Constructs a new MsgMintNftResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgMintNftResponse);
+            constructor(properties?: ununifi.nftbackedloan.IMsgMintNftResponse);
 
             /**
-             * Encodes the specified MsgMintNftResponse message. Does not implicitly {@link ununifi.nftmarket.MsgMintNftResponse.verify|verify} messages.
+             * Encodes the specified MsgMintNftResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgMintNftResponse.verify|verify} messages.
              * @param message MsgMintNftResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgMintNftResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgMintNftResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgMintNftResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgMintNftResponse.verify|verify} messages.
+             * Encodes the specified MsgMintNftResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgMintNftResponse.verify|verify} messages.
              * @param message MsgMintNftResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgMintNftResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgMintNftResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgMintNftResponse message from the specified reader or buffer.
@@ -15605,7 +15666,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgMintNftResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgMintNftResponse;
 
             /**
              * Decodes a MsgMintNftResponse message from the specified reader or buffer, length delimited.
@@ -15614,7 +15675,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgMintNftResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgMintNftResponse;
 
             /**
              * Verifies a MsgMintNftResponse message.
@@ -15628,7 +15689,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgMintNftResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgMintNftResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgMintNftResponse;
 
             /**
              * Creates a plain object from a MsgMintNftResponse message. Also converts values to other types if specified.
@@ -15636,7 +15697,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgMintNftResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgMintNftResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgMintNftResponse to JSON.
@@ -15652,10 +15713,10 @@ export namespace ununifi {
             sender?: (string|null);
 
             /** MsgListNft nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** MsgListNft listing_type */
-            listing_type?: (ununifi.nftmarket.ListingType|null);
+            listing_type?: (ununifi.nftbackedloan.ListingType|null);
 
             /** MsgListNft bid_token */
             bid_token?: (string|null);
@@ -15677,16 +15738,16 @@ export namespace ununifi {
              * Constructs a new MsgListNft.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgListNft);
+            constructor(properties?: ununifi.nftbackedloan.IMsgListNft);
 
             /** MsgListNft sender. */
             public sender: string;
 
             /** MsgListNft nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** MsgListNft listing_type. */
-            public listing_type: ununifi.nftmarket.ListingType;
+            public listing_type: ununifi.nftbackedloan.ListingType;
 
             /** MsgListNft bid_token. */
             public bid_token: string;
@@ -15701,20 +15762,20 @@ export namespace ununifi {
             public minimum_bidding_period?: (google.protobuf.IDuration|null);
 
             /**
-             * Encodes the specified MsgListNft message. Does not implicitly {@link ununifi.nftmarket.MsgListNft.verify|verify} messages.
+             * Encodes the specified MsgListNft message. Does not implicitly {@link ununifi.nftbackedloan.MsgListNft.verify|verify} messages.
              * @param message MsgListNft message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgListNft, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgListNft, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgListNft message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgListNft.verify|verify} messages.
+             * Encodes the specified MsgListNft message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgListNft.verify|verify} messages.
              * @param message MsgListNft message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgListNft, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgListNft, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgListNft message from the specified reader or buffer.
@@ -15724,7 +15785,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgListNft;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgListNft;
 
             /**
              * Decodes a MsgListNft message from the specified reader or buffer, length delimited.
@@ -15733,7 +15794,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgListNft;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgListNft;
 
             /**
              * Verifies a MsgListNft message.
@@ -15747,7 +15808,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgListNft
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgListNft;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgListNft;
 
             /**
              * Creates a plain object from a MsgListNft message. Also converts values to other types if specified.
@@ -15755,7 +15816,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgListNft, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgListNft, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgListNft to JSON.
@@ -15775,23 +15836,23 @@ export namespace ununifi {
              * Constructs a new MsgListNftResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgListNftResponse);
+            constructor(properties?: ununifi.nftbackedloan.IMsgListNftResponse);
 
             /**
-             * Encodes the specified MsgListNftResponse message. Does not implicitly {@link ununifi.nftmarket.MsgListNftResponse.verify|verify} messages.
+             * Encodes the specified MsgListNftResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgListNftResponse.verify|verify} messages.
              * @param message MsgListNftResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgListNftResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgListNftResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgListNftResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgListNftResponse.verify|verify} messages.
+             * Encodes the specified MsgListNftResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgListNftResponse.verify|verify} messages.
              * @param message MsgListNftResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgListNftResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgListNftResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgListNftResponse message from the specified reader or buffer.
@@ -15801,7 +15862,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgListNftResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgListNftResponse;
 
             /**
              * Decodes a MsgListNftResponse message from the specified reader or buffer, length delimited.
@@ -15810,7 +15871,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgListNftResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgListNftResponse;
 
             /**
              * Verifies a MsgListNftResponse message.
@@ -15824,7 +15885,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgListNftResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgListNftResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgListNftResponse;
 
             /**
              * Creates a plain object from a MsgListNftResponse message. Also converts values to other types if specified.
@@ -15832,7 +15893,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgListNftResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgListNftResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgListNftResponse to JSON.
@@ -15848,7 +15909,7 @@ export namespace ununifi {
             sender?: (string|null);
 
             /** MsgCancelNftListing nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
         }
 
         /** Represents a MsgCancelNftListing. */
@@ -15858,29 +15919,29 @@ export namespace ununifi {
              * Constructs a new MsgCancelNftListing.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgCancelNftListing);
+            constructor(properties?: ununifi.nftbackedloan.IMsgCancelNftListing);
 
             /** MsgCancelNftListing sender. */
             public sender: string;
 
             /** MsgCancelNftListing nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /**
-             * Encodes the specified MsgCancelNftListing message. Does not implicitly {@link ununifi.nftmarket.MsgCancelNftListing.verify|verify} messages.
+             * Encodes the specified MsgCancelNftListing message. Does not implicitly {@link ununifi.nftbackedloan.MsgCancelNftListing.verify|verify} messages.
              * @param message MsgCancelNftListing message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgCancelNftListing, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgCancelNftListing, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgCancelNftListing message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgCancelNftListing.verify|verify} messages.
+             * Encodes the specified MsgCancelNftListing message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgCancelNftListing.verify|verify} messages.
              * @param message MsgCancelNftListing message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgCancelNftListing, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgCancelNftListing, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgCancelNftListing message from the specified reader or buffer.
@@ -15890,7 +15951,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgCancelNftListing;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgCancelNftListing;
 
             /**
              * Decodes a MsgCancelNftListing message from the specified reader or buffer, length delimited.
@@ -15899,7 +15960,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgCancelNftListing;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgCancelNftListing;
 
             /**
              * Verifies a MsgCancelNftListing message.
@@ -15913,7 +15974,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgCancelNftListing
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgCancelNftListing;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgCancelNftListing;
 
             /**
              * Creates a plain object from a MsgCancelNftListing message. Also converts values to other types if specified.
@@ -15921,7 +15982,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgCancelNftListing, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgCancelNftListing, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgCancelNftListing to JSON.
@@ -15941,23 +16002,23 @@ export namespace ununifi {
              * Constructs a new MsgCancelNftListingResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgCancelNftListingResponse);
+            constructor(properties?: ununifi.nftbackedloan.IMsgCancelNftListingResponse);
 
             /**
-             * Encodes the specified MsgCancelNftListingResponse message. Does not implicitly {@link ununifi.nftmarket.MsgCancelNftListingResponse.verify|verify} messages.
+             * Encodes the specified MsgCancelNftListingResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgCancelNftListingResponse.verify|verify} messages.
              * @param message MsgCancelNftListingResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgCancelNftListingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgCancelNftListingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgCancelNftListingResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgCancelNftListingResponse.verify|verify} messages.
+             * Encodes the specified MsgCancelNftListingResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgCancelNftListingResponse.verify|verify} messages.
              * @param message MsgCancelNftListingResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgCancelNftListingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgCancelNftListingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgCancelNftListingResponse message from the specified reader or buffer.
@@ -15967,7 +16028,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgCancelNftListingResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgCancelNftListingResponse;
 
             /**
              * Decodes a MsgCancelNftListingResponse message from the specified reader or buffer, length delimited.
@@ -15976,7 +16037,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgCancelNftListingResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgCancelNftListingResponse;
 
             /**
              * Verifies a MsgCancelNftListingResponse message.
@@ -15990,7 +16051,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgCancelNftListingResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgCancelNftListingResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgCancelNftListingResponse;
 
             /**
              * Creates a plain object from a MsgCancelNftListingResponse message. Also converts values to other types if specified.
@@ -15998,7 +16059,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgCancelNftListingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgCancelNftListingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgCancelNftListingResponse to JSON.
@@ -16014,7 +16075,7 @@ export namespace ununifi {
             sender?: (string|null);
 
             /** MsgPlaceBid nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** MsgPlaceBid bid_amount */
             bid_amount?: (cosmos.base.v1beta1.ICoin|null);
@@ -16039,13 +16100,13 @@ export namespace ununifi {
              * Constructs a new MsgPlaceBid.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgPlaceBid);
+            constructor(properties?: ununifi.nftbackedloan.IMsgPlaceBid);
 
             /** MsgPlaceBid sender. */
             public sender: string;
 
             /** MsgPlaceBid nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** MsgPlaceBid bid_amount. */
             public bid_amount?: (cosmos.base.v1beta1.ICoin|null);
@@ -16063,20 +16124,20 @@ export namespace ununifi {
             public deposit_amount?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
-             * Encodes the specified MsgPlaceBid message. Does not implicitly {@link ununifi.nftmarket.MsgPlaceBid.verify|verify} messages.
+             * Encodes the specified MsgPlaceBid message. Does not implicitly {@link ununifi.nftbackedloan.MsgPlaceBid.verify|verify} messages.
              * @param message MsgPlaceBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgPlaceBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgPlaceBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgPlaceBid message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgPlaceBid.verify|verify} messages.
+             * Encodes the specified MsgPlaceBid message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgPlaceBid.verify|verify} messages.
              * @param message MsgPlaceBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgPlaceBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgPlaceBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgPlaceBid message from the specified reader or buffer.
@@ -16086,7 +16147,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgPlaceBid;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgPlaceBid;
 
             /**
              * Decodes a MsgPlaceBid message from the specified reader or buffer, length delimited.
@@ -16095,7 +16156,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgPlaceBid;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgPlaceBid;
 
             /**
              * Verifies a MsgPlaceBid message.
@@ -16109,7 +16170,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgPlaceBid
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgPlaceBid;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgPlaceBid;
 
             /**
              * Creates a plain object from a MsgPlaceBid message. Also converts values to other types if specified.
@@ -16117,7 +16178,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgPlaceBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgPlaceBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgPlaceBid to JSON.
@@ -16137,23 +16198,23 @@ export namespace ununifi {
              * Constructs a new MsgPlaceBidResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgPlaceBidResponse);
+            constructor(properties?: ununifi.nftbackedloan.IMsgPlaceBidResponse);
 
             /**
-             * Encodes the specified MsgPlaceBidResponse message. Does not implicitly {@link ununifi.nftmarket.MsgPlaceBidResponse.verify|verify} messages.
+             * Encodes the specified MsgPlaceBidResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgPlaceBidResponse.verify|verify} messages.
              * @param message MsgPlaceBidResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgPlaceBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgPlaceBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgPlaceBidResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgPlaceBidResponse.verify|verify} messages.
+             * Encodes the specified MsgPlaceBidResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgPlaceBidResponse.verify|verify} messages.
              * @param message MsgPlaceBidResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgPlaceBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgPlaceBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgPlaceBidResponse message from the specified reader or buffer.
@@ -16163,7 +16224,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgPlaceBidResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgPlaceBidResponse;
 
             /**
              * Decodes a MsgPlaceBidResponse message from the specified reader or buffer, length delimited.
@@ -16172,7 +16233,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgPlaceBidResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgPlaceBidResponse;
 
             /**
              * Verifies a MsgPlaceBidResponse message.
@@ -16186,7 +16247,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgPlaceBidResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgPlaceBidResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgPlaceBidResponse;
 
             /**
              * Creates a plain object from a MsgPlaceBidResponse message. Also converts values to other types if specified.
@@ -16194,7 +16255,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgPlaceBidResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgPlaceBidResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgPlaceBidResponse to JSON.
@@ -16210,7 +16271,7 @@ export namespace ununifi {
             sender?: (string|null);
 
             /** MsgCancelBid nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
         }
 
         /** Represents a MsgCancelBid. */
@@ -16220,29 +16281,29 @@ export namespace ununifi {
              * Constructs a new MsgCancelBid.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgCancelBid);
+            constructor(properties?: ununifi.nftbackedloan.IMsgCancelBid);
 
             /** MsgCancelBid sender. */
             public sender: string;
 
             /** MsgCancelBid nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /**
-             * Encodes the specified MsgCancelBid message. Does not implicitly {@link ununifi.nftmarket.MsgCancelBid.verify|verify} messages.
+             * Encodes the specified MsgCancelBid message. Does not implicitly {@link ununifi.nftbackedloan.MsgCancelBid.verify|verify} messages.
              * @param message MsgCancelBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgCancelBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgCancelBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgCancelBid message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgCancelBid.verify|verify} messages.
+             * Encodes the specified MsgCancelBid message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgCancelBid.verify|verify} messages.
              * @param message MsgCancelBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgCancelBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgCancelBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgCancelBid message from the specified reader or buffer.
@@ -16252,7 +16313,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgCancelBid;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgCancelBid;
 
             /**
              * Decodes a MsgCancelBid message from the specified reader or buffer, length delimited.
@@ -16261,7 +16322,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgCancelBid;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgCancelBid;
 
             /**
              * Verifies a MsgCancelBid message.
@@ -16275,7 +16336,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgCancelBid
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgCancelBid;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgCancelBid;
 
             /**
              * Creates a plain object from a MsgCancelBid message. Also converts values to other types if specified.
@@ -16283,7 +16344,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgCancelBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgCancelBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgCancelBid to JSON.
@@ -16303,23 +16364,23 @@ export namespace ununifi {
              * Constructs a new MsgCancelBidResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgCancelBidResponse);
+            constructor(properties?: ununifi.nftbackedloan.IMsgCancelBidResponse);
 
             /**
-             * Encodes the specified MsgCancelBidResponse message. Does not implicitly {@link ununifi.nftmarket.MsgCancelBidResponse.verify|verify} messages.
+             * Encodes the specified MsgCancelBidResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgCancelBidResponse.verify|verify} messages.
              * @param message MsgCancelBidResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgCancelBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgCancelBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgCancelBidResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgCancelBidResponse.verify|verify} messages.
+             * Encodes the specified MsgCancelBidResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgCancelBidResponse.verify|verify} messages.
              * @param message MsgCancelBidResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgCancelBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgCancelBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgCancelBidResponse message from the specified reader or buffer.
@@ -16329,7 +16390,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgCancelBidResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgCancelBidResponse;
 
             /**
              * Decodes a MsgCancelBidResponse message from the specified reader or buffer, length delimited.
@@ -16338,7 +16399,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgCancelBidResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgCancelBidResponse;
 
             /**
              * Verifies a MsgCancelBidResponse message.
@@ -16352,7 +16413,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgCancelBidResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgCancelBidResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgCancelBidResponse;
 
             /**
              * Creates a plain object from a MsgCancelBidResponse message. Also converts values to other types if specified.
@@ -16360,7 +16421,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgCancelBidResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgCancelBidResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgCancelBidResponse to JSON.
@@ -16376,7 +16437,7 @@ export namespace ununifi {
             sender?: (string|null);
 
             /** MsgEndNftListing nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
         }
 
         /** Represents a MsgEndNftListing. */
@@ -16386,29 +16447,29 @@ export namespace ununifi {
              * Constructs a new MsgEndNftListing.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgEndNftListing);
+            constructor(properties?: ununifi.nftbackedloan.IMsgEndNftListing);
 
             /** MsgEndNftListing sender. */
             public sender: string;
 
             /** MsgEndNftListing nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /**
-             * Encodes the specified MsgEndNftListing message. Does not implicitly {@link ununifi.nftmarket.MsgEndNftListing.verify|verify} messages.
+             * Encodes the specified MsgEndNftListing message. Does not implicitly {@link ununifi.nftbackedloan.MsgEndNftListing.verify|verify} messages.
              * @param message MsgEndNftListing message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgEndNftListing, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgEndNftListing, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgEndNftListing message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgEndNftListing.verify|verify} messages.
+             * Encodes the specified MsgEndNftListing message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgEndNftListing.verify|verify} messages.
              * @param message MsgEndNftListing message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgEndNftListing, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgEndNftListing, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgEndNftListing message from the specified reader or buffer.
@@ -16418,7 +16479,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgEndNftListing;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgEndNftListing;
 
             /**
              * Decodes a MsgEndNftListing message from the specified reader or buffer, length delimited.
@@ -16427,7 +16488,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgEndNftListing;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgEndNftListing;
 
             /**
              * Verifies a MsgEndNftListing message.
@@ -16441,7 +16502,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgEndNftListing
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgEndNftListing;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgEndNftListing;
 
             /**
              * Creates a plain object from a MsgEndNftListing message. Also converts values to other types if specified.
@@ -16449,7 +16510,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgEndNftListing, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgEndNftListing, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgEndNftListing to JSON.
@@ -16469,23 +16530,23 @@ export namespace ununifi {
              * Constructs a new MsgEndNftListingResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgEndNftListingResponse);
+            constructor(properties?: ununifi.nftbackedloan.IMsgEndNftListingResponse);
 
             /**
-             * Encodes the specified MsgEndNftListingResponse message. Does not implicitly {@link ununifi.nftmarket.MsgEndNftListingResponse.verify|verify} messages.
+             * Encodes the specified MsgEndNftListingResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgEndNftListingResponse.verify|verify} messages.
              * @param message MsgEndNftListingResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgEndNftListingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgEndNftListingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgEndNftListingResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgEndNftListingResponse.verify|verify} messages.
+             * Encodes the specified MsgEndNftListingResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgEndNftListingResponse.verify|verify} messages.
              * @param message MsgEndNftListingResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgEndNftListingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgEndNftListingResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgEndNftListingResponse message from the specified reader or buffer.
@@ -16495,7 +16556,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgEndNftListingResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgEndNftListingResponse;
 
             /**
              * Decodes a MsgEndNftListingResponse message from the specified reader or buffer, length delimited.
@@ -16504,7 +16565,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgEndNftListingResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgEndNftListingResponse;
 
             /**
              * Verifies a MsgEndNftListingResponse message.
@@ -16518,7 +16579,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgEndNftListingResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgEndNftListingResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgEndNftListingResponse;
 
             /**
              * Creates a plain object from a MsgEndNftListingResponse message. Also converts values to other types if specified.
@@ -16526,7 +16587,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgEndNftListingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgEndNftListingResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgEndNftListingResponse to JSON.
@@ -16542,7 +16603,7 @@ export namespace ununifi {
             sender?: (string|null);
 
             /** MsgSellingDecision nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
         }
 
         /** Represents a MsgSellingDecision. */
@@ -16552,29 +16613,29 @@ export namespace ununifi {
              * Constructs a new MsgSellingDecision.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgSellingDecision);
+            constructor(properties?: ununifi.nftbackedloan.IMsgSellingDecision);
 
             /** MsgSellingDecision sender. */
             public sender: string;
 
             /** MsgSellingDecision nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /**
-             * Encodes the specified MsgSellingDecision message. Does not implicitly {@link ununifi.nftmarket.MsgSellingDecision.verify|verify} messages.
+             * Encodes the specified MsgSellingDecision message. Does not implicitly {@link ununifi.nftbackedloan.MsgSellingDecision.verify|verify} messages.
              * @param message MsgSellingDecision message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgSellingDecision, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgSellingDecision, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgSellingDecision message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgSellingDecision.verify|verify} messages.
+             * Encodes the specified MsgSellingDecision message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgSellingDecision.verify|verify} messages.
              * @param message MsgSellingDecision message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgSellingDecision, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgSellingDecision, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgSellingDecision message from the specified reader or buffer.
@@ -16584,7 +16645,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgSellingDecision;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgSellingDecision;
 
             /**
              * Decodes a MsgSellingDecision message from the specified reader or buffer, length delimited.
@@ -16593,7 +16654,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgSellingDecision;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgSellingDecision;
 
             /**
              * Verifies a MsgSellingDecision message.
@@ -16607,7 +16668,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgSellingDecision
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgSellingDecision;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgSellingDecision;
 
             /**
              * Creates a plain object from a MsgSellingDecision message. Also converts values to other types if specified.
@@ -16615,7 +16676,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgSellingDecision, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgSellingDecision, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgSellingDecision to JSON.
@@ -16635,23 +16696,23 @@ export namespace ununifi {
              * Constructs a new MsgSellingDecisionResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgSellingDecisionResponse);
+            constructor(properties?: ununifi.nftbackedloan.IMsgSellingDecisionResponse);
 
             /**
-             * Encodes the specified MsgSellingDecisionResponse message. Does not implicitly {@link ununifi.nftmarket.MsgSellingDecisionResponse.verify|verify} messages.
+             * Encodes the specified MsgSellingDecisionResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgSellingDecisionResponse.verify|verify} messages.
              * @param message MsgSellingDecisionResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgSellingDecisionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgSellingDecisionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgSellingDecisionResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgSellingDecisionResponse.verify|verify} messages.
+             * Encodes the specified MsgSellingDecisionResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgSellingDecisionResponse.verify|verify} messages.
              * @param message MsgSellingDecisionResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgSellingDecisionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgSellingDecisionResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgSellingDecisionResponse message from the specified reader or buffer.
@@ -16661,7 +16722,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgSellingDecisionResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgSellingDecisionResponse;
 
             /**
              * Decodes a MsgSellingDecisionResponse message from the specified reader or buffer, length delimited.
@@ -16670,7 +16731,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgSellingDecisionResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgSellingDecisionResponse;
 
             /**
              * Verifies a MsgSellingDecisionResponse message.
@@ -16684,7 +16745,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgSellingDecisionResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgSellingDecisionResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgSellingDecisionResponse;
 
             /**
              * Creates a plain object from a MsgSellingDecisionResponse message. Also converts values to other types if specified.
@@ -16692,7 +16753,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgSellingDecisionResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgSellingDecisionResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgSellingDecisionResponse to JSON.
@@ -16708,7 +16769,7 @@ export namespace ununifi {
             sender?: (string|null);
 
             /** MsgPayFullBid nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
         }
 
         /** Represents a MsgPayFullBid. */
@@ -16718,29 +16779,29 @@ export namespace ununifi {
              * Constructs a new MsgPayFullBid.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgPayFullBid);
+            constructor(properties?: ununifi.nftbackedloan.IMsgPayFullBid);
 
             /** MsgPayFullBid sender. */
             public sender: string;
 
             /** MsgPayFullBid nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /**
-             * Encodes the specified MsgPayFullBid message. Does not implicitly {@link ununifi.nftmarket.MsgPayFullBid.verify|verify} messages.
+             * Encodes the specified MsgPayFullBid message. Does not implicitly {@link ununifi.nftbackedloan.MsgPayFullBid.verify|verify} messages.
              * @param message MsgPayFullBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgPayFullBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgPayFullBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgPayFullBid message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgPayFullBid.verify|verify} messages.
+             * Encodes the specified MsgPayFullBid message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgPayFullBid.verify|verify} messages.
              * @param message MsgPayFullBid message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgPayFullBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgPayFullBid, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgPayFullBid message from the specified reader or buffer.
@@ -16750,7 +16811,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgPayFullBid;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgPayFullBid;
 
             /**
              * Decodes a MsgPayFullBid message from the specified reader or buffer, length delimited.
@@ -16759,7 +16820,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgPayFullBid;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgPayFullBid;
 
             /**
              * Verifies a MsgPayFullBid message.
@@ -16773,7 +16834,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgPayFullBid
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgPayFullBid;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgPayFullBid;
 
             /**
              * Creates a plain object from a MsgPayFullBid message. Also converts values to other types if specified.
@@ -16781,7 +16842,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgPayFullBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgPayFullBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgPayFullBid to JSON.
@@ -16801,23 +16862,23 @@ export namespace ununifi {
              * Constructs a new MsgPayFullBidResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgPayFullBidResponse);
+            constructor(properties?: ununifi.nftbackedloan.IMsgPayFullBidResponse);
 
             /**
-             * Encodes the specified MsgPayFullBidResponse message. Does not implicitly {@link ununifi.nftmarket.MsgPayFullBidResponse.verify|verify} messages.
+             * Encodes the specified MsgPayFullBidResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgPayFullBidResponse.verify|verify} messages.
              * @param message MsgPayFullBidResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgPayFullBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgPayFullBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgPayFullBidResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgPayFullBidResponse.verify|verify} messages.
+             * Encodes the specified MsgPayFullBidResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgPayFullBidResponse.verify|verify} messages.
              * @param message MsgPayFullBidResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgPayFullBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgPayFullBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgPayFullBidResponse message from the specified reader or buffer.
@@ -16827,7 +16888,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgPayFullBidResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgPayFullBidResponse;
 
             /**
              * Decodes a MsgPayFullBidResponse message from the specified reader or buffer, length delimited.
@@ -16836,7 +16897,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgPayFullBidResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgPayFullBidResponse;
 
             /**
              * Verifies a MsgPayFullBidResponse message.
@@ -16850,7 +16911,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgPayFullBidResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgPayFullBidResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgPayFullBidResponse;
 
             /**
              * Creates a plain object from a MsgPayFullBidResponse message. Also converts values to other types if specified.
@@ -16858,7 +16919,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgPayFullBidResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgPayFullBidResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgPayFullBidResponse to JSON.
@@ -16874,7 +16935,7 @@ export namespace ununifi {
             sender?: (string|null);
 
             /** MsgBorrow nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** MsgBorrow amount */
             amount?: (cosmos.base.v1beta1.ICoin|null);
@@ -16887,32 +16948,32 @@ export namespace ununifi {
              * Constructs a new MsgBorrow.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgBorrow);
+            constructor(properties?: ununifi.nftbackedloan.IMsgBorrow);
 
             /** MsgBorrow sender. */
             public sender: string;
 
             /** MsgBorrow nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** MsgBorrow amount. */
             public amount?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
-             * Encodes the specified MsgBorrow message. Does not implicitly {@link ununifi.nftmarket.MsgBorrow.verify|verify} messages.
+             * Encodes the specified MsgBorrow message. Does not implicitly {@link ununifi.nftbackedloan.MsgBorrow.verify|verify} messages.
              * @param message MsgBorrow message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgBorrow, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgBorrow, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgBorrow message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgBorrow.verify|verify} messages.
+             * Encodes the specified MsgBorrow message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgBorrow.verify|verify} messages.
              * @param message MsgBorrow message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgBorrow, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgBorrow, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgBorrow message from the specified reader or buffer.
@@ -16922,7 +16983,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgBorrow;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgBorrow;
 
             /**
              * Decodes a MsgBorrow message from the specified reader or buffer, length delimited.
@@ -16931,7 +16992,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgBorrow;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgBorrow;
 
             /**
              * Verifies a MsgBorrow message.
@@ -16945,7 +17006,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgBorrow
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgBorrow;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgBorrow;
 
             /**
              * Creates a plain object from a MsgBorrow message. Also converts values to other types if specified.
@@ -16953,7 +17014,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgBorrow, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgBorrow, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgBorrow to JSON.
@@ -16973,23 +17034,23 @@ export namespace ununifi {
              * Constructs a new MsgBorrowResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgBorrowResponse);
+            constructor(properties?: ununifi.nftbackedloan.IMsgBorrowResponse);
 
             /**
-             * Encodes the specified MsgBorrowResponse message. Does not implicitly {@link ununifi.nftmarket.MsgBorrowResponse.verify|verify} messages.
+             * Encodes the specified MsgBorrowResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgBorrowResponse.verify|verify} messages.
              * @param message MsgBorrowResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgBorrowResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgBorrowResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgBorrowResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgBorrowResponse.verify|verify} messages.
+             * Encodes the specified MsgBorrowResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgBorrowResponse.verify|verify} messages.
              * @param message MsgBorrowResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgBorrowResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgBorrowResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgBorrowResponse message from the specified reader or buffer.
@@ -16999,7 +17060,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgBorrowResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgBorrowResponse;
 
             /**
              * Decodes a MsgBorrowResponse message from the specified reader or buffer, length delimited.
@@ -17008,7 +17069,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgBorrowResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgBorrowResponse;
 
             /**
              * Verifies a MsgBorrowResponse message.
@@ -17022,7 +17083,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgBorrowResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgBorrowResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgBorrowResponse;
 
             /**
              * Creates a plain object from a MsgBorrowResponse message. Also converts values to other types if specified.
@@ -17030,7 +17091,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgBorrowResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgBorrowResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgBorrowResponse to JSON.
@@ -17046,7 +17107,7 @@ export namespace ununifi {
             sender?: (string|null);
 
             /** MsgRepay nft_id */
-            nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** MsgRepay amount */
             amount?: (cosmos.base.v1beta1.ICoin|null);
@@ -17059,32 +17120,32 @@ export namespace ununifi {
              * Constructs a new MsgRepay.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgRepay);
+            constructor(properties?: ununifi.nftbackedloan.IMsgRepay);
 
             /** MsgRepay sender. */
             public sender: string;
 
             /** MsgRepay nft_id. */
-            public nft_id?: (ununifi.nftmarket.INftIdentifier|null);
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /** MsgRepay amount. */
             public amount?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
-             * Encodes the specified MsgRepay message. Does not implicitly {@link ununifi.nftmarket.MsgRepay.verify|verify} messages.
+             * Encodes the specified MsgRepay message. Does not implicitly {@link ununifi.nftbackedloan.MsgRepay.verify|verify} messages.
              * @param message MsgRepay message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgRepay, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgRepay, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgRepay message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgRepay.verify|verify} messages.
+             * Encodes the specified MsgRepay message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgRepay.verify|verify} messages.
              * @param message MsgRepay message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgRepay, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgRepay, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgRepay message from the specified reader or buffer.
@@ -17094,7 +17155,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgRepay;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgRepay;
 
             /**
              * Decodes a MsgRepay message from the specified reader or buffer, length delimited.
@@ -17103,7 +17164,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgRepay;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgRepay;
 
             /**
              * Verifies a MsgRepay message.
@@ -17117,7 +17178,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgRepay
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgRepay;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgRepay;
 
             /**
              * Creates a plain object from a MsgRepay message. Also converts values to other types if specified.
@@ -17125,7 +17186,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgRepay, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgRepay, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgRepay to JSON.
@@ -17145,23 +17206,23 @@ export namespace ununifi {
              * Constructs a new MsgRepayResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IMsgRepayResponse);
+            constructor(properties?: ununifi.nftbackedloan.IMsgRepayResponse);
 
             /**
-             * Encodes the specified MsgRepayResponse message. Does not implicitly {@link ununifi.nftmarket.MsgRepayResponse.verify|verify} messages.
+             * Encodes the specified MsgRepayResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgRepayResponse.verify|verify} messages.
              * @param message MsgRepayResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IMsgRepayResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgRepayResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgRepayResponse message, length delimited. Does not implicitly {@link ununifi.nftmarket.MsgRepayResponse.verify|verify} messages.
+             * Encodes the specified MsgRepayResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgRepayResponse.verify|verify} messages.
              * @param message MsgRepayResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IMsgRepayResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgRepayResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgRepayResponse message from the specified reader or buffer.
@@ -17171,7 +17232,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.MsgRepayResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgRepayResponse;
 
             /**
              * Decodes a MsgRepayResponse message from the specified reader or buffer, length delimited.
@@ -17180,7 +17241,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.MsgRepayResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgRepayResponse;
 
             /**
              * Verifies a MsgRepayResponse message.
@@ -17194,7 +17255,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgRepayResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.MsgRepayResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgRepayResponse;
 
             /**
              * Creates a plain object from a MsgRepayResponse message. Also converts values to other types if specified.
@@ -17202,7 +17263,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.MsgRepayResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgRepayResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgRepayResponse to JSON.
@@ -17215,19 +17276,19 @@ export namespace ununifi {
         interface IGenesisState {
 
             /** GenesisState params */
-            params?: (ununifi.nftmarket.IParams|null);
+            params?: (ununifi.nftbackedloan.IParams|null);
 
             /** GenesisState listings */
-            listings?: (ununifi.nftmarket.INftListing[]|null);
+            listings?: (ununifi.nftbackedloan.INftListing[]|null);
 
             /** GenesisState bids */
-            bids?: (ununifi.nftmarket.INftBid[]|null);
+            bids?: (ununifi.nftbackedloan.INftBid[]|null);
 
             /** GenesisState cancelled_bids */
-            cancelled_bids?: (ununifi.nftmarket.INftBid[]|null);
+            cancelled_bids?: (ununifi.nftbackedloan.INftBid[]|null);
 
             /** GenesisState loans */
-            loans?: (ununifi.nftmarket.ILoan[]|null);
+            loans?: (ununifi.nftbackedloan.ILoan[]|null);
         }
 
         /** Represents a GenesisState. */
@@ -17237,38 +17298,38 @@ export namespace ununifi {
              * Constructs a new GenesisState.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmarket.IGenesisState);
+            constructor(properties?: ununifi.nftbackedloan.IGenesisState);
 
             /** GenesisState params. */
-            public params?: (ununifi.nftmarket.IParams|null);
+            public params?: (ununifi.nftbackedloan.IParams|null);
 
             /** GenesisState listings. */
-            public listings: ununifi.nftmarket.INftListing[];
+            public listings: ununifi.nftbackedloan.INftListing[];
 
             /** GenesisState bids. */
-            public bids: ununifi.nftmarket.INftBid[];
+            public bids: ununifi.nftbackedloan.INftBid[];
 
             /** GenesisState cancelled_bids. */
-            public cancelled_bids: ununifi.nftmarket.INftBid[];
+            public cancelled_bids: ununifi.nftbackedloan.INftBid[];
 
             /** GenesisState loans. */
-            public loans: ununifi.nftmarket.ILoan[];
+            public loans: ununifi.nftbackedloan.ILoan[];
 
             /**
-             * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.nftmarket.GenesisState.verify|verify} messages.
+             * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.nftbackedloan.GenesisState.verify|verify} messages.
              * @param message GenesisState message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmarket.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.nftmarket.GenesisState.verify|verify} messages.
+             * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.GenesisState.verify|verify} messages.
              * @param message GenesisState message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmarket.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a GenesisState message from the specified reader or buffer.
@@ -17278,7 +17339,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmarket.GenesisState;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.GenesisState;
 
             /**
              * Decodes a GenesisState message from the specified reader or buffer, length delimited.
@@ -17287,7 +17348,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmarket.GenesisState;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.GenesisState;
 
             /**
              * Verifies a GenesisState message.
@@ -17301,7 +17362,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns GenesisState
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmarket.GenesisState;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.GenesisState;
 
             /**
              * Creates a plain object from a GenesisState message. Also converts values to other types if specified.
@@ -17309,7 +17370,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmarket.GenesisState, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.GenesisState, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this GenesisState to JSON.
@@ -17319,958 +17380,8 @@ export namespace ununifi {
         }
     }
 
-    /** Namespace nftmint. */
-    namespace nftmint {
-
-        /** Represents a Query */
-        class Query extends $protobuf.rpc.Service {
-
-            /**
-             * Constructs a new Query service.
-             * @param rpcImpl RPC implementation
-             * @param [requestDelimited=false] Whether requests are length-delimited
-             * @param [responseDelimited=false] Whether responses are length-delimited
-             */
-            constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
-
-            /**
-             * Calls Params.
-             * @param request QueryParamsRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryParamsResponse
-             */
-            public params(request: ununifi.nftmint.IQueryParamsRequest, callback: ununifi.nftmint.Query.ParamsCallback): void;
-
-            /**
-             * Calls Params.
-             * @param request QueryParamsRequest message or plain object
-             * @returns Promise
-             */
-            public params(request: ununifi.nftmint.IQueryParamsRequest): Promise<ununifi.nftmint.QueryParamsResponse>;
-
-            /**
-             * Calls ClassAttributes.
-             * @param request QueryClassAttributesRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryClassAttributesResponse
-             */
-            public classAttributes(request: ununifi.nftmint.IQueryClassAttributesRequest, callback: ununifi.nftmint.Query.ClassAttributesCallback): void;
-
-            /**
-             * Calls ClassAttributes.
-             * @param request QueryClassAttributesRequest message or plain object
-             * @returns Promise
-             */
-            public classAttributes(request: ununifi.nftmint.IQueryClassAttributesRequest): Promise<ununifi.nftmint.QueryClassAttributesResponse>;
-
-            /**
-             * Calls NFTMinter.
-             * @param request QueryNFTMinterRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryNFTMinterResponse
-             */
-            public nFTMinter(request: ununifi.nftmint.IQueryNFTMinterRequest, callback: ununifi.nftmint.Query.NFTMinterCallback): void;
-
-            /**
-             * Calls NFTMinter.
-             * @param request QueryNFTMinterRequest message or plain object
-             * @returns Promise
-             */
-            public nFTMinter(request: ununifi.nftmint.IQueryNFTMinterRequest): Promise<ununifi.nftmint.QueryNFTMinterResponse>;
-
-            /**
-             * Calls ClassIdsByName.
-             * @param request QueryClassIdsByNameRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryClassIdsByNameResponse
-             */
-            public classIdsByName(request: ununifi.nftmint.IQueryClassIdsByNameRequest, callback: ununifi.nftmint.Query.ClassIdsByNameCallback): void;
-
-            /**
-             * Calls ClassIdsByName.
-             * @param request QueryClassIdsByNameRequest message or plain object
-             * @returns Promise
-             */
-            public classIdsByName(request: ununifi.nftmint.IQueryClassIdsByNameRequest): Promise<ununifi.nftmint.QueryClassIdsByNameResponse>;
-
-            /**
-             * Calls ClassIdsByOwner.
-             * @param request QueryClassIdsByOwnerRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryClassIdsByOwnerResponse
-             */
-            public classIdsByOwner(request: ununifi.nftmint.IQueryClassIdsByOwnerRequest, callback: ununifi.nftmint.Query.ClassIdsByOwnerCallback): void;
-
-            /**
-             * Calls ClassIdsByOwner.
-             * @param request QueryClassIdsByOwnerRequest message or plain object
-             * @returns Promise
-             */
-            public classIdsByOwner(request: ununifi.nftmint.IQueryClassIdsByOwnerRequest): Promise<ununifi.nftmint.QueryClassIdsByOwnerResponse>;
-        }
-
-        namespace Query {
-
-            /**
-             * Callback as used by {@link ununifi.nftmint.Query#params}.
-             * @param error Error, if any
-             * @param [response] QueryParamsResponse
-             */
-            type ParamsCallback = (error: (Error|null), response?: ununifi.nftmint.QueryParamsResponse) => void;
-
-            /**
-             * Callback as used by {@link ununifi.nftmint.Query#classAttributes}.
-             * @param error Error, if any
-             * @param [response] QueryClassAttributesResponse
-             */
-            type ClassAttributesCallback = (error: (Error|null), response?: ununifi.nftmint.QueryClassAttributesResponse) => void;
-
-            /**
-             * Callback as used by {@link ununifi.nftmint.Query#nFTMinter}.
-             * @param error Error, if any
-             * @param [response] QueryNFTMinterResponse
-             */
-            type NFTMinterCallback = (error: (Error|null), response?: ununifi.nftmint.QueryNFTMinterResponse) => void;
-
-            /**
-             * Callback as used by {@link ununifi.nftmint.Query#classIdsByName}.
-             * @param error Error, if any
-             * @param [response] QueryClassIdsByNameResponse
-             */
-            type ClassIdsByNameCallback = (error: (Error|null), response?: ununifi.nftmint.QueryClassIdsByNameResponse) => void;
-
-            /**
-             * Callback as used by {@link ununifi.nftmint.Query#classIdsByOwner}.
-             * @param error Error, if any
-             * @param [response] QueryClassIdsByOwnerResponse
-             */
-            type ClassIdsByOwnerCallback = (error: (Error|null), response?: ununifi.nftmint.QueryClassIdsByOwnerResponse) => void;
-        }
-
-        /** Properties of a QueryParamsRequest. */
-        interface IQueryParamsRequest {
-        }
-
-        /** Represents a QueryParamsRequest. */
-        class QueryParamsRequest implements IQueryParamsRequest {
-
-            /**
-             * Constructs a new QueryParamsRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftmint.IQueryParamsRequest);
-
-            /**
-             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.nftmint.QueryParamsRequest.verify|verify} messages.
-             * @param message QueryParamsRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftmint.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.nftmint.QueryParamsRequest.verify|verify} messages.
-             * @param message QueryParamsRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftmint.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryParamsRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryParamsRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.QueryParamsRequest;
-
-            /**
-             * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryParamsRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.QueryParamsRequest;
-
-            /**
-             * Verifies a QueryParamsRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryParamsRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.QueryParamsRequest;
-
-            /**
-             * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
-             * @param message QueryParamsRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftmint.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryParamsRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryParamsResponse. */
-        interface IQueryParamsResponse {
-
-            /** QueryParamsResponse params */
-            params?: (ununifi.nftmint.IParams|null);
-        }
-
-        /** Represents a QueryParamsResponse. */
-        class QueryParamsResponse implements IQueryParamsResponse {
-
-            /**
-             * Constructs a new QueryParamsResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftmint.IQueryParamsResponse);
-
-            /** QueryParamsResponse params. */
-            public params?: (ununifi.nftmint.IParams|null);
-
-            /**
-             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.nftmint.QueryParamsResponse.verify|verify} messages.
-             * @param message QueryParamsResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftmint.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.nftmint.QueryParamsResponse.verify|verify} messages.
-             * @param message QueryParamsResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftmint.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryParamsResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryParamsResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.QueryParamsResponse;
-
-            /**
-             * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryParamsResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.QueryParamsResponse;
-
-            /**
-             * Verifies a QueryParamsResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryParamsResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.QueryParamsResponse;
-
-            /**
-             * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
-             * @param message QueryParamsResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftmint.QueryParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryParamsResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryClassAttributesRequest. */
-        interface IQueryClassAttributesRequest {
-
-            /** QueryClassAttributesRequest class_id */
-            class_id?: (string|null);
-        }
-
-        /** Represents a QueryClassAttributesRequest. */
-        class QueryClassAttributesRequest implements IQueryClassAttributesRequest {
-
-            /**
-             * Constructs a new QueryClassAttributesRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftmint.IQueryClassAttributesRequest);
-
-            /** QueryClassAttributesRequest class_id. */
-            public class_id: string;
-
-            /**
-             * Encodes the specified QueryClassAttributesRequest message. Does not implicitly {@link ununifi.nftmint.QueryClassAttributesRequest.verify|verify} messages.
-             * @param message QueryClassAttributesRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftmint.IQueryClassAttributesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryClassAttributesRequest message, length delimited. Does not implicitly {@link ununifi.nftmint.QueryClassAttributesRequest.verify|verify} messages.
-             * @param message QueryClassAttributesRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftmint.IQueryClassAttributesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryClassAttributesRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryClassAttributesRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.QueryClassAttributesRequest;
-
-            /**
-             * Decodes a QueryClassAttributesRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryClassAttributesRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.QueryClassAttributesRequest;
-
-            /**
-             * Verifies a QueryClassAttributesRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryClassAttributesRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryClassAttributesRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.QueryClassAttributesRequest;
-
-            /**
-             * Creates a plain object from a QueryClassAttributesRequest message. Also converts values to other types if specified.
-             * @param message QueryClassAttributesRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftmint.QueryClassAttributesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryClassAttributesRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryClassAttributesResponse. */
-        interface IQueryClassAttributesResponse {
-
-            /** QueryClassAttributesResponse class_attributes */
-            class_attributes?: (ununifi.nftmint.IClassAttributes|null);
-        }
-
-        /** Represents a QueryClassAttributesResponse. */
-        class QueryClassAttributesResponse implements IQueryClassAttributesResponse {
-
-            /**
-             * Constructs a new QueryClassAttributesResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftmint.IQueryClassAttributesResponse);
-
-            /** QueryClassAttributesResponse class_attributes. */
-            public class_attributes?: (ununifi.nftmint.IClassAttributes|null);
-
-            /**
-             * Encodes the specified QueryClassAttributesResponse message. Does not implicitly {@link ununifi.nftmint.QueryClassAttributesResponse.verify|verify} messages.
-             * @param message QueryClassAttributesResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftmint.IQueryClassAttributesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryClassAttributesResponse message, length delimited. Does not implicitly {@link ununifi.nftmint.QueryClassAttributesResponse.verify|verify} messages.
-             * @param message QueryClassAttributesResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftmint.IQueryClassAttributesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryClassAttributesResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryClassAttributesResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.QueryClassAttributesResponse;
-
-            /**
-             * Decodes a QueryClassAttributesResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryClassAttributesResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.QueryClassAttributesResponse;
-
-            /**
-             * Verifies a QueryClassAttributesResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryClassAttributesResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryClassAttributesResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.QueryClassAttributesResponse;
-
-            /**
-             * Creates a plain object from a QueryClassAttributesResponse message. Also converts values to other types if specified.
-             * @param message QueryClassAttributesResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftmint.QueryClassAttributesResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryClassAttributesResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryNFTMinterRequest. */
-        interface IQueryNFTMinterRequest {
-
-            /** QueryNFTMinterRequest class_id */
-            class_id?: (string|null);
-
-            /** QueryNFTMinterRequest nft_id */
-            nft_id?: (string|null);
-        }
-
-        /** Represents a QueryNFTMinterRequest. */
-        class QueryNFTMinterRequest implements IQueryNFTMinterRequest {
-
-            /**
-             * Constructs a new QueryNFTMinterRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftmint.IQueryNFTMinterRequest);
-
-            /** QueryNFTMinterRequest class_id. */
-            public class_id: string;
-
-            /** QueryNFTMinterRequest nft_id. */
-            public nft_id: string;
-
-            /**
-             * Encodes the specified QueryNFTMinterRequest message. Does not implicitly {@link ununifi.nftmint.QueryNFTMinterRequest.verify|verify} messages.
-             * @param message QueryNFTMinterRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftmint.IQueryNFTMinterRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryNFTMinterRequest message, length delimited. Does not implicitly {@link ununifi.nftmint.QueryNFTMinterRequest.verify|verify} messages.
-             * @param message QueryNFTMinterRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftmint.IQueryNFTMinterRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryNFTMinterRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryNFTMinterRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.QueryNFTMinterRequest;
-
-            /**
-             * Decodes a QueryNFTMinterRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryNFTMinterRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.QueryNFTMinterRequest;
-
-            /**
-             * Verifies a QueryNFTMinterRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryNFTMinterRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryNFTMinterRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.QueryNFTMinterRequest;
-
-            /**
-             * Creates a plain object from a QueryNFTMinterRequest message. Also converts values to other types if specified.
-             * @param message QueryNFTMinterRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftmint.QueryNFTMinterRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryNFTMinterRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryNFTMinterResponse. */
-        interface IQueryNFTMinterResponse {
-
-            /** QueryNFTMinterResponse minter */
-            minter?: (string|null);
-        }
-
-        /** Represents a QueryNFTMinterResponse. */
-        class QueryNFTMinterResponse implements IQueryNFTMinterResponse {
-
-            /**
-             * Constructs a new QueryNFTMinterResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftmint.IQueryNFTMinterResponse);
-
-            /** QueryNFTMinterResponse minter. */
-            public minter: string;
-
-            /**
-             * Encodes the specified QueryNFTMinterResponse message. Does not implicitly {@link ununifi.nftmint.QueryNFTMinterResponse.verify|verify} messages.
-             * @param message QueryNFTMinterResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftmint.IQueryNFTMinterResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryNFTMinterResponse message, length delimited. Does not implicitly {@link ununifi.nftmint.QueryNFTMinterResponse.verify|verify} messages.
-             * @param message QueryNFTMinterResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftmint.IQueryNFTMinterResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryNFTMinterResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryNFTMinterResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.QueryNFTMinterResponse;
-
-            /**
-             * Decodes a QueryNFTMinterResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryNFTMinterResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.QueryNFTMinterResponse;
-
-            /**
-             * Verifies a QueryNFTMinterResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryNFTMinterResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryNFTMinterResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.QueryNFTMinterResponse;
-
-            /**
-             * Creates a plain object from a QueryNFTMinterResponse message. Also converts values to other types if specified.
-             * @param message QueryNFTMinterResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftmint.QueryNFTMinterResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryNFTMinterResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryClassIdsByNameRequest. */
-        interface IQueryClassIdsByNameRequest {
-
-            /** QueryClassIdsByNameRequest class_name */
-            class_name?: (string|null);
-        }
-
-        /** Represents a QueryClassIdsByNameRequest. */
-        class QueryClassIdsByNameRequest implements IQueryClassIdsByNameRequest {
-
-            /**
-             * Constructs a new QueryClassIdsByNameRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftmint.IQueryClassIdsByNameRequest);
-
-            /** QueryClassIdsByNameRequest class_name. */
-            public class_name: string;
-
-            /**
-             * Encodes the specified QueryClassIdsByNameRequest message. Does not implicitly {@link ununifi.nftmint.QueryClassIdsByNameRequest.verify|verify} messages.
-             * @param message QueryClassIdsByNameRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftmint.IQueryClassIdsByNameRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryClassIdsByNameRequest message, length delimited. Does not implicitly {@link ununifi.nftmint.QueryClassIdsByNameRequest.verify|verify} messages.
-             * @param message QueryClassIdsByNameRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftmint.IQueryClassIdsByNameRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryClassIdsByNameRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryClassIdsByNameRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.QueryClassIdsByNameRequest;
-
-            /**
-             * Decodes a QueryClassIdsByNameRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryClassIdsByNameRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.QueryClassIdsByNameRequest;
-
-            /**
-             * Verifies a QueryClassIdsByNameRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryClassIdsByNameRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryClassIdsByNameRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.QueryClassIdsByNameRequest;
-
-            /**
-             * Creates a plain object from a QueryClassIdsByNameRequest message. Also converts values to other types if specified.
-             * @param message QueryClassIdsByNameRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftmint.QueryClassIdsByNameRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryClassIdsByNameRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryClassIdsByNameResponse. */
-        interface IQueryClassIdsByNameResponse {
-
-            /** QueryClassIdsByNameResponse class_name_id_list */
-            class_name_id_list?: (ununifi.nftmint.IClassNameIdList|null);
-        }
-
-        /** Represents a QueryClassIdsByNameResponse. */
-        class QueryClassIdsByNameResponse implements IQueryClassIdsByNameResponse {
-
-            /**
-             * Constructs a new QueryClassIdsByNameResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftmint.IQueryClassIdsByNameResponse);
-
-            /** QueryClassIdsByNameResponse class_name_id_list. */
-            public class_name_id_list?: (ununifi.nftmint.IClassNameIdList|null);
-
-            /**
-             * Encodes the specified QueryClassIdsByNameResponse message. Does not implicitly {@link ununifi.nftmint.QueryClassIdsByNameResponse.verify|verify} messages.
-             * @param message QueryClassIdsByNameResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftmint.IQueryClassIdsByNameResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryClassIdsByNameResponse message, length delimited. Does not implicitly {@link ununifi.nftmint.QueryClassIdsByNameResponse.verify|verify} messages.
-             * @param message QueryClassIdsByNameResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftmint.IQueryClassIdsByNameResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryClassIdsByNameResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryClassIdsByNameResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.QueryClassIdsByNameResponse;
-
-            /**
-             * Decodes a QueryClassIdsByNameResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryClassIdsByNameResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.QueryClassIdsByNameResponse;
-
-            /**
-             * Verifies a QueryClassIdsByNameResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryClassIdsByNameResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryClassIdsByNameResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.QueryClassIdsByNameResponse;
-
-            /**
-             * Creates a plain object from a QueryClassIdsByNameResponse message. Also converts values to other types if specified.
-             * @param message QueryClassIdsByNameResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftmint.QueryClassIdsByNameResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryClassIdsByNameResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryClassIdsByOwnerRequest. */
-        interface IQueryClassIdsByOwnerRequest {
-
-            /** QueryClassIdsByOwnerRequest owner */
-            owner?: (string|null);
-        }
-
-        /** Represents a QueryClassIdsByOwnerRequest. */
-        class QueryClassIdsByOwnerRequest implements IQueryClassIdsByOwnerRequest {
-
-            /**
-             * Constructs a new QueryClassIdsByOwnerRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftmint.IQueryClassIdsByOwnerRequest);
-
-            /** QueryClassIdsByOwnerRequest owner. */
-            public owner: string;
-
-            /**
-             * Encodes the specified QueryClassIdsByOwnerRequest message. Does not implicitly {@link ununifi.nftmint.QueryClassIdsByOwnerRequest.verify|verify} messages.
-             * @param message QueryClassIdsByOwnerRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftmint.IQueryClassIdsByOwnerRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryClassIdsByOwnerRequest message, length delimited. Does not implicitly {@link ununifi.nftmint.QueryClassIdsByOwnerRequest.verify|verify} messages.
-             * @param message QueryClassIdsByOwnerRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftmint.IQueryClassIdsByOwnerRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryClassIdsByOwnerRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryClassIdsByOwnerRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.QueryClassIdsByOwnerRequest;
-
-            /**
-             * Decodes a QueryClassIdsByOwnerRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryClassIdsByOwnerRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.QueryClassIdsByOwnerRequest;
-
-            /**
-             * Verifies a QueryClassIdsByOwnerRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryClassIdsByOwnerRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryClassIdsByOwnerRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.QueryClassIdsByOwnerRequest;
-
-            /**
-             * Creates a plain object from a QueryClassIdsByOwnerRequest message. Also converts values to other types if specified.
-             * @param message QueryClassIdsByOwnerRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftmint.QueryClassIdsByOwnerRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryClassIdsByOwnerRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryClassIdsByOwnerResponse. */
-        interface IQueryClassIdsByOwnerResponse {
-
-            /** QueryClassIdsByOwnerResponse owning_class_id_list */
-            owning_class_id_list?: (ununifi.nftmint.IOwningClassIdList|null);
-        }
-
-        /** Represents a QueryClassIdsByOwnerResponse. */
-        class QueryClassIdsByOwnerResponse implements IQueryClassIdsByOwnerResponse {
-
-            /**
-             * Constructs a new QueryClassIdsByOwnerResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftmint.IQueryClassIdsByOwnerResponse);
-
-            /** QueryClassIdsByOwnerResponse owning_class_id_list. */
-            public owning_class_id_list?: (ununifi.nftmint.IOwningClassIdList|null);
-
-            /**
-             * Encodes the specified QueryClassIdsByOwnerResponse message. Does not implicitly {@link ununifi.nftmint.QueryClassIdsByOwnerResponse.verify|verify} messages.
-             * @param message QueryClassIdsByOwnerResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftmint.IQueryClassIdsByOwnerResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryClassIdsByOwnerResponse message, length delimited. Does not implicitly {@link ununifi.nftmint.QueryClassIdsByOwnerResponse.verify|verify} messages.
-             * @param message QueryClassIdsByOwnerResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftmint.IQueryClassIdsByOwnerResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryClassIdsByOwnerResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryClassIdsByOwnerResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.QueryClassIdsByOwnerResponse;
-
-            /**
-             * Decodes a QueryClassIdsByOwnerResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryClassIdsByOwnerResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.QueryClassIdsByOwnerResponse;
-
-            /**
-             * Verifies a QueryClassIdsByOwnerResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryClassIdsByOwnerResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryClassIdsByOwnerResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.QueryClassIdsByOwnerResponse;
-
-            /**
-             * Creates a plain object from a QueryClassIdsByOwnerResponse message. Also converts values to other types if specified.
-             * @param message QueryClassIdsByOwnerResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftmint.QueryClassIdsByOwnerResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryClassIdsByOwnerResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
+    /** Namespace nftfactory. */
+    namespace nftfactory {
 
         /** MintingPermission enum. */
         enum MintingPermission {
@@ -18291,7 +17402,7 @@ export namespace ununifi {
             base_token_uri?: (string|null);
 
             /** ClassAttributes minting_permission */
-            minting_permission?: (ununifi.nftmint.MintingPermission|null);
+            minting_permission?: (ununifi.nftfactory.MintingPermission|null);
 
             /** ClassAttributes token_supply_cap */
             token_supply_cap?: (Long|null);
@@ -18304,7 +17415,7 @@ export namespace ununifi {
              * Constructs a new ClassAttributes.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IClassAttributes);
+            constructor(properties?: ununifi.nftfactory.IClassAttributes);
 
             /** ClassAttributes class_id. */
             public class_id: string;
@@ -18316,26 +17427,26 @@ export namespace ununifi {
             public base_token_uri: string;
 
             /** ClassAttributes minting_permission. */
-            public minting_permission: ununifi.nftmint.MintingPermission;
+            public minting_permission: ununifi.nftfactory.MintingPermission;
 
             /** ClassAttributes token_supply_cap. */
             public token_supply_cap: Long;
 
             /**
-             * Encodes the specified ClassAttributes message. Does not implicitly {@link ununifi.nftmint.ClassAttributes.verify|verify} messages.
+             * Encodes the specified ClassAttributes message. Does not implicitly {@link ununifi.nftfactory.ClassAttributes.verify|verify} messages.
              * @param message ClassAttributes message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IClassAttributes, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IClassAttributes, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified ClassAttributes message, length delimited. Does not implicitly {@link ununifi.nftmint.ClassAttributes.verify|verify} messages.
+             * Encodes the specified ClassAttributes message, length delimited. Does not implicitly {@link ununifi.nftfactory.ClassAttributes.verify|verify} messages.
              * @param message ClassAttributes message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IClassAttributes, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IClassAttributes, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a ClassAttributes message from the specified reader or buffer.
@@ -18345,7 +17456,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.ClassAttributes;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.ClassAttributes;
 
             /**
              * Decodes a ClassAttributes message from the specified reader or buffer, length delimited.
@@ -18354,7 +17465,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.ClassAttributes;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.ClassAttributes;
 
             /**
              * Verifies a ClassAttributes message.
@@ -18368,7 +17479,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns ClassAttributes
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.ClassAttributes;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.ClassAttributes;
 
             /**
              * Creates a plain object from a ClassAttributes message. Also converts values to other types if specified.
@@ -18376,7 +17487,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.ClassAttributes, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.ClassAttributes, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this ClassAttributes to JSON.
@@ -18402,7 +17513,7 @@ export namespace ununifi {
              * Constructs a new OwningClassIdList.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IOwningClassIdList);
+            constructor(properties?: ununifi.nftfactory.IOwningClassIdList);
 
             /** OwningClassIdList owner. */
             public owner: string;
@@ -18411,20 +17522,20 @@ export namespace ununifi {
             public class_id: string[];
 
             /**
-             * Encodes the specified OwningClassIdList message. Does not implicitly {@link ununifi.nftmint.OwningClassIdList.verify|verify} messages.
+             * Encodes the specified OwningClassIdList message. Does not implicitly {@link ununifi.nftfactory.OwningClassIdList.verify|verify} messages.
              * @param message OwningClassIdList message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IOwningClassIdList, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IOwningClassIdList, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified OwningClassIdList message, length delimited. Does not implicitly {@link ununifi.nftmint.OwningClassIdList.verify|verify} messages.
+             * Encodes the specified OwningClassIdList message, length delimited. Does not implicitly {@link ununifi.nftfactory.OwningClassIdList.verify|verify} messages.
              * @param message OwningClassIdList message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IOwningClassIdList, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IOwningClassIdList, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an OwningClassIdList message from the specified reader or buffer.
@@ -18434,7 +17545,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.OwningClassIdList;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.OwningClassIdList;
 
             /**
              * Decodes an OwningClassIdList message from the specified reader or buffer, length delimited.
@@ -18443,7 +17554,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.OwningClassIdList;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.OwningClassIdList;
 
             /**
              * Verifies an OwningClassIdList message.
@@ -18457,7 +17568,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns OwningClassIdList
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.OwningClassIdList;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.OwningClassIdList;
 
             /**
              * Creates a plain object from an OwningClassIdList message. Also converts values to other types if specified.
@@ -18465,7 +17576,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.OwningClassIdList, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.OwningClassIdList, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this OwningClassIdList to JSON.
@@ -18491,7 +17602,7 @@ export namespace ununifi {
              * Constructs a new ClassNameIdList.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IClassNameIdList);
+            constructor(properties?: ununifi.nftfactory.IClassNameIdList);
 
             /** ClassNameIdList class_name. */
             public class_name: string;
@@ -18500,20 +17611,20 @@ export namespace ununifi {
             public class_id: string[];
 
             /**
-             * Encodes the specified ClassNameIdList message. Does not implicitly {@link ununifi.nftmint.ClassNameIdList.verify|verify} messages.
+             * Encodes the specified ClassNameIdList message. Does not implicitly {@link ununifi.nftfactory.ClassNameIdList.verify|verify} messages.
              * @param message ClassNameIdList message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IClassNameIdList, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IClassNameIdList, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified ClassNameIdList message, length delimited. Does not implicitly {@link ununifi.nftmint.ClassNameIdList.verify|verify} messages.
+             * Encodes the specified ClassNameIdList message, length delimited. Does not implicitly {@link ununifi.nftfactory.ClassNameIdList.verify|verify} messages.
              * @param message ClassNameIdList message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IClassNameIdList, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IClassNameIdList, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a ClassNameIdList message from the specified reader or buffer.
@@ -18523,7 +17634,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.ClassNameIdList;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.ClassNameIdList;
 
             /**
              * Decodes a ClassNameIdList message from the specified reader or buffer, length delimited.
@@ -18532,7 +17643,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.ClassNameIdList;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.ClassNameIdList;
 
             /**
              * Verifies a ClassNameIdList message.
@@ -18546,7 +17657,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns ClassNameIdList
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.ClassNameIdList;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.ClassNameIdList;
 
             /**
              * Creates a plain object from a ClassNameIdList message. Also converts values to other types if specified.
@@ -18554,7 +17665,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.ClassNameIdList, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.ClassNameIdList, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this ClassNameIdList to JSON.
@@ -18595,7 +17706,7 @@ export namespace ununifi {
              * Constructs a new Params.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IParams);
+            constructor(properties?: ununifi.nftfactory.IParams);
 
             /** Params MaxNFTSupplyCap. */
             public MaxNFTSupplyCap: Long;
@@ -18619,20 +17730,20 @@ export namespace ununifi {
             public MaxDescriptionLen: Long;
 
             /**
-             * Encodes the specified Params message. Does not implicitly {@link ununifi.nftmint.Params.verify|verify} messages.
+             * Encodes the specified Params message. Does not implicitly {@link ununifi.nftfactory.Params.verify|verify} messages.
              * @param message Params message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.nftmint.Params.verify|verify} messages.
+             * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.nftfactory.Params.verify|verify} messages.
              * @param message Params message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a Params message from the specified reader or buffer.
@@ -18642,7 +17753,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.Params;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.Params;
 
             /**
              * Decodes a Params message from the specified reader or buffer, length delimited.
@@ -18651,7 +17762,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.Params;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.Params;
 
             /**
              * Verifies a Params message.
@@ -18665,7 +17776,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns Params
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.Params;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.Params;
 
             /**
              * Creates a plain object from a Params message. Also converts values to other types if specified.
@@ -18673,10 +17784,960 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this Params to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Represents a Query */
+        class Query extends $protobuf.rpc.Service {
+
+            /**
+             * Constructs a new Query service.
+             * @param rpcImpl RPC implementation
+             * @param [requestDelimited=false] Whether requests are length-delimited
+             * @param [responseDelimited=false] Whether responses are length-delimited
+             */
+            constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+            /**
+             * Calls Params.
+             * @param request QueryParamsRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryParamsResponse
+             */
+            public params(request: ununifi.nftfactory.IQueryParamsRequest, callback: ununifi.nftfactory.Query.ParamsCallback): void;
+
+            /**
+             * Calls Params.
+             * @param request QueryParamsRequest message or plain object
+             * @returns Promise
+             */
+            public params(request: ununifi.nftfactory.IQueryParamsRequest): Promise<ununifi.nftfactory.QueryParamsResponse>;
+
+            /**
+             * Calls ClassAttributes.
+             * @param request QueryClassAttributesRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryClassAttributesResponse
+             */
+            public classAttributes(request: ununifi.nftfactory.IQueryClassAttributesRequest, callback: ununifi.nftfactory.Query.ClassAttributesCallback): void;
+
+            /**
+             * Calls ClassAttributes.
+             * @param request QueryClassAttributesRequest message or plain object
+             * @returns Promise
+             */
+            public classAttributes(request: ununifi.nftfactory.IQueryClassAttributesRequest): Promise<ununifi.nftfactory.QueryClassAttributesResponse>;
+
+            /**
+             * Calls NFTMinter.
+             * @param request QueryNFTMinterRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryNFTMinterResponse
+             */
+            public nFTMinter(request: ununifi.nftfactory.IQueryNFTMinterRequest, callback: ununifi.nftfactory.Query.NFTMinterCallback): void;
+
+            /**
+             * Calls NFTMinter.
+             * @param request QueryNFTMinterRequest message or plain object
+             * @returns Promise
+             */
+            public nFTMinter(request: ununifi.nftfactory.IQueryNFTMinterRequest): Promise<ununifi.nftfactory.QueryNFTMinterResponse>;
+
+            /**
+             * Calls ClassIdsByName.
+             * @param request QueryClassIdsByNameRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryClassIdsByNameResponse
+             */
+            public classIdsByName(request: ununifi.nftfactory.IQueryClassIdsByNameRequest, callback: ununifi.nftfactory.Query.ClassIdsByNameCallback): void;
+
+            /**
+             * Calls ClassIdsByName.
+             * @param request QueryClassIdsByNameRequest message or plain object
+             * @returns Promise
+             */
+            public classIdsByName(request: ununifi.nftfactory.IQueryClassIdsByNameRequest): Promise<ununifi.nftfactory.QueryClassIdsByNameResponse>;
+
+            /**
+             * Calls ClassIdsByOwner.
+             * @param request QueryClassIdsByOwnerRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryClassIdsByOwnerResponse
+             */
+            public classIdsByOwner(request: ununifi.nftfactory.IQueryClassIdsByOwnerRequest, callback: ununifi.nftfactory.Query.ClassIdsByOwnerCallback): void;
+
+            /**
+             * Calls ClassIdsByOwner.
+             * @param request QueryClassIdsByOwnerRequest message or plain object
+             * @returns Promise
+             */
+            public classIdsByOwner(request: ununifi.nftfactory.IQueryClassIdsByOwnerRequest): Promise<ununifi.nftfactory.QueryClassIdsByOwnerResponse>;
+        }
+
+        namespace Query {
+
+            /**
+             * Callback as used by {@link ununifi.nftfactory.Query#params}.
+             * @param error Error, if any
+             * @param [response] QueryParamsResponse
+             */
+            type ParamsCallback = (error: (Error|null), response?: ununifi.nftfactory.QueryParamsResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.nftfactory.Query#classAttributes}.
+             * @param error Error, if any
+             * @param [response] QueryClassAttributesResponse
+             */
+            type ClassAttributesCallback = (error: (Error|null), response?: ununifi.nftfactory.QueryClassAttributesResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.nftfactory.Query#nFTMinter}.
+             * @param error Error, if any
+             * @param [response] QueryNFTMinterResponse
+             */
+            type NFTMinterCallback = (error: (Error|null), response?: ununifi.nftfactory.QueryNFTMinterResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.nftfactory.Query#classIdsByName}.
+             * @param error Error, if any
+             * @param [response] QueryClassIdsByNameResponse
+             */
+            type ClassIdsByNameCallback = (error: (Error|null), response?: ununifi.nftfactory.QueryClassIdsByNameResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.nftfactory.Query#classIdsByOwner}.
+             * @param error Error, if any
+             * @param [response] QueryClassIdsByOwnerResponse
+             */
+            type ClassIdsByOwnerCallback = (error: (Error|null), response?: ununifi.nftfactory.QueryClassIdsByOwnerResponse) => void;
+        }
+
+        /** Properties of a QueryParamsRequest. */
+        interface IQueryParamsRequest {
+        }
+
+        /** Represents a QueryParamsRequest. */
+        class QueryParamsRequest implements IQueryParamsRequest {
+
+            /**
+             * Constructs a new QueryParamsRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.nftfactory.IQueryParamsRequest);
+
+            /**
+             * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.nftfactory.QueryParamsRequest.verify|verify} messages.
+             * @param message QueryParamsRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.nftfactory.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.nftfactory.QueryParamsRequest.verify|verify} messages.
+             * @param message QueryParamsRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.nftfactory.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryParamsRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryParamsRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.QueryParamsRequest;
+
+            /**
+             * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryParamsRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.QueryParamsRequest;
+
+            /**
+             * Verifies a QueryParamsRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryParamsRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.QueryParamsRequest;
+
+            /**
+             * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
+             * @param message QueryParamsRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.nftfactory.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryParamsRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryParamsResponse. */
+        interface IQueryParamsResponse {
+
+            /** QueryParamsResponse params */
+            params?: (ununifi.nftfactory.IParams|null);
+        }
+
+        /** Represents a QueryParamsResponse. */
+        class QueryParamsResponse implements IQueryParamsResponse {
+
+            /**
+             * Constructs a new QueryParamsResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.nftfactory.IQueryParamsResponse);
+
+            /** QueryParamsResponse params. */
+            public params?: (ununifi.nftfactory.IParams|null);
+
+            /**
+             * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.nftfactory.QueryParamsResponse.verify|verify} messages.
+             * @param message QueryParamsResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.nftfactory.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.nftfactory.QueryParamsResponse.verify|verify} messages.
+             * @param message QueryParamsResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.nftfactory.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryParamsResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryParamsResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.QueryParamsResponse;
+
+            /**
+             * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryParamsResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.QueryParamsResponse;
+
+            /**
+             * Verifies a QueryParamsResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryParamsResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.QueryParamsResponse;
+
+            /**
+             * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
+             * @param message QueryParamsResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.nftfactory.QueryParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryParamsResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryClassAttributesRequest. */
+        interface IQueryClassAttributesRequest {
+
+            /** QueryClassAttributesRequest class_id */
+            class_id?: (string|null);
+        }
+
+        /** Represents a QueryClassAttributesRequest. */
+        class QueryClassAttributesRequest implements IQueryClassAttributesRequest {
+
+            /**
+             * Constructs a new QueryClassAttributesRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.nftfactory.IQueryClassAttributesRequest);
+
+            /** QueryClassAttributesRequest class_id. */
+            public class_id: string;
+
+            /**
+             * Encodes the specified QueryClassAttributesRequest message. Does not implicitly {@link ununifi.nftfactory.QueryClassAttributesRequest.verify|verify} messages.
+             * @param message QueryClassAttributesRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.nftfactory.IQueryClassAttributesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryClassAttributesRequest message, length delimited. Does not implicitly {@link ununifi.nftfactory.QueryClassAttributesRequest.verify|verify} messages.
+             * @param message QueryClassAttributesRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.nftfactory.IQueryClassAttributesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryClassAttributesRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryClassAttributesRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.QueryClassAttributesRequest;
+
+            /**
+             * Decodes a QueryClassAttributesRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryClassAttributesRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.QueryClassAttributesRequest;
+
+            /**
+             * Verifies a QueryClassAttributesRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryClassAttributesRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryClassAttributesRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.QueryClassAttributesRequest;
+
+            /**
+             * Creates a plain object from a QueryClassAttributesRequest message. Also converts values to other types if specified.
+             * @param message QueryClassAttributesRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.nftfactory.QueryClassAttributesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryClassAttributesRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryClassAttributesResponse. */
+        interface IQueryClassAttributesResponse {
+
+            /** QueryClassAttributesResponse class_attributes */
+            class_attributes?: (ununifi.nftfactory.IClassAttributes|null);
+        }
+
+        /** Represents a QueryClassAttributesResponse. */
+        class QueryClassAttributesResponse implements IQueryClassAttributesResponse {
+
+            /**
+             * Constructs a new QueryClassAttributesResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.nftfactory.IQueryClassAttributesResponse);
+
+            /** QueryClassAttributesResponse class_attributes. */
+            public class_attributes?: (ununifi.nftfactory.IClassAttributes|null);
+
+            /**
+             * Encodes the specified QueryClassAttributesResponse message. Does not implicitly {@link ununifi.nftfactory.QueryClassAttributesResponse.verify|verify} messages.
+             * @param message QueryClassAttributesResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.nftfactory.IQueryClassAttributesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryClassAttributesResponse message, length delimited. Does not implicitly {@link ununifi.nftfactory.QueryClassAttributesResponse.verify|verify} messages.
+             * @param message QueryClassAttributesResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.nftfactory.IQueryClassAttributesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryClassAttributesResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryClassAttributesResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.QueryClassAttributesResponse;
+
+            /**
+             * Decodes a QueryClassAttributesResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryClassAttributesResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.QueryClassAttributesResponse;
+
+            /**
+             * Verifies a QueryClassAttributesResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryClassAttributesResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryClassAttributesResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.QueryClassAttributesResponse;
+
+            /**
+             * Creates a plain object from a QueryClassAttributesResponse message. Also converts values to other types if specified.
+             * @param message QueryClassAttributesResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.nftfactory.QueryClassAttributesResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryClassAttributesResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryNFTMinterRequest. */
+        interface IQueryNFTMinterRequest {
+
+            /** QueryNFTMinterRequest class_id */
+            class_id?: (string|null);
+
+            /** QueryNFTMinterRequest nft_id */
+            nft_id?: (string|null);
+        }
+
+        /** Represents a QueryNFTMinterRequest. */
+        class QueryNFTMinterRequest implements IQueryNFTMinterRequest {
+
+            /**
+             * Constructs a new QueryNFTMinterRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.nftfactory.IQueryNFTMinterRequest);
+
+            /** QueryNFTMinterRequest class_id. */
+            public class_id: string;
+
+            /** QueryNFTMinterRequest nft_id. */
+            public nft_id: string;
+
+            /**
+             * Encodes the specified QueryNFTMinterRequest message. Does not implicitly {@link ununifi.nftfactory.QueryNFTMinterRequest.verify|verify} messages.
+             * @param message QueryNFTMinterRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.nftfactory.IQueryNFTMinterRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryNFTMinterRequest message, length delimited. Does not implicitly {@link ununifi.nftfactory.QueryNFTMinterRequest.verify|verify} messages.
+             * @param message QueryNFTMinterRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.nftfactory.IQueryNFTMinterRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryNFTMinterRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryNFTMinterRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.QueryNFTMinterRequest;
+
+            /**
+             * Decodes a QueryNFTMinterRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryNFTMinterRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.QueryNFTMinterRequest;
+
+            /**
+             * Verifies a QueryNFTMinterRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryNFTMinterRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryNFTMinterRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.QueryNFTMinterRequest;
+
+            /**
+             * Creates a plain object from a QueryNFTMinterRequest message. Also converts values to other types if specified.
+             * @param message QueryNFTMinterRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.nftfactory.QueryNFTMinterRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryNFTMinterRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryNFTMinterResponse. */
+        interface IQueryNFTMinterResponse {
+
+            /** QueryNFTMinterResponse minter */
+            minter?: (string|null);
+        }
+
+        /** Represents a QueryNFTMinterResponse. */
+        class QueryNFTMinterResponse implements IQueryNFTMinterResponse {
+
+            /**
+             * Constructs a new QueryNFTMinterResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.nftfactory.IQueryNFTMinterResponse);
+
+            /** QueryNFTMinterResponse minter. */
+            public minter: string;
+
+            /**
+             * Encodes the specified QueryNFTMinterResponse message. Does not implicitly {@link ununifi.nftfactory.QueryNFTMinterResponse.verify|verify} messages.
+             * @param message QueryNFTMinterResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.nftfactory.IQueryNFTMinterResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryNFTMinterResponse message, length delimited. Does not implicitly {@link ununifi.nftfactory.QueryNFTMinterResponse.verify|verify} messages.
+             * @param message QueryNFTMinterResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.nftfactory.IQueryNFTMinterResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryNFTMinterResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryNFTMinterResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.QueryNFTMinterResponse;
+
+            /**
+             * Decodes a QueryNFTMinterResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryNFTMinterResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.QueryNFTMinterResponse;
+
+            /**
+             * Verifies a QueryNFTMinterResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryNFTMinterResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryNFTMinterResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.QueryNFTMinterResponse;
+
+            /**
+             * Creates a plain object from a QueryNFTMinterResponse message. Also converts values to other types if specified.
+             * @param message QueryNFTMinterResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.nftfactory.QueryNFTMinterResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryNFTMinterResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryClassIdsByNameRequest. */
+        interface IQueryClassIdsByNameRequest {
+
+            /** QueryClassIdsByNameRequest class_name */
+            class_name?: (string|null);
+        }
+
+        /** Represents a QueryClassIdsByNameRequest. */
+        class QueryClassIdsByNameRequest implements IQueryClassIdsByNameRequest {
+
+            /**
+             * Constructs a new QueryClassIdsByNameRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.nftfactory.IQueryClassIdsByNameRequest);
+
+            /** QueryClassIdsByNameRequest class_name. */
+            public class_name: string;
+
+            /**
+             * Encodes the specified QueryClassIdsByNameRequest message. Does not implicitly {@link ununifi.nftfactory.QueryClassIdsByNameRequest.verify|verify} messages.
+             * @param message QueryClassIdsByNameRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.nftfactory.IQueryClassIdsByNameRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryClassIdsByNameRequest message, length delimited. Does not implicitly {@link ununifi.nftfactory.QueryClassIdsByNameRequest.verify|verify} messages.
+             * @param message QueryClassIdsByNameRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.nftfactory.IQueryClassIdsByNameRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryClassIdsByNameRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryClassIdsByNameRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.QueryClassIdsByNameRequest;
+
+            /**
+             * Decodes a QueryClassIdsByNameRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryClassIdsByNameRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.QueryClassIdsByNameRequest;
+
+            /**
+             * Verifies a QueryClassIdsByNameRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryClassIdsByNameRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryClassIdsByNameRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.QueryClassIdsByNameRequest;
+
+            /**
+             * Creates a plain object from a QueryClassIdsByNameRequest message. Also converts values to other types if specified.
+             * @param message QueryClassIdsByNameRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.nftfactory.QueryClassIdsByNameRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryClassIdsByNameRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryClassIdsByNameResponse. */
+        interface IQueryClassIdsByNameResponse {
+
+            /** QueryClassIdsByNameResponse class_name_id_list */
+            class_name_id_list?: (ununifi.nftfactory.IClassNameIdList|null);
+        }
+
+        /** Represents a QueryClassIdsByNameResponse. */
+        class QueryClassIdsByNameResponse implements IQueryClassIdsByNameResponse {
+
+            /**
+             * Constructs a new QueryClassIdsByNameResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.nftfactory.IQueryClassIdsByNameResponse);
+
+            /** QueryClassIdsByNameResponse class_name_id_list. */
+            public class_name_id_list?: (ununifi.nftfactory.IClassNameIdList|null);
+
+            /**
+             * Encodes the specified QueryClassIdsByNameResponse message. Does not implicitly {@link ununifi.nftfactory.QueryClassIdsByNameResponse.verify|verify} messages.
+             * @param message QueryClassIdsByNameResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.nftfactory.IQueryClassIdsByNameResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryClassIdsByNameResponse message, length delimited. Does not implicitly {@link ununifi.nftfactory.QueryClassIdsByNameResponse.verify|verify} messages.
+             * @param message QueryClassIdsByNameResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.nftfactory.IQueryClassIdsByNameResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryClassIdsByNameResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryClassIdsByNameResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.QueryClassIdsByNameResponse;
+
+            /**
+             * Decodes a QueryClassIdsByNameResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryClassIdsByNameResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.QueryClassIdsByNameResponse;
+
+            /**
+             * Verifies a QueryClassIdsByNameResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryClassIdsByNameResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryClassIdsByNameResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.QueryClassIdsByNameResponse;
+
+            /**
+             * Creates a plain object from a QueryClassIdsByNameResponse message. Also converts values to other types if specified.
+             * @param message QueryClassIdsByNameResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.nftfactory.QueryClassIdsByNameResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryClassIdsByNameResponse to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryClassIdsByOwnerRequest. */
+        interface IQueryClassIdsByOwnerRequest {
+
+            /** QueryClassIdsByOwnerRequest owner */
+            owner?: (string|null);
+        }
+
+        /** Represents a QueryClassIdsByOwnerRequest. */
+        class QueryClassIdsByOwnerRequest implements IQueryClassIdsByOwnerRequest {
+
+            /**
+             * Constructs a new QueryClassIdsByOwnerRequest.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.nftfactory.IQueryClassIdsByOwnerRequest);
+
+            /** QueryClassIdsByOwnerRequest owner. */
+            public owner: string;
+
+            /**
+             * Encodes the specified QueryClassIdsByOwnerRequest message. Does not implicitly {@link ununifi.nftfactory.QueryClassIdsByOwnerRequest.verify|verify} messages.
+             * @param message QueryClassIdsByOwnerRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.nftfactory.IQueryClassIdsByOwnerRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryClassIdsByOwnerRequest message, length delimited. Does not implicitly {@link ununifi.nftfactory.QueryClassIdsByOwnerRequest.verify|verify} messages.
+             * @param message QueryClassIdsByOwnerRequest message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.nftfactory.IQueryClassIdsByOwnerRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryClassIdsByOwnerRequest message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryClassIdsByOwnerRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.QueryClassIdsByOwnerRequest;
+
+            /**
+             * Decodes a QueryClassIdsByOwnerRequest message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryClassIdsByOwnerRequest
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.QueryClassIdsByOwnerRequest;
+
+            /**
+             * Verifies a QueryClassIdsByOwnerRequest message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryClassIdsByOwnerRequest message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryClassIdsByOwnerRequest
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.QueryClassIdsByOwnerRequest;
+
+            /**
+             * Creates a plain object from a QueryClassIdsByOwnerRequest message. Also converts values to other types if specified.
+             * @param message QueryClassIdsByOwnerRequest
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.nftfactory.QueryClassIdsByOwnerRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryClassIdsByOwnerRequest to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a QueryClassIdsByOwnerResponse. */
+        interface IQueryClassIdsByOwnerResponse {
+
+            /** QueryClassIdsByOwnerResponse owning_class_id_list */
+            owning_class_id_list?: (ununifi.nftfactory.IOwningClassIdList|null);
+        }
+
+        /** Represents a QueryClassIdsByOwnerResponse. */
+        class QueryClassIdsByOwnerResponse implements IQueryClassIdsByOwnerResponse {
+
+            /**
+             * Constructs a new QueryClassIdsByOwnerResponse.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: ununifi.nftfactory.IQueryClassIdsByOwnerResponse);
+
+            /** QueryClassIdsByOwnerResponse owning_class_id_list. */
+            public owning_class_id_list?: (ununifi.nftfactory.IOwningClassIdList|null);
+
+            /**
+             * Encodes the specified QueryClassIdsByOwnerResponse message. Does not implicitly {@link ununifi.nftfactory.QueryClassIdsByOwnerResponse.verify|verify} messages.
+             * @param message QueryClassIdsByOwnerResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: ununifi.nftfactory.IQueryClassIdsByOwnerResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified QueryClassIdsByOwnerResponse message, length delimited. Does not implicitly {@link ununifi.nftfactory.QueryClassIdsByOwnerResponse.verify|verify} messages.
+             * @param message QueryClassIdsByOwnerResponse message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: ununifi.nftfactory.IQueryClassIdsByOwnerResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a QueryClassIdsByOwnerResponse message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns QueryClassIdsByOwnerResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.QueryClassIdsByOwnerResponse;
+
+            /**
+             * Decodes a QueryClassIdsByOwnerResponse message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns QueryClassIdsByOwnerResponse
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.QueryClassIdsByOwnerResponse;
+
+            /**
+             * Verifies a QueryClassIdsByOwnerResponse message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a QueryClassIdsByOwnerResponse message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns QueryClassIdsByOwnerResponse
+             */
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.QueryClassIdsByOwnerResponse;
+
+            /**
+             * Creates a plain object from a QueryClassIdsByOwnerResponse message. Also converts values to other types if specified.
+             * @param message QueryClassIdsByOwnerResponse
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: ununifi.nftfactory.QueryClassIdsByOwnerResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this QueryClassIdsByOwnerResponse to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -18698,129 +18759,129 @@ export namespace ununifi {
              * @param request MsgCreateClass message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgCreateClassResponse
              */
-            public createClass(request: ununifi.nftmint.IMsgCreateClass, callback: ununifi.nftmint.Msg.CreateClassCallback): void;
+            public createClass(request: ununifi.nftfactory.IMsgCreateClass, callback: ununifi.nftfactory.Msg.CreateClassCallback): void;
 
             /**
              * Calls CreateClass.
              * @param request MsgCreateClass message or plain object
              * @returns Promise
              */
-            public createClass(request: ununifi.nftmint.IMsgCreateClass): Promise<ununifi.nftmint.MsgCreateClassResponse>;
+            public createClass(request: ununifi.nftfactory.IMsgCreateClass): Promise<ununifi.nftfactory.MsgCreateClassResponse>;
 
             /**
              * Calls SendClassOwnership.
              * @param request MsgSendClassOwnership message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgSendClassOwnershipResponse
              */
-            public sendClassOwnership(request: ununifi.nftmint.IMsgSendClassOwnership, callback: ununifi.nftmint.Msg.SendClassOwnershipCallback): void;
+            public sendClassOwnership(request: ununifi.nftfactory.IMsgSendClassOwnership, callback: ununifi.nftfactory.Msg.SendClassOwnershipCallback): void;
 
             /**
              * Calls SendClassOwnership.
              * @param request MsgSendClassOwnership message or plain object
              * @returns Promise
              */
-            public sendClassOwnership(request: ununifi.nftmint.IMsgSendClassOwnership): Promise<ununifi.nftmint.MsgSendClassOwnershipResponse>;
+            public sendClassOwnership(request: ununifi.nftfactory.IMsgSendClassOwnership): Promise<ununifi.nftfactory.MsgSendClassOwnershipResponse>;
 
             /**
              * Calls UpdateBaseTokenUri.
              * @param request MsgUpdateBaseTokenUri message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgUpdateBaseTokenUriResponse
              */
-            public updateBaseTokenUri(request: ununifi.nftmint.IMsgUpdateBaseTokenUri, callback: ununifi.nftmint.Msg.UpdateBaseTokenUriCallback): void;
+            public updateBaseTokenUri(request: ununifi.nftfactory.IMsgUpdateBaseTokenUri, callback: ununifi.nftfactory.Msg.UpdateBaseTokenUriCallback): void;
 
             /**
              * Calls UpdateBaseTokenUri.
              * @param request MsgUpdateBaseTokenUri message or plain object
              * @returns Promise
              */
-            public updateBaseTokenUri(request: ununifi.nftmint.IMsgUpdateBaseTokenUri): Promise<ununifi.nftmint.MsgUpdateBaseTokenUriResponse>;
+            public updateBaseTokenUri(request: ununifi.nftfactory.IMsgUpdateBaseTokenUri): Promise<ununifi.nftfactory.MsgUpdateBaseTokenUriResponse>;
 
             /**
              * Calls UpdateTokenSupplyCap.
              * @param request MsgUpdateTokenSupplyCap message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgUpdateTokenSupplyCapResponse
              */
-            public updateTokenSupplyCap(request: ununifi.nftmint.IMsgUpdateTokenSupplyCap, callback: ununifi.nftmint.Msg.UpdateTokenSupplyCapCallback): void;
+            public updateTokenSupplyCap(request: ununifi.nftfactory.IMsgUpdateTokenSupplyCap, callback: ununifi.nftfactory.Msg.UpdateTokenSupplyCapCallback): void;
 
             /**
              * Calls UpdateTokenSupplyCap.
              * @param request MsgUpdateTokenSupplyCap message or plain object
              * @returns Promise
              */
-            public updateTokenSupplyCap(request: ununifi.nftmint.IMsgUpdateTokenSupplyCap): Promise<ununifi.nftmint.MsgUpdateTokenSupplyCapResponse>;
+            public updateTokenSupplyCap(request: ununifi.nftfactory.IMsgUpdateTokenSupplyCap): Promise<ununifi.nftfactory.MsgUpdateTokenSupplyCapResponse>;
 
             /**
              * Calls MintNFT.
              * @param request MsgMintNFT message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgMintNFTResponse
              */
-            public mintNFT(request: ununifi.nftmint.IMsgMintNFT, callback: ununifi.nftmint.Msg.MintNFTCallback): void;
+            public mintNFT(request: ununifi.nftfactory.IMsgMintNFT, callback: ununifi.nftfactory.Msg.MintNFTCallback): void;
 
             /**
              * Calls MintNFT.
              * @param request MsgMintNFT message or plain object
              * @returns Promise
              */
-            public mintNFT(request: ununifi.nftmint.IMsgMintNFT): Promise<ununifi.nftmint.MsgMintNFTResponse>;
+            public mintNFT(request: ununifi.nftfactory.IMsgMintNFT): Promise<ununifi.nftfactory.MsgMintNFTResponse>;
 
             /**
              * Calls BurnNFT.
              * @param request MsgBurnNFT message or plain object
              * @param callback Node-style callback called with the error, if any, and MsgBurnNFTResponse
              */
-            public burnNFT(request: ununifi.nftmint.IMsgBurnNFT, callback: ununifi.nftmint.Msg.BurnNFTCallback): void;
+            public burnNFT(request: ununifi.nftfactory.IMsgBurnNFT, callback: ununifi.nftfactory.Msg.BurnNFTCallback): void;
 
             /**
              * Calls BurnNFT.
              * @param request MsgBurnNFT message or plain object
              * @returns Promise
              */
-            public burnNFT(request: ununifi.nftmint.IMsgBurnNFT): Promise<ununifi.nftmint.MsgBurnNFTResponse>;
+            public burnNFT(request: ununifi.nftfactory.IMsgBurnNFT): Promise<ununifi.nftfactory.MsgBurnNFTResponse>;
         }
 
         namespace Msg {
 
             /**
-             * Callback as used by {@link ununifi.nftmint.Msg#createClass}.
+             * Callback as used by {@link ununifi.nftfactory.Msg#createClass}.
              * @param error Error, if any
              * @param [response] MsgCreateClassResponse
              */
-            type CreateClassCallback = (error: (Error|null), response?: ununifi.nftmint.MsgCreateClassResponse) => void;
+            type CreateClassCallback = (error: (Error|null), response?: ununifi.nftfactory.MsgCreateClassResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmint.Msg#sendClassOwnership}.
+             * Callback as used by {@link ununifi.nftfactory.Msg#sendClassOwnership}.
              * @param error Error, if any
              * @param [response] MsgSendClassOwnershipResponse
              */
-            type SendClassOwnershipCallback = (error: (Error|null), response?: ununifi.nftmint.MsgSendClassOwnershipResponse) => void;
+            type SendClassOwnershipCallback = (error: (Error|null), response?: ununifi.nftfactory.MsgSendClassOwnershipResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmint.Msg#updateBaseTokenUri}.
+             * Callback as used by {@link ununifi.nftfactory.Msg#updateBaseTokenUri}.
              * @param error Error, if any
              * @param [response] MsgUpdateBaseTokenUriResponse
              */
-            type UpdateBaseTokenUriCallback = (error: (Error|null), response?: ununifi.nftmint.MsgUpdateBaseTokenUriResponse) => void;
+            type UpdateBaseTokenUriCallback = (error: (Error|null), response?: ununifi.nftfactory.MsgUpdateBaseTokenUriResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmint.Msg#updateTokenSupplyCap}.
+             * Callback as used by {@link ununifi.nftfactory.Msg#updateTokenSupplyCap}.
              * @param error Error, if any
              * @param [response] MsgUpdateTokenSupplyCapResponse
              */
-            type UpdateTokenSupplyCapCallback = (error: (Error|null), response?: ununifi.nftmint.MsgUpdateTokenSupplyCapResponse) => void;
+            type UpdateTokenSupplyCapCallback = (error: (Error|null), response?: ununifi.nftfactory.MsgUpdateTokenSupplyCapResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmint.Msg#mintNFT}.
+             * Callback as used by {@link ununifi.nftfactory.Msg#mintNFT}.
              * @param error Error, if any
              * @param [response] MsgMintNFTResponse
              */
-            type MintNFTCallback = (error: (Error|null), response?: ununifi.nftmint.MsgMintNFTResponse) => void;
+            type MintNFTCallback = (error: (Error|null), response?: ununifi.nftfactory.MsgMintNFTResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftmint.Msg#burnNFT}.
+             * Callback as used by {@link ununifi.nftfactory.Msg#burnNFT}.
              * @param error Error, if any
              * @param [response] MsgBurnNFTResponse
              */
-            type BurnNFTCallback = (error: (Error|null), response?: ununifi.nftmint.MsgBurnNFTResponse) => void;
+            type BurnNFTCallback = (error: (Error|null), response?: ununifi.nftfactory.MsgBurnNFTResponse) => void;
         }
 
         /** Properties of a MsgCreateClass. */
@@ -18839,7 +18900,7 @@ export namespace ununifi {
             token_supply_cap?: (Long|null);
 
             /** MsgCreateClass minting_permission */
-            minting_permission?: (ununifi.nftmint.MintingPermission|null);
+            minting_permission?: (ununifi.nftfactory.MintingPermission|null);
 
             /** MsgCreateClass symbol */
             symbol?: (string|null);
@@ -18858,7 +18919,7 @@ export namespace ununifi {
              * Constructs a new MsgCreateClass.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IMsgCreateClass);
+            constructor(properties?: ununifi.nftfactory.IMsgCreateClass);
 
             /** MsgCreateClass sender. */
             public sender: string;
@@ -18873,7 +18934,7 @@ export namespace ununifi {
             public token_supply_cap: Long;
 
             /** MsgCreateClass minting_permission. */
-            public minting_permission: ununifi.nftmint.MintingPermission;
+            public minting_permission: ununifi.nftfactory.MintingPermission;
 
             /** MsgCreateClass symbol. */
             public symbol: string;
@@ -18885,20 +18946,20 @@ export namespace ununifi {
             public class_uri: string;
 
             /**
-             * Encodes the specified MsgCreateClass message. Does not implicitly {@link ununifi.nftmint.MsgCreateClass.verify|verify} messages.
+             * Encodes the specified MsgCreateClass message. Does not implicitly {@link ununifi.nftfactory.MsgCreateClass.verify|verify} messages.
              * @param message MsgCreateClass message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IMsgCreateClass, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IMsgCreateClass, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgCreateClass message, length delimited. Does not implicitly {@link ununifi.nftmint.MsgCreateClass.verify|verify} messages.
+             * Encodes the specified MsgCreateClass message, length delimited. Does not implicitly {@link ununifi.nftfactory.MsgCreateClass.verify|verify} messages.
              * @param message MsgCreateClass message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IMsgCreateClass, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IMsgCreateClass, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgCreateClass message from the specified reader or buffer.
@@ -18908,7 +18969,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.MsgCreateClass;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.MsgCreateClass;
 
             /**
              * Decodes a MsgCreateClass message from the specified reader or buffer, length delimited.
@@ -18917,7 +18978,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.MsgCreateClass;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.MsgCreateClass;
 
             /**
              * Verifies a MsgCreateClass message.
@@ -18931,7 +18992,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgCreateClass
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.MsgCreateClass;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.MsgCreateClass;
 
             /**
              * Creates a plain object from a MsgCreateClass message. Also converts values to other types if specified.
@@ -18939,7 +19000,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.MsgCreateClass, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.MsgCreateClass, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgCreateClass to JSON.
@@ -18959,23 +19020,23 @@ export namespace ununifi {
              * Constructs a new MsgCreateClassResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IMsgCreateClassResponse);
+            constructor(properties?: ununifi.nftfactory.IMsgCreateClassResponse);
 
             /**
-             * Encodes the specified MsgCreateClassResponse message. Does not implicitly {@link ununifi.nftmint.MsgCreateClassResponse.verify|verify} messages.
+             * Encodes the specified MsgCreateClassResponse message. Does not implicitly {@link ununifi.nftfactory.MsgCreateClassResponse.verify|verify} messages.
              * @param message MsgCreateClassResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IMsgCreateClassResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IMsgCreateClassResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgCreateClassResponse message, length delimited. Does not implicitly {@link ununifi.nftmint.MsgCreateClassResponse.verify|verify} messages.
+             * Encodes the specified MsgCreateClassResponse message, length delimited. Does not implicitly {@link ununifi.nftfactory.MsgCreateClassResponse.verify|verify} messages.
              * @param message MsgCreateClassResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IMsgCreateClassResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IMsgCreateClassResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgCreateClassResponse message from the specified reader or buffer.
@@ -18985,7 +19046,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.MsgCreateClassResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.MsgCreateClassResponse;
 
             /**
              * Decodes a MsgCreateClassResponse message from the specified reader or buffer, length delimited.
@@ -18994,7 +19055,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.MsgCreateClassResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.MsgCreateClassResponse;
 
             /**
              * Verifies a MsgCreateClassResponse message.
@@ -19008,7 +19069,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgCreateClassResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.MsgCreateClassResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.MsgCreateClassResponse;
 
             /**
              * Creates a plain object from a MsgCreateClassResponse message. Also converts values to other types if specified.
@@ -19016,7 +19077,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.MsgCreateClassResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.MsgCreateClassResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgCreateClassResponse to JSON.
@@ -19045,7 +19106,7 @@ export namespace ununifi {
              * Constructs a new MsgSendClassOwnership.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IMsgSendClassOwnership);
+            constructor(properties?: ununifi.nftfactory.IMsgSendClassOwnership);
 
             /** MsgSendClassOwnership sender. */
             public sender: string;
@@ -19057,20 +19118,20 @@ export namespace ununifi {
             public recipient: string;
 
             /**
-             * Encodes the specified MsgSendClassOwnership message. Does not implicitly {@link ununifi.nftmint.MsgSendClassOwnership.verify|verify} messages.
+             * Encodes the specified MsgSendClassOwnership message. Does not implicitly {@link ununifi.nftfactory.MsgSendClassOwnership.verify|verify} messages.
              * @param message MsgSendClassOwnership message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IMsgSendClassOwnership, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IMsgSendClassOwnership, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgSendClassOwnership message, length delimited. Does not implicitly {@link ununifi.nftmint.MsgSendClassOwnership.verify|verify} messages.
+             * Encodes the specified MsgSendClassOwnership message, length delimited. Does not implicitly {@link ununifi.nftfactory.MsgSendClassOwnership.verify|verify} messages.
              * @param message MsgSendClassOwnership message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IMsgSendClassOwnership, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IMsgSendClassOwnership, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgSendClassOwnership message from the specified reader or buffer.
@@ -19080,7 +19141,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.MsgSendClassOwnership;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.MsgSendClassOwnership;
 
             /**
              * Decodes a MsgSendClassOwnership message from the specified reader or buffer, length delimited.
@@ -19089,7 +19150,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.MsgSendClassOwnership;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.MsgSendClassOwnership;
 
             /**
              * Verifies a MsgSendClassOwnership message.
@@ -19103,7 +19164,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgSendClassOwnership
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.MsgSendClassOwnership;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.MsgSendClassOwnership;
 
             /**
              * Creates a plain object from a MsgSendClassOwnership message. Also converts values to other types if specified.
@@ -19111,7 +19172,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.MsgSendClassOwnership, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.MsgSendClassOwnership, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgSendClassOwnership to JSON.
@@ -19131,23 +19192,23 @@ export namespace ununifi {
              * Constructs a new MsgSendClassOwnershipResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IMsgSendClassOwnershipResponse);
+            constructor(properties?: ununifi.nftfactory.IMsgSendClassOwnershipResponse);
 
             /**
-             * Encodes the specified MsgSendClassOwnershipResponse message. Does not implicitly {@link ununifi.nftmint.MsgSendClassOwnershipResponse.verify|verify} messages.
+             * Encodes the specified MsgSendClassOwnershipResponse message. Does not implicitly {@link ununifi.nftfactory.MsgSendClassOwnershipResponse.verify|verify} messages.
              * @param message MsgSendClassOwnershipResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IMsgSendClassOwnershipResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IMsgSendClassOwnershipResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgSendClassOwnershipResponse message, length delimited. Does not implicitly {@link ununifi.nftmint.MsgSendClassOwnershipResponse.verify|verify} messages.
+             * Encodes the specified MsgSendClassOwnershipResponse message, length delimited. Does not implicitly {@link ununifi.nftfactory.MsgSendClassOwnershipResponse.verify|verify} messages.
              * @param message MsgSendClassOwnershipResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IMsgSendClassOwnershipResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IMsgSendClassOwnershipResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgSendClassOwnershipResponse message from the specified reader or buffer.
@@ -19157,7 +19218,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.MsgSendClassOwnershipResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.MsgSendClassOwnershipResponse;
 
             /**
              * Decodes a MsgSendClassOwnershipResponse message from the specified reader or buffer, length delimited.
@@ -19166,7 +19227,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.MsgSendClassOwnershipResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.MsgSendClassOwnershipResponse;
 
             /**
              * Verifies a MsgSendClassOwnershipResponse message.
@@ -19180,7 +19241,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgSendClassOwnershipResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.MsgSendClassOwnershipResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.MsgSendClassOwnershipResponse;
 
             /**
              * Creates a plain object from a MsgSendClassOwnershipResponse message. Also converts values to other types if specified.
@@ -19188,7 +19249,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.MsgSendClassOwnershipResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.MsgSendClassOwnershipResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgSendClassOwnershipResponse to JSON.
@@ -19217,7 +19278,7 @@ export namespace ununifi {
              * Constructs a new MsgUpdateBaseTokenUri.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IMsgUpdateBaseTokenUri);
+            constructor(properties?: ununifi.nftfactory.IMsgUpdateBaseTokenUri);
 
             /** MsgUpdateBaseTokenUri sender. */
             public sender: string;
@@ -19229,20 +19290,20 @@ export namespace ununifi {
             public base_token_uri: string;
 
             /**
-             * Encodes the specified MsgUpdateBaseTokenUri message. Does not implicitly {@link ununifi.nftmint.MsgUpdateBaseTokenUri.verify|verify} messages.
+             * Encodes the specified MsgUpdateBaseTokenUri message. Does not implicitly {@link ununifi.nftfactory.MsgUpdateBaseTokenUri.verify|verify} messages.
              * @param message MsgUpdateBaseTokenUri message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IMsgUpdateBaseTokenUri, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IMsgUpdateBaseTokenUri, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgUpdateBaseTokenUri message, length delimited. Does not implicitly {@link ununifi.nftmint.MsgUpdateBaseTokenUri.verify|verify} messages.
+             * Encodes the specified MsgUpdateBaseTokenUri message, length delimited. Does not implicitly {@link ununifi.nftfactory.MsgUpdateBaseTokenUri.verify|verify} messages.
              * @param message MsgUpdateBaseTokenUri message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IMsgUpdateBaseTokenUri, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IMsgUpdateBaseTokenUri, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgUpdateBaseTokenUri message from the specified reader or buffer.
@@ -19252,7 +19313,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.MsgUpdateBaseTokenUri;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.MsgUpdateBaseTokenUri;
 
             /**
              * Decodes a MsgUpdateBaseTokenUri message from the specified reader or buffer, length delimited.
@@ -19261,7 +19322,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.MsgUpdateBaseTokenUri;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.MsgUpdateBaseTokenUri;
 
             /**
              * Verifies a MsgUpdateBaseTokenUri message.
@@ -19275,7 +19336,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgUpdateBaseTokenUri
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.MsgUpdateBaseTokenUri;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.MsgUpdateBaseTokenUri;
 
             /**
              * Creates a plain object from a MsgUpdateBaseTokenUri message. Also converts values to other types if specified.
@@ -19283,7 +19344,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.MsgUpdateBaseTokenUri, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.MsgUpdateBaseTokenUri, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgUpdateBaseTokenUri to JSON.
@@ -19303,23 +19364,23 @@ export namespace ununifi {
              * Constructs a new MsgUpdateBaseTokenUriResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IMsgUpdateBaseTokenUriResponse);
+            constructor(properties?: ununifi.nftfactory.IMsgUpdateBaseTokenUriResponse);
 
             /**
-             * Encodes the specified MsgUpdateBaseTokenUriResponse message. Does not implicitly {@link ununifi.nftmint.MsgUpdateBaseTokenUriResponse.verify|verify} messages.
+             * Encodes the specified MsgUpdateBaseTokenUriResponse message. Does not implicitly {@link ununifi.nftfactory.MsgUpdateBaseTokenUriResponse.verify|verify} messages.
              * @param message MsgUpdateBaseTokenUriResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IMsgUpdateBaseTokenUriResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IMsgUpdateBaseTokenUriResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgUpdateBaseTokenUriResponse message, length delimited. Does not implicitly {@link ununifi.nftmint.MsgUpdateBaseTokenUriResponse.verify|verify} messages.
+             * Encodes the specified MsgUpdateBaseTokenUriResponse message, length delimited. Does not implicitly {@link ununifi.nftfactory.MsgUpdateBaseTokenUriResponse.verify|verify} messages.
              * @param message MsgUpdateBaseTokenUriResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IMsgUpdateBaseTokenUriResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IMsgUpdateBaseTokenUriResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgUpdateBaseTokenUriResponse message from the specified reader or buffer.
@@ -19329,7 +19390,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.MsgUpdateBaseTokenUriResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.MsgUpdateBaseTokenUriResponse;
 
             /**
              * Decodes a MsgUpdateBaseTokenUriResponse message from the specified reader or buffer, length delimited.
@@ -19338,7 +19399,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.MsgUpdateBaseTokenUriResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.MsgUpdateBaseTokenUriResponse;
 
             /**
              * Verifies a MsgUpdateBaseTokenUriResponse message.
@@ -19352,7 +19413,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgUpdateBaseTokenUriResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.MsgUpdateBaseTokenUriResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.MsgUpdateBaseTokenUriResponse;
 
             /**
              * Creates a plain object from a MsgUpdateBaseTokenUriResponse message. Also converts values to other types if specified.
@@ -19360,7 +19421,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.MsgUpdateBaseTokenUriResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.MsgUpdateBaseTokenUriResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgUpdateBaseTokenUriResponse to JSON.
@@ -19389,7 +19450,7 @@ export namespace ununifi {
              * Constructs a new MsgUpdateTokenSupplyCap.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IMsgUpdateTokenSupplyCap);
+            constructor(properties?: ununifi.nftfactory.IMsgUpdateTokenSupplyCap);
 
             /** MsgUpdateTokenSupplyCap sender. */
             public sender: string;
@@ -19401,20 +19462,20 @@ export namespace ununifi {
             public token_supply_cap: Long;
 
             /**
-             * Encodes the specified MsgUpdateTokenSupplyCap message. Does not implicitly {@link ununifi.nftmint.MsgUpdateTokenSupplyCap.verify|verify} messages.
+             * Encodes the specified MsgUpdateTokenSupplyCap message. Does not implicitly {@link ununifi.nftfactory.MsgUpdateTokenSupplyCap.verify|verify} messages.
              * @param message MsgUpdateTokenSupplyCap message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IMsgUpdateTokenSupplyCap, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IMsgUpdateTokenSupplyCap, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgUpdateTokenSupplyCap message, length delimited. Does not implicitly {@link ununifi.nftmint.MsgUpdateTokenSupplyCap.verify|verify} messages.
+             * Encodes the specified MsgUpdateTokenSupplyCap message, length delimited. Does not implicitly {@link ununifi.nftfactory.MsgUpdateTokenSupplyCap.verify|verify} messages.
              * @param message MsgUpdateTokenSupplyCap message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IMsgUpdateTokenSupplyCap, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IMsgUpdateTokenSupplyCap, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgUpdateTokenSupplyCap message from the specified reader or buffer.
@@ -19424,7 +19485,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.MsgUpdateTokenSupplyCap;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.MsgUpdateTokenSupplyCap;
 
             /**
              * Decodes a MsgUpdateTokenSupplyCap message from the specified reader or buffer, length delimited.
@@ -19433,7 +19494,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.MsgUpdateTokenSupplyCap;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.MsgUpdateTokenSupplyCap;
 
             /**
              * Verifies a MsgUpdateTokenSupplyCap message.
@@ -19447,7 +19508,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgUpdateTokenSupplyCap
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.MsgUpdateTokenSupplyCap;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.MsgUpdateTokenSupplyCap;
 
             /**
              * Creates a plain object from a MsgUpdateTokenSupplyCap message. Also converts values to other types if specified.
@@ -19455,7 +19516,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.MsgUpdateTokenSupplyCap, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.MsgUpdateTokenSupplyCap, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgUpdateTokenSupplyCap to JSON.
@@ -19475,23 +19536,23 @@ export namespace ununifi {
              * Constructs a new MsgUpdateTokenSupplyCapResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IMsgUpdateTokenSupplyCapResponse);
+            constructor(properties?: ununifi.nftfactory.IMsgUpdateTokenSupplyCapResponse);
 
             /**
-             * Encodes the specified MsgUpdateTokenSupplyCapResponse message. Does not implicitly {@link ununifi.nftmint.MsgUpdateTokenSupplyCapResponse.verify|verify} messages.
+             * Encodes the specified MsgUpdateTokenSupplyCapResponse message. Does not implicitly {@link ununifi.nftfactory.MsgUpdateTokenSupplyCapResponse.verify|verify} messages.
              * @param message MsgUpdateTokenSupplyCapResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IMsgUpdateTokenSupplyCapResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IMsgUpdateTokenSupplyCapResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgUpdateTokenSupplyCapResponse message, length delimited. Does not implicitly {@link ununifi.nftmint.MsgUpdateTokenSupplyCapResponse.verify|verify} messages.
+             * Encodes the specified MsgUpdateTokenSupplyCapResponse message, length delimited. Does not implicitly {@link ununifi.nftfactory.MsgUpdateTokenSupplyCapResponse.verify|verify} messages.
              * @param message MsgUpdateTokenSupplyCapResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IMsgUpdateTokenSupplyCapResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IMsgUpdateTokenSupplyCapResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgUpdateTokenSupplyCapResponse message from the specified reader or buffer.
@@ -19501,7 +19562,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.MsgUpdateTokenSupplyCapResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.MsgUpdateTokenSupplyCapResponse;
 
             /**
              * Decodes a MsgUpdateTokenSupplyCapResponse message from the specified reader or buffer, length delimited.
@@ -19510,7 +19571,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.MsgUpdateTokenSupplyCapResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.MsgUpdateTokenSupplyCapResponse;
 
             /**
              * Verifies a MsgUpdateTokenSupplyCapResponse message.
@@ -19524,7 +19585,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgUpdateTokenSupplyCapResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.MsgUpdateTokenSupplyCapResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.MsgUpdateTokenSupplyCapResponse;
 
             /**
              * Creates a plain object from a MsgUpdateTokenSupplyCapResponse message. Also converts values to other types if specified.
@@ -19532,7 +19593,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.MsgUpdateTokenSupplyCapResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.MsgUpdateTokenSupplyCapResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgUpdateTokenSupplyCapResponse to JSON.
@@ -19564,7 +19625,7 @@ export namespace ununifi {
              * Constructs a new MsgMintNFT.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IMsgMintNFT);
+            constructor(properties?: ununifi.nftfactory.IMsgMintNFT);
 
             /** MsgMintNFT sender. */
             public sender: string;
@@ -19579,20 +19640,20 @@ export namespace ununifi {
             public recipient: string;
 
             /**
-             * Encodes the specified MsgMintNFT message. Does not implicitly {@link ununifi.nftmint.MsgMintNFT.verify|verify} messages.
+             * Encodes the specified MsgMintNFT message. Does not implicitly {@link ununifi.nftfactory.MsgMintNFT.verify|verify} messages.
              * @param message MsgMintNFT message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IMsgMintNFT, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IMsgMintNFT, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgMintNFT message, length delimited. Does not implicitly {@link ununifi.nftmint.MsgMintNFT.verify|verify} messages.
+             * Encodes the specified MsgMintNFT message, length delimited. Does not implicitly {@link ununifi.nftfactory.MsgMintNFT.verify|verify} messages.
              * @param message MsgMintNFT message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IMsgMintNFT, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IMsgMintNFT, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgMintNFT message from the specified reader or buffer.
@@ -19602,7 +19663,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.MsgMintNFT;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.MsgMintNFT;
 
             /**
              * Decodes a MsgMintNFT message from the specified reader or buffer, length delimited.
@@ -19611,7 +19672,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.MsgMintNFT;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.MsgMintNFT;
 
             /**
              * Verifies a MsgMintNFT message.
@@ -19625,7 +19686,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgMintNFT
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.MsgMintNFT;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.MsgMintNFT;
 
             /**
              * Creates a plain object from a MsgMintNFT message. Also converts values to other types if specified.
@@ -19633,7 +19694,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.MsgMintNFT, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.MsgMintNFT, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgMintNFT to JSON.
@@ -19653,23 +19714,23 @@ export namespace ununifi {
              * Constructs a new MsgMintNFTResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IMsgMintNFTResponse);
+            constructor(properties?: ununifi.nftfactory.IMsgMintNFTResponse);
 
             /**
-             * Encodes the specified MsgMintNFTResponse message. Does not implicitly {@link ununifi.nftmint.MsgMintNFTResponse.verify|verify} messages.
+             * Encodes the specified MsgMintNFTResponse message. Does not implicitly {@link ununifi.nftfactory.MsgMintNFTResponse.verify|verify} messages.
              * @param message MsgMintNFTResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IMsgMintNFTResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IMsgMintNFTResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgMintNFTResponse message, length delimited. Does not implicitly {@link ununifi.nftmint.MsgMintNFTResponse.verify|verify} messages.
+             * Encodes the specified MsgMintNFTResponse message, length delimited. Does not implicitly {@link ununifi.nftfactory.MsgMintNFTResponse.verify|verify} messages.
              * @param message MsgMintNFTResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IMsgMintNFTResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IMsgMintNFTResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgMintNFTResponse message from the specified reader or buffer.
@@ -19679,7 +19740,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.MsgMintNFTResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.MsgMintNFTResponse;
 
             /**
              * Decodes a MsgMintNFTResponse message from the specified reader or buffer, length delimited.
@@ -19688,7 +19749,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.MsgMintNFTResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.MsgMintNFTResponse;
 
             /**
              * Verifies a MsgMintNFTResponse message.
@@ -19702,7 +19763,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgMintNFTResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.MsgMintNFTResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.MsgMintNFTResponse;
 
             /**
              * Creates a plain object from a MsgMintNFTResponse message. Also converts values to other types if specified.
@@ -19710,7 +19771,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.MsgMintNFTResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.MsgMintNFTResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgMintNFTResponse to JSON.
@@ -19739,7 +19800,7 @@ export namespace ununifi {
              * Constructs a new MsgBurnNFT.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IMsgBurnNFT);
+            constructor(properties?: ununifi.nftfactory.IMsgBurnNFT);
 
             /** MsgBurnNFT sender. */
             public sender: string;
@@ -19751,20 +19812,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified MsgBurnNFT message. Does not implicitly {@link ununifi.nftmint.MsgBurnNFT.verify|verify} messages.
+             * Encodes the specified MsgBurnNFT message. Does not implicitly {@link ununifi.nftfactory.MsgBurnNFT.verify|verify} messages.
              * @param message MsgBurnNFT message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IMsgBurnNFT, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IMsgBurnNFT, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgBurnNFT message, length delimited. Does not implicitly {@link ununifi.nftmint.MsgBurnNFT.verify|verify} messages.
+             * Encodes the specified MsgBurnNFT message, length delimited. Does not implicitly {@link ununifi.nftfactory.MsgBurnNFT.verify|verify} messages.
              * @param message MsgBurnNFT message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IMsgBurnNFT, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IMsgBurnNFT, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgBurnNFT message from the specified reader or buffer.
@@ -19774,7 +19835,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.MsgBurnNFT;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.MsgBurnNFT;
 
             /**
              * Decodes a MsgBurnNFT message from the specified reader or buffer, length delimited.
@@ -19783,7 +19844,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.MsgBurnNFT;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.MsgBurnNFT;
 
             /**
              * Verifies a MsgBurnNFT message.
@@ -19797,7 +19858,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgBurnNFT
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.MsgBurnNFT;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.MsgBurnNFT;
 
             /**
              * Creates a plain object from a MsgBurnNFT message. Also converts values to other types if specified.
@@ -19805,7 +19866,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.MsgBurnNFT, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.MsgBurnNFT, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgBurnNFT to JSON.
@@ -19825,23 +19886,23 @@ export namespace ununifi {
              * Constructs a new MsgBurnNFTResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IMsgBurnNFTResponse);
+            constructor(properties?: ununifi.nftfactory.IMsgBurnNFTResponse);
 
             /**
-             * Encodes the specified MsgBurnNFTResponse message. Does not implicitly {@link ununifi.nftmint.MsgBurnNFTResponse.verify|verify} messages.
+             * Encodes the specified MsgBurnNFTResponse message. Does not implicitly {@link ununifi.nftfactory.MsgBurnNFTResponse.verify|verify} messages.
              * @param message MsgBurnNFTResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IMsgBurnNFTResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IMsgBurnNFTResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgBurnNFTResponse message, length delimited. Does not implicitly {@link ununifi.nftmint.MsgBurnNFTResponse.verify|verify} messages.
+             * Encodes the specified MsgBurnNFTResponse message, length delimited. Does not implicitly {@link ununifi.nftfactory.MsgBurnNFTResponse.verify|verify} messages.
              * @param message MsgBurnNFTResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IMsgBurnNFTResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IMsgBurnNFTResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a MsgBurnNFTResponse message from the specified reader or buffer.
@@ -19851,7 +19912,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.MsgBurnNFTResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.MsgBurnNFTResponse;
 
             /**
              * Decodes a MsgBurnNFTResponse message from the specified reader or buffer, length delimited.
@@ -19860,7 +19921,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.MsgBurnNFTResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.MsgBurnNFTResponse;
 
             /**
              * Verifies a MsgBurnNFTResponse message.
@@ -19874,7 +19935,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns MsgBurnNFTResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.MsgBurnNFTResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.MsgBurnNFTResponse;
 
             /**
              * Creates a plain object from a MsgBurnNFTResponse message. Also converts values to other types if specified.
@@ -19882,7 +19943,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.MsgBurnNFTResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.MsgBurnNFTResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this MsgBurnNFTResponse to JSON.
@@ -19895,10 +19956,10 @@ export namespace ununifi {
         interface IGenesisState {
 
             /** GenesisState params */
-            params?: (ununifi.nftmint.IParams|null);
+            params?: (ununifi.nftfactory.IParams|null);
 
             /** GenesisState class_attributes_list */
-            class_attributes_list?: (ununifi.nftmint.IClassAttributes[]|null);
+            class_attributes_list?: (ununifi.nftfactory.IClassAttributes[]|null);
         }
 
         /** Represents a GenesisState. */
@@ -19908,29 +19969,29 @@ export namespace ununifi {
              * Constructs a new GenesisState.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IGenesisState);
+            constructor(properties?: ununifi.nftfactory.IGenesisState);
 
             /** GenesisState params. */
-            public params?: (ununifi.nftmint.IParams|null);
+            public params?: (ununifi.nftfactory.IParams|null);
 
             /** GenesisState class_attributes_list. */
-            public class_attributes_list: ununifi.nftmint.IClassAttributes[];
+            public class_attributes_list: ununifi.nftfactory.IClassAttributes[];
 
             /**
-             * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.nftmint.GenesisState.verify|verify} messages.
+             * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.nftfactory.GenesisState.verify|verify} messages.
              * @param message GenesisState message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.nftmint.GenesisState.verify|verify} messages.
+             * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.nftfactory.GenesisState.verify|verify} messages.
              * @param message GenesisState message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a GenesisState message from the specified reader or buffer.
@@ -19940,7 +20001,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.GenesisState;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.GenesisState;
 
             /**
              * Decodes a GenesisState message from the specified reader or buffer, length delimited.
@@ -19949,7 +20010,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.GenesisState;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.GenesisState;
 
             /**
              * Verifies a GenesisState message.
@@ -19963,7 +20024,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns GenesisState
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.GenesisState;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.GenesisState;
 
             /**
              * Creates a plain object from a GenesisState message. Also converts values to other types if specified.
@@ -19971,7 +20032,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.GenesisState, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.GenesisState, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this GenesisState to JSON.
@@ -19996,7 +20057,7 @@ export namespace ununifi {
             token_supply_cap?: (string|null);
 
             /** EventCreateClass minting_permission */
-            minting_permission?: (ununifi.nftmint.MintingPermission|null);
+            minting_permission?: (ununifi.nftfactory.MintingPermission|null);
         }
 
         /** Represents an EventCreateClass. */
@@ -20006,7 +20067,7 @@ export namespace ununifi {
              * Constructs a new EventCreateClass.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IEventCreateClass);
+            constructor(properties?: ununifi.nftfactory.IEventCreateClass);
 
             /** EventCreateClass owner. */
             public owner: string;
@@ -20021,23 +20082,23 @@ export namespace ununifi {
             public token_supply_cap: string;
 
             /** EventCreateClass minting_permission. */
-            public minting_permission: ununifi.nftmint.MintingPermission;
+            public minting_permission: ununifi.nftfactory.MintingPermission;
 
             /**
-             * Encodes the specified EventCreateClass message. Does not implicitly {@link ununifi.nftmint.EventCreateClass.verify|verify} messages.
+             * Encodes the specified EventCreateClass message. Does not implicitly {@link ununifi.nftfactory.EventCreateClass.verify|verify} messages.
              * @param message EventCreateClass message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IEventCreateClass, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IEventCreateClass, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventCreateClass message, length delimited. Does not implicitly {@link ununifi.nftmint.EventCreateClass.verify|verify} messages.
+             * Encodes the specified EventCreateClass message, length delimited. Does not implicitly {@link ununifi.nftfactory.EventCreateClass.verify|verify} messages.
              * @param message EventCreateClass message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IEventCreateClass, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IEventCreateClass, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventCreateClass message from the specified reader or buffer.
@@ -20047,7 +20108,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.EventCreateClass;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.EventCreateClass;
 
             /**
              * Decodes an EventCreateClass message from the specified reader or buffer, length delimited.
@@ -20056,7 +20117,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.EventCreateClass;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.EventCreateClass;
 
             /**
              * Verifies an EventCreateClass message.
@@ -20070,7 +20131,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventCreateClass
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.EventCreateClass;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.EventCreateClass;
 
             /**
              * Creates a plain object from an EventCreateClass message. Also converts values to other types if specified.
@@ -20078,7 +20139,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.EventCreateClass, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.EventCreateClass, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventCreateClass to JSON.
@@ -20107,7 +20168,7 @@ export namespace ununifi {
              * Constructs a new EventSendClassOwnership.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IEventSendClassOwnership);
+            constructor(properties?: ununifi.nftfactory.IEventSendClassOwnership);
 
             /** EventSendClassOwnership sender. */
             public sender: string;
@@ -20119,20 +20180,20 @@ export namespace ununifi {
             public class_id: string;
 
             /**
-             * Encodes the specified EventSendClassOwnership message. Does not implicitly {@link ununifi.nftmint.EventSendClassOwnership.verify|verify} messages.
+             * Encodes the specified EventSendClassOwnership message. Does not implicitly {@link ununifi.nftfactory.EventSendClassOwnership.verify|verify} messages.
              * @param message EventSendClassOwnership message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IEventSendClassOwnership, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IEventSendClassOwnership, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventSendClassOwnership message, length delimited. Does not implicitly {@link ununifi.nftmint.EventSendClassOwnership.verify|verify} messages.
+             * Encodes the specified EventSendClassOwnership message, length delimited. Does not implicitly {@link ununifi.nftfactory.EventSendClassOwnership.verify|verify} messages.
              * @param message EventSendClassOwnership message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IEventSendClassOwnership, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IEventSendClassOwnership, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventSendClassOwnership message from the specified reader or buffer.
@@ -20142,7 +20203,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.EventSendClassOwnership;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.EventSendClassOwnership;
 
             /**
              * Decodes an EventSendClassOwnership message from the specified reader or buffer, length delimited.
@@ -20151,7 +20212,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.EventSendClassOwnership;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.EventSendClassOwnership;
 
             /**
              * Verifies an EventSendClassOwnership message.
@@ -20165,7 +20226,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventSendClassOwnership
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.EventSendClassOwnership;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.EventSendClassOwnership;
 
             /**
              * Creates a plain object from an EventSendClassOwnership message. Also converts values to other types if specified.
@@ -20173,7 +20234,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.EventSendClassOwnership, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.EventSendClassOwnership, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventSendClassOwnership to JSON.
@@ -20202,7 +20263,7 @@ export namespace ununifi {
              * Constructs a new EventUpdateBaseTokenUri.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IEventUpdateBaseTokenUri);
+            constructor(properties?: ununifi.nftfactory.IEventUpdateBaseTokenUri);
 
             /** EventUpdateBaseTokenUri owner. */
             public owner: string;
@@ -20214,20 +20275,20 @@ export namespace ununifi {
             public base_token_uri: string;
 
             /**
-             * Encodes the specified EventUpdateBaseTokenUri message. Does not implicitly {@link ununifi.nftmint.EventUpdateBaseTokenUri.verify|verify} messages.
+             * Encodes the specified EventUpdateBaseTokenUri message. Does not implicitly {@link ununifi.nftfactory.EventUpdateBaseTokenUri.verify|verify} messages.
              * @param message EventUpdateBaseTokenUri message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IEventUpdateBaseTokenUri, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IEventUpdateBaseTokenUri, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventUpdateBaseTokenUri message, length delimited. Does not implicitly {@link ununifi.nftmint.EventUpdateBaseTokenUri.verify|verify} messages.
+             * Encodes the specified EventUpdateBaseTokenUri message, length delimited. Does not implicitly {@link ununifi.nftfactory.EventUpdateBaseTokenUri.verify|verify} messages.
              * @param message EventUpdateBaseTokenUri message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IEventUpdateBaseTokenUri, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IEventUpdateBaseTokenUri, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventUpdateBaseTokenUri message from the specified reader or buffer.
@@ -20237,7 +20298,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.EventUpdateBaseTokenUri;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.EventUpdateBaseTokenUri;
 
             /**
              * Decodes an EventUpdateBaseTokenUri message from the specified reader or buffer, length delimited.
@@ -20246,7 +20307,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.EventUpdateBaseTokenUri;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.EventUpdateBaseTokenUri;
 
             /**
              * Verifies an EventUpdateBaseTokenUri message.
@@ -20260,7 +20321,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventUpdateBaseTokenUri
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.EventUpdateBaseTokenUri;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.EventUpdateBaseTokenUri;
 
             /**
              * Creates a plain object from an EventUpdateBaseTokenUri message. Also converts values to other types if specified.
@@ -20268,7 +20329,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.EventUpdateBaseTokenUri, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.EventUpdateBaseTokenUri, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventUpdateBaseTokenUri to JSON.
@@ -20297,7 +20358,7 @@ export namespace ununifi {
              * Constructs a new EventUpdateTokenSupplyCap.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IEventUpdateTokenSupplyCap);
+            constructor(properties?: ununifi.nftfactory.IEventUpdateTokenSupplyCap);
 
             /** EventUpdateTokenSupplyCap owner. */
             public owner: string;
@@ -20309,20 +20370,20 @@ export namespace ununifi {
             public token_supply_cap: string;
 
             /**
-             * Encodes the specified EventUpdateTokenSupplyCap message. Does not implicitly {@link ununifi.nftmint.EventUpdateTokenSupplyCap.verify|verify} messages.
+             * Encodes the specified EventUpdateTokenSupplyCap message. Does not implicitly {@link ununifi.nftfactory.EventUpdateTokenSupplyCap.verify|verify} messages.
              * @param message EventUpdateTokenSupplyCap message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IEventUpdateTokenSupplyCap, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IEventUpdateTokenSupplyCap, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventUpdateTokenSupplyCap message, length delimited. Does not implicitly {@link ununifi.nftmint.EventUpdateTokenSupplyCap.verify|verify} messages.
+             * Encodes the specified EventUpdateTokenSupplyCap message, length delimited. Does not implicitly {@link ununifi.nftfactory.EventUpdateTokenSupplyCap.verify|verify} messages.
              * @param message EventUpdateTokenSupplyCap message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IEventUpdateTokenSupplyCap, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IEventUpdateTokenSupplyCap, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventUpdateTokenSupplyCap message from the specified reader or buffer.
@@ -20332,7 +20393,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.EventUpdateTokenSupplyCap;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.EventUpdateTokenSupplyCap;
 
             /**
              * Decodes an EventUpdateTokenSupplyCap message from the specified reader or buffer, length delimited.
@@ -20341,7 +20402,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.EventUpdateTokenSupplyCap;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.EventUpdateTokenSupplyCap;
 
             /**
              * Verifies an EventUpdateTokenSupplyCap message.
@@ -20355,7 +20416,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventUpdateTokenSupplyCap
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.EventUpdateTokenSupplyCap;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.EventUpdateTokenSupplyCap;
 
             /**
              * Creates a plain object from an EventUpdateTokenSupplyCap message. Also converts values to other types if specified.
@@ -20363,7 +20424,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.EventUpdateTokenSupplyCap, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.EventUpdateTokenSupplyCap, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventUpdateTokenSupplyCap to JSON.
@@ -20395,7 +20456,7 @@ export namespace ununifi {
              * Constructs a new EventMintNFT.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IEventMintNFT);
+            constructor(properties?: ununifi.nftfactory.IEventMintNFT);
 
             /** EventMintNFT class_id. */
             public class_id: string;
@@ -20410,20 +20471,20 @@ export namespace ununifi {
             public minter: string;
 
             /**
-             * Encodes the specified EventMintNFT message. Does not implicitly {@link ununifi.nftmint.EventMintNFT.verify|verify} messages.
+             * Encodes the specified EventMintNFT message. Does not implicitly {@link ununifi.nftfactory.EventMintNFT.verify|verify} messages.
              * @param message EventMintNFT message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IEventMintNFT, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IEventMintNFT, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventMintNFT message, length delimited. Does not implicitly {@link ununifi.nftmint.EventMintNFT.verify|verify} messages.
+             * Encodes the specified EventMintNFT message, length delimited. Does not implicitly {@link ununifi.nftfactory.EventMintNFT.verify|verify} messages.
              * @param message EventMintNFT message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IEventMintNFT, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IEventMintNFT, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventMintNFT message from the specified reader or buffer.
@@ -20433,7 +20494,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.EventMintNFT;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.EventMintNFT;
 
             /**
              * Decodes an EventMintNFT message from the specified reader or buffer, length delimited.
@@ -20442,7 +20503,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.EventMintNFT;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.EventMintNFT;
 
             /**
              * Verifies an EventMintNFT message.
@@ -20456,7 +20517,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventMintNFT
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.EventMintNFT;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.EventMintNFT;
 
             /**
              * Creates a plain object from an EventMintNFT message. Also converts values to other types if specified.
@@ -20464,7 +20525,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.EventMintNFT, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.EventMintNFT, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventMintNFT to JSON.
@@ -20493,7 +20554,7 @@ export namespace ununifi {
              * Constructs a new EventBurnNFT.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftmint.IEventBurnNFT);
+            constructor(properties?: ununifi.nftfactory.IEventBurnNFT);
 
             /** EventBurnNFT burner. */
             public burner: string;
@@ -20505,20 +20566,20 @@ export namespace ununifi {
             public nft_id: string;
 
             /**
-             * Encodes the specified EventBurnNFT message. Does not implicitly {@link ununifi.nftmint.EventBurnNFT.verify|verify} messages.
+             * Encodes the specified EventBurnNFT message. Does not implicitly {@link ununifi.nftfactory.EventBurnNFT.verify|verify} messages.
              * @param message EventBurnNFT message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftmint.IEventBurnNFT, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftfactory.IEventBurnNFT, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventBurnNFT message, length delimited. Does not implicitly {@link ununifi.nftmint.EventBurnNFT.verify|verify} messages.
+             * Encodes the specified EventBurnNFT message, length delimited. Does not implicitly {@link ununifi.nftfactory.EventBurnNFT.verify|verify} messages.
              * @param message EventBurnNFT message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftmint.IEventBurnNFT, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftfactory.IEventBurnNFT, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes an EventBurnNFT message from the specified reader or buffer.
@@ -20528,7 +20589,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftmint.EventBurnNFT;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftfactory.EventBurnNFT;
 
             /**
              * Decodes an EventBurnNFT message from the specified reader or buffer, length delimited.
@@ -20537,7 +20598,7 @@ export namespace ununifi {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftmint.EventBurnNFT;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftfactory.EventBurnNFT;
 
             /**
              * Verifies an EventBurnNFT message.
@@ -20551,7 +20612,7 @@ export namespace ununifi {
              * @param object Plain object
              * @returns EventBurnNFT
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftmint.EventBurnNFT;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftfactory.EventBurnNFT;
 
             /**
              * Creates a plain object from an EventBurnNFT message. Also converts values to other types if specified.
@@ -20559,7 +20620,7 @@ export namespace ununifi {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftmint.EventBurnNFT, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftfactory.EventBurnNFT, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this EventBurnNFT to JSON.
@@ -26151,1929 +26212,6 @@ export namespace cosmos {
 
                     /**
                      * Converts this PageResponse to JSON.
-                     * @returns JSON object
-                     */
-                    public toJSON(): { [k: string]: any };
-                }
-            }
-        }
-    }
-
-    /** Namespace tx. */
-    namespace tx {
-
-        /** Namespace v1beta1. */
-        namespace v1beta1 {
-
-            /** Properties of a Tx. */
-            interface ITx {
-
-                /** Tx body */
-                body?: (cosmos.tx.v1beta1.ITxBody|null);
-
-                /** Tx auth_info */
-                auth_info?: (cosmos.tx.v1beta1.IAuthInfo|null);
-
-                /** Tx signatures */
-                signatures?: (Uint8Array[]|null);
-            }
-
-            /** Represents a Tx. */
-            class Tx implements ITx {
-
-                /**
-                 * Constructs a new Tx.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: cosmos.tx.v1beta1.ITx);
-
-                /** Tx body. */
-                public body?: (cosmos.tx.v1beta1.ITxBody|null);
-
-                /** Tx auth_info. */
-                public auth_info?: (cosmos.tx.v1beta1.IAuthInfo|null);
-
-                /** Tx signatures. */
-                public signatures: Uint8Array[];
-
-                /**
-                 * Encodes the specified Tx message. Does not implicitly {@link cosmos.tx.v1beta1.Tx.verify|verify} messages.
-                 * @param message Tx message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: cosmos.tx.v1beta1.ITx, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified Tx message, length delimited. Does not implicitly {@link cosmos.tx.v1beta1.Tx.verify|verify} messages.
-                 * @param message Tx message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: cosmos.tx.v1beta1.ITx, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a Tx message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns Tx
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.v1beta1.Tx;
-
-                /**
-                 * Decodes a Tx message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns Tx
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.v1beta1.Tx;
-
-                /**
-                 * Verifies a Tx message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a Tx message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Tx
-                 */
-                public static fromObject(object: { [k: string]: any }): cosmos.tx.v1beta1.Tx;
-
-                /**
-                 * Creates a plain object from a Tx message. Also converts values to other types if specified.
-                 * @param message Tx
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: cosmos.tx.v1beta1.Tx, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this Tx to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a TxRaw. */
-            interface ITxRaw {
-
-                /** TxRaw body_bytes */
-                body_bytes?: (Uint8Array|null);
-
-                /** TxRaw auth_info_bytes */
-                auth_info_bytes?: (Uint8Array|null);
-
-                /** TxRaw signatures */
-                signatures?: (Uint8Array[]|null);
-            }
-
-            /** Represents a TxRaw. */
-            class TxRaw implements ITxRaw {
-
-                /**
-                 * Constructs a new TxRaw.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: cosmos.tx.v1beta1.ITxRaw);
-
-                /** TxRaw body_bytes. */
-                public body_bytes: Uint8Array;
-
-                /** TxRaw auth_info_bytes. */
-                public auth_info_bytes: Uint8Array;
-
-                /** TxRaw signatures. */
-                public signatures: Uint8Array[];
-
-                /**
-                 * Encodes the specified TxRaw message. Does not implicitly {@link cosmos.tx.v1beta1.TxRaw.verify|verify} messages.
-                 * @param message TxRaw message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: cosmos.tx.v1beta1.ITxRaw, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified TxRaw message, length delimited. Does not implicitly {@link cosmos.tx.v1beta1.TxRaw.verify|verify} messages.
-                 * @param message TxRaw message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: cosmos.tx.v1beta1.ITxRaw, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a TxRaw message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns TxRaw
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.v1beta1.TxRaw;
-
-                /**
-                 * Decodes a TxRaw message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns TxRaw
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.v1beta1.TxRaw;
-
-                /**
-                 * Verifies a TxRaw message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a TxRaw message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns TxRaw
-                 */
-                public static fromObject(object: { [k: string]: any }): cosmos.tx.v1beta1.TxRaw;
-
-                /**
-                 * Creates a plain object from a TxRaw message. Also converts values to other types if specified.
-                 * @param message TxRaw
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: cosmos.tx.v1beta1.TxRaw, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this TxRaw to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a SignDoc. */
-            interface ISignDoc {
-
-                /** SignDoc body_bytes */
-                body_bytes?: (Uint8Array|null);
-
-                /** SignDoc auth_info_bytes */
-                auth_info_bytes?: (Uint8Array|null);
-
-                /** SignDoc chain_id */
-                chain_id?: (string|null);
-
-                /** SignDoc account_number */
-                account_number?: (Long|null);
-            }
-
-            /** Represents a SignDoc. */
-            class SignDoc implements ISignDoc {
-
-                /**
-                 * Constructs a new SignDoc.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: cosmos.tx.v1beta1.ISignDoc);
-
-                /** SignDoc body_bytes. */
-                public body_bytes: Uint8Array;
-
-                /** SignDoc auth_info_bytes. */
-                public auth_info_bytes: Uint8Array;
-
-                /** SignDoc chain_id. */
-                public chain_id: string;
-
-                /** SignDoc account_number. */
-                public account_number: Long;
-
-                /**
-                 * Encodes the specified SignDoc message. Does not implicitly {@link cosmos.tx.v1beta1.SignDoc.verify|verify} messages.
-                 * @param message SignDoc message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: cosmos.tx.v1beta1.ISignDoc, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified SignDoc message, length delimited. Does not implicitly {@link cosmos.tx.v1beta1.SignDoc.verify|verify} messages.
-                 * @param message SignDoc message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: cosmos.tx.v1beta1.ISignDoc, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a SignDoc message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns SignDoc
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.v1beta1.SignDoc;
-
-                /**
-                 * Decodes a SignDoc message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns SignDoc
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.v1beta1.SignDoc;
-
-                /**
-                 * Verifies a SignDoc message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a SignDoc message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns SignDoc
-                 */
-                public static fromObject(object: { [k: string]: any }): cosmos.tx.v1beta1.SignDoc;
-
-                /**
-                 * Creates a plain object from a SignDoc message. Also converts values to other types if specified.
-                 * @param message SignDoc
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: cosmos.tx.v1beta1.SignDoc, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this SignDoc to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a SignDocDirectAux. */
-            interface ISignDocDirectAux {
-
-                /** SignDocDirectAux body_bytes */
-                body_bytes?: (Uint8Array|null);
-
-                /** SignDocDirectAux public_key */
-                public_key?: (google.protobuf.IAny|null);
-
-                /** SignDocDirectAux chain_id */
-                chain_id?: (string|null);
-
-                /** SignDocDirectAux account_number */
-                account_number?: (Long|null);
-
-                /** SignDocDirectAux sequence */
-                sequence?: (Long|null);
-
-                /** SignDocDirectAux tip */
-                tip?: (cosmos.tx.v1beta1.ITip|null);
-            }
-
-            /** Represents a SignDocDirectAux. */
-            class SignDocDirectAux implements ISignDocDirectAux {
-
-                /**
-                 * Constructs a new SignDocDirectAux.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: cosmos.tx.v1beta1.ISignDocDirectAux);
-
-                /** SignDocDirectAux body_bytes. */
-                public body_bytes: Uint8Array;
-
-                /** SignDocDirectAux public_key. */
-                public public_key?: (google.protobuf.IAny|null);
-
-                /** SignDocDirectAux chain_id. */
-                public chain_id: string;
-
-                /** SignDocDirectAux account_number. */
-                public account_number: Long;
-
-                /** SignDocDirectAux sequence. */
-                public sequence: Long;
-
-                /** SignDocDirectAux tip. */
-                public tip?: (cosmos.tx.v1beta1.ITip|null);
-
-                /**
-                 * Encodes the specified SignDocDirectAux message. Does not implicitly {@link cosmos.tx.v1beta1.SignDocDirectAux.verify|verify} messages.
-                 * @param message SignDocDirectAux message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: cosmos.tx.v1beta1.ISignDocDirectAux, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified SignDocDirectAux message, length delimited. Does not implicitly {@link cosmos.tx.v1beta1.SignDocDirectAux.verify|verify} messages.
-                 * @param message SignDocDirectAux message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: cosmos.tx.v1beta1.ISignDocDirectAux, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a SignDocDirectAux message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns SignDocDirectAux
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.v1beta1.SignDocDirectAux;
-
-                /**
-                 * Decodes a SignDocDirectAux message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns SignDocDirectAux
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.v1beta1.SignDocDirectAux;
-
-                /**
-                 * Verifies a SignDocDirectAux message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a SignDocDirectAux message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns SignDocDirectAux
-                 */
-                public static fromObject(object: { [k: string]: any }): cosmos.tx.v1beta1.SignDocDirectAux;
-
-                /**
-                 * Creates a plain object from a SignDocDirectAux message. Also converts values to other types if specified.
-                 * @param message SignDocDirectAux
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: cosmos.tx.v1beta1.SignDocDirectAux, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this SignDocDirectAux to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a TxBody. */
-            interface ITxBody {
-
-                /** TxBody messages */
-                messages?: (google.protobuf.IAny[]|null);
-
-                /** TxBody memo */
-                memo?: (string|null);
-
-                /** TxBody timeout_height */
-                timeout_height?: (Long|null);
-
-                /** TxBody extension_options */
-                extension_options?: (google.protobuf.IAny[]|null);
-
-                /** TxBody non_critical_extension_options */
-                non_critical_extension_options?: (google.protobuf.IAny[]|null);
-            }
-
-            /** Represents a TxBody. */
-            class TxBody implements ITxBody {
-
-                /**
-                 * Constructs a new TxBody.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: cosmos.tx.v1beta1.ITxBody);
-
-                /** TxBody messages. */
-                public messages: google.protobuf.IAny[];
-
-                /** TxBody memo. */
-                public memo: string;
-
-                /** TxBody timeout_height. */
-                public timeout_height: Long;
-
-                /** TxBody extension_options. */
-                public extension_options: google.protobuf.IAny[];
-
-                /** TxBody non_critical_extension_options. */
-                public non_critical_extension_options: google.protobuf.IAny[];
-
-                /**
-                 * Encodes the specified TxBody message. Does not implicitly {@link cosmos.tx.v1beta1.TxBody.verify|verify} messages.
-                 * @param message TxBody message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: cosmos.tx.v1beta1.ITxBody, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified TxBody message, length delimited. Does not implicitly {@link cosmos.tx.v1beta1.TxBody.verify|verify} messages.
-                 * @param message TxBody message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: cosmos.tx.v1beta1.ITxBody, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a TxBody message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns TxBody
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.v1beta1.TxBody;
-
-                /**
-                 * Decodes a TxBody message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns TxBody
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.v1beta1.TxBody;
-
-                /**
-                 * Verifies a TxBody message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a TxBody message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns TxBody
-                 */
-                public static fromObject(object: { [k: string]: any }): cosmos.tx.v1beta1.TxBody;
-
-                /**
-                 * Creates a plain object from a TxBody message. Also converts values to other types if specified.
-                 * @param message TxBody
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: cosmos.tx.v1beta1.TxBody, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this TxBody to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of an AuthInfo. */
-            interface IAuthInfo {
-
-                /** AuthInfo signer_infos */
-                signer_infos?: (cosmos.tx.v1beta1.ISignerInfo[]|null);
-
-                /** AuthInfo fee */
-                fee?: (cosmos.tx.v1beta1.IFee|null);
-
-                /** AuthInfo tip */
-                tip?: (cosmos.tx.v1beta1.ITip|null);
-            }
-
-            /** Represents an AuthInfo. */
-            class AuthInfo implements IAuthInfo {
-
-                /**
-                 * Constructs a new AuthInfo.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: cosmos.tx.v1beta1.IAuthInfo);
-
-                /** AuthInfo signer_infos. */
-                public signer_infos: cosmos.tx.v1beta1.ISignerInfo[];
-
-                /** AuthInfo fee. */
-                public fee?: (cosmos.tx.v1beta1.IFee|null);
-
-                /** AuthInfo tip. */
-                public tip?: (cosmos.tx.v1beta1.ITip|null);
-
-                /**
-                 * Encodes the specified AuthInfo message. Does not implicitly {@link cosmos.tx.v1beta1.AuthInfo.verify|verify} messages.
-                 * @param message AuthInfo message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: cosmos.tx.v1beta1.IAuthInfo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified AuthInfo message, length delimited. Does not implicitly {@link cosmos.tx.v1beta1.AuthInfo.verify|verify} messages.
-                 * @param message AuthInfo message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: cosmos.tx.v1beta1.IAuthInfo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes an AuthInfo message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns AuthInfo
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.v1beta1.AuthInfo;
-
-                /**
-                 * Decodes an AuthInfo message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns AuthInfo
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.v1beta1.AuthInfo;
-
-                /**
-                 * Verifies an AuthInfo message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates an AuthInfo message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns AuthInfo
-                 */
-                public static fromObject(object: { [k: string]: any }): cosmos.tx.v1beta1.AuthInfo;
-
-                /**
-                 * Creates a plain object from an AuthInfo message. Also converts values to other types if specified.
-                 * @param message AuthInfo
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: cosmos.tx.v1beta1.AuthInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this AuthInfo to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a SignerInfo. */
-            interface ISignerInfo {
-
-                /** SignerInfo public_key */
-                public_key?: (google.protobuf.IAny|null);
-
-                /** SignerInfo mode_info */
-                mode_info?: (cosmos.tx.v1beta1.IModeInfo|null);
-
-                /** SignerInfo sequence */
-                sequence?: (Long|null);
-            }
-
-            /** Represents a SignerInfo. */
-            class SignerInfo implements ISignerInfo {
-
-                /**
-                 * Constructs a new SignerInfo.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: cosmos.tx.v1beta1.ISignerInfo);
-
-                /** SignerInfo public_key. */
-                public public_key?: (google.protobuf.IAny|null);
-
-                /** SignerInfo mode_info. */
-                public mode_info?: (cosmos.tx.v1beta1.IModeInfo|null);
-
-                /** SignerInfo sequence. */
-                public sequence: Long;
-
-                /**
-                 * Encodes the specified SignerInfo message. Does not implicitly {@link cosmos.tx.v1beta1.SignerInfo.verify|verify} messages.
-                 * @param message SignerInfo message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: cosmos.tx.v1beta1.ISignerInfo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified SignerInfo message, length delimited. Does not implicitly {@link cosmos.tx.v1beta1.SignerInfo.verify|verify} messages.
-                 * @param message SignerInfo message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: cosmos.tx.v1beta1.ISignerInfo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a SignerInfo message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns SignerInfo
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.v1beta1.SignerInfo;
-
-                /**
-                 * Decodes a SignerInfo message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns SignerInfo
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.v1beta1.SignerInfo;
-
-                /**
-                 * Verifies a SignerInfo message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a SignerInfo message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns SignerInfo
-                 */
-                public static fromObject(object: { [k: string]: any }): cosmos.tx.v1beta1.SignerInfo;
-
-                /**
-                 * Creates a plain object from a SignerInfo message. Also converts values to other types if specified.
-                 * @param message SignerInfo
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: cosmos.tx.v1beta1.SignerInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this SignerInfo to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a ModeInfo. */
-            interface IModeInfo {
-
-                /** ModeInfo single */
-                single?: (cosmos.tx.v1beta1.ModeInfo.ISingle|null);
-
-                /** ModeInfo multi */
-                multi?: (cosmos.tx.v1beta1.ModeInfo.IMulti|null);
-            }
-
-            /** Represents a ModeInfo. */
-            class ModeInfo implements IModeInfo {
-
-                /**
-                 * Constructs a new ModeInfo.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: cosmos.tx.v1beta1.IModeInfo);
-
-                /** ModeInfo single. */
-                public single?: (cosmos.tx.v1beta1.ModeInfo.ISingle|null);
-
-                /** ModeInfo multi. */
-                public multi?: (cosmos.tx.v1beta1.ModeInfo.IMulti|null);
-
-                /** ModeInfo sum. */
-                public sum?: ("single"|"multi");
-
-                /**
-                 * Encodes the specified ModeInfo message. Does not implicitly {@link cosmos.tx.v1beta1.ModeInfo.verify|verify} messages.
-                 * @param message ModeInfo message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: cosmos.tx.v1beta1.IModeInfo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified ModeInfo message, length delimited. Does not implicitly {@link cosmos.tx.v1beta1.ModeInfo.verify|verify} messages.
-                 * @param message ModeInfo message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: cosmos.tx.v1beta1.IModeInfo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a ModeInfo message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns ModeInfo
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.v1beta1.ModeInfo;
-
-                /**
-                 * Decodes a ModeInfo message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns ModeInfo
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.v1beta1.ModeInfo;
-
-                /**
-                 * Verifies a ModeInfo message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a ModeInfo message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns ModeInfo
-                 */
-                public static fromObject(object: { [k: string]: any }): cosmos.tx.v1beta1.ModeInfo;
-
-                /**
-                 * Creates a plain object from a ModeInfo message. Also converts values to other types if specified.
-                 * @param message ModeInfo
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: cosmos.tx.v1beta1.ModeInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this ModeInfo to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            namespace ModeInfo {
-
-                /** Properties of a Single. */
-                interface ISingle {
-
-                    /** Single mode */
-                    mode?: (cosmos.tx.signing.v1beta1.SignMode|null);
-                }
-
-                /** Represents a Single. */
-                class Single implements ISingle {
-
-                    /**
-                     * Constructs a new Single.
-                     * @param [properties] Properties to set
-                     */
-                    constructor(properties?: cosmos.tx.v1beta1.ModeInfo.ISingle);
-
-                    /** Single mode. */
-                    public mode: cosmos.tx.signing.v1beta1.SignMode;
-
-                    /**
-                     * Encodes the specified Single message. Does not implicitly {@link cosmos.tx.v1beta1.ModeInfo.Single.verify|verify} messages.
-                     * @param message Single message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encode(message: cosmos.tx.v1beta1.ModeInfo.ISingle, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Encodes the specified Single message, length delimited. Does not implicitly {@link cosmos.tx.v1beta1.ModeInfo.Single.verify|verify} messages.
-                     * @param message Single message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encodeDelimited(message: cosmos.tx.v1beta1.ModeInfo.ISingle, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Decodes a Single message from the specified reader or buffer.
-                     * @param reader Reader or buffer to decode from
-                     * @param [length] Message length if known beforehand
-                     * @returns Single
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.v1beta1.ModeInfo.Single;
-
-                    /**
-                     * Decodes a Single message from the specified reader or buffer, length delimited.
-                     * @param reader Reader or buffer to decode from
-                     * @returns Single
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.v1beta1.ModeInfo.Single;
-
-                    /**
-                     * Verifies a Single message.
-                     * @param message Plain object to verify
-                     * @returns `null` if valid, otherwise the reason why it is not
-                     */
-                    public static verify(message: { [k: string]: any }): (string|null);
-
-                    /**
-                     * Creates a Single message from a plain object. Also converts values to their respective internal types.
-                     * @param object Plain object
-                     * @returns Single
-                     */
-                    public static fromObject(object: { [k: string]: any }): cosmos.tx.v1beta1.ModeInfo.Single;
-
-                    /**
-                     * Creates a plain object from a Single message. Also converts values to other types if specified.
-                     * @param message Single
-                     * @param [options] Conversion options
-                     * @returns Plain object
-                     */
-                    public static toObject(message: cosmos.tx.v1beta1.ModeInfo.Single, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                    /**
-                     * Converts this Single to JSON.
-                     * @returns JSON object
-                     */
-                    public toJSON(): { [k: string]: any };
-                }
-
-                /** Properties of a Multi. */
-                interface IMulti {
-
-                    /** Multi bitarray */
-                    bitarray?: (cosmos.crypto.multisig.v1beta1.ICompactBitArray|null);
-
-                    /** Multi mode_infos */
-                    mode_infos?: (cosmos.tx.v1beta1.IModeInfo[]|null);
-                }
-
-                /** Represents a Multi. */
-                class Multi implements IMulti {
-
-                    /**
-                     * Constructs a new Multi.
-                     * @param [properties] Properties to set
-                     */
-                    constructor(properties?: cosmos.tx.v1beta1.ModeInfo.IMulti);
-
-                    /** Multi bitarray. */
-                    public bitarray?: (cosmos.crypto.multisig.v1beta1.ICompactBitArray|null);
-
-                    /** Multi mode_infos. */
-                    public mode_infos: cosmos.tx.v1beta1.IModeInfo[];
-
-                    /**
-                     * Encodes the specified Multi message. Does not implicitly {@link cosmos.tx.v1beta1.ModeInfo.Multi.verify|verify} messages.
-                     * @param message Multi message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encode(message: cosmos.tx.v1beta1.ModeInfo.IMulti, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Encodes the specified Multi message, length delimited. Does not implicitly {@link cosmos.tx.v1beta1.ModeInfo.Multi.verify|verify} messages.
-                     * @param message Multi message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encodeDelimited(message: cosmos.tx.v1beta1.ModeInfo.IMulti, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Decodes a Multi message from the specified reader or buffer.
-                     * @param reader Reader or buffer to decode from
-                     * @param [length] Message length if known beforehand
-                     * @returns Multi
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.v1beta1.ModeInfo.Multi;
-
-                    /**
-                     * Decodes a Multi message from the specified reader or buffer, length delimited.
-                     * @param reader Reader or buffer to decode from
-                     * @returns Multi
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.v1beta1.ModeInfo.Multi;
-
-                    /**
-                     * Verifies a Multi message.
-                     * @param message Plain object to verify
-                     * @returns `null` if valid, otherwise the reason why it is not
-                     */
-                    public static verify(message: { [k: string]: any }): (string|null);
-
-                    /**
-                     * Creates a Multi message from a plain object. Also converts values to their respective internal types.
-                     * @param object Plain object
-                     * @returns Multi
-                     */
-                    public static fromObject(object: { [k: string]: any }): cosmos.tx.v1beta1.ModeInfo.Multi;
-
-                    /**
-                     * Creates a plain object from a Multi message. Also converts values to other types if specified.
-                     * @param message Multi
-                     * @param [options] Conversion options
-                     * @returns Plain object
-                     */
-                    public static toObject(message: cosmos.tx.v1beta1.ModeInfo.Multi, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                    /**
-                     * Converts this Multi to JSON.
-                     * @returns JSON object
-                     */
-                    public toJSON(): { [k: string]: any };
-                }
-            }
-
-            /** Properties of a Fee. */
-            interface IFee {
-
-                /** Fee amount */
-                amount?: (cosmos.base.v1beta1.ICoin[]|null);
-
-                /** Fee gas_limit */
-                gas_limit?: (Long|null);
-
-                /** Fee payer */
-                payer?: (string|null);
-
-                /** Fee granter */
-                granter?: (string|null);
-            }
-
-            /** Represents a Fee. */
-            class Fee implements IFee {
-
-                /**
-                 * Constructs a new Fee.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: cosmos.tx.v1beta1.IFee);
-
-                /** Fee amount. */
-                public amount: cosmos.base.v1beta1.ICoin[];
-
-                /** Fee gas_limit. */
-                public gas_limit: Long;
-
-                /** Fee payer. */
-                public payer: string;
-
-                /** Fee granter. */
-                public granter: string;
-
-                /**
-                 * Encodes the specified Fee message. Does not implicitly {@link cosmos.tx.v1beta1.Fee.verify|verify} messages.
-                 * @param message Fee message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: cosmos.tx.v1beta1.IFee, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified Fee message, length delimited. Does not implicitly {@link cosmos.tx.v1beta1.Fee.verify|verify} messages.
-                 * @param message Fee message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: cosmos.tx.v1beta1.IFee, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a Fee message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns Fee
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.v1beta1.Fee;
-
-                /**
-                 * Decodes a Fee message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns Fee
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.v1beta1.Fee;
-
-                /**
-                 * Verifies a Fee message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a Fee message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Fee
-                 */
-                public static fromObject(object: { [k: string]: any }): cosmos.tx.v1beta1.Fee;
-
-                /**
-                 * Creates a plain object from a Fee message. Also converts values to other types if specified.
-                 * @param message Fee
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: cosmos.tx.v1beta1.Fee, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this Fee to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a Tip. */
-            interface ITip {
-
-                /** Tip amount */
-                amount?: (cosmos.base.v1beta1.ICoin[]|null);
-
-                /** Tip tipper */
-                tipper?: (string|null);
-            }
-
-            /** Represents a Tip. */
-            class Tip implements ITip {
-
-                /**
-                 * Constructs a new Tip.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: cosmos.tx.v1beta1.ITip);
-
-                /** Tip amount. */
-                public amount: cosmos.base.v1beta1.ICoin[];
-
-                /** Tip tipper. */
-                public tipper: string;
-
-                /**
-                 * Encodes the specified Tip message. Does not implicitly {@link cosmos.tx.v1beta1.Tip.verify|verify} messages.
-                 * @param message Tip message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: cosmos.tx.v1beta1.ITip, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified Tip message, length delimited. Does not implicitly {@link cosmos.tx.v1beta1.Tip.verify|verify} messages.
-                 * @param message Tip message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: cosmos.tx.v1beta1.ITip, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a Tip message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns Tip
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.v1beta1.Tip;
-
-                /**
-                 * Decodes a Tip message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns Tip
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.v1beta1.Tip;
-
-                /**
-                 * Verifies a Tip message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a Tip message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns Tip
-                 */
-                public static fromObject(object: { [k: string]: any }): cosmos.tx.v1beta1.Tip;
-
-                /**
-                 * Creates a plain object from a Tip message. Also converts values to other types if specified.
-                 * @param message Tip
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: cosmos.tx.v1beta1.Tip, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this Tip to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of an AuxSignerData. */
-            interface IAuxSignerData {
-
-                /** AuxSignerData address */
-                address?: (string|null);
-
-                /** AuxSignerData sign_doc */
-                sign_doc?: (cosmos.tx.v1beta1.ISignDocDirectAux|null);
-
-                /** AuxSignerData mode */
-                mode?: (cosmos.tx.signing.v1beta1.SignMode|null);
-
-                /** AuxSignerData sig */
-                sig?: (Uint8Array|null);
-            }
-
-            /** Represents an AuxSignerData. */
-            class AuxSignerData implements IAuxSignerData {
-
-                /**
-                 * Constructs a new AuxSignerData.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: cosmos.tx.v1beta1.IAuxSignerData);
-
-                /** AuxSignerData address. */
-                public address: string;
-
-                /** AuxSignerData sign_doc. */
-                public sign_doc?: (cosmos.tx.v1beta1.ISignDocDirectAux|null);
-
-                /** AuxSignerData mode. */
-                public mode: cosmos.tx.signing.v1beta1.SignMode;
-
-                /** AuxSignerData sig. */
-                public sig: Uint8Array;
-
-                /**
-                 * Encodes the specified AuxSignerData message. Does not implicitly {@link cosmos.tx.v1beta1.AuxSignerData.verify|verify} messages.
-                 * @param message AuxSignerData message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: cosmos.tx.v1beta1.IAuxSignerData, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified AuxSignerData message, length delimited. Does not implicitly {@link cosmos.tx.v1beta1.AuxSignerData.verify|verify} messages.
-                 * @param message AuxSignerData message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: cosmos.tx.v1beta1.IAuxSignerData, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes an AuxSignerData message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns AuxSignerData
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.v1beta1.AuxSignerData;
-
-                /**
-                 * Decodes an AuxSignerData message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns AuxSignerData
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.v1beta1.AuxSignerData;
-
-                /**
-                 * Verifies an AuxSignerData message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates an AuxSignerData message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns AuxSignerData
-                 */
-                public static fromObject(object: { [k: string]: any }): cosmos.tx.v1beta1.AuxSignerData;
-
-                /**
-                 * Creates a plain object from an AuxSignerData message. Also converts values to other types if specified.
-                 * @param message AuxSignerData
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: cosmos.tx.v1beta1.AuxSignerData, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this AuxSignerData to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-        }
-
-        /** Namespace signing. */
-        namespace signing {
-
-            /** Namespace v1beta1. */
-            namespace v1beta1 {
-
-                /** SignMode enum. */
-                enum SignMode {
-                    SIGN_MODE_UNSPECIFIED = 0,
-                    SIGN_MODE_DIRECT = 1,
-                    SIGN_MODE_TEXTUAL = 2,
-                    SIGN_MODE_DIRECT_AUX = 3,
-                    SIGN_MODE_LEGACY_AMINO_JSON = 127,
-                    SIGN_MODE_EIP_191 = 191
-                }
-
-                /** Properties of a SignatureDescriptors. */
-                interface ISignatureDescriptors {
-
-                    /** SignatureDescriptors signatures */
-                    signatures?: (cosmos.tx.signing.v1beta1.ISignatureDescriptor[]|null);
-                }
-
-                /** Represents a SignatureDescriptors. */
-                class SignatureDescriptors implements ISignatureDescriptors {
-
-                    /**
-                     * Constructs a new SignatureDescriptors.
-                     * @param [properties] Properties to set
-                     */
-                    constructor(properties?: cosmos.tx.signing.v1beta1.ISignatureDescriptors);
-
-                    /** SignatureDescriptors signatures. */
-                    public signatures: cosmos.tx.signing.v1beta1.ISignatureDescriptor[];
-
-                    /**
-                     * Encodes the specified SignatureDescriptors message. Does not implicitly {@link cosmos.tx.signing.v1beta1.SignatureDescriptors.verify|verify} messages.
-                     * @param message SignatureDescriptors message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encode(message: cosmos.tx.signing.v1beta1.ISignatureDescriptors, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Encodes the specified SignatureDescriptors message, length delimited. Does not implicitly {@link cosmos.tx.signing.v1beta1.SignatureDescriptors.verify|verify} messages.
-                     * @param message SignatureDescriptors message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encodeDelimited(message: cosmos.tx.signing.v1beta1.ISignatureDescriptors, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Decodes a SignatureDescriptors message from the specified reader or buffer.
-                     * @param reader Reader or buffer to decode from
-                     * @param [length] Message length if known beforehand
-                     * @returns SignatureDescriptors
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.signing.v1beta1.SignatureDescriptors;
-
-                    /**
-                     * Decodes a SignatureDescriptors message from the specified reader or buffer, length delimited.
-                     * @param reader Reader or buffer to decode from
-                     * @returns SignatureDescriptors
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.signing.v1beta1.SignatureDescriptors;
-
-                    /**
-                     * Verifies a SignatureDescriptors message.
-                     * @param message Plain object to verify
-                     * @returns `null` if valid, otherwise the reason why it is not
-                     */
-                    public static verify(message: { [k: string]: any }): (string|null);
-
-                    /**
-                     * Creates a SignatureDescriptors message from a plain object. Also converts values to their respective internal types.
-                     * @param object Plain object
-                     * @returns SignatureDescriptors
-                     */
-                    public static fromObject(object: { [k: string]: any }): cosmos.tx.signing.v1beta1.SignatureDescriptors;
-
-                    /**
-                     * Creates a plain object from a SignatureDescriptors message. Also converts values to other types if specified.
-                     * @param message SignatureDescriptors
-                     * @param [options] Conversion options
-                     * @returns Plain object
-                     */
-                    public static toObject(message: cosmos.tx.signing.v1beta1.SignatureDescriptors, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                    /**
-                     * Converts this SignatureDescriptors to JSON.
-                     * @returns JSON object
-                     */
-                    public toJSON(): { [k: string]: any };
-                }
-
-                /** Properties of a SignatureDescriptor. */
-                interface ISignatureDescriptor {
-
-                    /** SignatureDescriptor public_key */
-                    public_key?: (google.protobuf.IAny|null);
-
-                    /** SignatureDescriptor data */
-                    data?: (cosmos.tx.signing.v1beta1.SignatureDescriptor.IData|null);
-
-                    /** SignatureDescriptor sequence */
-                    sequence?: (Long|null);
-                }
-
-                /** Represents a SignatureDescriptor. */
-                class SignatureDescriptor implements ISignatureDescriptor {
-
-                    /**
-                     * Constructs a new SignatureDescriptor.
-                     * @param [properties] Properties to set
-                     */
-                    constructor(properties?: cosmos.tx.signing.v1beta1.ISignatureDescriptor);
-
-                    /** SignatureDescriptor public_key. */
-                    public public_key?: (google.protobuf.IAny|null);
-
-                    /** SignatureDescriptor data. */
-                    public data?: (cosmos.tx.signing.v1beta1.SignatureDescriptor.IData|null);
-
-                    /** SignatureDescriptor sequence. */
-                    public sequence: Long;
-
-                    /**
-                     * Encodes the specified SignatureDescriptor message. Does not implicitly {@link cosmos.tx.signing.v1beta1.SignatureDescriptor.verify|verify} messages.
-                     * @param message SignatureDescriptor message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encode(message: cosmos.tx.signing.v1beta1.ISignatureDescriptor, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Encodes the specified SignatureDescriptor message, length delimited. Does not implicitly {@link cosmos.tx.signing.v1beta1.SignatureDescriptor.verify|verify} messages.
-                     * @param message SignatureDescriptor message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encodeDelimited(message: cosmos.tx.signing.v1beta1.ISignatureDescriptor, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Decodes a SignatureDescriptor message from the specified reader or buffer.
-                     * @param reader Reader or buffer to decode from
-                     * @param [length] Message length if known beforehand
-                     * @returns SignatureDescriptor
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.signing.v1beta1.SignatureDescriptor;
-
-                    /**
-                     * Decodes a SignatureDescriptor message from the specified reader or buffer, length delimited.
-                     * @param reader Reader or buffer to decode from
-                     * @returns SignatureDescriptor
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.signing.v1beta1.SignatureDescriptor;
-
-                    /**
-                     * Verifies a SignatureDescriptor message.
-                     * @param message Plain object to verify
-                     * @returns `null` if valid, otherwise the reason why it is not
-                     */
-                    public static verify(message: { [k: string]: any }): (string|null);
-
-                    /**
-                     * Creates a SignatureDescriptor message from a plain object. Also converts values to their respective internal types.
-                     * @param object Plain object
-                     * @returns SignatureDescriptor
-                     */
-                    public static fromObject(object: { [k: string]: any }): cosmos.tx.signing.v1beta1.SignatureDescriptor;
-
-                    /**
-                     * Creates a plain object from a SignatureDescriptor message. Also converts values to other types if specified.
-                     * @param message SignatureDescriptor
-                     * @param [options] Conversion options
-                     * @returns Plain object
-                     */
-                    public static toObject(message: cosmos.tx.signing.v1beta1.SignatureDescriptor, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                    /**
-                     * Converts this SignatureDescriptor to JSON.
-                     * @returns JSON object
-                     */
-                    public toJSON(): { [k: string]: any };
-                }
-
-                namespace SignatureDescriptor {
-
-                    /** Properties of a Data. */
-                    interface IData {
-
-                        /** Data single */
-                        single?: (cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.ISingle|null);
-
-                        /** Data multi */
-                        multi?: (cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.IMulti|null);
-                    }
-
-                    /** Represents a Data. */
-                    class Data implements IData {
-
-                        /**
-                         * Constructs a new Data.
-                         * @param [properties] Properties to set
-                         */
-                        constructor(properties?: cosmos.tx.signing.v1beta1.SignatureDescriptor.IData);
-
-                        /** Data single. */
-                        public single?: (cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.ISingle|null);
-
-                        /** Data multi. */
-                        public multi?: (cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.IMulti|null);
-
-                        /** Data sum. */
-                        public sum?: ("single"|"multi");
-
-                        /**
-                         * Encodes the specified Data message. Does not implicitly {@link cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.verify|verify} messages.
-                         * @param message Data message or plain object to encode
-                         * @param [writer] Writer to encode to
-                         * @returns Writer
-                         */
-                        public static encode(message: cosmos.tx.signing.v1beta1.SignatureDescriptor.IData, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                        /**
-                         * Encodes the specified Data message, length delimited. Does not implicitly {@link cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.verify|verify} messages.
-                         * @param message Data message or plain object to encode
-                         * @param [writer] Writer to encode to
-                         * @returns Writer
-                         */
-                        public static encodeDelimited(message: cosmos.tx.signing.v1beta1.SignatureDescriptor.IData, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                        /**
-                         * Decodes a Data message from the specified reader or buffer.
-                         * @param reader Reader or buffer to decode from
-                         * @param [length] Message length if known beforehand
-                         * @returns Data
-                         * @throws {Error} If the payload is not a reader or valid buffer
-                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                         */
-                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.signing.v1beta1.SignatureDescriptor.Data;
-
-                        /**
-                         * Decodes a Data message from the specified reader or buffer, length delimited.
-                         * @param reader Reader or buffer to decode from
-                         * @returns Data
-                         * @throws {Error} If the payload is not a reader or valid buffer
-                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                         */
-                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.signing.v1beta1.SignatureDescriptor.Data;
-
-                        /**
-                         * Verifies a Data message.
-                         * @param message Plain object to verify
-                         * @returns `null` if valid, otherwise the reason why it is not
-                         */
-                        public static verify(message: { [k: string]: any }): (string|null);
-
-                        /**
-                         * Creates a Data message from a plain object. Also converts values to their respective internal types.
-                         * @param object Plain object
-                         * @returns Data
-                         */
-                        public static fromObject(object: { [k: string]: any }): cosmos.tx.signing.v1beta1.SignatureDescriptor.Data;
-
-                        /**
-                         * Creates a plain object from a Data message. Also converts values to other types if specified.
-                         * @param message Data
-                         * @param [options] Conversion options
-                         * @returns Plain object
-                         */
-                        public static toObject(message: cosmos.tx.signing.v1beta1.SignatureDescriptor.Data, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                        /**
-                         * Converts this Data to JSON.
-                         * @returns JSON object
-                         */
-                        public toJSON(): { [k: string]: any };
-                    }
-
-                    namespace Data {
-
-                        /** Properties of a Single. */
-                        interface ISingle {
-
-                            /** Single mode */
-                            mode?: (cosmos.tx.signing.v1beta1.SignMode|null);
-
-                            /** Single signature */
-                            signature?: (Uint8Array|null);
-                        }
-
-                        /** Represents a Single. */
-                        class Single implements ISingle {
-
-                            /**
-                             * Constructs a new Single.
-                             * @param [properties] Properties to set
-                             */
-                            constructor(properties?: cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.ISingle);
-
-                            /** Single mode. */
-                            public mode: cosmos.tx.signing.v1beta1.SignMode;
-
-                            /** Single signature. */
-                            public signature: Uint8Array;
-
-                            /**
-                             * Encodes the specified Single message. Does not implicitly {@link cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.verify|verify} messages.
-                             * @param message Single message or plain object to encode
-                             * @param [writer] Writer to encode to
-                             * @returns Writer
-                             */
-                            public static encode(message: cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.ISingle, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                            /**
-                             * Encodes the specified Single message, length delimited. Does not implicitly {@link cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.verify|verify} messages.
-                             * @param message Single message or plain object to encode
-                             * @param [writer] Writer to encode to
-                             * @returns Writer
-                             */
-                            public static encodeDelimited(message: cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.ISingle, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                            /**
-                             * Decodes a Single message from the specified reader or buffer.
-                             * @param reader Reader or buffer to decode from
-                             * @param [length] Message length if known beforehand
-                             * @returns Single
-                             * @throws {Error} If the payload is not a reader or valid buffer
-                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                             */
-                            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single;
-
-                            /**
-                             * Decodes a Single message from the specified reader or buffer, length delimited.
-                             * @param reader Reader or buffer to decode from
-                             * @returns Single
-                             * @throws {Error} If the payload is not a reader or valid buffer
-                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                             */
-                            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single;
-
-                            /**
-                             * Verifies a Single message.
-                             * @param message Plain object to verify
-                             * @returns `null` if valid, otherwise the reason why it is not
-                             */
-                            public static verify(message: { [k: string]: any }): (string|null);
-
-                            /**
-                             * Creates a Single message from a plain object. Also converts values to their respective internal types.
-                             * @param object Plain object
-                             * @returns Single
-                             */
-                            public static fromObject(object: { [k: string]: any }): cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single;
-
-                            /**
-                             * Creates a plain object from a Single message. Also converts values to other types if specified.
-                             * @param message Single
-                             * @param [options] Conversion options
-                             * @returns Plain object
-                             */
-                            public static toObject(message: cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                            /**
-                             * Converts this Single to JSON.
-                             * @returns JSON object
-                             */
-                            public toJSON(): { [k: string]: any };
-                        }
-
-                        /** Properties of a Multi. */
-                        interface IMulti {
-
-                            /** Multi bitarray */
-                            bitarray?: (cosmos.crypto.multisig.v1beta1.ICompactBitArray|null);
-
-                            /** Multi signatures */
-                            signatures?: (cosmos.tx.signing.v1beta1.SignatureDescriptor.IData[]|null);
-                        }
-
-                        /** Represents a Multi. */
-                        class Multi implements IMulti {
-
-                            /**
-                             * Constructs a new Multi.
-                             * @param [properties] Properties to set
-                             */
-                            constructor(properties?: cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.IMulti);
-
-                            /** Multi bitarray. */
-                            public bitarray?: (cosmos.crypto.multisig.v1beta1.ICompactBitArray|null);
-
-                            /** Multi signatures. */
-                            public signatures: cosmos.tx.signing.v1beta1.SignatureDescriptor.IData[];
-
-                            /**
-                             * Encodes the specified Multi message. Does not implicitly {@link cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.verify|verify} messages.
-                             * @param message Multi message or plain object to encode
-                             * @param [writer] Writer to encode to
-                             * @returns Writer
-                             */
-                            public static encode(message: cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.IMulti, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                            /**
-                             * Encodes the specified Multi message, length delimited. Does not implicitly {@link cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.verify|verify} messages.
-                             * @param message Multi message or plain object to encode
-                             * @param [writer] Writer to encode to
-                             * @returns Writer
-                             */
-                            public static encodeDelimited(message: cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.IMulti, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                            /**
-                             * Decodes a Multi message from the specified reader or buffer.
-                             * @param reader Reader or buffer to decode from
-                             * @param [length] Message length if known beforehand
-                             * @returns Multi
-                             * @throws {Error} If the payload is not a reader or valid buffer
-                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                             */
-                            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi;
-
-                            /**
-                             * Decodes a Multi message from the specified reader or buffer, length delimited.
-                             * @param reader Reader or buffer to decode from
-                             * @returns Multi
-                             * @throws {Error} If the payload is not a reader or valid buffer
-                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                             */
-                            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi;
-
-                            /**
-                             * Verifies a Multi message.
-                             * @param message Plain object to verify
-                             * @returns `null` if valid, otherwise the reason why it is not
-                             */
-                            public static verify(message: { [k: string]: any }): (string|null);
-
-                            /**
-                             * Creates a Multi message from a plain object. Also converts values to their respective internal types.
-                             * @param object Plain object
-                             * @returns Multi
-                             */
-                            public static fromObject(object: { [k: string]: any }): cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi;
-
-                            /**
-                             * Creates a plain object from a Multi message. Also converts values to other types if specified.
-                             * @param message Multi
-                             * @param [options] Conversion options
-                             * @returns Plain object
-                             */
-                            public static toObject(message: cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                            /**
-                             * Converts this Multi to JSON.
-                             * @returns JSON object
-                             */
-                            public toJSON(): { [k: string]: any };
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    /** Namespace crypto. */
-    namespace crypto {
-
-        /** Namespace multisig. */
-        namespace multisig {
-
-            /** Namespace v1beta1. */
-            namespace v1beta1 {
-
-                /** Properties of a MultiSignature. */
-                interface IMultiSignature {
-
-                    /** MultiSignature signatures */
-                    signatures?: (Uint8Array[]|null);
-                }
-
-                /** Represents a MultiSignature. */
-                class MultiSignature implements IMultiSignature {
-
-                    /**
-                     * Constructs a new MultiSignature.
-                     * @param [properties] Properties to set
-                     */
-                    constructor(properties?: cosmos.crypto.multisig.v1beta1.IMultiSignature);
-
-                    /** MultiSignature signatures. */
-                    public signatures: Uint8Array[];
-
-                    /**
-                     * Encodes the specified MultiSignature message. Does not implicitly {@link cosmos.crypto.multisig.v1beta1.MultiSignature.verify|verify} messages.
-                     * @param message MultiSignature message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encode(message: cosmos.crypto.multisig.v1beta1.IMultiSignature, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Encodes the specified MultiSignature message, length delimited. Does not implicitly {@link cosmos.crypto.multisig.v1beta1.MultiSignature.verify|verify} messages.
-                     * @param message MultiSignature message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encodeDelimited(message: cosmos.crypto.multisig.v1beta1.IMultiSignature, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Decodes a MultiSignature message from the specified reader or buffer.
-                     * @param reader Reader or buffer to decode from
-                     * @param [length] Message length if known beforehand
-                     * @returns MultiSignature
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.crypto.multisig.v1beta1.MultiSignature;
-
-                    /**
-                     * Decodes a MultiSignature message from the specified reader or buffer, length delimited.
-                     * @param reader Reader or buffer to decode from
-                     * @returns MultiSignature
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.crypto.multisig.v1beta1.MultiSignature;
-
-                    /**
-                     * Verifies a MultiSignature message.
-                     * @param message Plain object to verify
-                     * @returns `null` if valid, otherwise the reason why it is not
-                     */
-                    public static verify(message: { [k: string]: any }): (string|null);
-
-                    /**
-                     * Creates a MultiSignature message from a plain object. Also converts values to their respective internal types.
-                     * @param object Plain object
-                     * @returns MultiSignature
-                     */
-                    public static fromObject(object: { [k: string]: any }): cosmos.crypto.multisig.v1beta1.MultiSignature;
-
-                    /**
-                     * Creates a plain object from a MultiSignature message. Also converts values to other types if specified.
-                     * @param message MultiSignature
-                     * @param [options] Conversion options
-                     * @returns Plain object
-                     */
-                    public static toObject(message: cosmos.crypto.multisig.v1beta1.MultiSignature, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                    /**
-                     * Converts this MultiSignature to JSON.
-                     * @returns JSON object
-                     */
-                    public toJSON(): { [k: string]: any };
-                }
-
-                /** Properties of a CompactBitArray. */
-                interface ICompactBitArray {
-
-                    /** CompactBitArray extra_bits_stored */
-                    extra_bits_stored?: (number|null);
-
-                    /** CompactBitArray elems */
-                    elems?: (Uint8Array|null);
-                }
-
-                /** Represents a CompactBitArray. */
-                class CompactBitArray implements ICompactBitArray {
-
-                    /**
-                     * Constructs a new CompactBitArray.
-                     * @param [properties] Properties to set
-                     */
-                    constructor(properties?: cosmos.crypto.multisig.v1beta1.ICompactBitArray);
-
-                    /** CompactBitArray extra_bits_stored. */
-                    public extra_bits_stored: number;
-
-                    /** CompactBitArray elems. */
-                    public elems: Uint8Array;
-
-                    /**
-                     * Encodes the specified CompactBitArray message. Does not implicitly {@link cosmos.crypto.multisig.v1beta1.CompactBitArray.verify|verify} messages.
-                     * @param message CompactBitArray message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encode(message: cosmos.crypto.multisig.v1beta1.ICompactBitArray, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Encodes the specified CompactBitArray message, length delimited. Does not implicitly {@link cosmos.crypto.multisig.v1beta1.CompactBitArray.verify|verify} messages.
-                     * @param message CompactBitArray message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encodeDelimited(message: cosmos.crypto.multisig.v1beta1.ICompactBitArray, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Decodes a CompactBitArray message from the specified reader or buffer.
-                     * @param reader Reader or buffer to decode from
-                     * @param [length] Message length if known beforehand
-                     * @returns CompactBitArray
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): cosmos.crypto.multisig.v1beta1.CompactBitArray;
-
-                    /**
-                     * Decodes a CompactBitArray message from the specified reader or buffer, length delimited.
-                     * @param reader Reader or buffer to decode from
-                     * @returns CompactBitArray
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): cosmos.crypto.multisig.v1beta1.CompactBitArray;
-
-                    /**
-                     * Verifies a CompactBitArray message.
-                     * @param message Plain object to verify
-                     * @returns `null` if valid, otherwise the reason why it is not
-                     */
-                    public static verify(message: { [k: string]: any }): (string|null);
-
-                    /**
-                     * Creates a CompactBitArray message from a plain object. Also converts values to their respective internal types.
-                     * @param object Plain object
-                     * @returns CompactBitArray
-                     */
-                    public static fromObject(object: { [k: string]: any }): cosmos.crypto.multisig.v1beta1.CompactBitArray;
-
-                    /**
-                     * Creates a plain object from a CompactBitArray message. Also converts values to other types if specified.
-                     * @param message CompactBitArray
-                     * @param [options] Conversion options
-                     * @returns Plain object
-                     */
-                    public static toObject(message: cosmos.crypto.multisig.v1beta1.CompactBitArray, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                    /**
-                     * Converts this CompactBitArray to JSON.
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
