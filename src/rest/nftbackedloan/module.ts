@@ -2,7 +2,7 @@ import { QueryApi } from '../../openapi';
 import cosmosclient from '@cosmos-client/core';
 
 export function params(sdk: cosmosclient.CosmosSDK) {
-  return new QueryApi(undefined, sdk.url).nftmarketParams();
+  return new QueryApi(undefined, sdk.url).nftBackedLoanParams();
 }
 
 export function nftListing(sdk: cosmosclient.CosmosSDK, classId: string, nftId: string) {

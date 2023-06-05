@@ -1,7 +1,7 @@
 import { ununifi } from '../../proto';
 import cosmosclient from '@cosmos-client/core';
 
-export * as yieldAggregator from './module';
+export * as yieldaggregator from './module';
 
 cosmosclient.codec.register('/ununifi.yieldaggregator.MsgDepositToVault', ununifi.yieldaggregator.MsgDepositToVault);
 cosmosclient.codec.register('/ununifi.yieldaggregator.MsgWithdrawFromVault', ununifi.yieldaggregator.MsgWithdrawFromVault);
