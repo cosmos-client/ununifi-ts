@@ -2,7 +2,7 @@ import { QueryApi } from '../../openapi';
 import cosmosclient from '@cosmos-client/core';
 
 export function params(sdk: cosmosclient.CosmosSDK) {
-  return new QueryApi(undefined, sdk.url).nftmintParams();
+  return new QueryApi(undefined, sdk.url).nftFactoryParams();
 }
 
 export function classAttributes(sdk: cosmosclient.CosmosSDK, classId: string) {

@@ -27,7 +27,7 @@ describe('bank', () => {
 
     const date = new Date();
     // build tx
-    const msgPlaceBid = new ununificlient.proto.ununifi.nftmarket.MsgPlaceBid({
+    const msgPlaceBid = new ununificlient.proto.ununifi.nftbackedloan.MsgPlaceBid({
       sender: fromAddress.toString(),
       nft_id: { class_id: 'a01', nft_id: 'a10' },
       bid_amount: { denom: 'token', amount: '3' },

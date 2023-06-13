@@ -5,12 +5,12 @@ export function params(sdk: cosmosclient.CosmosSDK) {
   return new QueryApi(undefined, sdk.url).yieldAggregatorParams();
 }
 
-export function strategyAll(sdk: cosmosclient.CosmosSDK, denom: string) {
+export function strategyAll(sdk: cosmosclient.CosmosSDK, denom?: string) {
   return new QueryApi(undefined, sdk.url).strategyAll(denom);
 }
 
-export function strategy(sdk: cosmosclient.CosmosSDK, denom: string, id: string) {
-  return new QueryApi(undefined, sdk.url).strategy(denom, id);
+export function strategy(sdk: cosmosclient.CosmosSDK, id: string, denom?: string) {
+  return new QueryApi(undefined, sdk.url).strategy(id, denom);
 }
 
 export function vaultAll(sdk: cosmosclient.CosmosSDK) {
