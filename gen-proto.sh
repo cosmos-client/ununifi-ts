@@ -12,6 +12,8 @@ for dir in $proto_dirs; do
   proto_files=("${proto_files[@]} $(find "${dir}" -maxdepth 1 -name '*.proto')")
 done
 
+echo proto_files: ${proto_files[@]}
+
 npx pbjs \
   -o ./src/proto.cjs \
   -t static-module \
