@@ -44,16 +44,16 @@ export interface AddressPositions200Response {
 export interface AddressPositions200ResponsePositionsInner {
     /**
      * 
-     * @type {Position200ResponsePosition}
+     * @type {AllPositions200ResponsePositionsInner}
      * @memberof AddressPositions200ResponsePositionsInner
      */
-    'position'?: Position200ResponsePosition;
+    'position'?: AllPositions200ResponsePositionsInner;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof AddressPositions200ResponsePositionsInner
      */
-    'valuation_profit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'valuation_profit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
@@ -62,10 +62,10 @@ export interface AddressPositions200ResponsePositionsInner {
     'remaining_margin_value'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof AddressPositions200ResponsePositionsInner
      */
-    'effective_margin'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'effective_margin'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
@@ -81,16 +81,102 @@ export interface AddressPositions200ResponsePositionsInner {
 export interface AllPositions200Response {
     /**
      * 
-     * @type {Array<EstimateDLPTokenAmountDefaultResponseDetailsInner>}
+     * @type {Array<AllPositions200ResponsePositionsInner>}
      * @memberof AllPositions200Response
      */
-    'positions'?: Array<EstimateDLPTokenAmountDefaultResponseDetailsInner>;
+    'positions'?: Array<AllPositions200ResponsePositionsInner>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof AllPositions200Response
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
+}
+/**
+ * PageResponse is to be embedded in gRPC response messages where the corresponding request message has used PageRequest.   message SomeResponse {          repeated Bar results = 1;          PageResponse page = 2;  }
+ * @export
+ * @interface AllPositions200ResponsePagination
+ */
+export interface AllPositions200ResponsePagination {
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePagination
+     */
+    'next_key'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePagination
+     */
+    'total'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface AllPositions200ResponsePositionsInner
+ */
+export interface AllPositions200ResponsePositionsInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'market'?: DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'opened_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'opened_height'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'opened_base_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'opened_quote_rate'?: string;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'remaining_margin'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'last_levied_at'?: string;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmountDefaultResponseDetailsInner}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'position_instance'?: EstimateDLPTokenAmountDefaultResponseDetailsInner;
 }
 /**
  * 
@@ -116,13 +202,13 @@ export interface AllRewards200ResponseRewards {
      * @type {string}
      * @memberof AllRewards200ResponseRewards
      */
-    'subject_addr'?: string;
+    'address'?: string;
     /**
      * 
-     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
+     * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
      * @memberof AllRewards200ResponseRewards
      */
-    'rewards'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
+    'rewards'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
 }
 /**
  * 
@@ -132,10 +218,10 @@ export interface AllRewards200ResponseRewards {
 export interface AvailableAssetInPoolByDenom200Response {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof AvailableAssetInPoolByDenom200Response
      */
-    'available_asset'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'available_asset'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -145,10 +231,73 @@ export interface AvailableAssetInPoolByDenom200Response {
 export interface AvailableAssetsInPool200Response {
     /**
      * 
-     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
+     * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
      * @memberof AvailableAssetsInPool200Response
      */
-    'available_assets'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
+    'available_assets'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
+}
+/**
+ * 
+ * @export
+ * @interface BelongingRecipientContainerIdsByAddr200Response
+ */
+export interface BelongingRecipientContainerIdsByAddr200Response {
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof BelongingRecipientContainerIdsByAddr200Response
+     */
+    'recipient_container_ids'?: Array<string>;
+}
+/**
+ * 
+ * @export
+ * @interface BelongingRecipientContainerIdsByAddrDefaultResponse
+ */
+export interface BelongingRecipientContainerIdsByAddrDefaultResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof BelongingRecipientContainerIdsByAddrDefaultResponse
+     */
+    'error'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof BelongingRecipientContainerIdsByAddrDefaultResponse
+     */
+    'code'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof BelongingRecipientContainerIdsByAddrDefaultResponse
+     */
+    'message'?: string;
+    /**
+     * 
+     * @type {Array<BelongingRecipientContainerIdsByAddrDefaultResponseDetailsInner>}
+     * @memberof BelongingRecipientContainerIdsByAddrDefaultResponse
+     */
+    'details'?: Array<BelongingRecipientContainerIdsByAddrDefaultResponseDetailsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface BelongingRecipientContainerIdsByAddrDefaultResponseDetailsInner
+ */
+export interface BelongingRecipientContainerIdsByAddrDefaultResponseDetailsInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof BelongingRecipientContainerIdsByAddrDefaultResponseDetailsInner
+     */
+    'type_url'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof BelongingRecipientContainerIdsByAddrDefaultResponseDetailsInner
+     */
+    'value'?: string;
 }
 /**
  * 
@@ -183,22 +332,22 @@ export interface BidderBids200ResponseBidsInner {
     'bidder'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'bid_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'bid_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'deposit_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'deposit_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'paid_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'paid_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
@@ -225,10 +374,10 @@ export interface BidderBids200ResponseBidsInner {
     'bid_time'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'interest_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'interest_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {Array<ListerBorrowingBidderInfoInner>}
@@ -466,10 +615,10 @@ export interface DLPTokenRates200Response {
     'symbol'?: string;
     /**
      * 
-     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
+     * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
      * @memberof DLPTokenRates200Response
      */
-    'rates'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
+    'rates'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
 }
 /**
  * QueryParamsResponse is response type for the Query/Params RPC method.
@@ -673,40 +822,28 @@ export interface DerivativesParams200ResponseParamsPoolParamsAcceptedAssetsConfI
 /**
  * 
  * @export
- * @interface EcosystemincentiveParams200Response
+ * @interface EcosystemIncentiveParams200Response
  */
-export interface EcosystemincentiveParams200Response {
+export interface EcosystemIncentiveParams200Response {
     /**
      * 
-     * @type {EcosystemincentiveParams200ResponseParams}
-     * @memberof EcosystemincentiveParams200Response
+     * @type {EcosystemIncentiveParams200ResponseParams}
+     * @memberof EcosystemIncentiveParams200Response
      */
-    'params'?: EcosystemincentiveParams200ResponseParams;
+    'params'?: EcosystemIncentiveParams200ResponseParams;
 }
 /**
  * params holds all the parameters of this module.
  * @export
- * @interface EcosystemincentiveParams200ResponseParams
+ * @interface EcosystemIncentiveParams200ResponseParams
  */
-export interface EcosystemincentiveParams200ResponseParams {
+export interface EcosystemIncentiveParams200ResponseParams {
     /**
      * 
      * @type {Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>}
-     * @memberof EcosystemincentiveParams200ResponseParams
+     * @memberof EcosystemIncentiveParams200ResponseParams
      */
     'reward_params'?: Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>;
-    /**
-     * 
-     * @type {string}
-     * @memberof EcosystemincentiveParams200ResponseParams
-     */
-    'max_incentive_unit_id_len'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof EcosystemincentiveParams200ResponseParams
-     */
-    'max_subject_info_num_in_unit'?: string;
 }
 /**
  * 
@@ -716,16 +853,35 @@ export interface EcosystemincentiveParams200ResponseParams {
 export interface EstimateDLPTokenAmount200Response {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof EstimateDLPTokenAmount200Response
      */
-    'estimated_dlp_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'estimated_dlp_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof EstimateDLPTokenAmount200Response
      */
-    'deposit_fee'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'deposit_fee'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+}
+/**
+ * Coin defines a token with a denomination and an amount.  NOTE: The amount field is an Int which implements the custom method signatures required by gogoproto.
+ * @export
+ * @interface EstimateDLPTokenAmount200ResponseEstimatedDlpAmount
+ */
+export interface EstimateDLPTokenAmount200ResponseEstimatedDlpAmount {
+    /**
+     * 
+     * @type {string}
+     * @memberof EstimateDLPTokenAmount200ResponseEstimatedDlpAmount
+     */
+    'denom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof EstimateDLPTokenAmount200ResponseEstimatedDlpAmount
+     */
+    'amount'?: string;
 }
 /**
  * 
@@ -785,10 +941,10 @@ export interface EstimateDLPTokenAmountDefaultResponseDetailsInner {
 export interface EstimateMintAmount200Response {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof EstimateMintAmount200Response
      */
-    'mint_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'mint_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -798,10 +954,10 @@ export interface EstimateMintAmount200Response {
 export interface EstimateRedeemAmount200Response {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof EstimateRedeemAmount200Response
      */
-    'redeem_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'redeem_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -811,16 +967,16 @@ export interface EstimateRedeemAmount200Response {
 export interface EstimateRedeemTokenAmount200Response {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof EstimateRedeemTokenAmount200Response
      */
-    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof EstimateRedeemTokenAmount200Response
      */
-    'fee'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'fee'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * `Any` contains an arbitrary serialized protocol buffer message along with a URL that describes the type of the serialized message.  Protobuf library provides support to pack/unpack Any values in the form of utility functions or additional generated methods of the Any type.  Example 1: Pack and unpack a message in C++.      Foo foo = ...;     Any any;     any.PackFrom(foo);     ...     if (any.UnpackTo(&foo)) {       ...     }  Example 2: Pack and unpack a message in Java.      Foo foo = ...;     Any any = Any.pack(foo);     ...     if (any.is(Foo.class)) {       foo = any.unpack(Foo.class);     }  Example 3: Pack and unpack a message in Python.      foo = Foo(...)     any = Any()     any.Pack(foo)     ...     if any.Is(Foo.DESCRIPTOR):       any.Unpack(foo)       ...  Example 4: Pack and unpack a message in Go       foo := &pb.Foo{...}      any, err := anypb.New(foo)      if err != nil {        ...      }      ...      foo := &pb.Foo{}      if err := any.UnmarshalTo(foo); err != nil {        ...      }  The pack methods provided by protobuf library will by default use \'type.googleapis.com/full.type.name\' as the type URL and the unpack methods only use the fully qualified type name after the last \'/\' in the type URL, for example \"foo.bar.com/x/y.z\" will yield type name \"y.z\".   JSON  The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:      package google.profile;     message Person {       string first_name = 1;       string last_name = 2;     }      {       \"@type\": \"type.googleapis.com/google.profile.Person\",       \"firstName\": <string>,       \"lastName\": <string>     }  If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message [google.protobuf.Duration][]):      {       \"@type\": \"type.googleapis.com/google.protobuf.Duration\",       \"value\": \"1.212s\"     }
@@ -875,89 +1031,6 @@ export interface GrpcGatewayRuntimeError {
 /**
  * 
  * @export
- * @interface IncentiveUnit200Response
- */
-export interface IncentiveUnit200Response {
-    /**
-     * 
-     * @type {IncentiveUnit200ResponseIncentiveUnit}
-     * @memberof IncentiveUnit200Response
-     */
-    'incentive_unit'?: IncentiveUnit200ResponseIncentiveUnit;
-}
-/**
- * 
- * @export
- * @interface IncentiveUnit200ResponseIncentiveUnit
- */
-export interface IncentiveUnit200ResponseIncentiveUnit {
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveUnit200ResponseIncentiveUnit
-     */
-    'id'?: string;
-    /**
-     * 
-     * @type {Array<IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner>}
-     * @memberof IncentiveUnit200ResponseIncentiveUnit
-     */
-    'subject_info_lists'?: Array<IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner>;
-}
-/**
- * 
- * @export
- * @interface IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner
- */
-export interface IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner {
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner
-     */
-    'subject_addr'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner
-     */
-    'weight'?: string;
-}
-/**
- * 
- * @export
- * @interface IncentiveUnitIdsByAddr200Response
- */
-export interface IncentiveUnitIdsByAddr200Response {
-    /**
-     * 
-     * @type {IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr}
-     * @memberof IncentiveUnitIdsByAddr200Response
-     */
-    'incentive_unit_ids_by_addr'?: IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr;
-}
-/**
- * 
- * @export
- * @interface IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr
- */
-export interface IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr {
-    /**
-     * 
-     * @type {string}
-     * @memberof IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr
-     */
-    'address'?: string;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr
-     */
-    'incentive_unit_ids'?: Array<string>;
-}
-/**
- * 
- * @export
  * @interface Liquidation200Response
  */
 export interface Liquidation200Response {
@@ -995,10 +1068,10 @@ export interface Liquidation200ResponseLiquidations {
 export interface Liquidation200ResponseLiquidationsLiquidation {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof Liquidation200ResponseLiquidationsLiquidation
      */
-    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
@@ -1224,10 +1297,10 @@ export interface ListedNfts200ResponseListingsInnerListing {
     'auto_relisted_count'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof ListedNfts200ResponseListingsInnerListing
      */
-    'collected_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'collected_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
@@ -1261,16 +1334,16 @@ export type ListedNfts200ResponseListingsInnerListingStateEnum = typeof ListedNf
 export interface ListerBorrowingBidderInfoInner {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof ListerBorrowingBidderInfoInner
      */
-    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof ListerBorrowingBidderInfoInner
      */
-    'paid_interest_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'paid_interest_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
@@ -1324,10 +1397,10 @@ export interface Loans200ResponseLoansInner {
     'nft_id'?: BidderBids200ResponseBidsInnerNftId;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof Loans200ResponseLoansInner
      */
-    'loan'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'loan'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -1343,10 +1416,10 @@ export interface MarketAll200Response {
     'markets'?: Array<MarketAll200ResponseMarketsInner>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof MarketAll200Response
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
 }
 /**
  * 
@@ -1386,75 +1459,6 @@ export interface MarketAll200ResponseMarketsInner {
     'active'?: boolean;
 }
 /**
- * PageResponse is to be embedded in gRPC response messages where the corresponding request message has used PageRequest.   message SomeResponse {          repeated Bar results = 1;          PageResponse page = 2;  }
- * @export
- * @interface MarketAll200ResponsePagination
- */
-export interface MarketAll200ResponsePagination {
-    /**
-     * 
-     * @type {string}
-     * @memberof MarketAll200ResponsePagination
-     */
-    'next_key'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof MarketAll200ResponsePagination
-     */
-    'total'?: string;
-}
-/**
- * 
- * @export
- * @interface MarketAllDefaultResponse
- */
-export interface MarketAllDefaultResponse {
-    /**
-     * 
-     * @type {string}
-     * @memberof MarketAllDefaultResponse
-     */
-    'error'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof MarketAllDefaultResponse
-     */
-    'code'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof MarketAllDefaultResponse
-     */
-    'message'?: string;
-    /**
-     * 
-     * @type {Array<MarketAllDefaultResponseDetailsInner>}
-     * @memberof MarketAllDefaultResponse
-     */
-    'details'?: Array<MarketAllDefaultResponseDetailsInner>;
-}
-/**
- * 
- * @export
- * @interface MarketAllDefaultResponseDetailsInner
- */
-export interface MarketAllDefaultResponseDetailsInner {
-    /**
-     * 
-     * @type {string}
-     * @memberof MarketAllDefaultResponseDetailsInner
-     */
-    'type_url'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof MarketAllDefaultResponseDetailsInner
-     */
-    'value'?: string;
-}
-/**
  * 
  * @export
  * @interface NFTMinter200Response
@@ -1466,6 +1470,196 @@ export interface NFTMinter200Response {
      * @memberof NFTMinter200Response
      */
     'minter'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface NftBackedLoanParams200Response
+ */
+export interface NftBackedLoanParams200Response {
+    /**
+     * 
+     * @type {NftBackedLoanParams200ResponseParams}
+     * @memberof NftBackedLoanParams200Response
+     */
+    'params'?: NftBackedLoanParams200ResponseParams;
+}
+/**
+ * 
+ * @export
+ * @interface NftBackedLoanParams200ResponseParams
+ */
+export interface NftBackedLoanParams200ResponseParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'min_staking_for_listing'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'default_bid_active_rank'?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'bid_tokens'?: Array<string>;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'auto_relisting_count_if_no_bid'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'nft_listing_delay_seconds'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'nft_listing_period_initial'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'nft_listing_cancel_required_seconds'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'nft_listing_cancel_fee_percentage'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'nft_listing_gap_time'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'bid_cancel_required_seconds'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'bid_token_disburse_seconds_after_cancel'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'nft_listing_full_payment_period'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'nft_listing_nft_delivery_period'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'nft_creator_share_percentage'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'market_administrator'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'nft_listing_commission_fee'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'nft_listing_extend_seconds'?: string;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof NftBackedLoanParams200ResponseParams
+     */
+    'nft_listing_period_extend_fee_per_hour'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+}
+/**
+ * 
+ * @export
+ * @interface NftFactoryParams200Response
+ */
+export interface NftFactoryParams200Response {
+    /**
+     * 
+     * @type {NftFactoryParams200ResponseParams}
+     * @memberof NftFactoryParams200Response
+     */
+    'params'?: NftFactoryParams200ResponseParams;
+}
+/**
+ * 
+ * @export
+ * @interface NftFactoryParams200ResponseParams
+ */
+export interface NftFactoryParams200ResponseParams {
+    /**
+     * 
+     * @type {string}
+     * @memberof NftFactoryParams200ResponseParams
+     */
+    'MaxNFTSupplyCap'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftFactoryParams200ResponseParams
+     */
+    'MinClassNameLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftFactoryParams200ResponseParams
+     */
+    'MaxClassNameLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftFactoryParams200ResponseParams
+     */
+    'MinUriLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftFactoryParams200ResponseParams
+     */
+    'MaxUriLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftFactoryParams200ResponseParams
+     */
+    'MaxSymbolLen'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftFactoryParams200ResponseParams
+     */
+    'MaxDescriptionLen'?: string;
 }
 /**
  * 
@@ -1483,196 +1677,6 @@ export interface NftListing200Response {
 /**
  * 
  * @export
- * @interface NftmarketParams200Response
- */
-export interface NftmarketParams200Response {
-    /**
-     * 
-     * @type {NftmarketParams200ResponseParams}
-     * @memberof NftmarketParams200Response
-     */
-    'params'?: NftmarketParams200ResponseParams;
-}
-/**
- * 
- * @export
- * @interface NftmarketParams200ResponseParams
- */
-export interface NftmarketParams200ResponseParams {
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'min_staking_for_listing'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'default_bid_active_rank'?: string;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'bid_tokens'?: Array<string>;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'auto_relisting_count_if_no_bid'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'nft_listing_delay_seconds'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'nft_listing_period_initial'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'nft_listing_cancel_required_seconds'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'nft_listing_cancel_fee_percentage'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'nft_listing_gap_time'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'bid_cancel_required_seconds'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'bid_token_disburse_seconds_after_cancel'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'nft_listing_full_payment_period'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'nft_listing_nft_delivery_period'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'nft_creator_share_percentage'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'market_administrator'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'nft_listing_commission_fee'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'nft_listing_extend_seconds'?: string;
-    /**
-     * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
-     * @memberof NftmarketParams200ResponseParams
-     */
-    'nft_listing_period_extend_fee_per_hour'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
-}
-/**
- * 
- * @export
- * @interface NftmintParams200Response
- */
-export interface NftmintParams200Response {
-    /**
-     * 
-     * @type {NftmintParams200ResponseParams}
-     * @memberof NftmintParams200Response
-     */
-    'params'?: NftmintParams200ResponseParams;
-}
-/**
- * 
- * @export
- * @interface NftmintParams200ResponseParams
- */
-export interface NftmintParams200ResponseParams {
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmintParams200ResponseParams
-     */
-    'MaxNFTSupplyCap'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmintParams200ResponseParams
-     */
-    'MinClassNameLen'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmintParams200ResponseParams
-     */
-    'MaxClassNameLen'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmintParams200ResponseParams
-     */
-    'MinUriLen'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmintParams200ResponseParams
-     */
-    'MaxUriLen'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmintParams200ResponseParams
-     */
-    'MaxSymbolLen'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftmintParams200ResponseParams
-     */
-    'MaxDescriptionLen'?: string;
-}
-/**
- * 
- * @export
  * @interface OracleAll200Response
  */
 export interface OracleAll200Response {
@@ -1684,10 +1688,10 @@ export interface OracleAll200Response {
     'oracles'?: Array<string>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof OracleAll200Response
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
 }
 /**
  * 
@@ -1722,10 +1726,10 @@ export interface PaymentStatus200ResponsePaymentStatus {
     'bidder'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof PaymentStatus200ResponsePaymentStatus
      */
-    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {boolean}
@@ -1794,16 +1798,16 @@ export interface PerpetualFutures200Response {
     'fees_24hours'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof PerpetualFutures200Response
      */
-    'long_positions'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'long_positions'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof PerpetualFutures200Response
      */
-    'short_positions'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'short_positions'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -1856,10 +1860,10 @@ export interface PerpetualFuturesMarket200Response {
 export interface PerpetualFuturesPositionSize200Response {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof PerpetualFuturesPositionSize200Response
      */
-    'total_position_size_usd'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'total_position_size_usd'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -1956,16 +1960,16 @@ export interface Pool200ResponsePoolMarketCapAssetInfoInner {
 export interface Position200Response {
     /**
      * 
-     * @type {Position200ResponsePosition}
+     * @type {AllPositions200ResponsePositionsInner}
      * @memberof Position200Response
      */
-    'position'?: Position200ResponsePosition;
+    'position'?: AllPositions200ResponsePositionsInner;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof Position200Response
      */
-    'valuation_profit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'valuation_profit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
@@ -1974,77 +1978,10 @@ export interface Position200Response {
     'margin_maintenance_rate'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof Position200Response
      */
-    'effective_margin'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
-}
-/**
- * 
- * @export
- * @interface Position200ResponsePosition
- */
-export interface Position200ResponsePosition {
-    /**
-     * 
-     * @type {string}
-     * @memberof Position200ResponsePosition
-     */
-    'id'?: string;
-    /**
-     * 
-     * @type {DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner}
-     * @memberof Position200ResponsePosition
-     */
-    'market'?: DerivativesParams200ResponseParamsPerpetualFuturesMarketsInner;
-    /**
-     * 
-     * @type {string}
-     * @memberof Position200ResponsePosition
-     */
-    'address'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Position200ResponsePosition
-     */
-    'opened_at'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Position200ResponsePosition
-     */
-    'opened_height'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Position200ResponsePosition
-     */
-    'opened_base_rate'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Position200ResponsePosition
-     */
-    'opened_quote_rate'?: string;
-    /**
-     * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
-     * @memberof Position200ResponsePosition
-     */
-    'remaining_margin'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
-    /**
-     * 
-     * @type {string}
-     * @memberof Position200ResponsePosition
-     */
-    'last_levied_at'?: string;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmountDefaultResponseDetailsInner}
-     * @memberof Position200ResponsePosition
-     */
-    'position_instance'?: EstimateDLPTokenAmountDefaultResponseDetailsInner;
+    'effective_margin'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -2092,10 +2029,10 @@ export interface PriceAll200Response {
     'prices'?: Array<Price200ResponsePrice>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof PriceAll200Response
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
 }
 /**
  * 
@@ -2118,6 +2055,12 @@ export interface PricefeedParams200Response {
 export interface PricefeedParams200ResponseParams {
     /**
      * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof PricefeedParams200ResponseParams
+     */
+    'deposit_for_posting'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
      * @type {Array<MarketAll200ResponseMarketsInner>}
      * @memberof PricefeedParams200ResponseParams
      */
@@ -2137,10 +2080,10 @@ export interface RawPriceAll200Response {
     'prices'?: Array<RawPriceAll200ResponsePricesInner>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof RawPriceAll200Response
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
 }
 /**
  * 
@@ -2176,15 +2119,66 @@ export interface RawPriceAll200ResponsePricesInner {
 /**
  * 
  * @export
- * @interface RecordedIncentiveUnitId200Response
+ * @interface RecipientContainer200Response
  */
-export interface RecordedIncentiveUnitId200Response {
+export interface RecipientContainer200Response {
+    /**
+     * 
+     * @type {RecipientContainer200ResponseRecipientContainer}
+     * @memberof RecipientContainer200Response
+     */
+    'recipient_container'?: RecipientContainer200ResponseRecipientContainer;
+}
+/**
+ * 
+ * @export
+ * @interface RecipientContainer200ResponseRecipientContainer
+ */
+export interface RecipientContainer200ResponseRecipientContainer {
     /**
      * 
      * @type {string}
-     * @memberof RecordedIncentiveUnitId200Response
+     * @memberof RecipientContainer200ResponseRecipientContainer
      */
-    'incentive_unit_id'?: string;
+    'id'?: string;
+    /**
+     * 
+     * @type {Array<RecipientContainer200ResponseRecipientContainerWeightedAddressesInner>}
+     * @memberof RecipientContainer200ResponseRecipientContainer
+     */
+    'weighted_addresses'?: Array<RecipientContainer200ResponseRecipientContainerWeightedAddressesInner>;
+}
+/**
+ * 
+ * @export
+ * @interface RecipientContainer200ResponseRecipientContainerWeightedAddressesInner
+ */
+export interface RecipientContainer200ResponseRecipientContainerWeightedAddressesInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof RecipientContainer200ResponseRecipientContainerWeightedAddressesInner
+     */
+    'address'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof RecipientContainer200ResponseRecipientContainerWeightedAddressesInner
+     */
+    'weight'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface RecordedRecipientContainerId200Response
+ */
+export interface RecordedRecipientContainerId200Response {
+    /**
+     * 
+     * @type {string}
+     * @memberof RecordedRecipientContainerId200Response
+     */
+    'recipient_container_id'?: string;
 }
 /**
  * 
@@ -2194,10 +2188,10 @@ export interface RecordedIncentiveUnitId200Response {
 export interface Reward200Response {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof Reward200Response
      */
-    'reward'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'reward'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -2225,7 +2219,7 @@ export interface RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMain
  */
 export interface RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1 {
     /**
-     * At first, we go with this one type. NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
+     * NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
      * @type {string}
      * @memberof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1
      */
@@ -2239,7 +2233,9 @@ export interface RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheT
 }
 
 export const RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum = {
-    NftmarketFrontend: 'NFTMARKET_FRONTEND'
+    Unknown: 'UNKNOWN',
+    Stakers: 'STAKERS',
+    FrontendDevelopers: 'FRONTEND_DEVELOPERS'
 } as const;
 
 export type RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum = typeof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum[keyof typeof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum];
@@ -2252,10 +2248,10 @@ export type RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalS
 export interface Rewards200Response {
     /**
      * 
-     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
+     * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
      * @memberof Rewards200Response
      */
-    'rewards'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
+    'rewards'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
 }
 /**
  * 
@@ -2284,10 +2280,10 @@ export interface StrategyAll200Response {
     'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof StrategyAll200Response
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
 }
 /**
  * 
@@ -2637,10 +2633,10 @@ export interface UnunifiDerivativesPosition {
     'opened_quote_rate'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiDerivativesPosition
      */
-    'remaining_margin'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'remaining_margin'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
@@ -2677,16 +2673,16 @@ export type UnunifiDerivativesPositionType = typeof UnunifiDerivativesPositionTy
 export interface UnunifiDerivativesQueriedPosition {
     /**
      * 
-     * @type {Position200ResponsePosition}
+     * @type {AllPositions200ResponsePositionsInner}
      * @memberof UnunifiDerivativesQueriedPosition
      */
-    'position'?: Position200ResponsePosition;
+    'position'?: AllPositions200ResponsePositionsInner;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiDerivativesQueriedPosition
      */
-    'valuation_profit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'valuation_profit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
@@ -2695,10 +2691,10 @@ export interface UnunifiDerivativesQueriedPosition {
     'remaining_margin_value'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiDerivativesQueriedPosition
      */
-    'effective_margin'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'effective_margin'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
@@ -2727,16 +2723,16 @@ export interface UnunifiDerivativesQueryAddressPositionsResponse {
 export interface UnunifiDerivativesQueryAllPositionsResponse {
     /**
      * 
-     * @type {Array<EstimateDLPTokenAmountDefaultResponseDetailsInner>}
+     * @type {Array<AllPositions200ResponsePositionsInner>}
      * @memberof UnunifiDerivativesQueryAllPositionsResponse
      */
-    'positions'?: Array<EstimateDLPTokenAmountDefaultResponseDetailsInner>;
+    'positions'?: Array<AllPositions200ResponsePositionsInner>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof UnunifiDerivativesQueryAllPositionsResponse
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
 }
 /**
  * 
@@ -2746,10 +2742,10 @@ export interface UnunifiDerivativesQueryAllPositionsResponse {
 export interface UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse
      */
-    'available_asset'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'available_asset'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -2759,10 +2755,10 @@ export interface UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse {
 export interface UnunifiDerivativesQueryAvailableAssetsInPoolResponse {
     /**
      * 
-     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
+     * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
      * @memberof UnunifiDerivativesQueryAvailableAssetsInPoolResponse
      */
-    'available_assets'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
+    'available_assets'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
 }
 /**
  * 
@@ -2778,10 +2774,10 @@ export interface UnunifiDerivativesQueryDLPTokenRateResponse {
     'symbol'?: string;
     /**
      * 
-     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
+     * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
      * @memberof UnunifiDerivativesQueryDLPTokenRateResponse
      */
-    'rates'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
+    'rates'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
 }
 /**
  * 
@@ -2791,16 +2787,16 @@ export interface UnunifiDerivativesQueryDLPTokenRateResponse {
 export interface UnunifiDerivativesQueryEstimateDLPTokenAmountResponse {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
      */
-    'estimated_dlp_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'estimated_dlp_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiDerivativesQueryEstimateDLPTokenAmountResponse
      */
-    'deposit_fee'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'deposit_fee'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -2810,16 +2806,16 @@ export interface UnunifiDerivativesQueryEstimateDLPTokenAmountResponse {
 export interface UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse
      */
-    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiDerivativesQueryEstimateRedeemTokenAmountResponse
      */
-    'fee'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'fee'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -2911,10 +2907,10 @@ export interface UnunifiDerivativesQueryPerpetualFuturesMarketResponse {
 export interface UnunifiDerivativesQueryPerpetualFuturesPositionSizeResponse {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiDerivativesQueryPerpetualFuturesPositionSizeResponse
      */
-    'total_position_size_usd'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'total_position_size_usd'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -2942,16 +2938,16 @@ export interface UnunifiDerivativesQueryPerpetualFuturesResponse {
     'fees_24hours'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
      */
-    'long_positions'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'long_positions'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
      */
-    'short_positions'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'short_positions'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -2992,16 +2988,16 @@ export interface UnunifiDerivativesQueryPoolResponse {
 export interface UnunifiDerivativesQueryPositionResponse {
     /**
      * 
-     * @type {Position200ResponsePosition}
+     * @type {AllPositions200ResponsePositionsInner}
      * @memberof UnunifiDerivativesQueryPositionResponse
      */
-    'position'?: Position200ResponsePosition;
+    'position'?: AllPositions200ResponsePositionsInner;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiDerivativesQueryPositionResponse
      */
-    'valuation_profit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'valuation_profit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
@@ -3010,48 +3006,10 @@ export interface UnunifiDerivativesQueryPositionResponse {
     'margin_maintenance_rate'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiDerivativesQueryPositionResponse
      */
-    'effective_margin'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
-}
-/**
- * 
- * @export
- * @interface UnunifiEcosystemincentiveIncentiveUnit
- */
-export interface UnunifiEcosystemincentiveIncentiveUnit {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiEcosystemincentiveIncentiveUnit
-     */
-    'id'?: string;
-    /**
-     * 
-     * @type {Array<IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner>}
-     * @memberof UnunifiEcosystemincentiveIncentiveUnit
-     */
-    'subject_info_lists'?: Array<IncentiveUnit200ResponseIncentiveUnitSubjectInfoListsInner>;
-}
-/**
- * 
- * @export
- * @interface UnunifiEcosystemincentiveIncentiveUnitIdsByAddr
- */
-export interface UnunifiEcosystemincentiveIncentiveUnitIdsByAddr {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiEcosystemincentiveIncentiveUnitIdsByAddr
-     */
-    'address'?: string;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof UnunifiEcosystemincentiveIncentiveUnitIdsByAddr
-     */
-    'incentive_unit_ids'?: Array<string>;
+    'effective_margin'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * Params defines the parameters for the module.
@@ -3065,18 +3023,6 @@ export interface UnunifiEcosystemincentiveParams {
      * @memberof UnunifiEcosystemincentiveParams
      */
     'reward_params'?: Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiEcosystemincentiveParams
-     */
-    'max_incentive_unit_id_len'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiEcosystemincentiveParams
-     */
-    'max_subject_info_num_in_unit'?: string;
 }
 /**
  * 
@@ -3094,28 +3040,15 @@ export interface UnunifiEcosystemincentiveQueryAllRewardsResponse {
 /**
  * 
  * @export
- * @interface UnunifiEcosystemincentiveQueryIncentiveUnitIdsByAddrResponse
+ * @interface UnunifiEcosystemincentiveQueryBelongingRecipientContainerIdsByAddrResponse
  */
-export interface UnunifiEcosystemincentiveQueryIncentiveUnitIdsByAddrResponse {
+export interface UnunifiEcosystemincentiveQueryBelongingRecipientContainerIdsByAddrResponse {
     /**
      * 
-     * @type {IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr}
-     * @memberof UnunifiEcosystemincentiveQueryIncentiveUnitIdsByAddrResponse
+     * @type {Array<string>}
+     * @memberof UnunifiEcosystemincentiveQueryBelongingRecipientContainerIdsByAddrResponse
      */
-    'incentive_unit_ids_by_addr'?: IncentiveUnitIdsByAddr200ResponseIncentiveUnitIdsByAddr;
-}
-/**
- * 
- * @export
- * @interface UnunifiEcosystemincentiveQueryIncentiveUnitResponse
- */
-export interface UnunifiEcosystemincentiveQueryIncentiveUnitResponse {
-    /**
-     * 
-     * @type {IncentiveUnit200ResponseIncentiveUnit}
-     * @memberof UnunifiEcosystemincentiveQueryIncentiveUnitResponse
-     */
-    'incentive_unit'?: IncentiveUnit200ResponseIncentiveUnit;
+    'recipient_container_ids'?: Array<string>;
 }
 /**
  * 
@@ -3125,23 +3058,36 @@ export interface UnunifiEcosystemincentiveQueryIncentiveUnitResponse {
 export interface UnunifiEcosystemincentiveQueryParamsResponse {
     /**
      * 
-     * @type {EcosystemincentiveParams200ResponseParams}
+     * @type {EcosystemIncentiveParams200ResponseParams}
      * @memberof UnunifiEcosystemincentiveQueryParamsResponse
      */
-    'params'?: EcosystemincentiveParams200ResponseParams;
+    'params'?: EcosystemIncentiveParams200ResponseParams;
 }
 /**
  * 
  * @export
- * @interface UnunifiEcosystemincentiveQueryRecordedIncentiveUnitIdResponse
+ * @interface UnunifiEcosystemincentiveQueryRecipientContainerResponse
  */
-export interface UnunifiEcosystemincentiveQueryRecordedIncentiveUnitIdResponse {
+export interface UnunifiEcosystemincentiveQueryRecipientContainerResponse {
+    /**
+     * 
+     * @type {RecipientContainer200ResponseRecipientContainer}
+     * @memberof UnunifiEcosystemincentiveQueryRecipientContainerResponse
+     */
+    'recipient_container'?: RecipientContainer200ResponseRecipientContainer;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveQueryRecordedRecipientContainerIdResponse
+ */
+export interface UnunifiEcosystemincentiveQueryRecordedRecipientContainerIdResponse {
     /**
      * 
      * @type {string}
-     * @memberof UnunifiEcosystemincentiveQueryRecordedIncentiveUnitIdResponse
+     * @memberof UnunifiEcosystemincentiveQueryRecordedRecipientContainerIdResponse
      */
-    'incentive_unit_id'?: string;
+    'recipient_container_id'?: string;
 }
 /**
  * 
@@ -3151,10 +3097,29 @@ export interface UnunifiEcosystemincentiveQueryRecordedIncentiveUnitIdResponse {
 export interface UnunifiEcosystemincentiveQueryRewardResponse {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiEcosystemincentiveQueryRewardResponse
      */
-    'reward'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'reward'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiEcosystemincentiveRecipientContainer
+ */
+export interface UnunifiEcosystemincentiveRecipientContainer {
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiEcosystemincentiveRecipientContainer
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {Array<RecipientContainer200ResponseRecipientContainerWeightedAddressesInner>}
+     * @memberof UnunifiEcosystemincentiveRecipientContainer
+     */
+    'weighted_addresses'?: Array<RecipientContainer200ResponseRecipientContainerWeightedAddressesInner>;
 }
 /**
  * 
@@ -3182,7 +3147,7 @@ export interface UnunifiEcosystemincentiveRewardParams {
  */
 export interface UnunifiEcosystemincentiveRewardRate {
     /**
-     * At first, we go with this one type. NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
+     * NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
      * @type {string}
      * @memberof UnunifiEcosystemincentiveRewardRate
      */
@@ -3196,7 +3161,9 @@ export interface UnunifiEcosystemincentiveRewardRate {
 }
 
 export const UnunifiEcosystemincentiveRewardRateRewardTypeEnum = {
-    NftmarketFrontend: 'NFTMARKET_FRONTEND'
+    Unknown: 'UNKNOWN',
+    Stakers: 'STAKERS',
+    FrontendDevelopers: 'FRONTEND_DEVELOPERS'
 } as const;
 
 export type UnunifiEcosystemincentiveRewardRateRewardTypeEnum = typeof UnunifiEcosystemincentiveRewardRateRewardTypeEnum[keyof typeof UnunifiEcosystemincentiveRewardRateRewardTypeEnum];
@@ -3212,22 +3179,24 @@ export interface UnunifiEcosystemincentiveRewardStore {
      * @type {string}
      * @memberof UnunifiEcosystemincentiveRewardStore
      */
-    'subject_addr'?: string;
+    'address'?: string;
     /**
      * 
-     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
+     * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
      * @memberof UnunifiEcosystemincentiveRewardStore
      */
-    'rewards'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
+    'rewards'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
 }
 /**
- * At first, we go with this one type. NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
+ * NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
  * @export
  * @enum {string}
  */
 
 export const UnunifiEcosystemincentiveRewardType = {
-    NftmarketFrontend: 'NFTMARKET_FRONTEND'
+    Unknown: 'UNKNOWN',
+    Stakers: 'STAKERS',
+    FrontendDevelopers: 'FRONTEND_DEVELOPERS'
 } as const;
 
 export type UnunifiEcosystemincentiveRewardType = typeof UnunifiEcosystemincentiveRewardType[keyof typeof UnunifiEcosystemincentiveRewardType];
@@ -3236,101 +3205,101 @@ export type UnunifiEcosystemincentiveRewardType = typeof UnunifiEcosystemincenti
 /**
  * 
  * @export
- * @interface UnunifiEcosystemincentiveSubjectInfo
+ * @interface UnunifiEcosystemincentiveWeightedAddress
  */
-export interface UnunifiEcosystemincentiveSubjectInfo {
+export interface UnunifiEcosystemincentiveWeightedAddress {
     /**
      * 
      * @type {string}
-     * @memberof UnunifiEcosystemincentiveSubjectInfo
+     * @memberof UnunifiEcosystemincentiveWeightedAddress
      */
-    'subject_addr'?: string;
+    'address'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiEcosystemincentiveSubjectInfo
+     * @memberof UnunifiEcosystemincentiveWeightedAddress
      */
     'weight'?: string;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketBidId
+ * @interface UnunifiNftbackedloanBidId
  */
-export interface UnunifiNftmarketBidId {
+export interface UnunifiNftbackedloanBidId {
     /**
      * 
      * @type {BidderBids200ResponseBidsInnerNftId}
-     * @memberof UnunifiNftmarketBidId
+     * @memberof UnunifiNftbackedloanBidId
      */
     'nft_id'?: BidderBids200ResponseBidsInnerNftId;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketBidId
+     * @memberof UnunifiNftbackedloanBidId
      */
     'bidder'?: string;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketBorrowing
+ * @interface UnunifiNftbackedloanBorrowing
  */
-export interface UnunifiNftmarketBorrowing {
+export interface UnunifiNftbackedloanBorrowing {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
-     * @memberof UnunifiNftmarketBorrowing
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanBorrowing
      */
-    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
-     * @memberof UnunifiNftmarketBorrowing
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanBorrowing
      */
-    'paid_interest_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'paid_interest_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketBorrowing
+     * @memberof UnunifiNftbackedloanBorrowing
      */
     'start_at'?: string;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketLiquidation
+ * @interface UnunifiNftbackedloanLiquidation
  */
-export interface UnunifiNftmarketLiquidation {
+export interface UnunifiNftbackedloanLiquidation {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
-     * @memberof UnunifiNftmarketLiquidation
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanLiquidation
      */
-    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketLiquidation
+     * @memberof UnunifiNftbackedloanLiquidation
      */
     'liquidation_date'?: string;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketLiquidations
+ * @interface UnunifiNftbackedloanLiquidations
  */
-export interface UnunifiNftmarketLiquidations {
+export interface UnunifiNftbackedloanLiquidations {
     /**
      * 
      * @type {Liquidation200ResponseLiquidationsLiquidation}
-     * @memberof UnunifiNftmarketLiquidations
+     * @memberof UnunifiNftbackedloanLiquidations
      */
     'liquidation'?: Liquidation200ResponseLiquidationsLiquidation;
     /**
      * 
      * @type {Array<Liquidation200ResponseLiquidationsLiquidation>}
-     * @memberof UnunifiNftmarketLiquidations
+     * @memberof UnunifiNftbackedloanLiquidations
      */
     'next_liquidation'?: Array<Liquidation200ResponseLiquidationsLiquidation>;
 }
@@ -3340,7 +3309,7 @@ export interface UnunifiNftmarketLiquidations {
  * @enum {string}
  */
 
-export const UnunifiNftmarketListingState = {
+export const UnunifiNftbackedloanListingState = {
     Listing: 'LISTING',
     Bidding: 'BIDDING',
     SellingDecision: 'SELLING_DECISION',
@@ -3348,7 +3317,7 @@ export const UnunifiNftmarketListingState = {
     SuccessfulBid: 'SUCCESSFUL_BID'
 } as const;
 
-export type UnunifiNftmarketListingState = typeof UnunifiNftmarketListingState[keyof typeof UnunifiNftmarketListingState];
+export type UnunifiNftbackedloanListingState = typeof UnunifiNftbackedloanListingState[keyof typeof UnunifiNftbackedloanListingState];
 
 
 /**
@@ -3357,257 +3326,257 @@ export type UnunifiNftmarketListingState = typeof UnunifiNftmarketListingState[k
  * @enum {string}
  */
 
-export const UnunifiNftmarketListingType = {
+export const UnunifiNftbackedloanListingType = {
     DirectAssetBorrow: 'DIRECT_ASSET_BORROW',
     SyntheticAssetCreation: 'SYNTHETIC_ASSET_CREATION',
     LateShipping: 'LATE_SHIPPING'
 } as const;
 
-export type UnunifiNftmarketListingType = typeof UnunifiNftmarketListingType[keyof typeof UnunifiNftmarketListingType];
+export type UnunifiNftbackedloanListingType = typeof UnunifiNftbackedloanListingType[keyof typeof UnunifiNftbackedloanListingType];
 
 
 /**
  * 
  * @export
- * @interface UnunifiNftmarketLoan
+ * @interface UnunifiNftbackedloanLoan
  */
-export interface UnunifiNftmarketLoan {
+export interface UnunifiNftbackedloanLoan {
     /**
      * 
      * @type {BidderBids200ResponseBidsInnerNftId}
-     * @memberof UnunifiNftmarketLoan
+     * @memberof UnunifiNftbackedloanLoan
      */
     'nft_id'?: BidderBids200ResponseBidsInnerNftId;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
-     * @memberof UnunifiNftmarketLoan
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanLoan
      */
-    'loan'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'loan'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketNftBid
+ * @interface UnunifiNftbackedloanNftBid
  */
-export interface UnunifiNftmarketNftBid {
+export interface UnunifiNftbackedloanNftBid {
     /**
      * 
      * @type {BidderBids200ResponseBidsInnerNftId}
-     * @memberof UnunifiNftmarketNftBid
+     * @memberof UnunifiNftbackedloanNftBid
      */
     'nft_id'?: BidderBids200ResponseBidsInnerNftId;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftBid
+     * @memberof UnunifiNftbackedloanNftBid
      */
     'bidder'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
-     * @memberof UnunifiNftmarketNftBid
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanNftBid
      */
-    'bid_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'bid_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
-     * @memberof UnunifiNftmarketNftBid
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanNftBid
      */
-    'deposit_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'deposit_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
-     * @memberof UnunifiNftmarketNftBid
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanNftBid
      */
-    'paid_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'paid_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftBid
+     * @memberof UnunifiNftbackedloanNftBid
      */
     'bidding_period'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftBid
+     * @memberof UnunifiNftbackedloanNftBid
      */
     'deposit_lending_rate'?: string;
     /**
      * 
      * @type {boolean}
-     * @memberof UnunifiNftmarketNftBid
+     * @memberof UnunifiNftbackedloanNftBid
      */
     'automatic_payment'?: boolean;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftBid
+     * @memberof UnunifiNftbackedloanNftBid
      */
     'bid_time'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
-     * @memberof UnunifiNftmarketNftBid
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanNftBid
      */
-    'interest_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'interest_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {Array<ListerBorrowingBidderInfoInner>}
-     * @memberof UnunifiNftmarketNftBid
+     * @memberof UnunifiNftbackedloanNftBid
      */
     'borrowings'?: Array<ListerBorrowingBidderInfoInner>;
     /**
      * 
      * @type {TodoRemoveNftIdBidderThenUseIt}
-     * @memberof UnunifiNftmarketNftBid
+     * @memberof UnunifiNftbackedloanNftBid
      */
     'id'?: TodoRemoveNftIdBidderThenUseIt;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketNftIdentifier
+ * @interface UnunifiNftbackedloanNftIdentifier
  */
-export interface UnunifiNftmarketNftIdentifier {
+export interface UnunifiNftbackedloanNftIdentifier {
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftIdentifier
+     * @memberof UnunifiNftbackedloanNftIdentifier
      */
     'class_id'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftIdentifier
+     * @memberof UnunifiNftbackedloanNftIdentifier
      */
     'nft_id'?: string;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketNftInfo
+ * @interface UnunifiNftbackedloanNftInfo
  */
-export interface UnunifiNftmarketNftInfo {
+export interface UnunifiNftbackedloanNftInfo {
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftInfo
+     * @memberof UnunifiNftbackedloanNftInfo
      */
     'id'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftInfo
+     * @memberof UnunifiNftbackedloanNftInfo
      */
     'uri'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftInfo
+     * @memberof UnunifiNftbackedloanNftInfo
      */
     'uri_hash'?: string;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketNftListing
+ * @interface UnunifiNftbackedloanNftListing
  */
-export interface UnunifiNftmarketNftListing {
+export interface UnunifiNftbackedloanNftListing {
     /**
      * 
      * @type {BidderBids200ResponseBidsInnerNftId}
-     * @memberof UnunifiNftmarketNftListing
+     * @memberof UnunifiNftbackedloanNftListing
      */
     'nft_id'?: BidderBids200ResponseBidsInnerNftId;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftListing
+     * @memberof UnunifiNftbackedloanNftListing
      */
     'owner'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftListing
+     * @memberof UnunifiNftbackedloanNftListing
      */
-    'listing_type'?: UnunifiNftmarketNftListingListingTypeEnum;
+    'listing_type'?: UnunifiNftbackedloanNftListingListingTypeEnum;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftListing
+     * @memberof UnunifiNftbackedloanNftListing
      */
-    'state'?: UnunifiNftmarketNftListingStateEnum;
+    'state'?: UnunifiNftbackedloanNftListingStateEnum;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftListing
+     * @memberof UnunifiNftbackedloanNftListing
      */
     'bid_token'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftListing
+     * @memberof UnunifiNftbackedloanNftListing
      */
     'minimum_deposit_rate'?: string;
     /**
      * 
      * @type {boolean}
-     * @memberof UnunifiNftmarketNftListing
+     * @memberof UnunifiNftbackedloanNftListing
      */
     'automatic_refinancing'?: boolean;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftListing
+     * @memberof UnunifiNftbackedloanNftListing
      */
     'started_at'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftListing
+     * @memberof UnunifiNftbackedloanNftListing
      */
     'end_at'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftListing
+     * @memberof UnunifiNftbackedloanNftListing
      */
     'full_payment_end_at'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftListing
+     * @memberof UnunifiNftbackedloanNftListing
      */
     'successful_bid_end_at'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftListing
+     * @memberof UnunifiNftbackedloanNftListing
      */
     'auto_relisted_count'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
-     * @memberof UnunifiNftmarketNftListing
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanNftListing
      */
-    'collected_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'collected_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketNftListing
+     * @memberof UnunifiNftbackedloanNftListing
      */
     'minimum_bidding_period'?: string;
 }
 
-export const UnunifiNftmarketNftListingListingTypeEnum = {
+export const UnunifiNftbackedloanNftListingListingTypeEnum = {
     DirectAssetBorrow: 'DIRECT_ASSET_BORROW',
     SyntheticAssetCreation: 'SYNTHETIC_ASSET_CREATION',
     LateShipping: 'LATE_SHIPPING'
 } as const;
 
-export type UnunifiNftmarketNftListingListingTypeEnum = typeof UnunifiNftmarketNftListingListingTypeEnum[keyof typeof UnunifiNftmarketNftListingListingTypeEnum];
-export const UnunifiNftmarketNftListingStateEnum = {
+export type UnunifiNftbackedloanNftListingListingTypeEnum = typeof UnunifiNftbackedloanNftListingListingTypeEnum[keyof typeof UnunifiNftbackedloanNftListingListingTypeEnum];
+export const UnunifiNftbackedloanNftListingStateEnum = {
     Listing: 'LISTING',
     Bidding: 'BIDDING',
     SellingDecision: 'SELLING_DECISION',
@@ -3615,199 +3584,199 @@ export const UnunifiNftmarketNftListingStateEnum = {
     SuccessfulBid: 'SUCCESSFUL_BID'
 } as const;
 
-export type UnunifiNftmarketNftListingStateEnum = typeof UnunifiNftmarketNftListingStateEnum[keyof typeof UnunifiNftmarketNftListingStateEnum];
+export type UnunifiNftbackedloanNftListingStateEnum = typeof UnunifiNftbackedloanNftListingStateEnum[keyof typeof UnunifiNftbackedloanNftListingStateEnum];
 
 /**
  * 
  * @export
- * @interface UnunifiNftmarketNftListingDetail
+ * @interface UnunifiNftbackedloanNftListingDetail
  */
-export interface UnunifiNftmarketNftListingDetail {
+export interface UnunifiNftbackedloanNftListingDetail {
     /**
      * 
      * @type {ListedNfts200ResponseListingsInnerListing}
-     * @memberof UnunifiNftmarketNftListingDetail
+     * @memberof UnunifiNftbackedloanNftListingDetail
      */
     'listing'?: ListedNfts200ResponseListingsInnerListing;
     /**
      * 
      * @type {ListedClass200ResponseNftsInner}
-     * @memberof UnunifiNftmarketNftListingDetail
+     * @memberof UnunifiNftbackedloanNftListingDetail
      */
     'nft_info'?: ListedClass200ResponseNftsInner;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketParams
+ * @interface UnunifiNftbackedloanParams
  */
-export interface UnunifiNftmarketParams {
+export interface UnunifiNftbackedloanParams {
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'min_staking_for_listing'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'default_bid_active_rank'?: string;
     /**
      * 
      * @type {Array<string>}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'bid_tokens'?: Array<string>;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'auto_relisting_count_if_no_bid'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'nft_listing_delay_seconds'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'nft_listing_period_initial'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'nft_listing_cancel_required_seconds'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'nft_listing_cancel_fee_percentage'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'nft_listing_gap_time'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'bid_cancel_required_seconds'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'bid_token_disburse_seconds_after_cancel'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'nft_listing_full_payment_period'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'nft_listing_nft_delivery_period'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'nft_creator_share_percentage'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'market_administrator'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'nft_listing_commission_fee'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketParams
+     * @memberof UnunifiNftbackedloanParams
      */
     'nft_listing_extend_seconds'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
-     * @memberof UnunifiNftmarketParams
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanParams
      */
-    'nft_listing_period_extend_fee_per_hour'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'nft_listing_period_extend_fee_per_hour'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketPaymentStatus
+ * @interface UnunifiNftbackedloanPaymentStatus
  */
-export interface UnunifiNftmarketPaymentStatus {
+export interface UnunifiNftbackedloanPaymentStatus {
     /**
      * 
      * @type {BidderBids200ResponseBidsInnerNftId}
-     * @memberof UnunifiNftmarketPaymentStatus
+     * @memberof UnunifiNftbackedloanPaymentStatus
      */
     'nft_id'?: BidderBids200ResponseBidsInnerNftId;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketPaymentStatus
+     * @memberof UnunifiNftbackedloanPaymentStatus
      */
     'bidder'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
-     * @memberof UnunifiNftmarketPaymentStatus
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanPaymentStatus
      */
-    'amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {boolean}
-     * @memberof UnunifiNftmarketPaymentStatus
+     * @memberof UnunifiNftbackedloanPaymentStatus
      */
     'automatic_payment'?: boolean;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketPaymentStatus
+     * @memberof UnunifiNftbackedloanPaymentStatus
      */
     'paid_amount'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketPaymentStatus
+     * @memberof UnunifiNftbackedloanPaymentStatus
      */
     'bid_time'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketPaymentStatus
+     * @memberof UnunifiNftbackedloanPaymentStatus
      */
-    'state'?: UnunifiNftmarketPaymentStatusStateEnum;
+    'state'?: UnunifiNftbackedloanPaymentStatusStateEnum;
     /**
      * 
      * @type {boolean}
-     * @memberof UnunifiNftmarketPaymentStatus
+     * @memberof UnunifiNftbackedloanPaymentStatus
      */
     'all_paid'?: boolean;
 }
 
-export const UnunifiNftmarketPaymentStatusStateEnum = {
+export const UnunifiNftbackedloanPaymentStatusStateEnum = {
     Listing: 'LISTING',
     Bidding: 'BIDDING',
     SellingDecision: 'SELLING_DECISION',
@@ -3815,273 +3784,273 @@ export const UnunifiNftmarketPaymentStatusStateEnum = {
     SuccessfulBid: 'SUCCESSFUL_BID'
 } as const;
 
-export type UnunifiNftmarketPaymentStatusStateEnum = typeof UnunifiNftmarketPaymentStatusStateEnum[keyof typeof UnunifiNftmarketPaymentStatusStateEnum];
+export type UnunifiNftbackedloanPaymentStatusStateEnum = typeof UnunifiNftbackedloanPaymentStatusStateEnum[keyof typeof UnunifiNftbackedloanPaymentStatusStateEnum];
 
 /**
  * 
  * @export
- * @interface UnunifiNftmarketQueryBidderBidsResponse
+ * @interface UnunifiNftbackedloanQueryBidderBidsResponse
  */
-export interface UnunifiNftmarketQueryBidderBidsResponse {
+export interface UnunifiNftbackedloanQueryBidderBidsResponse {
     /**
      * 
      * @type {Array<BidderBids200ResponseBidsInner>}
-     * @memberof UnunifiNftmarketQueryBidderBidsResponse
+     * @memberof UnunifiNftbackedloanQueryBidderBidsResponse
      */
     'bids'?: Array<BidderBids200ResponseBidsInner>;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketQueryLiquidationResponse
+ * @interface UnunifiNftbackedloanQueryLiquidationResponse
  */
-export interface UnunifiNftmarketQueryLiquidationResponse {
+export interface UnunifiNftbackedloanQueryLiquidationResponse {
     /**
      * 
      * @type {Liquidation200ResponseLiquidations}
-     * @memberof UnunifiNftmarketQueryLiquidationResponse
+     * @memberof UnunifiNftbackedloanQueryLiquidationResponse
      */
     'liquidations'?: Liquidation200ResponseLiquidations;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketQueryListedClassResponse
+ * @interface UnunifiNftbackedloanQueryListedClassResponse
  */
-export interface UnunifiNftmarketQueryListedClassResponse {
+export interface UnunifiNftbackedloanQueryListedClassResponse {
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketQueryListedClassResponse
+     * @memberof UnunifiNftbackedloanQueryListedClassResponse
      */
     'class_id'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketQueryListedClassResponse
+     * @memberof UnunifiNftbackedloanQueryListedClassResponse
      */
     'name'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketQueryListedClassResponse
+     * @memberof UnunifiNftbackedloanQueryListedClassResponse
      */
     'description'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketQueryListedClassResponse
+     * @memberof UnunifiNftbackedloanQueryListedClassResponse
      */
     'symbol'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketQueryListedClassResponse
+     * @memberof UnunifiNftbackedloanQueryListedClassResponse
      */
     'uri'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketQueryListedClassResponse
+     * @memberof UnunifiNftbackedloanQueryListedClassResponse
      */
     'urihash'?: string;
     /**
      * 
      * @type {Array<ListedClass200ResponseNftsInner>}
-     * @memberof UnunifiNftmarketQueryListedClassResponse
+     * @memberof UnunifiNftbackedloanQueryListedClassResponse
      */
     'nfts'?: Array<ListedClass200ResponseNftsInner>;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketQueryListedClassResponse
+     * @memberof UnunifiNftbackedloanQueryListedClassResponse
      */
     'nft_count'?: string;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketQueryListedClassesResponse
+ * @interface UnunifiNftbackedloanQueryListedClassesResponse
  */
-export interface UnunifiNftmarketQueryListedClassesResponse {
+export interface UnunifiNftbackedloanQueryListedClassesResponse {
     /**
      * 
      * @type {Array<ListedClass200Response>}
-     * @memberof UnunifiNftmarketQueryListedClassesResponse
+     * @memberof UnunifiNftbackedloanQueryListedClassesResponse
      */
     'classes'?: Array<ListedClass200Response>;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketQueryListedNftsResponse
+ * @interface UnunifiNftbackedloanQueryListedNftsResponse
  */
-export interface UnunifiNftmarketQueryListedNftsResponse {
+export interface UnunifiNftbackedloanQueryListedNftsResponse {
     /**
      * 
      * @type {Array<ListedNfts200ResponseListingsInner>}
-     * @memberof UnunifiNftmarketQueryListedNftsResponse
+     * @memberof UnunifiNftbackedloanQueryListedNftsResponse
      */
     'listings'?: Array<ListedNfts200ResponseListingsInner>;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketQueryLoanResponse
+ * @interface UnunifiNftbackedloanQueryLoanResponse
  */
-export interface UnunifiNftmarketQueryLoanResponse {
+export interface UnunifiNftbackedloanQueryLoanResponse {
     /**
      * 
      * @type {Loans200ResponseLoansInner}
-     * @memberof UnunifiNftmarketQueryLoanResponse
+     * @memberof UnunifiNftbackedloanQueryLoanResponse
      */
     'loan'?: Loans200ResponseLoansInner;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmarketQueryLoanResponse
+     * @memberof UnunifiNftbackedloanQueryLoanResponse
      */
     'borrowing_limit'?: string;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketQueryLoansResponse
+ * @interface UnunifiNftbackedloanQueryLoansResponse
  */
-export interface UnunifiNftmarketQueryLoansResponse {
+export interface UnunifiNftbackedloanQueryLoansResponse {
     /**
      * 
      * @type {Array<Loans200ResponseLoansInner>}
-     * @memberof UnunifiNftmarketQueryLoansResponse
+     * @memberof UnunifiNftbackedloanQueryLoansResponse
      */
     'loans'?: Array<Loans200ResponseLoansInner>;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketQueryNftBidsResponse
+ * @interface UnunifiNftbackedloanQueryNftBidsResponse
  */
-export interface UnunifiNftmarketQueryNftBidsResponse {
+export interface UnunifiNftbackedloanQueryNftBidsResponse {
     /**
      * 
      * @type {Array<BidderBids200ResponseBidsInner>}
-     * @memberof UnunifiNftmarketQueryNftBidsResponse
+     * @memberof UnunifiNftbackedloanQueryNftBidsResponse
      */
     'bids'?: Array<BidderBids200ResponseBidsInner>;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketQueryNftListingResponse
+ * @interface UnunifiNftbackedloanQueryNftListingResponse
  */
-export interface UnunifiNftmarketQueryNftListingResponse {
+export interface UnunifiNftbackedloanQueryNftListingResponse {
     /**
      * 
      * @type {ListedNfts200ResponseListingsInnerListing}
-     * @memberof UnunifiNftmarketQueryNftListingResponse
+     * @memberof UnunifiNftbackedloanQueryNftListingResponse
      */
     'listing'?: ListedNfts200ResponseListingsInnerListing;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketQueryParamsResponse
+ * @interface UnunifiNftbackedloanQueryParamsResponse
  */
-export interface UnunifiNftmarketQueryParamsResponse {
+export interface UnunifiNftbackedloanQueryParamsResponse {
     /**
      * 
-     * @type {NftmarketParams200ResponseParams}
-     * @memberof UnunifiNftmarketQueryParamsResponse
+     * @type {NftBackedLoanParams200ResponseParams}
+     * @memberof UnunifiNftbackedloanQueryParamsResponse
      */
-    'params'?: NftmarketParams200ResponseParams;
+    'params'?: NftBackedLoanParams200ResponseParams;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketQueryPaymentStatusResponse
+ * @interface UnunifiNftbackedloanQueryPaymentStatusResponse
  */
-export interface UnunifiNftmarketQueryPaymentStatusResponse {
+export interface UnunifiNftbackedloanQueryPaymentStatusResponse {
     /**
      * 
      * @type {PaymentStatus200ResponsePaymentStatus}
-     * @memberof UnunifiNftmarketQueryPaymentStatusResponse
+     * @memberof UnunifiNftbackedloanQueryPaymentStatusResponse
      */
     'paymentStatus'?: PaymentStatus200ResponsePaymentStatus;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmarketQueryRewardsResponse
+ * @interface UnunifiNftbackedloanQueryRewardsResponse
  */
-export interface UnunifiNftmarketQueryRewardsResponse {
+export interface UnunifiNftbackedloanQueryRewardsResponse {
     /**
      * 
-     * @type {Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>}
-     * @memberof UnunifiNftmarketQueryRewardsResponse
+     * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
+     * @memberof UnunifiNftbackedloanQueryRewardsResponse
      */
-    'rewards'?: Array<YieldAggregatorParams200ResponseParamsVaultCreationFee>;
+    'rewards'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmintClassAttributes
+ * @interface UnunifiNftfactoryClassAttributes
  */
-export interface UnunifiNftmintClassAttributes {
+export interface UnunifiNftfactoryClassAttributes {
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintClassAttributes
+     * @memberof UnunifiNftfactoryClassAttributes
      */
     'class_id'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintClassAttributes
+     * @memberof UnunifiNftfactoryClassAttributes
      */
     'owner'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintClassAttributes
+     * @memberof UnunifiNftfactoryClassAttributes
      */
     'base_token_uri'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintClassAttributes
+     * @memberof UnunifiNftfactoryClassAttributes
      */
-    'minting_permission'?: UnunifiNftmintClassAttributesMintingPermissionEnum;
+    'minting_permission'?: UnunifiNftfactoryClassAttributesMintingPermissionEnum;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintClassAttributes
+     * @memberof UnunifiNftfactoryClassAttributes
      */
     'token_supply_cap'?: string;
 }
 
-export const UnunifiNftmintClassAttributesMintingPermissionEnum = {
+export const UnunifiNftfactoryClassAttributesMintingPermissionEnum = {
     OnlyOwner: 'OnlyOwner',
     Anyone: 'Anyone'
 } as const;
 
-export type UnunifiNftmintClassAttributesMintingPermissionEnum = typeof UnunifiNftmintClassAttributesMintingPermissionEnum[keyof typeof UnunifiNftmintClassAttributesMintingPermissionEnum];
+export type UnunifiNftfactoryClassAttributesMintingPermissionEnum = typeof UnunifiNftfactoryClassAttributesMintingPermissionEnum[keyof typeof UnunifiNftfactoryClassAttributesMintingPermissionEnum];
 
 /**
  * 
  * @export
- * @interface UnunifiNftmintClassNameIdList
+ * @interface UnunifiNftfactoryClassNameIdList
  */
-export interface UnunifiNftmintClassNameIdList {
+export interface UnunifiNftfactoryClassNameIdList {
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintClassNameIdList
+     * @memberof UnunifiNftfactoryClassNameIdList
      */
     'class_name'?: string;
     /**
      * 
      * @type {Array<string>}
-     * @memberof UnunifiNftmintClassNameIdList
+     * @memberof UnunifiNftfactoryClassNameIdList
      */
     'class_id'?: Array<string>;
 }
@@ -4091,146 +4060,146 @@ export interface UnunifiNftmintClassNameIdList {
  * @enum {string}
  */
 
-export const UnunifiNftmintMintingPermission = {
+export const UnunifiNftfactoryMintingPermission = {
     OnlyOwner: 'OnlyOwner',
     Anyone: 'Anyone'
 } as const;
 
-export type UnunifiNftmintMintingPermission = typeof UnunifiNftmintMintingPermission[keyof typeof UnunifiNftmintMintingPermission];
+export type UnunifiNftfactoryMintingPermission = typeof UnunifiNftfactoryMintingPermission[keyof typeof UnunifiNftfactoryMintingPermission];
 
 
 /**
  * 
  * @export
- * @interface UnunifiNftmintOwningClassIdList
+ * @interface UnunifiNftfactoryOwningClassIdList
  */
-export interface UnunifiNftmintOwningClassIdList {
+export interface UnunifiNftfactoryOwningClassIdList {
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintOwningClassIdList
+     * @memberof UnunifiNftfactoryOwningClassIdList
      */
     'owner'?: string;
     /**
      * 
      * @type {Array<string>}
-     * @memberof UnunifiNftmintOwningClassIdList
+     * @memberof UnunifiNftfactoryOwningClassIdList
      */
     'class_id'?: Array<string>;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmintParams
+ * @interface UnunifiNftfactoryParams
  */
-export interface UnunifiNftmintParams {
+export interface UnunifiNftfactoryParams {
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintParams
+     * @memberof UnunifiNftfactoryParams
      */
     'MaxNFTSupplyCap'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintParams
+     * @memberof UnunifiNftfactoryParams
      */
     'MinClassNameLen'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintParams
+     * @memberof UnunifiNftfactoryParams
      */
     'MaxClassNameLen'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintParams
+     * @memberof UnunifiNftfactoryParams
      */
     'MinUriLen'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintParams
+     * @memberof UnunifiNftfactoryParams
      */
     'MaxUriLen'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintParams
+     * @memberof UnunifiNftfactoryParams
      */
     'MaxSymbolLen'?: string;
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintParams
+     * @memberof UnunifiNftfactoryParams
      */
     'MaxDescriptionLen'?: string;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmintQueryClassAttributesResponse
+ * @interface UnunifiNftfactoryQueryClassAttributesResponse
  */
-export interface UnunifiNftmintQueryClassAttributesResponse {
+export interface UnunifiNftfactoryQueryClassAttributesResponse {
     /**
      * 
      * @type {ClassAttributes200ResponseClassAttributes}
-     * @memberof UnunifiNftmintQueryClassAttributesResponse
+     * @memberof UnunifiNftfactoryQueryClassAttributesResponse
      */
     'class_attributes'?: ClassAttributes200ResponseClassAttributes;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmintQueryClassIdsByNameResponse
+ * @interface UnunifiNftfactoryQueryClassIdsByNameResponse
  */
-export interface UnunifiNftmintQueryClassIdsByNameResponse {
+export interface UnunifiNftfactoryQueryClassIdsByNameResponse {
     /**
      * 
      * @type {ClassIdsByName200ResponseClassNameIdList}
-     * @memberof UnunifiNftmintQueryClassIdsByNameResponse
+     * @memberof UnunifiNftfactoryQueryClassIdsByNameResponse
      */
     'class_name_id_list'?: ClassIdsByName200ResponseClassNameIdList;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmintQueryClassIdsByOwnerResponse
+ * @interface UnunifiNftfactoryQueryClassIdsByOwnerResponse
  */
-export interface UnunifiNftmintQueryClassIdsByOwnerResponse {
+export interface UnunifiNftfactoryQueryClassIdsByOwnerResponse {
     /**
      * 
      * @type {ClassIdsByOwner200ResponseOwningClassIdList}
-     * @memberof UnunifiNftmintQueryClassIdsByOwnerResponse
+     * @memberof UnunifiNftfactoryQueryClassIdsByOwnerResponse
      */
     'owning_class_id_list'?: ClassIdsByOwner200ResponseOwningClassIdList;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmintQueryNFTMinterResponse
+ * @interface UnunifiNftfactoryQueryNFTMinterResponse
  */
-export interface UnunifiNftmintQueryNFTMinterResponse {
+export interface UnunifiNftfactoryQueryNFTMinterResponse {
     /**
      * 
      * @type {string}
-     * @memberof UnunifiNftmintQueryNFTMinterResponse
+     * @memberof UnunifiNftfactoryQueryNFTMinterResponse
      */
     'minter'?: string;
 }
 /**
  * 
  * @export
- * @interface UnunifiNftmintQueryParamsResponse
+ * @interface UnunifiNftfactoryQueryParamsResponse
  */
-export interface UnunifiNftmintQueryParamsResponse {
+export interface UnunifiNftfactoryQueryParamsResponse {
     /**
      * 
-     * @type {NftmintParams200ResponseParams}
-     * @memberof UnunifiNftmintQueryParamsResponse
+     * @type {NftFactoryParams200ResponseParams}
+     * @memberof UnunifiNftfactoryQueryParamsResponse
      */
-    'params'?: NftmintParams200ResponseParams;
+    'params'?: NftFactoryParams200ResponseParams;
 }
 /**
  * 
@@ -4296,6 +4265,12 @@ export interface UnunifiPricefeedMarket {
 export interface UnunifiPricefeedParams {
     /**
      * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiPricefeedParams
+     */
+    'deposit_for_posting'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
      * @type {Array<MarketAll200ResponseMarketsInner>}
      * @memberof UnunifiPricefeedParams
      */
@@ -4346,10 +4321,10 @@ export interface UnunifiPricefeedQueryAllMarketResponse {
     'markets'?: Array<MarketAll200ResponseMarketsInner>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof UnunifiPricefeedQueryAllMarketResponse
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
 }
 /**
  * 
@@ -4365,10 +4340,10 @@ export interface UnunifiPricefeedQueryAllOracleResponse {
     'oracles'?: Array<string>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof UnunifiPricefeedQueryAllOracleResponse
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
 }
 /**
  * 
@@ -4384,10 +4359,10 @@ export interface UnunifiPricefeedQueryAllPriceResponse {
     'prices'?: Array<Price200ResponsePrice>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof UnunifiPricefeedQueryAllPriceResponse
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
 }
 /**
  * 
@@ -4403,10 +4378,10 @@ export interface UnunifiPricefeedQueryAllRawPriceResponse {
     'prices'?: Array<RawPriceAll200ResponsePricesInner>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof UnunifiPricefeedQueryAllRawPriceResponse
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
 }
 /**
  * 
@@ -4448,16 +4423,16 @@ export interface UnunifiYieldaggregatorParams {
     'commission_rate'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiYieldaggregatorParams
      */
-    'vault_creation_fee'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'vault_creation_fee'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiYieldaggregatorParams
      */
-    'vault_creation_deposit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'vault_creation_deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -4473,10 +4448,10 @@ export interface UnunifiYieldaggregatorQueryAllStrategyResponse {
     'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof UnunifiYieldaggregatorQueryAllStrategyResponse
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
 }
 /**
  * 
@@ -4492,10 +4467,10 @@ export interface UnunifiYieldaggregatorQueryAllVaultResponse {
     'vaults'?: Array<VaultAll200ResponseVaultsInner>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof UnunifiYieldaggregatorQueryAllVaultResponse
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
 }
 /**
  * 
@@ -4505,10 +4480,10 @@ export interface UnunifiYieldaggregatorQueryAllVaultResponse {
 export interface UnunifiYieldaggregatorQueryEstimateMintAmountResponse {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiYieldaggregatorQueryEstimateMintAmountResponse
      */
-    'mint_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'mint_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -4518,10 +4493,10 @@ export interface UnunifiYieldaggregatorQueryEstimateMintAmountResponse {
 export interface UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse {
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
      */
-    'redeem_amount'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'redeem_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -4674,10 +4649,10 @@ export interface UnunifiYieldaggregatorVault {
     'owner'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiYieldaggregatorVault
      */
-    'owner_deposit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'owner_deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
@@ -4754,10 +4729,10 @@ export interface VaultAll200Response {
     'vaults'?: Array<VaultAll200ResponseVaultsInner>;
     /**
      * 
-     * @type {MarketAll200ResponsePagination}
+     * @type {AllPositions200ResponsePagination}
      * @memberof VaultAll200Response
      */
-    'pagination'?: MarketAll200ResponsePagination;
+    'pagination'?: AllPositions200ResponsePagination;
 }
 /**
  * 
@@ -4785,10 +4760,10 @@ export interface VaultAll200ResponseVaultsInner {
     'owner'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof VaultAll200ResponseVaultsInner
      */
-    'owner_deposit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'owner_deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
@@ -4854,35 +4829,16 @@ export interface YieldAggregatorParams200ResponseParams {
     'commission_rate'?: string;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof YieldAggregatorParams200ResponseParams
      */
-    'vault_creation_fee'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
+    'vault_creation_fee'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {YieldAggregatorParams200ResponseParamsVaultCreationFee}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof YieldAggregatorParams200ResponseParams
      */
-    'vault_creation_deposit'?: YieldAggregatorParams200ResponseParamsVaultCreationFee;
-}
-/**
- * Coin defines a token with a denomination and an amount.  NOTE: The amount field is an Int which implements the custom method signatures required by gogoproto.
- * @export
- * @interface YieldAggregatorParams200ResponseParamsVaultCreationFee
- */
-export interface YieldAggregatorParams200ResponseParamsVaultCreationFee {
-    /**
-     * 
-     * @type {string}
-     * @memberof YieldAggregatorParams200ResponseParamsVaultCreationFee
-     */
-    'denom'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof YieldAggregatorParams200ResponseParamsVaultCreationFee
-     */
-    'amount'?: string;
+    'vault_creation_deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 
 /**
@@ -4975,15 +4931,15 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} subjectAddr 
+         * @param {string} address 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        allRewards: async (subjectAddr: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'subjectAddr' is not null or undefined
-            assertParamExists('allRewards', 'subjectAddr', subjectAddr)
-            const localVarPath = `/ununifi/ecosystem_incentive/all_rewards/{subject_addr}`
-                .replace(`{${"subject_addr"}}`, encodeURIComponent(String(subjectAddr)));
+        allRewards: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'address' is not null or undefined
+            assertParamExists('allRewards', 'address', address)
+            const localVarPath = `/ununifi/ecosystemincentive/rewards/{address}`
+                .replace(`{${"address"}}`, encodeURIComponent(String(address)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5070,6 +5026,39 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        belongingRecipientContainerIdsByAddr: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'address' is not null or undefined
+            assertParamExists('belongingRecipientContainerIdsByAddr', 'address', address)
+            const localVarPath = `/ununifi/ecosystemincentive/belonging-recipient-containers/{address}`
+                .replace(`{${"address"}}`, encodeURIComponent(String(address)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} bidder 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -5077,7 +5066,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         bidderBids: async (bidder: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'bidder' is not null or undefined
             assertParamExists('bidderBids', 'bidder', bidder)
-            const localVarPath = `/ununifi/nftmarket/bidder_bids/{bidder}`
+            const localVarPath = `/ununifi/nftbackedloan/bidder_bids/{bidder}`
                 .replace(`{${"bidder"}}`, encodeURIComponent(String(bidder)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -5107,7 +5096,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         cDPsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftmarket/cdps_list`;
+            const localVarPath = `/ununifi/nftbackedloan/cdps_list`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5139,7 +5128,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         classAttributes: async (classId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'classId' is not null or undefined
             assertParamExists('classAttributes', 'classId', classId)
-            const localVarPath = `/ununifi/nftmint/class_owner/{class_id}`
+            const localVarPath = `/ununifi/nftfactory/class_owner/{class_id}`
                 .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -5172,7 +5161,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         classIdsByName: async (className: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'className' is not null or undefined
             assertParamExists('classIdsByName', 'className', className)
-            const localVarPath = `/ununifi/nftmint/class_ids_by_name/{class_name}`
+            const localVarPath = `/ununifi/nftfactory/class_ids_by_name/{class_name}`
                 .replace(`{${"class_name"}}`, encodeURIComponent(String(className)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -5205,7 +5194,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         classIdsByOwner: async (owner: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'owner' is not null or undefined
             assertParamExists('classIdsByOwner', 'owner', owner)
-            const localVarPath = `/ununifi/nftmint/class_ids_by_owner/{owner}`
+            const localVarPath = `/ununifi/nftfactory/class_ids_by_owner/{owner}`
                 .replace(`{${"owner"}}`, encodeURIComponent(String(owner)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -5294,8 +5283,8 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ecosystemincentiveParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/ecosystem_incentive/params`;
+        ecosystemIncentiveParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/ecosystemincentive/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5365,7 +5354,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         estimateMintAmount: async (id: string, depositAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('estimateMintAmount', 'id', id)
-            const localVarPath = `/ununifi/yield-aggregator/vaults/{id}/estimate-mint-amount`
+            const localVarPath = `/ununifi/yieldaggregator/vaults/{id}/estimate-mint-amount`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -5403,7 +5392,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         estimateRedeemAmount: async (id: string, burnAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('estimateRedeemAmount', 'id', id)
-            const localVarPath = `/ununifi/yield-aggregator/vaults/{id}/estimate-redeem-amount`
+            const localVarPath = `/ununifi/yieldaggregator/vaults/{id}/estimate-redeem-amount`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -5470,72 +5459,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} incentiveUnitId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        incentiveUnit: async (incentiveUnitId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'incentiveUnitId' is not null or undefined
-            assertParamExists('incentiveUnit', 'incentiveUnitId', incentiveUnitId)
-            const localVarPath = `/ununifi/ecosystem_incentive/incentive_unit/{incentive_unit_id}`
-                .replace(`{${"incentive_unit_id"}}`, encodeURIComponent(String(incentiveUnitId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} address 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        incentiveUnitIdsByAddr: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'address' is not null or undefined
-            assertParamExists('incentiveUnitIdsByAddr', 'address', address)
-            const localVarPath = `/ununifi/ecosystem_incentive/incentive_unit_ids_by_addr/{address}`
-                .replace(`{${"address"}}`, encodeURIComponent(String(address)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {string} classId 
          * @param {string} nftId 
          * @param {*} [options] Override http request option.
@@ -5546,7 +5469,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             assertParamExists('liquidation', 'classId', classId)
             // verify required parameter 'nftId' is not null or undefined
             assertParamExists('liquidation', 'nftId', nftId)
-            const localVarPath = `/ununifi/nftmarket/liquidation/{class_id}/{nft_id}`
+            const localVarPath = `/ununifi/nftbackedloan/liquidation/{class_id}/{nft_id}`
                 .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
                 .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -5661,7 +5584,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             assertParamExists('listedClass', 'classId', classId)
             // verify required parameter 'nftLimit' is not null or undefined
             assertParamExists('listedClass', 'nftLimit', nftLimit)
-            const localVarPath = `/ununifi/nftmarket/listed_class/{class_id}/{nft_limit}`
+            const localVarPath = `/ununifi/nftbackedloan/listed_class/{class_id}/{nft_limit}`
                 .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
                 .replace(`{${"nft_limit"}}`, encodeURIComponent(String(nftLimit)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -5693,7 +5616,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         listedClasses: async (nftLimit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftmarket/listed_classes`;
+            const localVarPath = `/ununifi/nftbackedloan/listed_classes`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5727,7 +5650,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         listedNfts: async (owner?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftmarket/listed_nfts`;
+            const localVarPath = `/ununifi/nftbackedloan/listed_nfts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5766,7 +5689,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             assertParamExists('loan', 'classId', classId)
             // verify required parameter 'nftId' is not null or undefined
             assertParamExists('loan', 'nftId', nftId)
-            const localVarPath = `/ununifi/nftmarket/loans/{class_id}/{nft_id}`
+            const localVarPath = `/ununifi/nftbackedloan/loans/{class_id}/{nft_id}`
                 .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
                 .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -5797,7 +5720,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         loans: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftmarket/loans`;
+            const localVarPath = `/ununifi/nftbackedloan/loans`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5882,9 +5805,38 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             assertParamExists('nFTMinter', 'classId', classId)
             // verify required parameter 'nftId' is not null or undefined
             assertParamExists('nFTMinter', 'nftId', nftId)
-            const localVarPath = `/ununifi/nftmint/nft_minter/{class_id}/{nft_id}`
+            const localVarPath = `/ununifi/nftfactory/nft_minter/{class_id}/{nft_id}`
                 .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
                 .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nftBackedLoanParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/nftbackedloan/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5919,9 +5871,38 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             assertParamExists('nftBids', 'classId', classId)
             // verify required parameter 'nftId' is not null or undefined
             assertParamExists('nftBids', 'nftId', nftId)
-            const localVarPath = `/ununifi/nftmarket/nft_bids/{class_id}/{nft_id}`
+            const localVarPath = `/ununifi/nftbackedloan/nft_bids/{class_id}/{nft_id}`
                 .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
                 .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nftFactoryParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/nftfactory/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5956,67 +5937,9 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             assertParamExists('nftListing', 'classId', classId)
             // verify required parameter 'nftId' is not null or undefined
             assertParamExists('nftListing', 'nftId', nftId)
-            const localVarPath = `/ununifi/nftmarket/nft_listing/{class_id}/{nft_id}`
+            const localVarPath = `/ununifi/nftbackedloan/nft_listing/{class_id}/{nft_id}`
                 .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
                 .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        nftmarketParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftmarket/params`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        nftmintParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftmint/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -6107,7 +6030,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             assertParamExists('paymentStatus', 'nftId', nftId)
             // verify required parameter 'bidder' is not null or undefined
             assertParamExists('paymentStatus', 'bidder', bidder)
-            const localVarPath = `/ununifi/nftmarket/payment_status/{class_id}/{nft_id}/{bidder}`
+            const localVarPath = `/ununifi/nftbackedloan/payment_status/{class_id}/{nft_id}/{bidder}`
                 .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
                 .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)))
                 .replace(`{${"bidder"}}`, encodeURIComponent(String(bidder)));
@@ -6201,12 +6124,12 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {'POSITION_UNKNOWN' | 'LONG' | 'SHORT'} positionType 
+         * @param {PerpetualFuturesPositionSizePositionTypeEnum} positionType 
          * @param {string} address 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        perpetualFuturesPositionSize: async (positionType: 'POSITION_UNKNOWN' | 'LONG' | 'SHORT', address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        perpetualFuturesPositionSize: async (positionType: PerpetualFuturesPositionSizePositionTypeEnum, address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'positionType' is not null or undefined
             assertParamExists('perpetualFuturesPositionSize', 'positionType', positionType)
             // verify required parameter 'address' is not null or undefined
@@ -6531,17 +6454,50 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        recipientContainer: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('recipientContainer', 'id', id)
+            const localVarPath = `/ununifi/ecosystemincentive/recipient-containers/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} classId 
          * @param {string} nftId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        recordedIncentiveUnitId: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        recordedRecipientContainerId: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'classId' is not null or undefined
-            assertParamExists('recordedIncentiveUnitId', 'classId', classId)
+            assertParamExists('recordedRecipientContainerId', 'classId', classId)
             // verify required parameter 'nftId' is not null or undefined
-            assertParamExists('recordedIncentiveUnitId', 'nftId', nftId)
-            const localVarPath = `/ununifi/ecosystem_incentive/recorded_incentive_unit_id/{class_id}/{nft_id}`
+            assertParamExists('recordedRecipientContainerId', 'nftId', nftId)
+            const localVarPath = `/ununifi/ecosystemincentive/recorded-recipient-containers/{class_id}/{nft_id}`
                 .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
                 .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -6568,18 +6524,18 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} subjectAddr 
+         * @param {string} address 
          * @param {string} denom 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reward: async (subjectAddr: string, denom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'subjectAddr' is not null or undefined
-            assertParamExists('reward', 'subjectAddr', subjectAddr)
+        reward: async (address: string, denom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'address' is not null or undefined
+            assertParamExists('reward', 'address', address)
             // verify required parameter 'denom' is not null or undefined
             assertParamExists('reward', 'denom', denom)
-            const localVarPath = `/ununifi/ecosystem_incentive/reward/{subject_addr}/{denom}`
-                .replace(`{${"subject_addr"}}`, encodeURIComponent(String(subjectAddr)))
+            const localVarPath = `/ununifi/ecosystemincentive/rewards/{address}/{denom}`
+                .replace(`{${"address"}}`, encodeURIComponent(String(address)))
                 .replace(`{${"denom"}}`, encodeURIComponent(String(denom)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6612,7 +6568,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         rewards: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'address' is not null or undefined
             assertParamExists('rewards', 'address', address)
-            const localVarPath = `/ununifi/nftmarket/rewards/{address}`
+            const localVarPath = `/ununifi/nftbackedloan/rewards/{address}`
                 .replace(`{${"address"}}`, encodeURIComponent(String(address)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6646,7 +6602,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         strategy: async (id: string, denom?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('strategy', 'id', id)
-            const localVarPath = `/ununifi/yield-aggregator/strategies/{id}`
+            const localVarPath = `/ununifi/yieldaggregator/strategies/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6685,7 +6641,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         strategyAll: async (denom?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/yield-aggregator/strategies/query-param`;
+            const localVarPath = `/ununifi/yieldaggregator/strategies`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -6737,7 +6693,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         vault: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('vault', 'id', id)
-            const localVarPath = `/ununifi/yield-aggregator/vaults/{id}`
+            const localVarPath = `/ununifi/yieldaggregator/vaults/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6772,7 +6728,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         vaultAll: async (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/yield-aggregator/vaults`;
+            const localVarPath = `/ununifi/yieldaggregator/vaults`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -6818,7 +6774,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         yieldAggregatorParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/yield-aggregator/params`;
+            const localVarPath = `/ununifi/yieldaggregator/params`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -6876,12 +6832,12 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} subjectAddr 
+         * @param {string} address 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async allRewards(subjectAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllRewards200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.allRewards(subjectAddr, options);
+        async allRewards(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllRewards200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.allRewards(address, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6901,6 +6857,16 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async availableAssetsInPool(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AvailableAssetsInPool200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.availableAssetsInPool(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async belongingRecipientContainerIdsByAddr(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BelongingRecipientContainerIdsByAddr200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.belongingRecipientContainerIdsByAddr(address, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6977,8 +6943,8 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async ecosystemincentiveParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EcosystemincentiveParams200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.ecosystemincentiveParams(options);
+        async ecosystemIncentiveParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EcosystemIncentiveParams200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.ecosystemIncentiveParams(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -7023,26 +6989,6 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRedeemTokenAmount200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemTokenAmount(redeemDenom, lptAmount, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} incentiveUnitId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async incentiveUnit(incentiveUnitId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IncentiveUnit200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.incentiveUnit(incentiveUnitId, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} address 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async incentiveUnitIdsByAddr(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IncentiveUnitIdsByAddr200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.incentiveUnitIdsByAddr(address, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -7156,6 +7102,15 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async nftBackedLoanParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NftBackedLoanParams200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.nftBackedLoanParams(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} classId 
          * @param {string} nftId 
          * @param {*} [options] Override http request option.
@@ -7167,6 +7122,15 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async nftFactoryParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NftFactoryParams200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.nftFactoryParams(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} classId 
          * @param {string} nftId 
          * @param {*} [options] Override http request option.
@@ -7174,24 +7138,6 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async nftListing(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NftListing200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.nftListing(classId, nftId, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async nftmarketParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NftmarketParams200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.nftmarketParams(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async nftmintParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NftmintParams200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.nftmintParams(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -7242,12 +7188,12 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {'POSITION_UNKNOWN' | 'LONG' | 'SHORT'} positionType 
+         * @param {PerpetualFuturesPositionSizePositionTypeEnum} positionType 
          * @param {string} address 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async perpetualFuturesPositionSize(positionType: 'POSITION_UNKNOWN' | 'LONG' | 'SHORT', address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PerpetualFuturesPositionSize200Response>> {
+        async perpetualFuturesPositionSize(positionType: PerpetualFuturesPositionSizePositionTypeEnum, address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PerpetualFuturesPositionSize200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualFuturesPositionSize(positionType, address, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -7339,24 +7285,34 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async recipientContainer(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RecipientContainer200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.recipientContainer(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} classId 
          * @param {string} nftId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async recordedIncentiveUnitId(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RecordedIncentiveUnitId200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.recordedIncentiveUnitId(classId, nftId, options);
+        async recordedRecipientContainerId(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RecordedRecipientContainerId200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.recordedRecipientContainerId(classId, nftId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {string} subjectAddr 
+         * @param {string} address 
          * @param {string} denom 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async reward(subjectAddr: string, denom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Reward200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.reward(subjectAddr, denom, options);
+        async reward(address: string, denom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Reward200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.reward(address, denom, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -7461,12 +7417,12 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} subjectAddr 
+         * @param {string} address 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        allRewards(subjectAddr: string, options?: any): AxiosPromise<AllRewards200Response> {
-            return localVarFp.allRewards(subjectAddr, options).then((request) => request(axios, basePath));
+        allRewards(address: string, options?: any): AxiosPromise<AllRewards200Response> {
+            return localVarFp.allRewards(address, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7484,6 +7440,15 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         availableAssetsInPool(options?: any): AxiosPromise<AvailableAssetsInPool200Response> {
             return localVarFp.availableAssetsInPool(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} address 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        belongingRecipientContainerIdsByAddr(address: string, options?: any): AxiosPromise<BelongingRecipientContainerIdsByAddr200Response> {
+            return localVarFp.belongingRecipientContainerIdsByAddr(address, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7552,8 +7517,8 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ecosystemincentiveParams(options?: any): AxiosPromise<EcosystemincentiveParams200Response> {
-            return localVarFp.ecosystemincentiveParams(options).then((request) => request(axios, basePath));
+        ecosystemIncentiveParams(options?: any): AxiosPromise<EcosystemIncentiveParams200Response> {
+            return localVarFp.ecosystemIncentiveParams(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7594,24 +7559,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: any): AxiosPromise<EstimateRedeemTokenAmount200Response> {
             return localVarFp.estimateRedeemTokenAmount(redeemDenom, lptAmount, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} incentiveUnitId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        incentiveUnit(incentiveUnitId: string, options?: any): AxiosPromise<IncentiveUnit200Response> {
-            return localVarFp.incentiveUnit(incentiveUnitId, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} address 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        incentiveUnitIdsByAddr(address: string, options?: any): AxiosPromise<IncentiveUnitIdsByAddr200Response> {
-            return localVarFp.incentiveUnitIdsByAddr(address, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7714,6 +7661,14 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nftBackedLoanParams(options?: any): AxiosPromise<NftBackedLoanParams200Response> {
+            return localVarFp.nftBackedLoanParams(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {string} classId 
          * @param {string} nftId 
          * @param {*} [options] Override http request option.
@@ -7724,6 +7679,14 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nftFactoryParams(options?: any): AxiosPromise<NftFactoryParams200Response> {
+            return localVarFp.nftFactoryParams(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {string} classId 
          * @param {string} nftId 
          * @param {*} [options] Override http request option.
@@ -7731,22 +7694,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         nftListing(classId: string, nftId: string, options?: any): AxiosPromise<NftListing200Response> {
             return localVarFp.nftListing(classId, nftId, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        nftmarketParams(options?: any): AxiosPromise<NftmarketParams200Response> {
-            return localVarFp.nftmarketParams(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        nftmintParams(options?: any): AxiosPromise<NftmintParams200Response> {
-            return localVarFp.nftmintParams(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7792,12 +7739,12 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {'POSITION_UNKNOWN' | 'LONG' | 'SHORT'} positionType 
+         * @param {PerpetualFuturesPositionSizePositionTypeEnum} positionType 
          * @param {string} address 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        perpetualFuturesPositionSize(positionType: 'POSITION_UNKNOWN' | 'LONG' | 'SHORT', address: string, options?: any): AxiosPromise<PerpetualFuturesPositionSize200Response> {
+        perpetualFuturesPositionSize(positionType: PerpetualFuturesPositionSizePositionTypeEnum, address: string, options?: any): AxiosPromise<PerpetualFuturesPositionSize200Response> {
             return localVarFp.perpetualFuturesPositionSize(positionType, address, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7880,23 +7827,32 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        recipientContainer(id: string, options?: any): AxiosPromise<RecipientContainer200Response> {
+            return localVarFp.recipientContainer(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {string} classId 
          * @param {string} nftId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        recordedIncentiveUnitId(classId: string, nftId: string, options?: any): AxiosPromise<RecordedIncentiveUnitId200Response> {
-            return localVarFp.recordedIncentiveUnitId(classId, nftId, options).then((request) => request(axios, basePath));
+        recordedRecipientContainerId(classId: string, nftId: string, options?: any): AxiosPromise<RecordedRecipientContainerId200Response> {
+            return localVarFp.recordedRecipientContainerId(classId, nftId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} subjectAddr 
+         * @param {string} address 
          * @param {string} denom 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reward(subjectAddr: string, denom: string, options?: any): AxiosPromise<Reward200Response> {
-            return localVarFp.reward(subjectAddr, denom, options).then((request) => request(axios, basePath));
+        reward(address: string, denom: string, options?: any): AxiosPromise<Reward200Response> {
+            return localVarFp.reward(address, denom, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7998,13 +7954,13 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} subjectAddr 
+     * @param {string} address 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public allRewards(subjectAddr: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).allRewards(subjectAddr, options).then((request) => request(this.axios, this.basePath));
+    public allRewards(address: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).allRewards(address, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8026,6 +7982,17 @@ export class QueryApi extends BaseAPI {
      */
     public availableAssetsInPool(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).availableAssetsInPool(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} address 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public belongingRecipientContainerIdsByAddr(address: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).belongingRecipientContainerIdsByAddr(address, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8110,8 +8077,8 @@ export class QueryApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public ecosystemincentiveParams(options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).ecosystemincentiveParams(options).then((request) => request(this.axios, this.basePath));
+    public ecosystemIncentiveParams(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).ecosystemIncentiveParams(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8160,28 +8127,6 @@ export class QueryApi extends BaseAPI {
      */
     public estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).estimateRedeemTokenAmount(redeemDenom, lptAmount, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} incentiveUnitId 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public incentiveUnit(incentiveUnitId: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).incentiveUnit(incentiveUnitId, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} address 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public incentiveUnitIdsByAddr(address: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).incentiveUnitIdsByAddr(address, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8305,6 +8250,16 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public nftBackedLoanParams(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).nftBackedLoanParams(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {string} classId 
      * @param {string} nftId 
      * @param {*} [options] Override http request option.
@@ -8317,6 +8272,16 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public nftFactoryParams(options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).nftFactoryParams(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {string} classId 
      * @param {string} nftId 
      * @param {*} [options] Override http request option.
@@ -8325,26 +8290,6 @@ export class QueryApi extends BaseAPI {
      */
     public nftListing(classId: string, nftId: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).nftListing(classId, nftId, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public nftmarketParams(options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).nftmarketParams(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public nftmintParams(options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).nftmintParams(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8399,13 +8344,13 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {'POSITION_UNKNOWN' | 'LONG' | 'SHORT'} positionType 
+     * @param {PerpetualFuturesPositionSizePositionTypeEnum} positionType 
      * @param {string} address 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public perpetualFuturesPositionSize(positionType: 'POSITION_UNKNOWN' | 'LONG' | 'SHORT', address: string, options?: AxiosRequestConfig) {
+    public perpetualFuturesPositionSize(positionType: PerpetualFuturesPositionSizePositionTypeEnum, address: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).perpetualFuturesPositionSize(positionType, address, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -8505,26 +8450,37 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public recipientContainer(id: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).recipientContainer(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {string} classId 
      * @param {string} nftId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public recordedIncentiveUnitId(classId: string, nftId: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).recordedIncentiveUnitId(classId, nftId, options).then((request) => request(this.axios, this.basePath));
+    public recordedRecipientContainerId(classId: string, nftId: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).recordedRecipientContainerId(classId, nftId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} subjectAddr 
+     * @param {string} address 
      * @param {string} denom 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public reward(subjectAddr: string, denom: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).reward(subjectAddr, denom, options).then((request) => request(this.axios, this.basePath));
+    public reward(address: string, denom: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).reward(address, denom, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8602,5 +8558,15 @@ export class QueryApi extends BaseAPI {
         return QueryApiFp(this.configuration).yieldAggregatorParams(options).then((request) => request(this.axios, this.basePath));
     }
 }
+
+/**
+ * @export
+ */
+export const PerpetualFuturesPositionSizePositionTypeEnum = {
+    PositionUnknown: 'POSITION_UNKNOWN',
+    Long: 'LONG',
+    Short: 'SHORT'
+} as const;
+export type PerpetualFuturesPositionSizePositionTypeEnum = typeof PerpetualFuturesPositionSizePositionTypeEnum[keyof typeof PerpetualFuturesPositionSizePositionTypeEnum];
 
 
