@@ -167,6 +167,18 @@ export interface AllPositions200ResponsePositionsInner {
     'remaining_margin'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'levied_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'levied_amount_negative'?: boolean;
+    /**
+     * 
      * @type {string}
      * @memberof AllPositions200ResponsePositionsInner
      */
@@ -2637,6 +2649,18 @@ export interface UnunifiDerivativesPosition {
      * @memberof UnunifiDerivativesPosition
      */
     'remaining_margin'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'levied_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'levied_amount_negative'?: boolean;
     /**
      * 
      * @type {string}
