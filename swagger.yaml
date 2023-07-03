@@ -1202,40 +1202,10 @@ paths:
             properties:
               metrics_quote_ticker:
                 type: string
-              volume_24hours:
-                type: string
-              fees_24hours:
-                type: string
               long_positions:
-                type: object
-                properties:
-                  denom:
-                    type: string
-                  amount:
-                    type: string
-                description: >-
-                  Coin defines a token with a denomination and an amount.
-
-
-                  NOTE: The amount field is an Int which implements the custom
-                  method
-
-                  signatures required by gogoproto.
+                type: string
               short_positions:
-                type: object
-                properties:
-                  denom:
-                    type: string
-                  amount:
-                    type: string
-                description: >-
-                  Coin defines a token with a denomination and an amount.
-
-
-                  NOTE: The amount field is an Int which implements the custom
-                  method
-
-                  signatures required by gogoproto.
+                type: string
         default:
           description: An unexpected error response.
           schema:
@@ -1441,10 +1411,6 @@ paths:
               price:
                 type: string
               metrics_quote_ticker:
-                type: string
-              volume_24hours:
-                type: string
-              fees_24hours:
                 type: string
               long_positions:
                 type: string
@@ -2095,10 +2061,6 @@ paths:
                           type: string
                         reserved:
                           type: string
-              volume_24hours:
-                type: string
-              fees_24hours:
-                type: string
         default:
           description: An unexpected error response.
           schema:
@@ -3004,6 +2966,23 @@ paths:
                         custom method
 
                         signatures required by gogoproto.
+                    levied_amount:
+                      type: object
+                      properties:
+                        denom:
+                          type: string
+                        amount:
+                          type: string
+                      description: >-
+                        Coin defines a token with a denomination and an amount.
+
+
+                        NOTE: The amount field is an Int which implements the
+                        custom method
+
+                        signatures required by gogoproto.
+                    levied_amount_negative:
+                      type: boolean
                     last_levied_at:
                       type: string
                       format: date-time
@@ -3731,6 +3710,23 @@ paths:
                       custom method
 
                       signatures required by gogoproto.
+                  levied_amount:
+                    type: object
+                    properties:
+                      denom:
+                        type: string
+                      amount:
+                        type: string
+                    description: >-
+                      Coin defines a token with a denomination and an amount.
+
+
+                      NOTE: The amount field is an Int which implements the
+                      custom method
+
+                      signatures required by gogoproto.
+                  levied_amount_negative:
+                    type: boolean
                   last_levied_at:
                     type: string
                     format: date-time
@@ -4195,6 +4191,24 @@ paths:
                             the custom method
 
                             signatures required by gogoproto.
+                        levied_amount:
+                          type: object
+                          properties:
+                            denom:
+                              type: string
+                            amount:
+                              type: string
+                          description: >-
+                            Coin defines a token with a denomination and an
+                            amount.
+
+
+                            NOTE: The amount field is an Int which implements
+                            the custom method
+
+                            signatures required by gogoproto.
+                        levied_amount_negative:
+                          type: boolean
                         last_levied_at:
                           type: string
                           format: date-time
@@ -4684,11 +4698,18 @@ paths:
                                   - UNKNOWN
                                   - STAKERS
                                   - FRONTEND_DEVELOPERS
+                                  - COMMUNITY_POOL
                                 default: UNKNOWN
                                 description: >-
-                                  NFTMARKET_FRONTEND type reward will be
+                                  STAKERS type reward will be distributed for
+                                  the stakers of GUU token.
+
+                                  FRONTEND_DEVELOPERS type reward will be
                                   disributed for the creators of frontend of
                                   UnUniFi's services.
+
+                                  COMMUNITY_POOL type reward will be distributed
+                                  for the community pool.
                               rate:
                                 type: string
                             title: >-
@@ -4703,7 +4724,7 @@ paths:
 
                         to maintain the correctness of the fee rate in a module
 
-                        e.g. if nftmarket module have "Frontend" and
+                        e.g. if nftbackedloan module have "Frontend" and
                         "Collection" incentive, 
 
                         the combined those rates for the incentive cannot be
@@ -4945,7 +4966,7 @@ paths:
           type: string
       tags:
         - Query
-  /ununifi/nftbackedloan/bidder_bids/{bidder}:
+  /ununifi/nftbackedloan/bidder-bids/{bidder}:
     get:
       operationId: BidderBids
       responses:
@@ -4959,15 +4980,18 @@ paths:
                 items:
                   type: object
                   properties:
-                    nft_id:
+                    id:
                       type: object
                       properties:
-                        class_id:
-                          type: string
                         nft_id:
+                          type: object
+                          properties:
+                            class_id:
+                              type: string
+                            nft_id:
+                              type: string
+                        bidder:
                           type: string
-                    bidder:
-                      type: string
                     bid_amount:
                       type: object
                       properties:
@@ -5079,19 +5103,6 @@ paths:
                             type: string
                             format: date-time
                       title: lister borrowing bidder info
-                    id:
-                      title: todo remove nft_id,bidder then use it
-                      type: object
-                      properties:
-                        nft_id:
-                          type: object
-                          properties:
-                            class_id:
-                              type: string
-                            nft_id:
-                              type: string
-                        bidder:
-                          type: string
         default:
           description: An unexpected error response.
           schema:
@@ -5119,38 +5130,6 @@ paths:
           in: path
           required: true
           type: string
-      tags:
-        - Query
-  /ununifi/nftbackedloan/cdps_list:
-    get:
-      operationId: CDPsList
-      responses:
-        '200':
-          description: A successful response.
-          schema:
-            type: object
-        default:
-          description: An unexpected error response.
-          schema:
-            type: object
-            properties:
-              error:
-                type: string
-              code:
-                type: integer
-                format: int32
-              message:
-                type: string
-              details:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    type_url:
-                      type: string
-                    value:
-                      type: string
-                      format: byte
       tags:
         - Query
   /ununifi/nftbackedloan/liquidation/{class_id}/{nft_id}:
@@ -5244,7 +5223,7 @@ paths:
           type: string
       tags:
         - Query
-  /ununifi/nftbackedloan/listed_class/{class_id}/{nft_limit}:
+  /ununifi/nftbackedloan/listed-class/{class_id}/{nft_limit}:
     get:
       operationId: ListedClass
       responses:
@@ -5313,7 +5292,7 @@ paths:
           format: int32
       tags:
         - Query
-  /ununifi/nftbackedloan/listed_classes:
+  /ununifi/nftbackedloan/listed-classes:
     get:
       operationId: ListedClasses
       responses:
@@ -5383,7 +5362,7 @@ paths:
           format: int32
       tags:
         - Query
-  /ununifi/nftbackedloan/listed_nfts:
+  /ununifi/nftbackedloan/listed-nfts:
     get:
       operationId: ListedNfts
       responses:
@@ -5409,22 +5388,16 @@ paths:
                               type: string
                         owner:
                           type: string
-                        listing_type:
-                          type: string
-                          enum:
-                            - DIRECT_ASSET_BORROW
-                            - SYNTHETIC_ASSET_CREATION
-                            - LATE_SHIPPING
-                          default: DIRECT_ASSET_BORROW
                         state:
                           type: string
                           enum:
+                            - UNKNOWN
                             - LISTING
                             - BIDDING
                             - SELLING_DECISION
-                            - END_LISTING
+                            - LIQUIDATION
                             - SUCCESSFUL_BID
-                          default: LISTING
+                          default: UNKNOWN
                         bid_token:
                           type: string
                         minimum_deposit_rate:
@@ -5462,6 +5435,8 @@ paths:
                             the custom method
 
                             signatures required by gogoproto.
+                        collected_amount_negative:
+                          type: boolean
                         minimum_bidding_period:
                           type: string
                     nft_info:
@@ -5631,7 +5606,7 @@ paths:
           type: string
       tags:
         - Query
-  /ununifi/nftbackedloan/nft_bids/{class_id}/{nft_id}:
+  /ununifi/nftbackedloan/nft-bids/{class_id}/{nft_id}:
     get:
       operationId: NftBids
       responses:
@@ -5645,15 +5620,18 @@ paths:
                 items:
                   type: object
                   properties:
-                    nft_id:
+                    id:
                       type: object
                       properties:
-                        class_id:
-                          type: string
                         nft_id:
+                          type: object
+                          properties:
+                            class_id:
+                              type: string
+                            nft_id:
+                              type: string
+                        bidder:
                           type: string
-                    bidder:
-                      type: string
                     bid_amount:
                       type: object
                       properties:
@@ -5765,19 +5743,6 @@ paths:
                             type: string
                             format: date-time
                       title: lister borrowing bidder info
-                    id:
-                      title: todo remove nft_id,bidder then use it
-                      type: object
-                      properties:
-                        nft_id:
-                          type: object
-                          properties:
-                            class_id:
-                              type: string
-                            nft_id:
-                              type: string
-                        bidder:
-                          type: string
         default:
           description: An unexpected error response.
           schema:
@@ -5811,7 +5776,7 @@ paths:
           type: string
       tags:
         - Query
-  /ununifi/nftbackedloan/nft_listing/{class_id}/{nft_id}:
+  /ununifi/nftbackedloan/nft-listing/{class_id}/{nft_id}:
     get:
       operationId: NftListing
       responses:
@@ -5832,22 +5797,16 @@ paths:
                         type: string
                   owner:
                     type: string
-                  listing_type:
-                    type: string
-                    enum:
-                      - DIRECT_ASSET_BORROW
-                      - SYNTHETIC_ASSET_CREATION
-                      - LATE_SHIPPING
-                    default: DIRECT_ASSET_BORROW
                   state:
                     type: string
                     enum:
+                      - UNKNOWN
                       - LISTING
                       - BIDDING
                       - SELLING_DECISION
-                      - END_LISTING
+                      - LIQUIDATION
                       - SUCCESSFUL_BID
-                    default: LISTING
+                    default: UNKNOWN
                   bid_token:
                     type: string
                   minimum_deposit_rate:
@@ -5884,6 +5843,8 @@ paths:
                       custom method
 
                       signatures required by gogoproto.
+                  collected_amount_negative:
+                    type: boolean
                   minimum_bidding_period:
                     type: string
         default:
@@ -6020,7 +5981,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /ununifi/nftbackedloan/payment_status/{class_id}/{nft_id}/{bidder}:
+  /ununifi/nftbackedloan/payment-status/{class_id}/{nft_id}/{bidder}:
     get:
       operationId: PaymentStatus
       responses:
@@ -6066,12 +6027,13 @@ paths:
                   state:
                     type: string
                     enum:
+                      - UNKNOWN
                       - LISTING
                       - BIDDING
                       - SELLING_DECISION
-                      - END_LISTING
+                      - LIQUIDATION
                       - SUCCESSFUL_BID
-                    default: LISTING
+                    default: UNKNOWN
                   all_paid:
                     type: boolean
         default:
@@ -8264,6 +8226,20 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
+      levied_amount:
+        type: object
+        properties:
+          denom:
+            type: string
+          amount:
+            type: string
+        description: |-
+          Coin defines a token with a denomination and an amount.
+
+          NOTE: The amount field is an Int which implements the custom method
+          signatures required by gogoproto.
+      levied_amount_negative:
+        type: boolean
       last_levied_at:
         type: string
         format: date-time
@@ -8477,6 +8453,23 @@ definitions:
               method
 
               signatures required by gogoproto.
+          levied_amount:
+            type: object
+            properties:
+              denom:
+                type: string
+              amount:
+                type: string
+            description: >-
+              Coin defines a token with a denomination and an amount.
+
+
+              NOTE: The amount field is an Int which implements the custom
+              method
+
+              signatures required by gogoproto.
+          levied_amount_negative:
+            type: boolean
           last_levied_at:
             type: string
             format: date-time
@@ -8722,6 +8715,23 @@ definitions:
                     method
 
                     signatures required by gogoproto.
+                levied_amount:
+                  type: object
+                  properties:
+                    denom:
+                      type: string
+                    amount:
+                      type: string
+                  description: >-
+                    Coin defines a token with a denomination and an amount.
+
+
+                    NOTE: The amount field is an Int which implements the custom
+                    method
+
+                    signatures required by gogoproto.
+                levied_amount_negative:
+                  type: boolean
                 last_levied_at:
                   type: string
                   format: date-time
@@ -8980,6 +8990,23 @@ definitions:
                 method
 
                 signatures required by gogoproto.
+            levied_amount:
+              type: object
+              properties:
+                denom:
+                  type: string
+                amount:
+                  type: string
+              description: >-
+                Coin defines a token with a denomination and an amount.
+
+
+                NOTE: The amount field is an Int which implements the custom
+                method
+
+                signatures required by gogoproto.
+            levied_amount_negative:
+              type: boolean
             last_levied_at:
               type: string
               format: date-time
@@ -9374,10 +9401,6 @@ definitions:
         type: string
       metrics_quote_ticker:
         type: string
-      volume_24hours:
-        type: string
-      fees_24hours:
-        type: string
       long_positions:
         type: string
       short_positions:
@@ -9402,34 +9425,10 @@ definitions:
     properties:
       metrics_quote_ticker:
         type: string
-      volume_24hours:
-        type: string
-      fees_24hours:
-        type: string
       long_positions:
-        type: object
-        properties:
-          denom:
-            type: string
-          amount:
-            type: string
-        description: |-
-          Coin defines a token with a denomination and an amount.
-
-          NOTE: The amount field is an Int which implements the custom method
-          signatures required by gogoproto.
+        type: string
       short_positions:
-        type: object
-        properties:
-          denom:
-            type: string
-          amount:
-            type: string
-        description: |-
-          Coin defines a token with a denomination and an amount.
-
-          NOTE: The amount field is an Int which implements the custom method
-          signatures required by gogoproto.
+        type: string
   ununifi.derivatives.QueryPerpetualOptionsMarketResponse:
     type: object
   ununifi.derivatives.QueryPerpetualOptionsResponse:
@@ -9459,10 +9458,6 @@ definitions:
                   type: string
                 reserved:
                   type: string
-      volume_24hours:
-        type: string
-      fees_24hours:
-        type: string
   ununifi.derivatives.QueryPositionResponse:
     type: object
     properties:
@@ -9505,6 +9500,23 @@ definitions:
               method
 
               signatures required by gogoproto.
+          levied_amount:
+            type: object
+            properties:
+              denom:
+                type: string
+              amount:
+                type: string
+            description: >-
+              Coin defines a token with a denomination and an amount.
+
+
+              NOTE: The amount field is an Int which implements the custom
+              method
+
+              signatures required by gogoproto.
+          levied_amount_negative:
+            type: boolean
           last_levied_at:
             type: string
             format: date-time
@@ -9722,10 +9734,17 @@ definitions:
                       - UNKNOWN
                       - STAKERS
                       - FRONTEND_DEVELOPERS
+                      - COMMUNITY_POOL
                     default: UNKNOWN
                     description: >-
-                      NFTMARKET_FRONTEND type reward will be disributed for the
+                      STAKERS type reward will be distributed for the stakers of
+                      GUU token.
+
+                      FRONTEND_DEVELOPERS type reward will be disributed for the
                       creators of frontend of UnUniFi's services.
+
+                      COMMUNITY_POOL type reward will be distributed for the
+                      community pool.
                   rate:
                     type: string
                 title: >-
@@ -9738,7 +9757,7 @@ definitions:
 
             to maintain the correctness of the fee rate in a module
 
-            e.g. if nftmarket module have "Frontend" and "Collection"
+            e.g. if nftbackedloan module have "Frontend" and "Collection"
             incentive, 
 
             the combined those rates for the incentive cannot be exceed 1
@@ -9800,10 +9819,17 @@ definitions:
                           - UNKNOWN
                           - STAKERS
                           - FRONTEND_DEVELOPERS
+                          - COMMUNITY_POOL
                         default: UNKNOWN
                         description: >-
-                          NFTMARKET_FRONTEND type reward will be disributed for
+                          STAKERS type reward will be distributed for the
+                          stakers of GUU token.
+
+                          FRONTEND_DEVELOPERS type reward will be disributed for
                           the creators of frontend of UnUniFi's services.
+
+                          COMMUNITY_POOL type reward will be distributed for the
+                          community pool.
                       rate:
                         type: string
                     title: >-
@@ -9818,7 +9844,7 @@ definitions:
 
                 to maintain the correctness of the fee rate in a module
 
-                e.g. if nftmarket module have "Frontend" and "Collection"
+                e.g. if nftbackedloan module have "Frontend" and "Collection"
                 incentive, 
 
                 the combined those rates for the incentive cannot be exceed 1
@@ -9889,10 +9915,17 @@ definitions:
                 - UNKNOWN
                 - STAKERS
                 - FRONTEND_DEVELOPERS
+                - COMMUNITY_POOL
               default: UNKNOWN
               description: >-
-                NFTMARKET_FRONTEND type reward will be disributed for the
+                STAKERS type reward will be distributed for the stakers of GUU
+                token.
+
+                FRONTEND_DEVELOPERS type reward will be disributed for the
                 creators of frontend of UnUniFi's services.
+
+                COMMUNITY_POOL type reward will be distributed for the community
+                pool.
             rate:
               type: string
           title: >-
@@ -9903,7 +9936,7 @@ definitions:
     title: |-
       RewardParams defines which module have which rewards type and rate 
       to maintain the correctness of the fee rate in a module
-      e.g. if nftmarket module have "Frontend" and "Collection" incentive, 
+      e.g. if nftbackedloan module have "Frontend" and "Collection" incentive, 
       the combined those rates for the incentive cannot be exceed 1
   ununifi.ecosystemincentive.RewardRate:
     type: object
@@ -9914,10 +9947,15 @@ definitions:
           - UNKNOWN
           - STAKERS
           - FRONTEND_DEVELOPERS
+          - COMMUNITY_POOL
         default: UNKNOWN
         description: >-
-          NFTMARKET_FRONTEND type reward will be disributed for the creators of
+          STAKERS type reward will be distributed for the stakers of GUU token.
+
+          FRONTEND_DEVELOPERS type reward will be disributed for the creators of
           frontend of UnUniFi's services.
+
+          COMMUNITY_POOL type reward will be distributed for the community pool.
       rate:
         type: string
     title: |-
@@ -9948,10 +9986,15 @@ definitions:
       - UNKNOWN
       - STAKERS
       - FRONTEND_DEVELOPERS
+      - COMMUNITY_POOL
     default: UNKNOWN
     description: >-
-      NFTMARKET_FRONTEND type reward will be disributed for the creators of
+      STAKERS type reward will be distributed for the stakers of GUU token.
+
+      FRONTEND_DEVELOPERS type reward will be disributed for the creators of
       frontend of UnUniFi's services.
+
+      COMMUNITY_POOL type reward will be distributed for the community pool.
   ununifi.ecosystemincentive.WeightedAddress:
     type: object
     properties:
@@ -9971,6 +10014,36 @@ definitions:
             type: string
       bidder:
         type: string
+  ununifi.nftbackedloan.Borrowing:
+    type: object
+    properties:
+      amount:
+        type: object
+        properties:
+          denom:
+            type: string
+          amount:
+            type: string
+        description: |-
+          Coin defines a token with a denomination and an amount.
+
+          NOTE: The amount field is an Int which implements the custom method
+          signatures required by gogoproto.
+      paid_interest_amount:
+        type: object
+        properties:
+          denom:
+            type: string
+          amount:
+            type: string
+        description: |-
+          Coin defines a token with a denomination and an amount.
+
+          NOTE: The amount field is an Int which implements the custom method
+          signatures required by gogoproto.
+      start_at:
+        type: string
+        format: date-time
   ununifi.nftbackedloan.Liquidation:
     type: object
     properties:
@@ -10039,19 +10112,13 @@ definitions:
   ununifi.nftbackedloan.ListingState:
     type: string
     enum:
+      - UNKNOWN
       - LISTING
       - BIDDING
       - SELLING_DECISION
-      - END_LISTING
+      - LIQUIDATION
       - SUCCESSFUL_BID
-    default: LISTING
-  ununifi.nftbackedloan.ListingType:
-    type: string
-    enum:
-      - DIRECT_ASSET_BORROW
-      - SYNTHETIC_ASSET_CREATION
-      - LATE_SHIPPING
-    default: DIRECT_ASSET_BORROW
+    default: UNKNOWN
   ununifi.nftbackedloan.Loan:
     type: object
     properties:
@@ -10077,15 +10144,18 @@ definitions:
   ununifi.nftbackedloan.NftBid:
     type: object
     properties:
-      nft_id:
+      id:
         type: object
         properties:
-          class_id:
-            type: string
           nft_id:
+            type: object
+            properties:
+              class_id:
+                type: string
+              nft_id:
+                type: string
+          bidder:
             type: string
-      bidder:
-        type: string
       bid_amount:
         type: object
         properties:
@@ -10183,19 +10253,6 @@ definitions:
               type: string
               format: date-time
         title: lister borrowing bidder info
-      id:
-        title: todo remove nft_id,bidder then use it
-        type: object
-        properties:
-          nft_id:
-            type: object
-            properties:
-              class_id:
-                type: string
-              nft_id:
-                type: string
-          bidder:
-            type: string
   ununifi.nftbackedloan.NftIdentifier:
     type: object
     properties:
@@ -10224,22 +10281,16 @@ definitions:
             type: string
       owner:
         type: string
-      listing_type:
-        type: string
-        enum:
-          - DIRECT_ASSET_BORROW
-          - SYNTHETIC_ASSET_CREATION
-          - LATE_SHIPPING
-        default: DIRECT_ASSET_BORROW
       state:
         type: string
         enum:
+          - UNKNOWN
           - LISTING
           - BIDDING
           - SELLING_DECISION
-          - END_LISTING
+          - LIQUIDATION
           - SUCCESSFUL_BID
-        default: LISTING
+        default: UNKNOWN
       bid_token:
         type: string
       minimum_deposit_rate:
@@ -10273,6 +10324,8 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
+      collected_amount_negative:
+        type: boolean
       minimum_bidding_period:
         type: string
   ununifi.nftbackedloan.NftListingDetail:
@@ -10290,22 +10343,16 @@ definitions:
                 type: string
           owner:
             type: string
-          listing_type:
-            type: string
-            enum:
-              - DIRECT_ASSET_BORROW
-              - SYNTHETIC_ASSET_CREATION
-              - LATE_SHIPPING
-            default: DIRECT_ASSET_BORROW
           state:
             type: string
             enum:
+              - UNKNOWN
               - LISTING
               - BIDDING
               - SELLING_DECISION
-              - END_LISTING
+              - LIQUIDATION
               - SUCCESSFUL_BID
-            default: LISTING
+            default: UNKNOWN
           bid_token:
             type: string
           minimum_deposit_rate:
@@ -10342,6 +10389,8 @@ definitions:
               method
 
               signatures required by gogoproto.
+          collected_amount_negative:
+            type: boolean
           minimum_bidding_period:
             type: string
       nft_info:
@@ -10452,12 +10501,13 @@ definitions:
       state:
         type: string
         enum:
+          - UNKNOWN
           - LISTING
           - BIDDING
           - SELLING_DECISION
-          - END_LISTING
+          - LIQUIDATION
           - SUCCESSFUL_BID
-        default: LISTING
+        default: UNKNOWN
       all_paid:
         type: boolean
   ununifi.nftbackedloan.QueryBidderBidsResponse:
@@ -10468,15 +10518,18 @@ definitions:
         items:
           type: object
           properties:
-            nft_id:
+            id:
               type: object
               properties:
-                class_id:
-                  type: string
                 nft_id:
+                  type: object
+                  properties:
+                    class_id:
+                      type: string
+                    nft_id:
+                      type: string
+                bidder:
                   type: string
-            bidder:
-              type: string
             bid_amount:
               type: object
               properties:
@@ -10586,21 +10639,6 @@ definitions:
                     type: string
                     format: date-time
               title: lister borrowing bidder info
-            id:
-              title: todo remove nft_id,bidder then use it
-              type: object
-              properties:
-                nft_id:
-                  type: object
-                  properties:
-                    class_id:
-                      type: string
-                    nft_id:
-                      type: string
-                bidder:
-                  type: string
-  ununifi.nftbackedloan.QueryCDPsListResponse:
-    type: object
   ununifi.nftbackedloan.QueryLiquidationResponse:
     type: object
     properties:
@@ -10734,22 +10772,16 @@ definitions:
                       type: string
                 owner:
                   type: string
-                listing_type:
-                  type: string
-                  enum:
-                    - DIRECT_ASSET_BORROW
-                    - SYNTHETIC_ASSET_CREATION
-                    - LATE_SHIPPING
-                  default: DIRECT_ASSET_BORROW
                 state:
                   type: string
                   enum:
+                    - UNKNOWN
                     - LISTING
                     - BIDDING
                     - SELLING_DECISION
-                    - END_LISTING
+                    - LIQUIDATION
                     - SUCCESSFUL_BID
-                  default: LISTING
+                  default: UNKNOWN
                 bid_token:
                   type: string
                 minimum_deposit_rate:
@@ -10786,6 +10818,8 @@ definitions:
                     method
 
                     signatures required by gogoproto.
+                collected_amount_negative:
+                  type: boolean
                 minimum_bidding_period:
                   type: string
             nft_info:
@@ -10865,15 +10899,18 @@ definitions:
         items:
           type: object
           properties:
-            nft_id:
+            id:
               type: object
               properties:
-                class_id:
-                  type: string
                 nft_id:
+                  type: object
+                  properties:
+                    class_id:
+                      type: string
+                    nft_id:
+                      type: string
+                bidder:
                   type: string
-            bidder:
-              type: string
             bid_amount:
               type: object
               properties:
@@ -10983,19 +11020,6 @@ definitions:
                     type: string
                     format: date-time
               title: lister borrowing bidder info
-            id:
-              title: todo remove nft_id,bidder then use it
-              type: object
-              properties:
-                nft_id:
-                  type: object
-                  properties:
-                    class_id:
-                      type: string
-                    nft_id:
-                      type: string
-                bidder:
-                  type: string
   ununifi.nftbackedloan.QueryNftListingResponse:
     type: object
     properties:
@@ -11011,22 +11035,16 @@ definitions:
                 type: string
           owner:
             type: string
-          listing_type:
-            type: string
-            enum:
-              - DIRECT_ASSET_BORROW
-              - SYNTHETIC_ASSET_CREATION
-              - LATE_SHIPPING
-            default: DIRECT_ASSET_BORROW
           state:
             type: string
             enum:
+              - UNKNOWN
               - LISTING
               - BIDDING
               - SELLING_DECISION
-              - END_LISTING
+              - LIQUIDATION
               - SUCCESSFUL_BID
-            default: LISTING
+            default: UNKNOWN
           bid_token:
             type: string
           minimum_deposit_rate:
@@ -11063,6 +11081,8 @@ definitions:
               method
 
               signatures required by gogoproto.
+          collected_amount_negative:
+            type: boolean
           minimum_bidding_period:
             type: string
   ununifi.nftbackedloan.QueryParamsResponse:
@@ -11176,12 +11196,13 @@ definitions:
           state:
             type: string
             enum:
+              - UNKNOWN
               - LISTING
               - BIDDING
               - SELLING_DECISION
-              - END_LISTING
+              - LIQUIDATION
               - SUCCESSFUL_BID
-            default: LISTING
+            default: UNKNOWN
           all_paid:
             type: boolean
   ununifi.nftbackedloan.QueryRewardsResponse:
@@ -11201,36 +11222,6 @@ definitions:
 
             NOTE: The amount field is an Int which implements the custom method
             signatures required by gogoproto.
-  ununifi.nftbackedloan.borrowing:
-    type: object
-    properties:
-      amount:
-        type: object
-        properties:
-          denom:
-            type: string
-          amount:
-            type: string
-        description: |-
-          Coin defines a token with a denomination and an amount.
-
-          NOTE: The amount field is an Int which implements the custom method
-          signatures required by gogoproto.
-      paid_interest_amount:
-        type: object
-        properties:
-          denom:
-            type: string
-          amount:
-            type: string
-        description: |-
-          Coin defines a token with a denomination and an amount.
-
-          NOTE: The amount field is an Int which implements the custom method
-          signatures required by gogoproto.
-      start_at:
-        type: string
-        format: date-time
   ununifi.nftfactory.ClassAttributes:
     type: object
     properties:
