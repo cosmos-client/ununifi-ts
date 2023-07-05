@@ -1378,10 +1378,16 @@ export interface Loan200Response {
     'loan'?: Loans200ResponseLoansInner;
     /**
      * 
-     * @type {string}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof Loan200Response
      */
-    'borrowing_limit'?: string;
+    'borrowing_limit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof Loan200Response
+     */
+    'total_deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -3814,10 +3820,16 @@ export interface UnunifiNftbackedloanQueryLoanResponse {
     'loan'?: Loans200ResponseLoansInner;
     /**
      * 
-     * @type {string}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiNftbackedloanQueryLoanResponse
      */
-    'borrowing_limit'?: string;
+    'borrowing_limit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanQueryLoanResponse
+     */
+    'total_deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
