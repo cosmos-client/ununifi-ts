@@ -40154,7 +40154,8 @@
                  * @memberof ununifi.nftbackedloan
                  * @interface IQueryLoanResponse
                  * @property {ununifi.nftbackedloan.ILoan|null} [loan] QueryLoanResponse loan
-                 * @property {string|null} [borrowing_limit] QueryLoanResponse borrowing_limit
+                 * @property {cosmos.base.v1beta1.ICoin|null} [borrowing_limit] QueryLoanResponse borrowing_limit
+                 * @property {cosmos.base.v1beta1.ICoin|null} [total_deposit] QueryLoanResponse total_deposit
                  */
     
                 /**
@@ -40182,11 +40183,19 @@
     
                 /**
                  * QueryLoanResponse borrowing_limit.
-                 * @member {string} borrowing_limit
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} borrowing_limit
                  * @memberof ununifi.nftbackedloan.QueryLoanResponse
                  * @instance
                  */
-                QueryLoanResponse.prototype.borrowing_limit = "";
+                QueryLoanResponse.prototype.borrowing_limit = null;
+    
+                /**
+                 * QueryLoanResponse total_deposit.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} total_deposit
+                 * @memberof ununifi.nftbackedloan.QueryLoanResponse
+                 * @instance
+                 */
+                QueryLoanResponse.prototype.total_deposit = null;
     
                 /**
                  * Encodes the specified QueryLoanResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryLoanResponse.verify|verify} messages.
@@ -40203,7 +40212,9 @@
                     if (message.loan != null && Object.hasOwnProperty.call(message, "loan"))
                         $root.ununifi.nftbackedloan.Loan.encode(message.loan, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
                     if (message.borrowing_limit != null && Object.hasOwnProperty.call(message, "borrowing_limit"))
-                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.borrowing_limit);
+                        $root.cosmos.base.v1beta1.Coin.encode(message.borrowing_limit, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    if (message.total_deposit != null && Object.hasOwnProperty.call(message, "total_deposit"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.total_deposit, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
                     return writer;
                 };
     
@@ -40242,7 +40253,10 @@
                             message.loan = $root.ununifi.nftbackedloan.Loan.decode(reader, reader.uint32());
                             break;
                         case 2:
-                            message.borrowing_limit = reader.string();
+                            message.borrowing_limit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        case 3:
+                            message.total_deposit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -40284,9 +40298,16 @@
                         if (error)
                             return "loan." + error;
                     }
-                    if (message.borrowing_limit != null && message.hasOwnProperty("borrowing_limit"))
-                        if (!$util.isString(message.borrowing_limit))
-                            return "borrowing_limit: string expected";
+                    if (message.borrowing_limit != null && message.hasOwnProperty("borrowing_limit")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.borrowing_limit);
+                        if (error)
+                            return "borrowing_limit." + error;
+                    }
+                    if (message.total_deposit != null && message.hasOwnProperty("total_deposit")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.total_deposit);
+                        if (error)
+                            return "total_deposit." + error;
+                    }
                     return null;
                 };
     
@@ -40307,8 +40328,16 @@
                             throw TypeError(".ununifi.nftbackedloan.QueryLoanResponse.loan: object expected");
                         message.loan = $root.ununifi.nftbackedloan.Loan.fromObject(object.loan);
                     }
-                    if (object.borrowing_limit != null)
-                        message.borrowing_limit = String(object.borrowing_limit);
+                    if (object.borrowing_limit != null) {
+                        if (typeof object.borrowing_limit !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.QueryLoanResponse.borrowing_limit: object expected");
+                        message.borrowing_limit = $root.cosmos.base.v1beta1.Coin.fromObject(object.borrowing_limit);
+                    }
+                    if (object.total_deposit != null) {
+                        if (typeof object.total_deposit !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.QueryLoanResponse.total_deposit: object expected");
+                        message.total_deposit = $root.cosmos.base.v1beta1.Coin.fromObject(object.total_deposit);
+                    }
                     return message;
                 };
     
@@ -40327,12 +40356,15 @@
                     var object = {};
                     if (options.defaults) {
                         object.loan = null;
-                        object.borrowing_limit = "";
+                        object.borrowing_limit = null;
+                        object.total_deposit = null;
                     }
                     if (message.loan != null && message.hasOwnProperty("loan"))
                         object.loan = $root.ununifi.nftbackedloan.Loan.toObject(message.loan, options);
                     if (message.borrowing_limit != null && message.hasOwnProperty("borrowing_limit"))
-                        object.borrowing_limit = message.borrowing_limit;
+                        object.borrowing_limit = $root.cosmos.base.v1beta1.Coin.toObject(message.borrowing_limit, options);
+                    if (message.total_deposit != null && message.hasOwnProperty("total_deposit"))
+                        object.total_deposit = $root.cosmos.base.v1beta1.Coin.toObject(message.total_deposit, options);
                     return object;
                 };
     

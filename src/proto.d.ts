@@ -17464,7 +17464,10 @@ export namespace ununifi {
             loan?: (ununifi.nftbackedloan.ILoan|null);
 
             /** QueryLoanResponse borrowing_limit */
-            borrowing_limit?: (string|null);
+            borrowing_limit?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** QueryLoanResponse total_deposit */
+            total_deposit?: (cosmos.base.v1beta1.ICoin|null);
         }
 
         /** Represents a QueryLoanResponse. */
@@ -17480,7 +17483,10 @@ export namespace ununifi {
             public loan?: (ununifi.nftbackedloan.ILoan|null);
 
             /** QueryLoanResponse borrowing_limit. */
-            public borrowing_limit: string;
+            public borrowing_limit?: (cosmos.base.v1beta1.ICoin|null);
+
+            /** QueryLoanResponse total_deposit. */
+            public total_deposit?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
              * Encodes the specified QueryLoanResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryLoanResponse.verify|verify} messages.
