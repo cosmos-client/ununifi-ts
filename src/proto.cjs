@@ -26658,9 +26658,8 @@
                  * @interface IMsgListNft
                  * @property {string|null} [sender] MsgListNft sender
                  * @property {ununifi.nftbackedloan.INftIdentifier|null} [nft_id] MsgListNft nft_id
-                 * @property {string|null} [bid_token] MsgListNft bid_token
+                 * @property {string|null} [bid_denom] MsgListNft bid_denom
                  * @property {string|null} [minimum_deposit_rate] MsgListNft minimum_deposit_rate
-                 * @property {boolean|null} [automatic_refinancing] MsgListNft automatic_refinancing
                  * @property {google.protobuf.IDuration|null} [minimum_bidding_period] MsgListNft minimum_bidding_period
                  */
     
@@ -26696,12 +26695,12 @@
                 MsgListNft.prototype.nft_id = null;
     
                 /**
-                 * MsgListNft bid_token.
-                 * @member {string} bid_token
+                 * MsgListNft bid_denom.
+                 * @member {string} bid_denom
                  * @memberof ununifi.nftbackedloan.MsgListNft
                  * @instance
                  */
-                MsgListNft.prototype.bid_token = "";
+                MsgListNft.prototype.bid_denom = "";
     
                 /**
                  * MsgListNft minimum_deposit_rate.
@@ -26710,14 +26709,6 @@
                  * @instance
                  */
                 MsgListNft.prototype.minimum_deposit_rate = "";
-    
-                /**
-                 * MsgListNft automatic_refinancing.
-                 * @member {boolean} automatic_refinancing
-                 * @memberof ununifi.nftbackedloan.MsgListNft
-                 * @instance
-                 */
-                MsgListNft.prototype.automatic_refinancing = false;
     
                 /**
                  * MsgListNft minimum_bidding_period.
@@ -26743,14 +26734,12 @@
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
                     if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
                         $root.ununifi.nftbackedloan.NftIdentifier.encode(message.nft_id, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                    if (message.bid_token != null && Object.hasOwnProperty.call(message, "bid_token"))
-                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.bid_token);
+                    if (message.bid_denom != null && Object.hasOwnProperty.call(message, "bid_denom"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.bid_denom);
                     if (message.minimum_deposit_rate != null && Object.hasOwnProperty.call(message, "minimum_deposit_rate"))
                         writer.uint32(/* id 4, wireType 2 =*/34).string(message.minimum_deposit_rate);
-                    if (message.automatic_refinancing != null && Object.hasOwnProperty.call(message, "automatic_refinancing"))
-                        writer.uint32(/* id 5, wireType 0 =*/40).bool(message.automatic_refinancing);
                     if (message.minimum_bidding_period != null && Object.hasOwnProperty.call(message, "minimum_bidding_period"))
-                        $root.google.protobuf.Duration.encode(message.minimum_bidding_period, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
+                        $root.google.protobuf.Duration.encode(message.minimum_bidding_period, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
                     return writer;
                 };
     
@@ -26792,15 +26781,12 @@
                             message.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.decode(reader, reader.uint32());
                             break;
                         case 3:
-                            message.bid_token = reader.string();
+                            message.bid_denom = reader.string();
                             break;
                         case 4:
                             message.minimum_deposit_rate = reader.string();
                             break;
                         case 5:
-                            message.automatic_refinancing = reader.bool();
-                            break;
-                        case 6:
                             message.minimum_bidding_period = $root.google.protobuf.Duration.decode(reader, reader.uint32());
                             break;
                         default:
@@ -26846,15 +26832,12 @@
                         if (error)
                             return "nft_id." + error;
                     }
-                    if (message.bid_token != null && message.hasOwnProperty("bid_token"))
-                        if (!$util.isString(message.bid_token))
-                            return "bid_token: string expected";
+                    if (message.bid_denom != null && message.hasOwnProperty("bid_denom"))
+                        if (!$util.isString(message.bid_denom))
+                            return "bid_denom: string expected";
                     if (message.minimum_deposit_rate != null && message.hasOwnProperty("minimum_deposit_rate"))
                         if (!$util.isString(message.minimum_deposit_rate))
                             return "minimum_deposit_rate: string expected";
-                    if (message.automatic_refinancing != null && message.hasOwnProperty("automatic_refinancing"))
-                        if (typeof message.automatic_refinancing !== "boolean")
-                            return "automatic_refinancing: boolean expected";
                     if (message.minimum_bidding_period != null && message.hasOwnProperty("minimum_bidding_period")) {
                         var error = $root.google.protobuf.Duration.verify(message.minimum_bidding_period);
                         if (error)
@@ -26882,12 +26865,10 @@
                             throw TypeError(".ununifi.nftbackedloan.MsgListNft.nft_id: object expected");
                         message.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.fromObject(object.nft_id);
                     }
-                    if (object.bid_token != null)
-                        message.bid_token = String(object.bid_token);
+                    if (object.bid_denom != null)
+                        message.bid_denom = String(object.bid_denom);
                     if (object.minimum_deposit_rate != null)
                         message.minimum_deposit_rate = String(object.minimum_deposit_rate);
-                    if (object.automatic_refinancing != null)
-                        message.automatic_refinancing = Boolean(object.automatic_refinancing);
                     if (object.minimum_bidding_period != null) {
                         if (typeof object.minimum_bidding_period !== "object")
                             throw TypeError(".ununifi.nftbackedloan.MsgListNft.minimum_bidding_period: object expected");
@@ -26912,21 +26893,18 @@
                     if (options.defaults) {
                         object.sender = "";
                         object.nft_id = null;
-                        object.bid_token = "";
+                        object.bid_denom = "";
                         object.minimum_deposit_rate = "";
-                        object.automatic_refinancing = false;
                         object.minimum_bidding_period = null;
                     }
                     if (message.sender != null && message.hasOwnProperty("sender"))
                         object.sender = message.sender;
                     if (message.nft_id != null && message.hasOwnProperty("nft_id"))
                         object.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.toObject(message.nft_id, options);
-                    if (message.bid_token != null && message.hasOwnProperty("bid_token"))
-                        object.bid_token = message.bid_token;
+                    if (message.bid_denom != null && message.hasOwnProperty("bid_denom"))
+                        object.bid_denom = message.bid_denom;
                     if (message.minimum_deposit_rate != null && message.hasOwnProperty("minimum_deposit_rate"))
                         object.minimum_deposit_rate = message.minimum_deposit_rate;
-                    if (message.automatic_refinancing != null && message.hasOwnProperty("automatic_refinancing"))
-                        object.automatic_refinancing = message.automatic_refinancing;
                     if (message.minimum_bidding_period != null && message.hasOwnProperty("minimum_bidding_period"))
                         object.minimum_bidding_period = $root.google.protobuf.Duration.toObject(message.minimum_bidding_period, options);
                     return object;
@@ -27454,8 +27432,8 @@
                  * @property {string|null} [sender] MsgPlaceBid sender
                  * @property {ununifi.nftbackedloan.INftIdentifier|null} [nft_id] MsgPlaceBid nft_id
                  * @property {cosmos.base.v1beta1.ICoin|null} [bid_amount] MsgPlaceBid bid_amount
-                 * @property {google.protobuf.ITimestamp|null} [bidding_period] MsgPlaceBid bidding_period
-                 * @property {string|null} [deposit_lending_rate] MsgPlaceBid deposit_lending_rate
+                 * @property {google.protobuf.ITimestamp|null} [expiry_at] MsgPlaceBid expiry_at
+                 * @property {string|null} [interest_rate] MsgPlaceBid interest_rate
                  * @property {boolean|null} [automatic_payment] MsgPlaceBid automatic_payment
                  * @property {cosmos.base.v1beta1.ICoin|null} [deposit_amount] MsgPlaceBid deposit_amount
                  */
@@ -27500,20 +27478,20 @@
                 MsgPlaceBid.prototype.bid_amount = null;
     
                 /**
-                 * MsgPlaceBid bidding_period.
-                 * @member {google.protobuf.ITimestamp|null|undefined} bidding_period
+                 * MsgPlaceBid expiry_at.
+                 * @member {google.protobuf.ITimestamp|null|undefined} expiry_at
                  * @memberof ununifi.nftbackedloan.MsgPlaceBid
                  * @instance
                  */
-                MsgPlaceBid.prototype.bidding_period = null;
+                MsgPlaceBid.prototype.expiry_at = null;
     
                 /**
-                 * MsgPlaceBid deposit_lending_rate.
-                 * @member {string} deposit_lending_rate
+                 * MsgPlaceBid interest_rate.
+                 * @member {string} interest_rate
                  * @memberof ununifi.nftbackedloan.MsgPlaceBid
                  * @instance
                  */
-                MsgPlaceBid.prototype.deposit_lending_rate = "";
+                MsgPlaceBid.prototype.interest_rate = "";
     
                 /**
                  * MsgPlaceBid automatic_payment.
@@ -27549,10 +27527,10 @@
                         $root.ununifi.nftbackedloan.NftIdentifier.encode(message.nft_id, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
                     if (message.bid_amount != null && Object.hasOwnProperty.call(message, "bid_amount"))
                         $root.cosmos.base.v1beta1.Coin.encode(message.bid_amount, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-                    if (message.bidding_period != null && Object.hasOwnProperty.call(message, "bidding_period"))
-                        $root.google.protobuf.Timestamp.encode(message.bidding_period, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-                    if (message.deposit_lending_rate != null && Object.hasOwnProperty.call(message, "deposit_lending_rate"))
-                        writer.uint32(/* id 5, wireType 2 =*/42).string(message.deposit_lending_rate);
+                    if (message.expiry_at != null && Object.hasOwnProperty.call(message, "expiry_at"))
+                        $root.google.protobuf.Timestamp.encode(message.expiry_at, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+                    if (message.interest_rate != null && Object.hasOwnProperty.call(message, "interest_rate"))
+                        writer.uint32(/* id 5, wireType 2 =*/42).string(message.interest_rate);
                     if (message.automatic_payment != null && Object.hasOwnProperty.call(message, "automatic_payment"))
                         writer.uint32(/* id 6, wireType 0 =*/48).bool(message.automatic_payment);
                     if (message.deposit_amount != null && Object.hasOwnProperty.call(message, "deposit_amount"))
@@ -27601,10 +27579,10 @@
                             message.bid_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         case 4:
-                            message.bidding_period = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                            message.expiry_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                             break;
                         case 5:
-                            message.deposit_lending_rate = reader.string();
+                            message.interest_rate = reader.string();
                             break;
                         case 6:
                             message.automatic_payment = reader.bool();
@@ -27660,14 +27638,14 @@
                         if (error)
                             return "bid_amount." + error;
                     }
-                    if (message.bidding_period != null && message.hasOwnProperty("bidding_period")) {
-                        var error = $root.google.protobuf.Timestamp.verify(message.bidding_period);
+                    if (message.expiry_at != null && message.hasOwnProperty("expiry_at")) {
+                        var error = $root.google.protobuf.Timestamp.verify(message.expiry_at);
                         if (error)
-                            return "bidding_period." + error;
+                            return "expiry_at." + error;
                     }
-                    if (message.deposit_lending_rate != null && message.hasOwnProperty("deposit_lending_rate"))
-                        if (!$util.isString(message.deposit_lending_rate))
-                            return "deposit_lending_rate: string expected";
+                    if (message.interest_rate != null && message.hasOwnProperty("interest_rate"))
+                        if (!$util.isString(message.interest_rate))
+                            return "interest_rate: string expected";
                     if (message.automatic_payment != null && message.hasOwnProperty("automatic_payment"))
                         if (typeof message.automatic_payment !== "boolean")
                             return "automatic_payment: boolean expected";
@@ -27703,13 +27681,13 @@
                             throw TypeError(".ununifi.nftbackedloan.MsgPlaceBid.bid_amount: object expected");
                         message.bid_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.bid_amount);
                     }
-                    if (object.bidding_period != null) {
-                        if (typeof object.bidding_period !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.MsgPlaceBid.bidding_period: object expected");
-                        message.bidding_period = $root.google.protobuf.Timestamp.fromObject(object.bidding_period);
+                    if (object.expiry_at != null) {
+                        if (typeof object.expiry_at !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.MsgPlaceBid.expiry_at: object expected");
+                        message.expiry_at = $root.google.protobuf.Timestamp.fromObject(object.expiry_at);
                     }
-                    if (object.deposit_lending_rate != null)
-                        message.deposit_lending_rate = String(object.deposit_lending_rate);
+                    if (object.interest_rate != null)
+                        message.interest_rate = String(object.interest_rate);
                     if (object.automatic_payment != null)
                         message.automatic_payment = Boolean(object.automatic_payment);
                     if (object.deposit_amount != null) {
@@ -27737,8 +27715,8 @@
                         object.sender = "";
                         object.nft_id = null;
                         object.bid_amount = null;
-                        object.bidding_period = null;
-                        object.deposit_lending_rate = "";
+                        object.expiry_at = null;
+                        object.interest_rate = "";
                         object.automatic_payment = false;
                         object.deposit_amount = null;
                     }
@@ -27748,10 +27726,10 @@
                         object.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.toObject(message.nft_id, options);
                     if (message.bid_amount != null && message.hasOwnProperty("bid_amount"))
                         object.bid_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.bid_amount, options);
-                    if (message.bidding_period != null && message.hasOwnProperty("bidding_period"))
-                        object.bidding_period = $root.google.protobuf.Timestamp.toObject(message.bidding_period, options);
-                    if (message.deposit_lending_rate != null && message.hasOwnProperty("deposit_lending_rate"))
-                        object.deposit_lending_rate = message.deposit_lending_rate;
+                    if (message.expiry_at != null && message.hasOwnProperty("expiry_at"))
+                        object.expiry_at = $root.google.protobuf.Timestamp.toObject(message.expiry_at, options);
+                    if (message.interest_rate != null && message.hasOwnProperty("interest_rate"))
+                        object.interest_rate = message.interest_rate;
                     if (message.automatic_payment != null && message.hasOwnProperty("automatic_payment"))
                         object.automatic_payment = message.automatic_payment;
                     if (message.deposit_amount != null && message.hasOwnProperty("deposit_amount"))
@@ -30741,214 +30719,6 @@
                 return BidId;
             })();
     
-            nftbackedloan.Loan = (function() {
-    
-                /**
-                 * Properties of a Loan.
-                 * @memberof ununifi.nftbackedloan
-                 * @interface ILoan
-                 * @property {ununifi.nftbackedloan.INftIdentifier|null} [nft_id] Loan nft_id
-                 * @property {cosmos.base.v1beta1.ICoin|null} [loan] Loan loan
-                 */
-    
-                /**
-                 * Constructs a new Loan.
-                 * @memberof ununifi.nftbackedloan
-                 * @classdesc Represents a Loan.
-                 * @implements ILoan
-                 * @constructor
-                 * @param {ununifi.nftbackedloan.ILoan=} [properties] Properties to set
-                 */
-                function Loan(properties) {
-                    if (properties)
-                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-    
-                /**
-                 * Loan nft_id.
-                 * @member {ununifi.nftbackedloan.INftIdentifier|null|undefined} nft_id
-                 * @memberof ununifi.nftbackedloan.Loan
-                 * @instance
-                 */
-                Loan.prototype.nft_id = null;
-    
-                /**
-                 * Loan loan.
-                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} loan
-                 * @memberof ununifi.nftbackedloan.Loan
-                 * @instance
-                 */
-                Loan.prototype.loan = null;
-    
-                /**
-                 * Encodes the specified Loan message. Does not implicitly {@link ununifi.nftbackedloan.Loan.verify|verify} messages.
-                 * @function encode
-                 * @memberof ununifi.nftbackedloan.Loan
-                 * @static
-                 * @param {ununifi.nftbackedloan.ILoan} message Loan message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                Loan.encode = function encode(message, writer) {
-                    if (!writer)
-                        writer = $Writer.create();
-                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
-                        $root.ununifi.nftbackedloan.NftIdentifier.encode(message.nft_id, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                    if (message.loan != null && Object.hasOwnProperty.call(message, "loan"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.loan, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                    return writer;
-                };
-    
-                /**
-                 * Encodes the specified Loan message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.Loan.verify|verify} messages.
-                 * @function encodeDelimited
-                 * @memberof ununifi.nftbackedloan.Loan
-                 * @static
-                 * @param {ununifi.nftbackedloan.ILoan} message Loan message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                Loan.encodeDelimited = function encodeDelimited(message, writer) {
-                    return this.encode(message, writer).ldelim();
-                };
-    
-                /**
-                 * Decodes a Loan message from the specified reader or buffer.
-                 * @function decode
-                 * @memberof ununifi.nftbackedloan.Loan
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.nftbackedloan.Loan} Loan
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                Loan.decode = function decode(reader, length) {
-                    if (!(reader instanceof $Reader))
-                        reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.Loan();
-                    while (reader.pos < end) {
-                        var tag = reader.uint32();
-                        switch (tag >>> 3) {
-                        case 1:
-                            message.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.decode(reader, reader.uint32());
-                            break;
-                        case 2:
-                            message.loan = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                            break;
-                        default:
-                            reader.skipType(tag & 7);
-                            break;
-                        }
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Decodes a Loan message from the specified reader or buffer, length delimited.
-                 * @function decodeDelimited
-                 * @memberof ununifi.nftbackedloan.Loan
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.nftbackedloan.Loan} Loan
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                Loan.decodeDelimited = function decodeDelimited(reader) {
-                    if (!(reader instanceof $Reader))
-                        reader = new $Reader(reader);
-                    return this.decode(reader, reader.uint32());
-                };
-    
-                /**
-                 * Verifies a Loan message.
-                 * @function verify
-                 * @memberof ununifi.nftbackedloan.Loan
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                Loan.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id")) {
-                        var error = $root.ununifi.nftbackedloan.NftIdentifier.verify(message.nft_id);
-                        if (error)
-                            return "nft_id." + error;
-                    }
-                    if (message.loan != null && message.hasOwnProperty("loan")) {
-                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.loan);
-                        if (error)
-                            return "loan." + error;
-                    }
-                    return null;
-                };
-    
-                /**
-                 * Creates a Loan message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof ununifi.nftbackedloan.Loan
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.nftbackedloan.Loan} Loan
-                 */
-                Loan.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.nftbackedloan.Loan)
-                        return object;
-                    var message = new $root.ununifi.nftbackedloan.Loan();
-                    if (object.nft_id != null) {
-                        if (typeof object.nft_id !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.Loan.nft_id: object expected");
-                        message.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.fromObject(object.nft_id);
-                    }
-                    if (object.loan != null) {
-                        if (typeof object.loan !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.Loan.loan: object expected");
-                        message.loan = $root.cosmos.base.v1beta1.Coin.fromObject(object.loan);
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Creates a plain object from a Loan message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof ununifi.nftbackedloan.Loan
-                 * @static
-                 * @param {ununifi.nftbackedloan.Loan} message Loan
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                Loan.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    var object = {};
-                    if (options.defaults) {
-                        object.nft_id = null;
-                        object.loan = null;
-                    }
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        object.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.toObject(message.nft_id, options);
-                    if (message.loan != null && message.hasOwnProperty("loan"))
-                        object.loan = $root.cosmos.base.v1beta1.Coin.toObject(message.loan, options);
-                    return object;
-                };
-    
-                /**
-                 * Converts this Loan to JSON.
-                 * @function toJSON
-                 * @memberof ununifi.nftbackedloan.Loan
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                Loan.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-    
-                return Loan;
-            })();
-    
             nftbackedloan.ListedClass = (function() {
     
                 /**
@@ -31392,14 +31162,12 @@
                  * @property {ununifi.nftbackedloan.INftIdentifier|null} [nft_id] NftListing nft_id
                  * @property {string|null} [owner] NftListing owner
                  * @property {ununifi.nftbackedloan.ListingState|null} [state] NftListing state
-                 * @property {string|null} [bid_token] NftListing bid_token
+                 * @property {string|null} [bid_denom] NftListing bid_denom
                  * @property {string|null} [minimum_deposit_rate] NftListing minimum_deposit_rate
-                 * @property {boolean|null} [automatic_refinancing] NftListing automatic_refinancing
                  * @property {google.protobuf.ITimestamp|null} [started_at] NftListing started_at
                  * @property {google.protobuf.ITimestamp|null} [end_at] NftListing end_at
                  * @property {google.protobuf.ITimestamp|null} [full_payment_end_at] NftListing full_payment_end_at
                  * @property {google.protobuf.ITimestamp|null} [successful_bid_end_at] NftListing successful_bid_end_at
-                 * @property {Long|null} [auto_relisted_count] NftListing auto_relisted_count
                  * @property {cosmos.base.v1beta1.ICoin|null} [collected_amount] NftListing collected_amount
                  * @property {boolean|null} [collected_amount_negative] NftListing collected_amount_negative
                  * @property {google.protobuf.IDuration|null} [minimum_bidding_period] NftListing minimum_bidding_period
@@ -31445,12 +31213,12 @@
                 NftListing.prototype.state = 0;
     
                 /**
-                 * NftListing bid_token.
-                 * @member {string} bid_token
+                 * NftListing bid_denom.
+                 * @member {string} bid_denom
                  * @memberof ununifi.nftbackedloan.NftListing
                  * @instance
                  */
-                NftListing.prototype.bid_token = "";
+                NftListing.prototype.bid_denom = "";
     
                 /**
                  * NftListing minimum_deposit_rate.
@@ -31459,14 +31227,6 @@
                  * @instance
                  */
                 NftListing.prototype.minimum_deposit_rate = "";
-    
-                /**
-                 * NftListing automatic_refinancing.
-                 * @member {boolean} automatic_refinancing
-                 * @memberof ununifi.nftbackedloan.NftListing
-                 * @instance
-                 */
-                NftListing.prototype.automatic_refinancing = false;
     
                 /**
                  * NftListing started_at.
@@ -31499,14 +31259,6 @@
                  * @instance
                  */
                 NftListing.prototype.successful_bid_end_at = null;
-    
-                /**
-                 * NftListing auto_relisted_count.
-                 * @member {Long} auto_relisted_count
-                 * @memberof ununifi.nftbackedloan.NftListing
-                 * @instance
-                 */
-                NftListing.prototype.auto_relisted_count = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
     
                 /**
                  * NftListing collected_amount.
@@ -31550,28 +31302,24 @@
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message.owner);
                     if (message.state != null && Object.hasOwnProperty.call(message, "state"))
                         writer.uint32(/* id 3, wireType 0 =*/24).int32(message.state);
-                    if (message.bid_token != null && Object.hasOwnProperty.call(message, "bid_token"))
-                        writer.uint32(/* id 4, wireType 2 =*/34).string(message.bid_token);
+                    if (message.bid_denom != null && Object.hasOwnProperty.call(message, "bid_denom"))
+                        writer.uint32(/* id 4, wireType 2 =*/34).string(message.bid_denom);
                     if (message.minimum_deposit_rate != null && Object.hasOwnProperty.call(message, "minimum_deposit_rate"))
                         writer.uint32(/* id 5, wireType 2 =*/42).string(message.minimum_deposit_rate);
-                    if (message.automatic_refinancing != null && Object.hasOwnProperty.call(message, "automatic_refinancing"))
-                        writer.uint32(/* id 6, wireType 0 =*/48).bool(message.automatic_refinancing);
                     if (message.started_at != null && Object.hasOwnProperty.call(message, "started_at"))
-                        $root.google.protobuf.Timestamp.encode(message.started_at, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
+                        $root.google.protobuf.Timestamp.encode(message.started_at, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
                     if (message.end_at != null && Object.hasOwnProperty.call(message, "end_at"))
-                        $root.google.protobuf.Timestamp.encode(message.end_at, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
+                        $root.google.protobuf.Timestamp.encode(message.end_at, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
                     if (message.full_payment_end_at != null && Object.hasOwnProperty.call(message, "full_payment_end_at"))
-                        $root.google.protobuf.Timestamp.encode(message.full_payment_end_at, writer.uint32(/* id 9, wireType 2 =*/74).fork()).ldelim();
+                        $root.google.protobuf.Timestamp.encode(message.full_payment_end_at, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
                     if (message.successful_bid_end_at != null && Object.hasOwnProperty.call(message, "successful_bid_end_at"))
-                        $root.google.protobuf.Timestamp.encode(message.successful_bid_end_at, writer.uint32(/* id 10, wireType 2 =*/82).fork()).ldelim();
-                    if (message.auto_relisted_count != null && Object.hasOwnProperty.call(message, "auto_relisted_count"))
-                        writer.uint32(/* id 11, wireType 0 =*/88).uint64(message.auto_relisted_count);
+                        $root.google.protobuf.Timestamp.encode(message.successful_bid_end_at, writer.uint32(/* id 9, wireType 2 =*/74).fork()).ldelim();
                     if (message.collected_amount != null && Object.hasOwnProperty.call(message, "collected_amount"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.collected_amount, writer.uint32(/* id 12, wireType 2 =*/98).fork()).ldelim();
+                        $root.cosmos.base.v1beta1.Coin.encode(message.collected_amount, writer.uint32(/* id 10, wireType 2 =*/82).fork()).ldelim();
                     if (message.collected_amount_negative != null && Object.hasOwnProperty.call(message, "collected_amount_negative"))
-                        writer.uint32(/* id 13, wireType 0 =*/104).bool(message.collected_amount_negative);
+                        writer.uint32(/* id 11, wireType 0 =*/88).bool(message.collected_amount_negative);
                     if (message.minimum_bidding_period != null && Object.hasOwnProperty.call(message, "minimum_bidding_period"))
-                        $root.google.protobuf.Duration.encode(message.minimum_bidding_period, writer.uint32(/* id 14, wireType 2 =*/114).fork()).ldelim();
+                        $root.google.protobuf.Duration.encode(message.minimum_bidding_period, writer.uint32(/* id 12, wireType 2 =*/98).fork()).ldelim();
                     return writer;
                 };
     
@@ -31616,36 +31364,30 @@
                             message.state = reader.int32();
                             break;
                         case 4:
-                            message.bid_token = reader.string();
+                            message.bid_denom = reader.string();
                             break;
                         case 5:
                             message.minimum_deposit_rate = reader.string();
                             break;
                         case 6:
-                            message.automatic_refinancing = reader.bool();
-                            break;
-                        case 7:
                             message.started_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                             break;
-                        case 8:
+                        case 7:
                             message.end_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                             break;
-                        case 9:
+                        case 8:
                             message.full_payment_end_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                             break;
-                        case 10:
+                        case 9:
                             message.successful_bid_end_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                             break;
-                        case 11:
-                            message.auto_relisted_count = reader.uint64();
-                            break;
-                        case 12:
+                        case 10:
                             message.collected_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
-                        case 13:
+                        case 11:
                             message.collected_amount_negative = reader.bool();
                             break;
-                        case 14:
+                        case 12:
                             message.minimum_bidding_period = $root.google.protobuf.Duration.decode(reader, reader.uint32());
                             break;
                         default:
@@ -31703,15 +31445,12 @@
                         case 5:
                             break;
                         }
-                    if (message.bid_token != null && message.hasOwnProperty("bid_token"))
-                        if (!$util.isString(message.bid_token))
-                            return "bid_token: string expected";
+                    if (message.bid_denom != null && message.hasOwnProperty("bid_denom"))
+                        if (!$util.isString(message.bid_denom))
+                            return "bid_denom: string expected";
                     if (message.minimum_deposit_rate != null && message.hasOwnProperty("minimum_deposit_rate"))
                         if (!$util.isString(message.minimum_deposit_rate))
                             return "minimum_deposit_rate: string expected";
-                    if (message.automatic_refinancing != null && message.hasOwnProperty("automatic_refinancing"))
-                        if (typeof message.automatic_refinancing !== "boolean")
-                            return "automatic_refinancing: boolean expected";
                     if (message.started_at != null && message.hasOwnProperty("started_at")) {
                         var error = $root.google.protobuf.Timestamp.verify(message.started_at);
                         if (error)
@@ -31732,9 +31471,6 @@
                         if (error)
                             return "successful_bid_end_at." + error;
                     }
-                    if (message.auto_relisted_count != null && message.hasOwnProperty("auto_relisted_count"))
-                        if (!$util.isInteger(message.auto_relisted_count) && !(message.auto_relisted_count && $util.isInteger(message.auto_relisted_count.low) && $util.isInteger(message.auto_relisted_count.high)))
-                            return "auto_relisted_count: integer|Long expected";
                     if (message.collected_amount != null && message.hasOwnProperty("collected_amount")) {
                         var error = $root.cosmos.base.v1beta1.Coin.verify(message.collected_amount);
                         if (error)
@@ -31796,12 +31532,10 @@
                         message.state = 5;
                         break;
                     }
-                    if (object.bid_token != null)
-                        message.bid_token = String(object.bid_token);
+                    if (object.bid_denom != null)
+                        message.bid_denom = String(object.bid_denom);
                     if (object.minimum_deposit_rate != null)
                         message.minimum_deposit_rate = String(object.minimum_deposit_rate);
-                    if (object.automatic_refinancing != null)
-                        message.automatic_refinancing = Boolean(object.automatic_refinancing);
                     if (object.started_at != null) {
                         if (typeof object.started_at !== "object")
                             throw TypeError(".ununifi.nftbackedloan.NftListing.started_at: object expected");
@@ -31822,15 +31556,6 @@
                             throw TypeError(".ununifi.nftbackedloan.NftListing.successful_bid_end_at: object expected");
                         message.successful_bid_end_at = $root.google.protobuf.Timestamp.fromObject(object.successful_bid_end_at);
                     }
-                    if (object.auto_relisted_count != null)
-                        if ($util.Long)
-                            (message.auto_relisted_count = $util.Long.fromValue(object.auto_relisted_count)).unsigned = true;
-                        else if (typeof object.auto_relisted_count === "string")
-                            message.auto_relisted_count = parseInt(object.auto_relisted_count, 10);
-                        else if (typeof object.auto_relisted_count === "number")
-                            message.auto_relisted_count = object.auto_relisted_count;
-                        else if (typeof object.auto_relisted_count === "object")
-                            message.auto_relisted_count = new $util.LongBits(object.auto_relisted_count.low >>> 0, object.auto_relisted_count.high >>> 0).toNumber(true);
                     if (object.collected_amount != null) {
                         if (typeof object.collected_amount !== "object")
                             throw TypeError(".ununifi.nftbackedloan.NftListing.collected_amount: object expected");
@@ -31863,18 +31588,12 @@
                         object.nft_id = null;
                         object.owner = "";
                         object.state = options.enums === String ? "UNKNOWN" : 0;
-                        object.bid_token = "";
+                        object.bid_denom = "";
                         object.minimum_deposit_rate = "";
-                        object.automatic_refinancing = false;
                         object.started_at = null;
                         object.end_at = null;
                         object.full_payment_end_at = null;
                         object.successful_bid_end_at = null;
-                        if ($util.Long) {
-                            var long = new $util.Long(0, 0, true);
-                            object.auto_relisted_count = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                        } else
-                            object.auto_relisted_count = options.longs === String ? "0" : 0;
                         object.collected_amount = null;
                         object.collected_amount_negative = false;
                         object.minimum_bidding_period = null;
@@ -31885,12 +31604,10 @@
                         object.owner = message.owner;
                     if (message.state != null && message.hasOwnProperty("state"))
                         object.state = options.enums === String ? $root.ununifi.nftbackedloan.ListingState[message.state] : message.state;
-                    if (message.bid_token != null && message.hasOwnProperty("bid_token"))
-                        object.bid_token = message.bid_token;
+                    if (message.bid_denom != null && message.hasOwnProperty("bid_denom"))
+                        object.bid_denom = message.bid_denom;
                     if (message.minimum_deposit_rate != null && message.hasOwnProperty("minimum_deposit_rate"))
                         object.minimum_deposit_rate = message.minimum_deposit_rate;
-                    if (message.automatic_refinancing != null && message.hasOwnProperty("automatic_refinancing"))
-                        object.automatic_refinancing = message.automatic_refinancing;
                     if (message.started_at != null && message.hasOwnProperty("started_at"))
                         object.started_at = $root.google.protobuf.Timestamp.toObject(message.started_at, options);
                     if (message.end_at != null && message.hasOwnProperty("end_at"))
@@ -31899,11 +31616,6 @@
                         object.full_payment_end_at = $root.google.protobuf.Timestamp.toObject(message.full_payment_end_at, options);
                     if (message.successful_bid_end_at != null && message.hasOwnProperty("successful_bid_end_at"))
                         object.successful_bid_end_at = $root.google.protobuf.Timestamp.toObject(message.successful_bid_end_at, options);
-                    if (message.auto_relisted_count != null && message.hasOwnProperty("auto_relisted_count"))
-                        if (typeof message.auto_relisted_count === "number")
-                            object.auto_relisted_count = options.longs === String ? String(message.auto_relisted_count) : message.auto_relisted_count;
-                        else
-                            object.auto_relisted_count = options.longs === String ? $util.Long.prototype.toString.call(message.auto_relisted_count) : options.longs === Number ? new $util.LongBits(message.auto_relisted_count.low >>> 0, message.auto_relisted_count.high >>> 0).toNumber(true) : message.auto_relisted_count;
                     if (message.collected_amount != null && message.hasOwnProperty("collected_amount"))
                         object.collected_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.collected_amount, options);
                     if (message.collected_amount_negative != null && message.hasOwnProperty("collected_amount_negative"))
@@ -31934,8 +31646,7 @@
                  * @memberof ununifi.nftbackedloan
                  * @interface IBorrowing
                  * @property {cosmos.base.v1beta1.ICoin|null} [amount] Borrowing amount
-                 * @property {cosmos.base.v1beta1.ICoin|null} [paid_interest_amount] Borrowing paid_interest_amount
-                 * @property {google.protobuf.ITimestamp|null} [start_at] Borrowing start_at
+                 * @property {google.protobuf.ITimestamp|null} [last_repaid_at] Borrowing last_repaid_at
                  */
     
                 /**
@@ -31962,20 +31673,12 @@
                 Borrowing.prototype.amount = null;
     
                 /**
-                 * Borrowing paid_interest_amount.
-                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} paid_interest_amount
+                 * Borrowing last_repaid_at.
+                 * @member {google.protobuf.ITimestamp|null|undefined} last_repaid_at
                  * @memberof ununifi.nftbackedloan.Borrowing
                  * @instance
                  */
-                Borrowing.prototype.paid_interest_amount = null;
-    
-                /**
-                 * Borrowing start_at.
-                 * @member {google.protobuf.ITimestamp|null|undefined} start_at
-                 * @memberof ununifi.nftbackedloan.Borrowing
-                 * @instance
-                 */
-                Borrowing.prototype.start_at = null;
+                Borrowing.prototype.last_repaid_at = null;
     
                 /**
                  * Encodes the specified Borrowing message. Does not implicitly {@link ununifi.nftbackedloan.Borrowing.verify|verify} messages.
@@ -31991,10 +31694,8 @@
                         writer = $Writer.create();
                     if (message.amount != null && Object.hasOwnProperty.call(message, "amount"))
                         $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                    if (message.paid_interest_amount != null && Object.hasOwnProperty.call(message, "paid_interest_amount"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.paid_interest_amount, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                    if (message.start_at != null && Object.hasOwnProperty.call(message, "start_at"))
-                        $root.google.protobuf.Timestamp.encode(message.start_at, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                    if (message.last_repaid_at != null && Object.hasOwnProperty.call(message, "last_repaid_at"))
+                        $root.google.protobuf.Timestamp.encode(message.last_repaid_at, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
                     return writer;
                 };
     
@@ -32033,10 +31734,7 @@
                             message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         case 2:
-                            message.paid_interest_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                            break;
-                        case 3:
-                            message.start_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                            message.last_repaid_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -32078,15 +31776,10 @@
                         if (error)
                             return "amount." + error;
                     }
-                    if (message.paid_interest_amount != null && message.hasOwnProperty("paid_interest_amount")) {
-                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.paid_interest_amount);
+                    if (message.last_repaid_at != null && message.hasOwnProperty("last_repaid_at")) {
+                        var error = $root.google.protobuf.Timestamp.verify(message.last_repaid_at);
                         if (error)
-                            return "paid_interest_amount." + error;
-                    }
-                    if (message.start_at != null && message.hasOwnProperty("start_at")) {
-                        var error = $root.google.protobuf.Timestamp.verify(message.start_at);
-                        if (error)
-                            return "start_at." + error;
+                            return "last_repaid_at." + error;
                     }
                     return null;
                 };
@@ -32108,15 +31801,10 @@
                             throw TypeError(".ununifi.nftbackedloan.Borrowing.amount: object expected");
                         message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
                     }
-                    if (object.paid_interest_amount != null) {
-                        if (typeof object.paid_interest_amount !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.Borrowing.paid_interest_amount: object expected");
-                        message.paid_interest_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.paid_interest_amount);
-                    }
-                    if (object.start_at != null) {
-                        if (typeof object.start_at !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.Borrowing.start_at: object expected");
-                        message.start_at = $root.google.protobuf.Timestamp.fromObject(object.start_at);
+                    if (object.last_repaid_at != null) {
+                        if (typeof object.last_repaid_at !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.Borrowing.last_repaid_at: object expected");
+                        message.last_repaid_at = $root.google.protobuf.Timestamp.fromObject(object.last_repaid_at);
                     }
                     return message;
                 };
@@ -32136,15 +31824,12 @@
                     var object = {};
                     if (options.defaults) {
                         object.amount = null;
-                        object.paid_interest_amount = null;
-                        object.start_at = null;
+                        object.last_repaid_at = null;
                     }
                     if (message.amount != null && message.hasOwnProperty("amount"))
                         object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
-                    if (message.paid_interest_amount != null && message.hasOwnProperty("paid_interest_amount"))
-                        object.paid_interest_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.paid_interest_amount, options);
-                    if (message.start_at != null && message.hasOwnProperty("start_at"))
-                        object.start_at = $root.google.protobuf.Timestamp.toObject(message.start_at, options);
+                    if (message.last_repaid_at != null && message.hasOwnProperty("last_repaid_at"))
+                        object.last_repaid_at = $root.google.protobuf.Timestamp.toObject(message.last_repaid_at, options);
                     return object;
                 };
     
@@ -32172,12 +31857,11 @@
                  * @property {cosmos.base.v1beta1.ICoin|null} [bid_amount] NftBid bid_amount
                  * @property {cosmos.base.v1beta1.ICoin|null} [deposit_amount] NftBid deposit_amount
                  * @property {cosmos.base.v1beta1.ICoin|null} [paid_amount] NftBid paid_amount
-                 * @property {google.protobuf.ITimestamp|null} [bidding_period] NftBid bidding_period
-                 * @property {string|null} [deposit_lending_rate] NftBid deposit_lending_rate
+                 * @property {google.protobuf.ITimestamp|null} [expiry_at] NftBid expiry_at
+                 * @property {string|null} [interest_rate] NftBid interest_rate
                  * @property {boolean|null} [automatic_payment] NftBid automatic_payment
-                 * @property {google.protobuf.ITimestamp|null} [bid_time] NftBid bid_time
-                 * @property {cosmos.base.v1beta1.ICoin|null} [interest_amount] NftBid interest_amount
-                 * @property {Array.<ununifi.nftbackedloan.IBorrowing>|null} [borrowings] NftBid borrowings
+                 * @property {google.protobuf.ITimestamp|null} [created_at] NftBid created_at
+                 * @property {ununifi.nftbackedloan.IBorrowing|null} [borrow] NftBid borrow
                  */
     
                 /**
@@ -32189,7 +31873,6 @@
                  * @param {ununifi.nftbackedloan.INftBid=} [properties] Properties to set
                  */
                 function NftBid(properties) {
-                    this.borrowings = [];
                     if (properties)
                         for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -32229,20 +31912,20 @@
                 NftBid.prototype.paid_amount = null;
     
                 /**
-                 * NftBid bidding_period.
-                 * @member {google.protobuf.ITimestamp|null|undefined} bidding_period
+                 * NftBid expiry_at.
+                 * @member {google.protobuf.ITimestamp|null|undefined} expiry_at
                  * @memberof ununifi.nftbackedloan.NftBid
                  * @instance
                  */
-                NftBid.prototype.bidding_period = null;
+                NftBid.prototype.expiry_at = null;
     
                 /**
-                 * NftBid deposit_lending_rate.
-                 * @member {string} deposit_lending_rate
+                 * NftBid interest_rate.
+                 * @member {string} interest_rate
                  * @memberof ununifi.nftbackedloan.NftBid
                  * @instance
                  */
-                NftBid.prototype.deposit_lending_rate = "";
+                NftBid.prototype.interest_rate = "";
     
                 /**
                  * NftBid automatic_payment.
@@ -32253,28 +31936,20 @@
                 NftBid.prototype.automatic_payment = false;
     
                 /**
-                 * NftBid bid_time.
-                 * @member {google.protobuf.ITimestamp|null|undefined} bid_time
+                 * NftBid created_at.
+                 * @member {google.protobuf.ITimestamp|null|undefined} created_at
                  * @memberof ununifi.nftbackedloan.NftBid
                  * @instance
                  */
-                NftBid.prototype.bid_time = null;
+                NftBid.prototype.created_at = null;
     
                 /**
-                 * NftBid interest_amount.
-                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} interest_amount
+                 * NftBid borrow.
+                 * @member {ununifi.nftbackedloan.IBorrowing|null|undefined} borrow
                  * @memberof ununifi.nftbackedloan.NftBid
                  * @instance
                  */
-                NftBid.prototype.interest_amount = null;
-    
-                /**
-                 * NftBid borrowings.
-                 * @member {Array.<ununifi.nftbackedloan.IBorrowing>} borrowings
-                 * @memberof ununifi.nftbackedloan.NftBid
-                 * @instance
-                 */
-                NftBid.prototype.borrowings = $util.emptyArray;
+                NftBid.prototype.borrow = null;
     
                 /**
                  * Encodes the specified NftBid message. Does not implicitly {@link ununifi.nftbackedloan.NftBid.verify|verify} messages.
@@ -32296,19 +31971,16 @@
                         $root.cosmos.base.v1beta1.Coin.encode(message.deposit_amount, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
                     if (message.paid_amount != null && Object.hasOwnProperty.call(message, "paid_amount"))
                         $root.cosmos.base.v1beta1.Coin.encode(message.paid_amount, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-                    if (message.bidding_period != null && Object.hasOwnProperty.call(message, "bidding_period"))
-                        $root.google.protobuf.Timestamp.encode(message.bidding_period, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
-                    if (message.deposit_lending_rate != null && Object.hasOwnProperty.call(message, "deposit_lending_rate"))
-                        writer.uint32(/* id 6, wireType 2 =*/50).string(message.deposit_lending_rate);
+                    if (message.expiry_at != null && Object.hasOwnProperty.call(message, "expiry_at"))
+                        $root.google.protobuf.Timestamp.encode(message.expiry_at, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+                    if (message.interest_rate != null && Object.hasOwnProperty.call(message, "interest_rate"))
+                        writer.uint32(/* id 6, wireType 2 =*/50).string(message.interest_rate);
                     if (message.automatic_payment != null && Object.hasOwnProperty.call(message, "automatic_payment"))
                         writer.uint32(/* id 7, wireType 0 =*/56).bool(message.automatic_payment);
-                    if (message.bid_time != null && Object.hasOwnProperty.call(message, "bid_time"))
-                        $root.google.protobuf.Timestamp.encode(message.bid_time, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
-                    if (message.interest_amount != null && Object.hasOwnProperty.call(message, "interest_amount"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.interest_amount, writer.uint32(/* id 9, wireType 2 =*/74).fork()).ldelim();
-                    if (message.borrowings != null && message.borrowings.length)
-                        for (var i = 0; i < message.borrowings.length; ++i)
-                            $root.ununifi.nftbackedloan.Borrowing.encode(message.borrowings[i], writer.uint32(/* id 10, wireType 2 =*/82).fork()).ldelim();
+                    if (message.created_at != null && Object.hasOwnProperty.call(message, "created_at"))
+                        $root.google.protobuf.Timestamp.encode(message.created_at, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
+                    if (message.borrow != null && Object.hasOwnProperty.call(message, "borrow"))
+                        $root.ununifi.nftbackedloan.Borrowing.encode(message.borrow, writer.uint32(/* id 9, wireType 2 =*/74).fork()).ldelim();
                     return writer;
                 };
     
@@ -32356,24 +32028,19 @@
                             message.paid_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         case 5:
-                            message.bidding_period = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                            message.expiry_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                             break;
                         case 6:
-                            message.deposit_lending_rate = reader.string();
+                            message.interest_rate = reader.string();
                             break;
                         case 7:
                             message.automatic_payment = reader.bool();
                             break;
                         case 8:
-                            message.bid_time = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                            message.created_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                             break;
                         case 9:
-                            message.interest_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                            break;
-                        case 10:
-                            if (!(message.borrowings && message.borrowings.length))
-                                message.borrowings = [];
-                            message.borrowings.push($root.ununifi.nftbackedloan.Borrowing.decode(reader, reader.uint32()));
+                            message.borrow = $root.ununifi.nftbackedloan.Borrowing.decode(reader, reader.uint32());
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -32430,35 +32097,26 @@
                         if (error)
                             return "paid_amount." + error;
                     }
-                    if (message.bidding_period != null && message.hasOwnProperty("bidding_period")) {
-                        var error = $root.google.protobuf.Timestamp.verify(message.bidding_period);
+                    if (message.expiry_at != null && message.hasOwnProperty("expiry_at")) {
+                        var error = $root.google.protobuf.Timestamp.verify(message.expiry_at);
                         if (error)
-                            return "bidding_period." + error;
+                            return "expiry_at." + error;
                     }
-                    if (message.deposit_lending_rate != null && message.hasOwnProperty("deposit_lending_rate"))
-                        if (!$util.isString(message.deposit_lending_rate))
-                            return "deposit_lending_rate: string expected";
+                    if (message.interest_rate != null && message.hasOwnProperty("interest_rate"))
+                        if (!$util.isString(message.interest_rate))
+                            return "interest_rate: string expected";
                     if (message.automatic_payment != null && message.hasOwnProperty("automatic_payment"))
                         if (typeof message.automatic_payment !== "boolean")
                             return "automatic_payment: boolean expected";
-                    if (message.bid_time != null && message.hasOwnProperty("bid_time")) {
-                        var error = $root.google.protobuf.Timestamp.verify(message.bid_time);
+                    if (message.created_at != null && message.hasOwnProperty("created_at")) {
+                        var error = $root.google.protobuf.Timestamp.verify(message.created_at);
                         if (error)
-                            return "bid_time." + error;
+                            return "created_at." + error;
                     }
-                    if (message.interest_amount != null && message.hasOwnProperty("interest_amount")) {
-                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.interest_amount);
+                    if (message.borrow != null && message.hasOwnProperty("borrow")) {
+                        var error = $root.ununifi.nftbackedloan.Borrowing.verify(message.borrow);
                         if (error)
-                            return "interest_amount." + error;
-                    }
-                    if (message.borrowings != null && message.hasOwnProperty("borrowings")) {
-                        if (!Array.isArray(message.borrowings))
-                            return "borrowings: array expected";
-                        for (var i = 0; i < message.borrowings.length; ++i) {
-                            var error = $root.ununifi.nftbackedloan.Borrowing.verify(message.borrowings[i]);
-                            if (error)
-                                return "borrowings." + error;
-                        }
+                            return "borrow." + error;
                     }
                     return null;
                 };
@@ -32495,34 +32153,24 @@
                             throw TypeError(".ununifi.nftbackedloan.NftBid.paid_amount: object expected");
                         message.paid_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.paid_amount);
                     }
-                    if (object.bidding_period != null) {
-                        if (typeof object.bidding_period !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.NftBid.bidding_period: object expected");
-                        message.bidding_period = $root.google.protobuf.Timestamp.fromObject(object.bidding_period);
+                    if (object.expiry_at != null) {
+                        if (typeof object.expiry_at !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.NftBid.expiry_at: object expected");
+                        message.expiry_at = $root.google.protobuf.Timestamp.fromObject(object.expiry_at);
                     }
-                    if (object.deposit_lending_rate != null)
-                        message.deposit_lending_rate = String(object.deposit_lending_rate);
+                    if (object.interest_rate != null)
+                        message.interest_rate = String(object.interest_rate);
                     if (object.automatic_payment != null)
                         message.automatic_payment = Boolean(object.automatic_payment);
-                    if (object.bid_time != null) {
-                        if (typeof object.bid_time !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.NftBid.bid_time: object expected");
-                        message.bid_time = $root.google.protobuf.Timestamp.fromObject(object.bid_time);
+                    if (object.created_at != null) {
+                        if (typeof object.created_at !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.NftBid.created_at: object expected");
+                        message.created_at = $root.google.protobuf.Timestamp.fromObject(object.created_at);
                     }
-                    if (object.interest_amount != null) {
-                        if (typeof object.interest_amount !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.NftBid.interest_amount: object expected");
-                        message.interest_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.interest_amount);
-                    }
-                    if (object.borrowings) {
-                        if (!Array.isArray(object.borrowings))
-                            throw TypeError(".ununifi.nftbackedloan.NftBid.borrowings: array expected");
-                        message.borrowings = [];
-                        for (var i = 0; i < object.borrowings.length; ++i) {
-                            if (typeof object.borrowings[i] !== "object")
-                                throw TypeError(".ununifi.nftbackedloan.NftBid.borrowings: object expected");
-                            message.borrowings[i] = $root.ununifi.nftbackedloan.Borrowing.fromObject(object.borrowings[i]);
-                        }
+                    if (object.borrow != null) {
+                        if (typeof object.borrow !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.NftBid.borrow: object expected");
+                        message.borrow = $root.ununifi.nftbackedloan.Borrowing.fromObject(object.borrow);
                     }
                     return message;
                 };
@@ -32540,18 +32188,16 @@
                     if (!options)
                         options = {};
                     var object = {};
-                    if (options.arrays || options.defaults)
-                        object.borrowings = [];
                     if (options.defaults) {
                         object.id = null;
                         object.bid_amount = null;
                         object.deposit_amount = null;
                         object.paid_amount = null;
-                        object.bidding_period = null;
-                        object.deposit_lending_rate = "";
+                        object.expiry_at = null;
+                        object.interest_rate = "";
                         object.automatic_payment = false;
-                        object.bid_time = null;
-                        object.interest_amount = null;
+                        object.created_at = null;
+                        object.borrow = null;
                     }
                     if (message.id != null && message.hasOwnProperty("id"))
                         object.id = $root.ununifi.nftbackedloan.BidId.toObject(message.id, options);
@@ -32561,21 +32207,16 @@
                         object.deposit_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.deposit_amount, options);
                     if (message.paid_amount != null && message.hasOwnProperty("paid_amount"))
                         object.paid_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.paid_amount, options);
-                    if (message.bidding_period != null && message.hasOwnProperty("bidding_period"))
-                        object.bidding_period = $root.google.protobuf.Timestamp.toObject(message.bidding_period, options);
-                    if (message.deposit_lending_rate != null && message.hasOwnProperty("deposit_lending_rate"))
-                        object.deposit_lending_rate = message.deposit_lending_rate;
+                    if (message.expiry_at != null && message.hasOwnProperty("expiry_at"))
+                        object.expiry_at = $root.google.protobuf.Timestamp.toObject(message.expiry_at, options);
+                    if (message.interest_rate != null && message.hasOwnProperty("interest_rate"))
+                        object.interest_rate = message.interest_rate;
                     if (message.automatic_payment != null && message.hasOwnProperty("automatic_payment"))
                         object.automatic_payment = message.automatic_payment;
-                    if (message.bid_time != null && message.hasOwnProperty("bid_time"))
-                        object.bid_time = $root.google.protobuf.Timestamp.toObject(message.bid_time, options);
-                    if (message.interest_amount != null && message.hasOwnProperty("interest_amount"))
-                        object.interest_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.interest_amount, options);
-                    if (message.borrowings && message.borrowings.length) {
-                        object.borrowings = [];
-                        for (var j = 0; j < message.borrowings.length; ++j)
-                            object.borrowings[j] = $root.ununifi.nftbackedloan.Borrowing.toObject(message.borrowings[j], options);
-                    }
+                    if (message.created_at != null && message.hasOwnProperty("created_at"))
+                        object.created_at = $root.google.protobuf.Timestamp.toObject(message.created_at, options);
+                    if (message.borrow != null && message.hasOwnProperty("borrow"))
+                        object.borrow = $root.ununifi.nftbackedloan.Borrowing.toObject(message.borrow, options);
                     return object;
                 };
     
@@ -32591,384 +32232,6 @@
                 };
     
                 return NftBid;
-            })();
-    
-            nftbackedloan.PaymentStatus = (function() {
-    
-                /**
-                 * Properties of a PaymentStatus.
-                 * @memberof ununifi.nftbackedloan
-                 * @interface IPaymentStatus
-                 * @property {ununifi.nftbackedloan.INftIdentifier|null} [nft_id] PaymentStatus nft_id
-                 * @property {string|null} [bidder] PaymentStatus bidder
-                 * @property {cosmos.base.v1beta1.ICoin|null} [amount] PaymentStatus amount
-                 * @property {boolean|null} [automatic_payment] PaymentStatus automatic_payment
-                 * @property {string|null} [paid_amount] PaymentStatus paid_amount
-                 * @property {google.protobuf.ITimestamp|null} [bid_time] PaymentStatus bid_time
-                 * @property {ununifi.nftbackedloan.ListingState|null} [state] PaymentStatus state
-                 * @property {boolean|null} [all_paid] PaymentStatus all_paid
-                 */
-    
-                /**
-                 * Constructs a new PaymentStatus.
-                 * @memberof ununifi.nftbackedloan
-                 * @classdesc Represents a PaymentStatus.
-                 * @implements IPaymentStatus
-                 * @constructor
-                 * @param {ununifi.nftbackedloan.IPaymentStatus=} [properties] Properties to set
-                 */
-                function PaymentStatus(properties) {
-                    if (properties)
-                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-    
-                /**
-                 * PaymentStatus nft_id.
-                 * @member {ununifi.nftbackedloan.INftIdentifier|null|undefined} nft_id
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @instance
-                 */
-                PaymentStatus.prototype.nft_id = null;
-    
-                /**
-                 * PaymentStatus bidder.
-                 * @member {string} bidder
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @instance
-                 */
-                PaymentStatus.prototype.bidder = "";
-    
-                /**
-                 * PaymentStatus amount.
-                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @instance
-                 */
-                PaymentStatus.prototype.amount = null;
-    
-                /**
-                 * PaymentStatus automatic_payment.
-                 * @member {boolean} automatic_payment
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @instance
-                 */
-                PaymentStatus.prototype.automatic_payment = false;
-    
-                /**
-                 * PaymentStatus paid_amount.
-                 * @member {string} paid_amount
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @instance
-                 */
-                PaymentStatus.prototype.paid_amount = "";
-    
-                /**
-                 * PaymentStatus bid_time.
-                 * @member {google.protobuf.ITimestamp|null|undefined} bid_time
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @instance
-                 */
-                PaymentStatus.prototype.bid_time = null;
-    
-                /**
-                 * PaymentStatus state.
-                 * @member {ununifi.nftbackedloan.ListingState} state
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @instance
-                 */
-                PaymentStatus.prototype.state = 0;
-    
-                /**
-                 * PaymentStatus all_paid.
-                 * @member {boolean} all_paid
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @instance
-                 */
-                PaymentStatus.prototype.all_paid = false;
-    
-                /**
-                 * Encodes the specified PaymentStatus message. Does not implicitly {@link ununifi.nftbackedloan.PaymentStatus.verify|verify} messages.
-                 * @function encode
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @static
-                 * @param {ununifi.nftbackedloan.IPaymentStatus} message PaymentStatus message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                PaymentStatus.encode = function encode(message, writer) {
-                    if (!writer)
-                        writer = $Writer.create();
-                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
-                        $root.ununifi.nftbackedloan.NftIdentifier.encode(message.nft_id, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                    if (message.bidder != null && Object.hasOwnProperty.call(message, "bidder"))
-                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.bidder);
-                    if (message.amount != null && Object.hasOwnProperty.call(message, "amount"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-                    if (message.automatic_payment != null && Object.hasOwnProperty.call(message, "automatic_payment"))
-                        writer.uint32(/* id 4, wireType 0 =*/32).bool(message.automatic_payment);
-                    if (message.paid_amount != null && Object.hasOwnProperty.call(message, "paid_amount"))
-                        writer.uint32(/* id 5, wireType 2 =*/42).string(message.paid_amount);
-                    if (message.bid_time != null && Object.hasOwnProperty.call(message, "bid_time"))
-                        $root.google.protobuf.Timestamp.encode(message.bid_time, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
-                    if (message.state != null && Object.hasOwnProperty.call(message, "state"))
-                        writer.uint32(/* id 7, wireType 0 =*/56).int32(message.state);
-                    if (message.all_paid != null && Object.hasOwnProperty.call(message, "all_paid"))
-                        writer.uint32(/* id 8, wireType 0 =*/64).bool(message.all_paid);
-                    return writer;
-                };
-    
-                /**
-                 * Encodes the specified PaymentStatus message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.PaymentStatus.verify|verify} messages.
-                 * @function encodeDelimited
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @static
-                 * @param {ununifi.nftbackedloan.IPaymentStatus} message PaymentStatus message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                PaymentStatus.encodeDelimited = function encodeDelimited(message, writer) {
-                    return this.encode(message, writer).ldelim();
-                };
-    
-                /**
-                 * Decodes a PaymentStatus message from the specified reader or buffer.
-                 * @function decode
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.nftbackedloan.PaymentStatus} PaymentStatus
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                PaymentStatus.decode = function decode(reader, length) {
-                    if (!(reader instanceof $Reader))
-                        reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.PaymentStatus();
-                    while (reader.pos < end) {
-                        var tag = reader.uint32();
-                        switch (tag >>> 3) {
-                        case 1:
-                            message.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.decode(reader, reader.uint32());
-                            break;
-                        case 2:
-                            message.bidder = reader.string();
-                            break;
-                        case 3:
-                            message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                            break;
-                        case 4:
-                            message.automatic_payment = reader.bool();
-                            break;
-                        case 5:
-                            message.paid_amount = reader.string();
-                            break;
-                        case 6:
-                            message.bid_time = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
-                            break;
-                        case 7:
-                            message.state = reader.int32();
-                            break;
-                        case 8:
-                            message.all_paid = reader.bool();
-                            break;
-                        default:
-                            reader.skipType(tag & 7);
-                            break;
-                        }
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Decodes a PaymentStatus message from the specified reader or buffer, length delimited.
-                 * @function decodeDelimited
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.nftbackedloan.PaymentStatus} PaymentStatus
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                PaymentStatus.decodeDelimited = function decodeDelimited(reader) {
-                    if (!(reader instanceof $Reader))
-                        reader = new $Reader(reader);
-                    return this.decode(reader, reader.uint32());
-                };
-    
-                /**
-                 * Verifies a PaymentStatus message.
-                 * @function verify
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                PaymentStatus.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id")) {
-                        var error = $root.ununifi.nftbackedloan.NftIdentifier.verify(message.nft_id);
-                        if (error)
-                            return "nft_id." + error;
-                    }
-                    if (message.bidder != null && message.hasOwnProperty("bidder"))
-                        if (!$util.isString(message.bidder))
-                            return "bidder: string expected";
-                    if (message.amount != null && message.hasOwnProperty("amount")) {
-                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
-                        if (error)
-                            return "amount." + error;
-                    }
-                    if (message.automatic_payment != null && message.hasOwnProperty("automatic_payment"))
-                        if (typeof message.automatic_payment !== "boolean")
-                            return "automatic_payment: boolean expected";
-                    if (message.paid_amount != null && message.hasOwnProperty("paid_amount"))
-                        if (!$util.isString(message.paid_amount))
-                            return "paid_amount: string expected";
-                    if (message.bid_time != null && message.hasOwnProperty("bid_time")) {
-                        var error = $root.google.protobuf.Timestamp.verify(message.bid_time);
-                        if (error)
-                            return "bid_time." + error;
-                    }
-                    if (message.state != null && message.hasOwnProperty("state"))
-                        switch (message.state) {
-                        default:
-                            return "state: enum value expected";
-                        case 0:
-                        case 1:
-                        case 2:
-                        case 3:
-                        case 4:
-                        case 5:
-                            break;
-                        }
-                    if (message.all_paid != null && message.hasOwnProperty("all_paid"))
-                        if (typeof message.all_paid !== "boolean")
-                            return "all_paid: boolean expected";
-                    return null;
-                };
-    
-                /**
-                 * Creates a PaymentStatus message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.nftbackedloan.PaymentStatus} PaymentStatus
-                 */
-                PaymentStatus.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.nftbackedloan.PaymentStatus)
-                        return object;
-                    var message = new $root.ununifi.nftbackedloan.PaymentStatus();
-                    if (object.nft_id != null) {
-                        if (typeof object.nft_id !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.PaymentStatus.nft_id: object expected");
-                        message.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.fromObject(object.nft_id);
-                    }
-                    if (object.bidder != null)
-                        message.bidder = String(object.bidder);
-                    if (object.amount != null) {
-                        if (typeof object.amount !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.PaymentStatus.amount: object expected");
-                        message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
-                    }
-                    if (object.automatic_payment != null)
-                        message.automatic_payment = Boolean(object.automatic_payment);
-                    if (object.paid_amount != null)
-                        message.paid_amount = String(object.paid_amount);
-                    if (object.bid_time != null) {
-                        if (typeof object.bid_time !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.PaymentStatus.bid_time: object expected");
-                        message.bid_time = $root.google.protobuf.Timestamp.fromObject(object.bid_time);
-                    }
-                    switch (object.state) {
-                    case "UNKNOWN":
-                    case 0:
-                        message.state = 0;
-                        break;
-                    case "LISTING":
-                    case 1:
-                        message.state = 1;
-                        break;
-                    case "BIDDING":
-                    case 2:
-                        message.state = 2;
-                        break;
-                    case "SELLING_DECISION":
-                    case 3:
-                        message.state = 3;
-                        break;
-                    case "LIQUIDATION":
-                    case 4:
-                        message.state = 4;
-                        break;
-                    case "SUCCESSFUL_BID":
-                    case 5:
-                        message.state = 5;
-                        break;
-                    }
-                    if (object.all_paid != null)
-                        message.all_paid = Boolean(object.all_paid);
-                    return message;
-                };
-    
-                /**
-                 * Creates a plain object from a PaymentStatus message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @static
-                 * @param {ununifi.nftbackedloan.PaymentStatus} message PaymentStatus
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                PaymentStatus.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    var object = {};
-                    if (options.defaults) {
-                        object.nft_id = null;
-                        object.bidder = "";
-                        object.amount = null;
-                        object.automatic_payment = false;
-                        object.paid_amount = "";
-                        object.bid_time = null;
-                        object.state = options.enums === String ? "UNKNOWN" : 0;
-                        object.all_paid = false;
-                    }
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        object.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.toObject(message.nft_id, options);
-                    if (message.bidder != null && message.hasOwnProperty("bidder"))
-                        object.bidder = message.bidder;
-                    if (message.amount != null && message.hasOwnProperty("amount"))
-                        object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
-                    if (message.automatic_payment != null && message.hasOwnProperty("automatic_payment"))
-                        object.automatic_payment = message.automatic_payment;
-                    if (message.paid_amount != null && message.hasOwnProperty("paid_amount"))
-                        object.paid_amount = message.paid_amount;
-                    if (message.bid_time != null && message.hasOwnProperty("bid_time"))
-                        object.bid_time = $root.google.protobuf.Timestamp.toObject(message.bid_time, options);
-                    if (message.state != null && message.hasOwnProperty("state"))
-                        object.state = options.enums === String ? $root.ununifi.nftbackedloan.ListingState[message.state] : message.state;
-                    if (message.all_paid != null && message.hasOwnProperty("all_paid"))
-                        object.all_paid = message.all_paid;
-                    return object;
-                };
-    
-                /**
-                 * Converts this PaymentStatus to JSON.
-                 * @function toJSON
-                 * @memberof ununifi.nftbackedloan.PaymentStatus
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                PaymentStatus.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-    
-                return PaymentStatus;
             })();
     
             nftbackedloan.Liquidation = (function() {
@@ -35898,7 +35161,6 @@
                  * @property {ununifi.nftbackedloan.IParams|null} [params] GenesisState params
                  * @property {Array.<ununifi.nftbackedloan.INftListing>|null} [listings] GenesisState listings
                  * @property {Array.<ununifi.nftbackedloan.INftBid>|null} [bids] GenesisState bids
-                 * @property {Array.<ununifi.nftbackedloan.ILoan>|null} [loans] GenesisState loans
                  */
     
                 /**
@@ -35912,7 +35174,6 @@
                 function GenesisState(properties) {
                     this.listings = [];
                     this.bids = [];
-                    this.loans = [];
                     if (properties)
                         for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -35944,14 +35205,6 @@
                 GenesisState.prototype.bids = $util.emptyArray;
     
                 /**
-                 * GenesisState loans.
-                 * @member {Array.<ununifi.nftbackedloan.ILoan>} loans
-                 * @memberof ununifi.nftbackedloan.GenesisState
-                 * @instance
-                 */
-                GenesisState.prototype.loans = $util.emptyArray;
-    
-                /**
                  * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.nftbackedloan.GenesisState.verify|verify} messages.
                  * @function encode
                  * @memberof ununifi.nftbackedloan.GenesisState
@@ -35971,9 +35224,6 @@
                     if (message.bids != null && message.bids.length)
                         for (var i = 0; i < message.bids.length; ++i)
                             $root.ununifi.nftbackedloan.NftBid.encode(message.bids[i], writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-                    if (message.loans != null && message.loans.length)
-                        for (var i = 0; i < message.loans.length; ++i)
-                            $root.ununifi.nftbackedloan.Loan.encode(message.loans[i], writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
                     return writer;
                 };
     
@@ -36020,11 +35270,6 @@
                             if (!(message.bids && message.bids.length))
                                 message.bids = [];
                             message.bids.push($root.ununifi.nftbackedloan.NftBid.decode(reader, reader.uint32()));
-                            break;
-                        case 4:
-                            if (!(message.loans && message.loans.length))
-                                message.loans = [];
-                            message.loans.push($root.ununifi.nftbackedloan.Loan.decode(reader, reader.uint32()));
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -36084,15 +35329,6 @@
                                 return "bids." + error;
                         }
                     }
-                    if (message.loans != null && message.hasOwnProperty("loans")) {
-                        if (!Array.isArray(message.loans))
-                            return "loans: array expected";
-                        for (var i = 0; i < message.loans.length; ++i) {
-                            var error = $root.ununifi.nftbackedloan.Loan.verify(message.loans[i]);
-                            if (error)
-                                return "loans." + error;
-                        }
-                    }
                     return null;
                 };
     
@@ -36133,16 +35369,6 @@
                             message.bids[i] = $root.ununifi.nftbackedloan.NftBid.fromObject(object.bids[i]);
                         }
                     }
-                    if (object.loans) {
-                        if (!Array.isArray(object.loans))
-                            throw TypeError(".ununifi.nftbackedloan.GenesisState.loans: array expected");
-                        message.loans = [];
-                        for (var i = 0; i < object.loans.length; ++i) {
-                            if (typeof object.loans[i] !== "object")
-                                throw TypeError(".ununifi.nftbackedloan.GenesisState.loans: object expected");
-                            message.loans[i] = $root.ununifi.nftbackedloan.Loan.fromObject(object.loans[i]);
-                        }
-                    }
                     return message;
                 };
     
@@ -36162,7 +35388,6 @@
                     if (options.arrays || options.defaults) {
                         object.listings = [];
                         object.bids = [];
-                        object.loans = [];
                     }
                     if (options.defaults)
                         object.params = null;
@@ -36177,11 +35402,6 @@
                         object.bids = [];
                         for (var j = 0; j < message.bids.length; ++j)
                             object.bids[j] = $root.ununifi.nftbackedloan.NftBid.toObject(message.bids[j], options);
-                    }
-                    if (message.loans && message.loans.length) {
-                        object.loans = [];
-                        for (var j = 0; j < message.loans.length; ++j)
-                            object.loans[j] = $root.ununifi.nftbackedloan.Loan.toObject(message.loans[j], options);
                     }
                     return object;
                 };
@@ -37152,39 +36372,6 @@
                  */
     
                 /**
-                 * Callback as used by {@link ununifi.nftbackedloan.Query#loans}.
-                 * @memberof ununifi.nftbackedloan.Query
-                 * @typedef LoansCallback
-                 * @type {function}
-                 * @param {Error|null} error Error, if any
-                 * @param {ununifi.nftbackedloan.QueryLoansResponse} [response] QueryLoansResponse
-                 */
-    
-                /**
-                 * Calls Loans.
-                 * @function loans
-                 * @memberof ununifi.nftbackedloan.Query
-                 * @instance
-                 * @param {ununifi.nftbackedloan.IQueryLoansRequest} request QueryLoansRequest message or plain object
-                 * @param {ununifi.nftbackedloan.Query.LoansCallback} callback Node-style callback called with the error, if any, and QueryLoansResponse
-                 * @returns {undefined}
-                 * @variation 1
-                 */
-                Object.defineProperty(Query.prototype.loans = function loans(request, callback) {
-                    return this.rpcCall(loans, $root.ununifi.nftbackedloan.QueryLoansRequest, $root.ununifi.nftbackedloan.QueryLoansResponse, request, callback);
-                }, "name", { value: "Loans" });
-    
-                /**
-                 * Calls Loans.
-                 * @function loans
-                 * @memberof ununifi.nftbackedloan.Query
-                 * @instance
-                 * @param {ununifi.nftbackedloan.IQueryLoansRequest} request QueryLoansRequest message or plain object
-                 * @returns {Promise<ununifi.nftbackedloan.QueryLoansResponse>} Promise
-                 * @variation 2
-                 */
-    
-                /**
                  * Callback as used by {@link ununifi.nftbackedloan.Query#loan}.
                  * @memberof ununifi.nftbackedloan.Query
                  * @typedef LoanCallback
@@ -37280,39 +36467,6 @@
                  * @instance
                  * @param {ununifi.nftbackedloan.IQueryBidderBidsRequest} request QueryBidderBidsRequest message or plain object
                  * @returns {Promise<ununifi.nftbackedloan.QueryBidderBidsResponse>} Promise
-                 * @variation 2
-                 */
-    
-                /**
-                 * Callback as used by {@link ununifi.nftbackedloan.Query#paymentStatus}.
-                 * @memberof ununifi.nftbackedloan.Query
-                 * @typedef PaymentStatusCallback
-                 * @type {function}
-                 * @param {Error|null} error Error, if any
-                 * @param {ununifi.nftbackedloan.QueryPaymentStatusResponse} [response] QueryPaymentStatusResponse
-                 */
-    
-                /**
-                 * Calls PaymentStatus.
-                 * @function paymentStatus
-                 * @memberof ununifi.nftbackedloan.Query
-                 * @instance
-                 * @param {ununifi.nftbackedloan.IQueryPaymentStatusRequest} request QueryPaymentStatusRequest message or plain object
-                 * @param {ununifi.nftbackedloan.Query.PaymentStatusCallback} callback Node-style callback called with the error, if any, and QueryPaymentStatusResponse
-                 * @returns {undefined}
-                 * @variation 1
-                 */
-                Object.defineProperty(Query.prototype.paymentStatus = function paymentStatus(request, callback) {
-                    return this.rpcCall(paymentStatus, $root.ununifi.nftbackedloan.QueryPaymentStatusRequest, $root.ununifi.nftbackedloan.QueryPaymentStatusResponse, request, callback);
-                }, "name", { value: "PaymentStatus" });
-    
-                /**
-                 * Calls PaymentStatus.
-                 * @function paymentStatus
-                 * @memberof ununifi.nftbackedloan.Query
-                 * @instance
-                 * @param {ununifi.nftbackedloan.IQueryPaymentStatusRequest} request QueryPaymentStatusRequest message or plain object
-                 * @returns {Promise<ununifi.nftbackedloan.QueryPaymentStatusResponse>} Promise
                  * @variation 2
                  */
     
@@ -39605,350 +38759,6 @@
                 return QueryListedClassResponse;
             })();
     
-            nftbackedloan.QueryLoansRequest = (function() {
-    
-                /**
-                 * Properties of a QueryLoansRequest.
-                 * @memberof ununifi.nftbackedloan
-                 * @interface IQueryLoansRequest
-                 */
-    
-                /**
-                 * Constructs a new QueryLoansRequest.
-                 * @memberof ununifi.nftbackedloan
-                 * @classdesc Represents a QueryLoansRequest.
-                 * @implements IQueryLoansRequest
-                 * @constructor
-                 * @param {ununifi.nftbackedloan.IQueryLoansRequest=} [properties] Properties to set
-                 */
-                function QueryLoansRequest(properties) {
-                    if (properties)
-                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-    
-                /**
-                 * Encodes the specified QueryLoansRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryLoansRequest.verify|verify} messages.
-                 * @function encode
-                 * @memberof ununifi.nftbackedloan.QueryLoansRequest
-                 * @static
-                 * @param {ununifi.nftbackedloan.IQueryLoansRequest} message QueryLoansRequest message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryLoansRequest.encode = function encode(message, writer) {
-                    if (!writer)
-                        writer = $Writer.create();
-                    return writer;
-                };
-    
-                /**
-                 * Encodes the specified QueryLoansRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryLoansRequest.verify|verify} messages.
-                 * @function encodeDelimited
-                 * @memberof ununifi.nftbackedloan.QueryLoansRequest
-                 * @static
-                 * @param {ununifi.nftbackedloan.IQueryLoansRequest} message QueryLoansRequest message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryLoansRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                    return this.encode(message, writer).ldelim();
-                };
-    
-                /**
-                 * Decodes a QueryLoansRequest message from the specified reader or buffer.
-                 * @function decode
-                 * @memberof ununifi.nftbackedloan.QueryLoansRequest
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.nftbackedloan.QueryLoansRequest} QueryLoansRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryLoansRequest.decode = function decode(reader, length) {
-                    if (!(reader instanceof $Reader))
-                        reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.QueryLoansRequest();
-                    while (reader.pos < end) {
-                        var tag = reader.uint32();
-                        switch (tag >>> 3) {
-                        default:
-                            reader.skipType(tag & 7);
-                            break;
-                        }
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Decodes a QueryLoansRequest message from the specified reader or buffer, length delimited.
-                 * @function decodeDelimited
-                 * @memberof ununifi.nftbackedloan.QueryLoansRequest
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.nftbackedloan.QueryLoansRequest} QueryLoansRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryLoansRequest.decodeDelimited = function decodeDelimited(reader) {
-                    if (!(reader instanceof $Reader))
-                        reader = new $Reader(reader);
-                    return this.decode(reader, reader.uint32());
-                };
-    
-                /**
-                 * Verifies a QueryLoansRequest message.
-                 * @function verify
-                 * @memberof ununifi.nftbackedloan.QueryLoansRequest
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                QueryLoansRequest.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    return null;
-                };
-    
-                /**
-                 * Creates a QueryLoansRequest message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof ununifi.nftbackedloan.QueryLoansRequest
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.nftbackedloan.QueryLoansRequest} QueryLoansRequest
-                 */
-                QueryLoansRequest.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.nftbackedloan.QueryLoansRequest)
-                        return object;
-                    return new $root.ununifi.nftbackedloan.QueryLoansRequest();
-                };
-    
-                /**
-                 * Creates a plain object from a QueryLoansRequest message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof ununifi.nftbackedloan.QueryLoansRequest
-                 * @static
-                 * @param {ununifi.nftbackedloan.QueryLoansRequest} message QueryLoansRequest
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                QueryLoansRequest.toObject = function toObject() {
-                    return {};
-                };
-    
-                /**
-                 * Converts this QueryLoansRequest to JSON.
-                 * @function toJSON
-                 * @memberof ununifi.nftbackedloan.QueryLoansRequest
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                QueryLoansRequest.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-    
-                return QueryLoansRequest;
-            })();
-    
-            nftbackedloan.QueryLoansResponse = (function() {
-    
-                /**
-                 * Properties of a QueryLoansResponse.
-                 * @memberof ununifi.nftbackedloan
-                 * @interface IQueryLoansResponse
-                 * @property {Array.<ununifi.nftbackedloan.ILoan>|null} [loans] QueryLoansResponse loans
-                 */
-    
-                /**
-                 * Constructs a new QueryLoansResponse.
-                 * @memberof ununifi.nftbackedloan
-                 * @classdesc Represents a QueryLoansResponse.
-                 * @implements IQueryLoansResponse
-                 * @constructor
-                 * @param {ununifi.nftbackedloan.IQueryLoansResponse=} [properties] Properties to set
-                 */
-                function QueryLoansResponse(properties) {
-                    this.loans = [];
-                    if (properties)
-                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-    
-                /**
-                 * QueryLoansResponse loans.
-                 * @member {Array.<ununifi.nftbackedloan.ILoan>} loans
-                 * @memberof ununifi.nftbackedloan.QueryLoansResponse
-                 * @instance
-                 */
-                QueryLoansResponse.prototype.loans = $util.emptyArray;
-    
-                /**
-                 * Encodes the specified QueryLoansResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryLoansResponse.verify|verify} messages.
-                 * @function encode
-                 * @memberof ununifi.nftbackedloan.QueryLoansResponse
-                 * @static
-                 * @param {ununifi.nftbackedloan.IQueryLoansResponse} message QueryLoansResponse message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryLoansResponse.encode = function encode(message, writer) {
-                    if (!writer)
-                        writer = $Writer.create();
-                    if (message.loans != null && message.loans.length)
-                        for (var i = 0; i < message.loans.length; ++i)
-                            $root.ununifi.nftbackedloan.Loan.encode(message.loans[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                    return writer;
-                };
-    
-                /**
-                 * Encodes the specified QueryLoansResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryLoansResponse.verify|verify} messages.
-                 * @function encodeDelimited
-                 * @memberof ununifi.nftbackedloan.QueryLoansResponse
-                 * @static
-                 * @param {ununifi.nftbackedloan.IQueryLoansResponse} message QueryLoansResponse message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryLoansResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                    return this.encode(message, writer).ldelim();
-                };
-    
-                /**
-                 * Decodes a QueryLoansResponse message from the specified reader or buffer.
-                 * @function decode
-                 * @memberof ununifi.nftbackedloan.QueryLoansResponse
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.nftbackedloan.QueryLoansResponse} QueryLoansResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryLoansResponse.decode = function decode(reader, length) {
-                    if (!(reader instanceof $Reader))
-                        reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.QueryLoansResponse();
-                    while (reader.pos < end) {
-                        var tag = reader.uint32();
-                        switch (tag >>> 3) {
-                        case 1:
-                            if (!(message.loans && message.loans.length))
-                                message.loans = [];
-                            message.loans.push($root.ununifi.nftbackedloan.Loan.decode(reader, reader.uint32()));
-                            break;
-                        default:
-                            reader.skipType(tag & 7);
-                            break;
-                        }
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Decodes a QueryLoansResponse message from the specified reader or buffer, length delimited.
-                 * @function decodeDelimited
-                 * @memberof ununifi.nftbackedloan.QueryLoansResponse
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.nftbackedloan.QueryLoansResponse} QueryLoansResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryLoansResponse.decodeDelimited = function decodeDelimited(reader) {
-                    if (!(reader instanceof $Reader))
-                        reader = new $Reader(reader);
-                    return this.decode(reader, reader.uint32());
-                };
-    
-                /**
-                 * Verifies a QueryLoansResponse message.
-                 * @function verify
-                 * @memberof ununifi.nftbackedloan.QueryLoansResponse
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                QueryLoansResponse.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.loans != null && message.hasOwnProperty("loans")) {
-                        if (!Array.isArray(message.loans))
-                            return "loans: array expected";
-                        for (var i = 0; i < message.loans.length; ++i) {
-                            var error = $root.ununifi.nftbackedloan.Loan.verify(message.loans[i]);
-                            if (error)
-                                return "loans." + error;
-                        }
-                    }
-                    return null;
-                };
-    
-                /**
-                 * Creates a QueryLoansResponse message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof ununifi.nftbackedloan.QueryLoansResponse
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.nftbackedloan.QueryLoansResponse} QueryLoansResponse
-                 */
-                QueryLoansResponse.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.nftbackedloan.QueryLoansResponse)
-                        return object;
-                    var message = new $root.ununifi.nftbackedloan.QueryLoansResponse();
-                    if (object.loans) {
-                        if (!Array.isArray(object.loans))
-                            throw TypeError(".ununifi.nftbackedloan.QueryLoansResponse.loans: array expected");
-                        message.loans = [];
-                        for (var i = 0; i < object.loans.length; ++i) {
-                            if (typeof object.loans[i] !== "object")
-                                throw TypeError(".ununifi.nftbackedloan.QueryLoansResponse.loans: object expected");
-                            message.loans[i] = $root.ununifi.nftbackedloan.Loan.fromObject(object.loans[i]);
-                        }
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Creates a plain object from a QueryLoansResponse message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof ununifi.nftbackedloan.QueryLoansResponse
-                 * @static
-                 * @param {ununifi.nftbackedloan.QueryLoansResponse} message QueryLoansResponse
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                QueryLoansResponse.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    var object = {};
-                    if (options.arrays || options.defaults)
-                        object.loans = [];
-                    if (message.loans && message.loans.length) {
-                        object.loans = [];
-                        for (var j = 0; j < message.loans.length; ++j)
-                            object.loans[j] = $root.ununifi.nftbackedloan.Loan.toObject(message.loans[j], options);
-                    }
-                    return object;
-                };
-    
-                /**
-                 * Converts this QueryLoansResponse to JSON.
-                 * @function toJSON
-                 * @memberof ununifi.nftbackedloan.QueryLoansResponse
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                QueryLoansResponse.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-    
-                return QueryLoansResponse;
-            })();
-    
             nftbackedloan.QueryLoanRequest = (function() {
     
                 /**
@@ -40153,7 +38963,8 @@
                  * Properties of a QueryLoanResponse.
                  * @memberof ununifi.nftbackedloan
                  * @interface IQueryLoanResponse
-                 * @property {ununifi.nftbackedloan.ILoan|null} [loan] QueryLoanResponse loan
+                 * @property {ununifi.nftbackedloan.INftIdentifier|null} [nft_id] QueryLoanResponse nft_id
+                 * @property {cosmos.base.v1beta1.ICoin|null} [borrowing_amount] QueryLoanResponse borrowing_amount
                  * @property {cosmos.base.v1beta1.ICoin|null} [borrowing_limit] QueryLoanResponse borrowing_limit
                  * @property {cosmos.base.v1beta1.ICoin|null} [total_deposit] QueryLoanResponse total_deposit
                  */
@@ -40174,12 +38985,20 @@
                 }
     
                 /**
-                 * QueryLoanResponse loan.
-                 * @member {ununifi.nftbackedloan.ILoan|null|undefined} loan
+                 * QueryLoanResponse nft_id.
+                 * @member {ununifi.nftbackedloan.INftIdentifier|null|undefined} nft_id
                  * @memberof ununifi.nftbackedloan.QueryLoanResponse
                  * @instance
                  */
-                QueryLoanResponse.prototype.loan = null;
+                QueryLoanResponse.prototype.nft_id = null;
+    
+                /**
+                 * QueryLoanResponse borrowing_amount.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} borrowing_amount
+                 * @memberof ununifi.nftbackedloan.QueryLoanResponse
+                 * @instance
+                 */
+                QueryLoanResponse.prototype.borrowing_amount = null;
     
                 /**
                  * QueryLoanResponse borrowing_limit.
@@ -40209,12 +39028,14 @@
                 QueryLoanResponse.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.loan != null && Object.hasOwnProperty.call(message, "loan"))
-                        $root.ununifi.nftbackedloan.Loan.encode(message.loan, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
+                        $root.ununifi.nftbackedloan.NftIdentifier.encode(message.nft_id, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.borrowing_amount != null && Object.hasOwnProperty.call(message, "borrowing_amount"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.borrowing_amount, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
                     if (message.borrowing_limit != null && Object.hasOwnProperty.call(message, "borrowing_limit"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.borrowing_limit, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                        $root.cosmos.base.v1beta1.Coin.encode(message.borrowing_limit, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
                     if (message.total_deposit != null && Object.hasOwnProperty.call(message, "total_deposit"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.total_deposit, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                        $root.cosmos.base.v1beta1.Coin.encode(message.total_deposit, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
                     return writer;
                 };
     
@@ -40250,12 +39071,15 @@
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
                         case 1:
-                            message.loan = $root.ununifi.nftbackedloan.Loan.decode(reader, reader.uint32());
+                            message.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.decode(reader, reader.uint32());
                             break;
                         case 2:
-                            message.borrowing_limit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            message.borrowing_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         case 3:
+                            message.borrowing_limit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        case 4:
                             message.total_deposit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         default:
@@ -40293,10 +39117,15 @@
                 QueryLoanResponse.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.loan != null && message.hasOwnProperty("loan")) {
-                        var error = $root.ununifi.nftbackedloan.Loan.verify(message.loan);
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id")) {
+                        var error = $root.ununifi.nftbackedloan.NftIdentifier.verify(message.nft_id);
                         if (error)
-                            return "loan." + error;
+                            return "nft_id." + error;
+                    }
+                    if (message.borrowing_amount != null && message.hasOwnProperty("borrowing_amount")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.borrowing_amount);
+                        if (error)
+                            return "borrowing_amount." + error;
                     }
                     if (message.borrowing_limit != null && message.hasOwnProperty("borrowing_limit")) {
                         var error = $root.cosmos.base.v1beta1.Coin.verify(message.borrowing_limit);
@@ -40323,10 +39152,15 @@
                     if (object instanceof $root.ununifi.nftbackedloan.QueryLoanResponse)
                         return object;
                     var message = new $root.ununifi.nftbackedloan.QueryLoanResponse();
-                    if (object.loan != null) {
-                        if (typeof object.loan !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.QueryLoanResponse.loan: object expected");
-                        message.loan = $root.ununifi.nftbackedloan.Loan.fromObject(object.loan);
+                    if (object.nft_id != null) {
+                        if (typeof object.nft_id !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.QueryLoanResponse.nft_id: object expected");
+                        message.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.fromObject(object.nft_id);
+                    }
+                    if (object.borrowing_amount != null) {
+                        if (typeof object.borrowing_amount !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.QueryLoanResponse.borrowing_amount: object expected");
+                        message.borrowing_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.borrowing_amount);
                     }
                     if (object.borrowing_limit != null) {
                         if (typeof object.borrowing_limit !== "object")
@@ -40355,12 +39189,15 @@
                         options = {};
                     var object = {};
                     if (options.defaults) {
-                        object.loan = null;
+                        object.nft_id = null;
+                        object.borrowing_amount = null;
                         object.borrowing_limit = null;
                         object.total_deposit = null;
                     }
-                    if (message.loan != null && message.hasOwnProperty("loan"))
-                        object.loan = $root.ununifi.nftbackedloan.Loan.toObject(message.loan, options);
+                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
+                        object.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.toObject(message.nft_id, options);
+                    if (message.borrowing_amount != null && message.hasOwnProperty("borrowing_amount"))
+                        object.borrowing_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.borrowing_amount, options);
                     if (message.borrowing_limit != null && message.hasOwnProperty("borrowing_limit"))
                         object.borrowing_limit = $root.cosmos.base.v1beta1.Coin.toObject(message.borrowing_limit, options);
                     if (message.total_deposit != null && message.hasOwnProperty("total_deposit"))
@@ -40774,406 +39611,6 @@
                 };
     
                 return QueryNftBidsResponse;
-            })();
-    
-            nftbackedloan.QueryPaymentStatusRequest = (function() {
-    
-                /**
-                 * Properties of a QueryPaymentStatusRequest.
-                 * @memberof ununifi.nftbackedloan
-                 * @interface IQueryPaymentStatusRequest
-                 * @property {string|null} [class_id] QueryPaymentStatusRequest class_id
-                 * @property {string|null} [nft_id] QueryPaymentStatusRequest nft_id
-                 * @property {string|null} [bidder] QueryPaymentStatusRequest bidder
-                 */
-    
-                /**
-                 * Constructs a new QueryPaymentStatusRequest.
-                 * @memberof ununifi.nftbackedloan
-                 * @classdesc Represents a QueryPaymentStatusRequest.
-                 * @implements IQueryPaymentStatusRequest
-                 * @constructor
-                 * @param {ununifi.nftbackedloan.IQueryPaymentStatusRequest=} [properties] Properties to set
-                 */
-                function QueryPaymentStatusRequest(properties) {
-                    if (properties)
-                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-    
-                /**
-                 * QueryPaymentStatusRequest class_id.
-                 * @member {string} class_id
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusRequest
-                 * @instance
-                 */
-                QueryPaymentStatusRequest.prototype.class_id = "";
-    
-                /**
-                 * QueryPaymentStatusRequest nft_id.
-                 * @member {string} nft_id
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusRequest
-                 * @instance
-                 */
-                QueryPaymentStatusRequest.prototype.nft_id = "";
-    
-                /**
-                 * QueryPaymentStatusRequest bidder.
-                 * @member {string} bidder
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusRequest
-                 * @instance
-                 */
-                QueryPaymentStatusRequest.prototype.bidder = "";
-    
-                /**
-                 * Encodes the specified QueryPaymentStatusRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryPaymentStatusRequest.verify|verify} messages.
-                 * @function encode
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusRequest
-                 * @static
-                 * @param {ununifi.nftbackedloan.IQueryPaymentStatusRequest} message QueryPaymentStatusRequest message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryPaymentStatusRequest.encode = function encode(message, writer) {
-                    if (!writer)
-                        writer = $Writer.create();
-                    if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
-                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.class_id);
-                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
-                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.nft_id);
-                    if (message.bidder != null && Object.hasOwnProperty.call(message, "bidder"))
-                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.bidder);
-                    return writer;
-                };
-    
-                /**
-                 * Encodes the specified QueryPaymentStatusRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryPaymentStatusRequest.verify|verify} messages.
-                 * @function encodeDelimited
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusRequest
-                 * @static
-                 * @param {ununifi.nftbackedloan.IQueryPaymentStatusRequest} message QueryPaymentStatusRequest message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryPaymentStatusRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                    return this.encode(message, writer).ldelim();
-                };
-    
-                /**
-                 * Decodes a QueryPaymentStatusRequest message from the specified reader or buffer.
-                 * @function decode
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusRequest
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.nftbackedloan.QueryPaymentStatusRequest} QueryPaymentStatusRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryPaymentStatusRequest.decode = function decode(reader, length) {
-                    if (!(reader instanceof $Reader))
-                        reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.QueryPaymentStatusRequest();
-                    while (reader.pos < end) {
-                        var tag = reader.uint32();
-                        switch (tag >>> 3) {
-                        case 1:
-                            message.class_id = reader.string();
-                            break;
-                        case 2:
-                            message.nft_id = reader.string();
-                            break;
-                        case 3:
-                            message.bidder = reader.string();
-                            break;
-                        default:
-                            reader.skipType(tag & 7);
-                            break;
-                        }
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Decodes a QueryPaymentStatusRequest message from the specified reader or buffer, length delimited.
-                 * @function decodeDelimited
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusRequest
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.nftbackedloan.QueryPaymentStatusRequest} QueryPaymentStatusRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryPaymentStatusRequest.decodeDelimited = function decodeDelimited(reader) {
-                    if (!(reader instanceof $Reader))
-                        reader = new $Reader(reader);
-                    return this.decode(reader, reader.uint32());
-                };
-    
-                /**
-                 * Verifies a QueryPaymentStatusRequest message.
-                 * @function verify
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusRequest
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                QueryPaymentStatusRequest.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.class_id != null && message.hasOwnProperty("class_id"))
-                        if (!$util.isString(message.class_id))
-                            return "class_id: string expected";
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        if (!$util.isString(message.nft_id))
-                            return "nft_id: string expected";
-                    if (message.bidder != null && message.hasOwnProperty("bidder"))
-                        if (!$util.isString(message.bidder))
-                            return "bidder: string expected";
-                    return null;
-                };
-    
-                /**
-                 * Creates a QueryPaymentStatusRequest message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusRequest
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.nftbackedloan.QueryPaymentStatusRequest} QueryPaymentStatusRequest
-                 */
-                QueryPaymentStatusRequest.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.nftbackedloan.QueryPaymentStatusRequest)
-                        return object;
-                    var message = new $root.ununifi.nftbackedloan.QueryPaymentStatusRequest();
-                    if (object.class_id != null)
-                        message.class_id = String(object.class_id);
-                    if (object.nft_id != null)
-                        message.nft_id = String(object.nft_id);
-                    if (object.bidder != null)
-                        message.bidder = String(object.bidder);
-                    return message;
-                };
-    
-                /**
-                 * Creates a plain object from a QueryPaymentStatusRequest message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusRequest
-                 * @static
-                 * @param {ununifi.nftbackedloan.QueryPaymentStatusRequest} message QueryPaymentStatusRequest
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                QueryPaymentStatusRequest.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    var object = {};
-                    if (options.defaults) {
-                        object.class_id = "";
-                        object.nft_id = "";
-                        object.bidder = "";
-                    }
-                    if (message.class_id != null && message.hasOwnProperty("class_id"))
-                        object.class_id = message.class_id;
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        object.nft_id = message.nft_id;
-                    if (message.bidder != null && message.hasOwnProperty("bidder"))
-                        object.bidder = message.bidder;
-                    return object;
-                };
-    
-                /**
-                 * Converts this QueryPaymentStatusRequest to JSON.
-                 * @function toJSON
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusRequest
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                QueryPaymentStatusRequest.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-    
-                return QueryPaymentStatusRequest;
-            })();
-    
-            nftbackedloan.QueryPaymentStatusResponse = (function() {
-    
-                /**
-                 * Properties of a QueryPaymentStatusResponse.
-                 * @memberof ununifi.nftbackedloan
-                 * @interface IQueryPaymentStatusResponse
-                 * @property {ununifi.nftbackedloan.IPaymentStatus|null} [paymentStatus] QueryPaymentStatusResponse paymentStatus
-                 */
-    
-                /**
-                 * Constructs a new QueryPaymentStatusResponse.
-                 * @memberof ununifi.nftbackedloan
-                 * @classdesc Represents a QueryPaymentStatusResponse.
-                 * @implements IQueryPaymentStatusResponse
-                 * @constructor
-                 * @param {ununifi.nftbackedloan.IQueryPaymentStatusResponse=} [properties] Properties to set
-                 */
-                function QueryPaymentStatusResponse(properties) {
-                    if (properties)
-                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-    
-                /**
-                 * QueryPaymentStatusResponse paymentStatus.
-                 * @member {ununifi.nftbackedloan.IPaymentStatus|null|undefined} paymentStatus
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusResponse
-                 * @instance
-                 */
-                QueryPaymentStatusResponse.prototype.paymentStatus = null;
-    
-                /**
-                 * Encodes the specified QueryPaymentStatusResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryPaymentStatusResponse.verify|verify} messages.
-                 * @function encode
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusResponse
-                 * @static
-                 * @param {ununifi.nftbackedloan.IQueryPaymentStatusResponse} message QueryPaymentStatusResponse message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryPaymentStatusResponse.encode = function encode(message, writer) {
-                    if (!writer)
-                        writer = $Writer.create();
-                    if (message.paymentStatus != null && Object.hasOwnProperty.call(message, "paymentStatus"))
-                        $root.ununifi.nftbackedloan.PaymentStatus.encode(message.paymentStatus, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                    return writer;
-                };
-    
-                /**
-                 * Encodes the specified QueryPaymentStatusResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryPaymentStatusResponse.verify|verify} messages.
-                 * @function encodeDelimited
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusResponse
-                 * @static
-                 * @param {ununifi.nftbackedloan.IQueryPaymentStatusResponse} message QueryPaymentStatusResponse message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryPaymentStatusResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                    return this.encode(message, writer).ldelim();
-                };
-    
-                /**
-                 * Decodes a QueryPaymentStatusResponse message from the specified reader or buffer.
-                 * @function decode
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusResponse
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.nftbackedloan.QueryPaymentStatusResponse} QueryPaymentStatusResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryPaymentStatusResponse.decode = function decode(reader, length) {
-                    if (!(reader instanceof $Reader))
-                        reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.QueryPaymentStatusResponse();
-                    while (reader.pos < end) {
-                        var tag = reader.uint32();
-                        switch (tag >>> 3) {
-                        case 1:
-                            message.paymentStatus = $root.ununifi.nftbackedloan.PaymentStatus.decode(reader, reader.uint32());
-                            break;
-                        default:
-                            reader.skipType(tag & 7);
-                            break;
-                        }
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Decodes a QueryPaymentStatusResponse message from the specified reader or buffer, length delimited.
-                 * @function decodeDelimited
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusResponse
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.nftbackedloan.QueryPaymentStatusResponse} QueryPaymentStatusResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryPaymentStatusResponse.decodeDelimited = function decodeDelimited(reader) {
-                    if (!(reader instanceof $Reader))
-                        reader = new $Reader(reader);
-                    return this.decode(reader, reader.uint32());
-                };
-    
-                /**
-                 * Verifies a QueryPaymentStatusResponse message.
-                 * @function verify
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusResponse
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                QueryPaymentStatusResponse.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.paymentStatus != null && message.hasOwnProperty("paymentStatus")) {
-                        var error = $root.ununifi.nftbackedloan.PaymentStatus.verify(message.paymentStatus);
-                        if (error)
-                            return "paymentStatus." + error;
-                    }
-                    return null;
-                };
-    
-                /**
-                 * Creates a QueryPaymentStatusResponse message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusResponse
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.nftbackedloan.QueryPaymentStatusResponse} QueryPaymentStatusResponse
-                 */
-                QueryPaymentStatusResponse.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.nftbackedloan.QueryPaymentStatusResponse)
-                        return object;
-                    var message = new $root.ununifi.nftbackedloan.QueryPaymentStatusResponse();
-                    if (object.paymentStatus != null) {
-                        if (typeof object.paymentStatus !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.QueryPaymentStatusResponse.paymentStatus: object expected");
-                        message.paymentStatus = $root.ununifi.nftbackedloan.PaymentStatus.fromObject(object.paymentStatus);
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Creates a plain object from a QueryPaymentStatusResponse message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusResponse
-                 * @static
-                 * @param {ununifi.nftbackedloan.QueryPaymentStatusResponse} message QueryPaymentStatusResponse
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                QueryPaymentStatusResponse.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    var object = {};
-                    if (options.defaults)
-                        object.paymentStatus = null;
-                    if (message.paymentStatus != null && message.hasOwnProperty("paymentStatus"))
-                        object.paymentStatus = $root.ununifi.nftbackedloan.PaymentStatus.toObject(message.paymentStatus, options);
-                    return object;
-                };
-    
-                /**
-                 * Converts this QueryPaymentStatusResponse to JSON.
-                 * @function toJSON
-                 * @memberof ununifi.nftbackedloan.QueryPaymentStatusResponse
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                QueryPaymentStatusResponse.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-    
-                return QueryPaymentStatusResponse;
             })();
     
             nftbackedloan.QueryBidderBidsRequest = (function() {

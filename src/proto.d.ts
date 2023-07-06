@@ -11828,14 +11828,11 @@ export namespace ununifi {
             /** MsgListNft nft_id */
             nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
-            /** MsgListNft bid_token */
-            bid_token?: (string|null);
+            /** MsgListNft bid_denom */
+            bid_denom?: (string|null);
 
             /** MsgListNft minimum_deposit_rate */
             minimum_deposit_rate?: (string|null);
-
-            /** MsgListNft automatic_refinancing */
-            automatic_refinancing?: (boolean|null);
 
             /** MsgListNft minimum_bidding_period */
             minimum_bidding_period?: (google.protobuf.IDuration|null);
@@ -11856,14 +11853,11 @@ export namespace ununifi {
             /** MsgListNft nft_id. */
             public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
-            /** MsgListNft bid_token. */
-            public bid_token: string;
+            /** MsgListNft bid_denom. */
+            public bid_denom: string;
 
             /** MsgListNft minimum_deposit_rate. */
             public minimum_deposit_rate: string;
-
-            /** MsgListNft automatic_refinancing. */
-            public automatic_refinancing: boolean;
 
             /** MsgListNft minimum_bidding_period. */
             public minimum_bidding_period?: (google.protobuf.IDuration|null);
@@ -12187,11 +12181,11 @@ export namespace ununifi {
             /** MsgPlaceBid bid_amount */
             bid_amount?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** MsgPlaceBid bidding_period */
-            bidding_period?: (google.protobuf.ITimestamp|null);
+            /** MsgPlaceBid expiry_at */
+            expiry_at?: (google.protobuf.ITimestamp|null);
 
-            /** MsgPlaceBid deposit_lending_rate */
-            deposit_lending_rate?: (string|null);
+            /** MsgPlaceBid interest_rate */
+            interest_rate?: (string|null);
 
             /** MsgPlaceBid automatic_payment */
             automatic_payment?: (boolean|null);
@@ -12218,11 +12212,11 @@ export namespace ununifi {
             /** MsgPlaceBid bid_amount. */
             public bid_amount?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** MsgPlaceBid bidding_period. */
-            public bidding_period?: (google.protobuf.ITimestamp|null);
+            /** MsgPlaceBid expiry_at. */
+            public expiry_at?: (google.protobuf.ITimestamp|null);
 
-            /** MsgPlaceBid deposit_lending_rate. */
-            public deposit_lending_rate: string;
+            /** MsgPlaceBid interest_rate. */
+            public interest_rate: string;
 
             /** MsgPlaceBid automatic_payment. */
             public automatic_payment: boolean;
@@ -13656,95 +13650,6 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a Loan. */
-        interface ILoan {
-
-            /** Loan nft_id */
-            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
-
-            /** Loan loan */
-            loan?: (cosmos.base.v1beta1.ICoin|null);
-        }
-
-        /** Represents a Loan. */
-        class Loan implements ILoan {
-
-            /**
-             * Constructs a new Loan.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftbackedloan.ILoan);
-
-            /** Loan nft_id. */
-            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
-
-            /** Loan loan. */
-            public loan?: (cosmos.base.v1beta1.ICoin|null);
-
-            /**
-             * Encodes the specified Loan message. Does not implicitly {@link ununifi.nftbackedloan.Loan.verify|verify} messages.
-             * @param message Loan message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftbackedloan.ILoan, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified Loan message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.Loan.verify|verify} messages.
-             * @param message Loan message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftbackedloan.ILoan, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a Loan message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns Loan
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.Loan;
-
-            /**
-             * Decodes a Loan message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns Loan
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.Loan;
-
-            /**
-             * Verifies a Loan message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a Loan message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns Loan
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.Loan;
-
-            /**
-             * Creates a plain object from a Loan message. Also converts values to other types if specified.
-             * @param message Loan
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftbackedloan.Loan, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this Loan to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
         /** Properties of a ListedClass. */
         interface IListedClass {
 
@@ -13941,14 +13846,11 @@ export namespace ununifi {
             /** NftListing state */
             state?: (ununifi.nftbackedloan.ListingState|null);
 
-            /** NftListing bid_token */
-            bid_token?: (string|null);
+            /** NftListing bid_denom */
+            bid_denom?: (string|null);
 
             /** NftListing minimum_deposit_rate */
             minimum_deposit_rate?: (string|null);
-
-            /** NftListing automatic_refinancing */
-            automatic_refinancing?: (boolean|null);
 
             /** NftListing started_at */
             started_at?: (google.protobuf.ITimestamp|null);
@@ -13961,9 +13863,6 @@ export namespace ununifi {
 
             /** NftListing successful_bid_end_at */
             successful_bid_end_at?: (google.protobuf.ITimestamp|null);
-
-            /** NftListing auto_relisted_count */
-            auto_relisted_count?: (Long|null);
 
             /** NftListing collected_amount */
             collected_amount?: (cosmos.base.v1beta1.ICoin|null);
@@ -13993,14 +13892,11 @@ export namespace ununifi {
             /** NftListing state. */
             public state: ununifi.nftbackedloan.ListingState;
 
-            /** NftListing bid_token. */
-            public bid_token: string;
+            /** NftListing bid_denom. */
+            public bid_denom: string;
 
             /** NftListing minimum_deposit_rate. */
             public minimum_deposit_rate: string;
-
-            /** NftListing automatic_refinancing. */
-            public automatic_refinancing: boolean;
 
             /** NftListing started_at. */
             public started_at?: (google.protobuf.ITimestamp|null);
@@ -14013,9 +13909,6 @@ export namespace ununifi {
 
             /** NftListing successful_bid_end_at. */
             public successful_bid_end_at?: (google.protobuf.ITimestamp|null);
-
-            /** NftListing auto_relisted_count. */
-            public auto_relisted_count: Long;
 
             /** NftListing collected_amount. */
             public collected_amount?: (cosmos.base.v1beta1.ICoin|null);
@@ -14096,11 +13989,8 @@ export namespace ununifi {
             /** Borrowing amount */
             amount?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** Borrowing paid_interest_amount */
-            paid_interest_amount?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** Borrowing start_at */
-            start_at?: (google.protobuf.ITimestamp|null);
+            /** Borrowing last_repaid_at */
+            last_repaid_at?: (google.protobuf.ITimestamp|null);
         }
 
         /** Represents a Borrowing. */
@@ -14115,11 +14005,8 @@ export namespace ununifi {
             /** Borrowing amount. */
             public amount?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** Borrowing paid_interest_amount. */
-            public paid_interest_amount?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** Borrowing start_at. */
-            public start_at?: (google.protobuf.ITimestamp|null);
+            /** Borrowing last_repaid_at. */
+            public last_repaid_at?: (google.protobuf.ITimestamp|null);
 
             /**
              * Encodes the specified Borrowing message. Does not implicitly {@link ununifi.nftbackedloan.Borrowing.verify|verify} messages.
@@ -14200,23 +14087,20 @@ export namespace ununifi {
             /** NftBid paid_amount */
             paid_amount?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** NftBid bidding_period */
-            bidding_period?: (google.protobuf.ITimestamp|null);
+            /** NftBid expiry_at */
+            expiry_at?: (google.protobuf.ITimestamp|null);
 
-            /** NftBid deposit_lending_rate */
-            deposit_lending_rate?: (string|null);
+            /** NftBid interest_rate */
+            interest_rate?: (string|null);
 
             /** NftBid automatic_payment */
             automatic_payment?: (boolean|null);
 
-            /** NftBid bid_time */
-            bid_time?: (google.protobuf.ITimestamp|null);
+            /** NftBid created_at */
+            created_at?: (google.protobuf.ITimestamp|null);
 
-            /** NftBid interest_amount */
-            interest_amount?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** NftBid borrowings */
-            borrowings?: (ununifi.nftbackedloan.IBorrowing[]|null);
+            /** NftBid borrow */
+            borrow?: (ununifi.nftbackedloan.IBorrowing|null);
         }
 
         /** Represents a NftBid. */
@@ -14240,23 +14124,20 @@ export namespace ununifi {
             /** NftBid paid_amount. */
             public paid_amount?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** NftBid bidding_period. */
-            public bidding_period?: (google.protobuf.ITimestamp|null);
+            /** NftBid expiry_at. */
+            public expiry_at?: (google.protobuf.ITimestamp|null);
 
-            /** NftBid deposit_lending_rate. */
-            public deposit_lending_rate: string;
+            /** NftBid interest_rate. */
+            public interest_rate: string;
 
             /** NftBid automatic_payment. */
             public automatic_payment: boolean;
 
-            /** NftBid bid_time. */
-            public bid_time?: (google.protobuf.ITimestamp|null);
+            /** NftBid created_at. */
+            public created_at?: (google.protobuf.ITimestamp|null);
 
-            /** NftBid interest_amount. */
-            public interest_amount?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** NftBid borrowings. */
-            public borrowings: ununifi.nftbackedloan.IBorrowing[];
+            /** NftBid borrow. */
+            public borrow?: (ununifi.nftbackedloan.IBorrowing|null);
 
             /**
              * Encodes the specified NftBid message. Does not implicitly {@link ununifi.nftbackedloan.NftBid.verify|verify} messages.
@@ -14317,131 +14198,6 @@ export namespace ununifi {
 
             /**
              * Converts this NftBid to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a PaymentStatus. */
-        interface IPaymentStatus {
-
-            /** PaymentStatus nft_id */
-            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
-
-            /** PaymentStatus bidder */
-            bidder?: (string|null);
-
-            /** PaymentStatus amount */
-            amount?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** PaymentStatus automatic_payment */
-            automatic_payment?: (boolean|null);
-
-            /** PaymentStatus paid_amount */
-            paid_amount?: (string|null);
-
-            /** PaymentStatus bid_time */
-            bid_time?: (google.protobuf.ITimestamp|null);
-
-            /** PaymentStatus state */
-            state?: (ununifi.nftbackedloan.ListingState|null);
-
-            /** PaymentStatus all_paid */
-            all_paid?: (boolean|null);
-        }
-
-        /** Represents a PaymentStatus. */
-        class PaymentStatus implements IPaymentStatus {
-
-            /**
-             * Constructs a new PaymentStatus.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftbackedloan.IPaymentStatus);
-
-            /** PaymentStatus nft_id. */
-            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
-
-            /** PaymentStatus bidder. */
-            public bidder: string;
-
-            /** PaymentStatus amount. */
-            public amount?: (cosmos.base.v1beta1.ICoin|null);
-
-            /** PaymentStatus automatic_payment. */
-            public automatic_payment: boolean;
-
-            /** PaymentStatus paid_amount. */
-            public paid_amount: string;
-
-            /** PaymentStatus bid_time. */
-            public bid_time?: (google.protobuf.ITimestamp|null);
-
-            /** PaymentStatus state. */
-            public state: ununifi.nftbackedloan.ListingState;
-
-            /** PaymentStatus all_paid. */
-            public all_paid: boolean;
-
-            /**
-             * Encodes the specified PaymentStatus message. Does not implicitly {@link ununifi.nftbackedloan.PaymentStatus.verify|verify} messages.
-             * @param message PaymentStatus message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftbackedloan.IPaymentStatus, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified PaymentStatus message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.PaymentStatus.verify|verify} messages.
-             * @param message PaymentStatus message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftbackedloan.IPaymentStatus, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a PaymentStatus message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns PaymentStatus
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.PaymentStatus;
-
-            /**
-             * Decodes a PaymentStatus message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns PaymentStatus
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.PaymentStatus;
-
-            /**
-             * Verifies a PaymentStatus message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a PaymentStatus message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns PaymentStatus
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.PaymentStatus;
-
-            /**
-             * Creates a plain object from a PaymentStatus message. Also converts values to other types if specified.
-             * @param message PaymentStatus
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftbackedloan.PaymentStatus, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this PaymentStatus to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -15699,9 +15455,6 @@ export namespace ununifi {
 
             /** GenesisState bids */
             bids?: (ununifi.nftbackedloan.INftBid[]|null);
-
-            /** GenesisState loans */
-            loans?: (ununifi.nftbackedloan.ILoan[]|null);
         }
 
         /** Represents a GenesisState. */
@@ -15721,9 +15474,6 @@ export namespace ununifi {
 
             /** GenesisState bids. */
             public bids: ununifi.nftbackedloan.INftBid[];
-
-            /** GenesisState loans. */
-            public loans: ununifi.nftbackedloan.ILoan[];
 
             /**
              * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.nftbackedloan.GenesisState.verify|verify} messages.
@@ -16056,20 +15806,6 @@ export namespace ununifi {
             public listedClass(request: ununifi.nftbackedloan.IQueryListedClassRequest): Promise<ununifi.nftbackedloan.QueryListedClassResponse>;
 
             /**
-             * Calls Loans.
-             * @param request QueryLoansRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryLoansResponse
-             */
-            public loans(request: ununifi.nftbackedloan.IQueryLoansRequest, callback: ununifi.nftbackedloan.Query.LoansCallback): void;
-
-            /**
-             * Calls Loans.
-             * @param request QueryLoansRequest message or plain object
-             * @returns Promise
-             */
-            public loans(request: ununifi.nftbackedloan.IQueryLoansRequest): Promise<ununifi.nftbackedloan.QueryLoansResponse>;
-
-            /**
              * Calls Loan.
              * @param request QueryLoanRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryLoanResponse
@@ -16110,20 +15846,6 @@ export namespace ununifi {
              * @returns Promise
              */
             public bidderBids(request: ununifi.nftbackedloan.IQueryBidderBidsRequest): Promise<ununifi.nftbackedloan.QueryBidderBidsResponse>;
-
-            /**
-             * Calls PaymentStatus.
-             * @param request QueryPaymentStatusRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryPaymentStatusResponse
-             */
-            public paymentStatus(request: ununifi.nftbackedloan.IQueryPaymentStatusRequest, callback: ununifi.nftbackedloan.Query.PaymentStatusCallback): void;
-
-            /**
-             * Calls PaymentStatus.
-             * @param request QueryPaymentStatusRequest message or plain object
-             * @returns Promise
-             */
-            public paymentStatus(request: ununifi.nftbackedloan.IQueryPaymentStatusRequest): Promise<ununifi.nftbackedloan.QueryPaymentStatusResponse>;
 
             /**
              * Calls Rewards.
@@ -16192,13 +15914,6 @@ export namespace ununifi {
             type ListedClassCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryListedClassResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftbackedloan.Query#loans}.
-             * @param error Error, if any
-             * @param [response] QueryLoansResponse
-             */
-            type LoansCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryLoansResponse) => void;
-
-            /**
              * Callback as used by {@link ununifi.nftbackedloan.Query#loan}.
              * @param error Error, if any
              * @param [response] QueryLoanResponse
@@ -16218,13 +15933,6 @@ export namespace ununifi {
              * @param [response] QueryBidderBidsResponse
              */
             type BidderBidsCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryBidderBidsResponse) => void;
-
-            /**
-             * Callback as used by {@link ununifi.nftbackedloan.Query#paymentStatus}.
-             * @param error Error, if any
-             * @param [response] QueryPaymentStatusResponse
-             */
-            type PaymentStatusCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryPaymentStatusResponse) => void;
 
             /**
              * Callback as used by {@link ununifi.nftbackedloan.Query#rewards}.
@@ -17208,166 +16916,6 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a QueryLoansRequest. */
-        interface IQueryLoansRequest {
-        }
-
-        /** Represents a QueryLoansRequest. */
-        class QueryLoansRequest implements IQueryLoansRequest {
-
-            /**
-             * Constructs a new QueryLoansRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftbackedloan.IQueryLoansRequest);
-
-            /**
-             * Encodes the specified QueryLoansRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryLoansRequest.verify|verify} messages.
-             * @param message QueryLoansRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftbackedloan.IQueryLoansRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryLoansRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryLoansRequest.verify|verify} messages.
-             * @param message QueryLoansRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryLoansRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryLoansRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryLoansRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryLoansRequest;
-
-            /**
-             * Decodes a QueryLoansRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryLoansRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryLoansRequest;
-
-            /**
-             * Verifies a QueryLoansRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryLoansRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryLoansRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryLoansRequest;
-
-            /**
-             * Creates a plain object from a QueryLoansRequest message. Also converts values to other types if specified.
-             * @param message QueryLoansRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftbackedloan.QueryLoansRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryLoansRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryLoansResponse. */
-        interface IQueryLoansResponse {
-
-            /** QueryLoansResponse loans */
-            loans?: (ununifi.nftbackedloan.ILoan[]|null);
-        }
-
-        /** Represents a QueryLoansResponse. */
-        class QueryLoansResponse implements IQueryLoansResponse {
-
-            /**
-             * Constructs a new QueryLoansResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftbackedloan.IQueryLoansResponse);
-
-            /** QueryLoansResponse loans. */
-            public loans: ununifi.nftbackedloan.ILoan[];
-
-            /**
-             * Encodes the specified QueryLoansResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryLoansResponse.verify|verify} messages.
-             * @param message QueryLoansResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftbackedloan.IQueryLoansResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryLoansResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryLoansResponse.verify|verify} messages.
-             * @param message QueryLoansResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryLoansResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryLoansResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryLoansResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryLoansResponse;
-
-            /**
-             * Decodes a QueryLoansResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryLoansResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryLoansResponse;
-
-            /**
-             * Verifies a QueryLoansResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryLoansResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryLoansResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryLoansResponse;
-
-            /**
-             * Creates a plain object from a QueryLoansResponse message. Also converts values to other types if specified.
-             * @param message QueryLoansResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftbackedloan.QueryLoansResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryLoansResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
         /** Properties of a QueryLoanRequest. */
         interface IQueryLoanRequest {
 
@@ -17460,8 +17008,11 @@ export namespace ununifi {
         /** Properties of a QueryLoanResponse. */
         interface IQueryLoanResponse {
 
-            /** QueryLoanResponse loan */
-            loan?: (ununifi.nftbackedloan.ILoan|null);
+            /** QueryLoanResponse nft_id */
+            nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
+
+            /** QueryLoanResponse borrowing_amount */
+            borrowing_amount?: (cosmos.base.v1beta1.ICoin|null);
 
             /** QueryLoanResponse borrowing_limit */
             borrowing_limit?: (cosmos.base.v1beta1.ICoin|null);
@@ -17479,8 +17030,11 @@ export namespace ununifi {
              */
             constructor(properties?: ununifi.nftbackedloan.IQueryLoanResponse);
 
-            /** QueryLoanResponse loan. */
-            public loan?: (ununifi.nftbackedloan.ILoan|null);
+            /** QueryLoanResponse nft_id. */
+            public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
+
+            /** QueryLoanResponse borrowing_amount. */
+            public borrowing_amount?: (cosmos.base.v1beta1.ICoin|null);
 
             /** QueryLoanResponse borrowing_limit. */
             public borrowing_limit?: (cosmos.base.v1beta1.ICoin|null);
@@ -17719,184 +17273,6 @@ export namespace ununifi {
 
             /**
              * Converts this QueryNftBidsResponse to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryPaymentStatusRequest. */
-        interface IQueryPaymentStatusRequest {
-
-            /** QueryPaymentStatusRequest class_id */
-            class_id?: (string|null);
-
-            /** QueryPaymentStatusRequest nft_id */
-            nft_id?: (string|null);
-
-            /** QueryPaymentStatusRequest bidder */
-            bidder?: (string|null);
-        }
-
-        /** Represents a QueryPaymentStatusRequest. */
-        class QueryPaymentStatusRequest implements IQueryPaymentStatusRequest {
-
-            /**
-             * Constructs a new QueryPaymentStatusRequest.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftbackedloan.IQueryPaymentStatusRequest);
-
-            /** QueryPaymentStatusRequest class_id. */
-            public class_id: string;
-
-            /** QueryPaymentStatusRequest nft_id. */
-            public nft_id: string;
-
-            /** QueryPaymentStatusRequest bidder. */
-            public bidder: string;
-
-            /**
-             * Encodes the specified QueryPaymentStatusRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryPaymentStatusRequest.verify|verify} messages.
-             * @param message QueryPaymentStatusRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftbackedloan.IQueryPaymentStatusRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryPaymentStatusRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryPaymentStatusRequest.verify|verify} messages.
-             * @param message QueryPaymentStatusRequest message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryPaymentStatusRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryPaymentStatusRequest message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryPaymentStatusRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryPaymentStatusRequest;
-
-            /**
-             * Decodes a QueryPaymentStatusRequest message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryPaymentStatusRequest
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryPaymentStatusRequest;
-
-            /**
-             * Verifies a QueryPaymentStatusRequest message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryPaymentStatusRequest message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryPaymentStatusRequest
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryPaymentStatusRequest;
-
-            /**
-             * Creates a plain object from a QueryPaymentStatusRequest message. Also converts values to other types if specified.
-             * @param message QueryPaymentStatusRequest
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftbackedloan.QueryPaymentStatusRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryPaymentStatusRequest to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a QueryPaymentStatusResponse. */
-        interface IQueryPaymentStatusResponse {
-
-            /** QueryPaymentStatusResponse paymentStatus */
-            paymentStatus?: (ununifi.nftbackedloan.IPaymentStatus|null);
-        }
-
-        /** Represents a QueryPaymentStatusResponse. */
-        class QueryPaymentStatusResponse implements IQueryPaymentStatusResponse {
-
-            /**
-             * Constructs a new QueryPaymentStatusResponse.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: ununifi.nftbackedloan.IQueryPaymentStatusResponse);
-
-            /** QueryPaymentStatusResponse paymentStatus. */
-            public paymentStatus?: (ununifi.nftbackedloan.IPaymentStatus|null);
-
-            /**
-             * Encodes the specified QueryPaymentStatusResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryPaymentStatusResponse.verify|verify} messages.
-             * @param message QueryPaymentStatusResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: ununifi.nftbackedloan.IQueryPaymentStatusResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified QueryPaymentStatusResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryPaymentStatusResponse.verify|verify} messages.
-             * @param message QueryPaymentStatusResponse message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: ununifi.nftbackedloan.IQueryPaymentStatusResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a QueryPaymentStatusResponse message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns QueryPaymentStatusResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.QueryPaymentStatusResponse;
-
-            /**
-             * Decodes a QueryPaymentStatusResponse message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns QueryPaymentStatusResponse
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.QueryPaymentStatusResponse;
-
-            /**
-             * Verifies a QueryPaymentStatusResponse message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a QueryPaymentStatusResponse message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns QueryPaymentStatusResponse
-             */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.QueryPaymentStatusResponse;
-
-            /**
-             * Creates a plain object from a QueryPaymentStatusResponse message. Also converts values to other types if specified.
-             * @param message QueryPaymentStatusResponse
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: ununifi.nftbackedloan.QueryPaymentStatusResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this QueryPaymentStatusResponse to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
