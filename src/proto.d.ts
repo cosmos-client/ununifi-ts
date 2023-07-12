@@ -11527,18 +11527,18 @@ export namespace ununifi {
             public sellingDecision(request: ununifi.nftbackedloan.IMsgSellingDecision): Promise<ununifi.nftbackedloan.MsgSellingDecisionResponse>;
 
             /**
-             * Calls PayFullBid.
-             * @param request MsgPayFullBid message or plain object
-             * @param callback Node-style callback called with the error, if any, and MsgPayFullBidResponse
+             * Calls PayRemainder.
+             * @param request MsgPayRemainder message or plain object
+             * @param callback Node-style callback called with the error, if any, and MsgPayRemainderResponse
              */
-            public payFullBid(request: ununifi.nftbackedloan.IMsgPayFullBid, callback: ununifi.nftbackedloan.Msg.PayFullBidCallback): void;
+            public payRemainder(request: ununifi.nftbackedloan.IMsgPayRemainder, callback: ununifi.nftbackedloan.Msg.PayRemainderCallback): void;
 
             /**
-             * Calls PayFullBid.
-             * @param request MsgPayFullBid message or plain object
+             * Calls PayRemainder.
+             * @param request MsgPayRemainder message or plain object
              * @returns Promise
              */
-            public payFullBid(request: ununifi.nftbackedloan.IMsgPayFullBid): Promise<ununifi.nftbackedloan.MsgPayFullBidResponse>;
+            public payRemainder(request: ununifi.nftbackedloan.IMsgPayRemainder): Promise<ununifi.nftbackedloan.MsgPayRemainderResponse>;
 
             /**
              * Calls Borrow.
@@ -11614,11 +11614,11 @@ export namespace ununifi {
             type SellingDecisionCallback = (error: (Error|null), response?: ununifi.nftbackedloan.MsgSellingDecisionResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftbackedloan.Msg#payFullBid}.
+             * Callback as used by {@link ununifi.nftbackedloan.Msg#payRemainder}.
              * @param error Error, if any
-             * @param [response] MsgPayFullBidResponse
+             * @param [response] MsgPayRemainderResponse
              */
-            type PayFullBidCallback = (error: (Error|null), response?: ununifi.nftbackedloan.MsgPayFullBidResponse) => void;
+            type PayRemainderCallback = (error: (Error|null), response?: ununifi.nftbackedloan.MsgPayRemainderResponse) => void;
 
             /**
              * Callback as used by {@link ununifi.nftbackedloan.Msg#borrow}.
@@ -12178,11 +12178,11 @@ export namespace ununifi {
             /** MsgPlaceBid nft_id */
             nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
-            /** MsgPlaceBid bid_amount */
-            bid_amount?: (cosmos.base.v1beta1.ICoin|null);
+            /** MsgPlaceBid price */
+            price?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** MsgPlaceBid expiry_at */
-            expiry_at?: (google.protobuf.ITimestamp|null);
+            /** MsgPlaceBid expiry */
+            expiry?: (google.protobuf.ITimestamp|null);
 
             /** MsgPlaceBid interest_rate */
             interest_rate?: (string|null);
@@ -12190,8 +12190,8 @@ export namespace ununifi {
             /** MsgPlaceBid automatic_payment */
             automatic_payment?: (boolean|null);
 
-            /** MsgPlaceBid deposit_amount */
-            deposit_amount?: (cosmos.base.v1beta1.ICoin|null);
+            /** MsgPlaceBid deposit */
+            deposit?: (cosmos.base.v1beta1.ICoin|null);
         }
 
         /** Represents a MsgPlaceBid. */
@@ -12209,11 +12209,11 @@ export namespace ununifi {
             /** MsgPlaceBid nft_id. */
             public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
-            /** MsgPlaceBid bid_amount. */
-            public bid_amount?: (cosmos.base.v1beta1.ICoin|null);
+            /** MsgPlaceBid price. */
+            public price?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** MsgPlaceBid expiry_at. */
-            public expiry_at?: (google.protobuf.ITimestamp|null);
+            /** MsgPlaceBid expiry. */
+            public expiry?: (google.protobuf.ITimestamp|null);
 
             /** MsgPlaceBid interest_rate. */
             public interest_rate: string;
@@ -12221,8 +12221,8 @@ export namespace ununifi {
             /** MsgPlaceBid automatic_payment. */
             public automatic_payment: boolean;
 
-            /** MsgPlaceBid deposit_amount. */
-            public deposit_amount?: (cosmos.base.v1beta1.ICoin|null);
+            /** MsgPlaceBid deposit. */
+            public deposit?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
              * Encodes the specified MsgPlaceBid message. Does not implicitly {@link ununifi.nftbackedloan.MsgPlaceBid.verify|verify} messages.
@@ -12863,167 +12863,167 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a MsgPayFullBid. */
-        interface IMsgPayFullBid {
+        /** Properties of a MsgPayRemainder. */
+        interface IMsgPayRemainder {
 
-            /** MsgPayFullBid sender */
+            /** MsgPayRemainder sender */
             sender?: (string|null);
 
-            /** MsgPayFullBid nft_id */
+            /** MsgPayRemainder nft_id */
             nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
         }
 
-        /** Represents a MsgPayFullBid. */
-        class MsgPayFullBid implements IMsgPayFullBid {
+        /** Represents a MsgPayRemainder. */
+        class MsgPayRemainder implements IMsgPayRemainder {
 
             /**
-             * Constructs a new MsgPayFullBid.
+             * Constructs a new MsgPayRemainder.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftbackedloan.IMsgPayFullBid);
+            constructor(properties?: ununifi.nftbackedloan.IMsgPayRemainder);
 
-            /** MsgPayFullBid sender. */
+            /** MsgPayRemainder sender. */
             public sender: string;
 
-            /** MsgPayFullBid nft_id. */
+            /** MsgPayRemainder nft_id. */
             public nft_id?: (ununifi.nftbackedloan.INftIdentifier|null);
 
             /**
-             * Encodes the specified MsgPayFullBid message. Does not implicitly {@link ununifi.nftbackedloan.MsgPayFullBid.verify|verify} messages.
-             * @param message MsgPayFullBid message or plain object to encode
+             * Encodes the specified MsgPayRemainder message. Does not implicitly {@link ununifi.nftbackedloan.MsgPayRemainder.verify|verify} messages.
+             * @param message MsgPayRemainder message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftbackedloan.IMsgPayFullBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgPayRemainder, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgPayFullBid message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgPayFullBid.verify|verify} messages.
-             * @param message MsgPayFullBid message or plain object to encode
+             * Encodes the specified MsgPayRemainder message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgPayRemainder.verify|verify} messages.
+             * @param message MsgPayRemainder message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgPayFullBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgPayRemainder, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a MsgPayFullBid message from the specified reader or buffer.
+             * Decodes a MsgPayRemainder message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns MsgPayFullBid
+             * @returns MsgPayRemainder
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgPayFullBid;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgPayRemainder;
 
             /**
-             * Decodes a MsgPayFullBid message from the specified reader or buffer, length delimited.
+             * Decodes a MsgPayRemainder message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns MsgPayFullBid
+             * @returns MsgPayRemainder
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgPayFullBid;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgPayRemainder;
 
             /**
-             * Verifies a MsgPayFullBid message.
+             * Verifies a MsgPayRemainder message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a MsgPayFullBid message from a plain object. Also converts values to their respective internal types.
+             * Creates a MsgPayRemainder message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns MsgPayFullBid
+             * @returns MsgPayRemainder
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgPayFullBid;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgPayRemainder;
 
             /**
-             * Creates a plain object from a MsgPayFullBid message. Also converts values to other types if specified.
-             * @param message MsgPayFullBid
+             * Creates a plain object from a MsgPayRemainder message. Also converts values to other types if specified.
+             * @param message MsgPayRemainder
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftbackedloan.MsgPayFullBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgPayRemainder, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this MsgPayFullBid to JSON.
+             * Converts this MsgPayRemainder to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a MsgPayFullBidResponse. */
-        interface IMsgPayFullBidResponse {
+        /** Properties of a MsgPayRemainderResponse. */
+        interface IMsgPayRemainderResponse {
         }
 
-        /** Represents a MsgPayFullBidResponse. */
-        class MsgPayFullBidResponse implements IMsgPayFullBidResponse {
+        /** Represents a MsgPayRemainderResponse. */
+        class MsgPayRemainderResponse implements IMsgPayRemainderResponse {
 
             /**
-             * Constructs a new MsgPayFullBidResponse.
+             * Constructs a new MsgPayRemainderResponse.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftbackedloan.IMsgPayFullBidResponse);
+            constructor(properties?: ununifi.nftbackedloan.IMsgPayRemainderResponse);
 
             /**
-             * Encodes the specified MsgPayFullBidResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgPayFullBidResponse.verify|verify} messages.
-             * @param message MsgPayFullBidResponse message or plain object to encode
+             * Encodes the specified MsgPayRemainderResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgPayRemainderResponse.verify|verify} messages.
+             * @param message MsgPayRemainderResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftbackedloan.IMsgPayFullBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IMsgPayRemainderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified MsgPayFullBidResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgPayFullBidResponse.verify|verify} messages.
-             * @param message MsgPayFullBidResponse message or plain object to encode
+             * Encodes the specified MsgPayRemainderResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgPayRemainderResponse.verify|verify} messages.
+             * @param message MsgPayRemainderResponse message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgPayFullBidResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IMsgPayRemainderResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a MsgPayFullBidResponse message from the specified reader or buffer.
+             * Decodes a MsgPayRemainderResponse message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns MsgPayFullBidResponse
+             * @returns MsgPayRemainderResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgPayFullBidResponse;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.MsgPayRemainderResponse;
 
             /**
-             * Decodes a MsgPayFullBidResponse message from the specified reader or buffer, length delimited.
+             * Decodes a MsgPayRemainderResponse message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns MsgPayFullBidResponse
+             * @returns MsgPayRemainderResponse
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgPayFullBidResponse;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.MsgPayRemainderResponse;
 
             /**
-             * Verifies a MsgPayFullBidResponse message.
+             * Verifies a MsgPayRemainderResponse message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a MsgPayFullBidResponse message from a plain object. Also converts values to their respective internal types.
+             * Creates a MsgPayRemainderResponse message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns MsgPayFullBidResponse
+             * @returns MsgPayRemainderResponse
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgPayFullBidResponse;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.MsgPayRemainderResponse;
 
             /**
-             * Creates a plain object from a MsgPayFullBidResponse message. Also converts values to other types if specified.
-             * @param message MsgPayFullBidResponse
+             * Creates a plain object from a MsgPayRemainderResponse message. Also converts values to other types if specified.
+             * @param message MsgPayRemainderResponse
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftbackedloan.MsgPayFullBidResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.MsgPayRemainderResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this MsgPayFullBidResponse to JSON.
+             * Converts this MsgPayRemainderResponse to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -13855,8 +13855,8 @@ export namespace ununifi {
             /** NftListing started_at */
             started_at?: (google.protobuf.ITimestamp|null);
 
-            /** NftListing end_at */
-            end_at?: (google.protobuf.ITimestamp|null);
+            /** NftListing liquidated_at */
+            liquidated_at?: (google.protobuf.ITimestamp|null);
 
             /** NftListing full_payment_end_at */
             full_payment_end_at?: (google.protobuf.ITimestamp|null);
@@ -13901,8 +13901,8 @@ export namespace ununifi {
             /** NftListing started_at. */
             public started_at?: (google.protobuf.ITimestamp|null);
 
-            /** NftListing end_at. */
-            public end_at?: (google.protobuf.ITimestamp|null);
+            /** NftListing liquidated_at. */
+            public liquidated_at?: (google.protobuf.ITimestamp|null);
 
             /** NftListing full_payment_end_at. */
             public full_payment_end_at?: (google.protobuf.ITimestamp|null);
@@ -14078,17 +14078,17 @@ export namespace ununifi {
             /** NftBid id */
             id?: (ununifi.nftbackedloan.IBidId|null);
 
-            /** NftBid bid_amount */
-            bid_amount?: (cosmos.base.v1beta1.ICoin|null);
+            /** NftBid price */
+            price?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** NftBid deposit_amount */
-            deposit_amount?: (cosmos.base.v1beta1.ICoin|null);
+            /** NftBid deposit */
+            deposit?: (cosmos.base.v1beta1.ICoin|null);
 
             /** NftBid paid_amount */
             paid_amount?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** NftBid expiry_at */
-            expiry_at?: (google.protobuf.ITimestamp|null);
+            /** NftBid expiry */
+            expiry?: (google.protobuf.ITimestamp|null);
 
             /** NftBid interest_rate */
             interest_rate?: (string|null);
@@ -14115,17 +14115,17 @@ export namespace ununifi {
             /** NftBid id. */
             public id?: (ununifi.nftbackedloan.IBidId|null);
 
-            /** NftBid bid_amount. */
-            public bid_amount?: (cosmos.base.v1beta1.ICoin|null);
+            /** NftBid price. */
+            public price?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** NftBid deposit_amount. */
-            public deposit_amount?: (cosmos.base.v1beta1.ICoin|null);
+            /** NftBid deposit. */
+            public deposit?: (cosmos.base.v1beta1.ICoin|null);
 
             /** NftBid paid_amount. */
             public paid_amount?: (cosmos.base.v1beta1.ICoin|null);
 
-            /** NftBid expiry_at. */
-            public expiry_at?: (google.protobuf.ITimestamp|null);
+            /** NftBid expiry. */
+            public expiry?: (google.protobuf.ITimestamp|null);
 
             /** NftBid interest_rate. */
             public interest_rate: string;
@@ -15052,96 +15052,96 @@ export namespace ununifi {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of an EventPayFullBid. */
-        interface IEventPayFullBid {
+        /** Properties of an EventPayRemainder. */
+        interface IEventPayRemainder {
 
-            /** EventPayFullBid bidder */
+            /** EventPayRemainder bidder */
             bidder?: (string|null);
 
-            /** EventPayFullBid class_id */
+            /** EventPayRemainder class_id */
             class_id?: (string|null);
 
-            /** EventPayFullBid nft_id */
+            /** EventPayRemainder nft_id */
             nft_id?: (string|null);
         }
 
-        /** Represents an EventPayFullBid. */
-        class EventPayFullBid implements IEventPayFullBid {
+        /** Represents an EventPayRemainder. */
+        class EventPayRemainder implements IEventPayRemainder {
 
             /**
-             * Constructs a new EventPayFullBid.
+             * Constructs a new EventPayRemainder.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ununifi.nftbackedloan.IEventPayFullBid);
+            constructor(properties?: ununifi.nftbackedloan.IEventPayRemainder);
 
-            /** EventPayFullBid bidder. */
+            /** EventPayRemainder bidder. */
             public bidder: string;
 
-            /** EventPayFullBid class_id. */
+            /** EventPayRemainder class_id. */
             public class_id: string;
 
-            /** EventPayFullBid nft_id. */
+            /** EventPayRemainder nft_id. */
             public nft_id: string;
 
             /**
-             * Encodes the specified EventPayFullBid message. Does not implicitly {@link ununifi.nftbackedloan.EventPayFullBid.verify|verify} messages.
-             * @param message EventPayFullBid message or plain object to encode
+             * Encodes the specified EventPayRemainder message. Does not implicitly {@link ununifi.nftbackedloan.EventPayRemainder.verify|verify} messages.
+             * @param message EventPayRemainder message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ununifi.nftbackedloan.IEventPayFullBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: ununifi.nftbackedloan.IEventPayRemainder, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified EventPayFullBid message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventPayFullBid.verify|verify} messages.
-             * @param message EventPayFullBid message or plain object to encode
+             * Encodes the specified EventPayRemainder message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventPayRemainder.verify|verify} messages.
+             * @param message EventPayRemainder message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ununifi.nftbackedloan.IEventPayFullBid, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: ununifi.nftbackedloan.IEventPayRemainder, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes an EventPayFullBid message from the specified reader or buffer.
+             * Decodes an EventPayRemainder message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns EventPayFullBid
+             * @returns EventPayRemainder
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.EventPayFullBid;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ununifi.nftbackedloan.EventPayRemainder;
 
             /**
-             * Decodes an EventPayFullBid message from the specified reader or buffer, length delimited.
+             * Decodes an EventPayRemainder message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns EventPayFullBid
+             * @returns EventPayRemainder
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.EventPayFullBid;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ununifi.nftbackedloan.EventPayRemainder;
 
             /**
-             * Verifies an EventPayFullBid message.
+             * Verifies an EventPayRemainder message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates an EventPayFullBid message from a plain object. Also converts values to their respective internal types.
+             * Creates an EventPayRemainder message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns EventPayFullBid
+             * @returns EventPayRemainder
              */
-            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.EventPayFullBid;
+            public static fromObject(object: { [k: string]: any }): ununifi.nftbackedloan.EventPayRemainder;
 
             /**
-             * Creates a plain object from an EventPayFullBid message. Also converts values to other types if specified.
-             * @param message EventPayFullBid
+             * Creates a plain object from an EventPayRemainder message. Also converts values to other types if specified.
+             * @param message EventPayRemainder
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ununifi.nftbackedloan.EventPayFullBid, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: ununifi.nftbackedloan.EventPayRemainder, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this EventPayFullBid to JSON.
+             * Converts this EventPayRemainder to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -15251,8 +15251,8 @@ export namespace ununifi {
         /** Properties of an EventRepay. */
         interface IEventRepay {
 
-            /** EventRepay repayer */
-            repayer?: (string|null);
+            /** EventRepay borrower */
+            borrower?: (string|null);
 
             /** EventRepay class_id */
             class_id?: (string|null);
@@ -15273,8 +15273,8 @@ export namespace ununifi {
              */
             constructor(properties?: ununifi.nftbackedloan.IEventRepay);
 
-            /** EventRepay repayer. */
-            public repayer: string;
+            /** EventRepay borrower. */
+            public borrower: string;
 
             /** EventRepay class_id. */
             public class_id: string;
@@ -15545,35 +15545,14 @@ export namespace ununifi {
             /** Params min_staking_for_listing */
             min_staking_for_listing?: (string|null);
 
-            /** Params default_bid_active_rank */
-            default_bid_active_rank?: (Long|null);
-
             /** Params bid_tokens */
             bid_tokens?: (string[]|null);
-
-            /** Params auto_relisting_count_if_no_bid */
-            auto_relisting_count_if_no_bid?: (Long|null);
-
-            /** Params nft_listing_delay_seconds */
-            nft_listing_delay_seconds?: (Long|null);
-
-            /** Params nft_listing_period_initial */
-            nft_listing_period_initial?: (Long|null);
 
             /** Params nft_listing_cancel_required_seconds */
             nft_listing_cancel_required_seconds?: (Long|null);
 
-            /** Params nft_listing_cancel_fee_percentage */
-            nft_listing_cancel_fee_percentage?: (Long|null);
-
-            /** Params nft_listing_gap_time */
-            nft_listing_gap_time?: (Long|null);
-
             /** Params bid_cancel_required_seconds */
             bid_cancel_required_seconds?: (Long|null);
-
-            /** Params bid_token_disburse_seconds_after_cancel */
-            bid_token_disburse_seconds_after_cancel?: (Long|null);
 
             /** Params nft_listing_full_payment_period */
             nft_listing_full_payment_period?: (Long|null);
@@ -15581,20 +15560,8 @@ export namespace ununifi {
             /** Params nft_listing_nft_delivery_period */
             nft_listing_nft_delivery_period?: (Long|null);
 
-            /** Params nft_creator_share_percentage */
-            nft_creator_share_percentage?: (Long|null);
-
-            /** Params market_administrator */
-            market_administrator?: (string|null);
-
             /** Params nft_listing_commission_fee */
             nft_listing_commission_fee?: (Long|null);
-
-            /** Params nft_listing_extend_seconds */
-            nft_listing_extend_seconds?: (Long|null);
-
-            /** Params nft_listing_period_extend_fee_per_hour */
-            nft_listing_period_extend_fee_per_hour?: (cosmos.base.v1beta1.ICoin|null);
         }
 
         /** Represents a Params. */
@@ -15609,35 +15576,14 @@ export namespace ununifi {
             /** Params min_staking_for_listing. */
             public min_staking_for_listing: string;
 
-            /** Params default_bid_active_rank. */
-            public default_bid_active_rank: Long;
-
             /** Params bid_tokens. */
             public bid_tokens: string[];
-
-            /** Params auto_relisting_count_if_no_bid. */
-            public auto_relisting_count_if_no_bid: Long;
-
-            /** Params nft_listing_delay_seconds. */
-            public nft_listing_delay_seconds: Long;
-
-            /** Params nft_listing_period_initial. */
-            public nft_listing_period_initial: Long;
 
             /** Params nft_listing_cancel_required_seconds. */
             public nft_listing_cancel_required_seconds: Long;
 
-            /** Params nft_listing_cancel_fee_percentage. */
-            public nft_listing_cancel_fee_percentage: Long;
-
-            /** Params nft_listing_gap_time. */
-            public nft_listing_gap_time: Long;
-
             /** Params bid_cancel_required_seconds. */
             public bid_cancel_required_seconds: Long;
-
-            /** Params bid_token_disburse_seconds_after_cancel. */
-            public bid_token_disburse_seconds_after_cancel: Long;
 
             /** Params nft_listing_full_payment_period. */
             public nft_listing_full_payment_period: Long;
@@ -15645,20 +15591,8 @@ export namespace ununifi {
             /** Params nft_listing_nft_delivery_period. */
             public nft_listing_nft_delivery_period: Long;
 
-            /** Params nft_creator_share_percentage. */
-            public nft_creator_share_percentage: Long;
-
-            /** Params market_administrator. */
-            public market_administrator: string;
-
             /** Params nft_listing_commission_fee. */
             public nft_listing_commission_fee: Long;
-
-            /** Params nft_listing_extend_seconds. */
-            public nft_listing_extend_seconds: Long;
-
-            /** Params nft_listing_period_extend_fee_per_hour. */
-            public nft_listing_period_extend_fee_per_hour?: (cosmos.base.v1beta1.ICoin|null);
 
             /**
              * Encodes the specified Params message. Does not implicitly {@link ununifi.nftbackedloan.Params.verify|verify} messages.

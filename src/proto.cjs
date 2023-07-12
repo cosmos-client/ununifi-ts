@@ -26137,35 +26137,35 @@
                  */
     
                 /**
-                 * Callback as used by {@link ununifi.nftbackedloan.Msg#payFullBid}.
+                 * Callback as used by {@link ununifi.nftbackedloan.Msg#payRemainder}.
                  * @memberof ununifi.nftbackedloan.Msg
-                 * @typedef PayFullBidCallback
+                 * @typedef PayRemainderCallback
                  * @type {function}
                  * @param {Error|null} error Error, if any
-                 * @param {ununifi.nftbackedloan.MsgPayFullBidResponse} [response] MsgPayFullBidResponse
+                 * @param {ununifi.nftbackedloan.MsgPayRemainderResponse} [response] MsgPayRemainderResponse
                  */
     
                 /**
-                 * Calls PayFullBid.
-                 * @function payFullBid
+                 * Calls PayRemainder.
+                 * @function payRemainder
                  * @memberof ununifi.nftbackedloan.Msg
                  * @instance
-                 * @param {ununifi.nftbackedloan.IMsgPayFullBid} request MsgPayFullBid message or plain object
-                 * @param {ununifi.nftbackedloan.Msg.PayFullBidCallback} callback Node-style callback called with the error, if any, and MsgPayFullBidResponse
+                 * @param {ununifi.nftbackedloan.IMsgPayRemainder} request MsgPayRemainder message or plain object
+                 * @param {ununifi.nftbackedloan.Msg.PayRemainderCallback} callback Node-style callback called with the error, if any, and MsgPayRemainderResponse
                  * @returns {undefined}
                  * @variation 1
                  */
-                Object.defineProperty(Msg.prototype.payFullBid = function payFullBid(request, callback) {
-                    return this.rpcCall(payFullBid, $root.ununifi.nftbackedloan.MsgPayFullBid, $root.ununifi.nftbackedloan.MsgPayFullBidResponse, request, callback);
-                }, "name", { value: "PayFullBid" });
+                Object.defineProperty(Msg.prototype.payRemainder = function payRemainder(request, callback) {
+                    return this.rpcCall(payRemainder, $root.ununifi.nftbackedloan.MsgPayRemainder, $root.ununifi.nftbackedloan.MsgPayRemainderResponse, request, callback);
+                }, "name", { value: "PayRemainder" });
     
                 /**
-                 * Calls PayFullBid.
-                 * @function payFullBid
+                 * Calls PayRemainder.
+                 * @function payRemainder
                  * @memberof ununifi.nftbackedloan.Msg
                  * @instance
-                 * @param {ununifi.nftbackedloan.IMsgPayFullBid} request MsgPayFullBid message or plain object
-                 * @returns {Promise<ununifi.nftbackedloan.MsgPayFullBidResponse>} Promise
+                 * @param {ununifi.nftbackedloan.IMsgPayRemainder} request MsgPayRemainder message or plain object
+                 * @returns {Promise<ununifi.nftbackedloan.MsgPayRemainderResponse>} Promise
                  * @variation 2
                  */
     
@@ -27431,11 +27431,11 @@
                  * @interface IMsgPlaceBid
                  * @property {string|null} [sender] MsgPlaceBid sender
                  * @property {ununifi.nftbackedloan.INftIdentifier|null} [nft_id] MsgPlaceBid nft_id
-                 * @property {cosmos.base.v1beta1.ICoin|null} [bid_amount] MsgPlaceBid bid_amount
-                 * @property {google.protobuf.ITimestamp|null} [expiry_at] MsgPlaceBid expiry_at
+                 * @property {cosmos.base.v1beta1.ICoin|null} [price] MsgPlaceBid price
+                 * @property {google.protobuf.ITimestamp|null} [expiry] MsgPlaceBid expiry
                  * @property {string|null} [interest_rate] MsgPlaceBid interest_rate
                  * @property {boolean|null} [automatic_payment] MsgPlaceBid automatic_payment
-                 * @property {cosmos.base.v1beta1.ICoin|null} [deposit_amount] MsgPlaceBid deposit_amount
+                 * @property {cosmos.base.v1beta1.ICoin|null} [deposit] MsgPlaceBid deposit
                  */
     
                 /**
@@ -27470,20 +27470,20 @@
                 MsgPlaceBid.prototype.nft_id = null;
     
                 /**
-                 * MsgPlaceBid bid_amount.
-                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} bid_amount
+                 * MsgPlaceBid price.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} price
                  * @memberof ununifi.nftbackedloan.MsgPlaceBid
                  * @instance
                  */
-                MsgPlaceBid.prototype.bid_amount = null;
+                MsgPlaceBid.prototype.price = null;
     
                 /**
-                 * MsgPlaceBid expiry_at.
-                 * @member {google.protobuf.ITimestamp|null|undefined} expiry_at
+                 * MsgPlaceBid expiry.
+                 * @member {google.protobuf.ITimestamp|null|undefined} expiry
                  * @memberof ununifi.nftbackedloan.MsgPlaceBid
                  * @instance
                  */
-                MsgPlaceBid.prototype.expiry_at = null;
+                MsgPlaceBid.prototype.expiry = null;
     
                 /**
                  * MsgPlaceBid interest_rate.
@@ -27502,12 +27502,12 @@
                 MsgPlaceBid.prototype.automatic_payment = false;
     
                 /**
-                 * MsgPlaceBid deposit_amount.
-                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} deposit_amount
+                 * MsgPlaceBid deposit.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} deposit
                  * @memberof ununifi.nftbackedloan.MsgPlaceBid
                  * @instance
                  */
-                MsgPlaceBid.prototype.deposit_amount = null;
+                MsgPlaceBid.prototype.deposit = null;
     
                 /**
                  * Encodes the specified MsgPlaceBid message. Does not implicitly {@link ununifi.nftbackedloan.MsgPlaceBid.verify|verify} messages.
@@ -27525,16 +27525,16 @@
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.sender);
                     if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
                         $root.ununifi.nftbackedloan.NftIdentifier.encode(message.nft_id, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                    if (message.bid_amount != null && Object.hasOwnProperty.call(message, "bid_amount"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.bid_amount, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-                    if (message.expiry_at != null && Object.hasOwnProperty.call(message, "expiry_at"))
-                        $root.google.protobuf.Timestamp.encode(message.expiry_at, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+                    if (message.price != null && Object.hasOwnProperty.call(message, "price"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.price, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                    if (message.expiry != null && Object.hasOwnProperty.call(message, "expiry"))
+                        $root.google.protobuf.Timestamp.encode(message.expiry, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
                     if (message.interest_rate != null && Object.hasOwnProperty.call(message, "interest_rate"))
                         writer.uint32(/* id 5, wireType 2 =*/42).string(message.interest_rate);
                     if (message.automatic_payment != null && Object.hasOwnProperty.call(message, "automatic_payment"))
                         writer.uint32(/* id 6, wireType 0 =*/48).bool(message.automatic_payment);
-                    if (message.deposit_amount != null && Object.hasOwnProperty.call(message, "deposit_amount"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.deposit_amount, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
+                    if (message.deposit != null && Object.hasOwnProperty.call(message, "deposit"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.deposit, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
                     return writer;
                 };
     
@@ -27576,10 +27576,10 @@
                             message.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.decode(reader, reader.uint32());
                             break;
                         case 3:
-                            message.bid_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            message.price = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         case 4:
-                            message.expiry_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                            message.expiry = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                             break;
                         case 5:
                             message.interest_rate = reader.string();
@@ -27588,7 +27588,7 @@
                             message.automatic_payment = reader.bool();
                             break;
                         case 7:
-                            message.deposit_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            message.deposit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -27633,15 +27633,15 @@
                         if (error)
                             return "nft_id." + error;
                     }
-                    if (message.bid_amount != null && message.hasOwnProperty("bid_amount")) {
-                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.bid_amount);
+                    if (message.price != null && message.hasOwnProperty("price")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.price);
                         if (error)
-                            return "bid_amount." + error;
+                            return "price." + error;
                     }
-                    if (message.expiry_at != null && message.hasOwnProperty("expiry_at")) {
-                        var error = $root.google.protobuf.Timestamp.verify(message.expiry_at);
+                    if (message.expiry != null && message.hasOwnProperty("expiry")) {
+                        var error = $root.google.protobuf.Timestamp.verify(message.expiry);
                         if (error)
-                            return "expiry_at." + error;
+                            return "expiry." + error;
                     }
                     if (message.interest_rate != null && message.hasOwnProperty("interest_rate"))
                         if (!$util.isString(message.interest_rate))
@@ -27649,10 +27649,10 @@
                     if (message.automatic_payment != null && message.hasOwnProperty("automatic_payment"))
                         if (typeof message.automatic_payment !== "boolean")
                             return "automatic_payment: boolean expected";
-                    if (message.deposit_amount != null && message.hasOwnProperty("deposit_amount")) {
-                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.deposit_amount);
+                    if (message.deposit != null && message.hasOwnProperty("deposit")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.deposit);
                         if (error)
-                            return "deposit_amount." + error;
+                            return "deposit." + error;
                     }
                     return null;
                 };
@@ -27676,24 +27676,24 @@
                             throw TypeError(".ununifi.nftbackedloan.MsgPlaceBid.nft_id: object expected");
                         message.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.fromObject(object.nft_id);
                     }
-                    if (object.bid_amount != null) {
-                        if (typeof object.bid_amount !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.MsgPlaceBid.bid_amount: object expected");
-                        message.bid_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.bid_amount);
+                    if (object.price != null) {
+                        if (typeof object.price !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.MsgPlaceBid.price: object expected");
+                        message.price = $root.cosmos.base.v1beta1.Coin.fromObject(object.price);
                     }
-                    if (object.expiry_at != null) {
-                        if (typeof object.expiry_at !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.MsgPlaceBid.expiry_at: object expected");
-                        message.expiry_at = $root.google.protobuf.Timestamp.fromObject(object.expiry_at);
+                    if (object.expiry != null) {
+                        if (typeof object.expiry !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.MsgPlaceBid.expiry: object expected");
+                        message.expiry = $root.google.protobuf.Timestamp.fromObject(object.expiry);
                     }
                     if (object.interest_rate != null)
                         message.interest_rate = String(object.interest_rate);
                     if (object.automatic_payment != null)
                         message.automatic_payment = Boolean(object.automatic_payment);
-                    if (object.deposit_amount != null) {
-                        if (typeof object.deposit_amount !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.MsgPlaceBid.deposit_amount: object expected");
-                        message.deposit_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.deposit_amount);
+                    if (object.deposit != null) {
+                        if (typeof object.deposit !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.MsgPlaceBid.deposit: object expected");
+                        message.deposit = $root.cosmos.base.v1beta1.Coin.fromObject(object.deposit);
                     }
                     return message;
                 };
@@ -27714,26 +27714,26 @@
                     if (options.defaults) {
                         object.sender = "";
                         object.nft_id = null;
-                        object.bid_amount = null;
-                        object.expiry_at = null;
+                        object.price = null;
+                        object.expiry = null;
                         object.interest_rate = "";
                         object.automatic_payment = false;
-                        object.deposit_amount = null;
+                        object.deposit = null;
                     }
                     if (message.sender != null && message.hasOwnProperty("sender"))
                         object.sender = message.sender;
                     if (message.nft_id != null && message.hasOwnProperty("nft_id"))
                         object.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.toObject(message.nft_id, options);
-                    if (message.bid_amount != null && message.hasOwnProperty("bid_amount"))
-                        object.bid_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.bid_amount, options);
-                    if (message.expiry_at != null && message.hasOwnProperty("expiry_at"))
-                        object.expiry_at = $root.google.protobuf.Timestamp.toObject(message.expiry_at, options);
+                    if (message.price != null && message.hasOwnProperty("price"))
+                        object.price = $root.cosmos.base.v1beta1.Coin.toObject(message.price, options);
+                    if (message.expiry != null && message.hasOwnProperty("expiry"))
+                        object.expiry = $root.google.protobuf.Timestamp.toObject(message.expiry, options);
                     if (message.interest_rate != null && message.hasOwnProperty("interest_rate"))
                         object.interest_rate = message.interest_rate;
                     if (message.automatic_payment != null && message.hasOwnProperty("automatic_payment"))
                         object.automatic_payment = message.automatic_payment;
-                    if (message.deposit_amount != null && message.hasOwnProperty("deposit_amount"))
-                        object.deposit_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.deposit_amount, options);
+                    if (message.deposit != null && message.hasOwnProperty("deposit"))
+                        object.deposit = $root.cosmos.base.v1beta1.Coin.toObject(message.deposit, options);
                     return object;
                 };
     
@@ -28952,25 +28952,25 @@
                 return MsgSellingDecisionResponse;
             })();
     
-            nftbackedloan.MsgPayFullBid = (function() {
+            nftbackedloan.MsgPayRemainder = (function() {
     
                 /**
-                 * Properties of a MsgPayFullBid.
+                 * Properties of a MsgPayRemainder.
                  * @memberof ununifi.nftbackedloan
-                 * @interface IMsgPayFullBid
-                 * @property {string|null} [sender] MsgPayFullBid sender
-                 * @property {ununifi.nftbackedloan.INftIdentifier|null} [nft_id] MsgPayFullBid nft_id
+                 * @interface IMsgPayRemainder
+                 * @property {string|null} [sender] MsgPayRemainder sender
+                 * @property {ununifi.nftbackedloan.INftIdentifier|null} [nft_id] MsgPayRemainder nft_id
                  */
     
                 /**
-                 * Constructs a new MsgPayFullBid.
+                 * Constructs a new MsgPayRemainder.
                  * @memberof ununifi.nftbackedloan
-                 * @classdesc Represents a MsgPayFullBid.
-                 * @implements IMsgPayFullBid
+                 * @classdesc Represents a MsgPayRemainder.
+                 * @implements IMsgPayRemainder
                  * @constructor
-                 * @param {ununifi.nftbackedloan.IMsgPayFullBid=} [properties] Properties to set
+                 * @param {ununifi.nftbackedloan.IMsgPayRemainder=} [properties] Properties to set
                  */
-                function MsgPayFullBid(properties) {
+                function MsgPayRemainder(properties) {
                     if (properties)
                         for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -28978,31 +28978,31 @@
                 }
     
                 /**
-                 * MsgPayFullBid sender.
+                 * MsgPayRemainder sender.
                  * @member {string} sender
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBid
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainder
                  * @instance
                  */
-                MsgPayFullBid.prototype.sender = "";
+                MsgPayRemainder.prototype.sender = "";
     
                 /**
-                 * MsgPayFullBid nft_id.
+                 * MsgPayRemainder nft_id.
                  * @member {ununifi.nftbackedloan.INftIdentifier|null|undefined} nft_id
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBid
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainder
                  * @instance
                  */
-                MsgPayFullBid.prototype.nft_id = null;
+                MsgPayRemainder.prototype.nft_id = null;
     
                 /**
-                 * Encodes the specified MsgPayFullBid message. Does not implicitly {@link ununifi.nftbackedloan.MsgPayFullBid.verify|verify} messages.
+                 * Encodes the specified MsgPayRemainder message. Does not implicitly {@link ununifi.nftbackedloan.MsgPayRemainder.verify|verify} messages.
                  * @function encode
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBid
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainder
                  * @static
-                 * @param {ununifi.nftbackedloan.IMsgPayFullBid} message MsgPayFullBid message or plain object to encode
+                 * @param {ununifi.nftbackedloan.IMsgPayRemainder} message MsgPayRemainder message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                MsgPayFullBid.encode = function encode(message, writer) {
+                MsgPayRemainder.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
                     if (message.sender != null && Object.hasOwnProperty.call(message, "sender"))
@@ -29013,33 +29013,33 @@
                 };
     
                 /**
-                 * Encodes the specified MsgPayFullBid message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgPayFullBid.verify|verify} messages.
+                 * Encodes the specified MsgPayRemainder message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgPayRemainder.verify|verify} messages.
                  * @function encodeDelimited
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBid
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainder
                  * @static
-                 * @param {ununifi.nftbackedloan.IMsgPayFullBid} message MsgPayFullBid message or plain object to encode
+                 * @param {ununifi.nftbackedloan.IMsgPayRemainder} message MsgPayRemainder message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                MsgPayFullBid.encodeDelimited = function encodeDelimited(message, writer) {
+                MsgPayRemainder.encodeDelimited = function encodeDelimited(message, writer) {
                     return this.encode(message, writer).ldelim();
                 };
     
                 /**
-                 * Decodes a MsgPayFullBid message from the specified reader or buffer.
+                 * Decodes a MsgPayRemainder message from the specified reader or buffer.
                  * @function decode
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBid
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainder
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.nftbackedloan.MsgPayFullBid} MsgPayFullBid
+                 * @returns {ununifi.nftbackedloan.MsgPayRemainder} MsgPayRemainder
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                MsgPayFullBid.decode = function decode(reader, length) {
+                MsgPayRemainder.decode = function decode(reader, length) {
                     if (!(reader instanceof $Reader))
                         reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.MsgPayFullBid();
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.MsgPayRemainder();
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
@@ -29058,30 +29058,30 @@
                 };
     
                 /**
-                 * Decodes a MsgPayFullBid message from the specified reader or buffer, length delimited.
+                 * Decodes a MsgPayRemainder message from the specified reader or buffer, length delimited.
                  * @function decodeDelimited
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBid
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainder
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.nftbackedloan.MsgPayFullBid} MsgPayFullBid
+                 * @returns {ununifi.nftbackedloan.MsgPayRemainder} MsgPayRemainder
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                MsgPayFullBid.decodeDelimited = function decodeDelimited(reader) {
+                MsgPayRemainder.decodeDelimited = function decodeDelimited(reader) {
                     if (!(reader instanceof $Reader))
                         reader = new $Reader(reader);
                     return this.decode(reader, reader.uint32());
                 };
     
                 /**
-                 * Verifies a MsgPayFullBid message.
+                 * Verifies a MsgPayRemainder message.
                  * @function verify
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBid
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainder
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
                  */
-                MsgPayFullBid.verify = function verify(message) {
+                MsgPayRemainder.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
                     if (message.sender != null && message.hasOwnProperty("sender"))
@@ -29096,37 +29096,37 @@
                 };
     
                 /**
-                 * Creates a MsgPayFullBid message from a plain object. Also converts values to their respective internal types.
+                 * Creates a MsgPayRemainder message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBid
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainder
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.nftbackedloan.MsgPayFullBid} MsgPayFullBid
+                 * @returns {ununifi.nftbackedloan.MsgPayRemainder} MsgPayRemainder
                  */
-                MsgPayFullBid.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.nftbackedloan.MsgPayFullBid)
+                MsgPayRemainder.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.nftbackedloan.MsgPayRemainder)
                         return object;
-                    var message = new $root.ununifi.nftbackedloan.MsgPayFullBid();
+                    var message = new $root.ununifi.nftbackedloan.MsgPayRemainder();
                     if (object.sender != null)
                         message.sender = String(object.sender);
                     if (object.nft_id != null) {
                         if (typeof object.nft_id !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.MsgPayFullBid.nft_id: object expected");
+                            throw TypeError(".ununifi.nftbackedloan.MsgPayRemainder.nft_id: object expected");
                         message.nft_id = $root.ununifi.nftbackedloan.NftIdentifier.fromObject(object.nft_id);
                     }
                     return message;
                 };
     
                 /**
-                 * Creates a plain object from a MsgPayFullBid message. Also converts values to other types if specified.
+                 * Creates a plain object from a MsgPayRemainder message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBid
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainder
                  * @static
-                 * @param {ununifi.nftbackedloan.MsgPayFullBid} message MsgPayFullBid
+                 * @param {ununifi.nftbackedloan.MsgPayRemainder} message MsgPayRemainder
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                MsgPayFullBid.toObject = function toObject(message, options) {
+                MsgPayRemainder.toObject = function toObject(message, options) {
                     if (!options)
                         options = {};
                     var object = {};
@@ -29142,36 +29142,36 @@
                 };
     
                 /**
-                 * Converts this MsgPayFullBid to JSON.
+                 * Converts this MsgPayRemainder to JSON.
                  * @function toJSON
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBid
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainder
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
-                MsgPayFullBid.prototype.toJSON = function toJSON() {
+                MsgPayRemainder.prototype.toJSON = function toJSON() {
                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                 };
     
-                return MsgPayFullBid;
+                return MsgPayRemainder;
             })();
     
-            nftbackedloan.MsgPayFullBidResponse = (function() {
+            nftbackedloan.MsgPayRemainderResponse = (function() {
     
                 /**
-                 * Properties of a MsgPayFullBidResponse.
+                 * Properties of a MsgPayRemainderResponse.
                  * @memberof ununifi.nftbackedloan
-                 * @interface IMsgPayFullBidResponse
+                 * @interface IMsgPayRemainderResponse
                  */
     
                 /**
-                 * Constructs a new MsgPayFullBidResponse.
+                 * Constructs a new MsgPayRemainderResponse.
                  * @memberof ununifi.nftbackedloan
-                 * @classdesc Represents a MsgPayFullBidResponse.
-                 * @implements IMsgPayFullBidResponse
+                 * @classdesc Represents a MsgPayRemainderResponse.
+                 * @implements IMsgPayRemainderResponse
                  * @constructor
-                 * @param {ununifi.nftbackedloan.IMsgPayFullBidResponse=} [properties] Properties to set
+                 * @param {ununifi.nftbackedloan.IMsgPayRemainderResponse=} [properties] Properties to set
                  */
-                function MsgPayFullBidResponse(properties) {
+                function MsgPayRemainderResponse(properties) {
                     if (properties)
                         for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -29179,48 +29179,48 @@
                 }
     
                 /**
-                 * Encodes the specified MsgPayFullBidResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgPayFullBidResponse.verify|verify} messages.
+                 * Encodes the specified MsgPayRemainderResponse message. Does not implicitly {@link ununifi.nftbackedloan.MsgPayRemainderResponse.verify|verify} messages.
                  * @function encode
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBidResponse
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainderResponse
                  * @static
-                 * @param {ununifi.nftbackedloan.IMsgPayFullBidResponse} message MsgPayFullBidResponse message or plain object to encode
+                 * @param {ununifi.nftbackedloan.IMsgPayRemainderResponse} message MsgPayRemainderResponse message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                MsgPayFullBidResponse.encode = function encode(message, writer) {
+                MsgPayRemainderResponse.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
                     return writer;
                 };
     
                 /**
-                 * Encodes the specified MsgPayFullBidResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgPayFullBidResponse.verify|verify} messages.
+                 * Encodes the specified MsgPayRemainderResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.MsgPayRemainderResponse.verify|verify} messages.
                  * @function encodeDelimited
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBidResponse
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainderResponse
                  * @static
-                 * @param {ununifi.nftbackedloan.IMsgPayFullBidResponse} message MsgPayFullBidResponse message or plain object to encode
+                 * @param {ununifi.nftbackedloan.IMsgPayRemainderResponse} message MsgPayRemainderResponse message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                MsgPayFullBidResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                MsgPayRemainderResponse.encodeDelimited = function encodeDelimited(message, writer) {
                     return this.encode(message, writer).ldelim();
                 };
     
                 /**
-                 * Decodes a MsgPayFullBidResponse message from the specified reader or buffer.
+                 * Decodes a MsgPayRemainderResponse message from the specified reader or buffer.
                  * @function decode
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBidResponse
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainderResponse
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.nftbackedloan.MsgPayFullBidResponse} MsgPayFullBidResponse
+                 * @returns {ununifi.nftbackedloan.MsgPayRemainderResponse} MsgPayRemainderResponse
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                MsgPayFullBidResponse.decode = function decode(reader, length) {
+                MsgPayRemainderResponse.decode = function decode(reader, length) {
                     if (!(reader instanceof $Reader))
                         reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.MsgPayFullBidResponse();
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.MsgPayRemainderResponse();
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
@@ -29233,74 +29233,74 @@
                 };
     
                 /**
-                 * Decodes a MsgPayFullBidResponse message from the specified reader or buffer, length delimited.
+                 * Decodes a MsgPayRemainderResponse message from the specified reader or buffer, length delimited.
                  * @function decodeDelimited
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBidResponse
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainderResponse
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.nftbackedloan.MsgPayFullBidResponse} MsgPayFullBidResponse
+                 * @returns {ununifi.nftbackedloan.MsgPayRemainderResponse} MsgPayRemainderResponse
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                MsgPayFullBidResponse.decodeDelimited = function decodeDelimited(reader) {
+                MsgPayRemainderResponse.decodeDelimited = function decodeDelimited(reader) {
                     if (!(reader instanceof $Reader))
                         reader = new $Reader(reader);
                     return this.decode(reader, reader.uint32());
                 };
     
                 /**
-                 * Verifies a MsgPayFullBidResponse message.
+                 * Verifies a MsgPayRemainderResponse message.
                  * @function verify
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBidResponse
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainderResponse
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
                  */
-                MsgPayFullBidResponse.verify = function verify(message) {
+                MsgPayRemainderResponse.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
                     return null;
                 };
     
                 /**
-                 * Creates a MsgPayFullBidResponse message from a plain object. Also converts values to their respective internal types.
+                 * Creates a MsgPayRemainderResponse message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBidResponse
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainderResponse
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.nftbackedloan.MsgPayFullBidResponse} MsgPayFullBidResponse
+                 * @returns {ununifi.nftbackedloan.MsgPayRemainderResponse} MsgPayRemainderResponse
                  */
-                MsgPayFullBidResponse.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.nftbackedloan.MsgPayFullBidResponse)
+                MsgPayRemainderResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.nftbackedloan.MsgPayRemainderResponse)
                         return object;
-                    return new $root.ununifi.nftbackedloan.MsgPayFullBidResponse();
+                    return new $root.ununifi.nftbackedloan.MsgPayRemainderResponse();
                 };
     
                 /**
-                 * Creates a plain object from a MsgPayFullBidResponse message. Also converts values to other types if specified.
+                 * Creates a plain object from a MsgPayRemainderResponse message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBidResponse
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainderResponse
                  * @static
-                 * @param {ununifi.nftbackedloan.MsgPayFullBidResponse} message MsgPayFullBidResponse
+                 * @param {ununifi.nftbackedloan.MsgPayRemainderResponse} message MsgPayRemainderResponse
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                MsgPayFullBidResponse.toObject = function toObject() {
+                MsgPayRemainderResponse.toObject = function toObject() {
                     return {};
                 };
     
                 /**
-                 * Converts this MsgPayFullBidResponse to JSON.
+                 * Converts this MsgPayRemainderResponse to JSON.
                  * @function toJSON
-                 * @memberof ununifi.nftbackedloan.MsgPayFullBidResponse
+                 * @memberof ununifi.nftbackedloan.MsgPayRemainderResponse
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
-                MsgPayFullBidResponse.prototype.toJSON = function toJSON() {
+                MsgPayRemainderResponse.prototype.toJSON = function toJSON() {
                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                 };
     
-                return MsgPayFullBidResponse;
+                return MsgPayRemainderResponse;
             })();
     
             nftbackedloan.BorrowBid = (function() {
@@ -31165,7 +31165,7 @@
                  * @property {string|null} [bid_denom] NftListing bid_denom
                  * @property {string|null} [minimum_deposit_rate] NftListing minimum_deposit_rate
                  * @property {google.protobuf.ITimestamp|null} [started_at] NftListing started_at
-                 * @property {google.protobuf.ITimestamp|null} [end_at] NftListing end_at
+                 * @property {google.protobuf.ITimestamp|null} [liquidated_at] NftListing liquidated_at
                  * @property {google.protobuf.ITimestamp|null} [full_payment_end_at] NftListing full_payment_end_at
                  * @property {google.protobuf.ITimestamp|null} [successful_bid_end_at] NftListing successful_bid_end_at
                  * @property {cosmos.base.v1beta1.ICoin|null} [collected_amount] NftListing collected_amount
@@ -31237,12 +31237,12 @@
                 NftListing.prototype.started_at = null;
     
                 /**
-                 * NftListing end_at.
-                 * @member {google.protobuf.ITimestamp|null|undefined} end_at
+                 * NftListing liquidated_at.
+                 * @member {google.protobuf.ITimestamp|null|undefined} liquidated_at
                  * @memberof ununifi.nftbackedloan.NftListing
                  * @instance
                  */
-                NftListing.prototype.end_at = null;
+                NftListing.prototype.liquidated_at = null;
     
                 /**
                  * NftListing full_payment_end_at.
@@ -31308,8 +31308,8 @@
                         writer.uint32(/* id 5, wireType 2 =*/42).string(message.minimum_deposit_rate);
                     if (message.started_at != null && Object.hasOwnProperty.call(message, "started_at"))
                         $root.google.protobuf.Timestamp.encode(message.started_at, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
-                    if (message.end_at != null && Object.hasOwnProperty.call(message, "end_at"))
-                        $root.google.protobuf.Timestamp.encode(message.end_at, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
+                    if (message.liquidated_at != null && Object.hasOwnProperty.call(message, "liquidated_at"))
+                        $root.google.protobuf.Timestamp.encode(message.liquidated_at, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
                     if (message.full_payment_end_at != null && Object.hasOwnProperty.call(message, "full_payment_end_at"))
                         $root.google.protobuf.Timestamp.encode(message.full_payment_end_at, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
                     if (message.successful_bid_end_at != null && Object.hasOwnProperty.call(message, "successful_bid_end_at"))
@@ -31373,7 +31373,7 @@
                             message.started_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                             break;
                         case 7:
-                            message.end_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                            message.liquidated_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                             break;
                         case 8:
                             message.full_payment_end_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
@@ -31456,10 +31456,10 @@
                         if (error)
                             return "started_at." + error;
                     }
-                    if (message.end_at != null && message.hasOwnProperty("end_at")) {
-                        var error = $root.google.protobuf.Timestamp.verify(message.end_at);
+                    if (message.liquidated_at != null && message.hasOwnProperty("liquidated_at")) {
+                        var error = $root.google.protobuf.Timestamp.verify(message.liquidated_at);
                         if (error)
-                            return "end_at." + error;
+                            return "liquidated_at." + error;
                     }
                     if (message.full_payment_end_at != null && message.hasOwnProperty("full_payment_end_at")) {
                         var error = $root.google.protobuf.Timestamp.verify(message.full_payment_end_at);
@@ -31541,10 +31541,10 @@
                             throw TypeError(".ununifi.nftbackedloan.NftListing.started_at: object expected");
                         message.started_at = $root.google.protobuf.Timestamp.fromObject(object.started_at);
                     }
-                    if (object.end_at != null) {
-                        if (typeof object.end_at !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.NftListing.end_at: object expected");
-                        message.end_at = $root.google.protobuf.Timestamp.fromObject(object.end_at);
+                    if (object.liquidated_at != null) {
+                        if (typeof object.liquidated_at !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.NftListing.liquidated_at: object expected");
+                        message.liquidated_at = $root.google.protobuf.Timestamp.fromObject(object.liquidated_at);
                     }
                     if (object.full_payment_end_at != null) {
                         if (typeof object.full_payment_end_at !== "object")
@@ -31591,7 +31591,7 @@
                         object.bid_denom = "";
                         object.minimum_deposit_rate = "";
                         object.started_at = null;
-                        object.end_at = null;
+                        object.liquidated_at = null;
                         object.full_payment_end_at = null;
                         object.successful_bid_end_at = null;
                         object.collected_amount = null;
@@ -31610,8 +31610,8 @@
                         object.minimum_deposit_rate = message.minimum_deposit_rate;
                     if (message.started_at != null && message.hasOwnProperty("started_at"))
                         object.started_at = $root.google.protobuf.Timestamp.toObject(message.started_at, options);
-                    if (message.end_at != null && message.hasOwnProperty("end_at"))
-                        object.end_at = $root.google.protobuf.Timestamp.toObject(message.end_at, options);
+                    if (message.liquidated_at != null && message.hasOwnProperty("liquidated_at"))
+                        object.liquidated_at = $root.google.protobuf.Timestamp.toObject(message.liquidated_at, options);
                     if (message.full_payment_end_at != null && message.hasOwnProperty("full_payment_end_at"))
                         object.full_payment_end_at = $root.google.protobuf.Timestamp.toObject(message.full_payment_end_at, options);
                     if (message.successful_bid_end_at != null && message.hasOwnProperty("successful_bid_end_at"))
@@ -31854,10 +31854,10 @@
                  * @memberof ununifi.nftbackedloan
                  * @interface INftBid
                  * @property {ununifi.nftbackedloan.IBidId|null} [id] NftBid id
-                 * @property {cosmos.base.v1beta1.ICoin|null} [bid_amount] NftBid bid_amount
-                 * @property {cosmos.base.v1beta1.ICoin|null} [deposit_amount] NftBid deposit_amount
+                 * @property {cosmos.base.v1beta1.ICoin|null} [price] NftBid price
+                 * @property {cosmos.base.v1beta1.ICoin|null} [deposit] NftBid deposit
                  * @property {cosmos.base.v1beta1.ICoin|null} [paid_amount] NftBid paid_amount
-                 * @property {google.protobuf.ITimestamp|null} [expiry_at] NftBid expiry_at
+                 * @property {google.protobuf.ITimestamp|null} [expiry] NftBid expiry
                  * @property {string|null} [interest_rate] NftBid interest_rate
                  * @property {boolean|null} [automatic_payment] NftBid automatic_payment
                  * @property {google.protobuf.ITimestamp|null} [created_at] NftBid created_at
@@ -31888,20 +31888,20 @@
                 NftBid.prototype.id = null;
     
                 /**
-                 * NftBid bid_amount.
-                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} bid_amount
+                 * NftBid price.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} price
                  * @memberof ununifi.nftbackedloan.NftBid
                  * @instance
                  */
-                NftBid.prototype.bid_amount = null;
+                NftBid.prototype.price = null;
     
                 /**
-                 * NftBid deposit_amount.
-                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} deposit_amount
+                 * NftBid deposit.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} deposit
                  * @memberof ununifi.nftbackedloan.NftBid
                  * @instance
                  */
-                NftBid.prototype.deposit_amount = null;
+                NftBid.prototype.deposit = null;
     
                 /**
                  * NftBid paid_amount.
@@ -31912,12 +31912,12 @@
                 NftBid.prototype.paid_amount = null;
     
                 /**
-                 * NftBid expiry_at.
-                 * @member {google.protobuf.ITimestamp|null|undefined} expiry_at
+                 * NftBid expiry.
+                 * @member {google.protobuf.ITimestamp|null|undefined} expiry
                  * @memberof ununifi.nftbackedloan.NftBid
                  * @instance
                  */
-                NftBid.prototype.expiry_at = null;
+                NftBid.prototype.expiry = null;
     
                 /**
                  * NftBid interest_rate.
@@ -31965,14 +31965,14 @@
                         writer = $Writer.create();
                     if (message.id != null && Object.hasOwnProperty.call(message, "id"))
                         $root.ununifi.nftbackedloan.BidId.encode(message.id, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                    if (message.bid_amount != null && Object.hasOwnProperty.call(message, "bid_amount"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.bid_amount, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                    if (message.deposit_amount != null && Object.hasOwnProperty.call(message, "deposit_amount"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.deposit_amount, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                    if (message.price != null && Object.hasOwnProperty.call(message, "price"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.price, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    if (message.deposit != null && Object.hasOwnProperty.call(message, "deposit"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.deposit, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
                     if (message.paid_amount != null && Object.hasOwnProperty.call(message, "paid_amount"))
                         $root.cosmos.base.v1beta1.Coin.encode(message.paid_amount, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-                    if (message.expiry_at != null && Object.hasOwnProperty.call(message, "expiry_at"))
-                        $root.google.protobuf.Timestamp.encode(message.expiry_at, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+                    if (message.expiry != null && Object.hasOwnProperty.call(message, "expiry"))
+                        $root.google.protobuf.Timestamp.encode(message.expiry, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
                     if (message.interest_rate != null && Object.hasOwnProperty.call(message, "interest_rate"))
                         writer.uint32(/* id 6, wireType 2 =*/50).string(message.interest_rate);
                     if (message.automatic_payment != null && Object.hasOwnProperty.call(message, "automatic_payment"))
@@ -32019,16 +32019,16 @@
                             message.id = $root.ununifi.nftbackedloan.BidId.decode(reader, reader.uint32());
                             break;
                         case 2:
-                            message.bid_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            message.price = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         case 3:
-                            message.deposit_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            message.deposit = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         case 4:
                             message.paid_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         case 5:
-                            message.expiry_at = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                            message.expiry = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                             break;
                         case 6:
                             message.interest_rate = reader.string();
@@ -32082,25 +32082,25 @@
                         if (error)
                             return "id." + error;
                     }
-                    if (message.bid_amount != null && message.hasOwnProperty("bid_amount")) {
-                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.bid_amount);
+                    if (message.price != null && message.hasOwnProperty("price")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.price);
                         if (error)
-                            return "bid_amount." + error;
+                            return "price." + error;
                     }
-                    if (message.deposit_amount != null && message.hasOwnProperty("deposit_amount")) {
-                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.deposit_amount);
+                    if (message.deposit != null && message.hasOwnProperty("deposit")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.deposit);
                         if (error)
-                            return "deposit_amount." + error;
+                            return "deposit." + error;
                     }
                     if (message.paid_amount != null && message.hasOwnProperty("paid_amount")) {
                         var error = $root.cosmos.base.v1beta1.Coin.verify(message.paid_amount);
                         if (error)
                             return "paid_amount." + error;
                     }
-                    if (message.expiry_at != null && message.hasOwnProperty("expiry_at")) {
-                        var error = $root.google.protobuf.Timestamp.verify(message.expiry_at);
+                    if (message.expiry != null && message.hasOwnProperty("expiry")) {
+                        var error = $root.google.protobuf.Timestamp.verify(message.expiry);
                         if (error)
-                            return "expiry_at." + error;
+                            return "expiry." + error;
                     }
                     if (message.interest_rate != null && message.hasOwnProperty("interest_rate"))
                         if (!$util.isString(message.interest_rate))
@@ -32138,25 +32138,25 @@
                             throw TypeError(".ununifi.nftbackedloan.NftBid.id: object expected");
                         message.id = $root.ununifi.nftbackedloan.BidId.fromObject(object.id);
                     }
-                    if (object.bid_amount != null) {
-                        if (typeof object.bid_amount !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.NftBid.bid_amount: object expected");
-                        message.bid_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.bid_amount);
+                    if (object.price != null) {
+                        if (typeof object.price !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.NftBid.price: object expected");
+                        message.price = $root.cosmos.base.v1beta1.Coin.fromObject(object.price);
                     }
-                    if (object.deposit_amount != null) {
-                        if (typeof object.deposit_amount !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.NftBid.deposit_amount: object expected");
-                        message.deposit_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.deposit_amount);
+                    if (object.deposit != null) {
+                        if (typeof object.deposit !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.NftBid.deposit: object expected");
+                        message.deposit = $root.cosmos.base.v1beta1.Coin.fromObject(object.deposit);
                     }
                     if (object.paid_amount != null) {
                         if (typeof object.paid_amount !== "object")
                             throw TypeError(".ununifi.nftbackedloan.NftBid.paid_amount: object expected");
                         message.paid_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.paid_amount);
                     }
-                    if (object.expiry_at != null) {
-                        if (typeof object.expiry_at !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.NftBid.expiry_at: object expected");
-                        message.expiry_at = $root.google.protobuf.Timestamp.fromObject(object.expiry_at);
+                    if (object.expiry != null) {
+                        if (typeof object.expiry !== "object")
+                            throw TypeError(".ununifi.nftbackedloan.NftBid.expiry: object expected");
+                        message.expiry = $root.google.protobuf.Timestamp.fromObject(object.expiry);
                     }
                     if (object.interest_rate != null)
                         message.interest_rate = String(object.interest_rate);
@@ -32190,10 +32190,10 @@
                     var object = {};
                     if (options.defaults) {
                         object.id = null;
-                        object.bid_amount = null;
-                        object.deposit_amount = null;
+                        object.price = null;
+                        object.deposit = null;
                         object.paid_amount = null;
-                        object.expiry_at = null;
+                        object.expiry = null;
                         object.interest_rate = "";
                         object.automatic_payment = false;
                         object.created_at = null;
@@ -32201,14 +32201,14 @@
                     }
                     if (message.id != null && message.hasOwnProperty("id"))
                         object.id = $root.ununifi.nftbackedloan.BidId.toObject(message.id, options);
-                    if (message.bid_amount != null && message.hasOwnProperty("bid_amount"))
-                        object.bid_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.bid_amount, options);
-                    if (message.deposit_amount != null && message.hasOwnProperty("deposit_amount"))
-                        object.deposit_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.deposit_amount, options);
+                    if (message.price != null && message.hasOwnProperty("price"))
+                        object.price = $root.cosmos.base.v1beta1.Coin.toObject(message.price, options);
+                    if (message.deposit != null && message.hasOwnProperty("deposit"))
+                        object.deposit = $root.cosmos.base.v1beta1.Coin.toObject(message.deposit, options);
                     if (message.paid_amount != null && message.hasOwnProperty("paid_amount"))
                         object.paid_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.paid_amount, options);
-                    if (message.expiry_at != null && message.hasOwnProperty("expiry_at"))
-                        object.expiry_at = $root.google.protobuf.Timestamp.toObject(message.expiry_at, options);
+                    if (message.expiry != null && message.hasOwnProperty("expiry"))
+                        object.expiry = $root.google.protobuf.Timestamp.toObject(message.expiry, options);
                     if (message.interest_rate != null && message.hasOwnProperty("interest_rate"))
                         object.interest_rate = message.interest_rate;
                     if (message.automatic_payment != null && message.hasOwnProperty("automatic_payment"))
@@ -34228,26 +34228,26 @@
                 return EventCancelBid;
             })();
     
-            nftbackedloan.EventPayFullBid = (function() {
+            nftbackedloan.EventPayRemainder = (function() {
     
                 /**
-                 * Properties of an EventPayFullBid.
+                 * Properties of an EventPayRemainder.
                  * @memberof ununifi.nftbackedloan
-                 * @interface IEventPayFullBid
-                 * @property {string|null} [bidder] EventPayFullBid bidder
-                 * @property {string|null} [class_id] EventPayFullBid class_id
-                 * @property {string|null} [nft_id] EventPayFullBid nft_id
+                 * @interface IEventPayRemainder
+                 * @property {string|null} [bidder] EventPayRemainder bidder
+                 * @property {string|null} [class_id] EventPayRemainder class_id
+                 * @property {string|null} [nft_id] EventPayRemainder nft_id
                  */
     
                 /**
-                 * Constructs a new EventPayFullBid.
+                 * Constructs a new EventPayRemainder.
                  * @memberof ununifi.nftbackedloan
-                 * @classdesc Represents an EventPayFullBid.
-                 * @implements IEventPayFullBid
+                 * @classdesc Represents an EventPayRemainder.
+                 * @implements IEventPayRemainder
                  * @constructor
-                 * @param {ununifi.nftbackedloan.IEventPayFullBid=} [properties] Properties to set
+                 * @param {ununifi.nftbackedloan.IEventPayRemainder=} [properties] Properties to set
                  */
-                function EventPayFullBid(properties) {
+                function EventPayRemainder(properties) {
                     if (properties)
                         for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -34255,39 +34255,39 @@
                 }
     
                 /**
-                 * EventPayFullBid bidder.
+                 * EventPayRemainder bidder.
                  * @member {string} bidder
-                 * @memberof ununifi.nftbackedloan.EventPayFullBid
+                 * @memberof ununifi.nftbackedloan.EventPayRemainder
                  * @instance
                  */
-                EventPayFullBid.prototype.bidder = "";
+                EventPayRemainder.prototype.bidder = "";
     
                 /**
-                 * EventPayFullBid class_id.
+                 * EventPayRemainder class_id.
                  * @member {string} class_id
-                 * @memberof ununifi.nftbackedloan.EventPayFullBid
+                 * @memberof ununifi.nftbackedloan.EventPayRemainder
                  * @instance
                  */
-                EventPayFullBid.prototype.class_id = "";
+                EventPayRemainder.prototype.class_id = "";
     
                 /**
-                 * EventPayFullBid nft_id.
+                 * EventPayRemainder nft_id.
                  * @member {string} nft_id
-                 * @memberof ununifi.nftbackedloan.EventPayFullBid
+                 * @memberof ununifi.nftbackedloan.EventPayRemainder
                  * @instance
                  */
-                EventPayFullBid.prototype.nft_id = "";
+                EventPayRemainder.prototype.nft_id = "";
     
                 /**
-                 * Encodes the specified EventPayFullBid message. Does not implicitly {@link ununifi.nftbackedloan.EventPayFullBid.verify|verify} messages.
+                 * Encodes the specified EventPayRemainder message. Does not implicitly {@link ununifi.nftbackedloan.EventPayRemainder.verify|verify} messages.
                  * @function encode
-                 * @memberof ununifi.nftbackedloan.EventPayFullBid
+                 * @memberof ununifi.nftbackedloan.EventPayRemainder
                  * @static
-                 * @param {ununifi.nftbackedloan.IEventPayFullBid} message EventPayFullBid message or plain object to encode
+                 * @param {ununifi.nftbackedloan.IEventPayRemainder} message EventPayRemainder message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                EventPayFullBid.encode = function encode(message, writer) {
+                EventPayRemainder.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
                     if (message.bidder != null && Object.hasOwnProperty.call(message, "bidder"))
@@ -34300,33 +34300,33 @@
                 };
     
                 /**
-                 * Encodes the specified EventPayFullBid message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventPayFullBid.verify|verify} messages.
+                 * Encodes the specified EventPayRemainder message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.EventPayRemainder.verify|verify} messages.
                  * @function encodeDelimited
-                 * @memberof ununifi.nftbackedloan.EventPayFullBid
+                 * @memberof ununifi.nftbackedloan.EventPayRemainder
                  * @static
-                 * @param {ununifi.nftbackedloan.IEventPayFullBid} message EventPayFullBid message or plain object to encode
+                 * @param {ununifi.nftbackedloan.IEventPayRemainder} message EventPayRemainder message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                EventPayFullBid.encodeDelimited = function encodeDelimited(message, writer) {
+                EventPayRemainder.encodeDelimited = function encodeDelimited(message, writer) {
                     return this.encode(message, writer).ldelim();
                 };
     
                 /**
-                 * Decodes an EventPayFullBid message from the specified reader or buffer.
+                 * Decodes an EventPayRemainder message from the specified reader or buffer.
                  * @function decode
-                 * @memberof ununifi.nftbackedloan.EventPayFullBid
+                 * @memberof ununifi.nftbackedloan.EventPayRemainder
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.nftbackedloan.EventPayFullBid} EventPayFullBid
+                 * @returns {ununifi.nftbackedloan.EventPayRemainder} EventPayRemainder
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                EventPayFullBid.decode = function decode(reader, length) {
+                EventPayRemainder.decode = function decode(reader, length) {
                     if (!(reader instanceof $Reader))
                         reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.EventPayFullBid();
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.EventPayRemainder();
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
@@ -34348,30 +34348,30 @@
                 };
     
                 /**
-                 * Decodes an EventPayFullBid message from the specified reader or buffer, length delimited.
+                 * Decodes an EventPayRemainder message from the specified reader or buffer, length delimited.
                  * @function decodeDelimited
-                 * @memberof ununifi.nftbackedloan.EventPayFullBid
+                 * @memberof ununifi.nftbackedloan.EventPayRemainder
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.nftbackedloan.EventPayFullBid} EventPayFullBid
+                 * @returns {ununifi.nftbackedloan.EventPayRemainder} EventPayRemainder
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                EventPayFullBid.decodeDelimited = function decodeDelimited(reader) {
+                EventPayRemainder.decodeDelimited = function decodeDelimited(reader) {
                     if (!(reader instanceof $Reader))
                         reader = new $Reader(reader);
                     return this.decode(reader, reader.uint32());
                 };
     
                 /**
-                 * Verifies an EventPayFullBid message.
+                 * Verifies an EventPayRemainder message.
                  * @function verify
-                 * @memberof ununifi.nftbackedloan.EventPayFullBid
+                 * @memberof ununifi.nftbackedloan.EventPayRemainder
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
                  */
-                EventPayFullBid.verify = function verify(message) {
+                EventPayRemainder.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
                     if (message.bidder != null && message.hasOwnProperty("bidder"))
@@ -34387,17 +34387,17 @@
                 };
     
                 /**
-                 * Creates an EventPayFullBid message from a plain object. Also converts values to their respective internal types.
+                 * Creates an EventPayRemainder message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof ununifi.nftbackedloan.EventPayFullBid
+                 * @memberof ununifi.nftbackedloan.EventPayRemainder
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.nftbackedloan.EventPayFullBid} EventPayFullBid
+                 * @returns {ununifi.nftbackedloan.EventPayRemainder} EventPayRemainder
                  */
-                EventPayFullBid.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.nftbackedloan.EventPayFullBid)
+                EventPayRemainder.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.nftbackedloan.EventPayRemainder)
                         return object;
-                    var message = new $root.ununifi.nftbackedloan.EventPayFullBid();
+                    var message = new $root.ununifi.nftbackedloan.EventPayRemainder();
                     if (object.bidder != null)
                         message.bidder = String(object.bidder);
                     if (object.class_id != null)
@@ -34408,15 +34408,15 @@
                 };
     
                 /**
-                 * Creates a plain object from an EventPayFullBid message. Also converts values to other types if specified.
+                 * Creates a plain object from an EventPayRemainder message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof ununifi.nftbackedloan.EventPayFullBid
+                 * @memberof ununifi.nftbackedloan.EventPayRemainder
                  * @static
-                 * @param {ununifi.nftbackedloan.EventPayFullBid} message EventPayFullBid
+                 * @param {ununifi.nftbackedloan.EventPayRemainder} message EventPayRemainder
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                EventPayFullBid.toObject = function toObject(message, options) {
+                EventPayRemainder.toObject = function toObject(message, options) {
                     if (!options)
                         options = {};
                     var object = {};
@@ -34435,17 +34435,17 @@
                 };
     
                 /**
-                 * Converts this EventPayFullBid to JSON.
+                 * Converts this EventPayRemainder to JSON.
                  * @function toJSON
-                 * @memberof ununifi.nftbackedloan.EventPayFullBid
+                 * @memberof ununifi.nftbackedloan.EventPayRemainder
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
-                EventPayFullBid.prototype.toJSON = function toJSON() {
+                EventPayRemainder.prototype.toJSON = function toJSON() {
                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                 };
     
-                return EventPayFullBid;
+                return EventPayRemainder;
             })();
     
             nftbackedloan.EventBorrow = (function() {
@@ -34696,7 +34696,7 @@
                  * Properties of an EventRepay.
                  * @memberof ununifi.nftbackedloan
                  * @interface IEventRepay
-                 * @property {string|null} [repayer] EventRepay repayer
+                 * @property {string|null} [borrower] EventRepay borrower
                  * @property {string|null} [class_id] EventRepay class_id
                  * @property {string|null} [nft_id] EventRepay nft_id
                  * @property {string|null} [amount] EventRepay amount
@@ -34718,12 +34718,12 @@
                 }
     
                 /**
-                 * EventRepay repayer.
-                 * @member {string} repayer
+                 * EventRepay borrower.
+                 * @member {string} borrower
                  * @memberof ununifi.nftbackedloan.EventRepay
                  * @instance
                  */
-                EventRepay.prototype.repayer = "";
+                EventRepay.prototype.borrower = "";
     
                 /**
                  * EventRepay class_id.
@@ -34761,8 +34761,8 @@
                 EventRepay.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.repayer != null && Object.hasOwnProperty.call(message, "repayer"))
-                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.repayer);
+                    if (message.borrower != null && Object.hasOwnProperty.call(message, "borrower"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.borrower);
                     if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message.class_id);
                     if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
@@ -34804,7 +34804,7 @@
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
                         case 1:
-                            message.repayer = reader.string();
+                            message.borrower = reader.string();
                             break;
                         case 2:
                             message.class_id = reader.string();
@@ -34850,9 +34850,9 @@
                 EventRepay.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.repayer != null && message.hasOwnProperty("repayer"))
-                        if (!$util.isString(message.repayer))
-                            return "repayer: string expected";
+                    if (message.borrower != null && message.hasOwnProperty("borrower"))
+                        if (!$util.isString(message.borrower))
+                            return "borrower: string expected";
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         if (!$util.isString(message.class_id))
                             return "class_id: string expected";
@@ -34877,8 +34877,8 @@
                     if (object instanceof $root.ununifi.nftbackedloan.EventRepay)
                         return object;
                     var message = new $root.ununifi.nftbackedloan.EventRepay();
-                    if (object.repayer != null)
-                        message.repayer = String(object.repayer);
+                    if (object.borrower != null)
+                        message.borrower = String(object.borrower);
                     if (object.class_id != null)
                         message.class_id = String(object.class_id);
                     if (object.nft_id != null)
@@ -34902,13 +34902,13 @@
                         options = {};
                     var object = {};
                     if (options.defaults) {
-                        object.repayer = "";
+                        object.borrower = "";
                         object.class_id = "";
                         object.nft_id = "";
                         object.amount = "";
                     }
-                    if (message.repayer != null && message.hasOwnProperty("repayer"))
-                        object.repayer = message.repayer;
+                    if (message.borrower != null && message.hasOwnProperty("borrower"))
+                        object.borrower = message.borrower;
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         object.class_id = message.class_id;
                     if (message.nft_id != null && message.hasOwnProperty("nft_id"))
@@ -35427,23 +35427,12 @@
                  * @memberof ununifi.nftbackedloan
                  * @interface IParams
                  * @property {string|null} [min_staking_for_listing] Params min_staking_for_listing
-                 * @property {Long|null} [default_bid_active_rank] Params default_bid_active_rank
                  * @property {Array.<string>|null} [bid_tokens] Params bid_tokens
-                 * @property {Long|null} [auto_relisting_count_if_no_bid] Params auto_relisting_count_if_no_bid
-                 * @property {Long|null} [nft_listing_delay_seconds] Params nft_listing_delay_seconds
-                 * @property {Long|null} [nft_listing_period_initial] Params nft_listing_period_initial
                  * @property {Long|null} [nft_listing_cancel_required_seconds] Params nft_listing_cancel_required_seconds
-                 * @property {Long|null} [nft_listing_cancel_fee_percentage] Params nft_listing_cancel_fee_percentage
-                 * @property {Long|null} [nft_listing_gap_time] Params nft_listing_gap_time
                  * @property {Long|null} [bid_cancel_required_seconds] Params bid_cancel_required_seconds
-                 * @property {Long|null} [bid_token_disburse_seconds_after_cancel] Params bid_token_disburse_seconds_after_cancel
                  * @property {Long|null} [nft_listing_full_payment_period] Params nft_listing_full_payment_period
                  * @property {Long|null} [nft_listing_nft_delivery_period] Params nft_listing_nft_delivery_period
-                 * @property {Long|null} [nft_creator_share_percentage] Params nft_creator_share_percentage
-                 * @property {string|null} [market_administrator] Params market_administrator
                  * @property {Long|null} [nft_listing_commission_fee] Params nft_listing_commission_fee
-                 * @property {Long|null} [nft_listing_extend_seconds] Params nft_listing_extend_seconds
-                 * @property {cosmos.base.v1beta1.ICoin|null} [nft_listing_period_extend_fee_per_hour] Params nft_listing_period_extend_fee_per_hour
                  */
     
                 /**
@@ -35471,44 +35460,12 @@
                 Params.prototype.min_staking_for_listing = "";
     
                 /**
-                 * Params default_bid_active_rank.
-                 * @member {Long} default_bid_active_rank
-                 * @memberof ununifi.nftbackedloan.Params
-                 * @instance
-                 */
-                Params.prototype.default_bid_active_rank = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                /**
                  * Params bid_tokens.
                  * @member {Array.<string>} bid_tokens
                  * @memberof ununifi.nftbackedloan.Params
                  * @instance
                  */
                 Params.prototype.bid_tokens = $util.emptyArray;
-    
-                /**
-                 * Params auto_relisting_count_if_no_bid.
-                 * @member {Long} auto_relisting_count_if_no_bid
-                 * @memberof ununifi.nftbackedloan.Params
-                 * @instance
-                 */
-                Params.prototype.auto_relisting_count_if_no_bid = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                /**
-                 * Params nft_listing_delay_seconds.
-                 * @member {Long} nft_listing_delay_seconds
-                 * @memberof ununifi.nftbackedloan.Params
-                 * @instance
-                 */
-                Params.prototype.nft_listing_delay_seconds = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                /**
-                 * Params nft_listing_period_initial.
-                 * @member {Long} nft_listing_period_initial
-                 * @memberof ununifi.nftbackedloan.Params
-                 * @instance
-                 */
-                Params.prototype.nft_listing_period_initial = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
     
                 /**
                  * Params nft_listing_cancel_required_seconds.
@@ -35519,36 +35476,12 @@
                 Params.prototype.nft_listing_cancel_required_seconds = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
     
                 /**
-                 * Params nft_listing_cancel_fee_percentage.
-                 * @member {Long} nft_listing_cancel_fee_percentage
-                 * @memberof ununifi.nftbackedloan.Params
-                 * @instance
-                 */
-                Params.prototype.nft_listing_cancel_fee_percentage = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                /**
-                 * Params nft_listing_gap_time.
-                 * @member {Long} nft_listing_gap_time
-                 * @memberof ununifi.nftbackedloan.Params
-                 * @instance
-                 */
-                Params.prototype.nft_listing_gap_time = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                /**
                  * Params bid_cancel_required_seconds.
                  * @member {Long} bid_cancel_required_seconds
                  * @memberof ununifi.nftbackedloan.Params
                  * @instance
                  */
                 Params.prototype.bid_cancel_required_seconds = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                /**
-                 * Params bid_token_disburse_seconds_after_cancel.
-                 * @member {Long} bid_token_disburse_seconds_after_cancel
-                 * @memberof ununifi.nftbackedloan.Params
-                 * @instance
-                 */
-                Params.prototype.bid_token_disburse_seconds_after_cancel = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
     
                 /**
                  * Params nft_listing_full_payment_period.
@@ -35567,44 +35500,12 @@
                 Params.prototype.nft_listing_nft_delivery_period = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
     
                 /**
-                 * Params nft_creator_share_percentage.
-                 * @member {Long} nft_creator_share_percentage
-                 * @memberof ununifi.nftbackedloan.Params
-                 * @instance
-                 */
-                Params.prototype.nft_creator_share_percentage = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                /**
-                 * Params market_administrator.
-                 * @member {string} market_administrator
-                 * @memberof ununifi.nftbackedloan.Params
-                 * @instance
-                 */
-                Params.prototype.market_administrator = "";
-    
-                /**
                  * Params nft_listing_commission_fee.
                  * @member {Long} nft_listing_commission_fee
                  * @memberof ununifi.nftbackedloan.Params
                  * @instance
                  */
                 Params.prototype.nft_listing_commission_fee = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                /**
-                 * Params nft_listing_extend_seconds.
-                 * @member {Long} nft_listing_extend_seconds
-                 * @memberof ununifi.nftbackedloan.Params
-                 * @instance
-                 */
-                Params.prototype.nft_listing_extend_seconds = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                /**
-                 * Params nft_listing_period_extend_fee_per_hour.
-                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} nft_listing_period_extend_fee_per_hour
-                 * @memberof ununifi.nftbackedloan.Params
-                 * @instance
-                 */
-                Params.prototype.nft_listing_period_extend_fee_per_hour = null;
     
                 /**
                  * Encodes the specified Params message. Does not implicitly {@link ununifi.nftbackedloan.Params.verify|verify} messages.
@@ -35620,41 +35521,19 @@
                         writer = $Writer.create();
                     if (message.min_staking_for_listing != null && Object.hasOwnProperty.call(message, "min_staking_for_listing"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.min_staking_for_listing);
-                    if (message.default_bid_active_rank != null && Object.hasOwnProperty.call(message, "default_bid_active_rank"))
-                        writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.default_bid_active_rank);
                     if (message.bid_tokens != null && message.bid_tokens.length)
                         for (var i = 0; i < message.bid_tokens.length; ++i)
-                            writer.uint32(/* id 3, wireType 2 =*/26).string(message.bid_tokens[i]);
-                    if (message.auto_relisting_count_if_no_bid != null && Object.hasOwnProperty.call(message, "auto_relisting_count_if_no_bid"))
-                        writer.uint32(/* id 4, wireType 0 =*/32).uint64(message.auto_relisting_count_if_no_bid);
-                    if (message.nft_listing_delay_seconds != null && Object.hasOwnProperty.call(message, "nft_listing_delay_seconds"))
-                        writer.uint32(/* id 5, wireType 0 =*/40).uint64(message.nft_listing_delay_seconds);
-                    if (message.nft_listing_period_initial != null && Object.hasOwnProperty.call(message, "nft_listing_period_initial"))
-                        writer.uint32(/* id 6, wireType 0 =*/48).uint64(message.nft_listing_period_initial);
+                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.bid_tokens[i]);
                     if (message.nft_listing_cancel_required_seconds != null && Object.hasOwnProperty.call(message, "nft_listing_cancel_required_seconds"))
-                        writer.uint32(/* id 7, wireType 0 =*/56).uint64(message.nft_listing_cancel_required_seconds);
-                    if (message.nft_listing_cancel_fee_percentage != null && Object.hasOwnProperty.call(message, "nft_listing_cancel_fee_percentage"))
-                        writer.uint32(/* id 8, wireType 0 =*/64).uint64(message.nft_listing_cancel_fee_percentage);
-                    if (message.nft_listing_gap_time != null && Object.hasOwnProperty.call(message, "nft_listing_gap_time"))
-                        writer.uint32(/* id 9, wireType 0 =*/72).uint64(message.nft_listing_gap_time);
+                        writer.uint32(/* id 3, wireType 0 =*/24).uint64(message.nft_listing_cancel_required_seconds);
                     if (message.bid_cancel_required_seconds != null && Object.hasOwnProperty.call(message, "bid_cancel_required_seconds"))
-                        writer.uint32(/* id 10, wireType 0 =*/80).uint64(message.bid_cancel_required_seconds);
-                    if (message.bid_token_disburse_seconds_after_cancel != null && Object.hasOwnProperty.call(message, "bid_token_disburse_seconds_after_cancel"))
-                        writer.uint32(/* id 11, wireType 0 =*/88).uint64(message.bid_token_disburse_seconds_after_cancel);
+                        writer.uint32(/* id 4, wireType 0 =*/32).uint64(message.bid_cancel_required_seconds);
                     if (message.nft_listing_full_payment_period != null && Object.hasOwnProperty.call(message, "nft_listing_full_payment_period"))
-                        writer.uint32(/* id 12, wireType 0 =*/96).uint64(message.nft_listing_full_payment_period);
+                        writer.uint32(/* id 5, wireType 0 =*/40).uint64(message.nft_listing_full_payment_period);
                     if (message.nft_listing_nft_delivery_period != null && Object.hasOwnProperty.call(message, "nft_listing_nft_delivery_period"))
-                        writer.uint32(/* id 13, wireType 0 =*/104).uint64(message.nft_listing_nft_delivery_period);
-                    if (message.nft_creator_share_percentage != null && Object.hasOwnProperty.call(message, "nft_creator_share_percentage"))
-                        writer.uint32(/* id 14, wireType 0 =*/112).uint64(message.nft_creator_share_percentage);
-                    if (message.market_administrator != null && Object.hasOwnProperty.call(message, "market_administrator"))
-                        writer.uint32(/* id 15, wireType 2 =*/122).string(message.market_administrator);
+                        writer.uint32(/* id 6, wireType 0 =*/48).uint64(message.nft_listing_nft_delivery_period);
                     if (message.nft_listing_commission_fee != null && Object.hasOwnProperty.call(message, "nft_listing_commission_fee"))
-                        writer.uint32(/* id 16, wireType 0 =*/128).uint64(message.nft_listing_commission_fee);
-                    if (message.nft_listing_extend_seconds != null && Object.hasOwnProperty.call(message, "nft_listing_extend_seconds"))
-                        writer.uint32(/* id 17, wireType 0 =*/136).uint64(message.nft_listing_extend_seconds);
-                    if (message.nft_listing_period_extend_fee_per_hour != null && Object.hasOwnProperty.call(message, "nft_listing_period_extend_fee_per_hour"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.nft_listing_period_extend_fee_per_hour, writer.uint32(/* id 18, wireType 2 =*/146).fork()).ldelim();
+                        writer.uint32(/* id 7, wireType 0 =*/56).uint64(message.nft_listing_commission_fee);
                     return writer;
                 };
     
@@ -35693,57 +35572,24 @@
                             message.min_staking_for_listing = reader.string();
                             break;
                         case 2:
-                            message.default_bid_active_rank = reader.uint64();
-                            break;
-                        case 3:
                             if (!(message.bid_tokens && message.bid_tokens.length))
                                 message.bid_tokens = [];
                             message.bid_tokens.push(reader.string());
                             break;
-                        case 4:
-                            message.auto_relisting_count_if_no_bid = reader.uint64();
-                            break;
-                        case 5:
-                            message.nft_listing_delay_seconds = reader.uint64();
-                            break;
-                        case 6:
-                            message.nft_listing_period_initial = reader.uint64();
-                            break;
-                        case 7:
+                        case 3:
                             message.nft_listing_cancel_required_seconds = reader.uint64();
                             break;
-                        case 8:
-                            message.nft_listing_cancel_fee_percentage = reader.uint64();
-                            break;
-                        case 9:
-                            message.nft_listing_gap_time = reader.uint64();
-                            break;
-                        case 10:
+                        case 4:
                             message.bid_cancel_required_seconds = reader.uint64();
                             break;
-                        case 11:
-                            message.bid_token_disburse_seconds_after_cancel = reader.uint64();
-                            break;
-                        case 12:
+                        case 5:
                             message.nft_listing_full_payment_period = reader.uint64();
                             break;
-                        case 13:
+                        case 6:
                             message.nft_listing_nft_delivery_period = reader.uint64();
                             break;
-                        case 14:
-                            message.nft_creator_share_percentage = reader.uint64();
-                            break;
-                        case 15:
-                            message.market_administrator = reader.string();
-                            break;
-                        case 16:
+                        case 7:
                             message.nft_listing_commission_fee = reader.uint64();
-                            break;
-                        case 17:
-                            message.nft_listing_extend_seconds = reader.uint64();
-                            break;
-                        case 18:
-                            message.nft_listing_period_extend_fee_per_hour = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -35783,9 +35629,6 @@
                     if (message.min_staking_for_listing != null && message.hasOwnProperty("min_staking_for_listing"))
                         if (!$util.isString(message.min_staking_for_listing))
                             return "min_staking_for_listing: string expected";
-                    if (message.default_bid_active_rank != null && message.hasOwnProperty("default_bid_active_rank"))
-                        if (!$util.isInteger(message.default_bid_active_rank) && !(message.default_bid_active_rank && $util.isInteger(message.default_bid_active_rank.low) && $util.isInteger(message.default_bid_active_rank.high)))
-                            return "default_bid_active_rank: integer|Long expected";
                     if (message.bid_tokens != null && message.hasOwnProperty("bid_tokens")) {
                         if (!Array.isArray(message.bid_tokens))
                             return "bid_tokens: array expected";
@@ -35793,53 +35636,21 @@
                             if (!$util.isString(message.bid_tokens[i]))
                                 return "bid_tokens: string[] expected";
                     }
-                    if (message.auto_relisting_count_if_no_bid != null && message.hasOwnProperty("auto_relisting_count_if_no_bid"))
-                        if (!$util.isInteger(message.auto_relisting_count_if_no_bid) && !(message.auto_relisting_count_if_no_bid && $util.isInteger(message.auto_relisting_count_if_no_bid.low) && $util.isInteger(message.auto_relisting_count_if_no_bid.high)))
-                            return "auto_relisting_count_if_no_bid: integer|Long expected";
-                    if (message.nft_listing_delay_seconds != null && message.hasOwnProperty("nft_listing_delay_seconds"))
-                        if (!$util.isInteger(message.nft_listing_delay_seconds) && !(message.nft_listing_delay_seconds && $util.isInteger(message.nft_listing_delay_seconds.low) && $util.isInteger(message.nft_listing_delay_seconds.high)))
-                            return "nft_listing_delay_seconds: integer|Long expected";
-                    if (message.nft_listing_period_initial != null && message.hasOwnProperty("nft_listing_period_initial"))
-                        if (!$util.isInteger(message.nft_listing_period_initial) && !(message.nft_listing_period_initial && $util.isInteger(message.nft_listing_period_initial.low) && $util.isInteger(message.nft_listing_period_initial.high)))
-                            return "nft_listing_period_initial: integer|Long expected";
                     if (message.nft_listing_cancel_required_seconds != null && message.hasOwnProperty("nft_listing_cancel_required_seconds"))
                         if (!$util.isInteger(message.nft_listing_cancel_required_seconds) && !(message.nft_listing_cancel_required_seconds && $util.isInteger(message.nft_listing_cancel_required_seconds.low) && $util.isInteger(message.nft_listing_cancel_required_seconds.high)))
                             return "nft_listing_cancel_required_seconds: integer|Long expected";
-                    if (message.nft_listing_cancel_fee_percentage != null && message.hasOwnProperty("nft_listing_cancel_fee_percentage"))
-                        if (!$util.isInteger(message.nft_listing_cancel_fee_percentage) && !(message.nft_listing_cancel_fee_percentage && $util.isInteger(message.nft_listing_cancel_fee_percentage.low) && $util.isInteger(message.nft_listing_cancel_fee_percentage.high)))
-                            return "nft_listing_cancel_fee_percentage: integer|Long expected";
-                    if (message.nft_listing_gap_time != null && message.hasOwnProperty("nft_listing_gap_time"))
-                        if (!$util.isInteger(message.nft_listing_gap_time) && !(message.nft_listing_gap_time && $util.isInteger(message.nft_listing_gap_time.low) && $util.isInteger(message.nft_listing_gap_time.high)))
-                            return "nft_listing_gap_time: integer|Long expected";
                     if (message.bid_cancel_required_seconds != null && message.hasOwnProperty("bid_cancel_required_seconds"))
                         if (!$util.isInteger(message.bid_cancel_required_seconds) && !(message.bid_cancel_required_seconds && $util.isInteger(message.bid_cancel_required_seconds.low) && $util.isInteger(message.bid_cancel_required_seconds.high)))
                             return "bid_cancel_required_seconds: integer|Long expected";
-                    if (message.bid_token_disburse_seconds_after_cancel != null && message.hasOwnProperty("bid_token_disburse_seconds_after_cancel"))
-                        if (!$util.isInteger(message.bid_token_disburse_seconds_after_cancel) && !(message.bid_token_disburse_seconds_after_cancel && $util.isInteger(message.bid_token_disburse_seconds_after_cancel.low) && $util.isInteger(message.bid_token_disburse_seconds_after_cancel.high)))
-                            return "bid_token_disburse_seconds_after_cancel: integer|Long expected";
                     if (message.nft_listing_full_payment_period != null && message.hasOwnProperty("nft_listing_full_payment_period"))
                         if (!$util.isInteger(message.nft_listing_full_payment_period) && !(message.nft_listing_full_payment_period && $util.isInteger(message.nft_listing_full_payment_period.low) && $util.isInteger(message.nft_listing_full_payment_period.high)))
                             return "nft_listing_full_payment_period: integer|Long expected";
                     if (message.nft_listing_nft_delivery_period != null && message.hasOwnProperty("nft_listing_nft_delivery_period"))
                         if (!$util.isInteger(message.nft_listing_nft_delivery_period) && !(message.nft_listing_nft_delivery_period && $util.isInteger(message.nft_listing_nft_delivery_period.low) && $util.isInteger(message.nft_listing_nft_delivery_period.high)))
                             return "nft_listing_nft_delivery_period: integer|Long expected";
-                    if (message.nft_creator_share_percentage != null && message.hasOwnProperty("nft_creator_share_percentage"))
-                        if (!$util.isInteger(message.nft_creator_share_percentage) && !(message.nft_creator_share_percentage && $util.isInteger(message.nft_creator_share_percentage.low) && $util.isInteger(message.nft_creator_share_percentage.high)))
-                            return "nft_creator_share_percentage: integer|Long expected";
-                    if (message.market_administrator != null && message.hasOwnProperty("market_administrator"))
-                        if (!$util.isString(message.market_administrator))
-                            return "market_administrator: string expected";
                     if (message.nft_listing_commission_fee != null && message.hasOwnProperty("nft_listing_commission_fee"))
                         if (!$util.isInteger(message.nft_listing_commission_fee) && !(message.nft_listing_commission_fee && $util.isInteger(message.nft_listing_commission_fee.low) && $util.isInteger(message.nft_listing_commission_fee.high)))
                             return "nft_listing_commission_fee: integer|Long expected";
-                    if (message.nft_listing_extend_seconds != null && message.hasOwnProperty("nft_listing_extend_seconds"))
-                        if (!$util.isInteger(message.nft_listing_extend_seconds) && !(message.nft_listing_extend_seconds && $util.isInteger(message.nft_listing_extend_seconds.low) && $util.isInteger(message.nft_listing_extend_seconds.high)))
-                            return "nft_listing_extend_seconds: integer|Long expected";
-                    if (message.nft_listing_period_extend_fee_per_hour != null && message.hasOwnProperty("nft_listing_period_extend_fee_per_hour")) {
-                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.nft_listing_period_extend_fee_per_hour);
-                        if (error)
-                            return "nft_listing_period_extend_fee_per_hour." + error;
-                    }
                     return null;
                 };
     
@@ -35857,15 +35668,6 @@
                     var message = new $root.ununifi.nftbackedloan.Params();
                     if (object.min_staking_for_listing != null)
                         message.min_staking_for_listing = String(object.min_staking_for_listing);
-                    if (object.default_bid_active_rank != null)
-                        if ($util.Long)
-                            (message.default_bid_active_rank = $util.Long.fromValue(object.default_bid_active_rank)).unsigned = true;
-                        else if (typeof object.default_bid_active_rank === "string")
-                            message.default_bid_active_rank = parseInt(object.default_bid_active_rank, 10);
-                        else if (typeof object.default_bid_active_rank === "number")
-                            message.default_bid_active_rank = object.default_bid_active_rank;
-                        else if (typeof object.default_bid_active_rank === "object")
-                            message.default_bid_active_rank = new $util.LongBits(object.default_bid_active_rank.low >>> 0, object.default_bid_active_rank.high >>> 0).toNumber(true);
                     if (object.bid_tokens) {
                         if (!Array.isArray(object.bid_tokens))
                             throw TypeError(".ununifi.nftbackedloan.Params.bid_tokens: array expected");
@@ -35873,33 +35675,6 @@
                         for (var i = 0; i < object.bid_tokens.length; ++i)
                             message.bid_tokens[i] = String(object.bid_tokens[i]);
                     }
-                    if (object.auto_relisting_count_if_no_bid != null)
-                        if ($util.Long)
-                            (message.auto_relisting_count_if_no_bid = $util.Long.fromValue(object.auto_relisting_count_if_no_bid)).unsigned = true;
-                        else if (typeof object.auto_relisting_count_if_no_bid === "string")
-                            message.auto_relisting_count_if_no_bid = parseInt(object.auto_relisting_count_if_no_bid, 10);
-                        else if (typeof object.auto_relisting_count_if_no_bid === "number")
-                            message.auto_relisting_count_if_no_bid = object.auto_relisting_count_if_no_bid;
-                        else if (typeof object.auto_relisting_count_if_no_bid === "object")
-                            message.auto_relisting_count_if_no_bid = new $util.LongBits(object.auto_relisting_count_if_no_bid.low >>> 0, object.auto_relisting_count_if_no_bid.high >>> 0).toNumber(true);
-                    if (object.nft_listing_delay_seconds != null)
-                        if ($util.Long)
-                            (message.nft_listing_delay_seconds = $util.Long.fromValue(object.nft_listing_delay_seconds)).unsigned = true;
-                        else if (typeof object.nft_listing_delay_seconds === "string")
-                            message.nft_listing_delay_seconds = parseInt(object.nft_listing_delay_seconds, 10);
-                        else if (typeof object.nft_listing_delay_seconds === "number")
-                            message.nft_listing_delay_seconds = object.nft_listing_delay_seconds;
-                        else if (typeof object.nft_listing_delay_seconds === "object")
-                            message.nft_listing_delay_seconds = new $util.LongBits(object.nft_listing_delay_seconds.low >>> 0, object.nft_listing_delay_seconds.high >>> 0).toNumber(true);
-                    if (object.nft_listing_period_initial != null)
-                        if ($util.Long)
-                            (message.nft_listing_period_initial = $util.Long.fromValue(object.nft_listing_period_initial)).unsigned = true;
-                        else if (typeof object.nft_listing_period_initial === "string")
-                            message.nft_listing_period_initial = parseInt(object.nft_listing_period_initial, 10);
-                        else if (typeof object.nft_listing_period_initial === "number")
-                            message.nft_listing_period_initial = object.nft_listing_period_initial;
-                        else if (typeof object.nft_listing_period_initial === "object")
-                            message.nft_listing_period_initial = new $util.LongBits(object.nft_listing_period_initial.low >>> 0, object.nft_listing_period_initial.high >>> 0).toNumber(true);
                     if (object.nft_listing_cancel_required_seconds != null)
                         if ($util.Long)
                             (message.nft_listing_cancel_required_seconds = $util.Long.fromValue(object.nft_listing_cancel_required_seconds)).unsigned = true;
@@ -35909,24 +35684,6 @@
                             message.nft_listing_cancel_required_seconds = object.nft_listing_cancel_required_seconds;
                         else if (typeof object.nft_listing_cancel_required_seconds === "object")
                             message.nft_listing_cancel_required_seconds = new $util.LongBits(object.nft_listing_cancel_required_seconds.low >>> 0, object.nft_listing_cancel_required_seconds.high >>> 0).toNumber(true);
-                    if (object.nft_listing_cancel_fee_percentage != null)
-                        if ($util.Long)
-                            (message.nft_listing_cancel_fee_percentage = $util.Long.fromValue(object.nft_listing_cancel_fee_percentage)).unsigned = true;
-                        else if (typeof object.nft_listing_cancel_fee_percentage === "string")
-                            message.nft_listing_cancel_fee_percentage = parseInt(object.nft_listing_cancel_fee_percentage, 10);
-                        else if (typeof object.nft_listing_cancel_fee_percentage === "number")
-                            message.nft_listing_cancel_fee_percentage = object.nft_listing_cancel_fee_percentage;
-                        else if (typeof object.nft_listing_cancel_fee_percentage === "object")
-                            message.nft_listing_cancel_fee_percentage = new $util.LongBits(object.nft_listing_cancel_fee_percentage.low >>> 0, object.nft_listing_cancel_fee_percentage.high >>> 0).toNumber(true);
-                    if (object.nft_listing_gap_time != null)
-                        if ($util.Long)
-                            (message.nft_listing_gap_time = $util.Long.fromValue(object.nft_listing_gap_time)).unsigned = true;
-                        else if (typeof object.nft_listing_gap_time === "string")
-                            message.nft_listing_gap_time = parseInt(object.nft_listing_gap_time, 10);
-                        else if (typeof object.nft_listing_gap_time === "number")
-                            message.nft_listing_gap_time = object.nft_listing_gap_time;
-                        else if (typeof object.nft_listing_gap_time === "object")
-                            message.nft_listing_gap_time = new $util.LongBits(object.nft_listing_gap_time.low >>> 0, object.nft_listing_gap_time.high >>> 0).toNumber(true);
                     if (object.bid_cancel_required_seconds != null)
                         if ($util.Long)
                             (message.bid_cancel_required_seconds = $util.Long.fromValue(object.bid_cancel_required_seconds)).unsigned = true;
@@ -35936,15 +35693,6 @@
                             message.bid_cancel_required_seconds = object.bid_cancel_required_seconds;
                         else if (typeof object.bid_cancel_required_seconds === "object")
                             message.bid_cancel_required_seconds = new $util.LongBits(object.bid_cancel_required_seconds.low >>> 0, object.bid_cancel_required_seconds.high >>> 0).toNumber(true);
-                    if (object.bid_token_disburse_seconds_after_cancel != null)
-                        if ($util.Long)
-                            (message.bid_token_disburse_seconds_after_cancel = $util.Long.fromValue(object.bid_token_disburse_seconds_after_cancel)).unsigned = true;
-                        else if (typeof object.bid_token_disburse_seconds_after_cancel === "string")
-                            message.bid_token_disburse_seconds_after_cancel = parseInt(object.bid_token_disburse_seconds_after_cancel, 10);
-                        else if (typeof object.bid_token_disburse_seconds_after_cancel === "number")
-                            message.bid_token_disburse_seconds_after_cancel = object.bid_token_disburse_seconds_after_cancel;
-                        else if (typeof object.bid_token_disburse_seconds_after_cancel === "object")
-                            message.bid_token_disburse_seconds_after_cancel = new $util.LongBits(object.bid_token_disburse_seconds_after_cancel.low >>> 0, object.bid_token_disburse_seconds_after_cancel.high >>> 0).toNumber(true);
                     if (object.nft_listing_full_payment_period != null)
                         if ($util.Long)
                             (message.nft_listing_full_payment_period = $util.Long.fromValue(object.nft_listing_full_payment_period)).unsigned = true;
@@ -35963,17 +35711,6 @@
                             message.nft_listing_nft_delivery_period = object.nft_listing_nft_delivery_period;
                         else if (typeof object.nft_listing_nft_delivery_period === "object")
                             message.nft_listing_nft_delivery_period = new $util.LongBits(object.nft_listing_nft_delivery_period.low >>> 0, object.nft_listing_nft_delivery_period.high >>> 0).toNumber(true);
-                    if (object.nft_creator_share_percentage != null)
-                        if ($util.Long)
-                            (message.nft_creator_share_percentage = $util.Long.fromValue(object.nft_creator_share_percentage)).unsigned = true;
-                        else if (typeof object.nft_creator_share_percentage === "string")
-                            message.nft_creator_share_percentage = parseInt(object.nft_creator_share_percentage, 10);
-                        else if (typeof object.nft_creator_share_percentage === "number")
-                            message.nft_creator_share_percentage = object.nft_creator_share_percentage;
-                        else if (typeof object.nft_creator_share_percentage === "object")
-                            message.nft_creator_share_percentage = new $util.LongBits(object.nft_creator_share_percentage.low >>> 0, object.nft_creator_share_percentage.high >>> 0).toNumber(true);
-                    if (object.market_administrator != null)
-                        message.market_administrator = String(object.market_administrator);
                     if (object.nft_listing_commission_fee != null)
                         if ($util.Long)
                             (message.nft_listing_commission_fee = $util.Long.fromValue(object.nft_listing_commission_fee)).unsigned = true;
@@ -35983,20 +35720,6 @@
                             message.nft_listing_commission_fee = object.nft_listing_commission_fee;
                         else if (typeof object.nft_listing_commission_fee === "object")
                             message.nft_listing_commission_fee = new $util.LongBits(object.nft_listing_commission_fee.low >>> 0, object.nft_listing_commission_fee.high >>> 0).toNumber(true);
-                    if (object.nft_listing_extend_seconds != null)
-                        if ($util.Long)
-                            (message.nft_listing_extend_seconds = $util.Long.fromValue(object.nft_listing_extend_seconds)).unsigned = true;
-                        else if (typeof object.nft_listing_extend_seconds === "string")
-                            message.nft_listing_extend_seconds = parseInt(object.nft_listing_extend_seconds, 10);
-                        else if (typeof object.nft_listing_extend_seconds === "number")
-                            message.nft_listing_extend_seconds = object.nft_listing_extend_seconds;
-                        else if (typeof object.nft_listing_extend_seconds === "object")
-                            message.nft_listing_extend_seconds = new $util.LongBits(object.nft_listing_extend_seconds.low >>> 0, object.nft_listing_extend_seconds.high >>> 0).toNumber(true);
-                    if (object.nft_listing_period_extend_fee_per_hour != null) {
-                        if (typeof object.nft_listing_period_extend_fee_per_hour !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.Params.nft_listing_period_extend_fee_per_hour: object expected");
-                        message.nft_listing_period_extend_fee_per_hour = $root.cosmos.base.v1beta1.Coin.fromObject(object.nft_listing_period_extend_fee_per_hour);
-                    }
                     return message;
                 };
     
@@ -36019,49 +35742,14 @@
                         object.min_staking_for_listing = "";
                         if ($util.Long) {
                             var long = new $util.Long(0, 0, true);
-                            object.default_bid_active_rank = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                        } else
-                            object.default_bid_active_rank = options.longs === String ? "0" : 0;
-                        if ($util.Long) {
-                            var long = new $util.Long(0, 0, true);
-                            object.auto_relisting_count_if_no_bid = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                        } else
-                            object.auto_relisting_count_if_no_bid = options.longs === String ? "0" : 0;
-                        if ($util.Long) {
-                            var long = new $util.Long(0, 0, true);
-                            object.nft_listing_delay_seconds = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                        } else
-                            object.nft_listing_delay_seconds = options.longs === String ? "0" : 0;
-                        if ($util.Long) {
-                            var long = new $util.Long(0, 0, true);
-                            object.nft_listing_period_initial = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                        } else
-                            object.nft_listing_period_initial = options.longs === String ? "0" : 0;
-                        if ($util.Long) {
-                            var long = new $util.Long(0, 0, true);
                             object.nft_listing_cancel_required_seconds = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
                         } else
                             object.nft_listing_cancel_required_seconds = options.longs === String ? "0" : 0;
                         if ($util.Long) {
                             var long = new $util.Long(0, 0, true);
-                            object.nft_listing_cancel_fee_percentage = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                        } else
-                            object.nft_listing_cancel_fee_percentage = options.longs === String ? "0" : 0;
-                        if ($util.Long) {
-                            var long = new $util.Long(0, 0, true);
-                            object.nft_listing_gap_time = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                        } else
-                            object.nft_listing_gap_time = options.longs === String ? "0" : 0;
-                        if ($util.Long) {
-                            var long = new $util.Long(0, 0, true);
                             object.bid_cancel_required_seconds = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
                         } else
                             object.bid_cancel_required_seconds = options.longs === String ? "0" : 0;
-                        if ($util.Long) {
-                            var long = new $util.Long(0, 0, true);
-                            object.bid_token_disburse_seconds_after_cancel = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                        } else
-                            object.bid_token_disburse_seconds_after_cancel = options.longs === String ? "0" : 0;
                         if ($util.Long) {
                             var long = new $util.Long(0, 0, true);
                             object.nft_listing_full_payment_period = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
@@ -36074,74 +35762,27 @@
                             object.nft_listing_nft_delivery_period = options.longs === String ? "0" : 0;
                         if ($util.Long) {
                             var long = new $util.Long(0, 0, true);
-                            object.nft_creator_share_percentage = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                        } else
-                            object.nft_creator_share_percentage = options.longs === String ? "0" : 0;
-                        object.market_administrator = "";
-                        if ($util.Long) {
-                            var long = new $util.Long(0, 0, true);
                             object.nft_listing_commission_fee = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
                         } else
                             object.nft_listing_commission_fee = options.longs === String ? "0" : 0;
-                        if ($util.Long) {
-                            var long = new $util.Long(0, 0, true);
-                            object.nft_listing_extend_seconds = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                        } else
-                            object.nft_listing_extend_seconds = options.longs === String ? "0" : 0;
-                        object.nft_listing_period_extend_fee_per_hour = null;
                     }
                     if (message.min_staking_for_listing != null && message.hasOwnProperty("min_staking_for_listing"))
                         object.min_staking_for_listing = message.min_staking_for_listing;
-                    if (message.default_bid_active_rank != null && message.hasOwnProperty("default_bid_active_rank"))
-                        if (typeof message.default_bid_active_rank === "number")
-                            object.default_bid_active_rank = options.longs === String ? String(message.default_bid_active_rank) : message.default_bid_active_rank;
-                        else
-                            object.default_bid_active_rank = options.longs === String ? $util.Long.prototype.toString.call(message.default_bid_active_rank) : options.longs === Number ? new $util.LongBits(message.default_bid_active_rank.low >>> 0, message.default_bid_active_rank.high >>> 0).toNumber(true) : message.default_bid_active_rank;
                     if (message.bid_tokens && message.bid_tokens.length) {
                         object.bid_tokens = [];
                         for (var j = 0; j < message.bid_tokens.length; ++j)
                             object.bid_tokens[j] = message.bid_tokens[j];
                     }
-                    if (message.auto_relisting_count_if_no_bid != null && message.hasOwnProperty("auto_relisting_count_if_no_bid"))
-                        if (typeof message.auto_relisting_count_if_no_bid === "number")
-                            object.auto_relisting_count_if_no_bid = options.longs === String ? String(message.auto_relisting_count_if_no_bid) : message.auto_relisting_count_if_no_bid;
-                        else
-                            object.auto_relisting_count_if_no_bid = options.longs === String ? $util.Long.prototype.toString.call(message.auto_relisting_count_if_no_bid) : options.longs === Number ? new $util.LongBits(message.auto_relisting_count_if_no_bid.low >>> 0, message.auto_relisting_count_if_no_bid.high >>> 0).toNumber(true) : message.auto_relisting_count_if_no_bid;
-                    if (message.nft_listing_delay_seconds != null && message.hasOwnProperty("nft_listing_delay_seconds"))
-                        if (typeof message.nft_listing_delay_seconds === "number")
-                            object.nft_listing_delay_seconds = options.longs === String ? String(message.nft_listing_delay_seconds) : message.nft_listing_delay_seconds;
-                        else
-                            object.nft_listing_delay_seconds = options.longs === String ? $util.Long.prototype.toString.call(message.nft_listing_delay_seconds) : options.longs === Number ? new $util.LongBits(message.nft_listing_delay_seconds.low >>> 0, message.nft_listing_delay_seconds.high >>> 0).toNumber(true) : message.nft_listing_delay_seconds;
-                    if (message.nft_listing_period_initial != null && message.hasOwnProperty("nft_listing_period_initial"))
-                        if (typeof message.nft_listing_period_initial === "number")
-                            object.nft_listing_period_initial = options.longs === String ? String(message.nft_listing_period_initial) : message.nft_listing_period_initial;
-                        else
-                            object.nft_listing_period_initial = options.longs === String ? $util.Long.prototype.toString.call(message.nft_listing_period_initial) : options.longs === Number ? new $util.LongBits(message.nft_listing_period_initial.low >>> 0, message.nft_listing_period_initial.high >>> 0).toNumber(true) : message.nft_listing_period_initial;
                     if (message.nft_listing_cancel_required_seconds != null && message.hasOwnProperty("nft_listing_cancel_required_seconds"))
                         if (typeof message.nft_listing_cancel_required_seconds === "number")
                             object.nft_listing_cancel_required_seconds = options.longs === String ? String(message.nft_listing_cancel_required_seconds) : message.nft_listing_cancel_required_seconds;
                         else
                             object.nft_listing_cancel_required_seconds = options.longs === String ? $util.Long.prototype.toString.call(message.nft_listing_cancel_required_seconds) : options.longs === Number ? new $util.LongBits(message.nft_listing_cancel_required_seconds.low >>> 0, message.nft_listing_cancel_required_seconds.high >>> 0).toNumber(true) : message.nft_listing_cancel_required_seconds;
-                    if (message.nft_listing_cancel_fee_percentage != null && message.hasOwnProperty("nft_listing_cancel_fee_percentage"))
-                        if (typeof message.nft_listing_cancel_fee_percentage === "number")
-                            object.nft_listing_cancel_fee_percentage = options.longs === String ? String(message.nft_listing_cancel_fee_percentage) : message.nft_listing_cancel_fee_percentage;
-                        else
-                            object.nft_listing_cancel_fee_percentage = options.longs === String ? $util.Long.prototype.toString.call(message.nft_listing_cancel_fee_percentage) : options.longs === Number ? new $util.LongBits(message.nft_listing_cancel_fee_percentage.low >>> 0, message.nft_listing_cancel_fee_percentage.high >>> 0).toNumber(true) : message.nft_listing_cancel_fee_percentage;
-                    if (message.nft_listing_gap_time != null && message.hasOwnProperty("nft_listing_gap_time"))
-                        if (typeof message.nft_listing_gap_time === "number")
-                            object.nft_listing_gap_time = options.longs === String ? String(message.nft_listing_gap_time) : message.nft_listing_gap_time;
-                        else
-                            object.nft_listing_gap_time = options.longs === String ? $util.Long.prototype.toString.call(message.nft_listing_gap_time) : options.longs === Number ? new $util.LongBits(message.nft_listing_gap_time.low >>> 0, message.nft_listing_gap_time.high >>> 0).toNumber(true) : message.nft_listing_gap_time;
                     if (message.bid_cancel_required_seconds != null && message.hasOwnProperty("bid_cancel_required_seconds"))
                         if (typeof message.bid_cancel_required_seconds === "number")
                             object.bid_cancel_required_seconds = options.longs === String ? String(message.bid_cancel_required_seconds) : message.bid_cancel_required_seconds;
                         else
                             object.bid_cancel_required_seconds = options.longs === String ? $util.Long.prototype.toString.call(message.bid_cancel_required_seconds) : options.longs === Number ? new $util.LongBits(message.bid_cancel_required_seconds.low >>> 0, message.bid_cancel_required_seconds.high >>> 0).toNumber(true) : message.bid_cancel_required_seconds;
-                    if (message.bid_token_disburse_seconds_after_cancel != null && message.hasOwnProperty("bid_token_disburse_seconds_after_cancel"))
-                        if (typeof message.bid_token_disburse_seconds_after_cancel === "number")
-                            object.bid_token_disburse_seconds_after_cancel = options.longs === String ? String(message.bid_token_disburse_seconds_after_cancel) : message.bid_token_disburse_seconds_after_cancel;
-                        else
-                            object.bid_token_disburse_seconds_after_cancel = options.longs === String ? $util.Long.prototype.toString.call(message.bid_token_disburse_seconds_after_cancel) : options.longs === Number ? new $util.LongBits(message.bid_token_disburse_seconds_after_cancel.low >>> 0, message.bid_token_disburse_seconds_after_cancel.high >>> 0).toNumber(true) : message.bid_token_disburse_seconds_after_cancel;
                     if (message.nft_listing_full_payment_period != null && message.hasOwnProperty("nft_listing_full_payment_period"))
                         if (typeof message.nft_listing_full_payment_period === "number")
                             object.nft_listing_full_payment_period = options.longs === String ? String(message.nft_listing_full_payment_period) : message.nft_listing_full_payment_period;
@@ -36152,25 +35793,11 @@
                             object.nft_listing_nft_delivery_period = options.longs === String ? String(message.nft_listing_nft_delivery_period) : message.nft_listing_nft_delivery_period;
                         else
                             object.nft_listing_nft_delivery_period = options.longs === String ? $util.Long.prototype.toString.call(message.nft_listing_nft_delivery_period) : options.longs === Number ? new $util.LongBits(message.nft_listing_nft_delivery_period.low >>> 0, message.nft_listing_nft_delivery_period.high >>> 0).toNumber(true) : message.nft_listing_nft_delivery_period;
-                    if (message.nft_creator_share_percentage != null && message.hasOwnProperty("nft_creator_share_percentage"))
-                        if (typeof message.nft_creator_share_percentage === "number")
-                            object.nft_creator_share_percentage = options.longs === String ? String(message.nft_creator_share_percentage) : message.nft_creator_share_percentage;
-                        else
-                            object.nft_creator_share_percentage = options.longs === String ? $util.Long.prototype.toString.call(message.nft_creator_share_percentage) : options.longs === Number ? new $util.LongBits(message.nft_creator_share_percentage.low >>> 0, message.nft_creator_share_percentage.high >>> 0).toNumber(true) : message.nft_creator_share_percentage;
-                    if (message.market_administrator != null && message.hasOwnProperty("market_administrator"))
-                        object.market_administrator = message.market_administrator;
                     if (message.nft_listing_commission_fee != null && message.hasOwnProperty("nft_listing_commission_fee"))
                         if (typeof message.nft_listing_commission_fee === "number")
                             object.nft_listing_commission_fee = options.longs === String ? String(message.nft_listing_commission_fee) : message.nft_listing_commission_fee;
                         else
                             object.nft_listing_commission_fee = options.longs === String ? $util.Long.prototype.toString.call(message.nft_listing_commission_fee) : options.longs === Number ? new $util.LongBits(message.nft_listing_commission_fee.low >>> 0, message.nft_listing_commission_fee.high >>> 0).toNumber(true) : message.nft_listing_commission_fee;
-                    if (message.nft_listing_extend_seconds != null && message.hasOwnProperty("nft_listing_extend_seconds"))
-                        if (typeof message.nft_listing_extend_seconds === "number")
-                            object.nft_listing_extend_seconds = options.longs === String ? String(message.nft_listing_extend_seconds) : message.nft_listing_extend_seconds;
-                        else
-                            object.nft_listing_extend_seconds = options.longs === String ? $util.Long.prototype.toString.call(message.nft_listing_extend_seconds) : options.longs === Number ? new $util.LongBits(message.nft_listing_extend_seconds.low >>> 0, message.nft_listing_extend_seconds.high >>> 0).toNumber(true) : message.nft_listing_extend_seconds;
-                    if (message.nft_listing_period_extend_fee_per_hour != null && message.hasOwnProperty("nft_listing_period_extend_fee_per_hour"))
-                        object.nft_listing_period_extend_fee_per_hour = $root.cosmos.base.v1beta1.Coin.toObject(message.nft_listing_period_extend_fee_per_hour, options);
                     return object;
                 };
     
