@@ -341,13 +341,13 @@ export interface BidderBids200ResponseBidsInner {
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'bid_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    'price'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'deposit_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    'deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
@@ -359,7 +359,7 @@ export interface BidderBids200ResponseBidsInner {
      * @type {string}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'expiry_at'?: string;
+    'expiry'?: string;
     /**
      * 
      * @type {string}
@@ -1296,7 +1296,7 @@ export interface ListedNfts200ResponseListingsInnerListing {
      * @type {string}
      * @memberof ListedNfts200ResponseListingsInnerListing
      */
-    'end_at'?: string;
+    'liquidated_at'?: string;
     /**
      * 
      * @type {string}
@@ -1467,34 +1467,10 @@ export interface NftBackedLoanParams200ResponseParams {
     'min_staking_for_listing'?: string;
     /**
      * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'default_bid_active_rank'?: string;
-    /**
-     * 
      * @type {Array<string>}
      * @memberof NftBackedLoanParams200ResponseParams
      */
     'bid_tokens'?: Array<string>;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'auto_relisting_count_if_no_bid'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'nft_listing_delay_seconds'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'nft_listing_period_initial'?: string;
     /**
      * 
      * @type {string}
@@ -1506,25 +1482,7 @@ export interface NftBackedLoanParams200ResponseParams {
      * @type {string}
      * @memberof NftBackedLoanParams200ResponseParams
      */
-    'nft_listing_cancel_fee_percentage'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'nft_listing_gap_time'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
     'bid_cancel_required_seconds'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'bid_token_disburse_seconds_after_cancel'?: string;
     /**
      * 
      * @type {string}
@@ -1542,31 +1500,7 @@ export interface NftBackedLoanParams200ResponseParams {
      * @type {string}
      * @memberof NftBackedLoanParams200ResponseParams
      */
-    'nft_creator_share_percentage'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'market_administrator'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
     'nft_listing_commission_fee'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'nft_listing_extend_seconds'?: string;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'nft_listing_period_extend_fee_per_hour'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -3146,13 +3080,13 @@ export interface UnunifiNftbackedloanNftBid {
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiNftbackedloanNftBid
      */
-    'bid_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    'price'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiNftbackedloanNftBid
      */
-    'deposit_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    'deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
@@ -3164,7 +3098,7 @@ export interface UnunifiNftbackedloanNftBid {
      * @type {string}
      * @memberof UnunifiNftbackedloanNftBid
      */
-    'expiry_at'?: string;
+    'expiry'?: string;
     /**
      * 
      * @type {string}
@@ -3281,7 +3215,7 @@ export interface UnunifiNftbackedloanNftListing {
      * @type {string}
      * @memberof UnunifiNftbackedloanNftListing
      */
-    'end_at'?: string;
+    'liquidated_at'?: string;
     /**
      * 
      * @type {string}
@@ -3358,34 +3292,10 @@ export interface UnunifiNftbackedloanParams {
     'min_staking_for_listing'?: string;
     /**
      * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'default_bid_active_rank'?: string;
-    /**
-     * 
      * @type {Array<string>}
      * @memberof UnunifiNftbackedloanParams
      */
     'bid_tokens'?: Array<string>;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'auto_relisting_count_if_no_bid'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'nft_listing_delay_seconds'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'nft_listing_period_initial'?: string;
     /**
      * 
      * @type {string}
@@ -3397,25 +3307,7 @@ export interface UnunifiNftbackedloanParams {
      * @type {string}
      * @memberof UnunifiNftbackedloanParams
      */
-    'nft_listing_cancel_fee_percentage'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'nft_listing_gap_time'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
     'bid_cancel_required_seconds'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'bid_token_disburse_seconds_after_cancel'?: string;
     /**
      * 
      * @type {string}
@@ -3433,31 +3325,7 @@ export interface UnunifiNftbackedloanParams {
      * @type {string}
      * @memberof UnunifiNftbackedloanParams
      */
-    'nft_creator_share_percentage'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'market_administrator'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
     'nft_listing_commission_fee'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'nft_listing_extend_seconds'?: string;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'nft_listing_period_extend_fee_per_hour'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
