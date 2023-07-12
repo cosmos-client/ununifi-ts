@@ -10,7 +10,7 @@ cosmosclient.codec.register('/ununifi.nftbackedloan.MsgCancelNftListing', ununif
 cosmosclient.codec.register('/ununifi.nftbackedloan.MsgPlaceBid', ununifi.nftbackedloan.MsgPlaceBid);
 cosmosclient.codec.register('/ununifi.nftbackedloan.MsgCancelBid', ununifi.nftbackedloan.MsgCancelBid);
 cosmosclient.codec.register('/ununifi.nftbackedloan.MsgEndNftListing', ununifi.nftbackedloan.MsgEndNftListing);
-cosmosclient.codec.register('/ununifi.nftbackedloan.MsgPayFullBid', ununifi.nftbackedloan.MsgPayFullBid);
+cosmosclient.codec.register('/ununifi.nftbackedloan.MsgPayRemainder', ununifi.nftbackedloan.MsgPayRemainder);
 cosmosclient.codec.register('/ununifi.nftbackedloan.MsgBorrow', ununifi.nftbackedloan.MsgBorrow);
 cosmosclient.codec.register('/ununifi.nftbackedloan.MsgRepay', ununifi.nftbackedloan.MsgRepay);
 // cosmosclient.codec.register('/ununifi.nftbackedloan.MsgLiquidate', ununifi.nftbackedloan.MsgLiquidate);
