@@ -167,6 +167,18 @@ export interface AllPositions200ResponsePositionsInner {
     'remaining_margin'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'levied_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AllPositions200ResponsePositionsInner
+     */
+    'levied_amount_negative'?: boolean;
+    /**
+     * 
      * @type {string}
      * @memberof AllPositions200ResponsePositionsInner
      */
@@ -320,28 +332,22 @@ export interface BidderBids200Response {
 export interface BidderBids200ResponseBidsInner {
     /**
      * 
-     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @type {BidderBids200ResponseBidsInnerId}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
-    /**
-     * 
-     * @type {string}
-     * @memberof BidderBids200ResponseBidsInner
-     */
-    'bidder'?: string;
+    'id'?: BidderBids200ResponseBidsInnerId;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'bid_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    'price'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'deposit_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    'deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
@@ -353,13 +359,13 @@ export interface BidderBids200ResponseBidsInner {
      * @type {string}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'bidding_period'?: string;
+    'expiry'?: string;
     /**
      * 
      * @type {string}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'deposit_lending_rate'?: string;
+    'interest_rate'?: string;
     /**
      * 
      * @type {boolean}
@@ -371,44 +377,70 @@ export interface BidderBids200ResponseBidsInner {
      * @type {string}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'bid_time'?: string;
+    'created_at'?: string;
     /**
      * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @type {BorrowInfo}
      * @memberof BidderBids200ResponseBidsInner
      */
-    'interest_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-    /**
-     * 
-     * @type {Array<ListerBorrowingBidderInfoInner>}
-     * @memberof BidderBids200ResponseBidsInner
-     */
-    'borrowings'?: Array<ListerBorrowingBidderInfoInner>;
-    /**
-     * 
-     * @type {TodoRemoveNftIdBidderThenUseIt}
-     * @memberof BidderBids200ResponseBidsInner
-     */
-    'id'?: TodoRemoveNftIdBidderThenUseIt;
+    'borrow'?: BorrowInfo;
 }
 /**
  * 
  * @export
- * @interface BidderBids200ResponseBidsInnerNftId
+ * @interface BidderBids200ResponseBidsInnerId
  */
-export interface BidderBids200ResponseBidsInnerNftId {
+export interface BidderBids200ResponseBidsInnerId {
+    /**
+     * 
+     * @type {BidderBids200ResponseBidsInnerIdNftId}
+     * @memberof BidderBids200ResponseBidsInnerId
+     */
+    'nft_id'?: BidderBids200ResponseBidsInnerIdNftId;
     /**
      * 
      * @type {string}
-     * @memberof BidderBids200ResponseBidsInnerNftId
+     * @memberof BidderBids200ResponseBidsInnerId
+     */
+    'bidder'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface BidderBids200ResponseBidsInnerIdNftId
+ */
+export interface BidderBids200ResponseBidsInnerIdNftId {
+    /**
+     * 
+     * @type {string}
+     * @memberof BidderBids200ResponseBidsInnerIdNftId
      */
     'class_id'?: string;
     /**
      * 
      * @type {string}
-     * @memberof BidderBids200ResponseBidsInnerNftId
+     * @memberof BidderBids200ResponseBidsInnerIdNftId
      */
     'nft_id'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface BorrowInfo
+ */
+export interface BorrowInfo {
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof BorrowInfo
+     */
+    'amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {string}
+     * @memberof BorrowInfo
+     */
+    'last_repaid_at'?: string;
 }
 /**
  * 
@@ -840,10 +872,10 @@ export interface EcosystemIncentiveParams200Response {
 export interface EcosystemIncentiveParams200ResponseParams {
     /**
      * 
-     * @type {Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>}
+     * @type {Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftbackedloanModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>}
      * @memberof EcosystemIncentiveParams200ResponseParams
      */
-    'reward_params'?: Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>;
+    'reward_params'?: Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftbackedloanModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>;
 }
 /**
  * 
@@ -1225,10 +1257,10 @@ export interface ListedNfts200ResponseListingsInner {
 export interface ListedNfts200ResponseListingsInnerListing {
     /**
      * 
-     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @type {BidderBids200ResponseBidsInnerIdNftId}
      * @memberof ListedNfts200ResponseListingsInnerListing
      */
-    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    'nft_id'?: BidderBids200ResponseBidsInnerIdNftId;
     /**
      * 
      * @type {string}
@@ -1240,31 +1272,19 @@ export interface ListedNfts200ResponseListingsInnerListing {
      * @type {string}
      * @memberof ListedNfts200ResponseListingsInnerListing
      */
-    'listing_type'?: ListedNfts200ResponseListingsInnerListingListingTypeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ListedNfts200ResponseListingsInnerListing
-     */
     'state'?: ListedNfts200ResponseListingsInnerListingStateEnum;
     /**
      * 
      * @type {string}
      * @memberof ListedNfts200ResponseListingsInnerListing
      */
-    'bid_token'?: string;
+    'bid_denom'?: string;
     /**
      * 
      * @type {string}
      * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'minimum_deposit_rate'?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ListedNfts200ResponseListingsInnerListing
-     */
-    'automatic_refinancing'?: boolean;
     /**
      * 
      * @type {string}
@@ -1276,7 +1296,7 @@ export interface ListedNfts200ResponseListingsInnerListing {
      * @type {string}
      * @memberof ListedNfts200ResponseListingsInnerListing
      */
-    'end_at'?: string;
+    'liquidated_at'?: string;
     /**
      * 
      * @type {string}
@@ -1291,16 +1311,16 @@ export interface ListedNfts200ResponseListingsInnerListing {
     'successful_bid_end_at'?: string;
     /**
      * 
-     * @type {string}
-     * @memberof ListedNfts200ResponseListingsInnerListing
-     */
-    'auto_relisted_count'?: string;
-    /**
-     * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof ListedNfts200ResponseListingsInnerListing
      */
     'collected_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ListedNfts200ResponseListingsInnerListing
+     */
+    'collected_amount_negative'?: boolean;
     /**
      * 
      * @type {string}
@@ -1309,18 +1329,12 @@ export interface ListedNfts200ResponseListingsInnerListing {
     'minimum_bidding_period'?: string;
 }
 
-export const ListedNfts200ResponseListingsInnerListingListingTypeEnum = {
-    DirectAssetBorrow: 'DIRECT_ASSET_BORROW',
-    SyntheticAssetCreation: 'SYNTHETIC_ASSET_CREATION',
-    LateShipping: 'LATE_SHIPPING'
-} as const;
-
-export type ListedNfts200ResponseListingsInnerListingListingTypeEnum = typeof ListedNfts200ResponseListingsInnerListingListingTypeEnum[keyof typeof ListedNfts200ResponseListingsInnerListingListingTypeEnum];
 export const ListedNfts200ResponseListingsInnerListingStateEnum = {
+    Unknown: 'UNKNOWN',
     Listing: 'LISTING',
     Bidding: 'BIDDING',
     SellingDecision: 'SELLING_DECISION',
-    EndListing: 'END_LISTING',
+    Liquidation: 'LIQUIDATION',
     SuccessfulBid: 'SUCCESSFUL_BID'
 } as const;
 
@@ -1329,78 +1343,33 @@ export type ListedNfts200ResponseListingsInnerListingStateEnum = typeof ListedNf
 /**
  * 
  * @export
- * @interface ListerBorrowingBidderInfoInner
- */
-export interface ListerBorrowingBidderInfoInner {
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof ListerBorrowingBidderInfoInner
-     */
-    'amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof ListerBorrowingBidderInfoInner
-     */
-    'paid_interest_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-    /**
-     * 
-     * @type {string}
-     * @memberof ListerBorrowingBidderInfoInner
-     */
-    'start_at'?: string;
-}
-/**
- * 
- * @export
  * @interface Loan200Response
  */
 export interface Loan200Response {
     /**
      * 
-     * @type {Loans200ResponseLoansInner}
+     * @type {BidderBids200ResponseBidsInnerIdNftId}
      * @memberof Loan200Response
      */
-    'loan'?: Loans200ResponseLoansInner;
-    /**
-     * 
-     * @type {string}
-     * @memberof Loan200Response
-     */
-    'borrowing_limit'?: string;
-}
-/**
- * 
- * @export
- * @interface Loans200Response
- */
-export interface Loans200Response {
-    /**
-     * 
-     * @type {Array<Loans200ResponseLoansInner>}
-     * @memberof Loans200Response
-     */
-    'loans'?: Array<Loans200ResponseLoansInner>;
-}
-/**
- * 
- * @export
- * @interface Loans200ResponseLoansInner
- */
-export interface Loans200ResponseLoansInner {
-    /**
-     * 
-     * @type {BidderBids200ResponseBidsInnerNftId}
-     * @memberof Loans200ResponseLoansInner
-     */
-    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    'nft_id'?: BidderBids200ResponseBidsInnerIdNftId;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof Loans200ResponseLoansInner
+     * @memberof Loan200Response
      */
-    'loan'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    'borrowing_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof Loan200Response
+     */
+    'borrowing_limit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof Loan200Response
+     */
+    'total_deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -1498,34 +1467,10 @@ export interface NftBackedLoanParams200ResponseParams {
     'min_staking_for_listing'?: string;
     /**
      * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'default_bid_active_rank'?: string;
-    /**
-     * 
      * @type {Array<string>}
      * @memberof NftBackedLoanParams200ResponseParams
      */
     'bid_tokens'?: Array<string>;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'auto_relisting_count_if_no_bid'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'nft_listing_delay_seconds'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'nft_listing_period_initial'?: string;
     /**
      * 
      * @type {string}
@@ -1537,25 +1482,7 @@ export interface NftBackedLoanParams200ResponseParams {
      * @type {string}
      * @memberof NftBackedLoanParams200ResponseParams
      */
-    'nft_listing_cancel_fee_percentage'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'nft_listing_gap_time'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
     'bid_cancel_required_seconds'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'bid_token_disburse_seconds_after_cancel'?: string;
     /**
      * 
      * @type {string}
@@ -1573,31 +1500,7 @@ export interface NftBackedLoanParams200ResponseParams {
      * @type {string}
      * @memberof NftBackedLoanParams200ResponseParams
      */
-    'nft_creator_share_percentage'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'market_administrator'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
     'nft_listing_commission_fee'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'nft_listing_extend_seconds'?: string;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof NftBackedLoanParams200ResponseParams
-     */
-    'nft_listing_period_extend_fee_per_hour'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -1696,85 +1599,6 @@ export interface OracleAll200Response {
 /**
  * 
  * @export
- * @interface PaymentStatus200Response
- */
-export interface PaymentStatus200Response {
-    /**
-     * 
-     * @type {PaymentStatus200ResponsePaymentStatus}
-     * @memberof PaymentStatus200Response
-     */
-    'paymentStatus'?: PaymentStatus200ResponsePaymentStatus;
-}
-/**
- * 
- * @export
- * @interface PaymentStatus200ResponsePaymentStatus
- */
-export interface PaymentStatus200ResponsePaymentStatus {
-    /**
-     * 
-     * @type {BidderBids200ResponseBidsInnerNftId}
-     * @memberof PaymentStatus200ResponsePaymentStatus
-     */
-    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaymentStatus200ResponsePaymentStatus
-     */
-    'bidder'?: string;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof PaymentStatus200ResponsePaymentStatus
-     */
-    'amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PaymentStatus200ResponsePaymentStatus
-     */
-    'automatic_payment'?: boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaymentStatus200ResponsePaymentStatus
-     */
-    'paid_amount'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaymentStatus200ResponsePaymentStatus
-     */
-    'bid_time'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaymentStatus200ResponsePaymentStatus
-     */
-    'state'?: PaymentStatus200ResponsePaymentStatusStateEnum;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PaymentStatus200ResponsePaymentStatus
-     */
-    'all_paid'?: boolean;
-}
-
-export const PaymentStatus200ResponsePaymentStatusStateEnum = {
-    Listing: 'LISTING',
-    Bidding: 'BIDDING',
-    SellingDecision: 'SELLING_DECISION',
-    EndListing: 'END_LISTING',
-    SuccessfulBid: 'SUCCESSFUL_BID'
-} as const;
-
-export type PaymentStatus200ResponsePaymentStatusStateEnum = typeof PaymentStatus200ResponsePaymentStatusStateEnum[keyof typeof PaymentStatus200ResponsePaymentStatusStateEnum];
-
-/**
- * 
- * @export
  * @interface PerpetualFutures200Response
  */
 export interface PerpetualFutures200Response {
@@ -1789,25 +1613,13 @@ export interface PerpetualFutures200Response {
      * @type {string}
      * @memberof PerpetualFutures200Response
      */
-    'volume_24hours'?: string;
+    'long_positions'?: string;
     /**
      * 
      * @type {string}
      * @memberof PerpetualFutures200Response
      */
-    'fees_24hours'?: string;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof PerpetualFutures200Response
-     */
-    'long_positions'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof PerpetualFutures200Response
-     */
-    'short_positions'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    'short_positions'?: string;
 }
 /**
  * 
@@ -1827,18 +1639,6 @@ export interface PerpetualFuturesMarket200Response {
      * @memberof PerpetualFuturesMarket200Response
      */
     'metrics_quote_ticker'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PerpetualFuturesMarket200Response
-     */
-    'volume_24hours'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PerpetualFuturesMarket200Response
-     */
-    'fees_24hours'?: string;
     /**
      * 
      * @type {string}
@@ -1883,18 +1683,6 @@ export interface Pool200Response {
      * @memberof Pool200Response
      */
     'pool_market_cap'?: Pool200ResponsePoolMarketCap;
-    /**
-     * 
-     * @type {string}
-     * @memberof Pool200Response
-     */
-    'volume_24hours'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Pool200Response
-     */
-    'fees_24hours'?: string;
 }
 /**
  * 
@@ -2196,19 +1984,19 @@ export interface Reward200Response {
 /**
  * 
  * @export
- * @interface RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1
+ * @interface RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftbackedloanModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1
  */
-export interface RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1 {
+export interface RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftbackedloanModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1 {
     /**
      * 
      * @type {string}
-     * @memberof RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1
+     * @memberof RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftbackedloanModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1
      */
     'module_name'?: string;
     /**
      * 
      * @type {Array<RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1>}
-     * @memberof RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1
+     * @memberof RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftbackedloanModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1
      */
     'reward_rate'?: Array<RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1>;
 }
@@ -2219,7 +2007,7 @@ export interface RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMain
  */
 export interface RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1 {
     /**
-     * NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
+     * STAKERS type reward will be distributed for the stakers of GUU token. FRONTEND_DEVELOPERS type reward will be disributed for the creators of frontend of UnUniFi\'s services. COMMUNITY_POOL type reward will be distributed for the community pool.
      * @type {string}
      * @memberof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1
      */
@@ -2235,7 +2023,8 @@ export interface RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheT
 export const RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum = {
     Unknown: 'UNKNOWN',
     Stakers: 'STAKERS',
-    FrontendDevelopers: 'FRONTEND_DEVELOPERS'
+    FrontendDevelopers: 'FRONTEND_DEVELOPERS',
+    CommunityPool: 'COMMUNITY_POOL'
 } as const;
 
 export type RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum = typeof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum[keyof typeof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum];
@@ -2321,25 +2110,6 @@ export interface StrategyAll200ResponseStrategiesInner {
      * @memberof StrategyAll200ResponseStrategiesInner
      */
     'git_url'?: string;
-}
-/**
- * 
- * @export
- * @interface TodoRemoveNftIdBidderThenUseIt
- */
-export interface TodoRemoveNftIdBidderThenUseIt {
-    /**
-     * 
-     * @type {BidderBids200ResponseBidsInnerNftId}
-     * @memberof TodoRemoveNftIdBidderThenUseIt
-     */
-    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
-    /**
-     * 
-     * @type {string}
-     * @memberof TodoRemoveNftIdBidderThenUseIt
-     */
-    'bidder'?: string;
 }
 /**
  * 
@@ -2639,6 +2409,18 @@ export interface UnunifiDerivativesPosition {
     'remaining_margin'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'levied_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof UnunifiDerivativesPosition
+     */
+    'levied_amount_negative'?: boolean;
+    /**
+     * 
      * @type {string}
      * @memberof UnunifiDerivativesPosition
      */
@@ -2879,18 +2661,6 @@ export interface UnunifiDerivativesQueryPerpetualFuturesMarketResponse {
      * @type {string}
      * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
      */
-    'volume_24hours'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
-     */
-    'fees_24hours'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesQueryPerpetualFuturesMarketResponse
-     */
     'long_positions'?: string;
     /**
      * 
@@ -2929,25 +2699,13 @@ export interface UnunifiDerivativesQueryPerpetualFuturesResponse {
      * @type {string}
      * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
      */
-    'volume_24hours'?: string;
+    'long_positions'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
      */
-    'fees_24hours'?: string;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
-     */
-    'long_positions'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof UnunifiDerivativesQueryPerpetualFuturesResponse
-     */
-    'short_positions'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    'short_positions'?: string;
 }
 /**
  * 
@@ -2967,18 +2725,6 @@ export interface UnunifiDerivativesQueryPoolResponse {
      * @memberof UnunifiDerivativesQueryPoolResponse
      */
     'pool_market_cap'?: Pool200ResponsePoolMarketCap;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesQueryPoolResponse
-     */
-    'volume_24hours'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiDerivativesQueryPoolResponse
-     */
-    'fees_24hours'?: string;
 }
 /**
  * 
@@ -3019,10 +2765,10 @@ export interface UnunifiDerivativesQueryPositionResponse {
 export interface UnunifiEcosystemincentiveParams {
     /**
      * 
-     * @type {Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>}
+     * @type {Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftbackedloanModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>}
      * @memberof UnunifiEcosystemincentiveParams
      */
-    'reward_params'?: Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftmarketModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>;
+    'reward_params'?: Array<RewardParamsDefinesWhichModuleHaveWhichRewardsTypeAndRateToMaintainTheCorrectnessOfTheFeeRateInAModuleEGIfNftbackedloanModuleHaveFrontendAndCollectionIncentiveTheCombinedThoseRatesForTheIncentiveCannotBeExceed1>;
 }
 /**
  * 
@@ -3147,7 +2893,7 @@ export interface UnunifiEcosystemincentiveRewardParams {
  */
 export interface UnunifiEcosystemincentiveRewardRate {
     /**
-     * NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
+     * STAKERS type reward will be distributed for the stakers of GUU token. FRONTEND_DEVELOPERS type reward will be disributed for the creators of frontend of UnUniFi\'s services. COMMUNITY_POOL type reward will be distributed for the community pool.
      * @type {string}
      * @memberof UnunifiEcosystemincentiveRewardRate
      */
@@ -3163,7 +2909,8 @@ export interface UnunifiEcosystemincentiveRewardRate {
 export const UnunifiEcosystemincentiveRewardRateRewardTypeEnum = {
     Unknown: 'UNKNOWN',
     Stakers: 'STAKERS',
-    FrontendDevelopers: 'FRONTEND_DEVELOPERS'
+    FrontendDevelopers: 'FRONTEND_DEVELOPERS',
+    CommunityPool: 'COMMUNITY_POOL'
 } as const;
 
 export type UnunifiEcosystemincentiveRewardRateRewardTypeEnum = typeof UnunifiEcosystemincentiveRewardRateRewardTypeEnum[keyof typeof UnunifiEcosystemincentiveRewardRateRewardTypeEnum];
@@ -3188,7 +2935,7 @@ export interface UnunifiEcosystemincentiveRewardStore {
     'rewards'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
 }
 /**
- * NFTMARKET_FRONTEND type reward will be disributed for the creators of frontend of UnUniFi\'s services.
+ * STAKERS type reward will be distributed for the stakers of GUU token. FRONTEND_DEVELOPERS type reward will be disributed for the creators of frontend of UnUniFi\'s services. COMMUNITY_POOL type reward will be distributed for the community pool.
  * @export
  * @enum {string}
  */
@@ -3196,7 +2943,8 @@ export interface UnunifiEcosystemincentiveRewardStore {
 export const UnunifiEcosystemincentiveRewardType = {
     Unknown: 'UNKNOWN',
     Stakers: 'STAKERS',
-    FrontendDevelopers: 'FRONTEND_DEVELOPERS'
+    FrontendDevelopers: 'FRONTEND_DEVELOPERS',
+    CommunityPool: 'COMMUNITY_POOL'
 } as const;
 
 export type UnunifiEcosystemincentiveRewardType = typeof UnunifiEcosystemincentiveRewardType[keyof typeof UnunifiEcosystemincentiveRewardType];
@@ -3229,10 +2977,10 @@ export interface UnunifiEcosystemincentiveWeightedAddress {
 export interface UnunifiNftbackedloanBidId {
     /**
      * 
-     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @type {BidderBids200ResponseBidsInnerIdNftId}
      * @memberof UnunifiNftbackedloanBidId
      */
-    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    'nft_id'?: BidderBids200ResponseBidsInnerIdNftId;
     /**
      * 
      * @type {string}
@@ -3254,16 +3002,10 @@ export interface UnunifiNftbackedloanBorrowing {
     'amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof UnunifiNftbackedloanBorrowing
-     */
-    'paid_interest_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-    /**
-     * 
      * @type {string}
      * @memberof UnunifiNftbackedloanBorrowing
      */
-    'start_at'?: string;
+    'last_repaid_at'?: string;
 }
 /**
  * 
@@ -3310,10 +3052,11 @@ export interface UnunifiNftbackedloanLiquidations {
  */
 
 export const UnunifiNftbackedloanListingState = {
+    Unknown: 'UNKNOWN',
     Listing: 'LISTING',
     Bidding: 'BIDDING',
     SellingDecision: 'SELLING_DECISION',
-    EndListing: 'END_LISTING',
+    Liquidation: 'LIQUIDATION',
     SuccessfulBid: 'SUCCESSFUL_BID'
 } as const;
 
@@ -3323,67 +3066,27 @@ export type UnunifiNftbackedloanListingState = typeof UnunifiNftbackedloanListin
 /**
  * 
  * @export
- * @enum {string}
- */
-
-export const UnunifiNftbackedloanListingType = {
-    DirectAssetBorrow: 'DIRECT_ASSET_BORROW',
-    SyntheticAssetCreation: 'SYNTHETIC_ASSET_CREATION',
-    LateShipping: 'LATE_SHIPPING'
-} as const;
-
-export type UnunifiNftbackedloanListingType = typeof UnunifiNftbackedloanListingType[keyof typeof UnunifiNftbackedloanListingType];
-
-
-/**
- * 
- * @export
- * @interface UnunifiNftbackedloanLoan
- */
-export interface UnunifiNftbackedloanLoan {
-    /**
-     * 
-     * @type {BidderBids200ResponseBidsInnerNftId}
-     * @memberof UnunifiNftbackedloanLoan
-     */
-    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof UnunifiNftbackedloanLoan
-     */
-    'loan'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-}
-/**
- * 
- * @export
  * @interface UnunifiNftbackedloanNftBid
  */
 export interface UnunifiNftbackedloanNftBid {
     /**
      * 
-     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @type {BidderBids200ResponseBidsInnerId}
      * @memberof UnunifiNftbackedloanNftBid
      */
-    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanNftBid
-     */
-    'bidder'?: string;
+    'id'?: BidderBids200ResponseBidsInnerId;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiNftbackedloanNftBid
      */
-    'bid_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    'price'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiNftbackedloanNftBid
      */
-    'deposit_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    'deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
@@ -3395,13 +3098,13 @@ export interface UnunifiNftbackedloanNftBid {
      * @type {string}
      * @memberof UnunifiNftbackedloanNftBid
      */
-    'bidding_period'?: string;
+    'expiry'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiNftbackedloanNftBid
      */
-    'deposit_lending_rate'?: string;
+    'interest_rate'?: string;
     /**
      * 
      * @type {boolean}
@@ -3413,25 +3116,13 @@ export interface UnunifiNftbackedloanNftBid {
      * @type {string}
      * @memberof UnunifiNftbackedloanNftBid
      */
-    'bid_time'?: string;
+    'created_at'?: string;
     /**
      * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @type {BorrowInfo}
      * @memberof UnunifiNftbackedloanNftBid
      */
-    'interest_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-    /**
-     * 
-     * @type {Array<ListerBorrowingBidderInfoInner>}
-     * @memberof UnunifiNftbackedloanNftBid
-     */
-    'borrowings'?: Array<ListerBorrowingBidderInfoInner>;
-    /**
-     * 
-     * @type {TodoRemoveNftIdBidderThenUseIt}
-     * @memberof UnunifiNftbackedloanNftBid
-     */
-    'id'?: TodoRemoveNftIdBidderThenUseIt;
+    'borrow'?: BorrowInfo;
 }
 /**
  * 
@@ -3485,10 +3176,10 @@ export interface UnunifiNftbackedloanNftInfo {
 export interface UnunifiNftbackedloanNftListing {
     /**
      * 
-     * @type {BidderBids200ResponseBidsInnerNftId}
+     * @type {BidderBids200ResponseBidsInnerIdNftId}
      * @memberof UnunifiNftbackedloanNftListing
      */
-    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
+    'nft_id'?: BidderBids200ResponseBidsInnerIdNftId;
     /**
      * 
      * @type {string}
@@ -3500,31 +3191,19 @@ export interface UnunifiNftbackedloanNftListing {
      * @type {string}
      * @memberof UnunifiNftbackedloanNftListing
      */
-    'listing_type'?: UnunifiNftbackedloanNftListingListingTypeEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanNftListing
-     */
     'state'?: UnunifiNftbackedloanNftListingStateEnum;
     /**
      * 
      * @type {string}
      * @memberof UnunifiNftbackedloanNftListing
      */
-    'bid_token'?: string;
+    'bid_denom'?: string;
     /**
      * 
      * @type {string}
      * @memberof UnunifiNftbackedloanNftListing
      */
     'minimum_deposit_rate'?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof UnunifiNftbackedloanNftListing
-     */
-    'automatic_refinancing'?: boolean;
     /**
      * 
      * @type {string}
@@ -3536,7 +3215,7 @@ export interface UnunifiNftbackedloanNftListing {
      * @type {string}
      * @memberof UnunifiNftbackedloanNftListing
      */
-    'end_at'?: string;
+    'liquidated_at'?: string;
     /**
      * 
      * @type {string}
@@ -3551,16 +3230,16 @@ export interface UnunifiNftbackedloanNftListing {
     'successful_bid_end_at'?: string;
     /**
      * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanNftListing
-     */
-    'auto_relisted_count'?: string;
-    /**
-     * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiNftbackedloanNftListing
      */
     'collected_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof UnunifiNftbackedloanNftListing
+     */
+    'collected_amount_negative'?: boolean;
     /**
      * 
      * @type {string}
@@ -3569,18 +3248,12 @@ export interface UnunifiNftbackedloanNftListing {
     'minimum_bidding_period'?: string;
 }
 
-export const UnunifiNftbackedloanNftListingListingTypeEnum = {
-    DirectAssetBorrow: 'DIRECT_ASSET_BORROW',
-    SyntheticAssetCreation: 'SYNTHETIC_ASSET_CREATION',
-    LateShipping: 'LATE_SHIPPING'
-} as const;
-
-export type UnunifiNftbackedloanNftListingListingTypeEnum = typeof UnunifiNftbackedloanNftListingListingTypeEnum[keyof typeof UnunifiNftbackedloanNftListingListingTypeEnum];
 export const UnunifiNftbackedloanNftListingStateEnum = {
+    Unknown: 'UNKNOWN',
     Listing: 'LISTING',
     Bidding: 'BIDDING',
     SellingDecision: 'SELLING_DECISION',
-    EndListing: 'END_LISTING',
+    Liquidation: 'LIQUIDATION',
     SuccessfulBid: 'SUCCESSFUL_BID'
 } as const;
 
@@ -3619,34 +3292,10 @@ export interface UnunifiNftbackedloanParams {
     'min_staking_for_listing'?: string;
     /**
      * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'default_bid_active_rank'?: string;
-    /**
-     * 
      * @type {Array<string>}
      * @memberof UnunifiNftbackedloanParams
      */
     'bid_tokens'?: Array<string>;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'auto_relisting_count_if_no_bid'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'nft_listing_delay_seconds'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'nft_listing_period_initial'?: string;
     /**
      * 
      * @type {string}
@@ -3658,25 +3307,7 @@ export interface UnunifiNftbackedloanParams {
      * @type {string}
      * @memberof UnunifiNftbackedloanParams
      */
-    'nft_listing_cancel_fee_percentage'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'nft_listing_gap_time'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
     'bid_cancel_required_seconds'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'bid_token_disburse_seconds_after_cancel'?: string;
     /**
      * 
      * @type {string}
@@ -3694,98 +3325,8 @@ export interface UnunifiNftbackedloanParams {
      * @type {string}
      * @memberof UnunifiNftbackedloanParams
      */
-    'nft_creator_share_percentage'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'market_administrator'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
     'nft_listing_commission_fee'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'nft_listing_extend_seconds'?: string;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof UnunifiNftbackedloanParams
-     */
-    'nft_listing_period_extend_fee_per_hour'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
-/**
- * 
- * @export
- * @interface UnunifiNftbackedloanPaymentStatus
- */
-export interface UnunifiNftbackedloanPaymentStatus {
-    /**
-     * 
-     * @type {BidderBids200ResponseBidsInnerNftId}
-     * @memberof UnunifiNftbackedloanPaymentStatus
-     */
-    'nft_id'?: BidderBids200ResponseBidsInnerNftId;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanPaymentStatus
-     */
-    'bidder'?: string;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof UnunifiNftbackedloanPaymentStatus
-     */
-    'amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof UnunifiNftbackedloanPaymentStatus
-     */
-    'automatic_payment'?: boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanPaymentStatus
-     */
-    'paid_amount'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanPaymentStatus
-     */
-    'bid_time'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiNftbackedloanPaymentStatus
-     */
-    'state'?: UnunifiNftbackedloanPaymentStatusStateEnum;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof UnunifiNftbackedloanPaymentStatus
-     */
-    'all_paid'?: boolean;
-}
-
-export const UnunifiNftbackedloanPaymentStatusStateEnum = {
-    Listing: 'LISTING',
-    Bidding: 'BIDDING',
-    SellingDecision: 'SELLING_DECISION',
-    EndListing: 'END_LISTING',
-    SuccessfulBid: 'SUCCESSFUL_BID'
-} as const;
-
-export type UnunifiNftbackedloanPaymentStatusStateEnum = typeof UnunifiNftbackedloanPaymentStatusStateEnum[keyof typeof UnunifiNftbackedloanPaymentStatusStateEnum];
-
 /**
  * 
  * @export
@@ -3901,29 +3442,28 @@ export interface UnunifiNftbackedloanQueryListedNftsResponse {
 export interface UnunifiNftbackedloanQueryLoanResponse {
     /**
      * 
-     * @type {Loans200ResponseLoansInner}
+     * @type {BidderBids200ResponseBidsInnerIdNftId}
      * @memberof UnunifiNftbackedloanQueryLoanResponse
      */
-    'loan'?: Loans200ResponseLoansInner;
+    'nft_id'?: BidderBids200ResponseBidsInnerIdNftId;
     /**
      * 
-     * @type {string}
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiNftbackedloanQueryLoanResponse
      */
-    'borrowing_limit'?: string;
-}
-/**
- * 
- * @export
- * @interface UnunifiNftbackedloanQueryLoansResponse
- */
-export interface UnunifiNftbackedloanQueryLoansResponse {
+    'borrowing_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
-     * @type {Array<Loans200ResponseLoansInner>}
-     * @memberof UnunifiNftbackedloanQueryLoansResponse
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanQueryLoanResponse
      */
-    'loans'?: Array<Loans200ResponseLoansInner>;
+    'borrowing_limit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiNftbackedloanQueryLoanResponse
+     */
+    'total_deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -3963,19 +3503,6 @@ export interface UnunifiNftbackedloanQueryParamsResponse {
      * @memberof UnunifiNftbackedloanQueryParamsResponse
      */
     'params'?: NftBackedLoanParams200ResponseParams;
-}
-/**
- * 
- * @export
- * @interface UnunifiNftbackedloanQueryPaymentStatusResponse
- */
-export interface UnunifiNftbackedloanQueryPaymentStatusResponse {
-    /**
-     * 
-     * @type {PaymentStatus200ResponsePaymentStatus}
-     * @memberof UnunifiNftbackedloanQueryPaymentStatusResponse
-     */
-    'paymentStatus'?: PaymentStatus200ResponsePaymentStatus;
 }
 /**
  * 
@@ -5066,37 +4593,8 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         bidderBids: async (bidder: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'bidder' is not null or undefined
             assertParamExists('bidderBids', 'bidder', bidder)
-            const localVarPath = `/ununifi/nftbackedloan/bidder_bids/{bidder}`
+            const localVarPath = `/ununifi/nftbackedloan/bidder-bids/{bidder}`
                 .replace(`{${"bidder"}}`, encodeURIComponent(String(bidder)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        cDPsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftbackedloan/cdps_list`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5584,7 +5082,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             assertParamExists('listedClass', 'classId', classId)
             // verify required parameter 'nftLimit' is not null or undefined
             assertParamExists('listedClass', 'nftLimit', nftLimit)
-            const localVarPath = `/ununifi/nftbackedloan/listed_class/{class_id}/{nft_limit}`
+            const localVarPath = `/ununifi/nftbackedloan/listed-class/{class_id}/{nft_limit}`
                 .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
                 .replace(`{${"nft_limit"}}`, encodeURIComponent(String(nftLimit)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -5616,7 +5114,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         listedClasses: async (nftLimit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftbackedloan/listed_classes`;
+            const localVarPath = `/ununifi/nftbackedloan/listed-classes`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5650,7 +5148,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         listedNfts: async (owner?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftbackedloan/listed_nfts`;
+            const localVarPath = `/ununifi/nftbackedloan/listed-nfts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5692,35 +5190,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarPath = `/ununifi/nftbackedloan/loans/{class_id}/{nft_id}`
                 .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
                 .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        loans: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ununifi/nftbackedloan/loans`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5871,7 +5340,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             assertParamExists('nftBids', 'classId', classId)
             // verify required parameter 'nftId' is not null or undefined
             assertParamExists('nftBids', 'nftId', nftId)
-            const localVarPath = `/ununifi/nftbackedloan/nft_bids/{class_id}/{nft_id}`
+            const localVarPath = `/ununifi/nftbackedloan/nft-bids/{class_id}/{nft_id}`
                 .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
                 .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -5937,7 +5406,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             assertParamExists('nftListing', 'classId', classId)
             // verify required parameter 'nftId' is not null or undefined
             assertParamExists('nftListing', 'nftId', nftId)
-            const localVarPath = `/ununifi/nftbackedloan/nft_listing/{class_id}/{nft_id}`
+            const localVarPath = `/ununifi/nftbackedloan/nft-listing/{class_id}/{nft_id}`
                 .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
                 .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -6003,47 +5472,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             if (paginationCountTotal !== undefined) {
                 localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
             }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} classId 
-         * @param {string} nftId 
-         * @param {string} bidder 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        paymentStatus: async (classId: string, nftId: string, bidder: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'classId' is not null or undefined
-            assertParamExists('paymentStatus', 'classId', classId)
-            // verify required parameter 'nftId' is not null or undefined
-            assertParamExists('paymentStatus', 'nftId', nftId)
-            // verify required parameter 'bidder' is not null or undefined
-            assertParamExists('paymentStatus', 'bidder', bidder)
-            const localVarPath = `/ununifi/nftbackedloan/payment_status/{class_id}/{nft_id}/{bidder}`
-                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
-                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)))
-                .replace(`{${"bidder"}}`, encodeURIComponent(String(bidder)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
 
 
     
@@ -6881,15 +6309,6 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async cDPsList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.cDPsList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @param {string} classId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -7068,15 +6487,6 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async loans(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Loans200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.loans(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @summary this line is used by starport scaffolding # 2
          * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
          * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
@@ -7152,18 +6562,6 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async oracleAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OracleAll200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.oracleAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} classId 
-         * @param {string} nftId 
-         * @param {string} bidder 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async paymentStatus(classId: string, nftId: string, bidder: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaymentStatus200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.paymentStatus(classId, nftId, bidder, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -7461,14 +6859,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        cDPsList(options?: any): AxiosPromise<object> {
-            return localVarFp.cDPsList(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @param {string} classId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -7630,14 +7020,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        loans(options?: any): AxiosPromise<Loans200Response> {
-            return localVarFp.loans(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @summary this line is used by starport scaffolding # 2
          * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
          * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
@@ -7707,17 +7089,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         oracleAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<OracleAll200Response> {
             return localVarFp.oracleAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} classId 
-         * @param {string} nftId 
-         * @param {string} bidder 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        paymentStatus(classId: string, nftId: string, bidder: string, options?: any): AxiosPromise<PaymentStatus200Response> {
-            return localVarFp.paymentStatus(classId, nftId, bidder, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -8008,16 +7379,6 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public cDPsList(options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).cDPsList(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @param {string} classId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -8213,16 +7574,6 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public loans(options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).loans(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @summary this line is used by starport scaffolding # 2
      * @param {string} [paginationKey] key is a value returned in PageResponse.next_key to begin querying the next page most efficiently. Only one of offset or key should be set.
      * @param {string} [paginationOffset] offset is a numeric offset that can be used when key is unavailable. It is less efficient than using key. Only one of offset or key should be set.
@@ -8305,19 +7656,6 @@ export class QueryApi extends BaseAPI {
      */
     public oracleAll(marketId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).oracleAll(marketId, paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} classId 
-     * @param {string} nftId 
-     * @param {string} bidder 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public paymentStatus(classId: string, nftId: string, bidder: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).paymentStatus(classId, nftId, bidder, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

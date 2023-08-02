@@ -30,14 +30,14 @@ describe('bank', () => {
     const msgPlaceBid = new ununificlient.proto.ununifi.nftbackedloan.MsgPlaceBid({
       sender: fromAddress.toString(),
       nft_id: { class_id: 'a01', nft_id: 'a10' },
-      bid_amount: { denom: 'token', amount: '3' },
-      bidding_period: ununificlient.proto.google.protobuf.Timestamp.fromObject({
+      price: { denom: 'token', amount: '3' },
+      expiry: ununificlient.proto.google.protobuf.Timestamp.fromObject({
         seconds: date.getTime() / 1000,
         nanos: (date.getTime() % 1000) * 1e6,
       }),
-      deposit_lending_rate: '0.9',
+      interest_rate: '0.9',
       automatic_payment: true,
-      deposit_amount: { denom: 'token', amount: '1' },
+      deposit: { denom: 'token', amount: '1' },
     });
 
     const msgAny = cosmosclient.codec.instanceToProtoAny(msgPlaceBid);
