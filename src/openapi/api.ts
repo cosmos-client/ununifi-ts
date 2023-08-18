@@ -943,6 +943,18 @@ export interface EstimateRedeemAmount200Response {
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof EstimateRedeemAmount200Response
      */
+    'share_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof EstimateRedeemAmount200Response
+     */
+    'fee'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof EstimateRedeemAmount200Response
+     */
     'redeem_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
@@ -1942,32 +1954,69 @@ export interface StrategyAll200Response {
 export interface StrategyAll200ResponseStrategiesInner {
     /**
      * 
+     * @type {StrategyAll200ResponseStrategiesInnerStrategy}
+     * @memberof StrategyAll200ResponseStrategiesInner
+     */
+    'strategy'?: StrategyAll200ResponseStrategiesInnerStrategy;
+    /**
+     * 
      * @type {string}
      * @memberof StrategyAll200ResponseStrategiesInner
+     */
+    'deposit_fee_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof StrategyAll200ResponseStrategiesInner
+     */
+    'withdraw_fee_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof StrategyAll200ResponseStrategiesInner
+     */
+    'performance_fee_rate'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface StrategyAll200ResponseStrategiesInnerStrategy
+ */
+export interface StrategyAll200ResponseStrategiesInnerStrategy {
+    /**
+     * 
+     * @type {string}
+     * @memberof StrategyAll200ResponseStrategiesInnerStrategy
      */
     'denom'?: string;
     /**
      * 
      * @type {string}
-     * @memberof StrategyAll200ResponseStrategiesInner
+     * @memberof StrategyAll200ResponseStrategiesInnerStrategy
      */
     'id'?: string;
     /**
      * 
      * @type {string}
-     * @memberof StrategyAll200ResponseStrategiesInner
+     * @memberof StrategyAll200ResponseStrategiesInnerStrategy
      */
     'contract_address'?: string;
     /**
      * 
      * @type {string}
-     * @memberof StrategyAll200ResponseStrategiesInner
+     * @memberof StrategyAll200ResponseStrategiesInnerStrategy
      */
     'name'?: string;
     /**
      * 
      * @type {string}
-     * @memberof StrategyAll200ResponseStrategiesInner
+     * @memberof StrategyAll200ResponseStrategiesInnerStrategy
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof StrategyAll200ResponseStrategiesInnerStrategy
      */
     'git_url'?: string;
 }
@@ -3695,6 +3744,19 @@ export interface UnunifiYieldaggregatorQueryAllStrategyResponse {
 /**
  * 
  * @export
+ * @interface UnunifiYieldaggregatorQueryAllVaultByShareHolderResponse
+ */
+export interface UnunifiYieldaggregatorQueryAllVaultByShareHolderResponse {
+    /**
+     * 
+     * @type {Array<VaultAll200ResponseVaultsInner>}
+     * @memberof UnunifiYieldaggregatorQueryAllVaultByShareHolderResponse
+     */
+    'vaults'?: Array<VaultAll200ResponseVaultsInner>;
+}
+/**
+ * 
+ * @export
  * @interface UnunifiYieldaggregatorQueryAllVaultResponse
  */
 export interface UnunifiYieldaggregatorQueryAllVaultResponse {
@@ -3735,6 +3797,18 @@ export interface UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse {
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
      * @memberof UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
      */
+    'share_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
+     */
+    'fee'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
+     */
     'redeem_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
@@ -3758,22 +3832,10 @@ export interface UnunifiYieldaggregatorQueryGetStrategyResponse {
 export interface UnunifiYieldaggregatorQueryGetVaultResponse {
     /**
      * 
-     * @type {VaultAll200ResponseVaultsInner}
+     * @type {VaultAll200ResponseVaultsInnerVault}
      * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
      */
-    'vault'?: VaultAll200ResponseVaultsInner;
-    /**
-     * 
-     * @type {Array<StrategyAll200ResponseStrategiesInner>}
-     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
-     */
-    'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
-     */
-    'vault_address'?: string;
+    'vault'?: VaultAll200ResponseVaultsInnerVault;
     /**
      * 
      * @type {string}
@@ -3791,7 +3853,13 @@ export interface UnunifiYieldaggregatorQueryGetVaultResponse {
      * @type {string}
      * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
      */
-    'total_withdrawal_balance'?: string;
+    'withdraw_reserve'?: string;
+    /**
+     * 
+     * @type {Array<StrategyAll200ResponseStrategiesInnerStrategy>}
+     * @memberof UnunifiYieldaggregatorQueryGetVaultResponse
+     */
+    'strategies'?: Array<StrategyAll200ResponseStrategiesInnerStrategy>;
 }
 /**
  * QueryParamsResponse is response type for the Query/Params RPC method.
@@ -3841,7 +3909,44 @@ export interface UnunifiYieldaggregatorStrategy {
      * @type {string}
      * @memberof UnunifiYieldaggregatorStrategy
      */
+    'description'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategy
+     */
     'git_url'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorStrategyContainer
+ */
+export interface UnunifiYieldaggregatorStrategyContainer {
+    /**
+     * 
+     * @type {StrategyAll200ResponseStrategiesInnerStrategy}
+     * @memberof UnunifiYieldaggregatorStrategyContainer
+     */
+    'strategy'?: StrategyAll200ResponseStrategiesInnerStrategy;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategyContainer
+     */
+    'deposit_fee_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategyContainer
+     */
+    'withdraw_fee_rate'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorStrategyContainer
+     */
+    'performance_fee_rate'?: string;
 }
 /**
  * 
@@ -3885,6 +3990,18 @@ export interface UnunifiYieldaggregatorVault {
      * @type {string}
      * @memberof UnunifiYieldaggregatorVault
      */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVault
+     */
     'owner'?: string;
     /**
      * 
@@ -3906,10 +4023,47 @@ export interface UnunifiYieldaggregatorVault {
     'withdraw_reserve_rate'?: string;
     /**
      * 
-     * @type {Array<VaultAll200ResponseVaultsInnerStrategyWeightsInner>}
+     * @type {Array<VaultAll200ResponseVaultsInnerVaultStrategyWeightsInner>}
      * @memberof UnunifiYieldaggregatorVault
      */
-    'strategy_weights'?: Array<VaultAll200ResponseVaultsInnerStrategyWeightsInner>;
+    'strategy_weights'?: Array<VaultAll200ResponseVaultsInnerVaultStrategyWeightsInner>;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVault
+     */
+    'fee_collector_address'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiYieldaggregatorVaultContainer
+ */
+export interface UnunifiYieldaggregatorVaultContainer {
+    /**
+     * 
+     * @type {VaultAll200ResponseVaultsInnerVault}
+     * @memberof UnunifiYieldaggregatorVaultContainer
+     */
+    'vault'?: VaultAll200ResponseVaultsInnerVault;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVaultContainer
+     */
+    'total_bonded_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVaultContainer
+     */
+    'total_unbonding_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UnunifiYieldaggregatorVaultContainer
+     */
+    'withdraw_reserve'?: string;
 }
 /**
  * 
@@ -3919,22 +4073,10 @@ export interface UnunifiYieldaggregatorVault {
 export interface Vault200Response {
     /**
      * 
-     * @type {VaultAll200ResponseVaultsInner}
+     * @type {VaultAll200ResponseVaultsInnerVault}
      * @memberof Vault200Response
      */
-    'vault'?: VaultAll200ResponseVaultsInner;
-    /**
-     * 
-     * @type {Array<StrategyAll200ResponseStrategiesInner>}
-     * @memberof Vault200Response
-     */
-    'strategies'?: Array<StrategyAll200ResponseStrategiesInner>;
-    /**
-     * 
-     * @type {string}
-     * @memberof Vault200Response
-     */
-    'vault_address'?: string;
+    'vault'?: VaultAll200ResponseVaultsInnerVault;
     /**
      * 
      * @type {string}
@@ -3952,7 +4094,13 @@ export interface Vault200Response {
      * @type {string}
      * @memberof Vault200Response
      */
-    'total_withdrawal_balance'?: string;
+    'withdraw_reserve'?: string;
+    /**
+     * 
+     * @type {Array<StrategyAll200ResponseStrategiesInnerStrategy>}
+     * @memberof Vault200Response
+     */
+    'strategies'?: Array<StrategyAll200ResponseStrategiesInnerStrategy>;
 }
 /**
  * 
@@ -3981,65 +4129,127 @@ export interface VaultAll200Response {
 export interface VaultAll200ResponseVaultsInner {
     /**
      * 
+     * @type {VaultAll200ResponseVaultsInnerVault}
+     * @memberof VaultAll200ResponseVaultsInner
+     */
+    'vault'?: VaultAll200ResponseVaultsInnerVault;
+    /**
+     * 
      * @type {string}
      * @memberof VaultAll200ResponseVaultsInner
+     */
+    'total_bonded_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VaultAll200ResponseVaultsInner
+     */
+    'total_unbonding_amount'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VaultAll200ResponseVaultsInner
+     */
+    'withdraw_reserve'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface VaultAll200ResponseVaultsInnerVault
+ */
+export interface VaultAll200ResponseVaultsInnerVault {
+    /**
+     * 
+     * @type {string}
+     * @memberof VaultAll200ResponseVaultsInnerVault
      */
     'id'?: string;
     /**
      * 
      * @type {string}
-     * @memberof VaultAll200ResponseVaultsInner
+     * @memberof VaultAll200ResponseVaultsInnerVault
      */
     'denom'?: string;
     /**
      * 
      * @type {string}
-     * @memberof VaultAll200ResponseVaultsInner
+     * @memberof VaultAll200ResponseVaultsInnerVault
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VaultAll200ResponseVaultsInnerVault
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VaultAll200ResponseVaultsInnerVault
      */
     'owner'?: string;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof VaultAll200ResponseVaultsInner
+     * @memberof VaultAll200ResponseVaultsInnerVault
      */
     'owner_deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
     /**
      * 
      * @type {string}
-     * @memberof VaultAll200ResponseVaultsInner
+     * @memberof VaultAll200ResponseVaultsInnerVault
      */
     'withdraw_commission_rate'?: string;
     /**
      * 
      * @type {string}
-     * @memberof VaultAll200ResponseVaultsInner
+     * @memberof VaultAll200ResponseVaultsInnerVault
      */
     'withdraw_reserve_rate'?: string;
     /**
      * 
-     * @type {Array<VaultAll200ResponseVaultsInnerStrategyWeightsInner>}
-     * @memberof VaultAll200ResponseVaultsInner
+     * @type {Array<VaultAll200ResponseVaultsInnerVaultStrategyWeightsInner>}
+     * @memberof VaultAll200ResponseVaultsInnerVault
      */
-    'strategy_weights'?: Array<VaultAll200ResponseVaultsInnerStrategyWeightsInner>;
+    'strategy_weights'?: Array<VaultAll200ResponseVaultsInnerVaultStrategyWeightsInner>;
+    /**
+     * 
+     * @type {string}
+     * @memberof VaultAll200ResponseVaultsInnerVault
+     */
+    'fee_collector_address'?: string;
 }
 /**
  * 
  * @export
- * @interface VaultAll200ResponseVaultsInnerStrategyWeightsInner
+ * @interface VaultAll200ResponseVaultsInnerVaultStrategyWeightsInner
  */
-export interface VaultAll200ResponseVaultsInnerStrategyWeightsInner {
+export interface VaultAll200ResponseVaultsInnerVaultStrategyWeightsInner {
     /**
      * 
      * @type {string}
-     * @memberof VaultAll200ResponseVaultsInnerStrategyWeightsInner
+     * @memberof VaultAll200ResponseVaultsInnerVaultStrategyWeightsInner
      */
     'strategy_id'?: string;
     /**
      * 
      * @type {string}
-     * @memberof VaultAll200ResponseVaultsInnerStrategyWeightsInner
+     * @memberof VaultAll200ResponseVaultsInnerVaultStrategyWeightsInner
      */
     'weight'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface VaultAllByShareHolder200Response
+ */
+export interface VaultAllByShareHolder200Response {
+    /**
+     * 
+     * @type {Array<VaultAll200ResponseVaultsInner>}
+     * @memberof VaultAllByShareHolder200Response
+     */
+    'vaults'?: Array<VaultAll200ResponseVaultsInner>;
 }
 /**
  * QueryParamsResponse is response type for the Query/Params RPC method.
@@ -5808,6 +6018,39 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} shareHolder 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        vaultAllByShareHolder: async (shareHolder: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'shareHolder' is not null or undefined
+            assertParamExists('vaultAllByShareHolder', 'shareHolder', shareHolder)
+            const localVarPath = `/ununifi/yieldaggregator/vaults/share-holders/{share_holder}`
+                .replace(`{${"share_holder"}}`, encodeURIComponent(String(shareHolder)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @summary Parameters queries the parameters of the module.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -6353,6 +6596,16 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} shareHolder 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async vaultAllByShareHolder(shareHolder: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VaultAllByShareHolder200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.vaultAllByShareHolder(shareHolder, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @summary Parameters queries the parameters of the module.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -6828,6 +7081,15 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         vaultAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: any): AxiosPromise<VaultAll200Response> {
             return localVarFp.vaultAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} shareHolder 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        vaultAllByShareHolder(shareHolder: string, options?: any): AxiosPromise<VaultAllByShareHolder200Response> {
+            return localVarFp.vaultAllByShareHolder(shareHolder, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7398,6 +7660,17 @@ export class QueryApi extends BaseAPI {
      */
     public vaultAll(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).vaultAll(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} shareHolder 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public vaultAllByShareHolder(shareHolder: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).vaultAllByShareHolder(shareHolder, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
