@@ -13,7 +13,7 @@ export function listedNfts(sdk: cosmosclient.CosmosSDK) {
   return new QueryApi(undefined, sdk.url).listedNfts();
 }
 
-export function listedClasses(sdk: cosmosclient.CosmosSDK, classId: string, nftLimit?: number) {
+export function listedClasses(sdk: cosmosclient.CosmosSDK, classId?: string, nftLimit?: number) {
   return new QueryApi(undefined, sdk.url).listedClasses(classId, nftLimit);
 }
 
