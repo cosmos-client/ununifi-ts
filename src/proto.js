@@ -34900,39 +34900,6 @@ export const ununifi = $root.ununifi = (() => {
              */
 
             /**
-             * Callback as used by {@link ununifi.nftbackedloan.Query#listedNft}.
-             * @memberof ununifi.nftbackedloan.Query
-             * @typedef ListedNftCallback
-             * @type {function}
-             * @param {Error|null} error Error, if any
-             * @param {ununifi.nftbackedloan.QueryListedNftResponse} [response] QueryListedNftResponse
-             */
-
-            /**
-             * Calls ListedNft.
-             * @function listedNft
-             * @memberof ununifi.nftbackedloan.Query
-             * @instance
-             * @param {ununifi.nftbackedloan.IQueryListedNftRequest} request QueryListedNftRequest message or plain object
-             * @param {ununifi.nftbackedloan.Query.ListedNftCallback} callback Node-style callback called with the error, if any, and QueryListedNftResponse
-             * @returns {undefined}
-             * @variation 1
-             */
-            Object.defineProperty(Query.prototype.listedNft = function listedNft(request, callback) {
-                return this.rpcCall(listedNft, $root.ununifi.nftbackedloan.QueryListedNftRequest, $root.ununifi.nftbackedloan.QueryListedNftResponse, request, callback);
-            }, "name", { value: "ListedNft" });
-
-            /**
-             * Calls ListedNft.
-             * @function listedNft
-             * @memberof ununifi.nftbackedloan.Query
-             * @instance
-             * @param {ununifi.nftbackedloan.IQueryListedNftRequest} request QueryListedNftRequest message or plain object
-             * @returns {Promise<ununifi.nftbackedloan.QueryListedNftResponse>} Promise
-             * @variation 2
-             */
-
-            /**
              * Callback as used by {@link ununifi.nftbackedloan.Query#listedNfts}.
              * @memberof ununifi.nftbackedloan.Query
              * @typedef ListedNftsCallback
@@ -34962,6 +34929,39 @@ export const ununifi = $root.ununifi = (() => {
              * @instance
              * @param {ununifi.nftbackedloan.IQueryListedNftsRequest} request QueryListedNftsRequest message or plain object
              * @returns {Promise<ununifi.nftbackedloan.QueryListedNftsResponse>} Promise
+             * @variation 2
+             */
+
+            /**
+             * Callback as used by {@link ununifi.nftbackedloan.Query#listedNft}.
+             * @memberof ununifi.nftbackedloan.Query
+             * @typedef ListedNftCallback
+             * @type {function}
+             * @param {Error|null} error Error, if any
+             * @param {ununifi.nftbackedloan.QueryListedNftResponse} [response] QueryListedNftResponse
+             */
+
+            /**
+             * Calls ListedNft.
+             * @function listedNft
+             * @memberof ununifi.nftbackedloan.Query
+             * @instance
+             * @param {ununifi.nftbackedloan.IQueryListedNftRequest} request QueryListedNftRequest message or plain object
+             * @param {ununifi.nftbackedloan.Query.ListedNftCallback} callback Node-style callback called with the error, if any, and QueryListedNftResponse
+             * @returns {undefined}
+             * @variation 1
+             */
+            Object.defineProperty(Query.prototype.listedNft = function listedNft(request, callback) {
+                return this.rpcCall(listedNft, $root.ununifi.nftbackedloan.QueryListedNftRequest, $root.ununifi.nftbackedloan.QueryListedNftResponse, request, callback);
+            }, "name", { value: "ListedNft" });
+
+            /**
+             * Calls ListedNft.
+             * @function listedNft
+             * @memberof ununifi.nftbackedloan.Query
+             * @instance
+             * @param {ununifi.nftbackedloan.IQueryListedNftRequest} request QueryListedNftRequest message or plain object
+             * @returns {Promise<ununifi.nftbackedloan.QueryListedNftResponse>} Promise
              * @variation 2
              */
 
@@ -36086,7 +36086,6 @@ export const ununifi = $root.ununifi = (() => {
              * Properties of a QueryListedClassesRequest.
              * @memberof ununifi.nftbackedloan
              * @interface IQueryListedClassesRequest
-             * @property {string|null} [class_id] QueryListedClassesRequest class_id
              * @property {number|null} [nft_limit] QueryListedClassesRequest nft_limit
              */
 
@@ -36104,14 +36103,6 @@ export const ununifi = $root.ununifi = (() => {
                         if (properties[keys[i]] != null)
                             this[keys[i]] = properties[keys[i]];
             }
-
-            /**
-             * QueryListedClassesRequest class_id.
-             * @member {string} class_id
-             * @memberof ununifi.nftbackedloan.QueryListedClassesRequest
-             * @instance
-             */
-            QueryListedClassesRequest.prototype.class_id = "";
 
             /**
              * QueryListedClassesRequest nft_limit.
@@ -36133,10 +36124,8 @@ export const ununifi = $root.ununifi = (() => {
             QueryListedClassesRequest.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.class_id);
                 if (message.nft_limit != null && Object.hasOwnProperty.call(message, "nft_limit"))
-                    writer.uint32(/* id 2, wireType 0 =*/16).int32(message.nft_limit);
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.nft_limit);
                 return writer;
             };
 
@@ -36172,9 +36161,6 @@ export const ununifi = $root.ununifi = (() => {
                     let tag = reader.uint32();
                     switch (tag >>> 3) {
                     case 1:
-                        message.class_id = reader.string();
-                        break;
-                    case 2:
                         message.nft_limit = reader.int32();
                         break;
                     default:
@@ -36212,9 +36198,6 @@ export const ununifi = $root.ununifi = (() => {
             QueryListedClassesRequest.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.class_id != null && message.hasOwnProperty("class_id"))
-                    if (!$util.isString(message.class_id))
-                        return "class_id: string expected";
                 if (message.nft_limit != null && message.hasOwnProperty("nft_limit"))
                     if (!$util.isInteger(message.nft_limit))
                         return "nft_limit: integer expected";
@@ -36233,8 +36216,6 @@ export const ununifi = $root.ununifi = (() => {
                 if (object instanceof $root.ununifi.nftbackedloan.QueryListedClassesRequest)
                     return object;
                 let message = new $root.ununifi.nftbackedloan.QueryListedClassesRequest();
-                if (object.class_id != null)
-                    message.class_id = String(object.class_id);
                 if (object.nft_limit != null)
                     message.nft_limit = object.nft_limit | 0;
                 return message;
@@ -36253,12 +36234,8 @@ export const ununifi = $root.ununifi = (() => {
                 if (!options)
                     options = {};
                 let object = {};
-                if (options.defaults) {
-                    object.class_id = "";
+                if (options.defaults)
                     object.nft_limit = 0;
-                }
-                if (message.class_id != null && message.hasOwnProperty("class_id"))
-                    object.class_id = message.class_id;
                 if (message.nft_limit != null && message.hasOwnProperty("nft_limit"))
                     object.nft_limit = message.nft_limit;
                 return object;

@@ -15283,20 +15283,6 @@ export namespace ununifi {
             public params(request: ununifi.nftbackedloan.IQueryParamsRequest): Promise<ununifi.nftbackedloan.QueryParamsResponse>;
 
             /**
-             * Calls ListedNft.
-             * @param request QueryListedNftRequest message or plain object
-             * @param callback Node-style callback called with the error, if any, and QueryListedNftResponse
-             */
-            public listedNft(request: ununifi.nftbackedloan.IQueryListedNftRequest, callback: ununifi.nftbackedloan.Query.ListedNftCallback): void;
-
-            /**
-             * Calls ListedNft.
-             * @param request QueryListedNftRequest message or plain object
-             * @returns Promise
-             */
-            public listedNft(request: ununifi.nftbackedloan.IQueryListedNftRequest): Promise<ununifi.nftbackedloan.QueryListedNftResponse>;
-
-            /**
              * Calls ListedNfts.
              * @param request QueryListedNftsRequest message or plain object
              * @param callback Node-style callback called with the error, if any, and QueryListedNftsResponse
@@ -15309,6 +15295,20 @@ export namespace ununifi {
              * @returns Promise
              */
             public listedNfts(request: ununifi.nftbackedloan.IQueryListedNftsRequest): Promise<ununifi.nftbackedloan.QueryListedNftsResponse>;
+
+            /**
+             * Calls ListedNft.
+             * @param request QueryListedNftRequest message or plain object
+             * @param callback Node-style callback called with the error, if any, and QueryListedNftResponse
+             */
+            public listedNft(request: ununifi.nftbackedloan.IQueryListedNftRequest, callback: ununifi.nftbackedloan.Query.ListedNftCallback): void;
+
+            /**
+             * Calls ListedNft.
+             * @param request QueryListedNftRequest message or plain object
+             * @returns Promise
+             */
+            public listedNft(request: ununifi.nftbackedloan.IQueryListedNftRequest): Promise<ununifi.nftbackedloan.QueryListedNftResponse>;
 
             /**
              * Calls ListedClasses.
@@ -15419,18 +15419,18 @@ export namespace ununifi {
             type ParamsCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryParamsResponse) => void;
 
             /**
-             * Callback as used by {@link ununifi.nftbackedloan.Query#listedNft}.
-             * @param error Error, if any
-             * @param [response] QueryListedNftResponse
-             */
-            type ListedNftCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryListedNftResponse) => void;
-
-            /**
              * Callback as used by {@link ununifi.nftbackedloan.Query#listedNfts}.
              * @param error Error, if any
              * @param [response] QueryListedNftsResponse
              */
             type ListedNftsCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryListedNftsResponse) => void;
+
+            /**
+             * Callback as used by {@link ununifi.nftbackedloan.Query#listedNft}.
+             * @param error Error, if any
+             * @param [response] QueryListedNftResponse
+             */
+            type ListedNftCallback = (error: (Error|null), response?: ununifi.nftbackedloan.QueryListedNftResponse) => void;
 
             /**
              * Callback as used by {@link ununifi.nftbackedloan.Query#listedClasses}.
@@ -15900,9 +15900,6 @@ export namespace ununifi {
         /** Properties of a QueryListedClassesRequest. */
         interface IQueryListedClassesRequest {
 
-            /** QueryListedClassesRequest class_id */
-            class_id?: (string|null);
-
             /** QueryListedClassesRequest nft_limit */
             nft_limit?: (number|null);
         }
@@ -15915,9 +15912,6 @@ export namespace ununifi {
              * @param [properties] Properties to set
              */
             constructor(properties?: ununifi.nftbackedloan.IQueryListedClassesRequest);
-
-            /** QueryListedClassesRequest class_id. */
-            public class_id: string;
 
             /** QueryListedClassesRequest nft_limit. */
             public nft_limit: number;
