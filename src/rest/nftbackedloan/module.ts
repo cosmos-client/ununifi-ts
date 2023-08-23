@@ -13,8 +13,8 @@ export function listedNfts(sdk: cosmosclient.CosmosSDK) {
   return new QueryApi(undefined, sdk.url).listedNfts();
 }
 
-export function listedClasses(sdk: cosmosclient.CosmosSDK, classId?: string, nftLimit?: number) {
-  return new QueryApi(undefined, sdk.url).listedClasses(classId, nftLimit);
+export function listedClasses(sdk: cosmosclient.CosmosSDK, nftLimit?: number) {
+  return new QueryApi(undefined, sdk.url).listedClasses(nftLimit);
 }
 
 export function listedClass(sdk: cosmosclient.CosmosSDK, classId: string, nftLimit?: number) {
@@ -25,7 +25,7 @@ export function loan(sdk: cosmosclient.CosmosSDK, classId: string, nftId: string
   return new QueryApi(undefined, sdk.url).loan(classId, nftId);
 }
 
-export function nftBids(sdk: cosmosclient.CosmosSDK, classId: string, nftId: string) {
+export function nftBids(sdk: cosmosclient.CosmosSDK, classId?: string, nftId?: string) {
   return new QueryApi(undefined, sdk.url).nftBids(classId, nftId);
 }
 
