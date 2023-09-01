@@ -237,51 +237,6 @@ export interface AllPositions200ResponsePositionsInner {
 /**
  * 
  * @export
- * @interface AllRewards200Response
- */
-export interface AllRewards200Response {
-    /**
-     * 
-     * @type {AllRewards200ResponseRewardRecord}
-     * @memberof AllRewards200Response
-     */
-    'reward_record'?: AllRewards200ResponseRewardRecord;
-}
-/**
- * 
- * @export
- * @interface AllRewards200ResponseRewardRecord
- */
-export interface AllRewards200ResponseRewardRecord {
-    /**
-     * 
-     * @type {string}
-     * @memberof AllRewards200ResponseRewardRecord
-     */
-    'address'?: string;
-    /**
-     * 
-     * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
-     * @memberof AllRewards200ResponseRewardRecord
-     */
-    'rewards'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
-}
-/**
- * 
- * @export
- * @interface AvailableAssetInPoolByDenom200Response
- */
-export interface AvailableAssetInPoolByDenom200Response {
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof AvailableAssetInPoolByDenom200Response
-     */
-    'available_asset'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-}
-/**
- * 
- * @export
  * @interface AvailableAssetsInPool200Response
  */
 export interface AvailableAssetsInPool200Response {
@@ -291,118 +246,6 @@ export interface AvailableAssetsInPool200Response {
      * @memberof AvailableAssetsInPool200Response
      */
     'available_assets'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
-}
-/**
- * 
- * @export
- * @interface BidderBids200Response
- */
-export interface BidderBids200Response {
-    /**
-     * 
-     * @type {Array<BidderBids200ResponseBidsInner>}
-     * @memberof BidderBids200Response
-     */
-    'bids'?: Array<BidderBids200ResponseBidsInner>;
-}
-/**
- * 
- * @export
- * @interface BidderBids200ResponseBidsInner
- */
-export interface BidderBids200ResponseBidsInner {
-    /**
-     * 
-     * @type {BidderBids200ResponseBidsInnerId}
-     * @memberof BidderBids200ResponseBidsInner
-     */
-    'id'?: BidderBids200ResponseBidsInnerId;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof BidderBids200ResponseBidsInner
-     */
-    'price'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof BidderBids200ResponseBidsInner
-     */
-    'deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof BidderBids200ResponseBidsInner
-     */
-    'paid_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-    /**
-     * 
-     * @type {string}
-     * @memberof BidderBids200ResponseBidsInner
-     */
-    'expiry'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof BidderBids200ResponseBidsInner
-     */
-    'interest_rate'?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof BidderBids200ResponseBidsInner
-     */
-    'automatic_payment'?: boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof BidderBids200ResponseBidsInner
-     */
-    'created_at'?: string;
-    /**
-     * 
-     * @type {BorrowInfo}
-     * @memberof BidderBids200ResponseBidsInner
-     */
-    'loan'?: BorrowInfo;
-}
-/**
- * 
- * @export
- * @interface BidderBids200ResponseBidsInnerId
- */
-export interface BidderBids200ResponseBidsInnerId {
-    /**
-     * 
-     * @type {BidderBids200ResponseBidsInnerIdNftId}
-     * @memberof BidderBids200ResponseBidsInnerId
-     */
-    'nft_id'?: BidderBids200ResponseBidsInnerIdNftId;
-    /**
-     * 
-     * @type {string}
-     * @memberof BidderBids200ResponseBidsInnerId
-     */
-    'bidder'?: string;
-}
-/**
- * 
- * @export
- * @interface BidderBids200ResponseBidsInnerIdNftId
- */
-export interface BidderBids200ResponseBidsInnerIdNftId {
-    /**
-     * 
-     * @type {string}
-     * @memberof BidderBids200ResponseBidsInnerIdNftId
-     */
-    'class_id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof BidderBids200ResponseBidsInnerIdNftId
-     */
-    'token_id'?: string;
 }
 /**
  * 
@@ -834,6 +677,19 @@ export interface EcosystemIncentiveParamsDefaultResponseDetailsInner {
 /**
  * 
  * @export
+ * @interface EcosystemRewards200Response
+ */
+export interface EcosystemRewards200Response {
+    /**
+     * 
+     * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
+     * @memberof EcosystemRewards200Response
+     */
+    'rewards'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
+}
+/**
+ * 
+ * @export
  * @interface EstimateDLPTokenAmount200Response
  */
 export interface EstimateDLPTokenAmount200Response {
@@ -956,6 +812,12 @@ export interface EstimateRedeemAmount200Response {
      * @memberof EstimateRedeemAmount200Response
      */
     'redeem_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof EstimateRedeemAmount200Response
+     */
+    'total_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -1093,95 +955,108 @@ export interface LiquidityProviderTokenNominalAPY200Response {
 /**
  * 
  * @export
- * @interface ListedClass200Response
+ * @interface ListedClasses200Response
  */
-export interface ListedClass200Response {
+export interface ListedClasses200Response {
+    /**
+     * 
+     * @type {Array<ListedClasses200ResponseClassesInner>}
+     * @memberof ListedClasses200Response
+     */
+    'classes'?: Array<ListedClasses200ResponseClassesInner>;
+}
+/**
+ * 
+ * @export
+ * @interface ListedClasses200ResponseClassesInner
+ */
+export interface ListedClasses200ResponseClassesInner {
     /**
      * 
      * @type {string}
-     * @memberof ListedClass200Response
+     * @memberof ListedClasses200ResponseClassesInner
      */
     'class_id'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedClass200Response
+     * @memberof ListedClasses200ResponseClassesInner
      */
     'name'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedClass200Response
+     * @memberof ListedClasses200ResponseClassesInner
      */
     'description'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedClass200Response
+     * @memberof ListedClasses200ResponseClassesInner
      */
     'symbol'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedClass200Response
+     * @memberof ListedClasses200ResponseClassesInner
      */
     'uri'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedClass200Response
+     * @memberof ListedClasses200ResponseClassesInner
      */
     'urihash'?: string;
     /**
      * 
-     * @type {Array<ListedClass200ResponseNftsInner>}
-     * @memberof ListedClass200Response
+     * @type {Array<ListedClasses200ResponseClassesInnerNftsInner>}
+     * @memberof ListedClasses200ResponseClassesInner
      */
-    'nfts'?: Array<ListedClass200ResponseNftsInner>;
+    'nfts'?: Array<ListedClasses200ResponseClassesInnerNftsInner>;
     /**
      * 
      * @type {string}
-     * @memberof ListedClass200Response
+     * @memberof ListedClasses200ResponseClassesInner
      */
     'nft_count'?: string;
 }
 /**
  * 
  * @export
- * @interface ListedClass200ResponseNftsInner
+ * @interface ListedClasses200ResponseClassesInnerNftsInner
  */
-export interface ListedClass200ResponseNftsInner {
+export interface ListedClasses200ResponseClassesInnerNftsInner {
     /**
      * 
      * @type {string}
-     * @memberof ListedClass200ResponseNftsInner
+     * @memberof ListedClasses200ResponseClassesInnerNftsInner
      */
     'id'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedClass200ResponseNftsInner
+     * @memberof ListedClasses200ResponseClassesInnerNftsInner
      */
     'uri'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ListedClass200ResponseNftsInner
+     * @memberof ListedClasses200ResponseClassesInnerNftsInner
      */
     'uri_hash'?: string;
 }
 /**
  * 
  * @export
- * @interface ListedClasses200Response
+ * @interface ListedNft200Response
  */
-export interface ListedClasses200Response {
+export interface ListedNft200Response {
     /**
      * 
-     * @type {Array<ListedClass200Response>}
-     * @memberof ListedClasses200Response
+     * @type {ListedNfts200ResponseListingsInnerListing}
+     * @memberof ListedNft200Response
      */
-    'classes'?: Array<ListedClass200Response>;
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
 }
 /**
  * 
@@ -1210,10 +1085,10 @@ export interface ListedNfts200ResponseListingsInner {
     'listing'?: ListedNfts200ResponseListingsInnerListing;
     /**
      * 
-     * @type {ListedClass200ResponseNftsInner}
+     * @type {ListedClasses200ResponseClassesInnerNftsInner}
      * @memberof ListedNfts200ResponseListingsInner
      */
-    'nft_info'?: ListedClass200ResponseNftsInner;
+    'nft_info'?: ListedClasses200ResponseClassesInnerNftsInner;
 }
 /**
  * 
@@ -1223,10 +1098,10 @@ export interface ListedNfts200ResponseListingsInner {
 export interface ListedNfts200ResponseListingsInnerListing {
     /**
      * 
-     * @type {BidderBids200ResponseBidsInnerIdNftId}
+     * @type {NftBids200ResponseBidsInnerIdNftId}
      * @memberof ListedNfts200ResponseListingsInnerListing
      */
-    'nft_id'?: BidderBids200ResponseBidsInnerIdNftId;
+    'nft_id'?: NftBids200ResponseBidsInnerIdNftId;
     /**
      * 
      * @type {string}
@@ -1314,10 +1189,10 @@ export type ListedNfts200ResponseListingsInnerListingStateEnum = typeof ListedNf
 export interface Loan200Response {
     /**
      * 
-     * @type {BidderBids200ResponseBidsInnerIdNftId}
+     * @type {NftBids200ResponseBidsInnerIdNftId}
      * @memberof Loan200Response
      */
-    'nft_id'?: BidderBids200ResponseBidsInnerIdNftId;
+    'nft_id'?: NftBids200ResponseBidsInnerIdNftId;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
@@ -1456,6 +1331,118 @@ export interface NftBackedLoanParams200ResponseParams {
     'nft_listing_commission_rate'?: string;
 }
 /**
+ * 
+ * @export
+ * @interface NftBids200Response
+ */
+export interface NftBids200Response {
+    /**
+     * 
+     * @type {Array<NftBids200ResponseBidsInner>}
+     * @memberof NftBids200Response
+     */
+    'bids'?: Array<NftBids200ResponseBidsInner>;
+}
+/**
+ * 
+ * @export
+ * @interface NftBids200ResponseBidsInner
+ */
+export interface NftBids200ResponseBidsInner {
+    /**
+     * 
+     * @type {NftBids200ResponseBidsInnerId}
+     * @memberof NftBids200ResponseBidsInner
+     */
+    'id'?: NftBids200ResponseBidsInnerId;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof NftBids200ResponseBidsInner
+     */
+    'price'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof NftBids200ResponseBidsInner
+     */
+    'deposit'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof NftBids200ResponseBidsInner
+     */
+    'paid_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBids200ResponseBidsInner
+     */
+    'expiry'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBids200ResponseBidsInner
+     */
+    'interest_rate'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof NftBids200ResponseBidsInner
+     */
+    'automatic_payment'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBids200ResponseBidsInner
+     */
+    'created_at'?: string;
+    /**
+     * 
+     * @type {BorrowInfo}
+     * @memberof NftBids200ResponseBidsInner
+     */
+    'loan'?: BorrowInfo;
+}
+/**
+ * 
+ * @export
+ * @interface NftBids200ResponseBidsInnerId
+ */
+export interface NftBids200ResponseBidsInnerId {
+    /**
+     * 
+     * @type {NftBids200ResponseBidsInnerIdNftId}
+     * @memberof NftBids200ResponseBidsInnerId
+     */
+    'nft_id'?: NftBids200ResponseBidsInnerIdNftId;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBids200ResponseBidsInnerId
+     */
+    'bidder'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface NftBids200ResponseBidsInnerIdNftId
+ */
+export interface NftBids200ResponseBidsInnerIdNftId {
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBids200ResponseBidsInnerIdNftId
+     */
+    'class_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NftBids200ResponseBidsInnerIdNftId
+     */
+    'token_id'?: string;
+}
+/**
  * QueryParamsResponse is the response type for the Query/Params RPC method.
  * @export
  * @interface NftFactoryParams200Response
@@ -1486,19 +1473,6 @@ export interface NftFactoryParams200ResponseParams {
      * @memberof NftFactoryParams200ResponseParams
      */
     'fee_collector_address'?: string;
-}
-/**
- * 
- * @export
- * @interface NftListing200Response
- */
-export interface NftListing200Response {
-    /**
-     * 
-     * @type {ListedNfts200ResponseListingsInnerListing}
-     * @memberof NftListing200Response
-     */
-    'listing'?: ListedNfts200ResponseListingsInnerListing;
 }
 /**
  * 
@@ -1843,15 +1817,15 @@ export interface RawPriceAll200ResponsePricesInner {
 /**
  * 
  * @export
- * @interface Reward200Response
+ * @interface RecipientAddressWithNftId200Response
  */
-export interface Reward200Response {
+export interface RecipientAddressWithNftId200Response {
     /**
      * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof Reward200Response
+     * @type {string}
+     * @memberof RecipientAddressWithNftId200Response
      */
-    'reward'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    'address'?: string;
 }
 /**
  * 
@@ -1901,19 +1875,6 @@ export const RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotal
 
 export type RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum = typeof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum[keyof typeof RewardRateDefinesTheRatioToTakeRewardForASpecificRewardTypeTheTotalSumOfRewardRateInAModuleCannotBeExceed1RewardTypeEnum];
 
-/**
- * 
- * @export
- * @interface Rewards200Response
- */
-export interface Rewards200Response {
-    /**
-     * 
-     * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
-     * @memberof Rewards200Response
-     */
-    'rewards'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
-}
 /**
  * 
  * @export
@@ -2478,19 +2439,6 @@ export interface UnunifiDerivativesQueryAllPositionsResponse {
 /**
  * 
  * @export
- * @interface UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse
- */
-export interface UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse {
-    /**
-     * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof UnunifiDerivativesQueryAvailableAssetInPoolByDenomResponse
-     */
-    'available_asset'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-}
-/**
- * 
- * @export
  * @interface UnunifiDerivativesQueryAvailableAssetsInPoolResponse
  */
 export interface UnunifiDerivativesQueryAvailableAssetsInPoolResponse {
@@ -2745,15 +2693,15 @@ export interface UnunifiEcosystemincentiveParams {
 /**
  * 
  * @export
- * @interface UnunifiEcosystemincentiveQueryAllRewardsResponse
+ * @interface UnunifiEcosystemincentiveQueryEcosystemRewardsResponse
  */
-export interface UnunifiEcosystemincentiveQueryAllRewardsResponse {
+export interface UnunifiEcosystemincentiveQueryEcosystemRewardsResponse {
     /**
      * 
-     * @type {AllRewards200ResponseRewardRecord}
-     * @memberof UnunifiEcosystemincentiveQueryAllRewardsResponse
+     * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
+     * @memberof UnunifiEcosystemincentiveQueryEcosystemRewardsResponse
      */
-    'reward_record'?: AllRewards200ResponseRewardRecord;
+    'rewards'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
 }
 /**
  * 
@@ -2771,15 +2719,15 @@ export interface UnunifiEcosystemincentiveQueryParamsResponse {
 /**
  * 
  * @export
- * @interface UnunifiEcosystemincentiveQueryRewardResponse
+ * @interface UnunifiEcosystemincentiveQueryRecipientAddressWithNftIdResponse
  */
-export interface UnunifiEcosystemincentiveQueryRewardResponse {
+export interface UnunifiEcosystemincentiveQueryRecipientAddressWithNftIdResponse {
     /**
      * 
-     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-     * @memberof UnunifiEcosystemincentiveQueryRewardResponse
+     * @type {string}
+     * @memberof UnunifiEcosystemincentiveQueryRecipientAddressWithNftIdResponse
      */
-    'reward'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    'address'?: string;
 }
 /**
  * 
@@ -2830,25 +2778,6 @@ export const UnunifiEcosystemincentiveRewardRateRewardTypeEnum = {
 export type UnunifiEcosystemincentiveRewardRateRewardTypeEnum = typeof UnunifiEcosystemincentiveRewardRateRewardTypeEnum[keyof typeof UnunifiEcosystemincentiveRewardRateRewardTypeEnum];
 
 /**
- * 
- * @export
- * @interface UnunifiEcosystemincentiveRewardRecord
- */
-export interface UnunifiEcosystemincentiveRewardRecord {
-    /**
-     * 
-     * @type {string}
-     * @memberof UnunifiEcosystemincentiveRewardRecord
-     */
-    'address'?: string;
-    /**
-     * 
-     * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
-     * @memberof UnunifiEcosystemincentiveRewardRecord
-     */
-    'rewards'?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
-}
-/**
  * STAKERS type reward will be distributed for the stakers of GUU token. FRONTEND_DEVELOPERS type reward will be disributed for the creators of frontend of UnUniFi\'s services. COMMUNITY_POOL type reward will be distributed for the community pool.
  * @export
  * @enum {string}
@@ -2872,10 +2801,10 @@ export type UnunifiEcosystemincentiveRewardType = typeof UnunifiEcosystemincenti
 export interface UnunifiNftbackedloanBid {
     /**
      * 
-     * @type {BidderBids200ResponseBidsInnerId}
+     * @type {NftBids200ResponseBidsInnerId}
      * @memberof UnunifiNftbackedloanBid
      */
-    'id'?: BidderBids200ResponseBidsInnerId;
+    'id'?: NftBids200ResponseBidsInnerId;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
@@ -2933,10 +2862,10 @@ export interface UnunifiNftbackedloanBid {
 export interface UnunifiNftbackedloanBidId {
     /**
      * 
-     * @type {BidderBids200ResponseBidsInnerIdNftId}
+     * @type {NftBids200ResponseBidsInnerIdNftId}
      * @memberof UnunifiNftbackedloanBidId
      */
-    'nft_id'?: BidderBids200ResponseBidsInnerIdNftId;
+    'nft_id'?: NftBids200ResponseBidsInnerIdNftId;
     /**
      * 
      * @type {string}
@@ -2985,15 +2914,34 @@ export interface UnunifiNftbackedloanLiquidations {
 /**
  * 
  * @export
+ * @interface UnunifiNftbackedloanListedNftDetail
+ */
+export interface UnunifiNftbackedloanListedNftDetail {
+    /**
+     * 
+     * @type {ListedNfts200ResponseListingsInnerListing}
+     * @memberof UnunifiNftbackedloanListedNftDetail
+     */
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
+    /**
+     * 
+     * @type {ListedClasses200ResponseClassesInnerNftsInner}
+     * @memberof UnunifiNftbackedloanListedNftDetail
+     */
+    'nft_info'?: ListedClasses200ResponseClassesInnerNftsInner;
+}
+/**
+ * 
+ * @export
  * @interface UnunifiNftbackedloanListing
  */
 export interface UnunifiNftbackedloanListing {
     /**
      * 
-     * @type {BidderBids200ResponseBidsInnerIdNftId}
+     * @type {NftBids200ResponseBidsInnerIdNftId}
      * @memberof UnunifiNftbackedloanListing
      */
-    'nft_id'?: BidderBids200ResponseBidsInnerIdNftId;
+    'nft_id'?: NftBids200ResponseBidsInnerIdNftId;
     /**
      * 
      * @type {string}
@@ -3157,25 +3105,6 @@ export interface UnunifiNftbackedloanNftInfo {
 /**
  * 
  * @export
- * @interface UnunifiNftbackedloanNftListingDetail
- */
-export interface UnunifiNftbackedloanNftListingDetail {
-    /**
-     * 
-     * @type {ListedNfts200ResponseListingsInnerListing}
-     * @memberof UnunifiNftbackedloanNftListingDetail
-     */
-    'listing'?: ListedNfts200ResponseListingsInnerListing;
-    /**
-     * 
-     * @type {ListedClass200ResponseNftsInner}
-     * @memberof UnunifiNftbackedloanNftListingDetail
-     */
-    'nft_info'?: ListedClass200ResponseNftsInner;
-}
-/**
- * 
- * @export
  * @interface UnunifiNftbackedloanParams
  */
 export interface UnunifiNftbackedloanParams {
@@ -3230,10 +3159,10 @@ export interface UnunifiNftbackedloanParams {
 export interface UnunifiNftbackedloanQueryBidderBidsResponse {
     /**
      * 
-     * @type {Array<BidderBids200ResponseBidsInner>}
+     * @type {Array<NftBids200ResponseBidsInner>}
      * @memberof UnunifiNftbackedloanQueryBidderBidsResponse
      */
-    'bids'?: Array<BidderBids200ResponseBidsInner>;
+    'bids'?: Array<NftBids200ResponseBidsInner>;
 }
 /**
  * 
@@ -3292,10 +3221,10 @@ export interface UnunifiNftbackedloanQueryListedClassResponse {
     'urihash'?: string;
     /**
      * 
-     * @type {Array<ListedClass200ResponseNftsInner>}
+     * @type {Array<ListedClasses200ResponseClassesInnerNftsInner>}
      * @memberof UnunifiNftbackedloanQueryListedClassResponse
      */
-    'nfts'?: Array<ListedClass200ResponseNftsInner>;
+    'nfts'?: Array<ListedClasses200ResponseClassesInnerNftsInner>;
     /**
      * 
      * @type {string}
@@ -3311,10 +3240,23 @@ export interface UnunifiNftbackedloanQueryListedClassResponse {
 export interface UnunifiNftbackedloanQueryListedClassesResponse {
     /**
      * 
-     * @type {Array<ListedClass200Response>}
+     * @type {Array<ListedClasses200ResponseClassesInner>}
      * @memberof UnunifiNftbackedloanQueryListedClassesResponse
      */
-    'classes'?: Array<ListedClass200Response>;
+    'classes'?: Array<ListedClasses200ResponseClassesInner>;
+}
+/**
+ * 
+ * @export
+ * @interface UnunifiNftbackedloanQueryListedNftResponse
+ */
+export interface UnunifiNftbackedloanQueryListedNftResponse {
+    /**
+     * 
+     * @type {ListedNfts200ResponseListingsInnerListing}
+     * @memberof UnunifiNftbackedloanQueryListedNftResponse
+     */
+    'listing'?: ListedNfts200ResponseListingsInnerListing;
 }
 /**
  * 
@@ -3337,10 +3279,10 @@ export interface UnunifiNftbackedloanQueryListedNftsResponse {
 export interface UnunifiNftbackedloanQueryLoanResponse {
     /**
      * 
-     * @type {BidderBids200ResponseBidsInnerIdNftId}
+     * @type {NftBids200ResponseBidsInnerIdNftId}
      * @memberof UnunifiNftbackedloanQueryLoanResponse
      */
-    'nft_id'?: BidderBids200ResponseBidsInnerIdNftId;
+    'nft_id'?: NftBids200ResponseBidsInnerIdNftId;
     /**
      * 
      * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
@@ -3368,23 +3310,10 @@ export interface UnunifiNftbackedloanQueryLoanResponse {
 export interface UnunifiNftbackedloanQueryNftBidsResponse {
     /**
      * 
-     * @type {Array<BidderBids200ResponseBidsInner>}
+     * @type {Array<NftBids200ResponseBidsInner>}
      * @memberof UnunifiNftbackedloanQueryNftBidsResponse
      */
-    'bids'?: Array<BidderBids200ResponseBidsInner>;
-}
-/**
- * 
- * @export
- * @interface UnunifiNftbackedloanQueryNftListingResponse
- */
-export interface UnunifiNftbackedloanQueryNftListingResponse {
-    /**
-     * 
-     * @type {ListedNfts200ResponseListingsInnerListing}
-     * @memberof UnunifiNftbackedloanQueryNftListingResponse
-     */
-    'listing'?: ListedNfts200ResponseListingsInnerListing;
+    'bids'?: Array<NftBids200ResponseBidsInner>;
 }
 /**
  * 
@@ -3810,6 +3739,12 @@ export interface UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse {
      * @memberof UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
      */
     'redeem_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+    /**
+     * 
+     * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+     * @memberof UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
+     */
+    'total_amount'?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * 
@@ -4415,76 +4350,11 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} address 
+         * @param {string} [denom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        allRewards: async (address: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'address' is not null or undefined
-            assertParamExists('allRewards', 'address', address)
-            const localVarPath = `/ununifi/ecosystemincentive/rewards/{address}`
-                .replace(`{${"address"}}`, encodeURIComponent(String(address)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} denom 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        availableAssetInPoolByDenom: async (denom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'denom' is not null or undefined
-            assertParamExists('availableAssetInPoolByDenom', 'denom', denom)
-            const localVarPath = `/ununifi/derivatives/pools/available-asset/{denom}`
-                .replace(`{${"denom"}}`, encodeURIComponent(String(denom)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        availableAssetsInPool: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        availableAssetsInPool: async (denom?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/derivatives/pools/available-assets`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -4496,6 +4366,10 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (denom !== undefined) {
+                localVarQueryParameter['denom'] = denom;
+            }
 
 
     
@@ -4517,7 +4391,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         bidderBids: async (bidder: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'bidder' is not null or undefined
             assertParamExists('bidderBids', 'bidder', bidder)
-            const localVarPath = `/ununifi/nftbackedloan/bidder-bids/{bidder}`
+            const localVarPath = `/ununifi/nftbackedloan/bids/{bidder}`
                 .replace(`{${"bidder"}}`, encodeURIComponent(String(bidder)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -4702,19 +4576,16 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} mintDenom 
-         * @param {string} amount 
+         * @param {string} address 
+         * @param {string} [denom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        estimateDLPTokenAmount: async (mintDenom: string, amount: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'mintDenom' is not null or undefined
-            assertParamExists('estimateDLPTokenAmount', 'mintDenom', mintDenom)
-            // verify required parameter 'amount' is not null or undefined
-            assertParamExists('estimateDLPTokenAmount', 'amount', amount)
-            const localVarPath = `/ununifi/derivatives/estimate-dlp-token-amount/{mint_denom}/{amount}`
-                .replace(`{${"mint_denom"}}`, encodeURIComponent(String(mintDenom)))
-                .replace(`{${"amount"}}`, encodeURIComponent(String(amount)));
+        ecosystemRewards: async (address: string, denom?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'address' is not null or undefined
+            assertParamExists('ecosystemRewards', 'address', address)
+            const localVarPath = `/ununifi/ecosystemincentive/rewards/{address}`
+                .replace(`{${"address"}}`, encodeURIComponent(String(address)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4725,6 +4596,49 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (denom !== undefined) {
+                localVarQueryParameter['denom'] = denom;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [mintDenom] 
+         * @param {string} [amount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateDLPTokenAmount: async (mintDenom?: string, amount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/estimate-dlp-token-amount`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (mintDenom !== undefined) {
+                localVarQueryParameter['mint_denom'] = mintDenom;
+            }
+
+            if (amount !== undefined) {
+                localVarQueryParameter['amount'] = amount;
+            }
 
 
     
@@ -4815,19 +4729,13 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} redeemDenom 
-         * @param {string} lptAmount 
+         * @param {string} [redeemDenom] 
+         * @param {string} [lptAmount] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        estimateRedeemTokenAmount: async (redeemDenom: string, lptAmount: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'redeemDenom' is not null or undefined
-            assertParamExists('estimateRedeemTokenAmount', 'redeemDenom', redeemDenom)
-            // verify required parameter 'lptAmount' is not null or undefined
-            assertParamExists('estimateRedeemTokenAmount', 'lptAmount', lptAmount)
-            const localVarPath = `/ununifi/derivatives/estimate-redeem-amount/{redeem_denom}/{lpt_amount}`
-                .replace(`{${"redeem_denom"}}`, encodeURIComponent(String(redeemDenom)))
-                .replace(`{${"lpt_amount"}}`, encodeURIComponent(String(lptAmount)));
+        estimateRedeemTokenAmount: async (redeemDenom?: string, lptAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/estimate-redeem-amount`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4838,6 +4746,14 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (redeemDenom !== undefined) {
+                localVarQueryParameter['redeem_denom'] = redeemDenom;
+            }
+
+            if (lptAmount !== undefined) {
+                localVarQueryParameter['lpt_amount'] = lptAmount;
+            }
 
 
     
@@ -4852,19 +4768,13 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} classId 
-         * @param {string} nftId 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liquidation: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'classId' is not null or undefined
-            assertParamExists('liquidation', 'classId', classId)
-            // verify required parameter 'nftId' is not null or undefined
-            assertParamExists('liquidation', 'nftId', nftId)
-            const localVarPath = `/ununifi/nftbackedloan/liquidation/{class_id}/{nft_id}`
-                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
-                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
+        liquidation: async (classId?: string, tokenId?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/nftbackedloan/liquidation`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4875,6 +4785,14 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (classId !== undefined) {
+                localVarQueryParameter['class_id'] = classId;
+            }
+
+            if (tokenId !== undefined) {
+                localVarQueryParameter['token_id'] = tokenId;
+            }
 
 
     
@@ -4967,19 +4885,13 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} classId 
-         * @param {number} nftLimit 
+         * @param {string} [classId] 
+         * @param {number} [nftLimit] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listedClass: async (classId: string, nftLimit: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'classId' is not null or undefined
-            assertParamExists('listedClass', 'classId', classId)
-            // verify required parameter 'nftLimit' is not null or undefined
-            assertParamExists('listedClass', 'nftLimit', nftLimit)
-            const localVarPath = `/ununifi/nftbackedloan/listed-class/{class_id}/{nft_limit}`
-                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
-                .replace(`{${"nft_limit"}}`, encodeURIComponent(String(nftLimit)));
+        listedClass: async (classId?: string, nftLimit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/nftbackedloan/listed-classes/class`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4990,6 +4902,14 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (classId !== undefined) {
+                localVarQueryParameter['class_id'] = classId;
+            }
+
+            if (nftLimit !== undefined) {
+                localVarQueryParameter['nft_limit'] = nftLimit;
+            }
 
 
     
@@ -5023,6 +4943,45 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
             if (nftLimit !== undefined) {
                 localVarQueryParameter['nft_limit'] = nftLimit;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listedNft: async (classId?: string, tokenId?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/nftbackedloan/listed-nfts/nft`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (classId !== undefined) {
+                localVarQueryParameter['class_id'] = classId;
+            }
+
+            if (tokenId !== undefined) {
+                localVarQueryParameter['token_id'] = tokenId;
             }
 
 
@@ -5072,19 +5031,13 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} classId 
-         * @param {string} nftId 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loan: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'classId' is not null or undefined
-            assertParamExists('loan', 'classId', classId)
-            // verify required parameter 'nftId' is not null or undefined
-            assertParamExists('loan', 'nftId', nftId)
-            const localVarPath = `/ununifi/nftbackedloan/loans/{class_id}/{nft_id}`
-                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
-                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
+        loan: async (classId?: string, tokenId?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/nftbackedloan/loans`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5095,6 +5048,14 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (classId !== undefined) {
+                localVarQueryParameter['class_id'] = classId;
+            }
+
+            if (tokenId !== undefined) {
+                localVarQueryParameter['token_id'] = tokenId;
+            }
 
 
     
@@ -5188,19 +5149,13 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} classId 
-         * @param {string} nftId 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        nftBids: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'classId' is not null or undefined
-            assertParamExists('nftBids', 'classId', classId)
-            // verify required parameter 'nftId' is not null or undefined
-            assertParamExists('nftBids', 'nftId', nftId)
-            const localVarPath = `/ununifi/nftbackedloan/nft-bids/{class_id}/{nft_id}`
-                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
-                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
+        nftBids: async (classId?: string, tokenId?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/nftbackedloan/bids`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5211,6 +5166,14 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (classId !== undefined) {
+                localVarQueryParameter['class_id'] = classId;
+            }
+
+            if (tokenId !== undefined) {
+                localVarQueryParameter['token_id'] = tokenId;
+            }
 
 
     
@@ -5230,43 +5193,6 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
          */
         nftFactoryParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ununifi/nftfactory/params`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} classId 
-         * @param {string} nftId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        nftListing: async (classId: string, nftId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'classId' is not null or undefined
-            assertParamExists('nftListing', 'classId', classId)
-            // verify required parameter 'nftId' is not null or undefined
-            assertParamExists('nftListing', 'nftId', nftId)
-            const localVarPath = `/ununifi/nftbackedloan/nft-listing/{class_id}/{nft_id}`
-                .replace(`{${"class_id"}}`, encodeURIComponent(String(classId)))
-                .replace(`{${"nft_id"}}`, encodeURIComponent(String(nftId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5406,19 +5332,13 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} baseDenom 
-         * @param {string} quoteDenom 
+         * @param {string} [baseDenom] 
+         * @param {string} [quoteDenom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        perpetualFuturesMarket: async (baseDenom: string, quoteDenom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'baseDenom' is not null or undefined
-            assertParamExists('perpetualFuturesMarket', 'baseDenom', baseDenom)
-            // verify required parameter 'quoteDenom' is not null or undefined
-            assertParamExists('perpetualFuturesMarket', 'quoteDenom', quoteDenom)
-            const localVarPath = `/ununifi/derivatives/perpetual-futures/{base_denom}/{quote_denom}`
-                .replace(`{${"base_denom"}}`, encodeURIComponent(String(baseDenom)))
-                .replace(`{${"quote_denom"}}`, encodeURIComponent(String(quoteDenom)));
+        perpetualFuturesMarket: async (baseDenom?: string, quoteDenom?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/perpetual-futures/market`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5429,6 +5349,14 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (baseDenom !== undefined) {
+                localVarQueryParameter['base_denom'] = baseDenom;
+            }
+
+            if (quoteDenom !== undefined) {
+                localVarQueryParameter['quote_denom'] = quoteDenom;
+            }
 
 
     
@@ -5509,19 +5437,13 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} baseDenom 
-         * @param {string} quoteDenom 
+         * @param {string} [baseDenom] 
+         * @param {string} [quoteDenom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        perpetualOptionsMarket: async (baseDenom: string, quoteDenom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'baseDenom' is not null or undefined
-            assertParamExists('perpetualOptionsMarket', 'baseDenom', baseDenom)
-            // verify required parameter 'quoteDenom' is not null or undefined
-            assertParamExists('perpetualOptionsMarket', 'quoteDenom', quoteDenom)
-            const localVarPath = `/ununifi/derivatives/perpetual-options/{base_denom}/{quote_denom}`
-                .replace(`{${"base_denom"}}`, encodeURIComponent(String(baseDenom)))
-                .replace(`{${"quote_denom"}}`, encodeURIComponent(String(quoteDenom)));
+        perpetualOptionsMarket: async (baseDenom?: string, quoteDenom?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/derivatives/perpetual-options/market`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5532,6 +5454,14 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (baseDenom !== undefined) {
+                localVarQueryParameter['base_denom'] = baseDenom;
+            }
+
+            if (quoteDenom !== undefined) {
+                localVarQueryParameter['quote_denom'] = quoteDenom;
+            }
 
 
     
@@ -5773,19 +5703,13 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {string} address 
-         * @param {string} denom 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reward: async (address: string, denom: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'address' is not null or undefined
-            assertParamExists('reward', 'address', address)
-            // verify required parameter 'denom' is not null or undefined
-            assertParamExists('reward', 'denom', denom)
-            const localVarPath = `/ununifi/ecosystemincentive/rewards/{address}/{denom}`
-                .replace(`{${"address"}}`, encodeURIComponent(String(address)))
-                .replace(`{${"denom"}}`, encodeURIComponent(String(denom)));
+        recipientAddressWithNftId: async (classId?: string, tokenId?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/ununifi/ecosystemincentive/recipients`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5796,6 +5720,14 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (classId !== undefined) {
+                localVarQueryParameter['class_id'] = classId;
+            }
+
+            if (tokenId !== undefined) {
+                localVarQueryParameter['token_id'] = tokenId;
+            }
 
 
     
@@ -6123,31 +6055,12 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} address 
+         * @param {string} [denom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async allRewards(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllRewards200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.allRewards(address, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} denom 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async availableAssetInPoolByDenom(denom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AvailableAssetInPoolByDenom200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.availableAssetInPoolByDenom(denom, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async availableAssetsInPool(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AvailableAssetsInPool200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.availableAssetsInPool(options);
+        async availableAssetsInPool(denom?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AvailableAssetsInPool200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.availableAssetsInPool(denom, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6156,7 +6069,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async bidderBids(bidder: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BidderBids200Response>> {
+        async bidderBids(bidder: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NftBids200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.bidderBids(bidder, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6212,12 +6125,23 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} mintDenom 
-         * @param {string} amount 
+         * @param {string} address 
+         * @param {string} [denom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async estimateDLPTokenAmount(mintDenom: string, amount: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateDLPTokenAmount200Response>> {
+        async ecosystemRewards(address: string, denom?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EcosystemRewards200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.ecosystemRewards(address, denom, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [mintDenom] 
+         * @param {string} [amount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async estimateDLPTokenAmount(mintDenom?: string, amount?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateDLPTokenAmount200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.estimateDLPTokenAmount(mintDenom, amount, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6245,24 +6169,24 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} redeemDenom 
-         * @param {string} lptAmount 
+         * @param {string} [redeemDenom] 
+         * @param {string} [lptAmount] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRedeemTokenAmount200Response>> {
+        async estimateRedeemTokenAmount(redeemDenom?: string, lptAmount?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRedeemTokenAmount200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemTokenAmount(redeemDenom, lptAmount, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {string} classId 
-         * @param {string} nftId 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async liquidation(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Liquidation200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.liquidation(classId, nftId, options);
+        async liquidation(classId?: string, tokenId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Liquidation200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.liquidation(classId, tokenId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6289,12 +6213,12 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} classId 
-         * @param {number} nftLimit 
+         * @param {string} [classId] 
+         * @param {number} [nftLimit] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listedClass(classId: string, nftLimit: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListedClass200Response>> {
+        async listedClass(classId?: string, nftLimit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListedClasses200ResponseClassesInner>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listedClass(classId, nftLimit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6310,6 +6234,17 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listedNft(classId?: string, tokenId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListedNft200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listedNft(classId, tokenId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} [owner] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -6320,13 +6255,13 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} classId 
-         * @param {string} nftId 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async loan(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Loan200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.loan(classId, nftId, options);
+        async loan(classId?: string, tokenId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Loan200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.loan(classId, tokenId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6354,13 +6289,13 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} classId 
-         * @param {string} nftId 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async nftBids(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BidderBids200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.nftBids(classId, nftId, options);
+        async nftBids(classId?: string, tokenId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NftBids200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.nftBids(classId, tokenId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6370,17 +6305,6 @@ export const QueryApiFp = function(configuration?: Configuration) {
          */
         async nftFactoryParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NftFactoryParams200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.nftFactoryParams(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} classId 
-         * @param {string} nftId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async nftListing(classId: string, nftId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NftListing200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.nftListing(classId, nftId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6418,12 +6342,12 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} baseDenom 
-         * @param {string} quoteDenom 
+         * @param {string} [baseDenom] 
+         * @param {string} [quoteDenom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async perpetualFuturesMarket(baseDenom: string, quoteDenom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PerpetualFuturesMarket200Response>> {
+        async perpetualFuturesMarket(baseDenom?: string, quoteDenom?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PerpetualFuturesMarket200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualFuturesMarket(baseDenom, quoteDenom, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6449,12 +6373,12 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} baseDenom 
-         * @param {string} quoteDenom 
+         * @param {string} [baseDenom] 
+         * @param {string} [quoteDenom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async perpetualOptionsMarket(baseDenom: string, quoteDenom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+        async perpetualOptionsMarket(baseDenom?: string, quoteDenom?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.perpetualOptionsMarket(baseDenom, quoteDenom, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6526,13 +6450,13 @@ export const QueryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} address 
-         * @param {string} denom 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async reward(address: string, denom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Reward200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.reward(address, denom, options);
+        async recipientAddressWithNftId(classId?: string, tokenId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RecipientAddressWithNftId200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.recipientAddressWithNftId(classId, tokenId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6541,7 +6465,7 @@ export const QueryApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async rewards(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rewards200Response>> {
+        async rewards(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EcosystemRewards200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.rewards(address, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6655,29 +6579,12 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} address 
+         * @param {string} [denom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        allRewards(address: string, options?: any): AxiosPromise<AllRewards200Response> {
-            return localVarFp.allRewards(address, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} denom 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        availableAssetInPoolByDenom(denom: string, options?: any): AxiosPromise<AvailableAssetInPoolByDenom200Response> {
-            return localVarFp.availableAssetInPoolByDenom(denom, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        availableAssetsInPool(options?: any): AxiosPromise<AvailableAssetsInPool200Response> {
-            return localVarFp.availableAssetsInPool(options).then((request) => request(axios, basePath));
+        availableAssetsInPool(denom?: string, options?: any): AxiosPromise<AvailableAssetsInPool200Response> {
+            return localVarFp.availableAssetsInPool(denom, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -6685,7 +6592,7 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bidderBids(bidder: string, options?: any): AxiosPromise<BidderBids200Response> {
+        bidderBids(bidder: string, options?: any): AxiosPromise<NftBids200Response> {
             return localVarFp.bidderBids(bidder, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6735,12 +6642,22 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} mintDenom 
-         * @param {string} amount 
+         * @param {string} address 
+         * @param {string} [denom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        estimateDLPTokenAmount(mintDenom: string, amount: string, options?: any): AxiosPromise<EstimateDLPTokenAmount200Response> {
+        ecosystemRewards(address: string, denom?: string, options?: any): AxiosPromise<EcosystemRewards200Response> {
+            return localVarFp.ecosystemRewards(address, denom, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [mintDenom] 
+         * @param {string} [amount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        estimateDLPTokenAmount(mintDenom?: string, amount?: string, options?: any): AxiosPromise<EstimateDLPTokenAmount200Response> {
             return localVarFp.estimateDLPTokenAmount(mintDenom, amount, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6765,23 +6682,23 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} redeemDenom 
-         * @param {string} lptAmount 
+         * @param {string} [redeemDenom] 
+         * @param {string} [lptAmount] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: any): AxiosPromise<EstimateRedeemTokenAmount200Response> {
+        estimateRedeemTokenAmount(redeemDenom?: string, lptAmount?: string, options?: any): AxiosPromise<EstimateRedeemTokenAmount200Response> {
             return localVarFp.estimateRedeemTokenAmount(redeemDenom, lptAmount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} classId 
-         * @param {string} nftId 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liquidation(classId: string, nftId: string, options?: any): AxiosPromise<Liquidation200Response> {
-            return localVarFp.liquidation(classId, nftId, options).then((request) => request(axios, basePath));
+        liquidation(classId?: string, tokenId?: string, options?: any): AxiosPromise<Liquidation200Response> {
+            return localVarFp.liquidation(classId, tokenId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -6805,12 +6722,12 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} classId 
-         * @param {number} nftLimit 
+         * @param {string} [classId] 
+         * @param {number} [nftLimit] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listedClass(classId: string, nftLimit: number, options?: any): AxiosPromise<ListedClass200Response> {
+        listedClass(classId?: string, nftLimit?: number, options?: any): AxiosPromise<ListedClasses200ResponseClassesInner> {
             return localVarFp.listedClass(classId, nftLimit, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6824,6 +6741,16 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listedNft(classId?: string, tokenId?: string, options?: any): AxiosPromise<ListedNft200Response> {
+            return localVarFp.listedNft(classId, tokenId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {string} [owner] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -6833,13 +6760,13 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} classId 
-         * @param {string} nftId 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loan(classId: string, nftId: string, options?: any): AxiosPromise<Loan200Response> {
-            return localVarFp.loan(classId, nftId, options).then((request) => request(axios, basePath));
+        loan(classId?: string, tokenId?: string, options?: any): AxiosPromise<Loan200Response> {
+            return localVarFp.loan(classId, tokenId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -6864,13 +6791,13 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} classId 
-         * @param {string} nftId 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        nftBids(classId: string, nftId: string, options?: any): AxiosPromise<BidderBids200Response> {
-            return localVarFp.nftBids(classId, nftId, options).then((request) => request(axios, basePath));
+        nftBids(classId?: string, tokenId?: string, options?: any): AxiosPromise<NftBids200Response> {
+            return localVarFp.nftBids(classId, tokenId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -6879,16 +6806,6 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          */
         nftFactoryParams(options?: any): AxiosPromise<NftFactoryParams200Response> {
             return localVarFp.nftFactoryParams(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} classId 
-         * @param {string} nftId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        nftListing(classId: string, nftId: string, options?: any): AxiosPromise<NftListing200Response> {
-            return localVarFp.nftListing(classId, nftId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -6922,12 +6839,12 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} baseDenom 
-         * @param {string} quoteDenom 
+         * @param {string} [baseDenom] 
+         * @param {string} [quoteDenom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        perpetualFuturesMarket(baseDenom: string, quoteDenom: string, options?: any): AxiosPromise<PerpetualFuturesMarket200Response> {
+        perpetualFuturesMarket(baseDenom?: string, quoteDenom?: string, options?: any): AxiosPromise<PerpetualFuturesMarket200Response> {
             return localVarFp.perpetualFuturesMarket(baseDenom, quoteDenom, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6950,12 +6867,12 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} baseDenom 
-         * @param {string} quoteDenom 
+         * @param {string} [baseDenom] 
+         * @param {string} [quoteDenom] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        perpetualOptionsMarket(baseDenom: string, quoteDenom: string, options?: any): AxiosPromise<object> {
+        perpetualOptionsMarket(baseDenom?: string, quoteDenom?: string, options?: any): AxiosPromise<object> {
             return localVarFp.perpetualOptionsMarket(baseDenom, quoteDenom, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7020,13 +6937,13 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
-         * @param {string} address 
-         * @param {string} denom 
+         * @param {string} [classId] 
+         * @param {string} [tokenId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reward(address: string, denom: string, options?: any): AxiosPromise<Reward200Response> {
-            return localVarFp.reward(address, denom, options).then((request) => request(axios, basePath));
+        recipientAddressWithNftId(classId?: string, tokenId?: string, options?: any): AxiosPromise<RecipientAddressWithNftId200Response> {
+            return localVarFp.recipientAddressWithNftId(classId, tokenId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7034,7 +6951,7 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        rewards(address: string, options?: any): AxiosPromise<Rewards200Response> {
+        rewards(address: string, options?: any): AxiosPromise<EcosystemRewards200Response> {
             return localVarFp.rewards(address, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7147,34 +7064,13 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} address 
+     * @param {string} [denom] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public allRewards(address: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).allRewards(address, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} denom 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public availableAssetInPoolByDenom(denom: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).availableAssetInPoolByDenom(denom, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public availableAssetsInPool(options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).availableAssetsInPool(options).then((request) => request(this.axios, this.basePath));
+    public availableAssetsInPool(denom?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).availableAssetsInPool(denom, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7245,13 +7141,25 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} mintDenom 
-     * @param {string} amount 
+     * @param {string} address 
+     * @param {string} [denom] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public estimateDLPTokenAmount(mintDenom: string, amount: string, options?: AxiosRequestConfig) {
+    public ecosystemRewards(address: string, denom?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).ecosystemRewards(address, denom, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [mintDenom] 
+     * @param {string} [amount] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public estimateDLPTokenAmount(mintDenom?: string, amount?: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).estimateDLPTokenAmount(mintDenom, amount, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7281,26 +7189,26 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} redeemDenom 
-     * @param {string} lptAmount 
+     * @param {string} [redeemDenom] 
+     * @param {string} [lptAmount] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public estimateRedeemTokenAmount(redeemDenom: string, lptAmount: string, options?: AxiosRequestConfig) {
+    public estimateRedeemTokenAmount(redeemDenom?: string, lptAmount?: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).estimateRedeemTokenAmount(redeemDenom, lptAmount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} classId 
-     * @param {string} nftId 
+     * @param {string} [classId] 
+     * @param {string} [tokenId] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public liquidation(classId: string, nftId: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).liquidation(classId, nftId, options).then((request) => request(this.axios, this.basePath));
+    public liquidation(classId?: string, tokenId?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).liquidation(classId, tokenId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7329,13 +7237,13 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} classId 
-     * @param {number} nftLimit 
+     * @param {string} [classId] 
+     * @param {number} [nftLimit] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public listedClass(classId: string, nftLimit: number, options?: AxiosRequestConfig) {
+    public listedClass(classId?: string, nftLimit?: number, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).listedClass(classId, nftLimit, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7352,6 +7260,18 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} [classId] 
+     * @param {string} [tokenId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QueryApi
+     */
+    public listedNft(classId?: string, tokenId?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).listedNft(classId, tokenId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {string} [owner] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -7363,14 +7283,14 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} classId 
-     * @param {string} nftId 
+     * @param {string} [classId] 
+     * @param {string} [tokenId] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public loan(classId: string, nftId: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).loan(classId, nftId, options).then((request) => request(this.axios, this.basePath));
+    public loan(classId?: string, tokenId?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).loan(classId, tokenId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7400,14 +7320,14 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} classId 
-     * @param {string} nftId 
+     * @param {string} [classId] 
+     * @param {string} [tokenId] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public nftBids(classId: string, nftId: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).nftBids(classId, nftId, options).then((request) => request(this.axios, this.basePath));
+    public nftBids(classId?: string, tokenId?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).nftBids(classId, tokenId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7418,18 +7338,6 @@ export class QueryApi extends BaseAPI {
      */
     public nftFactoryParams(options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).nftFactoryParams(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} classId 
-     * @param {string} nftId 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof QueryApi
-     */
-    public nftListing(classId: string, nftId: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).nftListing(classId, nftId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7470,13 +7378,13 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} baseDenom 
-     * @param {string} quoteDenom 
+     * @param {string} [baseDenom] 
+     * @param {string} [quoteDenom] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public perpetualFuturesMarket(baseDenom: string, quoteDenom: string, options?: AxiosRequestConfig) {
+    public perpetualFuturesMarket(baseDenom?: string, quoteDenom?: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).perpetualFuturesMarket(baseDenom, quoteDenom, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7504,13 +7412,13 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} baseDenom 
-     * @param {string} quoteDenom 
+     * @param {string} [baseDenom] 
+     * @param {string} [quoteDenom] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public perpetualOptionsMarket(baseDenom: string, quoteDenom: string, options?: AxiosRequestConfig) {
+    public perpetualOptionsMarket(baseDenom?: string, quoteDenom?: string, options?: AxiosRequestConfig) {
         return QueryApiFp(this.configuration).perpetualOptionsMarket(baseDenom, quoteDenom, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7588,14 +7496,14 @@ export class QueryApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} address 
-     * @param {string} denom 
+     * @param {string} [classId] 
+     * @param {string} [tokenId] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QueryApi
      */
-    public reward(address: string, denom: string, options?: AxiosRequestConfig) {
-        return QueryApiFp(this.configuration).reward(address, denom, options).then((request) => request(this.axios, this.basePath));
+    public recipientAddressWithNftId(classId?: string, tokenId?: string, options?: AxiosRequestConfig) {
+        return QueryApiFp(this.configuration).recipientAddressWithNftId(classId, tokenId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
