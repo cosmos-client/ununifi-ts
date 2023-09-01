@@ -10866,39 +10866,6 @@
                  */
     
                 /**
-                 * Callback as used by {@link ununifi.derivatives.Query#availableAssetInPoolByDenom}.
-                 * @memberof ununifi.derivatives.Query
-                 * @typedef AvailableAssetInPoolByDenomCallback
-                 * @type {function}
-                 * @param {Error|null} error Error, if any
-                 * @param {ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse} [response] QueryAvailableAssetInPoolByDenomResponse
-                 */
-    
-                /**
-                 * Calls AvailableAssetInPoolByDenom.
-                 * @function availableAssetInPoolByDenom
-                 * @memberof ununifi.derivatives.Query
-                 * @instance
-                 * @param {ununifi.derivatives.IQueryAvailableAssetInPoolByDenomRequest} request QueryAvailableAssetInPoolByDenomRequest message or plain object
-                 * @param {ununifi.derivatives.Query.AvailableAssetInPoolByDenomCallback} callback Node-style callback called with the error, if any, and QueryAvailableAssetInPoolByDenomResponse
-                 * @returns {undefined}
-                 * @variation 1
-                 */
-                Object.defineProperty(Query.prototype.availableAssetInPoolByDenom = function availableAssetInPoolByDenom(request, callback) {
-                    return this.rpcCall(availableAssetInPoolByDenom, $root.ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest, $root.ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse, request, callback);
-                }, "name", { value: "AvailableAssetInPoolByDenom" });
-    
-                /**
-                 * Calls AvailableAssetInPoolByDenom.
-                 * @function availableAssetInPoolByDenom
-                 * @memberof ununifi.derivatives.Query
-                 * @instance
-                 * @param {ununifi.derivatives.IQueryAvailableAssetInPoolByDenomRequest} request QueryAvailableAssetInPoolByDenomRequest message or plain object
-                 * @returns {Promise<ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse>} Promise
-                 * @variation 2
-                 */
-    
-                /**
                  * Callback as used by {@link ununifi.derivatives.Query#availableAssetsInPool}.
                  * @memberof ununifi.derivatives.Query
                  * @typedef AvailableAssetsInPoolCallback
@@ -17346,367 +17313,13 @@
                 return QueryEstimateRedeemTokenAmountResponse;
             })();
     
-            derivatives.QueryAvailableAssetInPoolByDenomRequest = (function() {
-    
-                /**
-                 * Properties of a QueryAvailableAssetInPoolByDenomRequest.
-                 * @memberof ununifi.derivatives
-                 * @interface IQueryAvailableAssetInPoolByDenomRequest
-                 * @property {string|null} [denom] QueryAvailableAssetInPoolByDenomRequest denom
-                 */
-    
-                /**
-                 * Constructs a new QueryAvailableAssetInPoolByDenomRequest.
-                 * @memberof ununifi.derivatives
-                 * @classdesc Represents a QueryAvailableAssetInPoolByDenomRequest.
-                 * @implements IQueryAvailableAssetInPoolByDenomRequest
-                 * @constructor
-                 * @param {ununifi.derivatives.IQueryAvailableAssetInPoolByDenomRequest=} [properties] Properties to set
-                 */
-                function QueryAvailableAssetInPoolByDenomRequest(properties) {
-                    if (properties)
-                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-    
-                /**
-                 * QueryAvailableAssetInPoolByDenomRequest denom.
-                 * @member {string} denom
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest
-                 * @instance
-                 */
-                QueryAvailableAssetInPoolByDenomRequest.prototype.denom = "";
-    
-                /**
-                 * Encodes the specified QueryAvailableAssetInPoolByDenomRequest message. Does not implicitly {@link ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest.verify|verify} messages.
-                 * @function encode
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest
-                 * @static
-                 * @param {ununifi.derivatives.IQueryAvailableAssetInPoolByDenomRequest} message QueryAvailableAssetInPoolByDenomRequest message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryAvailableAssetInPoolByDenomRequest.encode = function encode(message, writer) {
-                    if (!writer)
-                        writer = $Writer.create();
-                    if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
-                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.denom);
-                    return writer;
-                };
-    
-                /**
-                 * Encodes the specified QueryAvailableAssetInPoolByDenomRequest message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest.verify|verify} messages.
-                 * @function encodeDelimited
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest
-                 * @static
-                 * @param {ununifi.derivatives.IQueryAvailableAssetInPoolByDenomRequest} message QueryAvailableAssetInPoolByDenomRequest message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryAvailableAssetInPoolByDenomRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                    return this.encode(message, writer).ldelim();
-                };
-    
-                /**
-                 * Decodes a QueryAvailableAssetInPoolByDenomRequest message from the specified reader or buffer.
-                 * @function decode
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest} QueryAvailableAssetInPoolByDenomRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryAvailableAssetInPoolByDenomRequest.decode = function decode(reader, length) {
-                    if (!(reader instanceof $Reader))
-                        reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest();
-                    while (reader.pos < end) {
-                        var tag = reader.uint32();
-                        switch (tag >>> 3) {
-                        case 1:
-                            message.denom = reader.string();
-                            break;
-                        default:
-                            reader.skipType(tag & 7);
-                            break;
-                        }
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Decodes a QueryAvailableAssetInPoolByDenomRequest message from the specified reader or buffer, length delimited.
-                 * @function decodeDelimited
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest} QueryAvailableAssetInPoolByDenomRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryAvailableAssetInPoolByDenomRequest.decodeDelimited = function decodeDelimited(reader) {
-                    if (!(reader instanceof $Reader))
-                        reader = new $Reader(reader);
-                    return this.decode(reader, reader.uint32());
-                };
-    
-                /**
-                 * Verifies a QueryAvailableAssetInPoolByDenomRequest message.
-                 * @function verify
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                QueryAvailableAssetInPoolByDenomRequest.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.denom != null && message.hasOwnProperty("denom"))
-                        if (!$util.isString(message.denom))
-                            return "denom: string expected";
-                    return null;
-                };
-    
-                /**
-                 * Creates a QueryAvailableAssetInPoolByDenomRequest message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest} QueryAvailableAssetInPoolByDenomRequest
-                 */
-                QueryAvailableAssetInPoolByDenomRequest.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest)
-                        return object;
-                    var message = new $root.ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest();
-                    if (object.denom != null)
-                        message.denom = String(object.denom);
-                    return message;
-                };
-    
-                /**
-                 * Creates a plain object from a QueryAvailableAssetInPoolByDenomRequest message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest
-                 * @static
-                 * @param {ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest} message QueryAvailableAssetInPoolByDenomRequest
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                QueryAvailableAssetInPoolByDenomRequest.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    var object = {};
-                    if (options.defaults)
-                        object.denom = "";
-                    if (message.denom != null && message.hasOwnProperty("denom"))
-                        object.denom = message.denom;
-                    return object;
-                };
-    
-                /**
-                 * Converts this QueryAvailableAssetInPoolByDenomRequest to JSON.
-                 * @function toJSON
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomRequest
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                QueryAvailableAssetInPoolByDenomRequest.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-    
-                return QueryAvailableAssetInPoolByDenomRequest;
-            })();
-    
-            derivatives.QueryAvailableAssetInPoolByDenomResponse = (function() {
-    
-                /**
-                 * Properties of a QueryAvailableAssetInPoolByDenomResponse.
-                 * @memberof ununifi.derivatives
-                 * @interface IQueryAvailableAssetInPoolByDenomResponse
-                 * @property {cosmos.base.v1beta1.ICoin|null} [available_asset] QueryAvailableAssetInPoolByDenomResponse available_asset
-                 */
-    
-                /**
-                 * Constructs a new QueryAvailableAssetInPoolByDenomResponse.
-                 * @memberof ununifi.derivatives
-                 * @classdesc Represents a QueryAvailableAssetInPoolByDenomResponse.
-                 * @implements IQueryAvailableAssetInPoolByDenomResponse
-                 * @constructor
-                 * @param {ununifi.derivatives.IQueryAvailableAssetInPoolByDenomResponse=} [properties] Properties to set
-                 */
-                function QueryAvailableAssetInPoolByDenomResponse(properties) {
-                    if (properties)
-                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-    
-                /**
-                 * QueryAvailableAssetInPoolByDenomResponse available_asset.
-                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} available_asset
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse
-                 * @instance
-                 */
-                QueryAvailableAssetInPoolByDenomResponse.prototype.available_asset = null;
-    
-                /**
-                 * Encodes the specified QueryAvailableAssetInPoolByDenomResponse message. Does not implicitly {@link ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse.verify|verify} messages.
-                 * @function encode
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse
-                 * @static
-                 * @param {ununifi.derivatives.IQueryAvailableAssetInPoolByDenomResponse} message QueryAvailableAssetInPoolByDenomResponse message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryAvailableAssetInPoolByDenomResponse.encode = function encode(message, writer) {
-                    if (!writer)
-                        writer = $Writer.create();
-                    if (message.available_asset != null && Object.hasOwnProperty.call(message, "available_asset"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.available_asset, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                    return writer;
-                };
-    
-                /**
-                 * Encodes the specified QueryAvailableAssetInPoolByDenomResponse message, length delimited. Does not implicitly {@link ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse.verify|verify} messages.
-                 * @function encodeDelimited
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse
-                 * @static
-                 * @param {ununifi.derivatives.IQueryAvailableAssetInPoolByDenomResponse} message QueryAvailableAssetInPoolByDenomResponse message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryAvailableAssetInPoolByDenomResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                    return this.encode(message, writer).ldelim();
-                };
-    
-                /**
-                 * Decodes a QueryAvailableAssetInPoolByDenomResponse message from the specified reader or buffer.
-                 * @function decode
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse} QueryAvailableAssetInPoolByDenomResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryAvailableAssetInPoolByDenomResponse.decode = function decode(reader, length) {
-                    if (!(reader instanceof $Reader))
-                        reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse();
-                    while (reader.pos < end) {
-                        var tag = reader.uint32();
-                        switch (tag >>> 3) {
-                        case 1:
-                            message.available_asset = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
-                            break;
-                        default:
-                            reader.skipType(tag & 7);
-                            break;
-                        }
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Decodes a QueryAvailableAssetInPoolByDenomResponse message from the specified reader or buffer, length delimited.
-                 * @function decodeDelimited
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse} QueryAvailableAssetInPoolByDenomResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryAvailableAssetInPoolByDenomResponse.decodeDelimited = function decodeDelimited(reader) {
-                    if (!(reader instanceof $Reader))
-                        reader = new $Reader(reader);
-                    return this.decode(reader, reader.uint32());
-                };
-    
-                /**
-                 * Verifies a QueryAvailableAssetInPoolByDenomResponse message.
-                 * @function verify
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                QueryAvailableAssetInPoolByDenomResponse.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.available_asset != null && message.hasOwnProperty("available_asset")) {
-                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.available_asset);
-                        if (error)
-                            return "available_asset." + error;
-                    }
-                    return null;
-                };
-    
-                /**
-                 * Creates a QueryAvailableAssetInPoolByDenomResponse message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse} QueryAvailableAssetInPoolByDenomResponse
-                 */
-                QueryAvailableAssetInPoolByDenomResponse.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse)
-                        return object;
-                    var message = new $root.ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse();
-                    if (object.available_asset != null) {
-                        if (typeof object.available_asset !== "object")
-                            throw TypeError(".ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse.available_asset: object expected");
-                        message.available_asset = $root.cosmos.base.v1beta1.Coin.fromObject(object.available_asset);
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Creates a plain object from a QueryAvailableAssetInPoolByDenomResponse message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse
-                 * @static
-                 * @param {ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse} message QueryAvailableAssetInPoolByDenomResponse
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                QueryAvailableAssetInPoolByDenomResponse.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    var object = {};
-                    if (options.defaults)
-                        object.available_asset = null;
-                    if (message.available_asset != null && message.hasOwnProperty("available_asset"))
-                        object.available_asset = $root.cosmos.base.v1beta1.Coin.toObject(message.available_asset, options);
-                    return object;
-                };
-    
-                /**
-                 * Converts this QueryAvailableAssetInPoolByDenomResponse to JSON.
-                 * @function toJSON
-                 * @memberof ununifi.derivatives.QueryAvailableAssetInPoolByDenomResponse
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                QueryAvailableAssetInPoolByDenomResponse.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-    
-                return QueryAvailableAssetInPoolByDenomResponse;
-            })();
-    
             derivatives.QueryAvailableAssetsInPoolRequest = (function() {
     
                 /**
                  * Properties of a QueryAvailableAssetsInPoolRequest.
                  * @memberof ununifi.derivatives
                  * @interface IQueryAvailableAssetsInPoolRequest
+                 * @property {string|null} [denom] QueryAvailableAssetsInPoolRequest denom
                  */
     
                 /**
@@ -17725,6 +17338,14 @@
                 }
     
                 /**
+                 * QueryAvailableAssetsInPoolRequest denom.
+                 * @member {string} denom
+                 * @memberof ununifi.derivatives.QueryAvailableAssetsInPoolRequest
+                 * @instance
+                 */
+                QueryAvailableAssetsInPoolRequest.prototype.denom = "";
+    
+                /**
                  * Encodes the specified QueryAvailableAssetsInPoolRequest message. Does not implicitly {@link ununifi.derivatives.QueryAvailableAssetsInPoolRequest.verify|verify} messages.
                  * @function encode
                  * @memberof ununifi.derivatives.QueryAvailableAssetsInPoolRequest
@@ -17736,6 +17357,8 @@
                 QueryAvailableAssetsInPoolRequest.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
+                    if (message.denom != null && Object.hasOwnProperty.call(message, "denom"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.denom);
                     return writer;
                 };
     
@@ -17770,6 +17393,9 @@
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
+                        case 1:
+                            message.denom = reader.string();
+                            break;
                         default:
                             reader.skipType(tag & 7);
                             break;
@@ -17805,6 +17431,9 @@
                 QueryAvailableAssetsInPoolRequest.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        if (!$util.isString(message.denom))
+                            return "denom: string expected";
                     return null;
                 };
     
@@ -17819,7 +17448,10 @@
                 QueryAvailableAssetsInPoolRequest.fromObject = function fromObject(object) {
                     if (object instanceof $root.ununifi.derivatives.QueryAvailableAssetsInPoolRequest)
                         return object;
-                    return new $root.ununifi.derivatives.QueryAvailableAssetsInPoolRequest();
+                    var message = new $root.ununifi.derivatives.QueryAvailableAssetsInPoolRequest();
+                    if (object.denom != null)
+                        message.denom = String(object.denom);
+                    return message;
                 };
     
                 /**
@@ -17831,8 +17463,15 @@
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                QueryAvailableAssetsInPoolRequest.toObject = function toObject() {
-                    return {};
+                QueryAvailableAssetsInPoolRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.denom = "";
+                    if (message.denom != null && message.hasOwnProperty("denom"))
+                        object.denom = message.denom;
+                    return object;
                 };
     
                 /**
@@ -18056,6 +17695,186 @@
              * @namespace
              */
             var ecosystemincentive = {};
+    
+            ecosystemincentive.FrontendTxMemo = (function() {
+    
+                /**
+                 * Properties of a FrontendTxMemo.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IFrontendTxMemo
+                 * @property {ununifi.ecosystemincentive.IFrontendMetadata|null} [frontend] FrontendTxMemo frontend
+                 */
+    
+                /**
+                 * Constructs a new FrontendTxMemo.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a FrontendTxMemo.
+                 * @implements IFrontendTxMemo
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IFrontendTxMemo=} [properties] Properties to set
+                 */
+                function FrontendTxMemo(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * FrontendTxMemo frontend.
+                 * @member {ununifi.ecosystemincentive.IFrontendMetadata|null|undefined} frontend
+                 * @memberof ununifi.ecosystemincentive.FrontendTxMemo
+                 * @instance
+                 */
+                FrontendTxMemo.prototype.frontend = null;
+    
+                /**
+                 * Encodes the specified FrontendTxMemo message. Does not implicitly {@link ununifi.ecosystemincentive.FrontendTxMemo.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.FrontendTxMemo
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IFrontendTxMemo} message FrontendTxMemo message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                FrontendTxMemo.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.frontend != null && Object.hasOwnProperty.call(message, "frontend"))
+                        $root.ununifi.ecosystemincentive.FrontendMetadata.encode(message.frontend, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified FrontendTxMemo message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.FrontendTxMemo.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.FrontendTxMemo
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IFrontendTxMemo} message FrontendTxMemo message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                FrontendTxMemo.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a FrontendTxMemo message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.FrontendTxMemo
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.FrontendTxMemo} FrontendTxMemo
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                FrontendTxMemo.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.FrontendTxMemo();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.frontend = $root.ununifi.ecosystemincentive.FrontendMetadata.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a FrontendTxMemo message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.FrontendTxMemo
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.FrontendTxMemo} FrontendTxMemo
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                FrontendTxMemo.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a FrontendTxMemo message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.FrontendTxMemo
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                FrontendTxMemo.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.frontend != null && message.hasOwnProperty("frontend")) {
+                        var error = $root.ununifi.ecosystemincentive.FrontendMetadata.verify(message.frontend);
+                        if (error)
+                            return "frontend." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a FrontendTxMemo message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.FrontendTxMemo
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.FrontendTxMemo} FrontendTxMemo
+                 */
+                FrontendTxMemo.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.FrontendTxMemo)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.FrontendTxMemo();
+                    if (object.frontend != null) {
+                        if (typeof object.frontend !== "object")
+                            throw TypeError(".ununifi.ecosystemincentive.FrontendTxMemo.frontend: object expected");
+                        message.frontend = $root.ununifi.ecosystemincentive.FrontendMetadata.fromObject(object.frontend);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a FrontendTxMemo message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.FrontendTxMemo
+                 * @static
+                 * @param {ununifi.ecosystemincentive.FrontendTxMemo} message FrontendTxMemo
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                FrontendTxMemo.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.frontend = null;
+                    if (message.frontend != null && message.hasOwnProperty("frontend"))
+                        object.frontend = $root.ununifi.ecosystemincentive.FrontendMetadata.toObject(message.frontend, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this FrontendTxMemo to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.FrontendTxMemo
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                FrontendTxMemo.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return FrontendTxMemo;
+            })();
     
             ecosystemincentive.FrontendMetadata = (function() {
     
@@ -19652,13 +19471,233 @@
                 return EventWithdrawReward;
             })();
     
+            ecosystemincentive.EventRecordedRecipientWithNftId = (function() {
+    
+                /**
+                 * Properties of an EventRecordedRecipientWithNftId.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IEventRecordedRecipientWithNftId
+                 * @property {string|null} [recipient] EventRecordedRecipientWithNftId recipient
+                 * @property {string|null} [class_id] EventRecordedRecipientWithNftId class_id
+                 * @property {string|null} [token_id] EventRecordedRecipientWithNftId token_id
+                 */
+    
+                /**
+                 * Constructs a new EventRecordedRecipientWithNftId.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents an EventRecordedRecipientWithNftId.
+                 * @implements IEventRecordedRecipientWithNftId
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IEventRecordedRecipientWithNftId=} [properties] Properties to set
+                 */
+                function EventRecordedRecipientWithNftId(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * EventRecordedRecipientWithNftId recipient.
+                 * @member {string} recipient
+                 * @memberof ununifi.ecosystemincentive.EventRecordedRecipientWithNftId
+                 * @instance
+                 */
+                EventRecordedRecipientWithNftId.prototype.recipient = "";
+    
+                /**
+                 * EventRecordedRecipientWithNftId class_id.
+                 * @member {string} class_id
+                 * @memberof ununifi.ecosystemincentive.EventRecordedRecipientWithNftId
+                 * @instance
+                 */
+                EventRecordedRecipientWithNftId.prototype.class_id = "";
+    
+                /**
+                 * EventRecordedRecipientWithNftId token_id.
+                 * @member {string} token_id
+                 * @memberof ununifi.ecosystemincentive.EventRecordedRecipientWithNftId
+                 * @instance
+                 */
+                EventRecordedRecipientWithNftId.prototype.token_id = "";
+    
+                /**
+                 * Encodes the specified EventRecordedRecipientWithNftId message. Does not implicitly {@link ununifi.ecosystemincentive.EventRecordedRecipientWithNftId.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.EventRecordedRecipientWithNftId
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventRecordedRecipientWithNftId} message EventRecordedRecipientWithNftId message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventRecordedRecipientWithNftId.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.recipient != null && Object.hasOwnProperty.call(message, "recipient"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.recipient);
+                    if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.class_id);
+                    if (message.token_id != null && Object.hasOwnProperty.call(message, "token_id"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.token_id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified EventRecordedRecipientWithNftId message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.EventRecordedRecipientWithNftId.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventRecordedRecipientWithNftId
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IEventRecordedRecipientWithNftId} message EventRecordedRecipientWithNftId message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                EventRecordedRecipientWithNftId.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an EventRecordedRecipientWithNftId message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.EventRecordedRecipientWithNftId
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.EventRecordedRecipientWithNftId} EventRecordedRecipientWithNftId
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventRecordedRecipientWithNftId.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.EventRecordedRecipientWithNftId();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.recipient = reader.string();
+                            break;
+                        case 2:
+                            message.class_id = reader.string();
+                            break;
+                        case 3:
+                            message.token_id = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an EventRecordedRecipientWithNftId message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.EventRecordedRecipientWithNftId
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.EventRecordedRecipientWithNftId} EventRecordedRecipientWithNftId
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                EventRecordedRecipientWithNftId.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an EventRecordedRecipientWithNftId message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.EventRecordedRecipientWithNftId
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                EventRecordedRecipientWithNftId.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.recipient != null && message.hasOwnProperty("recipient"))
+                        if (!$util.isString(message.recipient))
+                            return "recipient: string expected";
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        if (!$util.isString(message.class_id))
+                            return "class_id: string expected";
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        if (!$util.isString(message.token_id))
+                            return "token_id: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates an EventRecordedRecipientWithNftId message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.EventRecordedRecipientWithNftId
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.EventRecordedRecipientWithNftId} EventRecordedRecipientWithNftId
+                 */
+                EventRecordedRecipientWithNftId.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.EventRecordedRecipientWithNftId)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.EventRecordedRecipientWithNftId();
+                    if (object.recipient != null)
+                        message.recipient = String(object.recipient);
+                    if (object.class_id != null)
+                        message.class_id = String(object.class_id);
+                    if (object.token_id != null)
+                        message.token_id = String(object.token_id);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an EventRecordedRecipientWithNftId message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.EventRecordedRecipientWithNftId
+                 * @static
+                 * @param {ununifi.ecosystemincentive.EventRecordedRecipientWithNftId} message EventRecordedRecipientWithNftId
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                EventRecordedRecipientWithNftId.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.recipient = "";
+                        object.class_id = "";
+                        object.token_id = "";
+                    }
+                    if (message.recipient != null && message.hasOwnProperty("recipient"))
+                        object.recipient = message.recipient;
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        object.class_id = message.class_id;
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        object.token_id = message.token_id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this EventRecordedRecipientWithNftId to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.EventRecordedRecipientWithNftId
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                EventRecordedRecipientWithNftId.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return EventRecordedRecipientWithNftId;
+            })();
+    
             ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward = (function() {
     
                 /**
                  * Properties of an EventDeletedNftIdRecordedForFrontendReward.
                  * @memberof ununifi.ecosystemincentive
                  * @interface IEventDeletedNftIdRecordedForFrontendReward
-                 * @property {string|null} [recipient_container_id] EventDeletedNftIdRecordedForFrontendReward recipient_container_id
+                 * @property {string|null} [recipient] EventDeletedNftIdRecordedForFrontendReward recipient
                  * @property {string|null} [class_id] EventDeletedNftIdRecordedForFrontendReward class_id
                  * @property {string|null} [token_id] EventDeletedNftIdRecordedForFrontendReward token_id
                  */
@@ -19679,12 +19718,12 @@
                 }
     
                 /**
-                 * EventDeletedNftIdRecordedForFrontendReward recipient_container_id.
-                 * @member {string} recipient_container_id
+                 * EventDeletedNftIdRecordedForFrontendReward recipient.
+                 * @member {string} recipient
                  * @memberof ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward
                  * @instance
                  */
-                EventDeletedNftIdRecordedForFrontendReward.prototype.recipient_container_id = "";
+                EventDeletedNftIdRecordedForFrontendReward.prototype.recipient = "";
     
                 /**
                  * EventDeletedNftIdRecordedForFrontendReward class_id.
@@ -19714,8 +19753,8 @@
                 EventDeletedNftIdRecordedForFrontendReward.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.recipient_container_id != null && Object.hasOwnProperty.call(message, "recipient_container_id"))
-                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.recipient_container_id);
+                    if (message.recipient != null && Object.hasOwnProperty.call(message, "recipient"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.recipient);
                     if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message.class_id);
                     if (message.token_id != null && Object.hasOwnProperty.call(message, "token_id"))
@@ -19755,7 +19794,7 @@
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
                         case 1:
-                            message.recipient_container_id = reader.string();
+                            message.recipient = reader.string();
                             break;
                         case 2:
                             message.class_id = reader.string();
@@ -19798,9 +19837,9 @@
                 EventDeletedNftIdRecordedForFrontendReward.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.recipient_container_id != null && message.hasOwnProperty("recipient_container_id"))
-                        if (!$util.isString(message.recipient_container_id))
-                            return "recipient_container_id: string expected";
+                    if (message.recipient != null && message.hasOwnProperty("recipient"))
+                        if (!$util.isString(message.recipient))
+                            return "recipient: string expected";
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         if (!$util.isString(message.class_id))
                             return "class_id: string expected";
@@ -19822,8 +19861,8 @@
                     if (object instanceof $root.ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward)
                         return object;
                     var message = new $root.ununifi.ecosystemincentive.EventDeletedNftIdRecordedForFrontendReward();
-                    if (object.recipient_container_id != null)
-                        message.recipient_container_id = String(object.recipient_container_id);
+                    if (object.recipient != null)
+                        message.recipient = String(object.recipient);
                     if (object.class_id != null)
                         message.class_id = String(object.class_id);
                     if (object.token_id != null)
@@ -19845,12 +19884,12 @@
                         options = {};
                     var object = {};
                     if (options.defaults) {
-                        object.recipient_container_id = "";
+                        object.recipient = "";
                         object.class_id = "";
                         object.token_id = "";
                     }
-                    if (message.recipient_container_id != null && message.hasOwnProperty("recipient_container_id"))
-                        object.recipient_container_id = message.recipient_container_id;
+                    if (message.recipient != null && message.hasOwnProperty("recipient"))
+                        object.recipient = message.recipient;
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         object.class_id = message.class_id;
                     if (message.token_id != null && message.hasOwnProperty("token_id"))
@@ -20076,7 +20115,7 @@
                  * Properties of an EventUpdatedReward.
                  * @memberof ununifi.ecosystemincentive
                  * @interface IEventUpdatedReward
-                 * @property {string|null} [recipient_container_id] EventUpdatedReward recipient_container_id
+                 * @property {string|null} [recipient] EventUpdatedReward recipient
                  * @property {cosmos.base.v1beta1.ICoin|null} [earned_reward] EventUpdatedReward earned_reward
                  */
     
@@ -20096,12 +20135,12 @@
                 }
     
                 /**
-                 * EventUpdatedReward recipient_container_id.
-                 * @member {string} recipient_container_id
+                 * EventUpdatedReward recipient.
+                 * @member {string} recipient
                  * @memberof ununifi.ecosystemincentive.EventUpdatedReward
                  * @instance
                  */
-                EventUpdatedReward.prototype.recipient_container_id = "";
+                EventUpdatedReward.prototype.recipient = "";
     
                 /**
                  * EventUpdatedReward earned_reward.
@@ -20123,8 +20162,8 @@
                 EventUpdatedReward.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.recipient_container_id != null && Object.hasOwnProperty.call(message, "recipient_container_id"))
-                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.recipient_container_id);
+                    if (message.recipient != null && Object.hasOwnProperty.call(message, "recipient"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.recipient);
                     if (message.earned_reward != null && Object.hasOwnProperty.call(message, "earned_reward"))
                         $root.cosmos.base.v1beta1.Coin.encode(message.earned_reward, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
                     return writer;
@@ -20162,7 +20201,7 @@
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
                         case 1:
-                            message.recipient_container_id = reader.string();
+                            message.recipient = reader.string();
                             break;
                         case 2:
                             message.earned_reward = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
@@ -20202,9 +20241,9 @@
                 EventUpdatedReward.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.recipient_container_id != null && message.hasOwnProperty("recipient_container_id"))
-                        if (!$util.isString(message.recipient_container_id))
-                            return "recipient_container_id: string expected";
+                    if (message.recipient != null && message.hasOwnProperty("recipient"))
+                        if (!$util.isString(message.recipient))
+                            return "recipient: string expected";
                     if (message.earned_reward != null && message.hasOwnProperty("earned_reward")) {
                         var error = $root.cosmos.base.v1beta1.Coin.verify(message.earned_reward);
                         if (error)
@@ -20225,8 +20264,8 @@
                     if (object instanceof $root.ununifi.ecosystemincentive.EventUpdatedReward)
                         return object;
                     var message = new $root.ununifi.ecosystemincentive.EventUpdatedReward();
-                    if (object.recipient_container_id != null)
-                        message.recipient_container_id = String(object.recipient_container_id);
+                    if (object.recipient != null)
+                        message.recipient = String(object.recipient);
                     if (object.earned_reward != null) {
                         if (typeof object.earned_reward !== "object")
                             throw TypeError(".ununifi.ecosystemincentive.EventUpdatedReward.earned_reward: object expected");
@@ -20249,11 +20288,11 @@
                         options = {};
                     var object = {};
                     if (options.defaults) {
-                        object.recipient_container_id = "";
+                        object.recipient = "";
                         object.earned_reward = null;
                     }
-                    if (message.recipient_container_id != null && message.hasOwnProperty("recipient_container_id"))
-                        object.recipient_container_id = message.recipient_container_id;
+                    if (message.recipient != null && message.hasOwnProperty("recipient"))
+                        object.recipient = message.recipient;
                     if (message.earned_reward != null && message.hasOwnProperty("earned_reward"))
                         object.earned_reward = $root.cosmos.base.v1beta1.Coin.toObject(message.earned_reward, options);
                     return object;
@@ -20498,7 +20537,7 @@
                  * @interface IEventVersionUnmatched
                  * @property {number|null} [unmatched_version] EventVersionUnmatched unmatched_version
                  * @property {string|null} [class_id] EventVersionUnmatched class_id
-                 * @property {string|null} [nft_id] EventVersionUnmatched nft_id
+                 * @property {string|null} [token_id] EventVersionUnmatched token_id
                  */
     
                 /**
@@ -20533,12 +20572,12 @@
                 EventVersionUnmatched.prototype.class_id = "";
     
                 /**
-                 * EventVersionUnmatched nft_id.
-                 * @member {string} nft_id
+                 * EventVersionUnmatched token_id.
+                 * @member {string} token_id
                  * @memberof ununifi.ecosystemincentive.EventVersionUnmatched
                  * @instance
                  */
-                EventVersionUnmatched.prototype.nft_id = "";
+                EventVersionUnmatched.prototype.token_id = "";
     
                 /**
                  * Encodes the specified EventVersionUnmatched message. Does not implicitly {@link ununifi.ecosystemincentive.EventVersionUnmatched.verify|verify} messages.
@@ -20556,8 +20595,8 @@
                         writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.unmatched_version);
                     if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message.class_id);
-                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
-                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.nft_id);
+                    if (message.token_id != null && Object.hasOwnProperty.call(message, "token_id"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.token_id);
                     return writer;
                 };
     
@@ -20599,7 +20638,7 @@
                             message.class_id = reader.string();
                             break;
                         case 3:
-                            message.nft_id = reader.string();
+                            message.token_id = reader.string();
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -20642,9 +20681,9 @@
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         if (!$util.isString(message.class_id))
                             return "class_id: string expected";
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        if (!$util.isString(message.nft_id))
-                            return "nft_id: string expected";
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        if (!$util.isString(message.token_id))
+                            return "token_id: string expected";
                     return null;
                 };
     
@@ -20664,8 +20703,8 @@
                         message.unmatched_version = object.unmatched_version >>> 0;
                     if (object.class_id != null)
                         message.class_id = String(object.class_id);
-                    if (object.nft_id != null)
-                        message.nft_id = String(object.nft_id);
+                    if (object.token_id != null)
+                        message.token_id = String(object.token_id);
                     return message;
                 };
     
@@ -20685,14 +20724,14 @@
                     if (options.defaults) {
                         object.unmatched_version = 0;
                         object.class_id = "";
-                        object.nft_id = "";
+                        object.token_id = "";
                     }
                     if (message.unmatched_version != null && message.hasOwnProperty("unmatched_version"))
                         object.unmatched_version = message.unmatched_version;
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         object.class_id = message.class_id;
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        object.nft_id = message.nft_id;
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        object.token_id = message.token_id;
                     return object;
                 };
     
@@ -21640,68 +21679,68 @@
                  */
     
                 /**
-                 * Callback as used by {@link ununifi.ecosystemincentive.Query#allRewards}.
+                 * Callback as used by {@link ununifi.ecosystemincentive.Query#ecosystemRewards}.
                  * @memberof ununifi.ecosystemincentive.Query
-                 * @typedef AllRewardsCallback
+                 * @typedef EcosystemRewardsCallback
                  * @type {function}
                  * @param {Error|null} error Error, if any
-                 * @param {ununifi.ecosystemincentive.QueryAllRewardsResponse} [response] QueryAllRewardsResponse
+                 * @param {ununifi.ecosystemincentive.QueryEcosystemRewardsResponse} [response] QueryEcosystemRewardsResponse
                  */
     
                 /**
-                 * Calls AllRewards.
-                 * @function allRewards
+                 * Calls EcosystemRewards.
+                 * @function ecosystemRewards
                  * @memberof ununifi.ecosystemincentive.Query
                  * @instance
-                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsRequest} request QueryAllRewardsRequest message or plain object
-                 * @param {ununifi.ecosystemincentive.Query.AllRewardsCallback} callback Node-style callback called with the error, if any, and QueryAllRewardsResponse
+                 * @param {ununifi.ecosystemincentive.IQueryEcosystemRewardsRequest} request QueryEcosystemRewardsRequest message or plain object
+                 * @param {ununifi.ecosystemincentive.Query.EcosystemRewardsCallback} callback Node-style callback called with the error, if any, and QueryEcosystemRewardsResponse
                  * @returns {undefined}
                  * @variation 1
                  */
-                Object.defineProperty(Query.prototype.allRewards = function allRewards(request, callback) {
-                    return this.rpcCall(allRewards, $root.ununifi.ecosystemincentive.QueryAllRewardsRequest, $root.ununifi.ecosystemincentive.QueryAllRewardsResponse, request, callback);
-                }, "name", { value: "AllRewards" });
+                Object.defineProperty(Query.prototype.ecosystemRewards = function ecosystemRewards(request, callback) {
+                    return this.rpcCall(ecosystemRewards, $root.ununifi.ecosystemincentive.QueryEcosystemRewardsRequest, $root.ununifi.ecosystemincentive.QueryEcosystemRewardsResponse, request, callback);
+                }, "name", { value: "EcosystemRewards" });
     
                 /**
-                 * Calls AllRewards.
-                 * @function allRewards
+                 * Calls EcosystemRewards.
+                 * @function ecosystemRewards
                  * @memberof ununifi.ecosystemincentive.Query
                  * @instance
-                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsRequest} request QueryAllRewardsRequest message or plain object
-                 * @returns {Promise<ununifi.ecosystemincentive.QueryAllRewardsResponse>} Promise
+                 * @param {ununifi.ecosystemincentive.IQueryEcosystemRewardsRequest} request QueryEcosystemRewardsRequest message or plain object
+                 * @returns {Promise<ununifi.ecosystemincentive.QueryEcosystemRewardsResponse>} Promise
                  * @variation 2
                  */
     
                 /**
-                 * Callback as used by {@link ununifi.ecosystemincentive.Query#reward}.
+                 * Callback as used by {@link ununifi.ecosystemincentive.Query#recipientAddressWithNftId}.
                  * @memberof ununifi.ecosystemincentive.Query
-                 * @typedef RewardCallback
+                 * @typedef RecipientAddressWithNftIdCallback
                  * @type {function}
                  * @param {Error|null} error Error, if any
-                 * @param {ununifi.ecosystemincentive.QueryRewardResponse} [response] QueryRewardResponse
+                 * @param {ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse} [response] QueryRecipientAddressWithNftIdResponse
                  */
     
                 /**
-                 * Calls Reward.
-                 * @function reward
+                 * Calls RecipientAddressWithNftId.
+                 * @function recipientAddressWithNftId
                  * @memberof ununifi.ecosystemincentive.Query
                  * @instance
-                 * @param {ununifi.ecosystemincentive.IQueryRewardRequest} request QueryRewardRequest message or plain object
-                 * @param {ununifi.ecosystemincentive.Query.RewardCallback} callback Node-style callback called with the error, if any, and QueryRewardResponse
+                 * @param {ununifi.ecosystemincentive.IQueryRecipientAddressWithNftIdRequest} request QueryRecipientAddressWithNftIdRequest message or plain object
+                 * @param {ununifi.ecosystemincentive.Query.RecipientAddressWithNftIdCallback} callback Node-style callback called with the error, if any, and QueryRecipientAddressWithNftIdResponse
                  * @returns {undefined}
                  * @variation 1
                  */
-                Object.defineProperty(Query.prototype.reward = function reward(request, callback) {
-                    return this.rpcCall(reward, $root.ununifi.ecosystemincentive.QueryRewardRequest, $root.ununifi.ecosystemincentive.QueryRewardResponse, request, callback);
-                }, "name", { value: "Reward" });
+                Object.defineProperty(Query.prototype.recipientAddressWithNftId = function recipientAddressWithNftId(request, callback) {
+                    return this.rpcCall(recipientAddressWithNftId, $root.ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest, $root.ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse, request, callback);
+                }, "name", { value: "RecipientAddressWithNftId" });
     
                 /**
-                 * Calls Reward.
-                 * @function reward
+                 * Calls RecipientAddressWithNftId.
+                 * @function recipientAddressWithNftId
                  * @memberof ununifi.ecosystemincentive.Query
                  * @instance
-                 * @param {ununifi.ecosystemincentive.IQueryRewardRequest} request QueryRewardRequest message or plain object
-                 * @returns {Promise<ununifi.ecosystemincentive.QueryRewardResponse>} Promise
+                 * @param {ununifi.ecosystemincentive.IQueryRecipientAddressWithNftIdRequest} request QueryRecipientAddressWithNftIdRequest message or plain object
+                 * @returns {Promise<ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse>} Promise
                  * @variation 2
                  */
     
@@ -22036,24 +22075,25 @@
                 return QueryParamsResponse;
             })();
     
-            ecosystemincentive.QueryAllRewardsRequest = (function() {
+            ecosystemincentive.QueryEcosystemRewardsRequest = (function() {
     
                 /**
-                 * Properties of a QueryAllRewardsRequest.
+                 * Properties of a QueryEcosystemRewardsRequest.
                  * @memberof ununifi.ecosystemincentive
-                 * @interface IQueryAllRewardsRequest
-                 * @property {string|null} [address] QueryAllRewardsRequest address
+                 * @interface IQueryEcosystemRewardsRequest
+                 * @property {string|null} [address] QueryEcosystemRewardsRequest address
+                 * @property {string|null} [denom] QueryEcosystemRewardsRequest denom
                  */
     
                 /**
-                 * Constructs a new QueryAllRewardsRequest.
+                 * Constructs a new QueryEcosystemRewardsRequest.
                  * @memberof ununifi.ecosystemincentive
-                 * @classdesc Represents a QueryAllRewardsRequest.
-                 * @implements IQueryAllRewardsRequest
+                 * @classdesc Represents a QueryEcosystemRewardsRequest.
+                 * @implements IQueryEcosystemRewardsRequest
                  * @constructor
-                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsRequest=} [properties] Properties to set
+                 * @param {ununifi.ecosystemincentive.IQueryEcosystemRewardsRequest=} [properties] Properties to set
                  */
-                function QueryAllRewardsRequest(properties) {
+                function QueryEcosystemRewardsRequest(properties) {
                     if (properties)
                         for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -22061,387 +22101,31 @@
                 }
     
                 /**
-                 * QueryAllRewardsRequest address.
+                 * QueryEcosystemRewardsRequest address.
                  * @member {string} address
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsRequest
                  * @instance
                  */
-                QueryAllRewardsRequest.prototype.address = "";
+                QueryEcosystemRewardsRequest.prototype.address = "";
     
                 /**
-                 * Encodes the specified QueryAllRewardsRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryAllRewardsRequest.verify|verify} messages.
-                 * @function encode
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
-                 * @static
-                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsRequest} message QueryAllRewardsRequest message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryAllRewardsRequest.encode = function encode(message, writer) {
-                    if (!writer)
-                        writer = $Writer.create();
-                    if (message.address != null && Object.hasOwnProperty.call(message, "address"))
-                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.address);
-                    return writer;
-                };
-    
-                /**
-                 * Encodes the specified QueryAllRewardsRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryAllRewardsRequest.verify|verify} messages.
-                 * @function encodeDelimited
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
-                 * @static
-                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsRequest} message QueryAllRewardsRequest message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryAllRewardsRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                    return this.encode(message, writer).ldelim();
-                };
-    
-                /**
-                 * Decodes a QueryAllRewardsRequest message from the specified reader or buffer.
-                 * @function decode
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.ecosystemincentive.QueryAllRewardsRequest} QueryAllRewardsRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryAllRewardsRequest.decode = function decode(reader, length) {
-                    if (!(reader instanceof $Reader))
-                        reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryAllRewardsRequest();
-                    while (reader.pos < end) {
-                        var tag = reader.uint32();
-                        switch (tag >>> 3) {
-                        case 1:
-                            message.address = reader.string();
-                            break;
-                        default:
-                            reader.skipType(tag & 7);
-                            break;
-                        }
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Decodes a QueryAllRewardsRequest message from the specified reader or buffer, length delimited.
-                 * @function decodeDelimited
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.ecosystemincentive.QueryAllRewardsRequest} QueryAllRewardsRequest
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryAllRewardsRequest.decodeDelimited = function decodeDelimited(reader) {
-                    if (!(reader instanceof $Reader))
-                        reader = new $Reader(reader);
-                    return this.decode(reader, reader.uint32());
-                };
-    
-                /**
-                 * Verifies a QueryAllRewardsRequest message.
-                 * @function verify
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                QueryAllRewardsRequest.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.address != null && message.hasOwnProperty("address"))
-                        if (!$util.isString(message.address))
-                            return "address: string expected";
-                    return null;
-                };
-    
-                /**
-                 * Creates a QueryAllRewardsRequest message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.ecosystemincentive.QueryAllRewardsRequest} QueryAllRewardsRequest
-                 */
-                QueryAllRewardsRequest.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.ecosystemincentive.QueryAllRewardsRequest)
-                        return object;
-                    var message = new $root.ununifi.ecosystemincentive.QueryAllRewardsRequest();
-                    if (object.address != null)
-                        message.address = String(object.address);
-                    return message;
-                };
-    
-                /**
-                 * Creates a plain object from a QueryAllRewardsRequest message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
-                 * @static
-                 * @param {ununifi.ecosystemincentive.QueryAllRewardsRequest} message QueryAllRewardsRequest
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                QueryAllRewardsRequest.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    var object = {};
-                    if (options.defaults)
-                        object.address = "";
-                    if (message.address != null && message.hasOwnProperty("address"))
-                        object.address = message.address;
-                    return object;
-                };
-    
-                /**
-                 * Converts this QueryAllRewardsRequest to JSON.
-                 * @function toJSON
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsRequest
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                QueryAllRewardsRequest.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-    
-                return QueryAllRewardsRequest;
-            })();
-    
-            ecosystemincentive.QueryAllRewardsResponse = (function() {
-    
-                /**
-                 * Properties of a QueryAllRewardsResponse.
-                 * @memberof ununifi.ecosystemincentive
-                 * @interface IQueryAllRewardsResponse
-                 * @property {ununifi.ecosystemincentive.IRewardRecord|null} [reward_record] QueryAllRewardsResponse reward_record
-                 */
-    
-                /**
-                 * Constructs a new QueryAllRewardsResponse.
-                 * @memberof ununifi.ecosystemincentive
-                 * @classdesc Represents a QueryAllRewardsResponse.
-                 * @implements IQueryAllRewardsResponse
-                 * @constructor
-                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsResponse=} [properties] Properties to set
-                 */
-                function QueryAllRewardsResponse(properties) {
-                    if (properties)
-                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-    
-                /**
-                 * QueryAllRewardsResponse reward_record.
-                 * @member {ununifi.ecosystemincentive.IRewardRecord|null|undefined} reward_record
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
-                 * @instance
-                 */
-                QueryAllRewardsResponse.prototype.reward_record = null;
-    
-                /**
-                 * Encodes the specified QueryAllRewardsResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryAllRewardsResponse.verify|verify} messages.
-                 * @function encode
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
-                 * @static
-                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsResponse} message QueryAllRewardsResponse message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryAllRewardsResponse.encode = function encode(message, writer) {
-                    if (!writer)
-                        writer = $Writer.create();
-                    if (message.reward_record != null && Object.hasOwnProperty.call(message, "reward_record"))
-                        $root.ununifi.ecosystemincentive.RewardRecord.encode(message.reward_record, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                    return writer;
-                };
-    
-                /**
-                 * Encodes the specified QueryAllRewardsResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryAllRewardsResponse.verify|verify} messages.
-                 * @function encodeDelimited
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
-                 * @static
-                 * @param {ununifi.ecosystemincentive.IQueryAllRewardsResponse} message QueryAllRewardsResponse message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                QueryAllRewardsResponse.encodeDelimited = function encodeDelimited(message, writer) {
-                    return this.encode(message, writer).ldelim();
-                };
-    
-                /**
-                 * Decodes a QueryAllRewardsResponse message from the specified reader or buffer.
-                 * @function decode
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.ecosystemincentive.QueryAllRewardsResponse} QueryAllRewardsResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryAllRewardsResponse.decode = function decode(reader, length) {
-                    if (!(reader instanceof $Reader))
-                        reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryAllRewardsResponse();
-                    while (reader.pos < end) {
-                        var tag = reader.uint32();
-                        switch (tag >>> 3) {
-                        case 1:
-                            message.reward_record = $root.ununifi.ecosystemincentive.RewardRecord.decode(reader, reader.uint32());
-                            break;
-                        default:
-                            reader.skipType(tag & 7);
-                            break;
-                        }
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Decodes a QueryAllRewardsResponse message from the specified reader or buffer, length delimited.
-                 * @function decodeDelimited
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.ecosystemincentive.QueryAllRewardsResponse} QueryAllRewardsResponse
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                QueryAllRewardsResponse.decodeDelimited = function decodeDelimited(reader) {
-                    if (!(reader instanceof $Reader))
-                        reader = new $Reader(reader);
-                    return this.decode(reader, reader.uint32());
-                };
-    
-                /**
-                 * Verifies a QueryAllRewardsResponse message.
-                 * @function verify
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                QueryAllRewardsResponse.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.reward_record != null && message.hasOwnProperty("reward_record")) {
-                        var error = $root.ununifi.ecosystemincentive.RewardRecord.verify(message.reward_record);
-                        if (error)
-                            return "reward_record." + error;
-                    }
-                    return null;
-                };
-    
-                /**
-                 * Creates a QueryAllRewardsResponse message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.ecosystemincentive.QueryAllRewardsResponse} QueryAllRewardsResponse
-                 */
-                QueryAllRewardsResponse.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.ecosystemincentive.QueryAllRewardsResponse)
-                        return object;
-                    var message = new $root.ununifi.ecosystemincentive.QueryAllRewardsResponse();
-                    if (object.reward_record != null) {
-                        if (typeof object.reward_record !== "object")
-                            throw TypeError(".ununifi.ecosystemincentive.QueryAllRewardsResponse.reward_record: object expected");
-                        message.reward_record = $root.ununifi.ecosystemincentive.RewardRecord.fromObject(object.reward_record);
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Creates a plain object from a QueryAllRewardsResponse message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
-                 * @static
-                 * @param {ununifi.ecosystemincentive.QueryAllRewardsResponse} message QueryAllRewardsResponse
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                QueryAllRewardsResponse.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    var object = {};
-                    if (options.defaults)
-                        object.reward_record = null;
-                    if (message.reward_record != null && message.hasOwnProperty("reward_record"))
-                        object.reward_record = $root.ununifi.ecosystemincentive.RewardRecord.toObject(message.reward_record, options);
-                    return object;
-                };
-    
-                /**
-                 * Converts this QueryAllRewardsResponse to JSON.
-                 * @function toJSON
-                 * @memberof ununifi.ecosystemincentive.QueryAllRewardsResponse
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                QueryAllRewardsResponse.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-    
-                return QueryAllRewardsResponse;
-            })();
-    
-            ecosystemincentive.QueryRewardRequest = (function() {
-    
-                /**
-                 * Properties of a QueryRewardRequest.
-                 * @memberof ununifi.ecosystemincentive
-                 * @interface IQueryRewardRequest
-                 * @property {string|null} [address] QueryRewardRequest address
-                 * @property {string|null} [denom] QueryRewardRequest denom
-                 */
-    
-                /**
-                 * Constructs a new QueryRewardRequest.
-                 * @memberof ununifi.ecosystemincentive
-                 * @classdesc Represents a QueryRewardRequest.
-                 * @implements IQueryRewardRequest
-                 * @constructor
-                 * @param {ununifi.ecosystemincentive.IQueryRewardRequest=} [properties] Properties to set
-                 */
-                function QueryRewardRequest(properties) {
-                    if (properties)
-                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-    
-                /**
-                 * QueryRewardRequest address.
-                 * @member {string} address
-                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
-                 * @instance
-                 */
-                QueryRewardRequest.prototype.address = "";
-    
-                /**
-                 * QueryRewardRequest denom.
+                 * QueryEcosystemRewardsRequest denom.
                  * @member {string} denom
-                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsRequest
                  * @instance
                  */
-                QueryRewardRequest.prototype.denom = "";
+                QueryEcosystemRewardsRequest.prototype.denom = "";
     
                 /**
-                 * Encodes the specified QueryRewardRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRewardRequest.verify|verify} messages.
+                 * Encodes the specified QueryEcosystemRewardsRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryEcosystemRewardsRequest.verify|verify} messages.
                  * @function encode
-                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsRequest
                  * @static
-                 * @param {ununifi.ecosystemincentive.IQueryRewardRequest} message QueryRewardRequest message or plain object to encode
+                 * @param {ununifi.ecosystemincentive.IQueryEcosystemRewardsRequest} message QueryEcosystemRewardsRequest message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                QueryRewardRequest.encode = function encode(message, writer) {
+                QueryEcosystemRewardsRequest.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
                     if (message.address != null && Object.hasOwnProperty.call(message, "address"))
@@ -22452,33 +22136,33 @@
                 };
     
                 /**
-                 * Encodes the specified QueryRewardRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRewardRequest.verify|verify} messages.
+                 * Encodes the specified QueryEcosystemRewardsRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryEcosystemRewardsRequest.verify|verify} messages.
                  * @function encodeDelimited
-                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsRequest
                  * @static
-                 * @param {ununifi.ecosystemincentive.IQueryRewardRequest} message QueryRewardRequest message or plain object to encode
+                 * @param {ununifi.ecosystemincentive.IQueryEcosystemRewardsRequest} message QueryEcosystemRewardsRequest message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                QueryRewardRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                QueryEcosystemRewardsRequest.encodeDelimited = function encodeDelimited(message, writer) {
                     return this.encode(message, writer).ldelim();
                 };
     
                 /**
-                 * Decodes a QueryRewardRequest message from the specified reader or buffer.
+                 * Decodes a QueryEcosystemRewardsRequest message from the specified reader or buffer.
                  * @function decode
-                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsRequest
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.ecosystemincentive.QueryRewardRequest} QueryRewardRequest
+                 * @returns {ununifi.ecosystemincentive.QueryEcosystemRewardsRequest} QueryEcosystemRewardsRequest
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                QueryRewardRequest.decode = function decode(reader, length) {
+                QueryEcosystemRewardsRequest.decode = function decode(reader, length) {
                     if (!(reader instanceof $Reader))
                         reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryRewardRequest();
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryEcosystemRewardsRequest();
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
@@ -22497,30 +22181,30 @@
                 };
     
                 /**
-                 * Decodes a QueryRewardRequest message from the specified reader or buffer, length delimited.
+                 * Decodes a QueryEcosystemRewardsRequest message from the specified reader or buffer, length delimited.
                  * @function decodeDelimited
-                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsRequest
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.ecosystemincentive.QueryRewardRequest} QueryRewardRequest
+                 * @returns {ununifi.ecosystemincentive.QueryEcosystemRewardsRequest} QueryEcosystemRewardsRequest
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                QueryRewardRequest.decodeDelimited = function decodeDelimited(reader) {
+                QueryEcosystemRewardsRequest.decodeDelimited = function decodeDelimited(reader) {
                     if (!(reader instanceof $Reader))
                         reader = new $Reader(reader);
                     return this.decode(reader, reader.uint32());
                 };
     
                 /**
-                 * Verifies a QueryRewardRequest message.
+                 * Verifies a QueryEcosystemRewardsRequest message.
                  * @function verify
-                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsRequest
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
                  */
-                QueryRewardRequest.verify = function verify(message) {
+                QueryEcosystemRewardsRequest.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
                     if (message.address != null && message.hasOwnProperty("address"))
@@ -22533,17 +22217,17 @@
                 };
     
                 /**
-                 * Creates a QueryRewardRequest message from a plain object. Also converts values to their respective internal types.
+                 * Creates a QueryEcosystemRewardsRequest message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsRequest
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.ecosystemincentive.QueryRewardRequest} QueryRewardRequest
+                 * @returns {ununifi.ecosystemincentive.QueryEcosystemRewardsRequest} QueryEcosystemRewardsRequest
                  */
-                QueryRewardRequest.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.ecosystemincentive.QueryRewardRequest)
+                QueryEcosystemRewardsRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryEcosystemRewardsRequest)
                         return object;
-                    var message = new $root.ununifi.ecosystemincentive.QueryRewardRequest();
+                    var message = new $root.ununifi.ecosystemincentive.QueryEcosystemRewardsRequest();
                     if (object.address != null)
                         message.address = String(object.address);
                     if (object.denom != null)
@@ -22552,15 +22236,15 @@
                 };
     
                 /**
-                 * Creates a plain object from a QueryRewardRequest message. Also converts values to other types if specified.
+                 * Creates a plain object from a QueryEcosystemRewardsRequest message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsRequest
                  * @static
-                 * @param {ununifi.ecosystemincentive.QueryRewardRequest} message QueryRewardRequest
+                 * @param {ununifi.ecosystemincentive.QueryEcosystemRewardsRequest} message QueryEcosystemRewardsRequest
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                QueryRewardRequest.toObject = function toObject(message, options) {
+                QueryEcosystemRewardsRequest.toObject = function toObject(message, options) {
                     if (!options)
                         options = {};
                     var object = {};
@@ -22576,37 +22260,38 @@
                 };
     
                 /**
-                 * Converts this QueryRewardRequest to JSON.
+                 * Converts this QueryEcosystemRewardsRequest to JSON.
                  * @function toJSON
-                 * @memberof ununifi.ecosystemincentive.QueryRewardRequest
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsRequest
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
-                QueryRewardRequest.prototype.toJSON = function toJSON() {
+                QueryEcosystemRewardsRequest.prototype.toJSON = function toJSON() {
                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                 };
     
-                return QueryRewardRequest;
+                return QueryEcosystemRewardsRequest;
             })();
     
-            ecosystemincentive.QueryRewardResponse = (function() {
+            ecosystemincentive.QueryEcosystemRewardsResponse = (function() {
     
                 /**
-                 * Properties of a QueryRewardResponse.
+                 * Properties of a QueryEcosystemRewardsResponse.
                  * @memberof ununifi.ecosystemincentive
-                 * @interface IQueryRewardResponse
-                 * @property {cosmos.base.v1beta1.ICoin|null} [reward] QueryRewardResponse reward
+                 * @interface IQueryEcosystemRewardsResponse
+                 * @property {Array.<cosmos.base.v1beta1.ICoin>|null} [rewards] QueryEcosystemRewardsResponse rewards
                  */
     
                 /**
-                 * Constructs a new QueryRewardResponse.
+                 * Constructs a new QueryEcosystemRewardsResponse.
                  * @memberof ununifi.ecosystemincentive
-                 * @classdesc Represents a QueryRewardResponse.
-                 * @implements IQueryRewardResponse
+                 * @classdesc Represents a QueryEcosystemRewardsResponse.
+                 * @implements IQueryEcosystemRewardsResponse
                  * @constructor
-                 * @param {ununifi.ecosystemincentive.IQueryRewardResponse=} [properties] Properties to set
+                 * @param {ununifi.ecosystemincentive.IQueryEcosystemRewardsResponse=} [properties] Properties to set
                  */
-                function QueryRewardResponse(properties) {
+                function QueryEcosystemRewardsResponse(properties) {
+                    this.rewards = [];
                     if (properties)
                         for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -22614,63 +22299,66 @@
                 }
     
                 /**
-                 * QueryRewardResponse reward.
-                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} reward
-                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * QueryEcosystemRewardsResponse rewards.
+                 * @member {Array.<cosmos.base.v1beta1.ICoin>} rewards
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsResponse
                  * @instance
                  */
-                QueryRewardResponse.prototype.reward = null;
+                QueryEcosystemRewardsResponse.prototype.rewards = $util.emptyArray;
     
                 /**
-                 * Encodes the specified QueryRewardResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRewardResponse.verify|verify} messages.
+                 * Encodes the specified QueryEcosystemRewardsResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryEcosystemRewardsResponse.verify|verify} messages.
                  * @function encode
-                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsResponse
                  * @static
-                 * @param {ununifi.ecosystemincentive.IQueryRewardResponse} message QueryRewardResponse message or plain object to encode
+                 * @param {ununifi.ecosystemincentive.IQueryEcosystemRewardsResponse} message QueryEcosystemRewardsResponse message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                QueryRewardResponse.encode = function encode(message, writer) {
+                QueryEcosystemRewardsResponse.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.reward != null && Object.hasOwnProperty.call(message, "reward"))
-                        $root.cosmos.base.v1beta1.Coin.encode(message.reward, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.rewards != null && message.rewards.length)
+                        for (var i = 0; i < message.rewards.length; ++i)
+                            $root.cosmos.base.v1beta1.Coin.encode(message.rewards[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
                     return writer;
                 };
     
                 /**
-                 * Encodes the specified QueryRewardResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRewardResponse.verify|verify} messages.
+                 * Encodes the specified QueryEcosystemRewardsResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryEcosystemRewardsResponse.verify|verify} messages.
                  * @function encodeDelimited
-                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsResponse
                  * @static
-                 * @param {ununifi.ecosystemincentive.IQueryRewardResponse} message QueryRewardResponse message or plain object to encode
+                 * @param {ununifi.ecosystemincentive.IQueryEcosystemRewardsResponse} message QueryEcosystemRewardsResponse message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                QueryRewardResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                QueryEcosystemRewardsResponse.encodeDelimited = function encodeDelimited(message, writer) {
                     return this.encode(message, writer).ldelim();
                 };
     
                 /**
-                 * Decodes a QueryRewardResponse message from the specified reader or buffer.
+                 * Decodes a QueryEcosystemRewardsResponse message from the specified reader or buffer.
                  * @function decode
-                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsResponse
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.ecosystemincentive.QueryRewardResponse} QueryRewardResponse
+                 * @returns {ununifi.ecosystemincentive.QueryEcosystemRewardsResponse} QueryEcosystemRewardsResponse
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                QueryRewardResponse.decode = function decode(reader, length) {
+                QueryEcosystemRewardsResponse.decode = function decode(reader, length) {
                     if (!(reader instanceof $Reader))
                         reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryRewardResponse();
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryEcosystemRewardsResponse();
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
                         case 1:
-                            message.reward = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            if (!(message.rewards && message.rewards.length))
+                                message.rewards = [];
+                            message.rewards.push($root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32()));
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -22681,92 +22369,477 @@
                 };
     
                 /**
-                 * Decodes a QueryRewardResponse message from the specified reader or buffer, length delimited.
+                 * Decodes a QueryEcosystemRewardsResponse message from the specified reader or buffer, length delimited.
                  * @function decodeDelimited
-                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsResponse
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.ecosystemincentive.QueryRewardResponse} QueryRewardResponse
+                 * @returns {ununifi.ecosystemincentive.QueryEcosystemRewardsResponse} QueryEcosystemRewardsResponse
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                QueryRewardResponse.decodeDelimited = function decodeDelimited(reader) {
+                QueryEcosystemRewardsResponse.decodeDelimited = function decodeDelimited(reader) {
                     if (!(reader instanceof $Reader))
                         reader = new $Reader(reader);
                     return this.decode(reader, reader.uint32());
                 };
     
                 /**
-                 * Verifies a QueryRewardResponse message.
+                 * Verifies a QueryEcosystemRewardsResponse message.
                  * @function verify
-                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsResponse
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
                  */
-                QueryRewardResponse.verify = function verify(message) {
+                QueryEcosystemRewardsResponse.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.reward != null && message.hasOwnProperty("reward")) {
-                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.reward);
-                        if (error)
-                            return "reward." + error;
+                    if (message.rewards != null && message.hasOwnProperty("rewards")) {
+                        if (!Array.isArray(message.rewards))
+                            return "rewards: array expected";
+                        for (var i = 0; i < message.rewards.length; ++i) {
+                            var error = $root.cosmos.base.v1beta1.Coin.verify(message.rewards[i]);
+                            if (error)
+                                return "rewards." + error;
+                        }
                     }
                     return null;
                 };
     
                 /**
-                 * Creates a QueryRewardResponse message from a plain object. Also converts values to their respective internal types.
+                 * Creates a QueryEcosystemRewardsResponse message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsResponse
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.ecosystemincentive.QueryRewardResponse} QueryRewardResponse
+                 * @returns {ununifi.ecosystemincentive.QueryEcosystemRewardsResponse} QueryEcosystemRewardsResponse
                  */
-                QueryRewardResponse.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.ecosystemincentive.QueryRewardResponse)
+                QueryEcosystemRewardsResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryEcosystemRewardsResponse)
                         return object;
-                    var message = new $root.ununifi.ecosystemincentive.QueryRewardResponse();
-                    if (object.reward != null) {
-                        if (typeof object.reward !== "object")
-                            throw TypeError(".ununifi.ecosystemincentive.QueryRewardResponse.reward: object expected");
-                        message.reward = $root.cosmos.base.v1beta1.Coin.fromObject(object.reward);
+                    var message = new $root.ununifi.ecosystemincentive.QueryEcosystemRewardsResponse();
+                    if (object.rewards) {
+                        if (!Array.isArray(object.rewards))
+                            throw TypeError(".ununifi.ecosystemincentive.QueryEcosystemRewardsResponse.rewards: array expected");
+                        message.rewards = [];
+                        for (var i = 0; i < object.rewards.length; ++i) {
+                            if (typeof object.rewards[i] !== "object")
+                                throw TypeError(".ununifi.ecosystemincentive.QueryEcosystemRewardsResponse.rewards: object expected");
+                            message.rewards[i] = $root.cosmos.base.v1beta1.Coin.fromObject(object.rewards[i]);
+                        }
                     }
                     return message;
                 };
     
                 /**
-                 * Creates a plain object from a QueryRewardResponse message. Also converts values to other types if specified.
+                 * Creates a plain object from a QueryEcosystemRewardsResponse message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsResponse
                  * @static
-                 * @param {ununifi.ecosystemincentive.QueryRewardResponse} message QueryRewardResponse
+                 * @param {ununifi.ecosystemincentive.QueryEcosystemRewardsResponse} message QueryEcosystemRewardsResponse
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                QueryRewardResponse.toObject = function toObject(message, options) {
+                QueryEcosystemRewardsResponse.toObject = function toObject(message, options) {
                     if (!options)
                         options = {};
                     var object = {};
-                    if (options.defaults)
-                        object.reward = null;
-                    if (message.reward != null && message.hasOwnProperty("reward"))
-                        object.reward = $root.cosmos.base.v1beta1.Coin.toObject(message.reward, options);
+                    if (options.arrays || options.defaults)
+                        object.rewards = [];
+                    if (message.rewards && message.rewards.length) {
+                        object.rewards = [];
+                        for (var j = 0; j < message.rewards.length; ++j)
+                            object.rewards[j] = $root.cosmos.base.v1beta1.Coin.toObject(message.rewards[j], options);
+                    }
                     return object;
                 };
     
                 /**
-                 * Converts this QueryRewardResponse to JSON.
+                 * Converts this QueryEcosystemRewardsResponse to JSON.
                  * @function toJSON
-                 * @memberof ununifi.ecosystemincentive.QueryRewardResponse
+                 * @memberof ununifi.ecosystemincentive.QueryEcosystemRewardsResponse
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
-                QueryRewardResponse.prototype.toJSON = function toJSON() {
+                QueryEcosystemRewardsResponse.prototype.toJSON = function toJSON() {
                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                 };
     
-                return QueryRewardResponse;
+                return QueryEcosystemRewardsResponse;
+            })();
+    
+            ecosystemincentive.QueryRecipientAddressWithNftIdRequest = (function() {
+    
+                /**
+                 * Properties of a QueryRecipientAddressWithNftIdRequest.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IQueryRecipientAddressWithNftIdRequest
+                 * @property {string|null} [class_id] QueryRecipientAddressWithNftIdRequest class_id
+                 * @property {string|null} [token_id] QueryRecipientAddressWithNftIdRequest token_id
+                 */
+    
+                /**
+                 * Constructs a new QueryRecipientAddressWithNftIdRequest.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a QueryRecipientAddressWithNftIdRequest.
+                 * @implements IQueryRecipientAddressWithNftIdRequest
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IQueryRecipientAddressWithNftIdRequest=} [properties] Properties to set
+                 */
+                function QueryRecipientAddressWithNftIdRequest(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryRecipientAddressWithNftIdRequest class_id.
+                 * @member {string} class_id
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest
+                 * @instance
+                 */
+                QueryRecipientAddressWithNftIdRequest.prototype.class_id = "";
+    
+                /**
+                 * QueryRecipientAddressWithNftIdRequest token_id.
+                 * @member {string} token_id
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest
+                 * @instance
+                 */
+                QueryRecipientAddressWithNftIdRequest.prototype.token_id = "";
+    
+                /**
+                 * Encodes the specified QueryRecipientAddressWithNftIdRequest message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryRecipientAddressWithNftIdRequest} message QueryRecipientAddressWithNftIdRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryRecipientAddressWithNftIdRequest.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.class_id);
+                    if (message.token_id != null && Object.hasOwnProperty.call(message, "token_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.token_id);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryRecipientAddressWithNftIdRequest message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryRecipientAddressWithNftIdRequest} message QueryRecipientAddressWithNftIdRequest message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryRecipientAddressWithNftIdRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryRecipientAddressWithNftIdRequest message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest} QueryRecipientAddressWithNftIdRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryRecipientAddressWithNftIdRequest.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.class_id = reader.string();
+                            break;
+                        case 2:
+                            message.token_id = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryRecipientAddressWithNftIdRequest message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest} QueryRecipientAddressWithNftIdRequest
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryRecipientAddressWithNftIdRequest.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryRecipientAddressWithNftIdRequest message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryRecipientAddressWithNftIdRequest.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        if (!$util.isString(message.class_id))
+                            return "class_id: string expected";
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        if (!$util.isString(message.token_id))
+                            return "token_id: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryRecipientAddressWithNftIdRequest message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest} QueryRecipientAddressWithNftIdRequest
+                 */
+                QueryRecipientAddressWithNftIdRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest();
+                    if (object.class_id != null)
+                        message.class_id = String(object.class_id);
+                    if (object.token_id != null)
+                        message.token_id = String(object.token_id);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryRecipientAddressWithNftIdRequest message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest
+                 * @static
+                 * @param {ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest} message QueryRecipientAddressWithNftIdRequest
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryRecipientAddressWithNftIdRequest.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.class_id = "";
+                        object.token_id = "";
+                    }
+                    if (message.class_id != null && message.hasOwnProperty("class_id"))
+                        object.class_id = message.class_id;
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        object.token_id = message.token_id;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryRecipientAddressWithNftIdRequest to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdRequest
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryRecipientAddressWithNftIdRequest.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryRecipientAddressWithNftIdRequest;
+            })();
+    
+            ecosystemincentive.QueryRecipientAddressWithNftIdResponse = (function() {
+    
+                /**
+                 * Properties of a QueryRecipientAddressWithNftIdResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @interface IQueryRecipientAddressWithNftIdResponse
+                 * @property {string|null} [address] QueryRecipientAddressWithNftIdResponse address
+                 */
+    
+                /**
+                 * Constructs a new QueryRecipientAddressWithNftIdResponse.
+                 * @memberof ununifi.ecosystemincentive
+                 * @classdesc Represents a QueryRecipientAddressWithNftIdResponse.
+                 * @implements IQueryRecipientAddressWithNftIdResponse
+                 * @constructor
+                 * @param {ununifi.ecosystemincentive.IQueryRecipientAddressWithNftIdResponse=} [properties] Properties to set
+                 */
+                function QueryRecipientAddressWithNftIdResponse(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * QueryRecipientAddressWithNftIdResponse address.
+                 * @member {string} address
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse
+                 * @instance
+                 */
+                QueryRecipientAddressWithNftIdResponse.prototype.address = "";
+    
+                /**
+                 * Encodes the specified QueryRecipientAddressWithNftIdResponse message. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse.verify|verify} messages.
+                 * @function encode
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryRecipientAddressWithNftIdResponse} message QueryRecipientAddressWithNftIdResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryRecipientAddressWithNftIdResponse.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.address != null && Object.hasOwnProperty.call(message, "address"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.address);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified QueryRecipientAddressWithNftIdResponse message, length delimited. Does not implicitly {@link ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.IQueryRecipientAddressWithNftIdResponse} message QueryRecipientAddressWithNftIdResponse message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                QueryRecipientAddressWithNftIdResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a QueryRecipientAddressWithNftIdResponse message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse} QueryRecipientAddressWithNftIdResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryRecipientAddressWithNftIdResponse.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.address = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a QueryRecipientAddressWithNftIdResponse message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse} QueryRecipientAddressWithNftIdResponse
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                QueryRecipientAddressWithNftIdResponse.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a QueryRecipientAddressWithNftIdResponse message.
+                 * @function verify
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                QueryRecipientAddressWithNftIdResponse.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.address != null && message.hasOwnProperty("address"))
+                        if (!$util.isString(message.address))
+                            return "address: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a QueryRecipientAddressWithNftIdResponse message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse} QueryRecipientAddressWithNftIdResponse
+                 */
+                QueryRecipientAddressWithNftIdResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse)
+                        return object;
+                    var message = new $root.ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse();
+                    if (object.address != null)
+                        message.address = String(object.address);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a QueryRecipientAddressWithNftIdResponse message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse
+                 * @static
+                 * @param {ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse} message QueryRecipientAddressWithNftIdResponse
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                QueryRecipientAddressWithNftIdResponse.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.address = "";
+                    if (message.address != null && message.hasOwnProperty("address"))
+                        object.address = message.address;
+                    return object;
+                };
+    
+                /**
+                 * Converts this QueryRecipientAddressWithNftIdResponse to JSON.
+                 * @function toJSON
+                 * @memberof ununifi.ecosystemincentive.QueryRecipientAddressWithNftIdResponse
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                QueryRecipientAddressWithNftIdResponse.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return QueryRecipientAddressWithNftIdResponse;
             })();
     
             return ecosystemincentive;
@@ -29306,7 +29379,7 @@
                  * @memberof ununifi.nftbackedloan
                  * @interface IListedClass
                  * @property {string|null} [class_id] ListedClass class_id
-                 * @property {Array.<string>|null} [nft_ids] ListedClass nft_ids
+                 * @property {Array.<string>|null} [token_ids] ListedClass token_ids
                  */
     
                 /**
@@ -29318,7 +29391,7 @@
                  * @param {ununifi.nftbackedloan.IListedClass=} [properties] Properties to set
                  */
                 function ListedClass(properties) {
-                    this.nft_ids = [];
+                    this.token_ids = [];
                     if (properties)
                         for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -29334,12 +29407,12 @@
                 ListedClass.prototype.class_id = "";
     
                 /**
-                 * ListedClass nft_ids.
-                 * @member {Array.<string>} nft_ids
+                 * ListedClass token_ids.
+                 * @member {Array.<string>} token_ids
                  * @memberof ununifi.nftbackedloan.ListedClass
                  * @instance
                  */
-                ListedClass.prototype.nft_ids = $util.emptyArray;
+                ListedClass.prototype.token_ids = $util.emptyArray;
     
                 /**
                  * Encodes the specified ListedClass message. Does not implicitly {@link ununifi.nftbackedloan.ListedClass.verify|verify} messages.
@@ -29355,9 +29428,9 @@
                         writer = $Writer.create();
                     if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.class_id);
-                    if (message.nft_ids != null && message.nft_ids.length)
-                        for (var i = 0; i < message.nft_ids.length; ++i)
-                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.nft_ids[i]);
+                    if (message.token_ids != null && message.token_ids.length)
+                        for (var i = 0; i < message.token_ids.length; ++i)
+                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.token_ids[i]);
                     return writer;
                 };
     
@@ -29396,9 +29469,9 @@
                             message.class_id = reader.string();
                             break;
                         case 2:
-                            if (!(message.nft_ids && message.nft_ids.length))
-                                message.nft_ids = [];
-                            message.nft_ids.push(reader.string());
+                            if (!(message.token_ids && message.token_ids.length))
+                                message.token_ids = [];
+                            message.token_ids.push(reader.string());
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -29438,12 +29511,12 @@
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         if (!$util.isString(message.class_id))
                             return "class_id: string expected";
-                    if (message.nft_ids != null && message.hasOwnProperty("nft_ids")) {
-                        if (!Array.isArray(message.nft_ids))
-                            return "nft_ids: array expected";
-                        for (var i = 0; i < message.nft_ids.length; ++i)
-                            if (!$util.isString(message.nft_ids[i]))
-                                return "nft_ids: string[] expected";
+                    if (message.token_ids != null && message.hasOwnProperty("token_ids")) {
+                        if (!Array.isArray(message.token_ids))
+                            return "token_ids: array expected";
+                        for (var i = 0; i < message.token_ids.length; ++i)
+                            if (!$util.isString(message.token_ids[i]))
+                                return "token_ids: string[] expected";
                     }
                     return null;
                 };
@@ -29462,12 +29535,12 @@
                     var message = new $root.ununifi.nftbackedloan.ListedClass();
                     if (object.class_id != null)
                         message.class_id = String(object.class_id);
-                    if (object.nft_ids) {
-                        if (!Array.isArray(object.nft_ids))
-                            throw TypeError(".ununifi.nftbackedloan.ListedClass.nft_ids: array expected");
-                        message.nft_ids = [];
-                        for (var i = 0; i < object.nft_ids.length; ++i)
-                            message.nft_ids[i] = String(object.nft_ids[i]);
+                    if (object.token_ids) {
+                        if (!Array.isArray(object.token_ids))
+                            throw TypeError(".ununifi.nftbackedloan.ListedClass.token_ids: array expected");
+                        message.token_ids = [];
+                        for (var i = 0; i < object.token_ids.length; ++i)
+                            message.token_ids[i] = String(object.token_ids[i]);
                     }
                     return message;
                 };
@@ -29486,15 +29559,15 @@
                         options = {};
                     var object = {};
                     if (options.arrays || options.defaults)
-                        object.nft_ids = [];
+                        object.token_ids = [];
                     if (options.defaults)
                         object.class_id = "";
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         object.class_id = message.class_id;
-                    if (message.nft_ids && message.nft_ids.length) {
-                        object.nft_ids = [];
-                        for (var j = 0; j < message.nft_ids.length; ++j)
-                            object.nft_ids[j] = message.nft_ids[j];
+                    if (message.token_ids && message.token_ids.length) {
+                        object.token_ids = [];
+                        for (var j = 0; j < message.token_ids.length; ++j)
+                            object.token_ids[j] = message.token_ids[j];
                     }
                     return object;
                 };
@@ -34475,39 +34548,6 @@
                  */
     
                 /**
-                 * Callback as used by {@link ununifi.nftbackedloan.Query#nftListing}.
-                 * @memberof ununifi.nftbackedloan.Query
-                 * @typedef NftListingCallback
-                 * @type {function}
-                 * @param {Error|null} error Error, if any
-                 * @param {ununifi.nftbackedloan.QueryNftListingResponse} [response] QueryNftListingResponse
-                 */
-    
-                /**
-                 * Calls NftListing.
-                 * @function nftListing
-                 * @memberof ununifi.nftbackedloan.Query
-                 * @instance
-                 * @param {ununifi.nftbackedloan.IQueryNftListingRequest} request QueryNftListingRequest message or plain object
-                 * @param {ununifi.nftbackedloan.Query.NftListingCallback} callback Node-style callback called with the error, if any, and QueryNftListingResponse
-                 * @returns {undefined}
-                 * @variation 1
-                 */
-                Object.defineProperty(Query.prototype.nftListing = function nftListing(request, callback) {
-                    return this.rpcCall(nftListing, $root.ununifi.nftbackedloan.QueryNftListingRequest, $root.ununifi.nftbackedloan.QueryNftListingResponse, request, callback);
-                }, "name", { value: "NftListing" });
-    
-                /**
-                 * Calls NftListing.
-                 * @function nftListing
-                 * @memberof ununifi.nftbackedloan.Query
-                 * @instance
-                 * @param {ununifi.nftbackedloan.IQueryNftListingRequest} request QueryNftListingRequest message or plain object
-                 * @returns {Promise<ununifi.nftbackedloan.QueryNftListingResponse>} Promise
-                 * @variation 2
-                 */
-    
-                /**
                  * Callback as used by {@link ununifi.nftbackedloan.Query#listedNfts}.
                  * @memberof ununifi.nftbackedloan.Query
                  * @typedef ListedNftsCallback
@@ -34537,6 +34577,39 @@
                  * @instance
                  * @param {ununifi.nftbackedloan.IQueryListedNftsRequest} request QueryListedNftsRequest message or plain object
                  * @returns {Promise<ununifi.nftbackedloan.QueryListedNftsResponse>} Promise
+                 * @variation 2
+                 */
+    
+                /**
+                 * Callback as used by {@link ununifi.nftbackedloan.Query#listedNft}.
+                 * @memberof ununifi.nftbackedloan.Query
+                 * @typedef ListedNftCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {ununifi.nftbackedloan.QueryListedNftResponse} [response] QueryListedNftResponse
+                 */
+    
+                /**
+                 * Calls ListedNft.
+                 * @function listedNft
+                 * @memberof ununifi.nftbackedloan.Query
+                 * @instance
+                 * @param {ununifi.nftbackedloan.IQueryListedNftRequest} request QueryListedNftRequest message or plain object
+                 * @param {ununifi.nftbackedloan.Query.ListedNftCallback} callback Node-style callback called with the error, if any, and QueryListedNftResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(Query.prototype.listedNft = function listedNft(request, callback) {
+                    return this.rpcCall(listedNft, $root.ununifi.nftbackedloan.QueryListedNftRequest, $root.ununifi.nftbackedloan.QueryListedNftResponse, request, callback);
+                }, "name", { value: "ListedNft" });
+    
+                /**
+                 * Calls ListedNft.
+                 * @function listedNft
+                 * @memberof ununifi.nftbackedloan.Query
+                 * @instance
+                 * @param {ununifi.nftbackedloan.IQueryListedNftRequest} request QueryListedNftRequest message or plain object
+                 * @returns {Promise<ununifi.nftbackedloan.QueryListedNftResponse>} Promise
                  * @variation 2
                  */
     
@@ -35102,25 +35175,25 @@
                 return QueryParamsResponse;
             })();
     
-            nftbackedloan.QueryNftListingRequest = (function() {
+            nftbackedloan.QueryListedNftRequest = (function() {
     
                 /**
-                 * Properties of a QueryNftListingRequest.
+                 * Properties of a QueryListedNftRequest.
                  * @memberof ununifi.nftbackedloan
-                 * @interface IQueryNftListingRequest
-                 * @property {string|null} [class_id] QueryNftListingRequest class_id
-                 * @property {string|null} [nft_id] QueryNftListingRequest nft_id
+                 * @interface IQueryListedNftRequest
+                 * @property {string|null} [class_id] QueryListedNftRequest class_id
+                 * @property {string|null} [token_id] QueryListedNftRequest token_id
                  */
     
                 /**
-                 * Constructs a new QueryNftListingRequest.
+                 * Constructs a new QueryListedNftRequest.
                  * @memberof ununifi.nftbackedloan
-                 * @classdesc Represents a QueryNftListingRequest.
-                 * @implements IQueryNftListingRequest
+                 * @classdesc Represents a QueryListedNftRequest.
+                 * @implements IQueryListedNftRequest
                  * @constructor
-                 * @param {ununifi.nftbackedloan.IQueryNftListingRequest=} [properties] Properties to set
+                 * @param {ununifi.nftbackedloan.IQueryListedNftRequest=} [properties] Properties to set
                  */
-                function QueryNftListingRequest(properties) {
+                function QueryListedNftRequest(properties) {
                     if (properties)
                         for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -35128,68 +35201,68 @@
                 }
     
                 /**
-                 * QueryNftListingRequest class_id.
+                 * QueryListedNftRequest class_id.
                  * @member {string} class_id
-                 * @memberof ununifi.nftbackedloan.QueryNftListingRequest
+                 * @memberof ununifi.nftbackedloan.QueryListedNftRequest
                  * @instance
                  */
-                QueryNftListingRequest.prototype.class_id = "";
+                QueryListedNftRequest.prototype.class_id = "";
     
                 /**
-                 * QueryNftListingRequest nft_id.
-                 * @member {string} nft_id
-                 * @memberof ununifi.nftbackedloan.QueryNftListingRequest
+                 * QueryListedNftRequest token_id.
+                 * @member {string} token_id
+                 * @memberof ununifi.nftbackedloan.QueryListedNftRequest
                  * @instance
                  */
-                QueryNftListingRequest.prototype.nft_id = "";
+                QueryListedNftRequest.prototype.token_id = "";
     
                 /**
-                 * Encodes the specified QueryNftListingRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryNftListingRequest.verify|verify} messages.
+                 * Encodes the specified QueryListedNftRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryListedNftRequest.verify|verify} messages.
                  * @function encode
-                 * @memberof ununifi.nftbackedloan.QueryNftListingRequest
+                 * @memberof ununifi.nftbackedloan.QueryListedNftRequest
                  * @static
-                 * @param {ununifi.nftbackedloan.IQueryNftListingRequest} message QueryNftListingRequest message or plain object to encode
+                 * @param {ununifi.nftbackedloan.IQueryListedNftRequest} message QueryListedNftRequest message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                QueryNftListingRequest.encode = function encode(message, writer) {
+                QueryListedNftRequest.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
                     if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.class_id);
-                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
-                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.nft_id);
+                    if (message.token_id != null && Object.hasOwnProperty.call(message, "token_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.token_id);
                     return writer;
                 };
     
                 /**
-                 * Encodes the specified QueryNftListingRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryNftListingRequest.verify|verify} messages.
+                 * Encodes the specified QueryListedNftRequest message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryListedNftRequest.verify|verify} messages.
                  * @function encodeDelimited
-                 * @memberof ununifi.nftbackedloan.QueryNftListingRequest
+                 * @memberof ununifi.nftbackedloan.QueryListedNftRequest
                  * @static
-                 * @param {ununifi.nftbackedloan.IQueryNftListingRequest} message QueryNftListingRequest message or plain object to encode
+                 * @param {ununifi.nftbackedloan.IQueryListedNftRequest} message QueryListedNftRequest message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                QueryNftListingRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                QueryListedNftRequest.encodeDelimited = function encodeDelimited(message, writer) {
                     return this.encode(message, writer).ldelim();
                 };
     
                 /**
-                 * Decodes a QueryNftListingRequest message from the specified reader or buffer.
+                 * Decodes a QueryListedNftRequest message from the specified reader or buffer.
                  * @function decode
-                 * @memberof ununifi.nftbackedloan.QueryNftListingRequest
+                 * @memberof ununifi.nftbackedloan.QueryListedNftRequest
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.nftbackedloan.QueryNftListingRequest} QueryNftListingRequest
+                 * @returns {ununifi.nftbackedloan.QueryListedNftRequest} QueryListedNftRequest
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                QueryNftListingRequest.decode = function decode(reader, length) {
+                QueryListedNftRequest.decode = function decode(reader, length) {
                     if (!(reader instanceof $Reader))
                         reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.QueryNftListingRequest();
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.QueryListedNftRequest();
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
@@ -35197,7 +35270,7 @@
                             message.class_id = reader.string();
                             break;
                         case 2:
-                            message.nft_id = reader.string();
+                            message.token_id = reader.string();
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -35208,116 +35281,116 @@
                 };
     
                 /**
-                 * Decodes a QueryNftListingRequest message from the specified reader or buffer, length delimited.
+                 * Decodes a QueryListedNftRequest message from the specified reader or buffer, length delimited.
                  * @function decodeDelimited
-                 * @memberof ununifi.nftbackedloan.QueryNftListingRequest
+                 * @memberof ununifi.nftbackedloan.QueryListedNftRequest
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.nftbackedloan.QueryNftListingRequest} QueryNftListingRequest
+                 * @returns {ununifi.nftbackedloan.QueryListedNftRequest} QueryListedNftRequest
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                QueryNftListingRequest.decodeDelimited = function decodeDelimited(reader) {
+                QueryListedNftRequest.decodeDelimited = function decodeDelimited(reader) {
                     if (!(reader instanceof $Reader))
                         reader = new $Reader(reader);
                     return this.decode(reader, reader.uint32());
                 };
     
                 /**
-                 * Verifies a QueryNftListingRequest message.
+                 * Verifies a QueryListedNftRequest message.
                  * @function verify
-                 * @memberof ununifi.nftbackedloan.QueryNftListingRequest
+                 * @memberof ununifi.nftbackedloan.QueryListedNftRequest
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
                  */
-                QueryNftListingRequest.verify = function verify(message) {
+                QueryListedNftRequest.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         if (!$util.isString(message.class_id))
                             return "class_id: string expected";
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        if (!$util.isString(message.nft_id))
-                            return "nft_id: string expected";
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        if (!$util.isString(message.token_id))
+                            return "token_id: string expected";
                     return null;
                 };
     
                 /**
-                 * Creates a QueryNftListingRequest message from a plain object. Also converts values to their respective internal types.
+                 * Creates a QueryListedNftRequest message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof ununifi.nftbackedloan.QueryNftListingRequest
+                 * @memberof ununifi.nftbackedloan.QueryListedNftRequest
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.nftbackedloan.QueryNftListingRequest} QueryNftListingRequest
+                 * @returns {ununifi.nftbackedloan.QueryListedNftRequest} QueryListedNftRequest
                  */
-                QueryNftListingRequest.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.nftbackedloan.QueryNftListingRequest)
+                QueryListedNftRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.nftbackedloan.QueryListedNftRequest)
                         return object;
-                    var message = new $root.ununifi.nftbackedloan.QueryNftListingRequest();
+                    var message = new $root.ununifi.nftbackedloan.QueryListedNftRequest();
                     if (object.class_id != null)
                         message.class_id = String(object.class_id);
-                    if (object.nft_id != null)
-                        message.nft_id = String(object.nft_id);
+                    if (object.token_id != null)
+                        message.token_id = String(object.token_id);
                     return message;
                 };
     
                 /**
-                 * Creates a plain object from a QueryNftListingRequest message. Also converts values to other types if specified.
+                 * Creates a plain object from a QueryListedNftRequest message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof ununifi.nftbackedloan.QueryNftListingRequest
+                 * @memberof ununifi.nftbackedloan.QueryListedNftRequest
                  * @static
-                 * @param {ununifi.nftbackedloan.QueryNftListingRequest} message QueryNftListingRequest
+                 * @param {ununifi.nftbackedloan.QueryListedNftRequest} message QueryListedNftRequest
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                QueryNftListingRequest.toObject = function toObject(message, options) {
+                QueryListedNftRequest.toObject = function toObject(message, options) {
                     if (!options)
                         options = {};
                     var object = {};
                     if (options.defaults) {
                         object.class_id = "";
-                        object.nft_id = "";
+                        object.token_id = "";
                     }
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         object.class_id = message.class_id;
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        object.nft_id = message.nft_id;
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        object.token_id = message.token_id;
                     return object;
                 };
     
                 /**
-                 * Converts this QueryNftListingRequest to JSON.
+                 * Converts this QueryListedNftRequest to JSON.
                  * @function toJSON
-                 * @memberof ununifi.nftbackedloan.QueryNftListingRequest
+                 * @memberof ununifi.nftbackedloan.QueryListedNftRequest
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
-                QueryNftListingRequest.prototype.toJSON = function toJSON() {
+                QueryListedNftRequest.prototype.toJSON = function toJSON() {
                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                 };
     
-                return QueryNftListingRequest;
+                return QueryListedNftRequest;
             })();
     
-            nftbackedloan.QueryNftListingResponse = (function() {
+            nftbackedloan.QueryListedNftResponse = (function() {
     
                 /**
-                 * Properties of a QueryNftListingResponse.
+                 * Properties of a QueryListedNftResponse.
                  * @memberof ununifi.nftbackedloan
-                 * @interface IQueryNftListingResponse
-                 * @property {ununifi.nftbackedloan.IListing|null} [listing] QueryNftListingResponse listing
+                 * @interface IQueryListedNftResponse
+                 * @property {ununifi.nftbackedloan.IListing|null} [listing] QueryListedNftResponse listing
                  */
     
                 /**
-                 * Constructs a new QueryNftListingResponse.
+                 * Constructs a new QueryListedNftResponse.
                  * @memberof ununifi.nftbackedloan
-                 * @classdesc Represents a QueryNftListingResponse.
-                 * @implements IQueryNftListingResponse
+                 * @classdesc Represents a QueryListedNftResponse.
+                 * @implements IQueryListedNftResponse
                  * @constructor
-                 * @param {ununifi.nftbackedloan.IQueryNftListingResponse=} [properties] Properties to set
+                 * @param {ununifi.nftbackedloan.IQueryListedNftResponse=} [properties] Properties to set
                  */
-                function QueryNftListingResponse(properties) {
+                function QueryListedNftResponse(properties) {
                     if (properties)
                         for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -35325,23 +35398,23 @@
                 }
     
                 /**
-                 * QueryNftListingResponse listing.
+                 * QueryListedNftResponse listing.
                  * @member {ununifi.nftbackedloan.IListing|null|undefined} listing
-                 * @memberof ununifi.nftbackedloan.QueryNftListingResponse
+                 * @memberof ununifi.nftbackedloan.QueryListedNftResponse
                  * @instance
                  */
-                QueryNftListingResponse.prototype.listing = null;
+                QueryListedNftResponse.prototype.listing = null;
     
                 /**
-                 * Encodes the specified QueryNftListingResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryNftListingResponse.verify|verify} messages.
+                 * Encodes the specified QueryListedNftResponse message. Does not implicitly {@link ununifi.nftbackedloan.QueryListedNftResponse.verify|verify} messages.
                  * @function encode
-                 * @memberof ununifi.nftbackedloan.QueryNftListingResponse
+                 * @memberof ununifi.nftbackedloan.QueryListedNftResponse
                  * @static
-                 * @param {ununifi.nftbackedloan.IQueryNftListingResponse} message QueryNftListingResponse message or plain object to encode
+                 * @param {ununifi.nftbackedloan.IQueryListedNftResponse} message QueryListedNftResponse message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                QueryNftListingResponse.encode = function encode(message, writer) {
+                QueryListedNftResponse.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
                     if (message.listing != null && Object.hasOwnProperty.call(message, "listing"))
@@ -35350,33 +35423,33 @@
                 };
     
                 /**
-                 * Encodes the specified QueryNftListingResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryNftListingResponse.verify|verify} messages.
+                 * Encodes the specified QueryListedNftResponse message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.QueryListedNftResponse.verify|verify} messages.
                  * @function encodeDelimited
-                 * @memberof ununifi.nftbackedloan.QueryNftListingResponse
+                 * @memberof ununifi.nftbackedloan.QueryListedNftResponse
                  * @static
-                 * @param {ununifi.nftbackedloan.IQueryNftListingResponse} message QueryNftListingResponse message or plain object to encode
+                 * @param {ununifi.nftbackedloan.IQueryListedNftResponse} message QueryListedNftResponse message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                QueryNftListingResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                QueryListedNftResponse.encodeDelimited = function encodeDelimited(message, writer) {
                     return this.encode(message, writer).ldelim();
                 };
     
                 /**
-                 * Decodes a QueryNftListingResponse message from the specified reader or buffer.
+                 * Decodes a QueryListedNftResponse message from the specified reader or buffer.
                  * @function decode
-                 * @memberof ununifi.nftbackedloan.QueryNftListingResponse
+                 * @memberof ununifi.nftbackedloan.QueryListedNftResponse
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.nftbackedloan.QueryNftListingResponse} QueryNftListingResponse
+                 * @returns {ununifi.nftbackedloan.QueryListedNftResponse} QueryListedNftResponse
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                QueryNftListingResponse.decode = function decode(reader, length) {
+                QueryListedNftResponse.decode = function decode(reader, length) {
                     if (!(reader instanceof $Reader))
                         reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.QueryNftListingResponse();
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.QueryListedNftResponse();
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
@@ -35392,30 +35465,30 @@
                 };
     
                 /**
-                 * Decodes a QueryNftListingResponse message from the specified reader or buffer, length delimited.
+                 * Decodes a QueryListedNftResponse message from the specified reader or buffer, length delimited.
                  * @function decodeDelimited
-                 * @memberof ununifi.nftbackedloan.QueryNftListingResponse
+                 * @memberof ununifi.nftbackedloan.QueryListedNftResponse
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.nftbackedloan.QueryNftListingResponse} QueryNftListingResponse
+                 * @returns {ununifi.nftbackedloan.QueryListedNftResponse} QueryListedNftResponse
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                QueryNftListingResponse.decodeDelimited = function decodeDelimited(reader) {
+                QueryListedNftResponse.decodeDelimited = function decodeDelimited(reader) {
                     if (!(reader instanceof $Reader))
                         reader = new $Reader(reader);
                     return this.decode(reader, reader.uint32());
                 };
     
                 /**
-                 * Verifies a QueryNftListingResponse message.
+                 * Verifies a QueryListedNftResponse message.
                  * @function verify
-                 * @memberof ununifi.nftbackedloan.QueryNftListingResponse
+                 * @memberof ununifi.nftbackedloan.QueryListedNftResponse
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
                  */
-                QueryNftListingResponse.verify = function verify(message) {
+                QueryListedNftResponse.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
                     if (message.listing != null && message.hasOwnProperty("listing")) {
@@ -35427,35 +35500,35 @@
                 };
     
                 /**
-                 * Creates a QueryNftListingResponse message from a plain object. Also converts values to their respective internal types.
+                 * Creates a QueryListedNftResponse message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof ununifi.nftbackedloan.QueryNftListingResponse
+                 * @memberof ununifi.nftbackedloan.QueryListedNftResponse
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.nftbackedloan.QueryNftListingResponse} QueryNftListingResponse
+                 * @returns {ununifi.nftbackedloan.QueryListedNftResponse} QueryListedNftResponse
                  */
-                QueryNftListingResponse.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.nftbackedloan.QueryNftListingResponse)
+                QueryListedNftResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.nftbackedloan.QueryListedNftResponse)
                         return object;
-                    var message = new $root.ununifi.nftbackedloan.QueryNftListingResponse();
+                    var message = new $root.ununifi.nftbackedloan.QueryListedNftResponse();
                     if (object.listing != null) {
                         if (typeof object.listing !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.QueryNftListingResponse.listing: object expected");
+                            throw TypeError(".ununifi.nftbackedloan.QueryListedNftResponse.listing: object expected");
                         message.listing = $root.ununifi.nftbackedloan.Listing.fromObject(object.listing);
                     }
                     return message;
                 };
     
                 /**
-                 * Creates a plain object from a QueryNftListingResponse message. Also converts values to other types if specified.
+                 * Creates a plain object from a QueryListedNftResponse message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof ununifi.nftbackedloan.QueryNftListingResponse
+                 * @memberof ununifi.nftbackedloan.QueryListedNftResponse
                  * @static
-                 * @param {ununifi.nftbackedloan.QueryNftListingResponse} message QueryNftListingResponse
+                 * @param {ununifi.nftbackedloan.QueryListedNftResponse} message QueryListedNftResponse
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                QueryNftListingResponse.toObject = function toObject(message, options) {
+                QueryListedNftResponse.toObject = function toObject(message, options) {
                     if (!options)
                         options = {};
                     var object = {};
@@ -35467,17 +35540,17 @@
                 };
     
                 /**
-                 * Converts this QueryNftListingResponse to JSON.
+                 * Converts this QueryListedNftResponse to JSON.
                  * @function toJSON
-                 * @memberof ununifi.nftbackedloan.QueryNftListingResponse
+                 * @memberof ununifi.nftbackedloan.QueryListedNftResponse
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
-                QueryNftListingResponse.prototype.toJSON = function toJSON() {
+                QueryListedNftResponse.prototype.toJSON = function toJSON() {
                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                 };
     
-                return QueryNftListingResponse;
+                return QueryListedNftResponse;
             })();
     
             nftbackedloan.QueryListedNftsRequest = (function() {
@@ -36028,25 +36101,25 @@
                 return QueryListedClassRequest;
             })();
     
-            nftbackedloan.NftListingDetail = (function() {
+            nftbackedloan.ListedNftDetail = (function() {
     
                 /**
-                 * Properties of a NftListingDetail.
+                 * Properties of a ListedNftDetail.
                  * @memberof ununifi.nftbackedloan
-                 * @interface INftListingDetail
-                 * @property {ununifi.nftbackedloan.IListing|null} [listing] NftListingDetail listing
-                 * @property {ununifi.nftbackedloan.INftInfo|null} [nft_info] NftListingDetail nft_info
+                 * @interface IListedNftDetail
+                 * @property {ununifi.nftbackedloan.IListing|null} [listing] ListedNftDetail listing
+                 * @property {ununifi.nftbackedloan.INftInfo|null} [nft_info] ListedNftDetail nft_info
                  */
     
                 /**
-                 * Constructs a new NftListingDetail.
+                 * Constructs a new ListedNftDetail.
                  * @memberof ununifi.nftbackedloan
-                 * @classdesc Represents a NftListingDetail.
-                 * @implements INftListingDetail
+                 * @classdesc Represents a ListedNftDetail.
+                 * @implements IListedNftDetail
                  * @constructor
-                 * @param {ununifi.nftbackedloan.INftListingDetail=} [properties] Properties to set
+                 * @param {ununifi.nftbackedloan.IListedNftDetail=} [properties] Properties to set
                  */
-                function NftListingDetail(properties) {
+                function ListedNftDetail(properties) {
                     if (properties)
                         for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -36054,31 +36127,31 @@
                 }
     
                 /**
-                 * NftListingDetail listing.
+                 * ListedNftDetail listing.
                  * @member {ununifi.nftbackedloan.IListing|null|undefined} listing
-                 * @memberof ununifi.nftbackedloan.NftListingDetail
+                 * @memberof ununifi.nftbackedloan.ListedNftDetail
                  * @instance
                  */
-                NftListingDetail.prototype.listing = null;
+                ListedNftDetail.prototype.listing = null;
     
                 /**
-                 * NftListingDetail nft_info.
+                 * ListedNftDetail nft_info.
                  * @member {ununifi.nftbackedloan.INftInfo|null|undefined} nft_info
-                 * @memberof ununifi.nftbackedloan.NftListingDetail
+                 * @memberof ununifi.nftbackedloan.ListedNftDetail
                  * @instance
                  */
-                NftListingDetail.prototype.nft_info = null;
+                ListedNftDetail.prototype.nft_info = null;
     
                 /**
-                 * Encodes the specified NftListingDetail message. Does not implicitly {@link ununifi.nftbackedloan.NftListingDetail.verify|verify} messages.
+                 * Encodes the specified ListedNftDetail message. Does not implicitly {@link ununifi.nftbackedloan.ListedNftDetail.verify|verify} messages.
                  * @function encode
-                 * @memberof ununifi.nftbackedloan.NftListingDetail
+                 * @memberof ununifi.nftbackedloan.ListedNftDetail
                  * @static
-                 * @param {ununifi.nftbackedloan.INftListingDetail} message NftListingDetail message or plain object to encode
+                 * @param {ununifi.nftbackedloan.IListedNftDetail} message ListedNftDetail message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                NftListingDetail.encode = function encode(message, writer) {
+                ListedNftDetail.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
                     if (message.listing != null && Object.hasOwnProperty.call(message, "listing"))
@@ -36089,33 +36162,33 @@
                 };
     
                 /**
-                 * Encodes the specified NftListingDetail message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.NftListingDetail.verify|verify} messages.
+                 * Encodes the specified ListedNftDetail message, length delimited. Does not implicitly {@link ununifi.nftbackedloan.ListedNftDetail.verify|verify} messages.
                  * @function encodeDelimited
-                 * @memberof ununifi.nftbackedloan.NftListingDetail
+                 * @memberof ununifi.nftbackedloan.ListedNftDetail
                  * @static
-                 * @param {ununifi.nftbackedloan.INftListingDetail} message NftListingDetail message or plain object to encode
+                 * @param {ununifi.nftbackedloan.IListedNftDetail} message ListedNftDetail message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                NftListingDetail.encodeDelimited = function encodeDelimited(message, writer) {
+                ListedNftDetail.encodeDelimited = function encodeDelimited(message, writer) {
                     return this.encode(message, writer).ldelim();
                 };
     
                 /**
-                 * Decodes a NftListingDetail message from the specified reader or buffer.
+                 * Decodes a ListedNftDetail message from the specified reader or buffer.
                  * @function decode
-                 * @memberof ununifi.nftbackedloan.NftListingDetail
+                 * @memberof ununifi.nftbackedloan.ListedNftDetail
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {ununifi.nftbackedloan.NftListingDetail} NftListingDetail
+                 * @returns {ununifi.nftbackedloan.ListedNftDetail} ListedNftDetail
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                NftListingDetail.decode = function decode(reader, length) {
+                ListedNftDetail.decode = function decode(reader, length) {
                     if (!(reader instanceof $Reader))
                         reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.NftListingDetail();
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ununifi.nftbackedloan.ListedNftDetail();
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
@@ -36134,30 +36207,30 @@
                 };
     
                 /**
-                 * Decodes a NftListingDetail message from the specified reader or buffer, length delimited.
+                 * Decodes a ListedNftDetail message from the specified reader or buffer, length delimited.
                  * @function decodeDelimited
-                 * @memberof ununifi.nftbackedloan.NftListingDetail
+                 * @memberof ununifi.nftbackedloan.ListedNftDetail
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {ununifi.nftbackedloan.NftListingDetail} NftListingDetail
+                 * @returns {ununifi.nftbackedloan.ListedNftDetail} ListedNftDetail
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                NftListingDetail.decodeDelimited = function decodeDelimited(reader) {
+                ListedNftDetail.decodeDelimited = function decodeDelimited(reader) {
                     if (!(reader instanceof $Reader))
                         reader = new $Reader(reader);
                     return this.decode(reader, reader.uint32());
                 };
     
                 /**
-                 * Verifies a NftListingDetail message.
+                 * Verifies a ListedNftDetail message.
                  * @function verify
-                 * @memberof ununifi.nftbackedloan.NftListingDetail
+                 * @memberof ununifi.nftbackedloan.ListedNftDetail
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
                  */
-                NftListingDetail.verify = function verify(message) {
+                ListedNftDetail.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
                     if (message.listing != null && message.hasOwnProperty("listing")) {
@@ -36174,40 +36247,40 @@
                 };
     
                 /**
-                 * Creates a NftListingDetail message from a plain object. Also converts values to their respective internal types.
+                 * Creates a ListedNftDetail message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof ununifi.nftbackedloan.NftListingDetail
+                 * @memberof ununifi.nftbackedloan.ListedNftDetail
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {ununifi.nftbackedloan.NftListingDetail} NftListingDetail
+                 * @returns {ununifi.nftbackedloan.ListedNftDetail} ListedNftDetail
                  */
-                NftListingDetail.fromObject = function fromObject(object) {
-                    if (object instanceof $root.ununifi.nftbackedloan.NftListingDetail)
+                ListedNftDetail.fromObject = function fromObject(object) {
+                    if (object instanceof $root.ununifi.nftbackedloan.ListedNftDetail)
                         return object;
-                    var message = new $root.ununifi.nftbackedloan.NftListingDetail();
+                    var message = new $root.ununifi.nftbackedloan.ListedNftDetail();
                     if (object.listing != null) {
                         if (typeof object.listing !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.NftListingDetail.listing: object expected");
+                            throw TypeError(".ununifi.nftbackedloan.ListedNftDetail.listing: object expected");
                         message.listing = $root.ununifi.nftbackedloan.Listing.fromObject(object.listing);
                     }
                     if (object.nft_info != null) {
                         if (typeof object.nft_info !== "object")
-                            throw TypeError(".ununifi.nftbackedloan.NftListingDetail.nft_info: object expected");
+                            throw TypeError(".ununifi.nftbackedloan.ListedNftDetail.nft_info: object expected");
                         message.nft_info = $root.ununifi.nftbackedloan.NftInfo.fromObject(object.nft_info);
                     }
                     return message;
                 };
     
                 /**
-                 * Creates a plain object from a NftListingDetail message. Also converts values to other types if specified.
+                 * Creates a plain object from a ListedNftDetail message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof ununifi.nftbackedloan.NftListingDetail
+                 * @memberof ununifi.nftbackedloan.ListedNftDetail
                  * @static
-                 * @param {ununifi.nftbackedloan.NftListingDetail} message NftListingDetail
+                 * @param {ununifi.nftbackedloan.ListedNftDetail} message ListedNftDetail
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                NftListingDetail.toObject = function toObject(message, options) {
+                ListedNftDetail.toObject = function toObject(message, options) {
                     if (!options)
                         options = {};
                     var object = {};
@@ -36223,17 +36296,17 @@
                 };
     
                 /**
-                 * Converts this NftListingDetail to JSON.
+                 * Converts this ListedNftDetail to JSON.
                  * @function toJSON
-                 * @memberof ununifi.nftbackedloan.NftListingDetail
+                 * @memberof ununifi.nftbackedloan.ListedNftDetail
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
-                NftListingDetail.prototype.toJSON = function toJSON() {
+                ListedNftDetail.prototype.toJSON = function toJSON() {
                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                 };
     
-                return NftListingDetail;
+                return ListedNftDetail;
             })();
     
             nftbackedloan.QueryListedNftsResponse = (function() {
@@ -36242,7 +36315,7 @@
                  * Properties of a QueryListedNftsResponse.
                  * @memberof ununifi.nftbackedloan
                  * @interface IQueryListedNftsResponse
-                 * @property {Array.<ununifi.nftbackedloan.INftListingDetail>|null} [listings] QueryListedNftsResponse listings
+                 * @property {Array.<ununifi.nftbackedloan.IListedNftDetail>|null} [listings] QueryListedNftsResponse listings
                  */
     
                 /**
@@ -36263,7 +36336,7 @@
     
                 /**
                  * QueryListedNftsResponse listings.
-                 * @member {Array.<ununifi.nftbackedloan.INftListingDetail>} listings
+                 * @member {Array.<ununifi.nftbackedloan.IListedNftDetail>} listings
                  * @memberof ununifi.nftbackedloan.QueryListedNftsResponse
                  * @instance
                  */
@@ -36283,7 +36356,7 @@
                         writer = $Writer.create();
                     if (message.listings != null && message.listings.length)
                         for (var i = 0; i < message.listings.length; ++i)
-                            $root.ununifi.nftbackedloan.NftListingDetail.encode(message.listings[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                            $root.ununifi.nftbackedloan.ListedNftDetail.encode(message.listings[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
                     return writer;
                 };
     
@@ -36321,7 +36394,7 @@
                         case 1:
                             if (!(message.listings && message.listings.length))
                                 message.listings = [];
-                            message.listings.push($root.ununifi.nftbackedloan.NftListingDetail.decode(reader, reader.uint32()));
+                            message.listings.push($root.ununifi.nftbackedloan.ListedNftDetail.decode(reader, reader.uint32()));
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -36362,7 +36435,7 @@
                         if (!Array.isArray(message.listings))
                             return "listings: array expected";
                         for (var i = 0; i < message.listings.length; ++i) {
-                            var error = $root.ununifi.nftbackedloan.NftListingDetail.verify(message.listings[i]);
+                            var error = $root.ununifi.nftbackedloan.ListedNftDetail.verify(message.listings[i]);
                             if (error)
                                 return "listings." + error;
                         }
@@ -36389,7 +36462,7 @@
                         for (var i = 0; i < object.listings.length; ++i) {
                             if (typeof object.listings[i] !== "object")
                                 throw TypeError(".ununifi.nftbackedloan.QueryListedNftsResponse.listings: object expected");
-                            message.listings[i] = $root.ununifi.nftbackedloan.NftListingDetail.fromObject(object.listings[i]);
+                            message.listings[i] = $root.ununifi.nftbackedloan.ListedNftDetail.fromObject(object.listings[i]);
                         }
                     }
                     return message;
@@ -36413,7 +36486,7 @@
                     if (message.listings && message.listings.length) {
                         object.listings = [];
                         for (var j = 0; j < message.listings.length; ++j)
-                            object.listings[j] = $root.ununifi.nftbackedloan.NftListingDetail.toObject(message.listings[j], options);
+                            object.listings[j] = $root.ununifi.nftbackedloan.ListedNftDetail.toObject(message.listings[j], options);
                     }
                     return object;
                 };
@@ -37001,7 +37074,7 @@
                  * @memberof ununifi.nftbackedloan
                  * @interface IQueryLoanRequest
                  * @property {string|null} [class_id] QueryLoanRequest class_id
-                 * @property {string|null} [nft_id] QueryLoanRequest nft_id
+                 * @property {string|null} [token_id] QueryLoanRequest token_id
                  */
     
                 /**
@@ -37028,12 +37101,12 @@
                 QueryLoanRequest.prototype.class_id = "";
     
                 /**
-                 * QueryLoanRequest nft_id.
-                 * @member {string} nft_id
+                 * QueryLoanRequest token_id.
+                 * @member {string} token_id
                  * @memberof ununifi.nftbackedloan.QueryLoanRequest
                  * @instance
                  */
-                QueryLoanRequest.prototype.nft_id = "";
+                QueryLoanRequest.prototype.token_id = "";
     
                 /**
                  * Encodes the specified QueryLoanRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryLoanRequest.verify|verify} messages.
@@ -37049,8 +37122,8 @@
                         writer = $Writer.create();
                     if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.class_id);
-                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
-                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.nft_id);
+                    if (message.token_id != null && Object.hasOwnProperty.call(message, "token_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.token_id);
                     return writer;
                 };
     
@@ -37089,7 +37162,7 @@
                             message.class_id = reader.string();
                             break;
                         case 2:
-                            message.nft_id = reader.string();
+                            message.token_id = reader.string();
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -37129,9 +37202,9 @@
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         if (!$util.isString(message.class_id))
                             return "class_id: string expected";
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        if (!$util.isString(message.nft_id))
-                            return "nft_id: string expected";
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        if (!$util.isString(message.token_id))
+                            return "token_id: string expected";
                     return null;
                 };
     
@@ -37149,8 +37222,8 @@
                     var message = new $root.ununifi.nftbackedloan.QueryLoanRequest();
                     if (object.class_id != null)
                         message.class_id = String(object.class_id);
-                    if (object.nft_id != null)
-                        message.nft_id = String(object.nft_id);
+                    if (object.token_id != null)
+                        message.token_id = String(object.token_id);
                     return message;
                 };
     
@@ -37169,12 +37242,12 @@
                     var object = {};
                     if (options.defaults) {
                         object.class_id = "";
-                        object.nft_id = "";
+                        object.token_id = "";
                     }
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         object.class_id = message.class_id;
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        object.nft_id = message.nft_id;
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        object.token_id = message.token_id;
                     return object;
                 };
     
@@ -37461,7 +37534,7 @@
                  * @memberof ununifi.nftbackedloan
                  * @interface IQueryNftBidsRequest
                  * @property {string|null} [class_id] QueryNftBidsRequest class_id
-                 * @property {string|null} [nft_id] QueryNftBidsRequest nft_id
+                 * @property {string|null} [token_id] QueryNftBidsRequest token_id
                  */
     
                 /**
@@ -37488,12 +37561,12 @@
                 QueryNftBidsRequest.prototype.class_id = "";
     
                 /**
-                 * QueryNftBidsRequest nft_id.
-                 * @member {string} nft_id
+                 * QueryNftBidsRequest token_id.
+                 * @member {string} token_id
                  * @memberof ununifi.nftbackedloan.QueryNftBidsRequest
                  * @instance
                  */
-                QueryNftBidsRequest.prototype.nft_id = "";
+                QueryNftBidsRequest.prototype.token_id = "";
     
                 /**
                  * Encodes the specified QueryNftBidsRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryNftBidsRequest.verify|verify} messages.
@@ -37509,8 +37582,8 @@
                         writer = $Writer.create();
                     if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.class_id);
-                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
-                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.nft_id);
+                    if (message.token_id != null && Object.hasOwnProperty.call(message, "token_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.token_id);
                     return writer;
                 };
     
@@ -37549,7 +37622,7 @@
                             message.class_id = reader.string();
                             break;
                         case 2:
-                            message.nft_id = reader.string();
+                            message.token_id = reader.string();
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -37589,9 +37662,9 @@
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         if (!$util.isString(message.class_id))
                             return "class_id: string expected";
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        if (!$util.isString(message.nft_id))
-                            return "nft_id: string expected";
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        if (!$util.isString(message.token_id))
+                            return "token_id: string expected";
                     return null;
                 };
     
@@ -37609,8 +37682,8 @@
                     var message = new $root.ununifi.nftbackedloan.QueryNftBidsRequest();
                     if (object.class_id != null)
                         message.class_id = String(object.class_id);
-                    if (object.nft_id != null)
-                        message.nft_id = String(object.nft_id);
+                    if (object.token_id != null)
+                        message.token_id = String(object.token_id);
                     return message;
                 };
     
@@ -37629,12 +37702,12 @@
                     var object = {};
                     if (options.defaults) {
                         object.class_id = "";
-                        object.nft_id = "";
+                        object.token_id = "";
                     }
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         object.class_id = message.class_id;
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        object.nft_id = message.nft_id;
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        object.token_id = message.token_id;
                     return object;
                 };
     
@@ -38611,7 +38684,7 @@
                  * @memberof ununifi.nftbackedloan
                  * @interface IQueryLiquidationRequest
                  * @property {string|null} [class_id] QueryLiquidationRequest class_id
-                 * @property {string|null} [nft_id] QueryLiquidationRequest nft_id
+                 * @property {string|null} [token_id] QueryLiquidationRequest token_id
                  */
     
                 /**
@@ -38638,12 +38711,12 @@
                 QueryLiquidationRequest.prototype.class_id = "";
     
                 /**
-                 * QueryLiquidationRequest nft_id.
-                 * @member {string} nft_id
+                 * QueryLiquidationRequest token_id.
+                 * @member {string} token_id
                  * @memberof ununifi.nftbackedloan.QueryLiquidationRequest
                  * @instance
                  */
-                QueryLiquidationRequest.prototype.nft_id = "";
+                QueryLiquidationRequest.prototype.token_id = "";
     
                 /**
                  * Encodes the specified QueryLiquidationRequest message. Does not implicitly {@link ununifi.nftbackedloan.QueryLiquidationRequest.verify|verify} messages.
@@ -38659,8 +38732,8 @@
                         writer = $Writer.create();
                     if (message.class_id != null && Object.hasOwnProperty.call(message, "class_id"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.class_id);
-                    if (message.nft_id != null && Object.hasOwnProperty.call(message, "nft_id"))
-                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.nft_id);
+                    if (message.token_id != null && Object.hasOwnProperty.call(message, "token_id"))
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.token_id);
                     return writer;
                 };
     
@@ -38699,7 +38772,7 @@
                             message.class_id = reader.string();
                             break;
                         case 2:
-                            message.nft_id = reader.string();
+                            message.token_id = reader.string();
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -38739,9 +38812,9 @@
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         if (!$util.isString(message.class_id))
                             return "class_id: string expected";
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        if (!$util.isString(message.nft_id))
-                            return "nft_id: string expected";
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        if (!$util.isString(message.token_id))
+                            return "token_id: string expected";
                     return null;
                 };
     
@@ -38759,8 +38832,8 @@
                     var message = new $root.ununifi.nftbackedloan.QueryLiquidationRequest();
                     if (object.class_id != null)
                         message.class_id = String(object.class_id);
-                    if (object.nft_id != null)
-                        message.nft_id = String(object.nft_id);
+                    if (object.token_id != null)
+                        message.token_id = String(object.token_id);
                     return message;
                 };
     
@@ -38779,12 +38852,12 @@
                     var object = {};
                     if (options.defaults) {
                         object.class_id = "";
-                        object.nft_id = "";
+                        object.token_id = "";
                     }
                     if (message.class_id != null && message.hasOwnProperty("class_id"))
                         object.class_id = message.class_id;
-                    if (message.nft_id != null && message.hasOwnProperty("nft_id"))
-                        object.nft_id = message.nft_id;
+                    if (message.token_id != null && message.hasOwnProperty("token_id"))
+                        object.token_id = message.token_id;
                     return object;
                 };
     
@@ -59180,6 +59253,7 @@
                  * @property {cosmos.base.v1beta1.ICoin|null} [share_amount] QueryEstimateRedeemAmountResponse share_amount
                  * @property {cosmos.base.v1beta1.ICoin|null} [fee] QueryEstimateRedeemAmountResponse fee
                  * @property {cosmos.base.v1beta1.ICoin|null} [redeem_amount] QueryEstimateRedeemAmountResponse redeem_amount
+                 * @property {cosmos.base.v1beta1.ICoin|null} [total_amount] QueryEstimateRedeemAmountResponse total_amount
                  */
     
                 /**
@@ -59222,6 +59296,14 @@
                 QueryEstimateRedeemAmountResponse.prototype.redeem_amount = null;
     
                 /**
+                 * QueryEstimateRedeemAmountResponse total_amount.
+                 * @member {cosmos.base.v1beta1.ICoin|null|undefined} total_amount
+                 * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
+                 * @instance
+                 */
+                QueryEstimateRedeemAmountResponse.prototype.total_amount = null;
+    
+                /**
                  * Encodes the specified QueryEstimateRedeemAmountResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse.verify|verify} messages.
                  * @function encode
                  * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
@@ -59239,6 +59321,8 @@
                         $root.cosmos.base.v1beta1.Coin.encode(message.fee, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
                     if (message.redeem_amount != null && Object.hasOwnProperty.call(message, "redeem_amount"))
                         $root.cosmos.base.v1beta1.Coin.encode(message.redeem_amount, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                    if (message.total_amount != null && Object.hasOwnProperty.call(message, "total_amount"))
+                        $root.cosmos.base.v1beta1.Coin.encode(message.total_amount, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
                     return writer;
                 };
     
@@ -59281,6 +59365,9 @@
                             break;
                         case 3:
                             message.redeem_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+                            break;
+                        case 4:
+                            message.total_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -59332,6 +59419,11 @@
                         if (error)
                             return "redeem_amount." + error;
                     }
+                    if (message.total_amount != null && message.hasOwnProperty("total_amount")) {
+                        var error = $root.cosmos.base.v1beta1.Coin.verify(message.total_amount);
+                        if (error)
+                            return "total_amount." + error;
+                    }
                     return null;
                 };
     
@@ -59362,6 +59454,11 @@
                             throw TypeError(".ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse.redeem_amount: object expected");
                         message.redeem_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.redeem_amount);
                     }
+                    if (object.total_amount != null) {
+                        if (typeof object.total_amount !== "object")
+                            throw TypeError(".ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse.total_amount: object expected");
+                        message.total_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.total_amount);
+                    }
                     return message;
                 };
     
@@ -59382,6 +59479,7 @@
                         object.share_amount = null;
                         object.fee = null;
                         object.redeem_amount = null;
+                        object.total_amount = null;
                     }
                     if (message.share_amount != null && message.hasOwnProperty("share_amount"))
                         object.share_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.share_amount, options);
@@ -59389,6 +59487,8 @@
                         object.fee = $root.cosmos.base.v1beta1.Coin.toObject(message.fee, options);
                     if (message.redeem_amount != null && message.hasOwnProperty("redeem_amount"))
                         object.redeem_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.redeem_amount, options);
+                    if (message.total_amount != null && message.hasOwnProperty("total_amount"))
+                        object.total_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.total_amount, options);
                     return object;
                 };
     
