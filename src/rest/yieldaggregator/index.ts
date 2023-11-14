@@ -15,4 +15,16 @@ cosmosclient.codec.register('/ununifi.yieldaggregator.MsgDepositToVault', ununif
 cosmosclient.codec.register('/ununifi.yieldaggregator.MsgWithdrawFromVault', ununifi.yieldaggregator.MsgWithdrawFromVault);
 cosmosclient.codec.register('/ununifi.yieldaggregator.MsgUpdateParams', ununifi.yieldaggregator.MsgUpdateParams);
 
+cosmosclient.codec.register(
+  '/ununifi.yieldaggregator.MsgWithdrawFromVaultWithUnbondingTime',
+  ununifi.yieldaggregator.MsgWithdrawFromVaultWithUnbondingTime,
+);
+cosmosclient.codec.register('/ununifi.yieldaggregator.MsgRegisterDenomInfos', ununifi.yieldaggregator.MsgRegisterDenomInfos);
+cosmosclient.codec.register('/ununifi.yieldaggregator.MsgRegisterSymbolInfos', ununifi.yieldaggregator.MsgRegisterSymbolInfos);
+cosmosclient.codec.register(
+  '/ununifi.yieldaggregator.MsgSetIntermediaryAccountInfo',
+  ununifi.yieldaggregator.MsgSetIntermediaryAccountInfo,
+);
+cosmosclient.codec.register('/ununifi.yieldaggregator.MsgReinitVaultTransfer', ununifi.yieldaggregator.MsgReinitVaultTransfer);
+
 cosmosclient.codec.register('/ununifi.yieldaggregator.StrategyWeight', ununifi.yieldaggregator.StrategyWeight);
