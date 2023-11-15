@@ -30549,6 +30549,9 @@ export namespace ununifi {
 
       /** StrategyContainer performance_fee_rate */
       performance_fee_rate?: string | null;
+
+      /** StrategyContainer symbol */
+      symbol?: string | null;
     }
 
     /** Represents a StrategyContainer. */
@@ -30570,6 +30573,9 @@ export namespace ununifi {
 
       /** StrategyContainer performance_fee_rate. */
       public performance_fee_rate: string;
+
+      /** StrategyContainer symbol. */
+      public symbol: string;
 
       /**
        * Encodes the specified StrategyContainer message. Does not implicitly {@link ununifi.yieldaggregator.StrategyContainer.verify|verify} messages.
@@ -31014,6 +31020,9 @@ export namespace ununifi {
 
       /** QueryEstimateRedeemAmountResponse total_amount */
       total_amount?: string | null;
+
+      /** QueryEstimateRedeemAmountResponse symbol */
+      symbol?: string | null;
     }
 
     /** Represents a QueryEstimateRedeemAmountResponse. */
@@ -31035,6 +31044,9 @@ export namespace ununifi {
 
       /** QueryEstimateRedeemAmountResponse total_amount. */
       public total_amount: string;
+
+      /** QueryEstimateRedeemAmountResponse symbol. */
+      public symbol: string;
 
       /**
        * Encodes the specified QueryEstimateRedeemAmountResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse.verify|verify} messages.

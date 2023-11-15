@@ -66033,6 +66033,7 @@
          * @property {string|null} [deposit_fee_rate] StrategyContainer deposit_fee_rate
          * @property {string|null} [withdraw_fee_rate] StrategyContainer withdraw_fee_rate
          * @property {string|null} [performance_fee_rate] StrategyContainer performance_fee_rate
+         * @property {string|null} [symbol] StrategyContainer symbol
          */
 
         /**
@@ -66082,6 +66083,14 @@
         StrategyContainer.prototype.performance_fee_rate = '';
 
         /**
+         * StrategyContainer symbol.
+         * @member {string} symbol
+         * @memberof ununifi.yieldaggregator.StrategyContainer
+         * @instance
+         */
+        StrategyContainer.prototype.symbol = '';
+
+        /**
          * Encodes the specified StrategyContainer message. Does not implicitly {@link ununifi.yieldaggregator.StrategyContainer.verify|verify} messages.
          * @function encode
          * @memberof ununifi.yieldaggregator.StrategyContainer
@@ -66100,6 +66109,8 @@
             writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.withdraw_fee_rate);
           if (message.performance_fee_rate != null && Object.hasOwnProperty.call(message, 'performance_fee_rate'))
             writer.uint32(/* id 4, wireType 2 =*/ 34).string(message.performance_fee_rate);
+          if (message.symbol != null && Object.hasOwnProperty.call(message, 'symbol'))
+            writer.uint32(/* id 5, wireType 2 =*/ 42).string(message.symbol);
           return writer;
         };
 
@@ -66146,6 +66157,9 @@
               case 4:
                 message.performance_fee_rate = reader.string();
                 break;
+              case 5:
+                message.symbol = reader.string();
+                break;
               default:
                 reader.skipType(tag & 7);
                 break;
@@ -66189,6 +66203,8 @@
             if (!$util.isString(message.withdraw_fee_rate)) return 'withdraw_fee_rate: string expected';
           if (message.performance_fee_rate != null && message.hasOwnProperty('performance_fee_rate'))
             if (!$util.isString(message.performance_fee_rate)) return 'performance_fee_rate: string expected';
+          if (message.symbol != null && message.hasOwnProperty('symbol'))
+            if (!$util.isString(message.symbol)) return 'symbol: string expected';
           return null;
         };
 
@@ -66211,6 +66227,7 @@
           if (object.deposit_fee_rate != null) message.deposit_fee_rate = String(object.deposit_fee_rate);
           if (object.withdraw_fee_rate != null) message.withdraw_fee_rate = String(object.withdraw_fee_rate);
           if (object.performance_fee_rate != null) message.performance_fee_rate = String(object.performance_fee_rate);
+          if (object.symbol != null) message.symbol = String(object.symbol);
           return message;
         };
 
@@ -66231,6 +66248,7 @@
             object.deposit_fee_rate = '';
             object.withdraw_fee_rate = '';
             object.performance_fee_rate = '';
+            object.symbol = '';
           }
           if (message.strategy != null && message.hasOwnProperty('strategy'))
             object.strategy = $root.ununifi.yieldaggregator.Strategy.toObject(message.strategy, options);
@@ -66240,6 +66258,7 @@
             object.withdraw_fee_rate = message.withdraw_fee_rate;
           if (message.performance_fee_rate != null && message.hasOwnProperty('performance_fee_rate'))
             object.performance_fee_rate = message.performance_fee_rate;
+          if (message.symbol != null && message.hasOwnProperty('symbol')) object.symbol = message.symbol;
           return object;
         };
 
@@ -67013,6 +67032,7 @@
          * @property {string|null} [fee] QueryEstimateRedeemAmountResponse fee
          * @property {string|null} [redeem_amount] QueryEstimateRedeemAmountResponse redeem_amount
          * @property {string|null} [total_amount] QueryEstimateRedeemAmountResponse total_amount
+         * @property {string|null} [symbol] QueryEstimateRedeemAmountResponse symbol
          */
 
         /**
@@ -67062,6 +67082,14 @@
         QueryEstimateRedeemAmountResponse.prototype.total_amount = '';
 
         /**
+         * QueryEstimateRedeemAmountResponse symbol.
+         * @member {string} symbol
+         * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
+         * @instance
+         */
+        QueryEstimateRedeemAmountResponse.prototype.symbol = '';
+
+        /**
          * Encodes the specified QueryEstimateRedeemAmountResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse.verify|verify} messages.
          * @function encode
          * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
@@ -67080,6 +67108,8 @@
             writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.redeem_amount);
           if (message.total_amount != null && Object.hasOwnProperty.call(message, 'total_amount'))
             writer.uint32(/* id 4, wireType 2 =*/ 34).string(message.total_amount);
+          if (message.symbol != null && Object.hasOwnProperty.call(message, 'symbol'))
+            writer.uint32(/* id 5, wireType 2 =*/ 42).string(message.symbol);
           return writer;
         };
 
@@ -67126,6 +67156,9 @@
               case 4:
                 message.total_amount = reader.string();
                 break;
+              case 5:
+                message.symbol = reader.string();
+                break;
               default:
                 reader.skipType(tag & 7);
                 break;
@@ -67168,6 +67201,8 @@
             if (!$util.isString(message.redeem_amount)) return 'redeem_amount: string expected';
           if (message.total_amount != null && message.hasOwnProperty('total_amount'))
             if (!$util.isString(message.total_amount)) return 'total_amount: string expected';
+          if (message.symbol != null && message.hasOwnProperty('symbol'))
+            if (!$util.isString(message.symbol)) return 'symbol: string expected';
           return null;
         };
 
@@ -67190,6 +67225,7 @@
           if (object.fee != null) message.fee = String(object.fee);
           if (object.redeem_amount != null) message.redeem_amount = String(object.redeem_amount);
           if (object.total_amount != null) message.total_amount = String(object.total_amount);
+          if (object.symbol != null) message.symbol = String(object.symbol);
           return message;
         };
 
@@ -67210,12 +67246,14 @@
             object.fee = '';
             object.redeem_amount = '';
             object.total_amount = '';
+            object.symbol = '';
           }
           if (message.share_amount != null && message.hasOwnProperty('share_amount'))
             object.share_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.share_amount, options);
           if (message.fee != null && message.hasOwnProperty('fee')) object.fee = message.fee;
           if (message.redeem_amount != null && message.hasOwnProperty('redeem_amount')) object.redeem_amount = message.redeem_amount;
           if (message.total_amount != null && message.hasOwnProperty('total_amount')) object.total_amount = message.total_amount;
+          if (message.symbol != null && message.hasOwnProperty('symbol')) object.symbol = message.symbol;
           return object;
         };
 
