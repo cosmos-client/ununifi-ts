@@ -11294,6 +11294,3475 @@ export namespace ununifi {
     }
   }
 
+  /** Namespace irs. */
+  namespace irs {
+    /** Represents a Msg */
+    class Msg extends $protobuf.rpc.Service {
+      /**
+       * Constructs a new Msg service.
+       * @param rpcImpl RPC implementation
+       * @param [requestDelimited=false] Whether requests are length-delimited
+       * @param [responseDelimited=false] Whether responses are length-delimited
+       */
+      constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+      /**
+       * Calls UpdateParams.
+       * @param request MsgUpdateParams message or plain object
+       * @param callback Node-style callback called with the error, if any, and MsgUpdateParamsResponse
+       */
+      public updateParams(request: ununifi.irs.IMsgUpdateParams, callback: ununifi.irs.Msg.UpdateParamsCallback): void;
+
+      /**
+       * Calls UpdateParams.
+       * @param request MsgUpdateParams message or plain object
+       * @returns Promise
+       */
+      public updateParams(request: ununifi.irs.IMsgUpdateParams): Promise<ununifi.irs.MsgUpdateParamsResponse>;
+
+      /**
+       * Calls RegisterInterestRateSwapVault.
+       * @param request MsgRegisterInterestRateSwapVault message or plain object
+       * @param callback Node-style callback called with the error, if any, and MsgRegisterInterestRateSwapVaultResponse
+       */
+      public registerInterestRateSwapVault(
+        request: ununifi.irs.IMsgRegisterInterestRateSwapVault,
+        callback: ununifi.irs.Msg.RegisterInterestRateSwapVaultCallback,
+      ): void;
+
+      /**
+       * Calls RegisterInterestRateSwapVault.
+       * @param request MsgRegisterInterestRateSwapVault message or plain object
+       * @returns Promise
+       */
+      public registerInterestRateSwapVault(
+        request: ununifi.irs.IMsgRegisterInterestRateSwapVault,
+      ): Promise<ununifi.irs.MsgRegisterInterestRateSwapVaultResponse>;
+
+      /**
+       * Calls DepositLiquidity.
+       * @param request MsgDepositLiquidity message or plain object
+       * @param callback Node-style callback called with the error, if any, and MsgDepositLiquidityResponse
+       */
+      public depositLiquidity(request: ununifi.irs.IMsgDepositLiquidity, callback: ununifi.irs.Msg.DepositLiquidityCallback): void;
+
+      /**
+       * Calls DepositLiquidity.
+       * @param request MsgDepositLiquidity message or plain object
+       * @returns Promise
+       */
+      public depositLiquidity(request: ununifi.irs.IMsgDepositLiquidity): Promise<ununifi.irs.MsgDepositLiquidityResponse>;
+
+      /**
+       * Calls WithdrawLiquidity.
+       * @param request MsgWithdrawLiquidity message or plain object
+       * @param callback Node-style callback called with the error, if any, and MsgWithdrawLiquidityResponse
+       */
+      public withdrawLiquidity(request: ununifi.irs.IMsgWithdrawLiquidity, callback: ununifi.irs.Msg.WithdrawLiquidityCallback): void;
+
+      /**
+       * Calls WithdrawLiquidity.
+       * @param request MsgWithdrawLiquidity message or plain object
+       * @returns Promise
+       */
+      public withdrawLiquidity(request: ununifi.irs.IMsgWithdrawLiquidity): Promise<ununifi.irs.MsgWithdrawLiquidityResponse>;
+
+      /**
+       * Calls DepositToTranche.
+       * @param request MsgDepositToTranche message or plain object
+       * @param callback Node-style callback called with the error, if any, and MsgDepositToTrancheResponse
+       */
+      public depositToTranche(request: ununifi.irs.IMsgDepositToTranche, callback: ununifi.irs.Msg.DepositToTrancheCallback): void;
+
+      /**
+       * Calls DepositToTranche.
+       * @param request MsgDepositToTranche message or plain object
+       * @returns Promise
+       */
+      public depositToTranche(request: ununifi.irs.IMsgDepositToTranche): Promise<ununifi.irs.MsgDepositToTrancheResponse>;
+
+      /**
+       * Calls WithdrawFromTranche.
+       * @param request MsgWithdrawFromTranche message or plain object
+       * @param callback Node-style callback called with the error, if any, and MsgWithdrawFromTrancheResponse
+       */
+      public withdrawFromTranche(request: ununifi.irs.IMsgWithdrawFromTranche, callback: ununifi.irs.Msg.WithdrawFromTrancheCallback): void;
+
+      /**
+       * Calls WithdrawFromTranche.
+       * @param request MsgWithdrawFromTranche message or plain object
+       * @returns Promise
+       */
+      public withdrawFromTranche(request: ununifi.irs.IMsgWithdrawFromTranche): Promise<ununifi.irs.MsgWithdrawFromTrancheResponse>;
+    }
+
+    namespace Msg {
+      /**
+       * Callback as used by {@link ununifi.irs.Msg#updateParams}.
+       * @param error Error, if any
+       * @param [response] MsgUpdateParamsResponse
+       */
+      type UpdateParamsCallback = (error: Error | null, response?: ununifi.irs.MsgUpdateParamsResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Msg#registerInterestRateSwapVault}.
+       * @param error Error, if any
+       * @param [response] MsgRegisterInterestRateSwapVaultResponse
+       */
+      type RegisterInterestRateSwapVaultCallback = (
+        error: Error | null,
+        response?: ununifi.irs.MsgRegisterInterestRateSwapVaultResponse,
+      ) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Msg#depositLiquidity}.
+       * @param error Error, if any
+       * @param [response] MsgDepositLiquidityResponse
+       */
+      type DepositLiquidityCallback = (error: Error | null, response?: ununifi.irs.MsgDepositLiquidityResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Msg#withdrawLiquidity}.
+       * @param error Error, if any
+       * @param [response] MsgWithdrawLiquidityResponse
+       */
+      type WithdrawLiquidityCallback = (error: Error | null, response?: ununifi.irs.MsgWithdrawLiquidityResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Msg#depositToTranche}.
+       * @param error Error, if any
+       * @param [response] MsgDepositToTrancheResponse
+       */
+      type DepositToTrancheCallback = (error: Error | null, response?: ununifi.irs.MsgDepositToTrancheResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Msg#withdrawFromTranche}.
+       * @param error Error, if any
+       * @param [response] MsgWithdrawFromTrancheResponse
+       */
+      type WithdrawFromTrancheCallback = (error: Error | null, response?: ununifi.irs.MsgWithdrawFromTrancheResponse) => void;
+    }
+
+    /** Properties of a MsgUpdateParams. */
+    interface IMsgUpdateParams {
+      /** MsgUpdateParams sender */
+      sender?: string | null;
+
+      /** MsgUpdateParams params */
+      params?: ununifi.irs.IParams | null;
+    }
+
+    /** Represents a MsgUpdateParams. */
+    class MsgUpdateParams implements IMsgUpdateParams {
+      /**
+       * Constructs a new MsgUpdateParams.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IMsgUpdateParams);
+
+      /** MsgUpdateParams sender. */
+      public sender: string;
+
+      /** MsgUpdateParams params. */
+      public params?: ununifi.irs.IParams | null;
+
+      /**
+       * Encodes the specified MsgUpdateParams message. Does not implicitly {@link ununifi.irs.MsgUpdateParams.verify|verify} messages.
+       * @param message MsgUpdateParams message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IMsgUpdateParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgUpdateParams message, length delimited. Does not implicitly {@link ununifi.irs.MsgUpdateParams.verify|verify} messages.
+       * @param message MsgUpdateParams message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IMsgUpdateParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgUpdateParams message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgUpdateParams
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.MsgUpdateParams;
+
+      /**
+       * Decodes a MsgUpdateParams message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgUpdateParams
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.MsgUpdateParams;
+
+      /**
+       * Verifies a MsgUpdateParams message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgUpdateParams message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgUpdateParams
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.MsgUpdateParams;
+
+      /**
+       * Creates a plain object from a MsgUpdateParams message. Also converts values to other types if specified.
+       * @param message MsgUpdateParams
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.MsgUpdateParams, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this MsgUpdateParams to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgUpdateParamsResponse. */
+    interface IMsgUpdateParamsResponse {}
+
+    /** Represents a MsgUpdateParamsResponse. */
+    class MsgUpdateParamsResponse implements IMsgUpdateParamsResponse {
+      /**
+       * Constructs a new MsgUpdateParamsResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IMsgUpdateParamsResponse);
+
+      /**
+       * Encodes the specified MsgUpdateParamsResponse message. Does not implicitly {@link ununifi.irs.MsgUpdateParamsResponse.verify|verify} messages.
+       * @param message MsgUpdateParamsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IMsgUpdateParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgUpdateParamsResponse message, length delimited. Does not implicitly {@link ununifi.irs.MsgUpdateParamsResponse.verify|verify} messages.
+       * @param message MsgUpdateParamsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IMsgUpdateParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgUpdateParamsResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgUpdateParamsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.MsgUpdateParamsResponse;
+
+      /**
+       * Decodes a MsgUpdateParamsResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgUpdateParamsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.MsgUpdateParamsResponse;
+
+      /**
+       * Verifies a MsgUpdateParamsResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgUpdateParamsResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgUpdateParamsResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.MsgUpdateParamsResponse;
+
+      /**
+       * Creates a plain object from a MsgUpdateParamsResponse message. Also converts values to other types if specified.
+       * @param message MsgUpdateParamsResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.MsgUpdateParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this MsgUpdateParamsResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgRegisterInterestRateSwapVault. */
+    interface IMsgRegisterInterestRateSwapVault {
+      /** MsgRegisterInterestRateSwapVault sender */
+      sender?: string | null;
+
+      /** MsgRegisterInterestRateSwapVault strategy_contract */
+      strategy_contract?: string | null;
+
+      /** MsgRegisterInterestRateSwapVault name */
+      name?: string | null;
+
+      /** MsgRegisterInterestRateSwapVault description */
+      description?: string | null;
+
+      /** MsgRegisterInterestRateSwapVault max_maturity */
+      max_maturity?: Long | null;
+
+      /** MsgRegisterInterestRateSwapVault cycle */
+      cycle?: Long | null;
+    }
+
+    /** Represents a MsgRegisterInterestRateSwapVault. */
+    class MsgRegisterInterestRateSwapVault implements IMsgRegisterInterestRateSwapVault {
+      /**
+       * Constructs a new MsgRegisterInterestRateSwapVault.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IMsgRegisterInterestRateSwapVault);
+
+      /** MsgRegisterInterestRateSwapVault sender. */
+      public sender: string;
+
+      /** MsgRegisterInterestRateSwapVault strategy_contract. */
+      public strategy_contract: string;
+
+      /** MsgRegisterInterestRateSwapVault name. */
+      public name: string;
+
+      /** MsgRegisterInterestRateSwapVault description. */
+      public description: string;
+
+      /** MsgRegisterInterestRateSwapVault max_maturity. */
+      public max_maturity: Long;
+
+      /** MsgRegisterInterestRateSwapVault cycle. */
+      public cycle: Long;
+
+      /**
+       * Encodes the specified MsgRegisterInterestRateSwapVault message. Does not implicitly {@link ununifi.irs.MsgRegisterInterestRateSwapVault.verify|verify} messages.
+       * @param message MsgRegisterInterestRateSwapVault message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IMsgRegisterInterestRateSwapVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgRegisterInterestRateSwapVault message, length delimited. Does not implicitly {@link ununifi.irs.MsgRegisterInterestRateSwapVault.verify|verify} messages.
+       * @param message MsgRegisterInterestRateSwapVault message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IMsgRegisterInterestRateSwapVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgRegisterInterestRateSwapVault message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgRegisterInterestRateSwapVault
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.MsgRegisterInterestRateSwapVault;
+
+      /**
+       * Decodes a MsgRegisterInterestRateSwapVault message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgRegisterInterestRateSwapVault
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.MsgRegisterInterestRateSwapVault;
+
+      /**
+       * Verifies a MsgRegisterInterestRateSwapVault message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgRegisterInterestRateSwapVault message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgRegisterInterestRateSwapVault
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.MsgRegisterInterestRateSwapVault;
+
+      /**
+       * Creates a plain object from a MsgRegisterInterestRateSwapVault message. Also converts values to other types if specified.
+       * @param message MsgRegisterInterestRateSwapVault
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.MsgRegisterInterestRateSwapVault,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this MsgRegisterInterestRateSwapVault to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgRegisterInterestRateSwapVaultResponse. */
+    interface IMsgRegisterInterestRateSwapVaultResponse {}
+
+    /** Represents a MsgRegisterInterestRateSwapVaultResponse. */
+    class MsgRegisterInterestRateSwapVaultResponse implements IMsgRegisterInterestRateSwapVaultResponse {
+      /**
+       * Constructs a new MsgRegisterInterestRateSwapVaultResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IMsgRegisterInterestRateSwapVaultResponse);
+
+      /**
+       * Encodes the specified MsgRegisterInterestRateSwapVaultResponse message. Does not implicitly {@link ununifi.irs.MsgRegisterInterestRateSwapVaultResponse.verify|verify} messages.
+       * @param message MsgRegisterInterestRateSwapVaultResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IMsgRegisterInterestRateSwapVaultResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgRegisterInterestRateSwapVaultResponse message, length delimited. Does not implicitly {@link ununifi.irs.MsgRegisterInterestRateSwapVaultResponse.verify|verify} messages.
+       * @param message MsgRegisterInterestRateSwapVaultResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.irs.IMsgRegisterInterestRateSwapVaultResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgRegisterInterestRateSwapVaultResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgRegisterInterestRateSwapVaultResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.MsgRegisterInterestRateSwapVaultResponse;
+
+      /**
+       * Decodes a MsgRegisterInterestRateSwapVaultResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgRegisterInterestRateSwapVaultResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.MsgRegisterInterestRateSwapVaultResponse;
+
+      /**
+       * Verifies a MsgRegisterInterestRateSwapVaultResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgRegisterInterestRateSwapVaultResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgRegisterInterestRateSwapVaultResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.MsgRegisterInterestRateSwapVaultResponse;
+
+      /**
+       * Creates a plain object from a MsgRegisterInterestRateSwapVaultResponse message. Also converts values to other types if specified.
+       * @param message MsgRegisterInterestRateSwapVaultResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.MsgRegisterInterestRateSwapVaultResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this MsgRegisterInterestRateSwapVaultResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgDepositLiquidity. */
+    interface IMsgDepositLiquidity {
+      /** MsgDepositLiquidity sender */
+      sender?: string | null;
+
+      /** MsgDepositLiquidity tranche_id */
+      tranche_id?: Long | null;
+
+      /** MsgDepositLiquidity share_out_amount */
+      share_out_amount?: string | null;
+
+      /** MsgDepositLiquidity token_in_maxs */
+      token_in_maxs?: cosmos.base.v1beta1.ICoin[] | null;
+    }
+
+    /** Represents a MsgDepositLiquidity. */
+    class MsgDepositLiquidity implements IMsgDepositLiquidity {
+      /**
+       * Constructs a new MsgDepositLiquidity.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IMsgDepositLiquidity);
+
+      /** MsgDepositLiquidity sender. */
+      public sender: string;
+
+      /** MsgDepositLiquidity tranche_id. */
+      public tranche_id: Long;
+
+      /** MsgDepositLiquidity share_out_amount. */
+      public share_out_amount: string;
+
+      /** MsgDepositLiquidity token_in_maxs. */
+      public token_in_maxs: cosmos.base.v1beta1.ICoin[];
+
+      /**
+       * Encodes the specified MsgDepositLiquidity message. Does not implicitly {@link ununifi.irs.MsgDepositLiquidity.verify|verify} messages.
+       * @param message MsgDepositLiquidity message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IMsgDepositLiquidity, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgDepositLiquidity message, length delimited. Does not implicitly {@link ununifi.irs.MsgDepositLiquidity.verify|verify} messages.
+       * @param message MsgDepositLiquidity message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IMsgDepositLiquidity, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgDepositLiquidity message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgDepositLiquidity
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.MsgDepositLiquidity;
+
+      /**
+       * Decodes a MsgDepositLiquidity message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgDepositLiquidity
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.MsgDepositLiquidity;
+
+      /**
+       * Verifies a MsgDepositLiquidity message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgDepositLiquidity message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgDepositLiquidity
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.MsgDepositLiquidity;
+
+      /**
+       * Creates a plain object from a MsgDepositLiquidity message. Also converts values to other types if specified.
+       * @param message MsgDepositLiquidity
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.MsgDepositLiquidity, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this MsgDepositLiquidity to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgDepositLiquidityResponse. */
+    interface IMsgDepositLiquidityResponse {}
+
+    /** Represents a MsgDepositLiquidityResponse. */
+    class MsgDepositLiquidityResponse implements IMsgDepositLiquidityResponse {
+      /**
+       * Constructs a new MsgDepositLiquidityResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IMsgDepositLiquidityResponse);
+
+      /**
+       * Encodes the specified MsgDepositLiquidityResponse message. Does not implicitly {@link ununifi.irs.MsgDepositLiquidityResponse.verify|verify} messages.
+       * @param message MsgDepositLiquidityResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IMsgDepositLiquidityResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgDepositLiquidityResponse message, length delimited. Does not implicitly {@link ununifi.irs.MsgDepositLiquidityResponse.verify|verify} messages.
+       * @param message MsgDepositLiquidityResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IMsgDepositLiquidityResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgDepositLiquidityResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgDepositLiquidityResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.MsgDepositLiquidityResponse;
+
+      /**
+       * Decodes a MsgDepositLiquidityResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgDepositLiquidityResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.MsgDepositLiquidityResponse;
+
+      /**
+       * Verifies a MsgDepositLiquidityResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgDepositLiquidityResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgDepositLiquidityResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.MsgDepositLiquidityResponse;
+
+      /**
+       * Creates a plain object from a MsgDepositLiquidityResponse message. Also converts values to other types if specified.
+       * @param message MsgDepositLiquidityResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.MsgDepositLiquidityResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this MsgDepositLiquidityResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgWithdrawLiquidity. */
+    interface IMsgWithdrawLiquidity {
+      /** MsgWithdrawLiquidity sender */
+      sender?: string | null;
+
+      /** MsgWithdrawLiquidity tranche_id */
+      tranche_id?: Long | null;
+
+      /** MsgWithdrawLiquidity share_amount */
+      share_amount?: string | null;
+
+      /** MsgWithdrawLiquidity token_out_mins */
+      token_out_mins?: cosmos.base.v1beta1.ICoin[] | null;
+    }
+
+    /** Represents a MsgWithdrawLiquidity. */
+    class MsgWithdrawLiquidity implements IMsgWithdrawLiquidity {
+      /**
+       * Constructs a new MsgWithdrawLiquidity.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IMsgWithdrawLiquidity);
+
+      /** MsgWithdrawLiquidity sender. */
+      public sender: string;
+
+      /** MsgWithdrawLiquidity tranche_id. */
+      public tranche_id: Long;
+
+      /** MsgWithdrawLiquidity share_amount. */
+      public share_amount: string;
+
+      /** MsgWithdrawLiquidity token_out_mins. */
+      public token_out_mins: cosmos.base.v1beta1.ICoin[];
+
+      /**
+       * Encodes the specified MsgWithdrawLiquidity message. Does not implicitly {@link ununifi.irs.MsgWithdrawLiquidity.verify|verify} messages.
+       * @param message MsgWithdrawLiquidity message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IMsgWithdrawLiquidity, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgWithdrawLiquidity message, length delimited. Does not implicitly {@link ununifi.irs.MsgWithdrawLiquidity.verify|verify} messages.
+       * @param message MsgWithdrawLiquidity message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IMsgWithdrawLiquidity, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgWithdrawLiquidity message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgWithdrawLiquidity
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.MsgWithdrawLiquidity;
+
+      /**
+       * Decodes a MsgWithdrawLiquidity message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgWithdrawLiquidity
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.MsgWithdrawLiquidity;
+
+      /**
+       * Verifies a MsgWithdrawLiquidity message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgWithdrawLiquidity message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgWithdrawLiquidity
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.MsgWithdrawLiquidity;
+
+      /**
+       * Creates a plain object from a MsgWithdrawLiquidity message. Also converts values to other types if specified.
+       * @param message MsgWithdrawLiquidity
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.MsgWithdrawLiquidity, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this MsgWithdrawLiquidity to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgWithdrawLiquidityResponse. */
+    interface IMsgWithdrawLiquidityResponse {}
+
+    /** Represents a MsgWithdrawLiquidityResponse. */
+    class MsgWithdrawLiquidityResponse implements IMsgWithdrawLiquidityResponse {
+      /**
+       * Constructs a new MsgWithdrawLiquidityResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IMsgWithdrawLiquidityResponse);
+
+      /**
+       * Encodes the specified MsgWithdrawLiquidityResponse message. Does not implicitly {@link ununifi.irs.MsgWithdrawLiquidityResponse.verify|verify} messages.
+       * @param message MsgWithdrawLiquidityResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IMsgWithdrawLiquidityResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgWithdrawLiquidityResponse message, length delimited. Does not implicitly {@link ununifi.irs.MsgWithdrawLiquidityResponse.verify|verify} messages.
+       * @param message MsgWithdrawLiquidityResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IMsgWithdrawLiquidityResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgWithdrawLiquidityResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgWithdrawLiquidityResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.MsgWithdrawLiquidityResponse;
+
+      /**
+       * Decodes a MsgWithdrawLiquidityResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgWithdrawLiquidityResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.MsgWithdrawLiquidityResponse;
+
+      /**
+       * Verifies a MsgWithdrawLiquidityResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgWithdrawLiquidityResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgWithdrawLiquidityResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.MsgWithdrawLiquidityResponse;
+
+      /**
+       * Creates a plain object from a MsgWithdrawLiquidityResponse message. Also converts values to other types if specified.
+       * @param message MsgWithdrawLiquidityResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.MsgWithdrawLiquidityResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this MsgWithdrawLiquidityResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** TrancheType enum. */
+    enum TrancheType {
+      NORMAL_YIELD = 0,
+      FIXED_YIELD = 1,
+      LEVERAGED_VARIABLE_YIELD = 2,
+    }
+
+    /** Properties of a MsgDepositToTranche. */
+    interface IMsgDepositToTranche {
+      /** MsgDepositToTranche sender */
+      sender?: string | null;
+
+      /** MsgDepositToTranche tranche_id */
+      tranche_id?: Long | null;
+
+      /** MsgDepositToTranche tranche_type */
+      tranche_type?: ununifi.irs.TrancheType | null;
+
+      /** MsgDepositToTranche token */
+      token?: cosmos.base.v1beta1.ICoin | null;
+
+      /** MsgDepositToTranche required_yt */
+      required_yt?: string | null;
+    }
+
+    /** Represents a MsgDepositToTranche. */
+    class MsgDepositToTranche implements IMsgDepositToTranche {
+      /**
+       * Constructs a new MsgDepositToTranche.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IMsgDepositToTranche);
+
+      /** MsgDepositToTranche sender. */
+      public sender: string;
+
+      /** MsgDepositToTranche tranche_id. */
+      public tranche_id: Long;
+
+      /** MsgDepositToTranche tranche_type. */
+      public tranche_type: ununifi.irs.TrancheType;
+
+      /** MsgDepositToTranche token. */
+      public token?: cosmos.base.v1beta1.ICoin | null;
+
+      /** MsgDepositToTranche required_yt. */
+      public required_yt: string;
+
+      /**
+       * Encodes the specified MsgDepositToTranche message. Does not implicitly {@link ununifi.irs.MsgDepositToTranche.verify|verify} messages.
+       * @param message MsgDepositToTranche message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IMsgDepositToTranche, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgDepositToTranche message, length delimited. Does not implicitly {@link ununifi.irs.MsgDepositToTranche.verify|verify} messages.
+       * @param message MsgDepositToTranche message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IMsgDepositToTranche, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgDepositToTranche message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgDepositToTranche
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.MsgDepositToTranche;
+
+      /**
+       * Decodes a MsgDepositToTranche message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgDepositToTranche
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.MsgDepositToTranche;
+
+      /**
+       * Verifies a MsgDepositToTranche message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgDepositToTranche message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgDepositToTranche
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.MsgDepositToTranche;
+
+      /**
+       * Creates a plain object from a MsgDepositToTranche message. Also converts values to other types if specified.
+       * @param message MsgDepositToTranche
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.MsgDepositToTranche, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this MsgDepositToTranche to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgDepositToTrancheResponse. */
+    interface IMsgDepositToTrancheResponse {}
+
+    /** Represents a MsgDepositToTrancheResponse. */
+    class MsgDepositToTrancheResponse implements IMsgDepositToTrancheResponse {
+      /**
+       * Constructs a new MsgDepositToTrancheResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IMsgDepositToTrancheResponse);
+
+      /**
+       * Encodes the specified MsgDepositToTrancheResponse message. Does not implicitly {@link ununifi.irs.MsgDepositToTrancheResponse.verify|verify} messages.
+       * @param message MsgDepositToTrancheResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IMsgDepositToTrancheResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgDepositToTrancheResponse message, length delimited. Does not implicitly {@link ununifi.irs.MsgDepositToTrancheResponse.verify|verify} messages.
+       * @param message MsgDepositToTrancheResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IMsgDepositToTrancheResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgDepositToTrancheResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgDepositToTrancheResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.MsgDepositToTrancheResponse;
+
+      /**
+       * Decodes a MsgDepositToTrancheResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgDepositToTrancheResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.MsgDepositToTrancheResponse;
+
+      /**
+       * Verifies a MsgDepositToTrancheResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgDepositToTrancheResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgDepositToTrancheResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.MsgDepositToTrancheResponse;
+
+      /**
+       * Creates a plain object from a MsgDepositToTrancheResponse message. Also converts values to other types if specified.
+       * @param message MsgDepositToTrancheResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.MsgDepositToTrancheResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this MsgDepositToTrancheResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgWithdrawFromTranche. */
+    interface IMsgWithdrawFromTranche {
+      /** MsgWithdrawFromTranche sender */
+      sender?: string | null;
+
+      /** MsgWithdrawFromTranche tranche_id */
+      tranche_id?: Long | null;
+
+      /** MsgWithdrawFromTranche tranche_type */
+      tranche_type?: ununifi.irs.TrancheType | null;
+
+      /** MsgWithdrawFromTranche tokens */
+      tokens?: cosmos.base.v1beta1.ICoin[] | null;
+
+      /** MsgWithdrawFromTranche required_ut */
+      required_ut?: string | null;
+    }
+
+    /** Represents a MsgWithdrawFromTranche. */
+    class MsgWithdrawFromTranche implements IMsgWithdrawFromTranche {
+      /**
+       * Constructs a new MsgWithdrawFromTranche.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IMsgWithdrawFromTranche);
+
+      /** MsgWithdrawFromTranche sender. */
+      public sender: string;
+
+      /** MsgWithdrawFromTranche tranche_id. */
+      public tranche_id: Long;
+
+      /** MsgWithdrawFromTranche tranche_type. */
+      public tranche_type: ununifi.irs.TrancheType;
+
+      /** MsgWithdrawFromTranche tokens. */
+      public tokens: cosmos.base.v1beta1.ICoin[];
+
+      /** MsgWithdrawFromTranche required_ut. */
+      public required_ut: string;
+
+      /**
+       * Encodes the specified MsgWithdrawFromTranche message. Does not implicitly {@link ununifi.irs.MsgWithdrawFromTranche.verify|verify} messages.
+       * @param message MsgWithdrawFromTranche message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IMsgWithdrawFromTranche, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgWithdrawFromTranche message, length delimited. Does not implicitly {@link ununifi.irs.MsgWithdrawFromTranche.verify|verify} messages.
+       * @param message MsgWithdrawFromTranche message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IMsgWithdrawFromTranche, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgWithdrawFromTranche message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgWithdrawFromTranche
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.MsgWithdrawFromTranche;
+
+      /**
+       * Decodes a MsgWithdrawFromTranche message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgWithdrawFromTranche
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.MsgWithdrawFromTranche;
+
+      /**
+       * Verifies a MsgWithdrawFromTranche message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgWithdrawFromTranche message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgWithdrawFromTranche
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.MsgWithdrawFromTranche;
+
+      /**
+       * Creates a plain object from a MsgWithdrawFromTranche message. Also converts values to other types if specified.
+       * @param message MsgWithdrawFromTranche
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.MsgWithdrawFromTranche, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this MsgWithdrawFromTranche to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a MsgWithdrawFromTrancheResponse. */
+    interface IMsgWithdrawFromTrancheResponse {}
+
+    /** Represents a MsgWithdrawFromTrancheResponse. */
+    class MsgWithdrawFromTrancheResponse implements IMsgWithdrawFromTrancheResponse {
+      /**
+       * Constructs a new MsgWithdrawFromTrancheResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IMsgWithdrawFromTrancheResponse);
+
+      /**
+       * Encodes the specified MsgWithdrawFromTrancheResponse message. Does not implicitly {@link ununifi.irs.MsgWithdrawFromTrancheResponse.verify|verify} messages.
+       * @param message MsgWithdrawFromTrancheResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IMsgWithdrawFromTrancheResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified MsgWithdrawFromTrancheResponse message, length delimited. Does not implicitly {@link ununifi.irs.MsgWithdrawFromTrancheResponse.verify|verify} messages.
+       * @param message MsgWithdrawFromTrancheResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IMsgWithdrawFromTrancheResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a MsgWithdrawFromTrancheResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns MsgWithdrawFromTrancheResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.MsgWithdrawFromTrancheResponse;
+
+      /**
+       * Decodes a MsgWithdrawFromTrancheResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns MsgWithdrawFromTrancheResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.MsgWithdrawFromTrancheResponse;
+
+      /**
+       * Verifies a MsgWithdrawFromTrancheResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a MsgWithdrawFromTrancheResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns MsgWithdrawFromTrancheResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.MsgWithdrawFromTrancheResponse;
+
+      /**
+       * Creates a plain object from a MsgWithdrawFromTrancheResponse message. Also converts values to other types if specified.
+       * @param message MsgWithdrawFromTrancheResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.MsgWithdrawFromTrancheResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this MsgWithdrawFromTrancheResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of an InterestRateSwapVault. */
+    interface IInterestRateSwapVault {
+      /** InterestRateSwapVault strategy_contract */
+      strategy_contract?: string | null;
+
+      /** InterestRateSwapVault name */
+      name?: string | null;
+
+      /** InterestRateSwapVault description */
+      description?: string | null;
+
+      /** InterestRateSwapVault max_maturity */
+      max_maturity?: Long | null;
+
+      /** InterestRateSwapVault cycle */
+      cycle?: Long | null;
+
+      /** InterestRateSwapVault last_tranche_time */
+      last_tranche_time?: Long | null;
+    }
+
+    /** Represents an InterestRateSwapVault. */
+    class InterestRateSwapVault implements IInterestRateSwapVault {
+      /**
+       * Constructs a new InterestRateSwapVault.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IInterestRateSwapVault);
+
+      /** InterestRateSwapVault strategy_contract. */
+      public strategy_contract: string;
+
+      /** InterestRateSwapVault name. */
+      public name: string;
+
+      /** InterestRateSwapVault description. */
+      public description: string;
+
+      /** InterestRateSwapVault max_maturity. */
+      public max_maturity: Long;
+
+      /** InterestRateSwapVault cycle. */
+      public cycle: Long;
+
+      /** InterestRateSwapVault last_tranche_time. */
+      public last_tranche_time: Long;
+
+      /**
+       * Encodes the specified InterestRateSwapVault message. Does not implicitly {@link ununifi.irs.InterestRateSwapVault.verify|verify} messages.
+       * @param message InterestRateSwapVault message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IInterestRateSwapVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified InterestRateSwapVault message, length delimited. Does not implicitly {@link ununifi.irs.InterestRateSwapVault.verify|verify} messages.
+       * @param message InterestRateSwapVault message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IInterestRateSwapVault, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes an InterestRateSwapVault message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns InterestRateSwapVault
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.InterestRateSwapVault;
+
+      /**
+       * Decodes an InterestRateSwapVault message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns InterestRateSwapVault
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.InterestRateSwapVault;
+
+      /**
+       * Verifies an InterestRateSwapVault message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates an InterestRateSwapVault message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns InterestRateSwapVault
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.InterestRateSwapVault;
+
+      /**
+       * Creates a plain object from an InterestRateSwapVault message. Also converts values to other types if specified.
+       * @param message InterestRateSwapVault
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.InterestRateSwapVault, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this InterestRateSwapVault to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a Params. */
+    interface IParams {
+      /** Params authority */
+      authority?: string | null;
+
+      /** Params trade_fee_rate */
+      trade_fee_rate?: string | null;
+    }
+
+    /** Represents a Params. */
+    class Params implements IParams {
+      /**
+       * Constructs a new Params.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IParams);
+
+      /** Params authority. */
+      public authority: string;
+
+      /** Params trade_fee_rate. */
+      public trade_fee_rate: string;
+
+      /**
+       * Encodes the specified Params message. Does not implicitly {@link ununifi.irs.Params.verify|verify} messages.
+       * @param message Params message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.irs.Params.verify|verify} messages.
+       * @param message Params message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IParams, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a Params message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns Params
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.Params;
+
+      /**
+       * Decodes a Params message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns Params
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.Params;
+
+      /**
+       * Verifies a Params message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a Params message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns Params
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.Params;
+
+      /**
+       * Creates a plain object from a Params message. Also converts values to other types if specified.
+       * @param message Params
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.Params, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this Params to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a GenesisState. */
+    interface IGenesisState {
+      /** GenesisState params */
+      params?: ununifi.irs.IParams | null;
+
+      /** GenesisState vaults */
+      vaults?: ununifi.irs.IInterestRateSwapVault[] | null;
+
+      /** GenesisState tranche_pools */
+      tranche_pools?: ununifi.irs.ITranchePool[] | null;
+    }
+
+    /** Represents a GenesisState. */
+    class GenesisState implements IGenesisState {
+      /**
+       * Constructs a new GenesisState.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IGenesisState);
+
+      /** GenesisState params. */
+      public params?: ununifi.irs.IParams | null;
+
+      /** GenesisState vaults. */
+      public vaults: ununifi.irs.IInterestRateSwapVault[];
+
+      /** GenesisState tranche_pools. */
+      public tranche_pools: ununifi.irs.ITranchePool[];
+
+      /**
+       * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.irs.GenesisState.verify|verify} messages.
+       * @param message GenesisState message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.irs.GenesisState.verify|verify} messages.
+       * @param message GenesisState message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IGenesisState, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a GenesisState message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns GenesisState
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.GenesisState;
+
+      /**
+       * Decodes a GenesisState message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns GenesisState
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.GenesisState;
+
+      /**
+       * Verifies a GenesisState message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a GenesisState message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns GenesisState
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.GenesisState;
+
+      /**
+       * Creates a plain object from a GenesisState message. Also converts values to other types if specified.
+       * @param message GenesisState
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.GenesisState, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this GenesisState to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a TranchePool. */
+    interface ITranchePool {
+      /** TranchePool id */
+      id?: Long | null;
+
+      /** TranchePool strategy_contract */
+      strategy_contract?: string | null;
+
+      /** TranchePool start_time */
+      start_time?: Long | null;
+
+      /** TranchePool maturity */
+      maturity?: Long | null;
+
+      /** TranchePool swap_fee */
+      swap_fee?: string | null;
+
+      /** TranchePool exit_fee */
+      exit_fee?: string | null;
+
+      /** TranchePool total_shares */
+      total_shares?: cosmos.base.v1beta1.ICoin | null;
+
+      /** TranchePool pool_assets */
+      pool_assets?: cosmos.base.v1beta1.ICoin[] | null;
+    }
+
+    /** Represents a TranchePool. */
+    class TranchePool implements ITranchePool {
+      /**
+       * Constructs a new TranchePool.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.ITranchePool);
+
+      /** TranchePool id. */
+      public id: Long;
+
+      /** TranchePool strategy_contract. */
+      public strategy_contract: string;
+
+      /** TranchePool start_time. */
+      public start_time: Long;
+
+      /** TranchePool maturity. */
+      public maturity: Long;
+
+      /** TranchePool swap_fee. */
+      public swap_fee: string;
+
+      /** TranchePool exit_fee. */
+      public exit_fee: string;
+
+      /** TranchePool total_shares. */
+      public total_shares?: cosmos.base.v1beta1.ICoin | null;
+
+      /** TranchePool pool_assets. */
+      public pool_assets: cosmos.base.v1beta1.ICoin[];
+
+      /**
+       * Encodes the specified TranchePool message. Does not implicitly {@link ununifi.irs.TranchePool.verify|verify} messages.
+       * @param message TranchePool message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.ITranchePool, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified TranchePool message, length delimited. Does not implicitly {@link ununifi.irs.TranchePool.verify|verify} messages.
+       * @param message TranchePool message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.ITranchePool, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a TranchePool message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns TranchePool
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.TranchePool;
+
+      /**
+       * Decodes a TranchePool message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns TranchePool
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.TranchePool;
+
+      /**
+       * Verifies a TranchePool message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a TranchePool message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns TranchePool
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.TranchePool;
+
+      /**
+       * Creates a plain object from a TranchePool message. Also converts values to other types if specified.
+       * @param message TranchePool
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.TranchePool, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this TranchePool to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Represents a Query */
+    class Query extends $protobuf.rpc.Service {
+      /**
+       * Constructs a new Query service.
+       * @param rpcImpl RPC implementation
+       * @param [requestDelimited=false] Whether requests are length-delimited
+       * @param [responseDelimited=false] Whether responses are length-delimited
+       */
+      constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+      /**
+       * Calls Params.
+       * @param request QueryParamsRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryParamsResponse
+       */
+      public params(request: ununifi.irs.IQueryParamsRequest, callback: ununifi.irs.Query.ParamsCallback): void;
+
+      /**
+       * Calls Params.
+       * @param request QueryParamsRequest message or plain object
+       * @returns Promise
+       */
+      public params(request: ununifi.irs.IQueryParamsRequest): Promise<ununifi.irs.QueryParamsResponse>;
+
+      /**
+       * Calls Vaults.
+       * @param request QueryVaultsRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryVaultsResponse
+       */
+      public vaults(request: ununifi.irs.IQueryVaultsRequest, callback: ununifi.irs.Query.VaultsCallback): void;
+
+      /**
+       * Calls Vaults.
+       * @param request QueryVaultsRequest message or plain object
+       * @returns Promise
+       */
+      public vaults(request: ununifi.irs.IQueryVaultsRequest): Promise<ununifi.irs.QueryVaultsResponse>;
+
+      /**
+       * Calls VaultByContract.
+       * @param request QueryVaultByContractRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryVaultByContractResponse
+       */
+      public vaultByContract(request: ununifi.irs.IQueryVaultByContractRequest, callback: ununifi.irs.Query.VaultByContractCallback): void;
+
+      /**
+       * Calls VaultByContract.
+       * @param request QueryVaultByContractRequest message or plain object
+       * @returns Promise
+       */
+      public vaultByContract(request: ununifi.irs.IQueryVaultByContractRequest): Promise<ununifi.irs.QueryVaultByContractResponse>;
+
+      /**
+       * Calls VaultDetails.
+       * @param request QueryVaultDetailsRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryVaultDetailsResponse
+       */
+      public vaultDetails(request: ununifi.irs.IQueryVaultDetailsRequest, callback: ununifi.irs.Query.VaultDetailsCallback): void;
+
+      /**
+       * Calls VaultDetails.
+       * @param request QueryVaultDetailsRequest message or plain object
+       * @returns Promise
+       */
+      public vaultDetails(request: ununifi.irs.IQueryVaultDetailsRequest): Promise<ununifi.irs.QueryVaultDetailsResponse>;
+
+      /**
+       * Calls AllTranches.
+       * @param request QueryAllTranchesRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryTranchesResponse
+       */
+      public allTranches(request: ununifi.irs.IQueryAllTranchesRequest, callback: ununifi.irs.Query.AllTranchesCallback): void;
+
+      /**
+       * Calls AllTranches.
+       * @param request QueryAllTranchesRequest message or plain object
+       * @returns Promise
+       */
+      public allTranches(request: ununifi.irs.IQueryAllTranchesRequest): Promise<ununifi.irs.QueryTranchesResponse>;
+
+      /**
+       * Calls Tranches.
+       * @param request QueryTranchesRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryTranchesResponse
+       */
+      public tranches(request: ununifi.irs.IQueryTranchesRequest, callback: ununifi.irs.Query.TranchesCallback): void;
+
+      /**
+       * Calls Tranches.
+       * @param request QueryTranchesRequest message or plain object
+       * @returns Promise
+       */
+      public tranches(request: ununifi.irs.IQueryTranchesRequest): Promise<ununifi.irs.QueryTranchesResponse>;
+
+      /**
+       * Calls Tranche.
+       * @param request QueryTrancheRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryTrancheResponse
+       */
+      public tranche(request: ununifi.irs.IQueryTrancheRequest, callback: ununifi.irs.Query.TrancheCallback): void;
+
+      /**
+       * Calls Tranche.
+       * @param request QueryTrancheRequest message or plain object
+       * @returns Promise
+       */
+      public tranche(request: ununifi.irs.IQueryTrancheRequest): Promise<ununifi.irs.QueryTrancheResponse>;
+
+      /**
+       * Calls EstimateSwapInPool.
+       * @param request QueryEstimateSwapInPoolRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryEstimateSwapInPoolResponse
+       */
+      public estimateSwapInPool(
+        request: ununifi.irs.IQueryEstimateSwapInPoolRequest,
+        callback: ununifi.irs.Query.EstimateSwapInPoolCallback,
+      ): void;
+
+      /**
+       * Calls EstimateSwapInPool.
+       * @param request QueryEstimateSwapInPoolRequest message or plain object
+       * @returns Promise
+       */
+      public estimateSwapInPool(request: ununifi.irs.IQueryEstimateSwapInPoolRequest): Promise<ununifi.irs.QueryEstimateSwapInPoolResponse>;
+
+      /**
+       * Calls EstimateMintPtYtPair.
+       * @param request QueryEstimateMintPtYtPairRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryEstimateMintPtYtPairResponse
+       */
+      public estimateMintPtYtPair(
+        request: ununifi.irs.IQueryEstimateMintPtYtPairRequest,
+        callback: ununifi.irs.Query.EstimateMintPtYtPairCallback,
+      ): void;
+
+      /**
+       * Calls EstimateMintPtYtPair.
+       * @param request QueryEstimateMintPtYtPairRequest message or plain object
+       * @returns Promise
+       */
+      public estimateMintPtYtPair(
+        request: ununifi.irs.IQueryEstimateMintPtYtPairRequest,
+      ): Promise<ununifi.irs.QueryEstimateMintPtYtPairResponse>;
+
+      /**
+       * Calls EstimateRedeemYt.
+       * @param request QueryEstimateRedeemYtRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryEstimateRedeemYtResponse
+       */
+      public estimateRedeemYt(
+        request: ununifi.irs.IQueryEstimateRedeemYtRequest,
+        callback: ununifi.irs.Query.EstimateRedeemYtCallback,
+      ): void;
+
+      /**
+       * Calls EstimateRedeemYt.
+       * @param request QueryEstimateRedeemYtRequest message or plain object
+       * @returns Promise
+       */
+      public estimateRedeemYt(request: ununifi.irs.IQueryEstimateRedeemYtRequest): Promise<ununifi.irs.QueryEstimateRedeemYtResponse>;
+    }
+
+    namespace Query {
+      /**
+       * Callback as used by {@link ununifi.irs.Query#params}.
+       * @param error Error, if any
+       * @param [response] QueryParamsResponse
+       */
+      type ParamsCallback = (error: Error | null, response?: ununifi.irs.QueryParamsResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#vaults}.
+       * @param error Error, if any
+       * @param [response] QueryVaultsResponse
+       */
+      type VaultsCallback = (error: Error | null, response?: ununifi.irs.QueryVaultsResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#vaultByContract}.
+       * @param error Error, if any
+       * @param [response] QueryVaultByContractResponse
+       */
+      type VaultByContractCallback = (error: Error | null, response?: ununifi.irs.QueryVaultByContractResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#vaultDetails}.
+       * @param error Error, if any
+       * @param [response] QueryVaultDetailsResponse
+       */
+      type VaultDetailsCallback = (error: Error | null, response?: ununifi.irs.QueryVaultDetailsResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#allTranches}.
+       * @param error Error, if any
+       * @param [response] QueryTranchesResponse
+       */
+      type AllTranchesCallback = (error: Error | null, response?: ununifi.irs.QueryTranchesResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#tranches}.
+       * @param error Error, if any
+       * @param [response] QueryTranchesResponse
+       */
+      type TranchesCallback = (error: Error | null, response?: ununifi.irs.QueryTranchesResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#tranche}.
+       * @param error Error, if any
+       * @param [response] QueryTrancheResponse
+       */
+      type TrancheCallback = (error: Error | null, response?: ununifi.irs.QueryTrancheResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#estimateSwapInPool}.
+       * @param error Error, if any
+       * @param [response] QueryEstimateSwapInPoolResponse
+       */
+      type EstimateSwapInPoolCallback = (error: Error | null, response?: ununifi.irs.QueryEstimateSwapInPoolResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#estimateMintPtYtPair}.
+       * @param error Error, if any
+       * @param [response] QueryEstimateMintPtYtPairResponse
+       */
+      type EstimateMintPtYtPairCallback = (error: Error | null, response?: ununifi.irs.QueryEstimateMintPtYtPairResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#estimateRedeemYt}.
+       * @param error Error, if any
+       * @param [response] QueryEstimateRedeemYtResponse
+       */
+      type EstimateRedeemYtCallback = (error: Error | null, response?: ununifi.irs.QueryEstimateRedeemYtResponse) => void;
+    }
+
+    /** Properties of a QueryParamsRequest. */
+    interface IQueryParamsRequest {}
+
+    /** Represents a QueryParamsRequest. */
+    class QueryParamsRequest implements IQueryParamsRequest {
+      /**
+       * Constructs a new QueryParamsRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryParamsRequest);
+
+      /**
+       * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.irs.QueryParamsRequest.verify|verify} messages.
+       * @param message QueryParamsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryParamsRequest.verify|verify} messages.
+       * @param message QueryParamsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryParamsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryParamsRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryParamsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryParamsRequest;
+
+      /**
+       * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryParamsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryParamsRequest;
+
+      /**
+       * Verifies a QueryParamsRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryParamsRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryParamsRequest;
+
+      /**
+       * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
+       * @param message QueryParamsRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryParamsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryParamsRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryParamsResponse. */
+    interface IQueryParamsResponse {
+      /** QueryParamsResponse params */
+      params?: ununifi.irs.IParams | null;
+    }
+
+    /** Represents a QueryParamsResponse. */
+    class QueryParamsResponse implements IQueryParamsResponse {
+      /**
+       * Constructs a new QueryParamsResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryParamsResponse);
+
+      /** QueryParamsResponse params. */
+      public params?: ununifi.irs.IParams | null;
+
+      /**
+       * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.irs.QueryParamsResponse.verify|verify} messages.
+       * @param message QueryParamsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryParamsResponse.verify|verify} messages.
+       * @param message QueryParamsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryParamsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryParamsResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryParamsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryParamsResponse;
+
+      /**
+       * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryParamsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryParamsResponse;
+
+      /**
+       * Verifies a QueryParamsResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryParamsResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryParamsResponse;
+
+      /**
+       * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
+       * @param message QueryParamsResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryParamsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryParamsResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryVaultsRequest. */
+    interface IQueryVaultsRequest {}
+
+    /** Represents a QueryVaultsRequest. */
+    class QueryVaultsRequest implements IQueryVaultsRequest {
+      /**
+       * Constructs a new QueryVaultsRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryVaultsRequest);
+
+      /**
+       * Encodes the specified QueryVaultsRequest message. Does not implicitly {@link ununifi.irs.QueryVaultsRequest.verify|verify} messages.
+       * @param message QueryVaultsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryVaultsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryVaultsRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryVaultsRequest.verify|verify} messages.
+       * @param message QueryVaultsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryVaultsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryVaultsRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryVaultsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryVaultsRequest;
+
+      /**
+       * Decodes a QueryVaultsRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryVaultsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryVaultsRequest;
+
+      /**
+       * Verifies a QueryVaultsRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryVaultsRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryVaultsRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryVaultsRequest;
+
+      /**
+       * Creates a plain object from a QueryVaultsRequest message. Also converts values to other types if specified.
+       * @param message QueryVaultsRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryVaultsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryVaultsRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryVaultsResponse. */
+    interface IQueryVaultsResponse {
+      /** QueryVaultsResponse vaults */
+      vaults?: ununifi.irs.IInterestRateSwapVault[] | null;
+    }
+
+    /** Represents a QueryVaultsResponse. */
+    class QueryVaultsResponse implements IQueryVaultsResponse {
+      /**
+       * Constructs a new QueryVaultsResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryVaultsResponse);
+
+      /** QueryVaultsResponse vaults. */
+      public vaults: ununifi.irs.IInterestRateSwapVault[];
+
+      /**
+       * Encodes the specified QueryVaultsResponse message. Does not implicitly {@link ununifi.irs.QueryVaultsResponse.verify|verify} messages.
+       * @param message QueryVaultsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryVaultsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryVaultsResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryVaultsResponse.verify|verify} messages.
+       * @param message QueryVaultsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryVaultsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryVaultsResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryVaultsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryVaultsResponse;
+
+      /**
+       * Decodes a QueryVaultsResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryVaultsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryVaultsResponse;
+
+      /**
+       * Verifies a QueryVaultsResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryVaultsResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryVaultsResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryVaultsResponse;
+
+      /**
+       * Creates a plain object from a QueryVaultsResponse message. Also converts values to other types if specified.
+       * @param message QueryVaultsResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryVaultsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryVaultsResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryVaultByContractRequest. */
+    interface IQueryVaultByContractRequest {
+      /** QueryVaultByContractRequest strategy_contract */
+      strategy_contract?: string | null;
+    }
+
+    /** Represents a QueryVaultByContractRequest. */
+    class QueryVaultByContractRequest implements IQueryVaultByContractRequest {
+      /**
+       * Constructs a new QueryVaultByContractRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryVaultByContractRequest);
+
+      /** QueryVaultByContractRequest strategy_contract. */
+      public strategy_contract: string;
+
+      /**
+       * Encodes the specified QueryVaultByContractRequest message. Does not implicitly {@link ununifi.irs.QueryVaultByContractRequest.verify|verify} messages.
+       * @param message QueryVaultByContractRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryVaultByContractRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryVaultByContractRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryVaultByContractRequest.verify|verify} messages.
+       * @param message QueryVaultByContractRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryVaultByContractRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryVaultByContractRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryVaultByContractRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryVaultByContractRequest;
+
+      /**
+       * Decodes a QueryVaultByContractRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryVaultByContractRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryVaultByContractRequest;
+
+      /**
+       * Verifies a QueryVaultByContractRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryVaultByContractRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryVaultByContractRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryVaultByContractRequest;
+
+      /**
+       * Creates a plain object from a QueryVaultByContractRequest message. Also converts values to other types if specified.
+       * @param message QueryVaultByContractRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryVaultByContractRequest,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryVaultByContractRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryVaultByContractResponse. */
+    interface IQueryVaultByContractResponse {
+      /** QueryVaultByContractResponse vault */
+      vault?: ununifi.irs.IInterestRateSwapVault | null;
+    }
+
+    /** Represents a QueryVaultByContractResponse. */
+    class QueryVaultByContractResponse implements IQueryVaultByContractResponse {
+      /**
+       * Constructs a new QueryVaultByContractResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryVaultByContractResponse);
+
+      /** QueryVaultByContractResponse vault. */
+      public vault?: ununifi.irs.IInterestRateSwapVault | null;
+
+      /**
+       * Encodes the specified QueryVaultByContractResponse message. Does not implicitly {@link ununifi.irs.QueryVaultByContractResponse.verify|verify} messages.
+       * @param message QueryVaultByContractResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryVaultByContractResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryVaultByContractResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryVaultByContractResponse.verify|verify} messages.
+       * @param message QueryVaultByContractResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryVaultByContractResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryVaultByContractResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryVaultByContractResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryVaultByContractResponse;
+
+      /**
+       * Decodes a QueryVaultByContractResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryVaultByContractResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryVaultByContractResponse;
+
+      /**
+       * Verifies a QueryVaultByContractResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryVaultByContractResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryVaultByContractResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryVaultByContractResponse;
+
+      /**
+       * Creates a plain object from a QueryVaultByContractResponse message. Also converts values to other types if specified.
+       * @param message QueryVaultByContractResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryVaultByContractResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryVaultByContractResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryVaultDetailsRequest. */
+    interface IQueryVaultDetailsRequest {
+      /** QueryVaultDetailsRequest strategy_contract */
+      strategy_contract?: string | null;
+
+      /** QueryVaultDetailsRequest maturity */
+      maturity?: string | null;
+    }
+
+    /** Represents a QueryVaultDetailsRequest. */
+    class QueryVaultDetailsRequest implements IQueryVaultDetailsRequest {
+      /**
+       * Constructs a new QueryVaultDetailsRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryVaultDetailsRequest);
+
+      /** QueryVaultDetailsRequest strategy_contract. */
+      public strategy_contract: string;
+
+      /** QueryVaultDetailsRequest maturity. */
+      public maturity: string;
+
+      /**
+       * Encodes the specified QueryVaultDetailsRequest message. Does not implicitly {@link ununifi.irs.QueryVaultDetailsRequest.verify|verify} messages.
+       * @param message QueryVaultDetailsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryVaultDetailsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryVaultDetailsRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryVaultDetailsRequest.verify|verify} messages.
+       * @param message QueryVaultDetailsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryVaultDetailsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryVaultDetailsRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryVaultDetailsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryVaultDetailsRequest;
+
+      /**
+       * Decodes a QueryVaultDetailsRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryVaultDetailsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryVaultDetailsRequest;
+
+      /**
+       * Verifies a QueryVaultDetailsRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryVaultDetailsRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryVaultDetailsRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryVaultDetailsRequest;
+
+      /**
+       * Creates a plain object from a QueryVaultDetailsRequest message. Also converts values to other types if specified.
+       * @param message QueryVaultDetailsRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryVaultDetailsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryVaultDetailsRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryVaultDetailsResponse. */
+    interface IQueryVaultDetailsResponse {
+      /** QueryVaultDetailsResponse liquidity_pool */
+      liquidity_pool?: string | null;
+
+      /** QueryVaultDetailsResponse fy_rate */
+      fy_rate?: string | null;
+
+      /** QueryVaultDetailsResponse lvy_rate */
+      lvy_rate?: string | null;
+    }
+
+    /** Represents a QueryVaultDetailsResponse. */
+    class QueryVaultDetailsResponse implements IQueryVaultDetailsResponse {
+      /**
+       * Constructs a new QueryVaultDetailsResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryVaultDetailsResponse);
+
+      /** QueryVaultDetailsResponse liquidity_pool. */
+      public liquidity_pool: string;
+
+      /** QueryVaultDetailsResponse fy_rate. */
+      public fy_rate: string;
+
+      /** QueryVaultDetailsResponse lvy_rate. */
+      public lvy_rate: string;
+
+      /**
+       * Encodes the specified QueryVaultDetailsResponse message. Does not implicitly {@link ununifi.irs.QueryVaultDetailsResponse.verify|verify} messages.
+       * @param message QueryVaultDetailsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryVaultDetailsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryVaultDetailsResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryVaultDetailsResponse.verify|verify} messages.
+       * @param message QueryVaultDetailsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryVaultDetailsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryVaultDetailsResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryVaultDetailsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryVaultDetailsResponse;
+
+      /**
+       * Decodes a QueryVaultDetailsResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryVaultDetailsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryVaultDetailsResponse;
+
+      /**
+       * Verifies a QueryVaultDetailsResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryVaultDetailsResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryVaultDetailsResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryVaultDetailsResponse;
+
+      /**
+       * Creates a plain object from a QueryVaultDetailsResponse message. Also converts values to other types if specified.
+       * @param message QueryVaultDetailsResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryVaultDetailsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryVaultDetailsResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryAllTranchesRequest. */
+    interface IQueryAllTranchesRequest {}
+
+    /** Represents a QueryAllTranchesRequest. */
+    class QueryAllTranchesRequest implements IQueryAllTranchesRequest {
+      /**
+       * Constructs a new QueryAllTranchesRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryAllTranchesRequest);
+
+      /**
+       * Encodes the specified QueryAllTranchesRequest message. Does not implicitly {@link ununifi.irs.QueryAllTranchesRequest.verify|verify} messages.
+       * @param message QueryAllTranchesRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryAllTranchesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryAllTranchesRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryAllTranchesRequest.verify|verify} messages.
+       * @param message QueryAllTranchesRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryAllTranchesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryAllTranchesRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryAllTranchesRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryAllTranchesRequest;
+
+      /**
+       * Decodes a QueryAllTranchesRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryAllTranchesRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryAllTranchesRequest;
+
+      /**
+       * Verifies a QueryAllTranchesRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryAllTranchesRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryAllTranchesRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryAllTranchesRequest;
+
+      /**
+       * Creates a plain object from a QueryAllTranchesRequest message. Also converts values to other types if specified.
+       * @param message QueryAllTranchesRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryAllTranchesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryAllTranchesRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryTranchesRequest. */
+    interface IQueryTranchesRequest {
+      /** QueryTranchesRequest strategy_contract */
+      strategy_contract?: string | null;
+    }
+
+    /** Represents a QueryTranchesRequest. */
+    class QueryTranchesRequest implements IQueryTranchesRequest {
+      /**
+       * Constructs a new QueryTranchesRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryTranchesRequest);
+
+      /** QueryTranchesRequest strategy_contract. */
+      public strategy_contract: string;
+
+      /**
+       * Encodes the specified QueryTranchesRequest message. Does not implicitly {@link ununifi.irs.QueryTranchesRequest.verify|verify} messages.
+       * @param message QueryTranchesRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryTranchesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryTranchesRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryTranchesRequest.verify|verify} messages.
+       * @param message QueryTranchesRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryTranchesRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryTranchesRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryTranchesRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryTranchesRequest;
+
+      /**
+       * Decodes a QueryTranchesRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryTranchesRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryTranchesRequest;
+
+      /**
+       * Verifies a QueryTranchesRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryTranchesRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryTranchesRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryTranchesRequest;
+
+      /**
+       * Creates a plain object from a QueryTranchesRequest message. Also converts values to other types if specified.
+       * @param message QueryTranchesRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryTranchesRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryTranchesRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryTranchesResponse. */
+    interface IQueryTranchesResponse {
+      /** QueryTranchesResponse tranches */
+      tranches?: ununifi.irs.ITranchePool[] | null;
+    }
+
+    /** Represents a QueryTranchesResponse. */
+    class QueryTranchesResponse implements IQueryTranchesResponse {
+      /**
+       * Constructs a new QueryTranchesResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryTranchesResponse);
+
+      /** QueryTranchesResponse tranches. */
+      public tranches: ununifi.irs.ITranchePool[];
+
+      /**
+       * Encodes the specified QueryTranchesResponse message. Does not implicitly {@link ununifi.irs.QueryTranchesResponse.verify|verify} messages.
+       * @param message QueryTranchesResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryTranchesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryTranchesResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryTranchesResponse.verify|verify} messages.
+       * @param message QueryTranchesResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryTranchesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryTranchesResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryTranchesResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryTranchesResponse;
+
+      /**
+       * Decodes a QueryTranchesResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryTranchesResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryTranchesResponse;
+
+      /**
+       * Verifies a QueryTranchesResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryTranchesResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryTranchesResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryTranchesResponse;
+
+      /**
+       * Creates a plain object from a QueryTranchesResponse message. Also converts values to other types if specified.
+       * @param message QueryTranchesResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryTranchesResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryTranchesResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryTrancheRequest. */
+    interface IQueryTrancheRequest {
+      /** QueryTrancheRequest id */
+      id?: Long | null;
+    }
+
+    /** Represents a QueryTrancheRequest. */
+    class QueryTrancheRequest implements IQueryTrancheRequest {
+      /**
+       * Constructs a new QueryTrancheRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryTrancheRequest);
+
+      /** QueryTrancheRequest id. */
+      public id: Long;
+
+      /**
+       * Encodes the specified QueryTrancheRequest message. Does not implicitly {@link ununifi.irs.QueryTrancheRequest.verify|verify} messages.
+       * @param message QueryTrancheRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryTrancheRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryTrancheRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryTrancheRequest.verify|verify} messages.
+       * @param message QueryTrancheRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryTrancheRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryTrancheRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryTrancheRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryTrancheRequest;
+
+      /**
+       * Decodes a QueryTrancheRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryTrancheRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryTrancheRequest;
+
+      /**
+       * Verifies a QueryTrancheRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryTrancheRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryTrancheRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryTrancheRequest;
+
+      /**
+       * Creates a plain object from a QueryTrancheRequest message. Also converts values to other types if specified.
+       * @param message QueryTrancheRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryTrancheRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryTrancheRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryTrancheResponse. */
+    interface IQueryTrancheResponse {
+      /** QueryTrancheResponse tranche */
+      tranche?: ununifi.irs.ITranchePool | null;
+    }
+
+    /** Represents a QueryTrancheResponse. */
+    class QueryTrancheResponse implements IQueryTrancheResponse {
+      /**
+       * Constructs a new QueryTrancheResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryTrancheResponse);
+
+      /** QueryTrancheResponse tranche. */
+      public tranche?: ununifi.irs.ITranchePool | null;
+
+      /**
+       * Encodes the specified QueryTrancheResponse message. Does not implicitly {@link ununifi.irs.QueryTrancheResponse.verify|verify} messages.
+       * @param message QueryTrancheResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryTrancheResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryTrancheResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryTrancheResponse.verify|verify} messages.
+       * @param message QueryTrancheResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryTrancheResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryTrancheResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryTrancheResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryTrancheResponse;
+
+      /**
+       * Decodes a QueryTrancheResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryTrancheResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryTrancheResponse;
+
+      /**
+       * Verifies a QueryTrancheResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryTrancheResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryTrancheResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryTrancheResponse;
+
+      /**
+       * Creates a plain object from a QueryTrancheResponse message. Also converts values to other types if specified.
+       * @param message QueryTrancheResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryTrancheResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryTrancheResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryEstimateSwapInPoolRequest. */
+    interface IQueryEstimateSwapInPoolRequest {
+      /** QueryEstimateSwapInPoolRequest pool_id */
+      pool_id?: Long | null;
+
+      /** QueryEstimateSwapInPoolRequest amount */
+      amount?: cosmos.base.v1beta1.ICoin | null;
+    }
+
+    /** Represents a QueryEstimateSwapInPoolRequest. */
+    class QueryEstimateSwapInPoolRequest implements IQueryEstimateSwapInPoolRequest {
+      /**
+       * Constructs a new QueryEstimateSwapInPoolRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryEstimateSwapInPoolRequest);
+
+      /** QueryEstimateSwapInPoolRequest pool_id. */
+      public pool_id: Long;
+
+      /** QueryEstimateSwapInPoolRequest amount. */
+      public amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /**
+       * Encodes the specified QueryEstimateSwapInPoolRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateSwapInPoolRequest.verify|verify} messages.
+       * @param message QueryEstimateSwapInPoolRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryEstimateSwapInPoolRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryEstimateSwapInPoolRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateSwapInPoolRequest.verify|verify} messages.
+       * @param message QueryEstimateSwapInPoolRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryEstimateSwapInPoolRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryEstimateSwapInPoolRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryEstimateSwapInPoolRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryEstimateSwapInPoolRequest;
+
+      /**
+       * Decodes a QueryEstimateSwapInPoolRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryEstimateSwapInPoolRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateSwapInPoolRequest;
+
+      /**
+       * Verifies a QueryEstimateSwapInPoolRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryEstimateSwapInPoolRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryEstimateSwapInPoolRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateSwapInPoolRequest;
+
+      /**
+       * Creates a plain object from a QueryEstimateSwapInPoolRequest message. Also converts values to other types if specified.
+       * @param message QueryEstimateSwapInPoolRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryEstimateSwapInPoolRequest,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryEstimateSwapInPoolRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryEstimateSwapInPoolResponse. */
+    interface IQueryEstimateSwapInPoolResponse {
+      /** QueryEstimateSwapInPoolResponse amount */
+      amount?: cosmos.base.v1beta1.ICoin | null;
+    }
+
+    /** Represents a QueryEstimateSwapInPoolResponse. */
+    class QueryEstimateSwapInPoolResponse implements IQueryEstimateSwapInPoolResponse {
+      /**
+       * Constructs a new QueryEstimateSwapInPoolResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryEstimateSwapInPoolResponse);
+
+      /** QueryEstimateSwapInPoolResponse amount. */
+      public amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /**
+       * Encodes the specified QueryEstimateSwapInPoolResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateSwapInPoolResponse.verify|verify} messages.
+       * @param message QueryEstimateSwapInPoolResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryEstimateSwapInPoolResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryEstimateSwapInPoolResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateSwapInPoolResponse.verify|verify} messages.
+       * @param message QueryEstimateSwapInPoolResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryEstimateSwapInPoolResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryEstimateSwapInPoolResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryEstimateSwapInPoolResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryEstimateSwapInPoolResponse;
+
+      /**
+       * Decodes a QueryEstimateSwapInPoolResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryEstimateSwapInPoolResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateSwapInPoolResponse;
+
+      /**
+       * Verifies a QueryEstimateSwapInPoolResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryEstimateSwapInPoolResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryEstimateSwapInPoolResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateSwapInPoolResponse;
+
+      /**
+       * Creates a plain object from a QueryEstimateSwapInPoolResponse message. Also converts values to other types if specified.
+       * @param message QueryEstimateSwapInPoolResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryEstimateSwapInPoolResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryEstimateSwapInPoolResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryEstimateMintPtYtPairRequest. */
+    interface IQueryEstimateMintPtYtPairRequest {
+      /** QueryEstimateMintPtYtPairRequest pool_id */
+      pool_id?: Long | null;
+
+      /** QueryEstimateMintPtYtPairRequest amount */
+      amount?: cosmos.base.v1beta1.ICoin | null;
+    }
+
+    /** Represents a QueryEstimateMintPtYtPairRequest. */
+    class QueryEstimateMintPtYtPairRequest implements IQueryEstimateMintPtYtPairRequest {
+      /**
+       * Constructs a new QueryEstimateMintPtYtPairRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryEstimateMintPtYtPairRequest);
+
+      /** QueryEstimateMintPtYtPairRequest pool_id. */
+      public pool_id: Long;
+
+      /** QueryEstimateMintPtYtPairRequest amount. */
+      public amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /**
+       * Encodes the specified QueryEstimateMintPtYtPairRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateMintPtYtPairRequest.verify|verify} messages.
+       * @param message QueryEstimateMintPtYtPairRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryEstimateMintPtYtPairRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryEstimateMintPtYtPairRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateMintPtYtPairRequest.verify|verify} messages.
+       * @param message QueryEstimateMintPtYtPairRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryEstimateMintPtYtPairRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryEstimateMintPtYtPairRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryEstimateMintPtYtPairRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryEstimateMintPtYtPairRequest;
+
+      /**
+       * Decodes a QueryEstimateMintPtYtPairRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryEstimateMintPtYtPairRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateMintPtYtPairRequest;
+
+      /**
+       * Verifies a QueryEstimateMintPtYtPairRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryEstimateMintPtYtPairRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryEstimateMintPtYtPairRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateMintPtYtPairRequest;
+
+      /**
+       * Creates a plain object from a QueryEstimateMintPtYtPairRequest message. Also converts values to other types if specified.
+       * @param message QueryEstimateMintPtYtPairRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryEstimateMintPtYtPairRequest,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryEstimateMintPtYtPairRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryEstimateMintPtYtPairResponse. */
+    interface IQueryEstimateMintPtYtPairResponse {
+      /** QueryEstimateMintPtYtPairResponse pt_amount */
+      pt_amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /** QueryEstimateMintPtYtPairResponse yt_amount */
+      yt_amount?: cosmos.base.v1beta1.ICoin | null;
+    }
+
+    /** Represents a QueryEstimateMintPtYtPairResponse. */
+    class QueryEstimateMintPtYtPairResponse implements IQueryEstimateMintPtYtPairResponse {
+      /**
+       * Constructs a new QueryEstimateMintPtYtPairResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryEstimateMintPtYtPairResponse);
+
+      /** QueryEstimateMintPtYtPairResponse pt_amount. */
+      public pt_amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /** QueryEstimateMintPtYtPairResponse yt_amount. */
+      public yt_amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /**
+       * Encodes the specified QueryEstimateMintPtYtPairResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateMintPtYtPairResponse.verify|verify} messages.
+       * @param message QueryEstimateMintPtYtPairResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryEstimateMintPtYtPairResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryEstimateMintPtYtPairResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateMintPtYtPairResponse.verify|verify} messages.
+       * @param message QueryEstimateMintPtYtPairResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryEstimateMintPtYtPairResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryEstimateMintPtYtPairResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryEstimateMintPtYtPairResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryEstimateMintPtYtPairResponse;
+
+      /**
+       * Decodes a QueryEstimateMintPtYtPairResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryEstimateMintPtYtPairResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateMintPtYtPairResponse;
+
+      /**
+       * Verifies a QueryEstimateMintPtYtPairResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryEstimateMintPtYtPairResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryEstimateMintPtYtPairResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateMintPtYtPairResponse;
+
+      /**
+       * Creates a plain object from a QueryEstimateMintPtYtPairResponse message. Also converts values to other types if specified.
+       * @param message QueryEstimateMintPtYtPairResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryEstimateMintPtYtPairResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryEstimateMintPtYtPairResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryEstimateRedeemYtRequest. */
+    interface IQueryEstimateRedeemYtRequest {
+      /** QueryEstimateRedeemYtRequest pool_id */
+      pool_id?: Long | null;
+
+      /** QueryEstimateRedeemYtRequest amount */
+      amount?: cosmos.base.v1beta1.ICoin | null;
+    }
+
+    /** Represents a QueryEstimateRedeemYtRequest. */
+    class QueryEstimateRedeemYtRequest implements IQueryEstimateRedeemYtRequest {
+      /**
+       * Constructs a new QueryEstimateRedeemYtRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryEstimateRedeemYtRequest);
+
+      /** QueryEstimateRedeemYtRequest pool_id. */
+      public pool_id: Long;
+
+      /** QueryEstimateRedeemYtRequest amount. */
+      public amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /**
+       * Encodes the specified QueryEstimateRedeemYtRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtRequest.verify|verify} messages.
+       * @param message QueryEstimateRedeemYtRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryEstimateRedeemYtRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryEstimateRedeemYtRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtRequest.verify|verify} messages.
+       * @param message QueryEstimateRedeemYtRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryEstimateRedeemYtRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryEstimateRedeemYtRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryEstimateRedeemYtRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryEstimateRedeemYtRequest;
+
+      /**
+       * Decodes a QueryEstimateRedeemYtRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryEstimateRedeemYtRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateRedeemYtRequest;
+
+      /**
+       * Verifies a QueryEstimateRedeemYtRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryEstimateRedeemYtRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryEstimateRedeemYtRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateRedeemYtRequest;
+
+      /**
+       * Creates a plain object from a QueryEstimateRedeemYtRequest message. Also converts values to other types if specified.
+       * @param message QueryEstimateRedeemYtRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryEstimateRedeemYtRequest,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryEstimateRedeemYtRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryEstimateRedeemYtResponse. */
+    interface IQueryEstimateRedeemYtResponse {
+      /** QueryEstimateRedeemYtResponse amount */
+      amount?: cosmos.base.v1beta1.ICoin | null;
+    }
+
+    /** Represents a QueryEstimateRedeemYtResponse. */
+    class QueryEstimateRedeemYtResponse implements IQueryEstimateRedeemYtResponse {
+      /**
+       * Constructs a new QueryEstimateRedeemYtResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryEstimateRedeemYtResponse);
+
+      /** QueryEstimateRedeemYtResponse amount. */
+      public amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /**
+       * Encodes the specified QueryEstimateRedeemYtResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtResponse.verify|verify} messages.
+       * @param message QueryEstimateRedeemYtResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryEstimateRedeemYtResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryEstimateRedeemYtResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtResponse.verify|verify} messages.
+       * @param message QueryEstimateRedeemYtResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryEstimateRedeemYtResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryEstimateRedeemYtResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryEstimateRedeemYtResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryEstimateRedeemYtResponse;
+
+      /**
+       * Decodes a QueryEstimateRedeemYtResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryEstimateRedeemYtResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateRedeemYtResponse;
+
+      /**
+       * Verifies a QueryEstimateRedeemYtResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryEstimateRedeemYtResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryEstimateRedeemYtResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateRedeemYtResponse;
+
+      /**
+       * Creates a plain object from a QueryEstimateRedeemYtResponse message. Also converts values to other types if specified.
+       * @param message QueryEstimateRedeemYtResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryEstimateRedeemYtResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryEstimateRedeemYtResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+  }
+
   /** Namespace nft. */
   namespace nft {
     /** Properties of a ClassData. */
@@ -30549,9 +34018,6 @@ export namespace ununifi {
 
       /** StrategyContainer performance_fee_rate */
       performance_fee_rate?: string | null;
-
-      /** StrategyContainer symbol */
-      symbol?: string | null;
     }
 
     /** Represents a StrategyContainer. */
@@ -30573,9 +34039,6 @@ export namespace ununifi {
 
       /** StrategyContainer performance_fee_rate. */
       public performance_fee_rate: string;
-
-      /** StrategyContainer symbol. */
-      public symbol: string;
 
       /**
        * Encodes the specified StrategyContainer message. Does not implicitly {@link ununifi.yieldaggregator.StrategyContainer.verify|verify} messages.
@@ -31020,9 +34483,6 @@ export namespace ununifi {
 
       /** QueryEstimateRedeemAmountResponse total_amount */
       total_amount?: string | null;
-
-      /** QueryEstimateRedeemAmountResponse symbol */
-      symbol?: string | null;
     }
 
     /** Represents a QueryEstimateRedeemAmountResponse. */
@@ -31044,9 +34504,6 @@ export namespace ununifi {
 
       /** QueryEstimateRedeemAmountResponse total_amount. */
       public total_amount: string;
-
-      /** QueryEstimateRedeemAmountResponse symbol. */
-      public symbol: string;
 
       /**
        * Encodes the specified QueryEstimateRedeemAmountResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse.verify|verify} messages.

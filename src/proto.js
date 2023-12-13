@@ -23791,6 +23791,7724 @@ export const ununifi = ($root.ununifi = (() => {
     return epochs;
   })();
 
+  ununifi.irs = (function () {
+    /**
+     * Namespace irs.
+     * @memberof ununifi
+     * @namespace
+     */
+    const irs = {};
+
+    irs.Msg = (function () {
+      /**
+       * Constructs a new Msg service.
+       * @memberof ununifi.irs
+       * @classdesc Represents a Msg
+       * @extends $protobuf.rpc.Service
+       * @constructor
+       * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+       * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+       * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+       */
+      function Msg(rpcImpl, requestDelimited, responseDelimited) {
+        $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+      }
+
+      (Msg.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Msg;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Msg#updateParams}.
+       * @memberof ununifi.irs.Msg
+       * @typedef UpdateParamsCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.MsgUpdateParamsResponse} [response] MsgUpdateParamsResponse
+       */
+
+      /**
+       * Calls UpdateParams.
+       * @function updateParams
+       * @memberof ununifi.irs.Msg
+       * @instance
+       * @param {ununifi.irs.IMsgUpdateParams} request MsgUpdateParams message or plain object
+       * @param {ununifi.irs.Msg.UpdateParamsCallback} callback Node-style callback called with the error, if any, and MsgUpdateParamsResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Msg.prototype.updateParams = function updateParams(request, callback) {
+          return this.rpcCall(
+            updateParams,
+            $root.ununifi.irs.MsgUpdateParams,
+            $root.ununifi.irs.MsgUpdateParamsResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'UpdateParams' },
+      );
+
+      /**
+       * Calls UpdateParams.
+       * @function updateParams
+       * @memberof ununifi.irs.Msg
+       * @instance
+       * @param {ununifi.irs.IMsgUpdateParams} request MsgUpdateParams message or plain object
+       * @returns {Promise<ununifi.irs.MsgUpdateParamsResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Msg#registerInterestRateSwapVault}.
+       * @memberof ununifi.irs.Msg
+       * @typedef RegisterInterestRateSwapVaultCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.MsgRegisterInterestRateSwapVaultResponse} [response] MsgRegisterInterestRateSwapVaultResponse
+       */
+
+      /**
+       * Calls RegisterInterestRateSwapVault.
+       * @function registerInterestRateSwapVault
+       * @memberof ununifi.irs.Msg
+       * @instance
+       * @param {ununifi.irs.IMsgRegisterInterestRateSwapVault} request MsgRegisterInterestRateSwapVault message or plain object
+       * @param {ununifi.irs.Msg.RegisterInterestRateSwapVaultCallback} callback Node-style callback called with the error, if any, and MsgRegisterInterestRateSwapVaultResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Msg.prototype.registerInterestRateSwapVault = function registerInterestRateSwapVault(request, callback) {
+          return this.rpcCall(
+            registerInterestRateSwapVault,
+            $root.ununifi.irs.MsgRegisterInterestRateSwapVault,
+            $root.ununifi.irs.MsgRegisterInterestRateSwapVaultResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'RegisterInterestRateSwapVault' },
+      );
+
+      /**
+       * Calls RegisterInterestRateSwapVault.
+       * @function registerInterestRateSwapVault
+       * @memberof ununifi.irs.Msg
+       * @instance
+       * @param {ununifi.irs.IMsgRegisterInterestRateSwapVault} request MsgRegisterInterestRateSwapVault message or plain object
+       * @returns {Promise<ununifi.irs.MsgRegisterInterestRateSwapVaultResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Msg#depositLiquidity}.
+       * @memberof ununifi.irs.Msg
+       * @typedef DepositLiquidityCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.MsgDepositLiquidityResponse} [response] MsgDepositLiquidityResponse
+       */
+
+      /**
+       * Calls DepositLiquidity.
+       * @function depositLiquidity
+       * @memberof ununifi.irs.Msg
+       * @instance
+       * @param {ununifi.irs.IMsgDepositLiquidity} request MsgDepositLiquidity message or plain object
+       * @param {ununifi.irs.Msg.DepositLiquidityCallback} callback Node-style callback called with the error, if any, and MsgDepositLiquidityResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Msg.prototype.depositLiquidity = function depositLiquidity(request, callback) {
+          return this.rpcCall(
+            depositLiquidity,
+            $root.ununifi.irs.MsgDepositLiquidity,
+            $root.ununifi.irs.MsgDepositLiquidityResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'DepositLiquidity' },
+      );
+
+      /**
+       * Calls DepositLiquidity.
+       * @function depositLiquidity
+       * @memberof ununifi.irs.Msg
+       * @instance
+       * @param {ununifi.irs.IMsgDepositLiquidity} request MsgDepositLiquidity message or plain object
+       * @returns {Promise<ununifi.irs.MsgDepositLiquidityResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Msg#withdrawLiquidity}.
+       * @memberof ununifi.irs.Msg
+       * @typedef WithdrawLiquidityCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.MsgWithdrawLiquidityResponse} [response] MsgWithdrawLiquidityResponse
+       */
+
+      /**
+       * Calls WithdrawLiquidity.
+       * @function withdrawLiquidity
+       * @memberof ununifi.irs.Msg
+       * @instance
+       * @param {ununifi.irs.IMsgWithdrawLiquidity} request MsgWithdrawLiquidity message or plain object
+       * @param {ununifi.irs.Msg.WithdrawLiquidityCallback} callback Node-style callback called with the error, if any, and MsgWithdrawLiquidityResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Msg.prototype.withdrawLiquidity = function withdrawLiquidity(request, callback) {
+          return this.rpcCall(
+            withdrawLiquidity,
+            $root.ununifi.irs.MsgWithdrawLiquidity,
+            $root.ununifi.irs.MsgWithdrawLiquidityResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'WithdrawLiquidity' },
+      );
+
+      /**
+       * Calls WithdrawLiquidity.
+       * @function withdrawLiquidity
+       * @memberof ununifi.irs.Msg
+       * @instance
+       * @param {ununifi.irs.IMsgWithdrawLiquidity} request MsgWithdrawLiquidity message or plain object
+       * @returns {Promise<ununifi.irs.MsgWithdrawLiquidityResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Msg#depositToTranche}.
+       * @memberof ununifi.irs.Msg
+       * @typedef DepositToTrancheCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.MsgDepositToTrancheResponse} [response] MsgDepositToTrancheResponse
+       */
+
+      /**
+       * Calls DepositToTranche.
+       * @function depositToTranche
+       * @memberof ununifi.irs.Msg
+       * @instance
+       * @param {ununifi.irs.IMsgDepositToTranche} request MsgDepositToTranche message or plain object
+       * @param {ununifi.irs.Msg.DepositToTrancheCallback} callback Node-style callback called with the error, if any, and MsgDepositToTrancheResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Msg.prototype.depositToTranche = function depositToTranche(request, callback) {
+          return this.rpcCall(
+            depositToTranche,
+            $root.ununifi.irs.MsgDepositToTranche,
+            $root.ununifi.irs.MsgDepositToTrancheResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'DepositToTranche' },
+      );
+
+      /**
+       * Calls DepositToTranche.
+       * @function depositToTranche
+       * @memberof ununifi.irs.Msg
+       * @instance
+       * @param {ununifi.irs.IMsgDepositToTranche} request MsgDepositToTranche message or plain object
+       * @returns {Promise<ununifi.irs.MsgDepositToTrancheResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Msg#withdrawFromTranche}.
+       * @memberof ununifi.irs.Msg
+       * @typedef WithdrawFromTrancheCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.MsgWithdrawFromTrancheResponse} [response] MsgWithdrawFromTrancheResponse
+       */
+
+      /**
+       * Calls WithdrawFromTranche.
+       * @function withdrawFromTranche
+       * @memberof ununifi.irs.Msg
+       * @instance
+       * @param {ununifi.irs.IMsgWithdrawFromTranche} request MsgWithdrawFromTranche message or plain object
+       * @param {ununifi.irs.Msg.WithdrawFromTrancheCallback} callback Node-style callback called with the error, if any, and MsgWithdrawFromTrancheResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Msg.prototype.withdrawFromTranche = function withdrawFromTranche(request, callback) {
+          return this.rpcCall(
+            withdrawFromTranche,
+            $root.ununifi.irs.MsgWithdrawFromTranche,
+            $root.ununifi.irs.MsgWithdrawFromTrancheResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'WithdrawFromTranche' },
+      );
+
+      /**
+       * Calls WithdrawFromTranche.
+       * @function withdrawFromTranche
+       * @memberof ununifi.irs.Msg
+       * @instance
+       * @param {ununifi.irs.IMsgWithdrawFromTranche} request MsgWithdrawFromTranche message or plain object
+       * @returns {Promise<ununifi.irs.MsgWithdrawFromTrancheResponse>} Promise
+       * @variation 2
+       */
+
+      return Msg;
+    })();
+
+    irs.MsgUpdateParams = (function () {
+      /**
+       * Properties of a MsgUpdateParams.
+       * @memberof ununifi.irs
+       * @interface IMsgUpdateParams
+       * @property {string|null} [sender] MsgUpdateParams sender
+       * @property {ununifi.irs.IParams|null} [params] MsgUpdateParams params
+       */
+
+      /**
+       * Constructs a new MsgUpdateParams.
+       * @memberof ununifi.irs
+       * @classdesc Represents a MsgUpdateParams.
+       * @implements IMsgUpdateParams
+       * @constructor
+       * @param {ununifi.irs.IMsgUpdateParams=} [properties] Properties to set
+       */
+      function MsgUpdateParams(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * MsgUpdateParams sender.
+       * @member {string} sender
+       * @memberof ununifi.irs.MsgUpdateParams
+       * @instance
+       */
+      MsgUpdateParams.prototype.sender = '';
+
+      /**
+       * MsgUpdateParams params.
+       * @member {ununifi.irs.IParams|null|undefined} params
+       * @memberof ununifi.irs.MsgUpdateParams
+       * @instance
+       */
+      MsgUpdateParams.prototype.params = null;
+
+      /**
+       * Encodes the specified MsgUpdateParams message. Does not implicitly {@link ununifi.irs.MsgUpdateParams.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.MsgUpdateParams
+       * @static
+       * @param {ununifi.irs.IMsgUpdateParams} message MsgUpdateParams message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgUpdateParams.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.sender != null && Object.hasOwnProperty.call(message, 'sender'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.sender);
+        if (message.params != null && Object.hasOwnProperty.call(message, 'params'))
+          $root.ununifi.irs.Params.encode(message.params, writer.uint32(/* id 2, wireType 2 =*/ 18).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgUpdateParams message, length delimited. Does not implicitly {@link ununifi.irs.MsgUpdateParams.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.MsgUpdateParams
+       * @static
+       * @param {ununifi.irs.IMsgUpdateParams} message MsgUpdateParams message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgUpdateParams.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgUpdateParams message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.MsgUpdateParams
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.MsgUpdateParams} MsgUpdateParams
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgUpdateParams.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.MsgUpdateParams();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.sender = reader.string();
+              break;
+            case 2:
+              message.params = $root.ununifi.irs.Params.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgUpdateParams message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.MsgUpdateParams
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.MsgUpdateParams} MsgUpdateParams
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgUpdateParams.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgUpdateParams message.
+       * @function verify
+       * @memberof ununifi.irs.MsgUpdateParams
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgUpdateParams.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.sender != null && message.hasOwnProperty('sender'))
+          if (!$util.isString(message.sender)) return 'sender: string expected';
+        if (message.params != null && message.hasOwnProperty('params')) {
+          let error = $root.ununifi.irs.Params.verify(message.params);
+          if (error) return 'params.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a MsgUpdateParams message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.MsgUpdateParams
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.MsgUpdateParams} MsgUpdateParams
+       */
+      MsgUpdateParams.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.MsgUpdateParams) return object;
+        let message = new $root.ununifi.irs.MsgUpdateParams();
+        if (object.sender != null) message.sender = String(object.sender);
+        if (object.params != null) {
+          if (typeof object.params !== 'object') throw TypeError('.ununifi.irs.MsgUpdateParams.params: object expected');
+          message.params = $root.ununifi.irs.Params.fromObject(object.params);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a MsgUpdateParams message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.MsgUpdateParams
+       * @static
+       * @param {ununifi.irs.MsgUpdateParams} message MsgUpdateParams
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgUpdateParams.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.sender = '';
+          object.params = null;
+        }
+        if (message.sender != null && message.hasOwnProperty('sender')) object.sender = message.sender;
+        if (message.params != null && message.hasOwnProperty('params'))
+          object.params = $root.ununifi.irs.Params.toObject(message.params, options);
+        return object;
+      };
+
+      /**
+       * Converts this MsgUpdateParams to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.MsgUpdateParams
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgUpdateParams.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgUpdateParams;
+    })();
+
+    irs.MsgUpdateParamsResponse = (function () {
+      /**
+       * Properties of a MsgUpdateParamsResponse.
+       * @memberof ununifi.irs
+       * @interface IMsgUpdateParamsResponse
+       */
+
+      /**
+       * Constructs a new MsgUpdateParamsResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a MsgUpdateParamsResponse.
+       * @implements IMsgUpdateParamsResponse
+       * @constructor
+       * @param {ununifi.irs.IMsgUpdateParamsResponse=} [properties] Properties to set
+       */
+      function MsgUpdateParamsResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified MsgUpdateParamsResponse message. Does not implicitly {@link ununifi.irs.MsgUpdateParamsResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.MsgUpdateParamsResponse
+       * @static
+       * @param {ununifi.irs.IMsgUpdateParamsResponse} message MsgUpdateParamsResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgUpdateParamsResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgUpdateParamsResponse message, length delimited. Does not implicitly {@link ununifi.irs.MsgUpdateParamsResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.MsgUpdateParamsResponse
+       * @static
+       * @param {ununifi.irs.IMsgUpdateParamsResponse} message MsgUpdateParamsResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgUpdateParamsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgUpdateParamsResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.MsgUpdateParamsResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.MsgUpdateParamsResponse} MsgUpdateParamsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgUpdateParamsResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.MsgUpdateParamsResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgUpdateParamsResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.MsgUpdateParamsResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.MsgUpdateParamsResponse} MsgUpdateParamsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgUpdateParamsResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgUpdateParamsResponse message.
+       * @function verify
+       * @memberof ununifi.irs.MsgUpdateParamsResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgUpdateParamsResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgUpdateParamsResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.MsgUpdateParamsResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.MsgUpdateParamsResponse} MsgUpdateParamsResponse
+       */
+      MsgUpdateParamsResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.MsgUpdateParamsResponse) return object;
+        return new $root.ununifi.irs.MsgUpdateParamsResponse();
+      };
+
+      /**
+       * Creates a plain object from a MsgUpdateParamsResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.MsgUpdateParamsResponse
+       * @static
+       * @param {ununifi.irs.MsgUpdateParamsResponse} message MsgUpdateParamsResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgUpdateParamsResponse.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this MsgUpdateParamsResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.MsgUpdateParamsResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgUpdateParamsResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgUpdateParamsResponse;
+    })();
+
+    irs.MsgRegisterInterestRateSwapVault = (function () {
+      /**
+       * Properties of a MsgRegisterInterestRateSwapVault.
+       * @memberof ununifi.irs
+       * @interface IMsgRegisterInterestRateSwapVault
+       * @property {string|null} [sender] MsgRegisterInterestRateSwapVault sender
+       * @property {string|null} [strategy_contract] MsgRegisterInterestRateSwapVault strategy_contract
+       * @property {string|null} [name] MsgRegisterInterestRateSwapVault name
+       * @property {string|null} [description] MsgRegisterInterestRateSwapVault description
+       * @property {Long|null} [max_maturity] MsgRegisterInterestRateSwapVault max_maturity
+       * @property {Long|null} [cycle] MsgRegisterInterestRateSwapVault cycle
+       */
+
+      /**
+       * Constructs a new MsgRegisterInterestRateSwapVault.
+       * @memberof ununifi.irs
+       * @classdesc Represents a MsgRegisterInterestRateSwapVault.
+       * @implements IMsgRegisterInterestRateSwapVault
+       * @constructor
+       * @param {ununifi.irs.IMsgRegisterInterestRateSwapVault=} [properties] Properties to set
+       */
+      function MsgRegisterInterestRateSwapVault(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * MsgRegisterInterestRateSwapVault sender.
+       * @member {string} sender
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @instance
+       */
+      MsgRegisterInterestRateSwapVault.prototype.sender = '';
+
+      /**
+       * MsgRegisterInterestRateSwapVault strategy_contract.
+       * @member {string} strategy_contract
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @instance
+       */
+      MsgRegisterInterestRateSwapVault.prototype.strategy_contract = '';
+
+      /**
+       * MsgRegisterInterestRateSwapVault name.
+       * @member {string} name
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @instance
+       */
+      MsgRegisterInterestRateSwapVault.prototype.name = '';
+
+      /**
+       * MsgRegisterInterestRateSwapVault description.
+       * @member {string} description
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @instance
+       */
+      MsgRegisterInterestRateSwapVault.prototype.description = '';
+
+      /**
+       * MsgRegisterInterestRateSwapVault max_maturity.
+       * @member {Long} max_maturity
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @instance
+       */
+      MsgRegisterInterestRateSwapVault.prototype.max_maturity = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * MsgRegisterInterestRateSwapVault cycle.
+       * @member {Long} cycle
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @instance
+       */
+      MsgRegisterInterestRateSwapVault.prototype.cycle = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * Encodes the specified MsgRegisterInterestRateSwapVault message. Does not implicitly {@link ununifi.irs.MsgRegisterInterestRateSwapVault.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @static
+       * @param {ununifi.irs.IMsgRegisterInterestRateSwapVault} message MsgRegisterInterestRateSwapVault message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgRegisterInterestRateSwapVault.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.sender != null && Object.hasOwnProperty.call(message, 'sender'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.sender);
+        if (message.strategy_contract != null && Object.hasOwnProperty.call(message, 'strategy_contract'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.strategy_contract);
+        if (message.name != null && Object.hasOwnProperty.call(message, 'name'))
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.name);
+        if (message.description != null && Object.hasOwnProperty.call(message, 'description'))
+          writer.uint32(/* id 4, wireType 2 =*/ 34).string(message.description);
+        if (message.max_maturity != null && Object.hasOwnProperty.call(message, 'max_maturity'))
+          writer.uint32(/* id 5, wireType 0 =*/ 40).uint64(message.max_maturity);
+        if (message.cycle != null && Object.hasOwnProperty.call(message, 'cycle'))
+          writer.uint32(/* id 6, wireType 0 =*/ 48).uint64(message.cycle);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgRegisterInterestRateSwapVault message, length delimited. Does not implicitly {@link ununifi.irs.MsgRegisterInterestRateSwapVault.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @static
+       * @param {ununifi.irs.IMsgRegisterInterestRateSwapVault} message MsgRegisterInterestRateSwapVault message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgRegisterInterestRateSwapVault.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgRegisterInterestRateSwapVault message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.MsgRegisterInterestRateSwapVault} MsgRegisterInterestRateSwapVault
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgRegisterInterestRateSwapVault.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.MsgRegisterInterestRateSwapVault();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.sender = reader.string();
+              break;
+            case 2:
+              message.strategy_contract = reader.string();
+              break;
+            case 3:
+              message.name = reader.string();
+              break;
+            case 4:
+              message.description = reader.string();
+              break;
+            case 5:
+              message.max_maturity = reader.uint64();
+              break;
+            case 6:
+              message.cycle = reader.uint64();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgRegisterInterestRateSwapVault message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.MsgRegisterInterestRateSwapVault} MsgRegisterInterestRateSwapVault
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgRegisterInterestRateSwapVault.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgRegisterInterestRateSwapVault message.
+       * @function verify
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgRegisterInterestRateSwapVault.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.sender != null && message.hasOwnProperty('sender'))
+          if (!$util.isString(message.sender)) return 'sender: string expected';
+        if (message.strategy_contract != null && message.hasOwnProperty('strategy_contract'))
+          if (!$util.isString(message.strategy_contract)) return 'strategy_contract: string expected';
+        if (message.name != null && message.hasOwnProperty('name')) if (!$util.isString(message.name)) return 'name: string expected';
+        if (message.description != null && message.hasOwnProperty('description'))
+          if (!$util.isString(message.description)) return 'description: string expected';
+        if (message.max_maturity != null && message.hasOwnProperty('max_maturity'))
+          if (
+            !$util.isInteger(message.max_maturity) &&
+            !(message.max_maturity && $util.isInteger(message.max_maturity.low) && $util.isInteger(message.max_maturity.high))
+          )
+            return 'max_maturity: integer|Long expected';
+        if (message.cycle != null && message.hasOwnProperty('cycle'))
+          if (
+            !$util.isInteger(message.cycle) &&
+            !(message.cycle && $util.isInteger(message.cycle.low) && $util.isInteger(message.cycle.high))
+          )
+            return 'cycle: integer|Long expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgRegisterInterestRateSwapVault message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.MsgRegisterInterestRateSwapVault} MsgRegisterInterestRateSwapVault
+       */
+      MsgRegisterInterestRateSwapVault.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.MsgRegisterInterestRateSwapVault) return object;
+        let message = new $root.ununifi.irs.MsgRegisterInterestRateSwapVault();
+        if (object.sender != null) message.sender = String(object.sender);
+        if (object.strategy_contract != null) message.strategy_contract = String(object.strategy_contract);
+        if (object.name != null) message.name = String(object.name);
+        if (object.description != null) message.description = String(object.description);
+        if (object.max_maturity != null)
+          if ($util.Long) (message.max_maturity = $util.Long.fromValue(object.max_maturity)).unsigned = true;
+          else if (typeof object.max_maturity === 'string') message.max_maturity = parseInt(object.max_maturity, 10);
+          else if (typeof object.max_maturity === 'number') message.max_maturity = object.max_maturity;
+          else if (typeof object.max_maturity === 'object')
+            message.max_maturity = new $util.LongBits(object.max_maturity.low >>> 0, object.max_maturity.high >>> 0).toNumber(true);
+        if (object.cycle != null)
+          if ($util.Long) (message.cycle = $util.Long.fromValue(object.cycle)).unsigned = true;
+          else if (typeof object.cycle === 'string') message.cycle = parseInt(object.cycle, 10);
+          else if (typeof object.cycle === 'number') message.cycle = object.cycle;
+          else if (typeof object.cycle === 'object')
+            message.cycle = new $util.LongBits(object.cycle.low >>> 0, object.cycle.high >>> 0).toNumber(true);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a MsgRegisterInterestRateSwapVault message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @static
+       * @param {ununifi.irs.MsgRegisterInterestRateSwapVault} message MsgRegisterInterestRateSwapVault
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgRegisterInterestRateSwapVault.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.sender = '';
+          object.strategy_contract = '';
+          object.name = '';
+          object.description = '';
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.max_maturity = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.max_maturity = options.longs === String ? '0' : 0;
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.cycle = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.cycle = options.longs === String ? '0' : 0;
+        }
+        if (message.sender != null && message.hasOwnProperty('sender')) object.sender = message.sender;
+        if (message.strategy_contract != null && message.hasOwnProperty('strategy_contract'))
+          object.strategy_contract = message.strategy_contract;
+        if (message.name != null && message.hasOwnProperty('name')) object.name = message.name;
+        if (message.description != null && message.hasOwnProperty('description')) object.description = message.description;
+        if (message.max_maturity != null && message.hasOwnProperty('max_maturity'))
+          if (typeof message.max_maturity === 'number')
+            object.max_maturity = options.longs === String ? String(message.max_maturity) : message.max_maturity;
+          else
+            object.max_maturity =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.max_maturity)
+                : options.longs === Number
+                ? new $util.LongBits(message.max_maturity.low >>> 0, message.max_maturity.high >>> 0).toNumber(true)
+                : message.max_maturity;
+        if (message.cycle != null && message.hasOwnProperty('cycle'))
+          if (typeof message.cycle === 'number') object.cycle = options.longs === String ? String(message.cycle) : message.cycle;
+          else
+            object.cycle =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.cycle)
+                : options.longs === Number
+                ? new $util.LongBits(message.cycle.low >>> 0, message.cycle.high >>> 0).toNumber(true)
+                : message.cycle;
+        return object;
+      };
+
+      /**
+       * Converts this MsgRegisterInterestRateSwapVault to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVault
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgRegisterInterestRateSwapVault.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgRegisterInterestRateSwapVault;
+    })();
+
+    irs.MsgRegisterInterestRateSwapVaultResponse = (function () {
+      /**
+       * Properties of a MsgRegisterInterestRateSwapVaultResponse.
+       * @memberof ununifi.irs
+       * @interface IMsgRegisterInterestRateSwapVaultResponse
+       */
+
+      /**
+       * Constructs a new MsgRegisterInterestRateSwapVaultResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a MsgRegisterInterestRateSwapVaultResponse.
+       * @implements IMsgRegisterInterestRateSwapVaultResponse
+       * @constructor
+       * @param {ununifi.irs.IMsgRegisterInterestRateSwapVaultResponse=} [properties] Properties to set
+       */
+      function MsgRegisterInterestRateSwapVaultResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified MsgRegisterInterestRateSwapVaultResponse message. Does not implicitly {@link ununifi.irs.MsgRegisterInterestRateSwapVaultResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVaultResponse
+       * @static
+       * @param {ununifi.irs.IMsgRegisterInterestRateSwapVaultResponse} message MsgRegisterInterestRateSwapVaultResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgRegisterInterestRateSwapVaultResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgRegisterInterestRateSwapVaultResponse message, length delimited. Does not implicitly {@link ununifi.irs.MsgRegisterInterestRateSwapVaultResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVaultResponse
+       * @static
+       * @param {ununifi.irs.IMsgRegisterInterestRateSwapVaultResponse} message MsgRegisterInterestRateSwapVaultResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgRegisterInterestRateSwapVaultResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgRegisterInterestRateSwapVaultResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVaultResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.MsgRegisterInterestRateSwapVaultResponse} MsgRegisterInterestRateSwapVaultResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgRegisterInterestRateSwapVaultResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.MsgRegisterInterestRateSwapVaultResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgRegisterInterestRateSwapVaultResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVaultResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.MsgRegisterInterestRateSwapVaultResponse} MsgRegisterInterestRateSwapVaultResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgRegisterInterestRateSwapVaultResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgRegisterInterestRateSwapVaultResponse message.
+       * @function verify
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVaultResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgRegisterInterestRateSwapVaultResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgRegisterInterestRateSwapVaultResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVaultResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.MsgRegisterInterestRateSwapVaultResponse} MsgRegisterInterestRateSwapVaultResponse
+       */
+      MsgRegisterInterestRateSwapVaultResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.MsgRegisterInterestRateSwapVaultResponse) return object;
+        return new $root.ununifi.irs.MsgRegisterInterestRateSwapVaultResponse();
+      };
+
+      /**
+       * Creates a plain object from a MsgRegisterInterestRateSwapVaultResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVaultResponse
+       * @static
+       * @param {ununifi.irs.MsgRegisterInterestRateSwapVaultResponse} message MsgRegisterInterestRateSwapVaultResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgRegisterInterestRateSwapVaultResponse.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this MsgRegisterInterestRateSwapVaultResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.MsgRegisterInterestRateSwapVaultResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgRegisterInterestRateSwapVaultResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgRegisterInterestRateSwapVaultResponse;
+    })();
+
+    irs.MsgDepositLiquidity = (function () {
+      /**
+       * Properties of a MsgDepositLiquidity.
+       * @memberof ununifi.irs
+       * @interface IMsgDepositLiquidity
+       * @property {string|null} [sender] MsgDepositLiquidity sender
+       * @property {Long|null} [tranche_id] MsgDepositLiquidity tranche_id
+       * @property {string|null} [share_out_amount] MsgDepositLiquidity share_out_amount
+       * @property {Array.<cosmos.base.v1beta1.ICoin>|null} [token_in_maxs] MsgDepositLiquidity token_in_maxs
+       */
+
+      /**
+       * Constructs a new MsgDepositLiquidity.
+       * @memberof ununifi.irs
+       * @classdesc Represents a MsgDepositLiquidity.
+       * @implements IMsgDepositLiquidity
+       * @constructor
+       * @param {ununifi.irs.IMsgDepositLiquidity=} [properties] Properties to set
+       */
+      function MsgDepositLiquidity(properties) {
+        this.token_in_maxs = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * MsgDepositLiquidity sender.
+       * @member {string} sender
+       * @memberof ununifi.irs.MsgDepositLiquidity
+       * @instance
+       */
+      MsgDepositLiquidity.prototype.sender = '';
+
+      /**
+       * MsgDepositLiquidity tranche_id.
+       * @member {Long} tranche_id
+       * @memberof ununifi.irs.MsgDepositLiquidity
+       * @instance
+       */
+      MsgDepositLiquidity.prototype.tranche_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * MsgDepositLiquidity share_out_amount.
+       * @member {string} share_out_amount
+       * @memberof ununifi.irs.MsgDepositLiquidity
+       * @instance
+       */
+      MsgDepositLiquidity.prototype.share_out_amount = '';
+
+      /**
+       * MsgDepositLiquidity token_in_maxs.
+       * @member {Array.<cosmos.base.v1beta1.ICoin>} token_in_maxs
+       * @memberof ununifi.irs.MsgDepositLiquidity
+       * @instance
+       */
+      MsgDepositLiquidity.prototype.token_in_maxs = $util.emptyArray;
+
+      /**
+       * Encodes the specified MsgDepositLiquidity message. Does not implicitly {@link ununifi.irs.MsgDepositLiquidity.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.MsgDepositLiquidity
+       * @static
+       * @param {ununifi.irs.IMsgDepositLiquidity} message MsgDepositLiquidity message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgDepositLiquidity.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.sender != null && Object.hasOwnProperty.call(message, 'sender'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.sender);
+        if (message.tranche_id != null && Object.hasOwnProperty.call(message, 'tranche_id'))
+          writer.uint32(/* id 2, wireType 0 =*/ 16).uint64(message.tranche_id);
+        if (message.share_out_amount != null && Object.hasOwnProperty.call(message, 'share_out_amount'))
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.share_out_amount);
+        if (message.token_in_maxs != null && message.token_in_maxs.length)
+          for (let i = 0; i < message.token_in_maxs.length; ++i)
+            $root.cosmos.base.v1beta1.Coin.encode(message.token_in_maxs[i], writer.uint32(/* id 4, wireType 2 =*/ 34).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgDepositLiquidity message, length delimited. Does not implicitly {@link ununifi.irs.MsgDepositLiquidity.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.MsgDepositLiquidity
+       * @static
+       * @param {ununifi.irs.IMsgDepositLiquidity} message MsgDepositLiquidity message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgDepositLiquidity.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgDepositLiquidity message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.MsgDepositLiquidity
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.MsgDepositLiquidity} MsgDepositLiquidity
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgDepositLiquidity.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.MsgDepositLiquidity();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.sender = reader.string();
+              break;
+            case 2:
+              message.tranche_id = reader.uint64();
+              break;
+            case 3:
+              message.share_out_amount = reader.string();
+              break;
+            case 4:
+              if (!(message.token_in_maxs && message.token_in_maxs.length)) message.token_in_maxs = [];
+              message.token_in_maxs.push($root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32()));
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgDepositLiquidity message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.MsgDepositLiquidity
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.MsgDepositLiquidity} MsgDepositLiquidity
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgDepositLiquidity.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgDepositLiquidity message.
+       * @function verify
+       * @memberof ununifi.irs.MsgDepositLiquidity
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgDepositLiquidity.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.sender != null && message.hasOwnProperty('sender'))
+          if (!$util.isString(message.sender)) return 'sender: string expected';
+        if (message.tranche_id != null && message.hasOwnProperty('tranche_id'))
+          if (
+            !$util.isInteger(message.tranche_id) &&
+            !(message.tranche_id && $util.isInteger(message.tranche_id.low) && $util.isInteger(message.tranche_id.high))
+          )
+            return 'tranche_id: integer|Long expected';
+        if (message.share_out_amount != null && message.hasOwnProperty('share_out_amount'))
+          if (!$util.isString(message.share_out_amount)) return 'share_out_amount: string expected';
+        if (message.token_in_maxs != null && message.hasOwnProperty('token_in_maxs')) {
+          if (!Array.isArray(message.token_in_maxs)) return 'token_in_maxs: array expected';
+          for (let i = 0; i < message.token_in_maxs.length; ++i) {
+            let error = $root.cosmos.base.v1beta1.Coin.verify(message.token_in_maxs[i]);
+            if (error) return 'token_in_maxs.' + error;
+          }
+        }
+        return null;
+      };
+
+      /**
+       * Creates a MsgDepositLiquidity message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.MsgDepositLiquidity
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.MsgDepositLiquidity} MsgDepositLiquidity
+       */
+      MsgDepositLiquidity.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.MsgDepositLiquidity) return object;
+        let message = new $root.ununifi.irs.MsgDepositLiquidity();
+        if (object.sender != null) message.sender = String(object.sender);
+        if (object.tranche_id != null)
+          if ($util.Long) (message.tranche_id = $util.Long.fromValue(object.tranche_id)).unsigned = true;
+          else if (typeof object.tranche_id === 'string') message.tranche_id = parseInt(object.tranche_id, 10);
+          else if (typeof object.tranche_id === 'number') message.tranche_id = object.tranche_id;
+          else if (typeof object.tranche_id === 'object')
+            message.tranche_id = new $util.LongBits(object.tranche_id.low >>> 0, object.tranche_id.high >>> 0).toNumber(true);
+        if (object.share_out_amount != null) message.share_out_amount = String(object.share_out_amount);
+        if (object.token_in_maxs) {
+          if (!Array.isArray(object.token_in_maxs)) throw TypeError('.ununifi.irs.MsgDepositLiquidity.token_in_maxs: array expected');
+          message.token_in_maxs = [];
+          for (let i = 0; i < object.token_in_maxs.length; ++i) {
+            if (typeof object.token_in_maxs[i] !== 'object')
+              throw TypeError('.ununifi.irs.MsgDepositLiquidity.token_in_maxs: object expected');
+            message.token_in_maxs[i] = $root.cosmos.base.v1beta1.Coin.fromObject(object.token_in_maxs[i]);
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a MsgDepositLiquidity message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.MsgDepositLiquidity
+       * @static
+       * @param {ununifi.irs.MsgDepositLiquidity} message MsgDepositLiquidity
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgDepositLiquidity.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) object.token_in_maxs = [];
+        if (options.defaults) {
+          object.sender = '';
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.tranche_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.tranche_id = options.longs === String ? '0' : 0;
+          object.share_out_amount = '';
+        }
+        if (message.sender != null && message.hasOwnProperty('sender')) object.sender = message.sender;
+        if (message.tranche_id != null && message.hasOwnProperty('tranche_id'))
+          if (typeof message.tranche_id === 'number')
+            object.tranche_id = options.longs === String ? String(message.tranche_id) : message.tranche_id;
+          else
+            object.tranche_id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.tranche_id)
+                : options.longs === Number
+                ? new $util.LongBits(message.tranche_id.low >>> 0, message.tranche_id.high >>> 0).toNumber(true)
+                : message.tranche_id;
+        if (message.share_out_amount != null && message.hasOwnProperty('share_out_amount'))
+          object.share_out_amount = message.share_out_amount;
+        if (message.token_in_maxs && message.token_in_maxs.length) {
+          object.token_in_maxs = [];
+          for (let j = 0; j < message.token_in_maxs.length; ++j)
+            object.token_in_maxs[j] = $root.cosmos.base.v1beta1.Coin.toObject(message.token_in_maxs[j], options);
+        }
+        return object;
+      };
+
+      /**
+       * Converts this MsgDepositLiquidity to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.MsgDepositLiquidity
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgDepositLiquidity.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgDepositLiquidity;
+    })();
+
+    irs.MsgDepositLiquidityResponse = (function () {
+      /**
+       * Properties of a MsgDepositLiquidityResponse.
+       * @memberof ununifi.irs
+       * @interface IMsgDepositLiquidityResponse
+       */
+
+      /**
+       * Constructs a new MsgDepositLiquidityResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a MsgDepositLiquidityResponse.
+       * @implements IMsgDepositLiquidityResponse
+       * @constructor
+       * @param {ununifi.irs.IMsgDepositLiquidityResponse=} [properties] Properties to set
+       */
+      function MsgDepositLiquidityResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified MsgDepositLiquidityResponse message. Does not implicitly {@link ununifi.irs.MsgDepositLiquidityResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.MsgDepositLiquidityResponse
+       * @static
+       * @param {ununifi.irs.IMsgDepositLiquidityResponse} message MsgDepositLiquidityResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgDepositLiquidityResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgDepositLiquidityResponse message, length delimited. Does not implicitly {@link ununifi.irs.MsgDepositLiquidityResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.MsgDepositLiquidityResponse
+       * @static
+       * @param {ununifi.irs.IMsgDepositLiquidityResponse} message MsgDepositLiquidityResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgDepositLiquidityResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgDepositLiquidityResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.MsgDepositLiquidityResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.MsgDepositLiquidityResponse} MsgDepositLiquidityResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgDepositLiquidityResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.MsgDepositLiquidityResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgDepositLiquidityResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.MsgDepositLiquidityResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.MsgDepositLiquidityResponse} MsgDepositLiquidityResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgDepositLiquidityResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgDepositLiquidityResponse message.
+       * @function verify
+       * @memberof ununifi.irs.MsgDepositLiquidityResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgDepositLiquidityResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgDepositLiquidityResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.MsgDepositLiquidityResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.MsgDepositLiquidityResponse} MsgDepositLiquidityResponse
+       */
+      MsgDepositLiquidityResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.MsgDepositLiquidityResponse) return object;
+        return new $root.ununifi.irs.MsgDepositLiquidityResponse();
+      };
+
+      /**
+       * Creates a plain object from a MsgDepositLiquidityResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.MsgDepositLiquidityResponse
+       * @static
+       * @param {ununifi.irs.MsgDepositLiquidityResponse} message MsgDepositLiquidityResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgDepositLiquidityResponse.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this MsgDepositLiquidityResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.MsgDepositLiquidityResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgDepositLiquidityResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgDepositLiquidityResponse;
+    })();
+
+    irs.MsgWithdrawLiquidity = (function () {
+      /**
+       * Properties of a MsgWithdrawLiquidity.
+       * @memberof ununifi.irs
+       * @interface IMsgWithdrawLiquidity
+       * @property {string|null} [sender] MsgWithdrawLiquidity sender
+       * @property {Long|null} [tranche_id] MsgWithdrawLiquidity tranche_id
+       * @property {string|null} [share_amount] MsgWithdrawLiquidity share_amount
+       * @property {Array.<cosmos.base.v1beta1.ICoin>|null} [token_out_mins] MsgWithdrawLiquidity token_out_mins
+       */
+
+      /**
+       * Constructs a new MsgWithdrawLiquidity.
+       * @memberof ununifi.irs
+       * @classdesc Represents a MsgWithdrawLiquidity.
+       * @implements IMsgWithdrawLiquidity
+       * @constructor
+       * @param {ununifi.irs.IMsgWithdrawLiquidity=} [properties] Properties to set
+       */
+      function MsgWithdrawLiquidity(properties) {
+        this.token_out_mins = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * MsgWithdrawLiquidity sender.
+       * @member {string} sender
+       * @memberof ununifi.irs.MsgWithdrawLiquidity
+       * @instance
+       */
+      MsgWithdrawLiquidity.prototype.sender = '';
+
+      /**
+       * MsgWithdrawLiquidity tranche_id.
+       * @member {Long} tranche_id
+       * @memberof ununifi.irs.MsgWithdrawLiquidity
+       * @instance
+       */
+      MsgWithdrawLiquidity.prototype.tranche_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * MsgWithdrawLiquidity share_amount.
+       * @member {string} share_amount
+       * @memberof ununifi.irs.MsgWithdrawLiquidity
+       * @instance
+       */
+      MsgWithdrawLiquidity.prototype.share_amount = '';
+
+      /**
+       * MsgWithdrawLiquidity token_out_mins.
+       * @member {Array.<cosmos.base.v1beta1.ICoin>} token_out_mins
+       * @memberof ununifi.irs.MsgWithdrawLiquidity
+       * @instance
+       */
+      MsgWithdrawLiquidity.prototype.token_out_mins = $util.emptyArray;
+
+      /**
+       * Encodes the specified MsgWithdrawLiquidity message. Does not implicitly {@link ununifi.irs.MsgWithdrawLiquidity.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.MsgWithdrawLiquidity
+       * @static
+       * @param {ununifi.irs.IMsgWithdrawLiquidity} message MsgWithdrawLiquidity message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgWithdrawLiquidity.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.sender != null && Object.hasOwnProperty.call(message, 'sender'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.sender);
+        if (message.tranche_id != null && Object.hasOwnProperty.call(message, 'tranche_id'))
+          writer.uint32(/* id 2, wireType 0 =*/ 16).uint64(message.tranche_id);
+        if (message.share_amount != null && Object.hasOwnProperty.call(message, 'share_amount'))
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.share_amount);
+        if (message.token_out_mins != null && message.token_out_mins.length)
+          for (let i = 0; i < message.token_out_mins.length; ++i)
+            $root.cosmos.base.v1beta1.Coin.encode(message.token_out_mins[i], writer.uint32(/* id 4, wireType 2 =*/ 34).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgWithdrawLiquidity message, length delimited. Does not implicitly {@link ununifi.irs.MsgWithdrawLiquidity.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.MsgWithdrawLiquidity
+       * @static
+       * @param {ununifi.irs.IMsgWithdrawLiquidity} message MsgWithdrawLiquidity message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgWithdrawLiquidity.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgWithdrawLiquidity message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.MsgWithdrawLiquidity
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.MsgWithdrawLiquidity} MsgWithdrawLiquidity
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgWithdrawLiquidity.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.MsgWithdrawLiquidity();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.sender = reader.string();
+              break;
+            case 2:
+              message.tranche_id = reader.uint64();
+              break;
+            case 3:
+              message.share_amount = reader.string();
+              break;
+            case 4:
+              if (!(message.token_out_mins && message.token_out_mins.length)) message.token_out_mins = [];
+              message.token_out_mins.push($root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32()));
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgWithdrawLiquidity message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.MsgWithdrawLiquidity
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.MsgWithdrawLiquidity} MsgWithdrawLiquidity
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgWithdrawLiquidity.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgWithdrawLiquidity message.
+       * @function verify
+       * @memberof ununifi.irs.MsgWithdrawLiquidity
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgWithdrawLiquidity.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.sender != null && message.hasOwnProperty('sender'))
+          if (!$util.isString(message.sender)) return 'sender: string expected';
+        if (message.tranche_id != null && message.hasOwnProperty('tranche_id'))
+          if (
+            !$util.isInteger(message.tranche_id) &&
+            !(message.tranche_id && $util.isInteger(message.tranche_id.low) && $util.isInteger(message.tranche_id.high))
+          )
+            return 'tranche_id: integer|Long expected';
+        if (message.share_amount != null && message.hasOwnProperty('share_amount'))
+          if (!$util.isString(message.share_amount)) return 'share_amount: string expected';
+        if (message.token_out_mins != null && message.hasOwnProperty('token_out_mins')) {
+          if (!Array.isArray(message.token_out_mins)) return 'token_out_mins: array expected';
+          for (let i = 0; i < message.token_out_mins.length; ++i) {
+            let error = $root.cosmos.base.v1beta1.Coin.verify(message.token_out_mins[i]);
+            if (error) return 'token_out_mins.' + error;
+          }
+        }
+        return null;
+      };
+
+      /**
+       * Creates a MsgWithdrawLiquidity message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.MsgWithdrawLiquidity
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.MsgWithdrawLiquidity} MsgWithdrawLiquidity
+       */
+      MsgWithdrawLiquidity.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.MsgWithdrawLiquidity) return object;
+        let message = new $root.ununifi.irs.MsgWithdrawLiquidity();
+        if (object.sender != null) message.sender = String(object.sender);
+        if (object.tranche_id != null)
+          if ($util.Long) (message.tranche_id = $util.Long.fromValue(object.tranche_id)).unsigned = true;
+          else if (typeof object.tranche_id === 'string') message.tranche_id = parseInt(object.tranche_id, 10);
+          else if (typeof object.tranche_id === 'number') message.tranche_id = object.tranche_id;
+          else if (typeof object.tranche_id === 'object')
+            message.tranche_id = new $util.LongBits(object.tranche_id.low >>> 0, object.tranche_id.high >>> 0).toNumber(true);
+        if (object.share_amount != null) message.share_amount = String(object.share_amount);
+        if (object.token_out_mins) {
+          if (!Array.isArray(object.token_out_mins)) throw TypeError('.ununifi.irs.MsgWithdrawLiquidity.token_out_mins: array expected');
+          message.token_out_mins = [];
+          for (let i = 0; i < object.token_out_mins.length; ++i) {
+            if (typeof object.token_out_mins[i] !== 'object')
+              throw TypeError('.ununifi.irs.MsgWithdrawLiquidity.token_out_mins: object expected');
+            message.token_out_mins[i] = $root.cosmos.base.v1beta1.Coin.fromObject(object.token_out_mins[i]);
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a MsgWithdrawLiquidity message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.MsgWithdrawLiquidity
+       * @static
+       * @param {ununifi.irs.MsgWithdrawLiquidity} message MsgWithdrawLiquidity
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgWithdrawLiquidity.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) object.token_out_mins = [];
+        if (options.defaults) {
+          object.sender = '';
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.tranche_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.tranche_id = options.longs === String ? '0' : 0;
+          object.share_amount = '';
+        }
+        if (message.sender != null && message.hasOwnProperty('sender')) object.sender = message.sender;
+        if (message.tranche_id != null && message.hasOwnProperty('tranche_id'))
+          if (typeof message.tranche_id === 'number')
+            object.tranche_id = options.longs === String ? String(message.tranche_id) : message.tranche_id;
+          else
+            object.tranche_id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.tranche_id)
+                : options.longs === Number
+                ? new $util.LongBits(message.tranche_id.low >>> 0, message.tranche_id.high >>> 0).toNumber(true)
+                : message.tranche_id;
+        if (message.share_amount != null && message.hasOwnProperty('share_amount')) object.share_amount = message.share_amount;
+        if (message.token_out_mins && message.token_out_mins.length) {
+          object.token_out_mins = [];
+          for (let j = 0; j < message.token_out_mins.length; ++j)
+            object.token_out_mins[j] = $root.cosmos.base.v1beta1.Coin.toObject(message.token_out_mins[j], options);
+        }
+        return object;
+      };
+
+      /**
+       * Converts this MsgWithdrawLiquidity to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.MsgWithdrawLiquidity
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgWithdrawLiquidity.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgWithdrawLiquidity;
+    })();
+
+    irs.MsgWithdrawLiquidityResponse = (function () {
+      /**
+       * Properties of a MsgWithdrawLiquidityResponse.
+       * @memberof ununifi.irs
+       * @interface IMsgWithdrawLiquidityResponse
+       */
+
+      /**
+       * Constructs a new MsgWithdrawLiquidityResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a MsgWithdrawLiquidityResponse.
+       * @implements IMsgWithdrawLiquidityResponse
+       * @constructor
+       * @param {ununifi.irs.IMsgWithdrawLiquidityResponse=} [properties] Properties to set
+       */
+      function MsgWithdrawLiquidityResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified MsgWithdrawLiquidityResponse message. Does not implicitly {@link ununifi.irs.MsgWithdrawLiquidityResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.MsgWithdrawLiquidityResponse
+       * @static
+       * @param {ununifi.irs.IMsgWithdrawLiquidityResponse} message MsgWithdrawLiquidityResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgWithdrawLiquidityResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgWithdrawLiquidityResponse message, length delimited. Does not implicitly {@link ununifi.irs.MsgWithdrawLiquidityResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.MsgWithdrawLiquidityResponse
+       * @static
+       * @param {ununifi.irs.IMsgWithdrawLiquidityResponse} message MsgWithdrawLiquidityResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgWithdrawLiquidityResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgWithdrawLiquidityResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.MsgWithdrawLiquidityResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.MsgWithdrawLiquidityResponse} MsgWithdrawLiquidityResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgWithdrawLiquidityResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.MsgWithdrawLiquidityResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgWithdrawLiquidityResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.MsgWithdrawLiquidityResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.MsgWithdrawLiquidityResponse} MsgWithdrawLiquidityResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgWithdrawLiquidityResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgWithdrawLiquidityResponse message.
+       * @function verify
+       * @memberof ununifi.irs.MsgWithdrawLiquidityResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgWithdrawLiquidityResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgWithdrawLiquidityResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.MsgWithdrawLiquidityResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.MsgWithdrawLiquidityResponse} MsgWithdrawLiquidityResponse
+       */
+      MsgWithdrawLiquidityResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.MsgWithdrawLiquidityResponse) return object;
+        return new $root.ununifi.irs.MsgWithdrawLiquidityResponse();
+      };
+
+      /**
+       * Creates a plain object from a MsgWithdrawLiquidityResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.MsgWithdrawLiquidityResponse
+       * @static
+       * @param {ununifi.irs.MsgWithdrawLiquidityResponse} message MsgWithdrawLiquidityResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgWithdrawLiquidityResponse.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this MsgWithdrawLiquidityResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.MsgWithdrawLiquidityResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgWithdrawLiquidityResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgWithdrawLiquidityResponse;
+    })();
+
+    /**
+     * TrancheType enum.
+     * @name ununifi.irs.TrancheType
+     * @enum {number}
+     * @property {number} NORMAL_YIELD=0 NORMAL_YIELD value
+     * @property {number} FIXED_YIELD=1 FIXED_YIELD value
+     * @property {number} LEVERAGED_VARIABLE_YIELD=2 LEVERAGED_VARIABLE_YIELD value
+     */
+    irs.TrancheType = (function () {
+      const valuesById = {},
+        values = Object.create(valuesById);
+      values[(valuesById[0] = 'NORMAL_YIELD')] = 0;
+      values[(valuesById[1] = 'FIXED_YIELD')] = 1;
+      values[(valuesById[2] = 'LEVERAGED_VARIABLE_YIELD')] = 2;
+      return values;
+    })();
+
+    irs.MsgDepositToTranche = (function () {
+      /**
+       * Properties of a MsgDepositToTranche.
+       * @memberof ununifi.irs
+       * @interface IMsgDepositToTranche
+       * @property {string|null} [sender] MsgDepositToTranche sender
+       * @property {Long|null} [tranche_id] MsgDepositToTranche tranche_id
+       * @property {ununifi.irs.TrancheType|null} [tranche_type] MsgDepositToTranche tranche_type
+       * @property {cosmos.base.v1beta1.ICoin|null} [token] MsgDepositToTranche token
+       * @property {string|null} [required_yt] MsgDepositToTranche required_yt
+       */
+
+      /**
+       * Constructs a new MsgDepositToTranche.
+       * @memberof ununifi.irs
+       * @classdesc Represents a MsgDepositToTranche.
+       * @implements IMsgDepositToTranche
+       * @constructor
+       * @param {ununifi.irs.IMsgDepositToTranche=} [properties] Properties to set
+       */
+      function MsgDepositToTranche(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * MsgDepositToTranche sender.
+       * @member {string} sender
+       * @memberof ununifi.irs.MsgDepositToTranche
+       * @instance
+       */
+      MsgDepositToTranche.prototype.sender = '';
+
+      /**
+       * MsgDepositToTranche tranche_id.
+       * @member {Long} tranche_id
+       * @memberof ununifi.irs.MsgDepositToTranche
+       * @instance
+       */
+      MsgDepositToTranche.prototype.tranche_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * MsgDepositToTranche tranche_type.
+       * @member {ununifi.irs.TrancheType} tranche_type
+       * @memberof ununifi.irs.MsgDepositToTranche
+       * @instance
+       */
+      MsgDepositToTranche.prototype.tranche_type = 0;
+
+      /**
+       * MsgDepositToTranche token.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} token
+       * @memberof ununifi.irs.MsgDepositToTranche
+       * @instance
+       */
+      MsgDepositToTranche.prototype.token = null;
+
+      /**
+       * MsgDepositToTranche required_yt.
+       * @member {string} required_yt
+       * @memberof ununifi.irs.MsgDepositToTranche
+       * @instance
+       */
+      MsgDepositToTranche.prototype.required_yt = '';
+
+      /**
+       * Encodes the specified MsgDepositToTranche message. Does not implicitly {@link ununifi.irs.MsgDepositToTranche.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.MsgDepositToTranche
+       * @static
+       * @param {ununifi.irs.IMsgDepositToTranche} message MsgDepositToTranche message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgDepositToTranche.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.sender != null && Object.hasOwnProperty.call(message, 'sender'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.sender);
+        if (message.tranche_id != null && Object.hasOwnProperty.call(message, 'tranche_id'))
+          writer.uint32(/* id 2, wireType 0 =*/ 16).uint64(message.tranche_id);
+        if (message.tranche_type != null && Object.hasOwnProperty.call(message, 'tranche_type'))
+          writer.uint32(/* id 3, wireType 0 =*/ 24).int32(message.tranche_type);
+        if (message.token != null && Object.hasOwnProperty.call(message, 'token'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.token, writer.uint32(/* id 4, wireType 2 =*/ 34).fork()).ldelim();
+        if (message.required_yt != null && Object.hasOwnProperty.call(message, 'required_yt'))
+          writer.uint32(/* id 5, wireType 2 =*/ 42).string(message.required_yt);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgDepositToTranche message, length delimited. Does not implicitly {@link ununifi.irs.MsgDepositToTranche.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.MsgDepositToTranche
+       * @static
+       * @param {ununifi.irs.IMsgDepositToTranche} message MsgDepositToTranche message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgDepositToTranche.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgDepositToTranche message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.MsgDepositToTranche
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.MsgDepositToTranche} MsgDepositToTranche
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgDepositToTranche.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.MsgDepositToTranche();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.sender = reader.string();
+              break;
+            case 2:
+              message.tranche_id = reader.uint64();
+              break;
+            case 3:
+              message.tranche_type = reader.int32();
+              break;
+            case 4:
+              message.token = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            case 5:
+              message.required_yt = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgDepositToTranche message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.MsgDepositToTranche
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.MsgDepositToTranche} MsgDepositToTranche
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgDepositToTranche.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgDepositToTranche message.
+       * @function verify
+       * @memberof ununifi.irs.MsgDepositToTranche
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgDepositToTranche.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.sender != null && message.hasOwnProperty('sender'))
+          if (!$util.isString(message.sender)) return 'sender: string expected';
+        if (message.tranche_id != null && message.hasOwnProperty('tranche_id'))
+          if (
+            !$util.isInteger(message.tranche_id) &&
+            !(message.tranche_id && $util.isInteger(message.tranche_id.low) && $util.isInteger(message.tranche_id.high))
+          )
+            return 'tranche_id: integer|Long expected';
+        if (message.tranche_type != null && message.hasOwnProperty('tranche_type'))
+          switch (message.tranche_type) {
+            default:
+              return 'tranche_type: enum value expected';
+            case 0:
+            case 1:
+            case 2:
+              break;
+          }
+        if (message.token != null && message.hasOwnProperty('token')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.token);
+          if (error) return 'token.' + error;
+        }
+        if (message.required_yt != null && message.hasOwnProperty('required_yt'))
+          if (!$util.isString(message.required_yt)) return 'required_yt: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgDepositToTranche message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.MsgDepositToTranche
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.MsgDepositToTranche} MsgDepositToTranche
+       */
+      MsgDepositToTranche.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.MsgDepositToTranche) return object;
+        let message = new $root.ununifi.irs.MsgDepositToTranche();
+        if (object.sender != null) message.sender = String(object.sender);
+        if (object.tranche_id != null)
+          if ($util.Long) (message.tranche_id = $util.Long.fromValue(object.tranche_id)).unsigned = true;
+          else if (typeof object.tranche_id === 'string') message.tranche_id = parseInt(object.tranche_id, 10);
+          else if (typeof object.tranche_id === 'number') message.tranche_id = object.tranche_id;
+          else if (typeof object.tranche_id === 'object')
+            message.tranche_id = new $util.LongBits(object.tranche_id.low >>> 0, object.tranche_id.high >>> 0).toNumber(true);
+        switch (object.tranche_type) {
+          case 'NORMAL_YIELD':
+          case 0:
+            message.tranche_type = 0;
+            break;
+          case 'FIXED_YIELD':
+          case 1:
+            message.tranche_type = 1;
+            break;
+          case 'LEVERAGED_VARIABLE_YIELD':
+          case 2:
+            message.tranche_type = 2;
+            break;
+        }
+        if (object.token != null) {
+          if (typeof object.token !== 'object') throw TypeError('.ununifi.irs.MsgDepositToTranche.token: object expected');
+          message.token = $root.cosmos.base.v1beta1.Coin.fromObject(object.token);
+        }
+        if (object.required_yt != null) message.required_yt = String(object.required_yt);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a MsgDepositToTranche message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.MsgDepositToTranche
+       * @static
+       * @param {ununifi.irs.MsgDepositToTranche} message MsgDepositToTranche
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgDepositToTranche.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.sender = '';
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.tranche_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.tranche_id = options.longs === String ? '0' : 0;
+          object.tranche_type = options.enums === String ? 'NORMAL_YIELD' : 0;
+          object.token = null;
+          object.required_yt = '';
+        }
+        if (message.sender != null && message.hasOwnProperty('sender')) object.sender = message.sender;
+        if (message.tranche_id != null && message.hasOwnProperty('tranche_id'))
+          if (typeof message.tranche_id === 'number')
+            object.tranche_id = options.longs === String ? String(message.tranche_id) : message.tranche_id;
+          else
+            object.tranche_id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.tranche_id)
+                : options.longs === Number
+                ? new $util.LongBits(message.tranche_id.low >>> 0, message.tranche_id.high >>> 0).toNumber(true)
+                : message.tranche_id;
+        if (message.tranche_type != null && message.hasOwnProperty('tranche_type'))
+          object.tranche_type = options.enums === String ? $root.ununifi.irs.TrancheType[message.tranche_type] : message.tranche_type;
+        if (message.token != null && message.hasOwnProperty('token'))
+          object.token = $root.cosmos.base.v1beta1.Coin.toObject(message.token, options);
+        if (message.required_yt != null && message.hasOwnProperty('required_yt')) object.required_yt = message.required_yt;
+        return object;
+      };
+
+      /**
+       * Converts this MsgDepositToTranche to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.MsgDepositToTranche
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgDepositToTranche.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgDepositToTranche;
+    })();
+
+    irs.MsgDepositToTrancheResponse = (function () {
+      /**
+       * Properties of a MsgDepositToTrancheResponse.
+       * @memberof ununifi.irs
+       * @interface IMsgDepositToTrancheResponse
+       */
+
+      /**
+       * Constructs a new MsgDepositToTrancheResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a MsgDepositToTrancheResponse.
+       * @implements IMsgDepositToTrancheResponse
+       * @constructor
+       * @param {ununifi.irs.IMsgDepositToTrancheResponse=} [properties] Properties to set
+       */
+      function MsgDepositToTrancheResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified MsgDepositToTrancheResponse message. Does not implicitly {@link ununifi.irs.MsgDepositToTrancheResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.MsgDepositToTrancheResponse
+       * @static
+       * @param {ununifi.irs.IMsgDepositToTrancheResponse} message MsgDepositToTrancheResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgDepositToTrancheResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgDepositToTrancheResponse message, length delimited. Does not implicitly {@link ununifi.irs.MsgDepositToTrancheResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.MsgDepositToTrancheResponse
+       * @static
+       * @param {ununifi.irs.IMsgDepositToTrancheResponse} message MsgDepositToTrancheResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgDepositToTrancheResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgDepositToTrancheResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.MsgDepositToTrancheResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.MsgDepositToTrancheResponse} MsgDepositToTrancheResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgDepositToTrancheResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.MsgDepositToTrancheResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgDepositToTrancheResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.MsgDepositToTrancheResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.MsgDepositToTrancheResponse} MsgDepositToTrancheResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgDepositToTrancheResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgDepositToTrancheResponse message.
+       * @function verify
+       * @memberof ununifi.irs.MsgDepositToTrancheResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgDepositToTrancheResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgDepositToTrancheResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.MsgDepositToTrancheResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.MsgDepositToTrancheResponse} MsgDepositToTrancheResponse
+       */
+      MsgDepositToTrancheResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.MsgDepositToTrancheResponse) return object;
+        return new $root.ununifi.irs.MsgDepositToTrancheResponse();
+      };
+
+      /**
+       * Creates a plain object from a MsgDepositToTrancheResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.MsgDepositToTrancheResponse
+       * @static
+       * @param {ununifi.irs.MsgDepositToTrancheResponse} message MsgDepositToTrancheResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgDepositToTrancheResponse.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this MsgDepositToTrancheResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.MsgDepositToTrancheResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgDepositToTrancheResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgDepositToTrancheResponse;
+    })();
+
+    irs.MsgWithdrawFromTranche = (function () {
+      /**
+       * Properties of a MsgWithdrawFromTranche.
+       * @memberof ununifi.irs
+       * @interface IMsgWithdrawFromTranche
+       * @property {string|null} [sender] MsgWithdrawFromTranche sender
+       * @property {Long|null} [tranche_id] MsgWithdrawFromTranche tranche_id
+       * @property {ununifi.irs.TrancheType|null} [tranche_type] MsgWithdrawFromTranche tranche_type
+       * @property {Array.<cosmos.base.v1beta1.ICoin>|null} [tokens] MsgWithdrawFromTranche tokens
+       * @property {string|null} [required_ut] MsgWithdrawFromTranche required_ut
+       */
+
+      /**
+       * Constructs a new MsgWithdrawFromTranche.
+       * @memberof ununifi.irs
+       * @classdesc Represents a MsgWithdrawFromTranche.
+       * @implements IMsgWithdrawFromTranche
+       * @constructor
+       * @param {ununifi.irs.IMsgWithdrawFromTranche=} [properties] Properties to set
+       */
+      function MsgWithdrawFromTranche(properties) {
+        this.tokens = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * MsgWithdrawFromTranche sender.
+       * @member {string} sender
+       * @memberof ununifi.irs.MsgWithdrawFromTranche
+       * @instance
+       */
+      MsgWithdrawFromTranche.prototype.sender = '';
+
+      /**
+       * MsgWithdrawFromTranche tranche_id.
+       * @member {Long} tranche_id
+       * @memberof ununifi.irs.MsgWithdrawFromTranche
+       * @instance
+       */
+      MsgWithdrawFromTranche.prototype.tranche_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * MsgWithdrawFromTranche tranche_type.
+       * @member {ununifi.irs.TrancheType} tranche_type
+       * @memberof ununifi.irs.MsgWithdrawFromTranche
+       * @instance
+       */
+      MsgWithdrawFromTranche.prototype.tranche_type = 0;
+
+      /**
+       * MsgWithdrawFromTranche tokens.
+       * @member {Array.<cosmos.base.v1beta1.ICoin>} tokens
+       * @memberof ununifi.irs.MsgWithdrawFromTranche
+       * @instance
+       */
+      MsgWithdrawFromTranche.prototype.tokens = $util.emptyArray;
+
+      /**
+       * MsgWithdrawFromTranche required_ut.
+       * @member {string} required_ut
+       * @memberof ununifi.irs.MsgWithdrawFromTranche
+       * @instance
+       */
+      MsgWithdrawFromTranche.prototype.required_ut = '';
+
+      /**
+       * Encodes the specified MsgWithdrawFromTranche message. Does not implicitly {@link ununifi.irs.MsgWithdrawFromTranche.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.MsgWithdrawFromTranche
+       * @static
+       * @param {ununifi.irs.IMsgWithdrawFromTranche} message MsgWithdrawFromTranche message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgWithdrawFromTranche.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.sender != null && Object.hasOwnProperty.call(message, 'sender'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.sender);
+        if (message.tranche_id != null && Object.hasOwnProperty.call(message, 'tranche_id'))
+          writer.uint32(/* id 2, wireType 0 =*/ 16).uint64(message.tranche_id);
+        if (message.tranche_type != null && Object.hasOwnProperty.call(message, 'tranche_type'))
+          writer.uint32(/* id 3, wireType 0 =*/ 24).int32(message.tranche_type);
+        if (message.tokens != null && message.tokens.length)
+          for (let i = 0; i < message.tokens.length; ++i)
+            $root.cosmos.base.v1beta1.Coin.encode(message.tokens[i], writer.uint32(/* id 4, wireType 2 =*/ 34).fork()).ldelim();
+        if (message.required_ut != null && Object.hasOwnProperty.call(message, 'required_ut'))
+          writer.uint32(/* id 5, wireType 2 =*/ 42).string(message.required_ut);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgWithdrawFromTranche message, length delimited. Does not implicitly {@link ununifi.irs.MsgWithdrawFromTranche.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.MsgWithdrawFromTranche
+       * @static
+       * @param {ununifi.irs.IMsgWithdrawFromTranche} message MsgWithdrawFromTranche message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgWithdrawFromTranche.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgWithdrawFromTranche message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.MsgWithdrawFromTranche
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.MsgWithdrawFromTranche} MsgWithdrawFromTranche
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgWithdrawFromTranche.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.MsgWithdrawFromTranche();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.sender = reader.string();
+              break;
+            case 2:
+              message.tranche_id = reader.uint64();
+              break;
+            case 3:
+              message.tranche_type = reader.int32();
+              break;
+            case 4:
+              if (!(message.tokens && message.tokens.length)) message.tokens = [];
+              message.tokens.push($root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32()));
+              break;
+            case 5:
+              message.required_ut = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgWithdrawFromTranche message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.MsgWithdrawFromTranche
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.MsgWithdrawFromTranche} MsgWithdrawFromTranche
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgWithdrawFromTranche.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgWithdrawFromTranche message.
+       * @function verify
+       * @memberof ununifi.irs.MsgWithdrawFromTranche
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgWithdrawFromTranche.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.sender != null && message.hasOwnProperty('sender'))
+          if (!$util.isString(message.sender)) return 'sender: string expected';
+        if (message.tranche_id != null && message.hasOwnProperty('tranche_id'))
+          if (
+            !$util.isInteger(message.tranche_id) &&
+            !(message.tranche_id && $util.isInteger(message.tranche_id.low) && $util.isInteger(message.tranche_id.high))
+          )
+            return 'tranche_id: integer|Long expected';
+        if (message.tranche_type != null && message.hasOwnProperty('tranche_type'))
+          switch (message.tranche_type) {
+            default:
+              return 'tranche_type: enum value expected';
+            case 0:
+            case 1:
+            case 2:
+              break;
+          }
+        if (message.tokens != null && message.hasOwnProperty('tokens')) {
+          if (!Array.isArray(message.tokens)) return 'tokens: array expected';
+          for (let i = 0; i < message.tokens.length; ++i) {
+            let error = $root.cosmos.base.v1beta1.Coin.verify(message.tokens[i]);
+            if (error) return 'tokens.' + error;
+          }
+        }
+        if (message.required_ut != null && message.hasOwnProperty('required_ut'))
+          if (!$util.isString(message.required_ut)) return 'required_ut: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgWithdrawFromTranche message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.MsgWithdrawFromTranche
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.MsgWithdrawFromTranche} MsgWithdrawFromTranche
+       */
+      MsgWithdrawFromTranche.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.MsgWithdrawFromTranche) return object;
+        let message = new $root.ununifi.irs.MsgWithdrawFromTranche();
+        if (object.sender != null) message.sender = String(object.sender);
+        if (object.tranche_id != null)
+          if ($util.Long) (message.tranche_id = $util.Long.fromValue(object.tranche_id)).unsigned = true;
+          else if (typeof object.tranche_id === 'string') message.tranche_id = parseInt(object.tranche_id, 10);
+          else if (typeof object.tranche_id === 'number') message.tranche_id = object.tranche_id;
+          else if (typeof object.tranche_id === 'object')
+            message.tranche_id = new $util.LongBits(object.tranche_id.low >>> 0, object.tranche_id.high >>> 0).toNumber(true);
+        switch (object.tranche_type) {
+          case 'NORMAL_YIELD':
+          case 0:
+            message.tranche_type = 0;
+            break;
+          case 'FIXED_YIELD':
+          case 1:
+            message.tranche_type = 1;
+            break;
+          case 'LEVERAGED_VARIABLE_YIELD':
+          case 2:
+            message.tranche_type = 2;
+            break;
+        }
+        if (object.tokens) {
+          if (!Array.isArray(object.tokens)) throw TypeError('.ununifi.irs.MsgWithdrawFromTranche.tokens: array expected');
+          message.tokens = [];
+          for (let i = 0; i < object.tokens.length; ++i) {
+            if (typeof object.tokens[i] !== 'object') throw TypeError('.ununifi.irs.MsgWithdrawFromTranche.tokens: object expected');
+            message.tokens[i] = $root.cosmos.base.v1beta1.Coin.fromObject(object.tokens[i]);
+          }
+        }
+        if (object.required_ut != null) message.required_ut = String(object.required_ut);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a MsgWithdrawFromTranche message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.MsgWithdrawFromTranche
+       * @static
+       * @param {ununifi.irs.MsgWithdrawFromTranche} message MsgWithdrawFromTranche
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgWithdrawFromTranche.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) object.tokens = [];
+        if (options.defaults) {
+          object.sender = '';
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.tranche_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.tranche_id = options.longs === String ? '0' : 0;
+          object.tranche_type = options.enums === String ? 'NORMAL_YIELD' : 0;
+          object.required_ut = '';
+        }
+        if (message.sender != null && message.hasOwnProperty('sender')) object.sender = message.sender;
+        if (message.tranche_id != null && message.hasOwnProperty('tranche_id'))
+          if (typeof message.tranche_id === 'number')
+            object.tranche_id = options.longs === String ? String(message.tranche_id) : message.tranche_id;
+          else
+            object.tranche_id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.tranche_id)
+                : options.longs === Number
+                ? new $util.LongBits(message.tranche_id.low >>> 0, message.tranche_id.high >>> 0).toNumber(true)
+                : message.tranche_id;
+        if (message.tranche_type != null && message.hasOwnProperty('tranche_type'))
+          object.tranche_type = options.enums === String ? $root.ununifi.irs.TrancheType[message.tranche_type] : message.tranche_type;
+        if (message.tokens && message.tokens.length) {
+          object.tokens = [];
+          for (let j = 0; j < message.tokens.length; ++j)
+            object.tokens[j] = $root.cosmos.base.v1beta1.Coin.toObject(message.tokens[j], options);
+        }
+        if (message.required_ut != null && message.hasOwnProperty('required_ut')) object.required_ut = message.required_ut;
+        return object;
+      };
+
+      /**
+       * Converts this MsgWithdrawFromTranche to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.MsgWithdrawFromTranche
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgWithdrawFromTranche.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgWithdrawFromTranche;
+    })();
+
+    irs.MsgWithdrawFromTrancheResponse = (function () {
+      /**
+       * Properties of a MsgWithdrawFromTrancheResponse.
+       * @memberof ununifi.irs
+       * @interface IMsgWithdrawFromTrancheResponse
+       */
+
+      /**
+       * Constructs a new MsgWithdrawFromTrancheResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a MsgWithdrawFromTrancheResponse.
+       * @implements IMsgWithdrawFromTrancheResponse
+       * @constructor
+       * @param {ununifi.irs.IMsgWithdrawFromTrancheResponse=} [properties] Properties to set
+       */
+      function MsgWithdrawFromTrancheResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified MsgWithdrawFromTrancheResponse message. Does not implicitly {@link ununifi.irs.MsgWithdrawFromTrancheResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.MsgWithdrawFromTrancheResponse
+       * @static
+       * @param {ununifi.irs.IMsgWithdrawFromTrancheResponse} message MsgWithdrawFromTrancheResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgWithdrawFromTrancheResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified MsgWithdrawFromTrancheResponse message, length delimited. Does not implicitly {@link ununifi.irs.MsgWithdrawFromTrancheResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.MsgWithdrawFromTrancheResponse
+       * @static
+       * @param {ununifi.irs.IMsgWithdrawFromTrancheResponse} message MsgWithdrawFromTrancheResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      MsgWithdrawFromTrancheResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a MsgWithdrawFromTrancheResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.MsgWithdrawFromTrancheResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.MsgWithdrawFromTrancheResponse} MsgWithdrawFromTrancheResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgWithdrawFromTrancheResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.MsgWithdrawFromTrancheResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a MsgWithdrawFromTrancheResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.MsgWithdrawFromTrancheResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.MsgWithdrawFromTrancheResponse} MsgWithdrawFromTrancheResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      MsgWithdrawFromTrancheResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a MsgWithdrawFromTrancheResponse message.
+       * @function verify
+       * @memberof ununifi.irs.MsgWithdrawFromTrancheResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      MsgWithdrawFromTrancheResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a MsgWithdrawFromTrancheResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.MsgWithdrawFromTrancheResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.MsgWithdrawFromTrancheResponse} MsgWithdrawFromTrancheResponse
+       */
+      MsgWithdrawFromTrancheResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.MsgWithdrawFromTrancheResponse) return object;
+        return new $root.ununifi.irs.MsgWithdrawFromTrancheResponse();
+      };
+
+      /**
+       * Creates a plain object from a MsgWithdrawFromTrancheResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.MsgWithdrawFromTrancheResponse
+       * @static
+       * @param {ununifi.irs.MsgWithdrawFromTrancheResponse} message MsgWithdrawFromTrancheResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      MsgWithdrawFromTrancheResponse.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this MsgWithdrawFromTrancheResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.MsgWithdrawFromTrancheResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      MsgWithdrawFromTrancheResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return MsgWithdrawFromTrancheResponse;
+    })();
+
+    irs.InterestRateSwapVault = (function () {
+      /**
+       * Properties of an InterestRateSwapVault.
+       * @memberof ununifi.irs
+       * @interface IInterestRateSwapVault
+       * @property {string|null} [strategy_contract] InterestRateSwapVault strategy_contract
+       * @property {string|null} [name] InterestRateSwapVault name
+       * @property {string|null} [description] InterestRateSwapVault description
+       * @property {Long|null} [max_maturity] InterestRateSwapVault max_maturity
+       * @property {Long|null} [cycle] InterestRateSwapVault cycle
+       * @property {Long|null} [last_tranche_time] InterestRateSwapVault last_tranche_time
+       */
+
+      /**
+       * Constructs a new InterestRateSwapVault.
+       * @memberof ununifi.irs
+       * @classdesc Represents an InterestRateSwapVault.
+       * @implements IInterestRateSwapVault
+       * @constructor
+       * @param {ununifi.irs.IInterestRateSwapVault=} [properties] Properties to set
+       */
+      function InterestRateSwapVault(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * InterestRateSwapVault strategy_contract.
+       * @member {string} strategy_contract
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @instance
+       */
+      InterestRateSwapVault.prototype.strategy_contract = '';
+
+      /**
+       * InterestRateSwapVault name.
+       * @member {string} name
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @instance
+       */
+      InterestRateSwapVault.prototype.name = '';
+
+      /**
+       * InterestRateSwapVault description.
+       * @member {string} description
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @instance
+       */
+      InterestRateSwapVault.prototype.description = '';
+
+      /**
+       * InterestRateSwapVault max_maturity.
+       * @member {Long} max_maturity
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @instance
+       */
+      InterestRateSwapVault.prototype.max_maturity = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * InterestRateSwapVault cycle.
+       * @member {Long} cycle
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @instance
+       */
+      InterestRateSwapVault.prototype.cycle = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * InterestRateSwapVault last_tranche_time.
+       * @member {Long} last_tranche_time
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @instance
+       */
+      InterestRateSwapVault.prototype.last_tranche_time = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * Encodes the specified InterestRateSwapVault message. Does not implicitly {@link ununifi.irs.InterestRateSwapVault.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @static
+       * @param {ununifi.irs.IInterestRateSwapVault} message InterestRateSwapVault message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      InterestRateSwapVault.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.strategy_contract != null && Object.hasOwnProperty.call(message, 'strategy_contract'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.strategy_contract);
+        if (message.name != null && Object.hasOwnProperty.call(message, 'name'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.name);
+        if (message.description != null && Object.hasOwnProperty.call(message, 'description'))
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.description);
+        if (message.max_maturity != null && Object.hasOwnProperty.call(message, 'max_maturity'))
+          writer.uint32(/* id 4, wireType 0 =*/ 32).uint64(message.max_maturity);
+        if (message.cycle != null && Object.hasOwnProperty.call(message, 'cycle'))
+          writer.uint32(/* id 5, wireType 0 =*/ 40).uint64(message.cycle);
+        if (message.last_tranche_time != null && Object.hasOwnProperty.call(message, 'last_tranche_time'))
+          writer.uint32(/* id 6, wireType 0 =*/ 48).uint64(message.last_tranche_time);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified InterestRateSwapVault message, length delimited. Does not implicitly {@link ununifi.irs.InterestRateSwapVault.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @static
+       * @param {ununifi.irs.IInterestRateSwapVault} message InterestRateSwapVault message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      InterestRateSwapVault.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes an InterestRateSwapVault message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.InterestRateSwapVault} InterestRateSwapVault
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      InterestRateSwapVault.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.InterestRateSwapVault();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.strategy_contract = reader.string();
+              break;
+            case 2:
+              message.name = reader.string();
+              break;
+            case 3:
+              message.description = reader.string();
+              break;
+            case 4:
+              message.max_maturity = reader.uint64();
+              break;
+            case 5:
+              message.cycle = reader.uint64();
+              break;
+            case 6:
+              message.last_tranche_time = reader.uint64();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes an InterestRateSwapVault message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.InterestRateSwapVault} InterestRateSwapVault
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      InterestRateSwapVault.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies an InterestRateSwapVault message.
+       * @function verify
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      InterestRateSwapVault.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.strategy_contract != null && message.hasOwnProperty('strategy_contract'))
+          if (!$util.isString(message.strategy_contract)) return 'strategy_contract: string expected';
+        if (message.name != null && message.hasOwnProperty('name')) if (!$util.isString(message.name)) return 'name: string expected';
+        if (message.description != null && message.hasOwnProperty('description'))
+          if (!$util.isString(message.description)) return 'description: string expected';
+        if (message.max_maturity != null && message.hasOwnProperty('max_maturity'))
+          if (
+            !$util.isInteger(message.max_maturity) &&
+            !(message.max_maturity && $util.isInteger(message.max_maturity.low) && $util.isInteger(message.max_maturity.high))
+          )
+            return 'max_maturity: integer|Long expected';
+        if (message.cycle != null && message.hasOwnProperty('cycle'))
+          if (
+            !$util.isInteger(message.cycle) &&
+            !(message.cycle && $util.isInteger(message.cycle.low) && $util.isInteger(message.cycle.high))
+          )
+            return 'cycle: integer|Long expected';
+        if (message.last_tranche_time != null && message.hasOwnProperty('last_tranche_time'))
+          if (
+            !$util.isInteger(message.last_tranche_time) &&
+            !(
+              message.last_tranche_time &&
+              $util.isInteger(message.last_tranche_time.low) &&
+              $util.isInteger(message.last_tranche_time.high)
+            )
+          )
+            return 'last_tranche_time: integer|Long expected';
+        return null;
+      };
+
+      /**
+       * Creates an InterestRateSwapVault message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.InterestRateSwapVault} InterestRateSwapVault
+       */
+      InterestRateSwapVault.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.InterestRateSwapVault) return object;
+        let message = new $root.ununifi.irs.InterestRateSwapVault();
+        if (object.strategy_contract != null) message.strategy_contract = String(object.strategy_contract);
+        if (object.name != null) message.name = String(object.name);
+        if (object.description != null) message.description = String(object.description);
+        if (object.max_maturity != null)
+          if ($util.Long) (message.max_maturity = $util.Long.fromValue(object.max_maturity)).unsigned = true;
+          else if (typeof object.max_maturity === 'string') message.max_maturity = parseInt(object.max_maturity, 10);
+          else if (typeof object.max_maturity === 'number') message.max_maturity = object.max_maturity;
+          else if (typeof object.max_maturity === 'object')
+            message.max_maturity = new $util.LongBits(object.max_maturity.low >>> 0, object.max_maturity.high >>> 0).toNumber(true);
+        if (object.cycle != null)
+          if ($util.Long) (message.cycle = $util.Long.fromValue(object.cycle)).unsigned = true;
+          else if (typeof object.cycle === 'string') message.cycle = parseInt(object.cycle, 10);
+          else if (typeof object.cycle === 'number') message.cycle = object.cycle;
+          else if (typeof object.cycle === 'object')
+            message.cycle = new $util.LongBits(object.cycle.low >>> 0, object.cycle.high >>> 0).toNumber(true);
+        if (object.last_tranche_time != null)
+          if ($util.Long) (message.last_tranche_time = $util.Long.fromValue(object.last_tranche_time)).unsigned = true;
+          else if (typeof object.last_tranche_time === 'string') message.last_tranche_time = parseInt(object.last_tranche_time, 10);
+          else if (typeof object.last_tranche_time === 'number') message.last_tranche_time = object.last_tranche_time;
+          else if (typeof object.last_tranche_time === 'object')
+            message.last_tranche_time = new $util.LongBits(
+              object.last_tranche_time.low >>> 0,
+              object.last_tranche_time.high >>> 0,
+            ).toNumber(true);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from an InterestRateSwapVault message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @static
+       * @param {ununifi.irs.InterestRateSwapVault} message InterestRateSwapVault
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      InterestRateSwapVault.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.strategy_contract = '';
+          object.name = '';
+          object.description = '';
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.max_maturity = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.max_maturity = options.longs === String ? '0' : 0;
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.cycle = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.cycle = options.longs === String ? '0' : 0;
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.last_tranche_time = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.last_tranche_time = options.longs === String ? '0' : 0;
+        }
+        if (message.strategy_contract != null && message.hasOwnProperty('strategy_contract'))
+          object.strategy_contract = message.strategy_contract;
+        if (message.name != null && message.hasOwnProperty('name')) object.name = message.name;
+        if (message.description != null && message.hasOwnProperty('description')) object.description = message.description;
+        if (message.max_maturity != null && message.hasOwnProperty('max_maturity'))
+          if (typeof message.max_maturity === 'number')
+            object.max_maturity = options.longs === String ? String(message.max_maturity) : message.max_maturity;
+          else
+            object.max_maturity =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.max_maturity)
+                : options.longs === Number
+                ? new $util.LongBits(message.max_maturity.low >>> 0, message.max_maturity.high >>> 0).toNumber(true)
+                : message.max_maturity;
+        if (message.cycle != null && message.hasOwnProperty('cycle'))
+          if (typeof message.cycle === 'number') object.cycle = options.longs === String ? String(message.cycle) : message.cycle;
+          else
+            object.cycle =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.cycle)
+                : options.longs === Number
+                ? new $util.LongBits(message.cycle.low >>> 0, message.cycle.high >>> 0).toNumber(true)
+                : message.cycle;
+        if (message.last_tranche_time != null && message.hasOwnProperty('last_tranche_time'))
+          if (typeof message.last_tranche_time === 'number')
+            object.last_tranche_time = options.longs === String ? String(message.last_tranche_time) : message.last_tranche_time;
+          else
+            object.last_tranche_time =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.last_tranche_time)
+                : options.longs === Number
+                ? new $util.LongBits(message.last_tranche_time.low >>> 0, message.last_tranche_time.high >>> 0).toNumber(true)
+                : message.last_tranche_time;
+        return object;
+      };
+
+      /**
+       * Converts this InterestRateSwapVault to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.InterestRateSwapVault
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      InterestRateSwapVault.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return InterestRateSwapVault;
+    })();
+
+    irs.Params = (function () {
+      /**
+       * Properties of a Params.
+       * @memberof ununifi.irs
+       * @interface IParams
+       * @property {string|null} [authority] Params authority
+       * @property {string|null} [trade_fee_rate] Params trade_fee_rate
+       */
+
+      /**
+       * Constructs a new Params.
+       * @memberof ununifi.irs
+       * @classdesc Represents a Params.
+       * @implements IParams
+       * @constructor
+       * @param {ununifi.irs.IParams=} [properties] Properties to set
+       */
+      function Params(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Params authority.
+       * @member {string} authority
+       * @memberof ununifi.irs.Params
+       * @instance
+       */
+      Params.prototype.authority = '';
+
+      /**
+       * Params trade_fee_rate.
+       * @member {string} trade_fee_rate
+       * @memberof ununifi.irs.Params
+       * @instance
+       */
+      Params.prototype.trade_fee_rate = '';
+
+      /**
+       * Encodes the specified Params message. Does not implicitly {@link ununifi.irs.Params.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.Params
+       * @static
+       * @param {ununifi.irs.IParams} message Params message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      Params.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.authority != null && Object.hasOwnProperty.call(message, 'authority'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.authority);
+        if (message.trade_fee_rate != null && Object.hasOwnProperty.call(message, 'trade_fee_rate'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.trade_fee_rate);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified Params message, length delimited. Does not implicitly {@link ununifi.irs.Params.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.Params
+       * @static
+       * @param {ununifi.irs.IParams} message Params message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      Params.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a Params message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.Params
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.Params} Params
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      Params.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.Params();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.authority = reader.string();
+              break;
+            case 2:
+              message.trade_fee_rate = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a Params message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.Params
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.Params} Params
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      Params.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a Params message.
+       * @function verify
+       * @memberof ununifi.irs.Params
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      Params.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.authority != null && message.hasOwnProperty('authority'))
+          if (!$util.isString(message.authority)) return 'authority: string expected';
+        if (message.trade_fee_rate != null && message.hasOwnProperty('trade_fee_rate'))
+          if (!$util.isString(message.trade_fee_rate)) return 'trade_fee_rate: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a Params message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.Params
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.Params} Params
+       */
+      Params.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.Params) return object;
+        let message = new $root.ununifi.irs.Params();
+        if (object.authority != null) message.authority = String(object.authority);
+        if (object.trade_fee_rate != null) message.trade_fee_rate = String(object.trade_fee_rate);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a Params message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.Params
+       * @static
+       * @param {ununifi.irs.Params} message Params
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      Params.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.authority = '';
+          object.trade_fee_rate = '';
+        }
+        if (message.authority != null && message.hasOwnProperty('authority')) object.authority = message.authority;
+        if (message.trade_fee_rate != null && message.hasOwnProperty('trade_fee_rate')) object.trade_fee_rate = message.trade_fee_rate;
+        return object;
+      };
+
+      /**
+       * Converts this Params to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.Params
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      Params.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return Params;
+    })();
+
+    irs.GenesisState = (function () {
+      /**
+       * Properties of a GenesisState.
+       * @memberof ununifi.irs
+       * @interface IGenesisState
+       * @property {ununifi.irs.IParams|null} [params] GenesisState params
+       * @property {Array.<ununifi.irs.IInterestRateSwapVault>|null} [vaults] GenesisState vaults
+       * @property {Array.<ununifi.irs.ITranchePool>|null} [tranche_pools] GenesisState tranche_pools
+       */
+
+      /**
+       * Constructs a new GenesisState.
+       * @memberof ununifi.irs
+       * @classdesc Represents a GenesisState.
+       * @implements IGenesisState
+       * @constructor
+       * @param {ununifi.irs.IGenesisState=} [properties] Properties to set
+       */
+      function GenesisState(properties) {
+        this.vaults = [];
+        this.tranche_pools = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * GenesisState params.
+       * @member {ununifi.irs.IParams|null|undefined} params
+       * @memberof ununifi.irs.GenesisState
+       * @instance
+       */
+      GenesisState.prototype.params = null;
+
+      /**
+       * GenesisState vaults.
+       * @member {Array.<ununifi.irs.IInterestRateSwapVault>} vaults
+       * @memberof ununifi.irs.GenesisState
+       * @instance
+       */
+      GenesisState.prototype.vaults = $util.emptyArray;
+
+      /**
+       * GenesisState tranche_pools.
+       * @member {Array.<ununifi.irs.ITranchePool>} tranche_pools
+       * @memberof ununifi.irs.GenesisState
+       * @instance
+       */
+      GenesisState.prototype.tranche_pools = $util.emptyArray;
+
+      /**
+       * Encodes the specified GenesisState message. Does not implicitly {@link ununifi.irs.GenesisState.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.GenesisState
+       * @static
+       * @param {ununifi.irs.IGenesisState} message GenesisState message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      GenesisState.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.params != null && Object.hasOwnProperty.call(message, 'params'))
+          $root.ununifi.irs.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        if (message.vaults != null && message.vaults.length)
+          for (let i = 0; i < message.vaults.length; ++i)
+            $root.ununifi.irs.InterestRateSwapVault.encode(message.vaults[i], writer.uint32(/* id 2, wireType 2 =*/ 18).fork()).ldelim();
+        if (message.tranche_pools != null && message.tranche_pools.length)
+          for (let i = 0; i < message.tranche_pools.length; ++i)
+            $root.ununifi.irs.TranchePool.encode(message.tranche_pools[i], writer.uint32(/* id 3, wireType 2 =*/ 26).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified GenesisState message, length delimited. Does not implicitly {@link ununifi.irs.GenesisState.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.GenesisState
+       * @static
+       * @param {ununifi.irs.IGenesisState} message GenesisState message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      GenesisState.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a GenesisState message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.GenesisState
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.GenesisState} GenesisState
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      GenesisState.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.GenesisState();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.params = $root.ununifi.irs.Params.decode(reader, reader.uint32());
+              break;
+            case 2:
+              if (!(message.vaults && message.vaults.length)) message.vaults = [];
+              message.vaults.push($root.ununifi.irs.InterestRateSwapVault.decode(reader, reader.uint32()));
+              break;
+            case 3:
+              if (!(message.tranche_pools && message.tranche_pools.length)) message.tranche_pools = [];
+              message.tranche_pools.push($root.ununifi.irs.TranchePool.decode(reader, reader.uint32()));
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a GenesisState message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.GenesisState
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.GenesisState} GenesisState
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      GenesisState.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a GenesisState message.
+       * @function verify
+       * @memberof ununifi.irs.GenesisState
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      GenesisState.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.params != null && message.hasOwnProperty('params')) {
+          let error = $root.ununifi.irs.Params.verify(message.params);
+          if (error) return 'params.' + error;
+        }
+        if (message.vaults != null && message.hasOwnProperty('vaults')) {
+          if (!Array.isArray(message.vaults)) return 'vaults: array expected';
+          for (let i = 0; i < message.vaults.length; ++i) {
+            let error = $root.ununifi.irs.InterestRateSwapVault.verify(message.vaults[i]);
+            if (error) return 'vaults.' + error;
+          }
+        }
+        if (message.tranche_pools != null && message.hasOwnProperty('tranche_pools')) {
+          if (!Array.isArray(message.tranche_pools)) return 'tranche_pools: array expected';
+          for (let i = 0; i < message.tranche_pools.length; ++i) {
+            let error = $root.ununifi.irs.TranchePool.verify(message.tranche_pools[i]);
+            if (error) return 'tranche_pools.' + error;
+          }
+        }
+        return null;
+      };
+
+      /**
+       * Creates a GenesisState message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.GenesisState
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.GenesisState} GenesisState
+       */
+      GenesisState.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.GenesisState) return object;
+        let message = new $root.ununifi.irs.GenesisState();
+        if (object.params != null) {
+          if (typeof object.params !== 'object') throw TypeError('.ununifi.irs.GenesisState.params: object expected');
+          message.params = $root.ununifi.irs.Params.fromObject(object.params);
+        }
+        if (object.vaults) {
+          if (!Array.isArray(object.vaults)) throw TypeError('.ununifi.irs.GenesisState.vaults: array expected');
+          message.vaults = [];
+          for (let i = 0; i < object.vaults.length; ++i) {
+            if (typeof object.vaults[i] !== 'object') throw TypeError('.ununifi.irs.GenesisState.vaults: object expected');
+            message.vaults[i] = $root.ununifi.irs.InterestRateSwapVault.fromObject(object.vaults[i]);
+          }
+        }
+        if (object.tranche_pools) {
+          if (!Array.isArray(object.tranche_pools)) throw TypeError('.ununifi.irs.GenesisState.tranche_pools: array expected');
+          message.tranche_pools = [];
+          for (let i = 0; i < object.tranche_pools.length; ++i) {
+            if (typeof object.tranche_pools[i] !== 'object') throw TypeError('.ununifi.irs.GenesisState.tranche_pools: object expected');
+            message.tranche_pools[i] = $root.ununifi.irs.TranchePool.fromObject(object.tranche_pools[i]);
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a GenesisState message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.GenesisState
+       * @static
+       * @param {ununifi.irs.GenesisState} message GenesisState
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      GenesisState.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) {
+          object.vaults = [];
+          object.tranche_pools = [];
+        }
+        if (options.defaults) object.params = null;
+        if (message.params != null && message.hasOwnProperty('params'))
+          object.params = $root.ununifi.irs.Params.toObject(message.params, options);
+        if (message.vaults && message.vaults.length) {
+          object.vaults = [];
+          for (let j = 0; j < message.vaults.length; ++j)
+            object.vaults[j] = $root.ununifi.irs.InterestRateSwapVault.toObject(message.vaults[j], options);
+        }
+        if (message.tranche_pools && message.tranche_pools.length) {
+          object.tranche_pools = [];
+          for (let j = 0; j < message.tranche_pools.length; ++j)
+            object.tranche_pools[j] = $root.ununifi.irs.TranchePool.toObject(message.tranche_pools[j], options);
+        }
+        return object;
+      };
+
+      /**
+       * Converts this GenesisState to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.GenesisState
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      GenesisState.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return GenesisState;
+    })();
+
+    irs.TranchePool = (function () {
+      /**
+       * Properties of a TranchePool.
+       * @memberof ununifi.irs
+       * @interface ITranchePool
+       * @property {Long|null} [id] TranchePool id
+       * @property {string|null} [strategy_contract] TranchePool strategy_contract
+       * @property {Long|null} [start_time] TranchePool start_time
+       * @property {Long|null} [maturity] TranchePool maturity
+       * @property {string|null} [swap_fee] TranchePool swap_fee
+       * @property {string|null} [exit_fee] TranchePool exit_fee
+       * @property {cosmos.base.v1beta1.ICoin|null} [total_shares] TranchePool total_shares
+       * @property {Array.<cosmos.base.v1beta1.ICoin>|null} [pool_assets] TranchePool pool_assets
+       */
+
+      /**
+       * Constructs a new TranchePool.
+       * @memberof ununifi.irs
+       * @classdesc Represents a TranchePool.
+       * @implements ITranchePool
+       * @constructor
+       * @param {ununifi.irs.ITranchePool=} [properties] Properties to set
+       */
+      function TranchePool(properties) {
+        this.pool_assets = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * TranchePool id.
+       * @member {Long} id
+       * @memberof ununifi.irs.TranchePool
+       * @instance
+       */
+      TranchePool.prototype.id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * TranchePool strategy_contract.
+       * @member {string} strategy_contract
+       * @memberof ununifi.irs.TranchePool
+       * @instance
+       */
+      TranchePool.prototype.strategy_contract = '';
+
+      /**
+       * TranchePool start_time.
+       * @member {Long} start_time
+       * @memberof ununifi.irs.TranchePool
+       * @instance
+       */
+      TranchePool.prototype.start_time = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * TranchePool maturity.
+       * @member {Long} maturity
+       * @memberof ununifi.irs.TranchePool
+       * @instance
+       */
+      TranchePool.prototype.maturity = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * TranchePool swap_fee.
+       * @member {string} swap_fee
+       * @memberof ununifi.irs.TranchePool
+       * @instance
+       */
+      TranchePool.prototype.swap_fee = '';
+
+      /**
+       * TranchePool exit_fee.
+       * @member {string} exit_fee
+       * @memberof ununifi.irs.TranchePool
+       * @instance
+       */
+      TranchePool.prototype.exit_fee = '';
+
+      /**
+       * TranchePool total_shares.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} total_shares
+       * @memberof ununifi.irs.TranchePool
+       * @instance
+       */
+      TranchePool.prototype.total_shares = null;
+
+      /**
+       * TranchePool pool_assets.
+       * @member {Array.<cosmos.base.v1beta1.ICoin>} pool_assets
+       * @memberof ununifi.irs.TranchePool
+       * @instance
+       */
+      TranchePool.prototype.pool_assets = $util.emptyArray;
+
+      /**
+       * Encodes the specified TranchePool message. Does not implicitly {@link ununifi.irs.TranchePool.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.TranchePool
+       * @static
+       * @param {ununifi.irs.ITranchePool} message TranchePool message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      TranchePool.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.id != null && Object.hasOwnProperty.call(message, 'id')) writer.uint32(/* id 1, wireType 0 =*/ 8).uint64(message.id);
+        if (message.strategy_contract != null && Object.hasOwnProperty.call(message, 'strategy_contract'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.strategy_contract);
+        if (message.start_time != null && Object.hasOwnProperty.call(message, 'start_time'))
+          writer.uint32(/* id 3, wireType 0 =*/ 24).uint64(message.start_time);
+        if (message.maturity != null && Object.hasOwnProperty.call(message, 'maturity'))
+          writer.uint32(/* id 4, wireType 0 =*/ 32).uint64(message.maturity);
+        if (message.swap_fee != null && Object.hasOwnProperty.call(message, 'swap_fee'))
+          writer.uint32(/* id 5, wireType 2 =*/ 42).string(message.swap_fee);
+        if (message.exit_fee != null && Object.hasOwnProperty.call(message, 'exit_fee'))
+          writer.uint32(/* id 6, wireType 2 =*/ 50).string(message.exit_fee);
+        if (message.total_shares != null && Object.hasOwnProperty.call(message, 'total_shares'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.total_shares, writer.uint32(/* id 7, wireType 2 =*/ 58).fork()).ldelim();
+        if (message.pool_assets != null && message.pool_assets.length)
+          for (let i = 0; i < message.pool_assets.length; ++i)
+            $root.cosmos.base.v1beta1.Coin.encode(message.pool_assets[i], writer.uint32(/* id 8, wireType 2 =*/ 66).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified TranchePool message, length delimited. Does not implicitly {@link ununifi.irs.TranchePool.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.TranchePool
+       * @static
+       * @param {ununifi.irs.ITranchePool} message TranchePool message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      TranchePool.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a TranchePool message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.TranchePool
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.TranchePool} TranchePool
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      TranchePool.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.TranchePool();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.id = reader.uint64();
+              break;
+            case 2:
+              message.strategy_contract = reader.string();
+              break;
+            case 3:
+              message.start_time = reader.uint64();
+              break;
+            case 4:
+              message.maturity = reader.uint64();
+              break;
+            case 5:
+              message.swap_fee = reader.string();
+              break;
+            case 6:
+              message.exit_fee = reader.string();
+              break;
+            case 7:
+              message.total_shares = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            case 8:
+              if (!(message.pool_assets && message.pool_assets.length)) message.pool_assets = [];
+              message.pool_assets.push($root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32()));
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a TranchePool message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.TranchePool
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.TranchePool} TranchePool
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      TranchePool.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a TranchePool message.
+       * @function verify
+       * @memberof ununifi.irs.TranchePool
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      TranchePool.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.id != null && message.hasOwnProperty('id'))
+          if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
+            return 'id: integer|Long expected';
+        if (message.strategy_contract != null && message.hasOwnProperty('strategy_contract'))
+          if (!$util.isString(message.strategy_contract)) return 'strategy_contract: string expected';
+        if (message.start_time != null && message.hasOwnProperty('start_time'))
+          if (
+            !$util.isInteger(message.start_time) &&
+            !(message.start_time && $util.isInteger(message.start_time.low) && $util.isInteger(message.start_time.high))
+          )
+            return 'start_time: integer|Long expected';
+        if (message.maturity != null && message.hasOwnProperty('maturity'))
+          if (
+            !$util.isInteger(message.maturity) &&
+            !(message.maturity && $util.isInteger(message.maturity.low) && $util.isInteger(message.maturity.high))
+          )
+            return 'maturity: integer|Long expected';
+        if (message.swap_fee != null && message.hasOwnProperty('swap_fee'))
+          if (!$util.isString(message.swap_fee)) return 'swap_fee: string expected';
+        if (message.exit_fee != null && message.hasOwnProperty('exit_fee'))
+          if (!$util.isString(message.exit_fee)) return 'exit_fee: string expected';
+        if (message.total_shares != null && message.hasOwnProperty('total_shares')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.total_shares);
+          if (error) return 'total_shares.' + error;
+        }
+        if (message.pool_assets != null && message.hasOwnProperty('pool_assets')) {
+          if (!Array.isArray(message.pool_assets)) return 'pool_assets: array expected';
+          for (let i = 0; i < message.pool_assets.length; ++i) {
+            let error = $root.cosmos.base.v1beta1.Coin.verify(message.pool_assets[i]);
+            if (error) return 'pool_assets.' + error;
+          }
+        }
+        return null;
+      };
+
+      /**
+       * Creates a TranchePool message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.TranchePool
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.TranchePool} TranchePool
+       */
+      TranchePool.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.TranchePool) return object;
+        let message = new $root.ununifi.irs.TranchePool();
+        if (object.id != null)
+          if ($util.Long) (message.id = $util.Long.fromValue(object.id)).unsigned = true;
+          else if (typeof object.id === 'string') message.id = parseInt(object.id, 10);
+          else if (typeof object.id === 'number') message.id = object.id;
+          else if (typeof object.id === 'object') message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
+        if (object.strategy_contract != null) message.strategy_contract = String(object.strategy_contract);
+        if (object.start_time != null)
+          if ($util.Long) (message.start_time = $util.Long.fromValue(object.start_time)).unsigned = true;
+          else if (typeof object.start_time === 'string') message.start_time = parseInt(object.start_time, 10);
+          else if (typeof object.start_time === 'number') message.start_time = object.start_time;
+          else if (typeof object.start_time === 'object')
+            message.start_time = new $util.LongBits(object.start_time.low >>> 0, object.start_time.high >>> 0).toNumber(true);
+        if (object.maturity != null)
+          if ($util.Long) (message.maturity = $util.Long.fromValue(object.maturity)).unsigned = true;
+          else if (typeof object.maturity === 'string') message.maturity = parseInt(object.maturity, 10);
+          else if (typeof object.maturity === 'number') message.maturity = object.maturity;
+          else if (typeof object.maturity === 'object')
+            message.maturity = new $util.LongBits(object.maturity.low >>> 0, object.maturity.high >>> 0).toNumber(true);
+        if (object.swap_fee != null) message.swap_fee = String(object.swap_fee);
+        if (object.exit_fee != null) message.exit_fee = String(object.exit_fee);
+        if (object.total_shares != null) {
+          if (typeof object.total_shares !== 'object') throw TypeError('.ununifi.irs.TranchePool.total_shares: object expected');
+          message.total_shares = $root.cosmos.base.v1beta1.Coin.fromObject(object.total_shares);
+        }
+        if (object.pool_assets) {
+          if (!Array.isArray(object.pool_assets)) throw TypeError('.ununifi.irs.TranchePool.pool_assets: array expected');
+          message.pool_assets = [];
+          for (let i = 0; i < object.pool_assets.length; ++i) {
+            if (typeof object.pool_assets[i] !== 'object') throw TypeError('.ununifi.irs.TranchePool.pool_assets: object expected');
+            message.pool_assets[i] = $root.cosmos.base.v1beta1.Coin.fromObject(object.pool_assets[i]);
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a TranchePool message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.TranchePool
+       * @static
+       * @param {ununifi.irs.TranchePool} message TranchePool
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      TranchePool.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) object.pool_assets = [];
+        if (options.defaults) {
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.id = options.longs === String ? '0' : 0;
+          object.strategy_contract = '';
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.start_time = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.start_time = options.longs === String ? '0' : 0;
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.maturity = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.maturity = options.longs === String ? '0' : 0;
+          object.swap_fee = '';
+          object.exit_fee = '';
+          object.total_shares = null;
+        }
+        if (message.id != null && message.hasOwnProperty('id'))
+          if (typeof message.id === 'number') object.id = options.longs === String ? String(message.id) : message.id;
+          else
+            object.id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.id)
+                : options.longs === Number
+                ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true)
+                : message.id;
+        if (message.strategy_contract != null && message.hasOwnProperty('strategy_contract'))
+          object.strategy_contract = message.strategy_contract;
+        if (message.start_time != null && message.hasOwnProperty('start_time'))
+          if (typeof message.start_time === 'number')
+            object.start_time = options.longs === String ? String(message.start_time) : message.start_time;
+          else
+            object.start_time =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.start_time)
+                : options.longs === Number
+                ? new $util.LongBits(message.start_time.low >>> 0, message.start_time.high >>> 0).toNumber(true)
+                : message.start_time;
+        if (message.maturity != null && message.hasOwnProperty('maturity'))
+          if (typeof message.maturity === 'number')
+            object.maturity = options.longs === String ? String(message.maturity) : message.maturity;
+          else
+            object.maturity =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.maturity)
+                : options.longs === Number
+                ? new $util.LongBits(message.maturity.low >>> 0, message.maturity.high >>> 0).toNumber(true)
+                : message.maturity;
+        if (message.swap_fee != null && message.hasOwnProperty('swap_fee')) object.swap_fee = message.swap_fee;
+        if (message.exit_fee != null && message.hasOwnProperty('exit_fee')) object.exit_fee = message.exit_fee;
+        if (message.total_shares != null && message.hasOwnProperty('total_shares'))
+          object.total_shares = $root.cosmos.base.v1beta1.Coin.toObject(message.total_shares, options);
+        if (message.pool_assets && message.pool_assets.length) {
+          object.pool_assets = [];
+          for (let j = 0; j < message.pool_assets.length; ++j)
+            object.pool_assets[j] = $root.cosmos.base.v1beta1.Coin.toObject(message.pool_assets[j], options);
+        }
+        return object;
+      };
+
+      /**
+       * Converts this TranchePool to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.TranchePool
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      TranchePool.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return TranchePool;
+    })();
+
+    irs.Query = (function () {
+      /**
+       * Constructs a new Query service.
+       * @memberof ununifi.irs
+       * @classdesc Represents a Query
+       * @extends $protobuf.rpc.Service
+       * @constructor
+       * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+       * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+       * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+       */
+      function Query(rpcImpl, requestDelimited, responseDelimited) {
+        $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+      }
+
+      (Query.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Query;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#params}.
+       * @memberof ununifi.irs.Query
+       * @typedef ParamsCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryParamsResponse} [response] QueryParamsResponse
+       */
+
+      /**
+       * Calls Params.
+       * @function params
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryParamsRequest} request QueryParamsRequest message or plain object
+       * @param {ununifi.irs.Query.ParamsCallback} callback Node-style callback called with the error, if any, and QueryParamsResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.params = function params(request, callback) {
+          return this.rpcCall(params, $root.ununifi.irs.QueryParamsRequest, $root.ununifi.irs.QueryParamsResponse, request, callback);
+        }),
+        'name',
+        { value: 'Params' },
+      );
+
+      /**
+       * Calls Params.
+       * @function params
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryParamsRequest} request QueryParamsRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryParamsResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#vaults}.
+       * @memberof ununifi.irs.Query
+       * @typedef VaultsCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryVaultsResponse} [response] QueryVaultsResponse
+       */
+
+      /**
+       * Calls Vaults.
+       * @function vaults
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryVaultsRequest} request QueryVaultsRequest message or plain object
+       * @param {ununifi.irs.Query.VaultsCallback} callback Node-style callback called with the error, if any, and QueryVaultsResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.vaults = function vaults(request, callback) {
+          return this.rpcCall(vaults, $root.ununifi.irs.QueryVaultsRequest, $root.ununifi.irs.QueryVaultsResponse, request, callback);
+        }),
+        'name',
+        { value: 'Vaults' },
+      );
+
+      /**
+       * Calls Vaults.
+       * @function vaults
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryVaultsRequest} request QueryVaultsRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryVaultsResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#vaultByContract}.
+       * @memberof ununifi.irs.Query
+       * @typedef VaultByContractCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryVaultByContractResponse} [response] QueryVaultByContractResponse
+       */
+
+      /**
+       * Calls VaultByContract.
+       * @function vaultByContract
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryVaultByContractRequest} request QueryVaultByContractRequest message or plain object
+       * @param {ununifi.irs.Query.VaultByContractCallback} callback Node-style callback called with the error, if any, and QueryVaultByContractResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.vaultByContract = function vaultByContract(request, callback) {
+          return this.rpcCall(
+            vaultByContract,
+            $root.ununifi.irs.QueryVaultByContractRequest,
+            $root.ununifi.irs.QueryVaultByContractResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'VaultByContract' },
+      );
+
+      /**
+       * Calls VaultByContract.
+       * @function vaultByContract
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryVaultByContractRequest} request QueryVaultByContractRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryVaultByContractResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#vaultDetails}.
+       * @memberof ununifi.irs.Query
+       * @typedef VaultDetailsCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryVaultDetailsResponse} [response] QueryVaultDetailsResponse
+       */
+
+      /**
+       * Calls VaultDetails.
+       * @function vaultDetails
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryVaultDetailsRequest} request QueryVaultDetailsRequest message or plain object
+       * @param {ununifi.irs.Query.VaultDetailsCallback} callback Node-style callback called with the error, if any, and QueryVaultDetailsResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.vaultDetails = function vaultDetails(request, callback) {
+          return this.rpcCall(
+            vaultDetails,
+            $root.ununifi.irs.QueryVaultDetailsRequest,
+            $root.ununifi.irs.QueryVaultDetailsResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'VaultDetails' },
+      );
+
+      /**
+       * Calls VaultDetails.
+       * @function vaultDetails
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryVaultDetailsRequest} request QueryVaultDetailsRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryVaultDetailsResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#allTranches}.
+       * @memberof ununifi.irs.Query
+       * @typedef AllTranchesCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryTranchesResponse} [response] QueryTranchesResponse
+       */
+
+      /**
+       * Calls AllTranches.
+       * @function allTranches
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryAllTranchesRequest} request QueryAllTranchesRequest message or plain object
+       * @param {ununifi.irs.Query.AllTranchesCallback} callback Node-style callback called with the error, if any, and QueryTranchesResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.allTranches = function allTranches(request, callback) {
+          return this.rpcCall(
+            allTranches,
+            $root.ununifi.irs.QueryAllTranchesRequest,
+            $root.ununifi.irs.QueryTranchesResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'AllTranches' },
+      );
+
+      /**
+       * Calls AllTranches.
+       * @function allTranches
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryAllTranchesRequest} request QueryAllTranchesRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryTranchesResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#tranches}.
+       * @memberof ununifi.irs.Query
+       * @typedef TranchesCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryTranchesResponse} [response] QueryTranchesResponse
+       */
+
+      /**
+       * Calls Tranches.
+       * @function tranches
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryTranchesRequest} request QueryTranchesRequest message or plain object
+       * @param {ununifi.irs.Query.TranchesCallback} callback Node-style callback called with the error, if any, and QueryTranchesResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.tranches = function tranches(request, callback) {
+          return this.rpcCall(tranches, $root.ununifi.irs.QueryTranchesRequest, $root.ununifi.irs.QueryTranchesResponse, request, callback);
+        }),
+        'name',
+        { value: 'Tranches' },
+      );
+
+      /**
+       * Calls Tranches.
+       * @function tranches
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryTranchesRequest} request QueryTranchesRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryTranchesResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#tranche}.
+       * @memberof ununifi.irs.Query
+       * @typedef TrancheCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryTrancheResponse} [response] QueryTrancheResponse
+       */
+
+      /**
+       * Calls Tranche.
+       * @function tranche
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryTrancheRequest} request QueryTrancheRequest message or plain object
+       * @param {ununifi.irs.Query.TrancheCallback} callback Node-style callback called with the error, if any, and QueryTrancheResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.tranche = function tranche(request, callback) {
+          return this.rpcCall(tranche, $root.ununifi.irs.QueryTrancheRequest, $root.ununifi.irs.QueryTrancheResponse, request, callback);
+        }),
+        'name',
+        { value: 'Tranche' },
+      );
+
+      /**
+       * Calls Tranche.
+       * @function tranche
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryTrancheRequest} request QueryTrancheRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryTrancheResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#estimateSwapInPool}.
+       * @memberof ununifi.irs.Query
+       * @typedef EstimateSwapInPoolCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryEstimateSwapInPoolResponse} [response] QueryEstimateSwapInPoolResponse
+       */
+
+      /**
+       * Calls EstimateSwapInPool.
+       * @function estimateSwapInPool
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateSwapInPoolRequest} request QueryEstimateSwapInPoolRequest message or plain object
+       * @param {ununifi.irs.Query.EstimateSwapInPoolCallback} callback Node-style callback called with the error, if any, and QueryEstimateSwapInPoolResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.estimateSwapInPool = function estimateSwapInPool(request, callback) {
+          return this.rpcCall(
+            estimateSwapInPool,
+            $root.ununifi.irs.QueryEstimateSwapInPoolRequest,
+            $root.ununifi.irs.QueryEstimateSwapInPoolResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'EstimateSwapInPool' },
+      );
+
+      /**
+       * Calls EstimateSwapInPool.
+       * @function estimateSwapInPool
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateSwapInPoolRequest} request QueryEstimateSwapInPoolRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryEstimateSwapInPoolResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#estimateMintPtYtPair}.
+       * @memberof ununifi.irs.Query
+       * @typedef EstimateMintPtYtPairCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryEstimateMintPtYtPairResponse} [response] QueryEstimateMintPtYtPairResponse
+       */
+
+      /**
+       * Calls EstimateMintPtYtPair.
+       * @function estimateMintPtYtPair
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateMintPtYtPairRequest} request QueryEstimateMintPtYtPairRequest message or plain object
+       * @param {ununifi.irs.Query.EstimateMintPtYtPairCallback} callback Node-style callback called with the error, if any, and QueryEstimateMintPtYtPairResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.estimateMintPtYtPair = function estimateMintPtYtPair(request, callback) {
+          return this.rpcCall(
+            estimateMintPtYtPair,
+            $root.ununifi.irs.QueryEstimateMintPtYtPairRequest,
+            $root.ununifi.irs.QueryEstimateMintPtYtPairResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'EstimateMintPtYtPair' },
+      );
+
+      /**
+       * Calls EstimateMintPtYtPair.
+       * @function estimateMintPtYtPair
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateMintPtYtPairRequest} request QueryEstimateMintPtYtPairRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryEstimateMintPtYtPairResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#estimateRedeemYt}.
+       * @memberof ununifi.irs.Query
+       * @typedef EstimateRedeemYtCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryEstimateRedeemYtResponse} [response] QueryEstimateRedeemYtResponse
+       */
+
+      /**
+       * Calls EstimateRedeemYt.
+       * @function estimateRedeemYt
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateRedeemYtRequest} request QueryEstimateRedeemYtRequest message or plain object
+       * @param {ununifi.irs.Query.EstimateRedeemYtCallback} callback Node-style callback called with the error, if any, and QueryEstimateRedeemYtResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.estimateRedeemYt = function estimateRedeemYt(request, callback) {
+          return this.rpcCall(
+            estimateRedeemYt,
+            $root.ununifi.irs.QueryEstimateRedeemYtRequest,
+            $root.ununifi.irs.QueryEstimateRedeemYtResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'EstimateRedeemYt' },
+      );
+
+      /**
+       * Calls EstimateRedeemYt.
+       * @function estimateRedeemYt
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateRedeemYtRequest} request QueryEstimateRedeemYtRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryEstimateRedeemYtResponse>} Promise
+       * @variation 2
+       */
+
+      return Query;
+    })();
+
+    irs.QueryParamsRequest = (function () {
+      /**
+       * Properties of a QueryParamsRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryParamsRequest
+       */
+
+      /**
+       * Constructs a new QueryParamsRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryParamsRequest.
+       * @implements IQueryParamsRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryParamsRequest=} [properties] Properties to set
+       */
+      function QueryParamsRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified QueryParamsRequest message. Does not implicitly {@link ununifi.irs.QueryParamsRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryParamsRequest
+       * @static
+       * @param {ununifi.irs.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryParamsRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryParamsRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryParamsRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryParamsRequest
+       * @static
+       * @param {ununifi.irs.IQueryParamsRequest} message QueryParamsRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryParamsRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryParamsRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryParamsRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryParamsRequest} QueryParamsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryParamsRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryParamsRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryParamsRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryParamsRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryParamsRequest} QueryParamsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryParamsRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryParamsRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryParamsRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryParamsRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryParamsRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryParamsRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryParamsRequest} QueryParamsRequest
+       */
+      QueryParamsRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryParamsRequest) return object;
+        return new $root.ununifi.irs.QueryParamsRequest();
+      };
+
+      /**
+       * Creates a plain object from a QueryParamsRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryParamsRequest
+       * @static
+       * @param {ununifi.irs.QueryParamsRequest} message QueryParamsRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryParamsRequest.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this QueryParamsRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryParamsRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryParamsRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryParamsRequest;
+    })();
+
+    irs.QueryParamsResponse = (function () {
+      /**
+       * Properties of a QueryParamsResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryParamsResponse
+       * @property {ununifi.irs.IParams|null} [params] QueryParamsResponse params
+       */
+
+      /**
+       * Constructs a new QueryParamsResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryParamsResponse.
+       * @implements IQueryParamsResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryParamsResponse=} [properties] Properties to set
+       */
+      function QueryParamsResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryParamsResponse params.
+       * @member {ununifi.irs.IParams|null|undefined} params
+       * @memberof ununifi.irs.QueryParamsResponse
+       * @instance
+       */
+      QueryParamsResponse.prototype.params = null;
+
+      /**
+       * Encodes the specified QueryParamsResponse message. Does not implicitly {@link ununifi.irs.QueryParamsResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryParamsResponse
+       * @static
+       * @param {ununifi.irs.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryParamsResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.params != null && Object.hasOwnProperty.call(message, 'params'))
+          $root.ununifi.irs.Params.encode(message.params, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryParamsResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryParamsResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryParamsResponse
+       * @static
+       * @param {ununifi.irs.IQueryParamsResponse} message QueryParamsResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryParamsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryParamsResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryParamsResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryParamsResponse} QueryParamsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryParamsResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryParamsResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.params = $root.ununifi.irs.Params.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryParamsResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryParamsResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryParamsResponse} QueryParamsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryParamsResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryParamsResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryParamsResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryParamsResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.params != null && message.hasOwnProperty('params')) {
+          let error = $root.ununifi.irs.Params.verify(message.params);
+          if (error) return 'params.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryParamsResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryParamsResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryParamsResponse} QueryParamsResponse
+       */
+      QueryParamsResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryParamsResponse) return object;
+        let message = new $root.ununifi.irs.QueryParamsResponse();
+        if (object.params != null) {
+          if (typeof object.params !== 'object') throw TypeError('.ununifi.irs.QueryParamsResponse.params: object expected');
+          message.params = $root.ununifi.irs.Params.fromObject(object.params);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryParamsResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryParamsResponse
+       * @static
+       * @param {ununifi.irs.QueryParamsResponse} message QueryParamsResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryParamsResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.params = null;
+        if (message.params != null && message.hasOwnProperty('params'))
+          object.params = $root.ununifi.irs.Params.toObject(message.params, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryParamsResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryParamsResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryParamsResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryParamsResponse;
+    })();
+
+    irs.QueryVaultsRequest = (function () {
+      /**
+       * Properties of a QueryVaultsRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryVaultsRequest
+       */
+
+      /**
+       * Constructs a new QueryVaultsRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryVaultsRequest.
+       * @implements IQueryVaultsRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryVaultsRequest=} [properties] Properties to set
+       */
+      function QueryVaultsRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified QueryVaultsRequest message. Does not implicitly {@link ununifi.irs.QueryVaultsRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryVaultsRequest
+       * @static
+       * @param {ununifi.irs.IQueryVaultsRequest} message QueryVaultsRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryVaultsRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryVaultsRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryVaultsRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryVaultsRequest
+       * @static
+       * @param {ununifi.irs.IQueryVaultsRequest} message QueryVaultsRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryVaultsRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryVaultsRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryVaultsRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryVaultsRequest} QueryVaultsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryVaultsRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryVaultsRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryVaultsRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryVaultsRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryVaultsRequest} QueryVaultsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryVaultsRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryVaultsRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryVaultsRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryVaultsRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryVaultsRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryVaultsRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryVaultsRequest} QueryVaultsRequest
+       */
+      QueryVaultsRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryVaultsRequest) return object;
+        return new $root.ununifi.irs.QueryVaultsRequest();
+      };
+
+      /**
+       * Creates a plain object from a QueryVaultsRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryVaultsRequest
+       * @static
+       * @param {ununifi.irs.QueryVaultsRequest} message QueryVaultsRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryVaultsRequest.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this QueryVaultsRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryVaultsRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryVaultsRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryVaultsRequest;
+    })();
+
+    irs.QueryVaultsResponse = (function () {
+      /**
+       * Properties of a QueryVaultsResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryVaultsResponse
+       * @property {Array.<ununifi.irs.IInterestRateSwapVault>|null} [vaults] QueryVaultsResponse vaults
+       */
+
+      /**
+       * Constructs a new QueryVaultsResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryVaultsResponse.
+       * @implements IQueryVaultsResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryVaultsResponse=} [properties] Properties to set
+       */
+      function QueryVaultsResponse(properties) {
+        this.vaults = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryVaultsResponse vaults.
+       * @member {Array.<ununifi.irs.IInterestRateSwapVault>} vaults
+       * @memberof ununifi.irs.QueryVaultsResponse
+       * @instance
+       */
+      QueryVaultsResponse.prototype.vaults = $util.emptyArray;
+
+      /**
+       * Encodes the specified QueryVaultsResponse message. Does not implicitly {@link ununifi.irs.QueryVaultsResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryVaultsResponse
+       * @static
+       * @param {ununifi.irs.IQueryVaultsResponse} message QueryVaultsResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryVaultsResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.vaults != null && message.vaults.length)
+          for (let i = 0; i < message.vaults.length; ++i)
+            $root.ununifi.irs.InterestRateSwapVault.encode(message.vaults[i], writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryVaultsResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryVaultsResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryVaultsResponse
+       * @static
+       * @param {ununifi.irs.IQueryVaultsResponse} message QueryVaultsResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryVaultsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryVaultsResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryVaultsResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryVaultsResponse} QueryVaultsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryVaultsResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryVaultsResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              if (!(message.vaults && message.vaults.length)) message.vaults = [];
+              message.vaults.push($root.ununifi.irs.InterestRateSwapVault.decode(reader, reader.uint32()));
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryVaultsResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryVaultsResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryVaultsResponse} QueryVaultsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryVaultsResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryVaultsResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryVaultsResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryVaultsResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.vaults != null && message.hasOwnProperty('vaults')) {
+          if (!Array.isArray(message.vaults)) return 'vaults: array expected';
+          for (let i = 0; i < message.vaults.length; ++i) {
+            let error = $root.ununifi.irs.InterestRateSwapVault.verify(message.vaults[i]);
+            if (error) return 'vaults.' + error;
+          }
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryVaultsResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryVaultsResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryVaultsResponse} QueryVaultsResponse
+       */
+      QueryVaultsResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryVaultsResponse) return object;
+        let message = new $root.ununifi.irs.QueryVaultsResponse();
+        if (object.vaults) {
+          if (!Array.isArray(object.vaults)) throw TypeError('.ununifi.irs.QueryVaultsResponse.vaults: array expected');
+          message.vaults = [];
+          for (let i = 0; i < object.vaults.length; ++i) {
+            if (typeof object.vaults[i] !== 'object') throw TypeError('.ununifi.irs.QueryVaultsResponse.vaults: object expected');
+            message.vaults[i] = $root.ununifi.irs.InterestRateSwapVault.fromObject(object.vaults[i]);
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryVaultsResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryVaultsResponse
+       * @static
+       * @param {ununifi.irs.QueryVaultsResponse} message QueryVaultsResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryVaultsResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) object.vaults = [];
+        if (message.vaults && message.vaults.length) {
+          object.vaults = [];
+          for (let j = 0; j < message.vaults.length; ++j)
+            object.vaults[j] = $root.ununifi.irs.InterestRateSwapVault.toObject(message.vaults[j], options);
+        }
+        return object;
+      };
+
+      /**
+       * Converts this QueryVaultsResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryVaultsResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryVaultsResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryVaultsResponse;
+    })();
+
+    irs.QueryVaultByContractRequest = (function () {
+      /**
+       * Properties of a QueryVaultByContractRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryVaultByContractRequest
+       * @property {string|null} [strategy_contract] QueryVaultByContractRequest strategy_contract
+       */
+
+      /**
+       * Constructs a new QueryVaultByContractRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryVaultByContractRequest.
+       * @implements IQueryVaultByContractRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryVaultByContractRequest=} [properties] Properties to set
+       */
+      function QueryVaultByContractRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryVaultByContractRequest strategy_contract.
+       * @member {string} strategy_contract
+       * @memberof ununifi.irs.QueryVaultByContractRequest
+       * @instance
+       */
+      QueryVaultByContractRequest.prototype.strategy_contract = '';
+
+      /**
+       * Encodes the specified QueryVaultByContractRequest message. Does not implicitly {@link ununifi.irs.QueryVaultByContractRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryVaultByContractRequest
+       * @static
+       * @param {ununifi.irs.IQueryVaultByContractRequest} message QueryVaultByContractRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryVaultByContractRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.strategy_contract != null && Object.hasOwnProperty.call(message, 'strategy_contract'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.strategy_contract);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryVaultByContractRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryVaultByContractRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryVaultByContractRequest
+       * @static
+       * @param {ununifi.irs.IQueryVaultByContractRequest} message QueryVaultByContractRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryVaultByContractRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryVaultByContractRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryVaultByContractRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryVaultByContractRequest} QueryVaultByContractRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryVaultByContractRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryVaultByContractRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.strategy_contract = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryVaultByContractRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryVaultByContractRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryVaultByContractRequest} QueryVaultByContractRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryVaultByContractRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryVaultByContractRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryVaultByContractRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryVaultByContractRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.strategy_contract != null && message.hasOwnProperty('strategy_contract'))
+          if (!$util.isString(message.strategy_contract)) return 'strategy_contract: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryVaultByContractRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryVaultByContractRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryVaultByContractRequest} QueryVaultByContractRequest
+       */
+      QueryVaultByContractRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryVaultByContractRequest) return object;
+        let message = new $root.ununifi.irs.QueryVaultByContractRequest();
+        if (object.strategy_contract != null) message.strategy_contract = String(object.strategy_contract);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryVaultByContractRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryVaultByContractRequest
+       * @static
+       * @param {ununifi.irs.QueryVaultByContractRequest} message QueryVaultByContractRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryVaultByContractRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.strategy_contract = '';
+        if (message.strategy_contract != null && message.hasOwnProperty('strategy_contract'))
+          object.strategy_contract = message.strategy_contract;
+        return object;
+      };
+
+      /**
+       * Converts this QueryVaultByContractRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryVaultByContractRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryVaultByContractRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryVaultByContractRequest;
+    })();
+
+    irs.QueryVaultByContractResponse = (function () {
+      /**
+       * Properties of a QueryVaultByContractResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryVaultByContractResponse
+       * @property {ununifi.irs.IInterestRateSwapVault|null} [vault] QueryVaultByContractResponse vault
+       */
+
+      /**
+       * Constructs a new QueryVaultByContractResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryVaultByContractResponse.
+       * @implements IQueryVaultByContractResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryVaultByContractResponse=} [properties] Properties to set
+       */
+      function QueryVaultByContractResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryVaultByContractResponse vault.
+       * @member {ununifi.irs.IInterestRateSwapVault|null|undefined} vault
+       * @memberof ununifi.irs.QueryVaultByContractResponse
+       * @instance
+       */
+      QueryVaultByContractResponse.prototype.vault = null;
+
+      /**
+       * Encodes the specified QueryVaultByContractResponse message. Does not implicitly {@link ununifi.irs.QueryVaultByContractResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryVaultByContractResponse
+       * @static
+       * @param {ununifi.irs.IQueryVaultByContractResponse} message QueryVaultByContractResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryVaultByContractResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.vault != null && Object.hasOwnProperty.call(message, 'vault'))
+          $root.ununifi.irs.InterestRateSwapVault.encode(message.vault, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryVaultByContractResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryVaultByContractResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryVaultByContractResponse
+       * @static
+       * @param {ununifi.irs.IQueryVaultByContractResponse} message QueryVaultByContractResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryVaultByContractResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryVaultByContractResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryVaultByContractResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryVaultByContractResponse} QueryVaultByContractResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryVaultByContractResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryVaultByContractResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.vault = $root.ununifi.irs.InterestRateSwapVault.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryVaultByContractResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryVaultByContractResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryVaultByContractResponse} QueryVaultByContractResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryVaultByContractResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryVaultByContractResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryVaultByContractResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryVaultByContractResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.vault != null && message.hasOwnProperty('vault')) {
+          let error = $root.ununifi.irs.InterestRateSwapVault.verify(message.vault);
+          if (error) return 'vault.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryVaultByContractResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryVaultByContractResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryVaultByContractResponse} QueryVaultByContractResponse
+       */
+      QueryVaultByContractResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryVaultByContractResponse) return object;
+        let message = new $root.ununifi.irs.QueryVaultByContractResponse();
+        if (object.vault != null) {
+          if (typeof object.vault !== 'object') throw TypeError('.ununifi.irs.QueryVaultByContractResponse.vault: object expected');
+          message.vault = $root.ununifi.irs.InterestRateSwapVault.fromObject(object.vault);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryVaultByContractResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryVaultByContractResponse
+       * @static
+       * @param {ununifi.irs.QueryVaultByContractResponse} message QueryVaultByContractResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryVaultByContractResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.vault = null;
+        if (message.vault != null && message.hasOwnProperty('vault'))
+          object.vault = $root.ununifi.irs.InterestRateSwapVault.toObject(message.vault, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryVaultByContractResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryVaultByContractResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryVaultByContractResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryVaultByContractResponse;
+    })();
+
+    irs.QueryVaultDetailsRequest = (function () {
+      /**
+       * Properties of a QueryVaultDetailsRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryVaultDetailsRequest
+       * @property {string|null} [strategy_contract] QueryVaultDetailsRequest strategy_contract
+       * @property {string|null} [maturity] QueryVaultDetailsRequest maturity
+       */
+
+      /**
+       * Constructs a new QueryVaultDetailsRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryVaultDetailsRequest.
+       * @implements IQueryVaultDetailsRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryVaultDetailsRequest=} [properties] Properties to set
+       */
+      function QueryVaultDetailsRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryVaultDetailsRequest strategy_contract.
+       * @member {string} strategy_contract
+       * @memberof ununifi.irs.QueryVaultDetailsRequest
+       * @instance
+       */
+      QueryVaultDetailsRequest.prototype.strategy_contract = '';
+
+      /**
+       * QueryVaultDetailsRequest maturity.
+       * @member {string} maturity
+       * @memberof ununifi.irs.QueryVaultDetailsRequest
+       * @instance
+       */
+      QueryVaultDetailsRequest.prototype.maturity = '';
+
+      /**
+       * Encodes the specified QueryVaultDetailsRequest message. Does not implicitly {@link ununifi.irs.QueryVaultDetailsRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryVaultDetailsRequest
+       * @static
+       * @param {ununifi.irs.IQueryVaultDetailsRequest} message QueryVaultDetailsRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryVaultDetailsRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.strategy_contract != null && Object.hasOwnProperty.call(message, 'strategy_contract'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.strategy_contract);
+        if (message.maturity != null && Object.hasOwnProperty.call(message, 'maturity'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.maturity);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryVaultDetailsRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryVaultDetailsRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryVaultDetailsRequest
+       * @static
+       * @param {ununifi.irs.IQueryVaultDetailsRequest} message QueryVaultDetailsRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryVaultDetailsRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryVaultDetailsRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryVaultDetailsRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryVaultDetailsRequest} QueryVaultDetailsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryVaultDetailsRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryVaultDetailsRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.strategy_contract = reader.string();
+              break;
+            case 2:
+              message.maturity = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryVaultDetailsRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryVaultDetailsRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryVaultDetailsRequest} QueryVaultDetailsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryVaultDetailsRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryVaultDetailsRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryVaultDetailsRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryVaultDetailsRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.strategy_contract != null && message.hasOwnProperty('strategy_contract'))
+          if (!$util.isString(message.strategy_contract)) return 'strategy_contract: string expected';
+        if (message.maturity != null && message.hasOwnProperty('maturity'))
+          if (!$util.isString(message.maturity)) return 'maturity: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryVaultDetailsRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryVaultDetailsRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryVaultDetailsRequest} QueryVaultDetailsRequest
+       */
+      QueryVaultDetailsRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryVaultDetailsRequest) return object;
+        let message = new $root.ununifi.irs.QueryVaultDetailsRequest();
+        if (object.strategy_contract != null) message.strategy_contract = String(object.strategy_contract);
+        if (object.maturity != null) message.maturity = String(object.maturity);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryVaultDetailsRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryVaultDetailsRequest
+       * @static
+       * @param {ununifi.irs.QueryVaultDetailsRequest} message QueryVaultDetailsRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryVaultDetailsRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.strategy_contract = '';
+          object.maturity = '';
+        }
+        if (message.strategy_contract != null && message.hasOwnProperty('strategy_contract'))
+          object.strategy_contract = message.strategy_contract;
+        if (message.maturity != null && message.hasOwnProperty('maturity')) object.maturity = message.maturity;
+        return object;
+      };
+
+      /**
+       * Converts this QueryVaultDetailsRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryVaultDetailsRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryVaultDetailsRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryVaultDetailsRequest;
+    })();
+
+    irs.QueryVaultDetailsResponse = (function () {
+      /**
+       * Properties of a QueryVaultDetailsResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryVaultDetailsResponse
+       * @property {string|null} [liquidity_pool] QueryVaultDetailsResponse liquidity_pool
+       * @property {string|null} [fy_rate] QueryVaultDetailsResponse fy_rate
+       * @property {string|null} [lvy_rate] QueryVaultDetailsResponse lvy_rate
+       */
+
+      /**
+       * Constructs a new QueryVaultDetailsResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryVaultDetailsResponse.
+       * @implements IQueryVaultDetailsResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryVaultDetailsResponse=} [properties] Properties to set
+       */
+      function QueryVaultDetailsResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryVaultDetailsResponse liquidity_pool.
+       * @member {string} liquidity_pool
+       * @memberof ununifi.irs.QueryVaultDetailsResponse
+       * @instance
+       */
+      QueryVaultDetailsResponse.prototype.liquidity_pool = '';
+
+      /**
+       * QueryVaultDetailsResponse fy_rate.
+       * @member {string} fy_rate
+       * @memberof ununifi.irs.QueryVaultDetailsResponse
+       * @instance
+       */
+      QueryVaultDetailsResponse.prototype.fy_rate = '';
+
+      /**
+       * QueryVaultDetailsResponse lvy_rate.
+       * @member {string} lvy_rate
+       * @memberof ununifi.irs.QueryVaultDetailsResponse
+       * @instance
+       */
+      QueryVaultDetailsResponse.prototype.lvy_rate = '';
+
+      /**
+       * Encodes the specified QueryVaultDetailsResponse message. Does not implicitly {@link ununifi.irs.QueryVaultDetailsResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryVaultDetailsResponse
+       * @static
+       * @param {ununifi.irs.IQueryVaultDetailsResponse} message QueryVaultDetailsResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryVaultDetailsResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.liquidity_pool != null && Object.hasOwnProperty.call(message, 'liquidity_pool'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.liquidity_pool);
+        if (message.fy_rate != null && Object.hasOwnProperty.call(message, 'fy_rate'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.fy_rate);
+        if (message.lvy_rate != null && Object.hasOwnProperty.call(message, 'lvy_rate'))
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.lvy_rate);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryVaultDetailsResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryVaultDetailsResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryVaultDetailsResponse
+       * @static
+       * @param {ununifi.irs.IQueryVaultDetailsResponse} message QueryVaultDetailsResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryVaultDetailsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryVaultDetailsResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryVaultDetailsResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryVaultDetailsResponse} QueryVaultDetailsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryVaultDetailsResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryVaultDetailsResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.liquidity_pool = reader.string();
+              break;
+            case 2:
+              message.fy_rate = reader.string();
+              break;
+            case 3:
+              message.lvy_rate = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryVaultDetailsResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryVaultDetailsResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryVaultDetailsResponse} QueryVaultDetailsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryVaultDetailsResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryVaultDetailsResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryVaultDetailsResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryVaultDetailsResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.liquidity_pool != null && message.hasOwnProperty('liquidity_pool'))
+          if (!$util.isString(message.liquidity_pool)) return 'liquidity_pool: string expected';
+        if (message.fy_rate != null && message.hasOwnProperty('fy_rate'))
+          if (!$util.isString(message.fy_rate)) return 'fy_rate: string expected';
+        if (message.lvy_rate != null && message.hasOwnProperty('lvy_rate'))
+          if (!$util.isString(message.lvy_rate)) return 'lvy_rate: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryVaultDetailsResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryVaultDetailsResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryVaultDetailsResponse} QueryVaultDetailsResponse
+       */
+      QueryVaultDetailsResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryVaultDetailsResponse) return object;
+        let message = new $root.ununifi.irs.QueryVaultDetailsResponse();
+        if (object.liquidity_pool != null) message.liquidity_pool = String(object.liquidity_pool);
+        if (object.fy_rate != null) message.fy_rate = String(object.fy_rate);
+        if (object.lvy_rate != null) message.lvy_rate = String(object.lvy_rate);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryVaultDetailsResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryVaultDetailsResponse
+       * @static
+       * @param {ununifi.irs.QueryVaultDetailsResponse} message QueryVaultDetailsResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryVaultDetailsResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.liquidity_pool = '';
+          object.fy_rate = '';
+          object.lvy_rate = '';
+        }
+        if (message.liquidity_pool != null && message.hasOwnProperty('liquidity_pool')) object.liquidity_pool = message.liquidity_pool;
+        if (message.fy_rate != null && message.hasOwnProperty('fy_rate')) object.fy_rate = message.fy_rate;
+        if (message.lvy_rate != null && message.hasOwnProperty('lvy_rate')) object.lvy_rate = message.lvy_rate;
+        return object;
+      };
+
+      /**
+       * Converts this QueryVaultDetailsResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryVaultDetailsResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryVaultDetailsResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryVaultDetailsResponse;
+    })();
+
+    irs.QueryAllTranchesRequest = (function () {
+      /**
+       * Properties of a QueryAllTranchesRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryAllTranchesRequest
+       */
+
+      /**
+       * Constructs a new QueryAllTranchesRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryAllTranchesRequest.
+       * @implements IQueryAllTranchesRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryAllTranchesRequest=} [properties] Properties to set
+       */
+      function QueryAllTranchesRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * Encodes the specified QueryAllTranchesRequest message. Does not implicitly {@link ununifi.irs.QueryAllTranchesRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryAllTranchesRequest
+       * @static
+       * @param {ununifi.irs.IQueryAllTranchesRequest} message QueryAllTranchesRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryAllTranchesRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryAllTranchesRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryAllTranchesRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryAllTranchesRequest
+       * @static
+       * @param {ununifi.irs.IQueryAllTranchesRequest} message QueryAllTranchesRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryAllTranchesRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryAllTranchesRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryAllTranchesRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryAllTranchesRequest} QueryAllTranchesRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryAllTranchesRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryAllTranchesRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryAllTranchesRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryAllTranchesRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryAllTranchesRequest} QueryAllTranchesRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryAllTranchesRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryAllTranchesRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryAllTranchesRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryAllTranchesRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryAllTranchesRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryAllTranchesRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryAllTranchesRequest} QueryAllTranchesRequest
+       */
+      QueryAllTranchesRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryAllTranchesRequest) return object;
+        return new $root.ununifi.irs.QueryAllTranchesRequest();
+      };
+
+      /**
+       * Creates a plain object from a QueryAllTranchesRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryAllTranchesRequest
+       * @static
+       * @param {ununifi.irs.QueryAllTranchesRequest} message QueryAllTranchesRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryAllTranchesRequest.toObject = function toObject() {
+        return {};
+      };
+
+      /**
+       * Converts this QueryAllTranchesRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryAllTranchesRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryAllTranchesRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryAllTranchesRequest;
+    })();
+
+    irs.QueryTranchesRequest = (function () {
+      /**
+       * Properties of a QueryTranchesRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryTranchesRequest
+       * @property {string|null} [strategy_contract] QueryTranchesRequest strategy_contract
+       */
+
+      /**
+       * Constructs a new QueryTranchesRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryTranchesRequest.
+       * @implements IQueryTranchesRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryTranchesRequest=} [properties] Properties to set
+       */
+      function QueryTranchesRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryTranchesRequest strategy_contract.
+       * @member {string} strategy_contract
+       * @memberof ununifi.irs.QueryTranchesRequest
+       * @instance
+       */
+      QueryTranchesRequest.prototype.strategy_contract = '';
+
+      /**
+       * Encodes the specified QueryTranchesRequest message. Does not implicitly {@link ununifi.irs.QueryTranchesRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryTranchesRequest
+       * @static
+       * @param {ununifi.irs.IQueryTranchesRequest} message QueryTranchesRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryTranchesRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.strategy_contract != null && Object.hasOwnProperty.call(message, 'strategy_contract'))
+          writer.uint32(/* id 1, wireType 2 =*/ 10).string(message.strategy_contract);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryTranchesRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryTranchesRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryTranchesRequest
+       * @static
+       * @param {ununifi.irs.IQueryTranchesRequest} message QueryTranchesRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryTranchesRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryTranchesRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryTranchesRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryTranchesRequest} QueryTranchesRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryTranchesRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryTranchesRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.strategy_contract = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryTranchesRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryTranchesRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryTranchesRequest} QueryTranchesRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryTranchesRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryTranchesRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryTranchesRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryTranchesRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.strategy_contract != null && message.hasOwnProperty('strategy_contract'))
+          if (!$util.isString(message.strategy_contract)) return 'strategy_contract: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryTranchesRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryTranchesRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryTranchesRequest} QueryTranchesRequest
+       */
+      QueryTranchesRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryTranchesRequest) return object;
+        let message = new $root.ununifi.irs.QueryTranchesRequest();
+        if (object.strategy_contract != null) message.strategy_contract = String(object.strategy_contract);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryTranchesRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryTranchesRequest
+       * @static
+       * @param {ununifi.irs.QueryTranchesRequest} message QueryTranchesRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryTranchesRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.strategy_contract = '';
+        if (message.strategy_contract != null && message.hasOwnProperty('strategy_contract'))
+          object.strategy_contract = message.strategy_contract;
+        return object;
+      };
+
+      /**
+       * Converts this QueryTranchesRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryTranchesRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryTranchesRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryTranchesRequest;
+    })();
+
+    irs.QueryTranchesResponse = (function () {
+      /**
+       * Properties of a QueryTranchesResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryTranchesResponse
+       * @property {Array.<ununifi.irs.ITranchePool>|null} [tranches] QueryTranchesResponse tranches
+       */
+
+      /**
+       * Constructs a new QueryTranchesResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryTranchesResponse.
+       * @implements IQueryTranchesResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryTranchesResponse=} [properties] Properties to set
+       */
+      function QueryTranchesResponse(properties) {
+        this.tranches = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryTranchesResponse tranches.
+       * @member {Array.<ununifi.irs.ITranchePool>} tranches
+       * @memberof ununifi.irs.QueryTranchesResponse
+       * @instance
+       */
+      QueryTranchesResponse.prototype.tranches = $util.emptyArray;
+
+      /**
+       * Encodes the specified QueryTranchesResponse message. Does not implicitly {@link ununifi.irs.QueryTranchesResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryTranchesResponse
+       * @static
+       * @param {ununifi.irs.IQueryTranchesResponse} message QueryTranchesResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryTranchesResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.tranches != null && message.tranches.length)
+          for (let i = 0; i < message.tranches.length; ++i)
+            $root.ununifi.irs.TranchePool.encode(message.tranches[i], writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryTranchesResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryTranchesResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryTranchesResponse
+       * @static
+       * @param {ununifi.irs.IQueryTranchesResponse} message QueryTranchesResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryTranchesResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryTranchesResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryTranchesResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryTranchesResponse} QueryTranchesResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryTranchesResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryTranchesResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              if (!(message.tranches && message.tranches.length)) message.tranches = [];
+              message.tranches.push($root.ununifi.irs.TranchePool.decode(reader, reader.uint32()));
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryTranchesResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryTranchesResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryTranchesResponse} QueryTranchesResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryTranchesResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryTranchesResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryTranchesResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryTranchesResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.tranches != null && message.hasOwnProperty('tranches')) {
+          if (!Array.isArray(message.tranches)) return 'tranches: array expected';
+          for (let i = 0; i < message.tranches.length; ++i) {
+            let error = $root.ununifi.irs.TranchePool.verify(message.tranches[i]);
+            if (error) return 'tranches.' + error;
+          }
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryTranchesResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryTranchesResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryTranchesResponse} QueryTranchesResponse
+       */
+      QueryTranchesResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryTranchesResponse) return object;
+        let message = new $root.ununifi.irs.QueryTranchesResponse();
+        if (object.tranches) {
+          if (!Array.isArray(object.tranches)) throw TypeError('.ununifi.irs.QueryTranchesResponse.tranches: array expected');
+          message.tranches = [];
+          for (let i = 0; i < object.tranches.length; ++i) {
+            if (typeof object.tranches[i] !== 'object') throw TypeError('.ununifi.irs.QueryTranchesResponse.tranches: object expected');
+            message.tranches[i] = $root.ununifi.irs.TranchePool.fromObject(object.tranches[i]);
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryTranchesResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryTranchesResponse
+       * @static
+       * @param {ununifi.irs.QueryTranchesResponse} message QueryTranchesResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryTranchesResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) object.tranches = [];
+        if (message.tranches && message.tranches.length) {
+          object.tranches = [];
+          for (let j = 0; j < message.tranches.length; ++j)
+            object.tranches[j] = $root.ununifi.irs.TranchePool.toObject(message.tranches[j], options);
+        }
+        return object;
+      };
+
+      /**
+       * Converts this QueryTranchesResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryTranchesResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryTranchesResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryTranchesResponse;
+    })();
+
+    irs.QueryTrancheRequest = (function () {
+      /**
+       * Properties of a QueryTrancheRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryTrancheRequest
+       * @property {Long|null} [id] QueryTrancheRequest id
+       */
+
+      /**
+       * Constructs a new QueryTrancheRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryTrancheRequest.
+       * @implements IQueryTrancheRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryTrancheRequest=} [properties] Properties to set
+       */
+      function QueryTrancheRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryTrancheRequest id.
+       * @member {Long} id
+       * @memberof ununifi.irs.QueryTrancheRequest
+       * @instance
+       */
+      QueryTrancheRequest.prototype.id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * Encodes the specified QueryTrancheRequest message. Does not implicitly {@link ununifi.irs.QueryTrancheRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryTrancheRequest
+       * @static
+       * @param {ununifi.irs.IQueryTrancheRequest} message QueryTrancheRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryTrancheRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.id != null && Object.hasOwnProperty.call(message, 'id')) writer.uint32(/* id 1, wireType 0 =*/ 8).uint64(message.id);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryTrancheRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryTrancheRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryTrancheRequest
+       * @static
+       * @param {ununifi.irs.IQueryTrancheRequest} message QueryTrancheRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryTrancheRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryTrancheRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryTrancheRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryTrancheRequest} QueryTrancheRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryTrancheRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryTrancheRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.id = reader.uint64();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryTrancheRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryTrancheRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryTrancheRequest} QueryTrancheRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryTrancheRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryTrancheRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryTrancheRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryTrancheRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.id != null && message.hasOwnProperty('id'))
+          if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
+            return 'id: integer|Long expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryTrancheRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryTrancheRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryTrancheRequest} QueryTrancheRequest
+       */
+      QueryTrancheRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryTrancheRequest) return object;
+        let message = new $root.ununifi.irs.QueryTrancheRequest();
+        if (object.id != null)
+          if ($util.Long) (message.id = $util.Long.fromValue(object.id)).unsigned = true;
+          else if (typeof object.id === 'string') message.id = parseInt(object.id, 10);
+          else if (typeof object.id === 'number') message.id = object.id;
+          else if (typeof object.id === 'object') message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryTrancheRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryTrancheRequest
+       * @static
+       * @param {ununifi.irs.QueryTrancheRequest} message QueryTrancheRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryTrancheRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults)
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.id = options.longs === String ? '0' : 0;
+        if (message.id != null && message.hasOwnProperty('id'))
+          if (typeof message.id === 'number') object.id = options.longs === String ? String(message.id) : message.id;
+          else
+            object.id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.id)
+                : options.longs === Number
+                ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true)
+                : message.id;
+        return object;
+      };
+
+      /**
+       * Converts this QueryTrancheRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryTrancheRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryTrancheRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryTrancheRequest;
+    })();
+
+    irs.QueryTrancheResponse = (function () {
+      /**
+       * Properties of a QueryTrancheResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryTrancheResponse
+       * @property {ununifi.irs.ITranchePool|null} [tranche] QueryTrancheResponse tranche
+       */
+
+      /**
+       * Constructs a new QueryTrancheResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryTrancheResponse.
+       * @implements IQueryTrancheResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryTrancheResponse=} [properties] Properties to set
+       */
+      function QueryTrancheResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryTrancheResponse tranche.
+       * @member {ununifi.irs.ITranchePool|null|undefined} tranche
+       * @memberof ununifi.irs.QueryTrancheResponse
+       * @instance
+       */
+      QueryTrancheResponse.prototype.tranche = null;
+
+      /**
+       * Encodes the specified QueryTrancheResponse message. Does not implicitly {@link ununifi.irs.QueryTrancheResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryTrancheResponse
+       * @static
+       * @param {ununifi.irs.IQueryTrancheResponse} message QueryTrancheResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryTrancheResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.tranche != null && Object.hasOwnProperty.call(message, 'tranche'))
+          $root.ununifi.irs.TranchePool.encode(message.tranche, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryTrancheResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryTrancheResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryTrancheResponse
+       * @static
+       * @param {ununifi.irs.IQueryTrancheResponse} message QueryTrancheResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryTrancheResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryTrancheResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryTrancheResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryTrancheResponse} QueryTrancheResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryTrancheResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryTrancheResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.tranche = $root.ununifi.irs.TranchePool.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryTrancheResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryTrancheResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryTrancheResponse} QueryTrancheResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryTrancheResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryTrancheResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryTrancheResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryTrancheResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.tranche != null && message.hasOwnProperty('tranche')) {
+          let error = $root.ununifi.irs.TranchePool.verify(message.tranche);
+          if (error) return 'tranche.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryTrancheResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryTrancheResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryTrancheResponse} QueryTrancheResponse
+       */
+      QueryTrancheResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryTrancheResponse) return object;
+        let message = new $root.ununifi.irs.QueryTrancheResponse();
+        if (object.tranche != null) {
+          if (typeof object.tranche !== 'object') throw TypeError('.ununifi.irs.QueryTrancheResponse.tranche: object expected');
+          message.tranche = $root.ununifi.irs.TranchePool.fromObject(object.tranche);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryTrancheResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryTrancheResponse
+       * @static
+       * @param {ununifi.irs.QueryTrancheResponse} message QueryTrancheResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryTrancheResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.tranche = null;
+        if (message.tranche != null && message.hasOwnProperty('tranche'))
+          object.tranche = $root.ununifi.irs.TranchePool.toObject(message.tranche, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryTrancheResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryTrancheResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryTrancheResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryTrancheResponse;
+    })();
+
+    irs.QueryEstimateSwapInPoolRequest = (function () {
+      /**
+       * Properties of a QueryEstimateSwapInPoolRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateSwapInPoolRequest
+       * @property {Long|null} [pool_id] QueryEstimateSwapInPoolRequest pool_id
+       * @property {cosmos.base.v1beta1.ICoin|null} [amount] QueryEstimateSwapInPoolRequest amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateSwapInPoolRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateSwapInPoolRequest.
+       * @implements IQueryEstimateSwapInPoolRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateSwapInPoolRequest=} [properties] Properties to set
+       */
+      function QueryEstimateSwapInPoolRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateSwapInPoolRequest pool_id.
+       * @member {Long} pool_id
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolRequest
+       * @instance
+       */
+      QueryEstimateSwapInPoolRequest.prototype.pool_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * QueryEstimateSwapInPoolRequest amount.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolRequest
+       * @instance
+       */
+      QueryEstimateSwapInPoolRequest.prototype.amount = null;
+
+      /**
+       * Encodes the specified QueryEstimateSwapInPoolRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateSwapInPoolRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateSwapInPoolRequest} message QueryEstimateSwapInPoolRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateSwapInPoolRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.pool_id != null && Object.hasOwnProperty.call(message, 'pool_id'))
+          writer.uint32(/* id 1, wireType 0 =*/ 8).uint64(message.pool_id);
+        if (message.amount != null && Object.hasOwnProperty.call(message, 'amount'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 2, wireType 2 =*/ 18).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateSwapInPoolRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateSwapInPoolRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateSwapInPoolRequest} message QueryEstimateSwapInPoolRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateSwapInPoolRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateSwapInPoolRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateSwapInPoolRequest} QueryEstimateSwapInPoolRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateSwapInPoolRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateSwapInPoolRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.pool_id = reader.uint64();
+              break;
+            case 2:
+              message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateSwapInPoolRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateSwapInPoolRequest} QueryEstimateSwapInPoolRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateSwapInPoolRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateSwapInPoolRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateSwapInPoolRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (
+            !$util.isInteger(message.pool_id) &&
+            !(message.pool_id && $util.isInteger(message.pool_id.low) && $util.isInteger(message.pool_id.high))
+          )
+            return 'pool_id: integer|Long expected';
+        if (message.amount != null && message.hasOwnProperty('amount')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
+          if (error) return 'amount.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateSwapInPoolRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateSwapInPoolRequest} QueryEstimateSwapInPoolRequest
+       */
+      QueryEstimateSwapInPoolRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateSwapInPoolRequest) return object;
+        let message = new $root.ununifi.irs.QueryEstimateSwapInPoolRequest();
+        if (object.pool_id != null)
+          if ($util.Long) (message.pool_id = $util.Long.fromValue(object.pool_id)).unsigned = true;
+          else if (typeof object.pool_id === 'string') message.pool_id = parseInt(object.pool_id, 10);
+          else if (typeof object.pool_id === 'number') message.pool_id = object.pool_id;
+          else if (typeof object.pool_id === 'object')
+            message.pool_id = new $util.LongBits(object.pool_id.low >>> 0, object.pool_id.high >>> 0).toNumber(true);
+        if (object.amount != null) {
+          if (typeof object.amount !== 'object') throw TypeError('.ununifi.irs.QueryEstimateSwapInPoolRequest.amount: object expected');
+          message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateSwapInPoolRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolRequest
+       * @static
+       * @param {ununifi.irs.QueryEstimateSwapInPoolRequest} message QueryEstimateSwapInPoolRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateSwapInPoolRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.pool_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.pool_id = options.longs === String ? '0' : 0;
+          object.amount = null;
+        }
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (typeof message.pool_id === 'number') object.pool_id = options.longs === String ? String(message.pool_id) : message.pool_id;
+          else
+            object.pool_id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.pool_id)
+                : options.longs === Number
+                ? new $util.LongBits(message.pool_id.low >>> 0, message.pool_id.high >>> 0).toNumber(true)
+                : message.pool_id;
+        if (message.amount != null && message.hasOwnProperty('amount'))
+          object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateSwapInPoolRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateSwapInPoolRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateSwapInPoolRequest;
+    })();
+
+    irs.QueryEstimateSwapInPoolResponse = (function () {
+      /**
+       * Properties of a QueryEstimateSwapInPoolResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateSwapInPoolResponse
+       * @property {cosmos.base.v1beta1.ICoin|null} [amount] QueryEstimateSwapInPoolResponse amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateSwapInPoolResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateSwapInPoolResponse.
+       * @implements IQueryEstimateSwapInPoolResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateSwapInPoolResponse=} [properties] Properties to set
+       */
+      function QueryEstimateSwapInPoolResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateSwapInPoolResponse amount.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolResponse
+       * @instance
+       */
+      QueryEstimateSwapInPoolResponse.prototype.amount = null;
+
+      /**
+       * Encodes the specified QueryEstimateSwapInPoolResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateSwapInPoolResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateSwapInPoolResponse} message QueryEstimateSwapInPoolResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateSwapInPoolResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.amount != null && Object.hasOwnProperty.call(message, 'amount'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateSwapInPoolResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateSwapInPoolResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateSwapInPoolResponse} message QueryEstimateSwapInPoolResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateSwapInPoolResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateSwapInPoolResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateSwapInPoolResponse} QueryEstimateSwapInPoolResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateSwapInPoolResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateSwapInPoolResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateSwapInPoolResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateSwapInPoolResponse} QueryEstimateSwapInPoolResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateSwapInPoolResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateSwapInPoolResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateSwapInPoolResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.amount != null && message.hasOwnProperty('amount')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
+          if (error) return 'amount.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateSwapInPoolResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateSwapInPoolResponse} QueryEstimateSwapInPoolResponse
+       */
+      QueryEstimateSwapInPoolResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateSwapInPoolResponse) return object;
+        let message = new $root.ununifi.irs.QueryEstimateSwapInPoolResponse();
+        if (object.amount != null) {
+          if (typeof object.amount !== 'object') throw TypeError('.ununifi.irs.QueryEstimateSwapInPoolResponse.amount: object expected');
+          message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateSwapInPoolResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolResponse
+       * @static
+       * @param {ununifi.irs.QueryEstimateSwapInPoolResponse} message QueryEstimateSwapInPoolResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateSwapInPoolResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.amount = null;
+        if (message.amount != null && message.hasOwnProperty('amount'))
+          object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateSwapInPoolResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateSwapInPoolResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateSwapInPoolResponse;
+    })();
+
+    irs.QueryEstimateMintPtYtPairRequest = (function () {
+      /**
+       * Properties of a QueryEstimateMintPtYtPairRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateMintPtYtPairRequest
+       * @property {Long|null} [pool_id] QueryEstimateMintPtYtPairRequest pool_id
+       * @property {cosmos.base.v1beta1.ICoin|null} [amount] QueryEstimateMintPtYtPairRequest amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateMintPtYtPairRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateMintPtYtPairRequest.
+       * @implements IQueryEstimateMintPtYtPairRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateMintPtYtPairRequest=} [properties] Properties to set
+       */
+      function QueryEstimateMintPtYtPairRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateMintPtYtPairRequest pool_id.
+       * @member {Long} pool_id
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairRequest
+       * @instance
+       */
+      QueryEstimateMintPtYtPairRequest.prototype.pool_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * QueryEstimateMintPtYtPairRequest amount.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairRequest
+       * @instance
+       */
+      QueryEstimateMintPtYtPairRequest.prototype.amount = null;
+
+      /**
+       * Encodes the specified QueryEstimateMintPtYtPairRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateMintPtYtPairRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateMintPtYtPairRequest} message QueryEstimateMintPtYtPairRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateMintPtYtPairRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.pool_id != null && Object.hasOwnProperty.call(message, 'pool_id'))
+          writer.uint32(/* id 1, wireType 0 =*/ 8).uint64(message.pool_id);
+        if (message.amount != null && Object.hasOwnProperty.call(message, 'amount'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 2, wireType 2 =*/ 18).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateMintPtYtPairRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateMintPtYtPairRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateMintPtYtPairRequest} message QueryEstimateMintPtYtPairRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateMintPtYtPairRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateMintPtYtPairRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateMintPtYtPairRequest} QueryEstimateMintPtYtPairRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateMintPtYtPairRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateMintPtYtPairRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.pool_id = reader.uint64();
+              break;
+            case 2:
+              message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateMintPtYtPairRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateMintPtYtPairRequest} QueryEstimateMintPtYtPairRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateMintPtYtPairRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateMintPtYtPairRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateMintPtYtPairRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (
+            !$util.isInteger(message.pool_id) &&
+            !(message.pool_id && $util.isInteger(message.pool_id.low) && $util.isInteger(message.pool_id.high))
+          )
+            return 'pool_id: integer|Long expected';
+        if (message.amount != null && message.hasOwnProperty('amount')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
+          if (error) return 'amount.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateMintPtYtPairRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateMintPtYtPairRequest} QueryEstimateMintPtYtPairRequest
+       */
+      QueryEstimateMintPtYtPairRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateMintPtYtPairRequest) return object;
+        let message = new $root.ununifi.irs.QueryEstimateMintPtYtPairRequest();
+        if (object.pool_id != null)
+          if ($util.Long) (message.pool_id = $util.Long.fromValue(object.pool_id)).unsigned = true;
+          else if (typeof object.pool_id === 'string') message.pool_id = parseInt(object.pool_id, 10);
+          else if (typeof object.pool_id === 'number') message.pool_id = object.pool_id;
+          else if (typeof object.pool_id === 'object')
+            message.pool_id = new $util.LongBits(object.pool_id.low >>> 0, object.pool_id.high >>> 0).toNumber(true);
+        if (object.amount != null) {
+          if (typeof object.amount !== 'object') throw TypeError('.ununifi.irs.QueryEstimateMintPtYtPairRequest.amount: object expected');
+          message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateMintPtYtPairRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairRequest
+       * @static
+       * @param {ununifi.irs.QueryEstimateMintPtYtPairRequest} message QueryEstimateMintPtYtPairRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateMintPtYtPairRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.pool_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.pool_id = options.longs === String ? '0' : 0;
+          object.amount = null;
+        }
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (typeof message.pool_id === 'number') object.pool_id = options.longs === String ? String(message.pool_id) : message.pool_id;
+          else
+            object.pool_id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.pool_id)
+                : options.longs === Number
+                ? new $util.LongBits(message.pool_id.low >>> 0, message.pool_id.high >>> 0).toNumber(true)
+                : message.pool_id;
+        if (message.amount != null && message.hasOwnProperty('amount'))
+          object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateMintPtYtPairRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateMintPtYtPairRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateMintPtYtPairRequest;
+    })();
+
+    irs.QueryEstimateMintPtYtPairResponse = (function () {
+      /**
+       * Properties of a QueryEstimateMintPtYtPairResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateMintPtYtPairResponse
+       * @property {cosmos.base.v1beta1.ICoin|null} [pt_amount] QueryEstimateMintPtYtPairResponse pt_amount
+       * @property {cosmos.base.v1beta1.ICoin|null} [yt_amount] QueryEstimateMintPtYtPairResponse yt_amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateMintPtYtPairResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateMintPtYtPairResponse.
+       * @implements IQueryEstimateMintPtYtPairResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateMintPtYtPairResponse=} [properties] Properties to set
+       */
+      function QueryEstimateMintPtYtPairResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateMintPtYtPairResponse pt_amount.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} pt_amount
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairResponse
+       * @instance
+       */
+      QueryEstimateMintPtYtPairResponse.prototype.pt_amount = null;
+
+      /**
+       * QueryEstimateMintPtYtPairResponse yt_amount.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} yt_amount
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairResponse
+       * @instance
+       */
+      QueryEstimateMintPtYtPairResponse.prototype.yt_amount = null;
+
+      /**
+       * Encodes the specified QueryEstimateMintPtYtPairResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateMintPtYtPairResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateMintPtYtPairResponse} message QueryEstimateMintPtYtPairResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateMintPtYtPairResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.pt_amount != null && Object.hasOwnProperty.call(message, 'pt_amount'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.pt_amount, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        if (message.yt_amount != null && Object.hasOwnProperty.call(message, 'yt_amount'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.yt_amount, writer.uint32(/* id 2, wireType 2 =*/ 18).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateMintPtYtPairResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateMintPtYtPairResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateMintPtYtPairResponse} message QueryEstimateMintPtYtPairResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateMintPtYtPairResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateMintPtYtPairResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateMintPtYtPairResponse} QueryEstimateMintPtYtPairResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateMintPtYtPairResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateMintPtYtPairResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.pt_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            case 2:
+              message.yt_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateMintPtYtPairResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateMintPtYtPairResponse} QueryEstimateMintPtYtPairResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateMintPtYtPairResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateMintPtYtPairResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateMintPtYtPairResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.pt_amount != null && message.hasOwnProperty('pt_amount')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.pt_amount);
+          if (error) return 'pt_amount.' + error;
+        }
+        if (message.yt_amount != null && message.hasOwnProperty('yt_amount')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.yt_amount);
+          if (error) return 'yt_amount.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateMintPtYtPairResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateMintPtYtPairResponse} QueryEstimateMintPtYtPairResponse
+       */
+      QueryEstimateMintPtYtPairResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateMintPtYtPairResponse) return object;
+        let message = new $root.ununifi.irs.QueryEstimateMintPtYtPairResponse();
+        if (object.pt_amount != null) {
+          if (typeof object.pt_amount !== 'object')
+            throw TypeError('.ununifi.irs.QueryEstimateMintPtYtPairResponse.pt_amount: object expected');
+          message.pt_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.pt_amount);
+        }
+        if (object.yt_amount != null) {
+          if (typeof object.yt_amount !== 'object')
+            throw TypeError('.ununifi.irs.QueryEstimateMintPtYtPairResponse.yt_amount: object expected');
+          message.yt_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.yt_amount);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateMintPtYtPairResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairResponse
+       * @static
+       * @param {ununifi.irs.QueryEstimateMintPtYtPairResponse} message QueryEstimateMintPtYtPairResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateMintPtYtPairResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          object.pt_amount = null;
+          object.yt_amount = null;
+        }
+        if (message.pt_amount != null && message.hasOwnProperty('pt_amount'))
+          object.pt_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.pt_amount, options);
+        if (message.yt_amount != null && message.hasOwnProperty('yt_amount'))
+          object.yt_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.yt_amount, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateMintPtYtPairResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateMintPtYtPairResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateMintPtYtPairResponse;
+    })();
+
+    irs.QueryEstimateRedeemYtRequest = (function () {
+      /**
+       * Properties of a QueryEstimateRedeemYtRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateRedeemYtRequest
+       * @property {Long|null} [pool_id] QueryEstimateRedeemYtRequest pool_id
+       * @property {cosmos.base.v1beta1.ICoin|null} [amount] QueryEstimateRedeemYtRequest amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateRedeemYtRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateRedeemYtRequest.
+       * @implements IQueryEstimateRedeemYtRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateRedeemYtRequest=} [properties] Properties to set
+       */
+      function QueryEstimateRedeemYtRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateRedeemYtRequest pool_id.
+       * @member {Long} pool_id
+       * @memberof ununifi.irs.QueryEstimateRedeemYtRequest
+       * @instance
+       */
+      QueryEstimateRedeemYtRequest.prototype.pool_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * QueryEstimateRedeemYtRequest amount.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+       * @memberof ununifi.irs.QueryEstimateRedeemYtRequest
+       * @instance
+       */
+      QueryEstimateRedeemYtRequest.prototype.amount = null;
+
+      /**
+       * Encodes the specified QueryEstimateRedeemYtRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateRedeemYtRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRedeemYtRequest} message QueryEstimateRedeemYtRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRedeemYtRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.pool_id != null && Object.hasOwnProperty.call(message, 'pool_id'))
+          writer.uint32(/* id 1, wireType 0 =*/ 8).uint64(message.pool_id);
+        if (message.amount != null && Object.hasOwnProperty.call(message, 'amount'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 2, wireType 2 =*/ 18).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateRedeemYtRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRedeemYtRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRedeemYtRequest} message QueryEstimateRedeemYtRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRedeemYtRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateRedeemYtRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateRedeemYtRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateRedeemYtRequest} QueryEstimateRedeemYtRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRedeemYtRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateRedeemYtRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.pool_id = reader.uint64();
+              break;
+            case 2:
+              message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateRedeemYtRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRedeemYtRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateRedeemYtRequest} QueryEstimateRedeemYtRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRedeemYtRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateRedeemYtRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateRedeemYtRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateRedeemYtRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (
+            !$util.isInteger(message.pool_id) &&
+            !(message.pool_id && $util.isInteger(message.pool_id.low) && $util.isInteger(message.pool_id.high))
+          )
+            return 'pool_id: integer|Long expected';
+        if (message.amount != null && message.hasOwnProperty('amount')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
+          if (error) return 'amount.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateRedeemYtRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateRedeemYtRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateRedeemYtRequest} QueryEstimateRedeemYtRequest
+       */
+      QueryEstimateRedeemYtRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateRedeemYtRequest) return object;
+        let message = new $root.ununifi.irs.QueryEstimateRedeemYtRequest();
+        if (object.pool_id != null)
+          if ($util.Long) (message.pool_id = $util.Long.fromValue(object.pool_id)).unsigned = true;
+          else if (typeof object.pool_id === 'string') message.pool_id = parseInt(object.pool_id, 10);
+          else if (typeof object.pool_id === 'number') message.pool_id = object.pool_id;
+          else if (typeof object.pool_id === 'object')
+            message.pool_id = new $util.LongBits(object.pool_id.low >>> 0, object.pool_id.high >>> 0).toNumber(true);
+        if (object.amount != null) {
+          if (typeof object.amount !== 'object') throw TypeError('.ununifi.irs.QueryEstimateRedeemYtRequest.amount: object expected');
+          message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateRedeemYtRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateRedeemYtRequest
+       * @static
+       * @param {ununifi.irs.QueryEstimateRedeemYtRequest} message QueryEstimateRedeemYtRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateRedeemYtRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.pool_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.pool_id = options.longs === String ? '0' : 0;
+          object.amount = null;
+        }
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (typeof message.pool_id === 'number') object.pool_id = options.longs === String ? String(message.pool_id) : message.pool_id;
+          else
+            object.pool_id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.pool_id)
+                : options.longs === Number
+                ? new $util.LongBits(message.pool_id.low >>> 0, message.pool_id.high >>> 0).toNumber(true)
+                : message.pool_id;
+        if (message.amount != null && message.hasOwnProperty('amount'))
+          object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateRedeemYtRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateRedeemYtRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateRedeemYtRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateRedeemYtRequest;
+    })();
+
+    irs.QueryEstimateRedeemYtResponse = (function () {
+      /**
+       * Properties of a QueryEstimateRedeemYtResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateRedeemYtResponse
+       * @property {cosmos.base.v1beta1.ICoin|null} [amount] QueryEstimateRedeemYtResponse amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateRedeemYtResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateRedeemYtResponse.
+       * @implements IQueryEstimateRedeemYtResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateRedeemYtResponse=} [properties] Properties to set
+       */
+      function QueryEstimateRedeemYtResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateRedeemYtResponse amount.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+       * @memberof ununifi.irs.QueryEstimateRedeemYtResponse
+       * @instance
+       */
+      QueryEstimateRedeemYtResponse.prototype.amount = null;
+
+      /**
+       * Encodes the specified QueryEstimateRedeemYtResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateRedeemYtResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRedeemYtResponse} message QueryEstimateRedeemYtResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRedeemYtResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.amount != null && Object.hasOwnProperty.call(message, 'amount'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateRedeemYtResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRedeemYtResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRedeemYtResponse} message QueryEstimateRedeemYtResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRedeemYtResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateRedeemYtResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateRedeemYtResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateRedeemYtResponse} QueryEstimateRedeemYtResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRedeemYtResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateRedeemYtResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateRedeemYtResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRedeemYtResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateRedeemYtResponse} QueryEstimateRedeemYtResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRedeemYtResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateRedeemYtResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateRedeemYtResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateRedeemYtResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.amount != null && message.hasOwnProperty('amount')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
+          if (error) return 'amount.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateRedeemYtResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateRedeemYtResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateRedeemYtResponse} QueryEstimateRedeemYtResponse
+       */
+      QueryEstimateRedeemYtResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateRedeemYtResponse) return object;
+        let message = new $root.ununifi.irs.QueryEstimateRedeemYtResponse();
+        if (object.amount != null) {
+          if (typeof object.amount !== 'object') throw TypeError('.ununifi.irs.QueryEstimateRedeemYtResponse.amount: object expected');
+          message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateRedeemYtResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateRedeemYtResponse
+       * @static
+       * @param {ununifi.irs.QueryEstimateRedeemYtResponse} message QueryEstimateRedeemYtResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateRedeemYtResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.amount = null;
+        if (message.amount != null && message.hasOwnProperty('amount'))
+          object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateRedeemYtResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateRedeemYtResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateRedeemYtResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateRedeemYtResponse;
+    })();
+
+    return irs;
+  })();
+
   ununifi.nft = (function () {
     /**
      * Namespace nft.
@@ -65877,7 +73595,6 @@ export const ununifi = ($root.ununifi = (() => {
        * @property {string|null} [deposit_fee_rate] StrategyContainer deposit_fee_rate
        * @property {string|null} [withdraw_fee_rate] StrategyContainer withdraw_fee_rate
        * @property {string|null} [performance_fee_rate] StrategyContainer performance_fee_rate
-       * @property {string|null} [symbol] StrategyContainer symbol
        */
 
       /**
@@ -65927,14 +73644,6 @@ export const ununifi = ($root.ununifi = (() => {
       StrategyContainer.prototype.performance_fee_rate = '';
 
       /**
-       * StrategyContainer symbol.
-       * @member {string} symbol
-       * @memberof ununifi.yieldaggregator.StrategyContainer
-       * @instance
-       */
-      StrategyContainer.prototype.symbol = '';
-
-      /**
        * Encodes the specified StrategyContainer message. Does not implicitly {@link ununifi.yieldaggregator.StrategyContainer.verify|verify} messages.
        * @function encode
        * @memberof ununifi.yieldaggregator.StrategyContainer
@@ -65953,8 +73662,6 @@ export const ununifi = ($root.ununifi = (() => {
           writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.withdraw_fee_rate);
         if (message.performance_fee_rate != null && Object.hasOwnProperty.call(message, 'performance_fee_rate'))
           writer.uint32(/* id 4, wireType 2 =*/ 34).string(message.performance_fee_rate);
-        if (message.symbol != null && Object.hasOwnProperty.call(message, 'symbol'))
-          writer.uint32(/* id 5, wireType 2 =*/ 42).string(message.symbol);
         return writer;
       };
 
@@ -66001,9 +73708,6 @@ export const ununifi = ($root.ununifi = (() => {
             case 4:
               message.performance_fee_rate = reader.string();
               break;
-            case 5:
-              message.symbol = reader.string();
-              break;
             default:
               reader.skipType(tag & 7);
               break;
@@ -66047,8 +73751,6 @@ export const ununifi = ($root.ununifi = (() => {
           if (!$util.isString(message.withdraw_fee_rate)) return 'withdraw_fee_rate: string expected';
         if (message.performance_fee_rate != null && message.hasOwnProperty('performance_fee_rate'))
           if (!$util.isString(message.performance_fee_rate)) return 'performance_fee_rate: string expected';
-        if (message.symbol != null && message.hasOwnProperty('symbol'))
-          if (!$util.isString(message.symbol)) return 'symbol: string expected';
         return null;
       };
 
@@ -66070,7 +73772,6 @@ export const ununifi = ($root.ununifi = (() => {
         if (object.deposit_fee_rate != null) message.deposit_fee_rate = String(object.deposit_fee_rate);
         if (object.withdraw_fee_rate != null) message.withdraw_fee_rate = String(object.withdraw_fee_rate);
         if (object.performance_fee_rate != null) message.performance_fee_rate = String(object.performance_fee_rate);
-        if (object.symbol != null) message.symbol = String(object.symbol);
         return message;
       };
 
@@ -66091,7 +73792,6 @@ export const ununifi = ($root.ununifi = (() => {
           object.deposit_fee_rate = '';
           object.withdraw_fee_rate = '';
           object.performance_fee_rate = '';
-          object.symbol = '';
         }
         if (message.strategy != null && message.hasOwnProperty('strategy'))
           object.strategy = $root.ununifi.yieldaggregator.Strategy.toObject(message.strategy, options);
@@ -66101,7 +73801,6 @@ export const ununifi = ($root.ununifi = (() => {
           object.withdraw_fee_rate = message.withdraw_fee_rate;
         if (message.performance_fee_rate != null && message.hasOwnProperty('performance_fee_rate'))
           object.performance_fee_rate = message.performance_fee_rate;
-        if (message.symbol != null && message.hasOwnProperty('symbol')) object.symbol = message.symbol;
         return object;
       };
 
@@ -66873,7 +74572,6 @@ export const ununifi = ($root.ununifi = (() => {
        * @property {string|null} [fee] QueryEstimateRedeemAmountResponse fee
        * @property {string|null} [redeem_amount] QueryEstimateRedeemAmountResponse redeem_amount
        * @property {string|null} [total_amount] QueryEstimateRedeemAmountResponse total_amount
-       * @property {string|null} [symbol] QueryEstimateRedeemAmountResponse symbol
        */
 
       /**
@@ -66923,14 +74621,6 @@ export const ununifi = ($root.ununifi = (() => {
       QueryEstimateRedeemAmountResponse.prototype.total_amount = '';
 
       /**
-       * QueryEstimateRedeemAmountResponse symbol.
-       * @member {string} symbol
-       * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
-       * @instance
-       */
-      QueryEstimateRedeemAmountResponse.prototype.symbol = '';
-
-      /**
        * Encodes the specified QueryEstimateRedeemAmountResponse message. Does not implicitly {@link ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse.verify|verify} messages.
        * @function encode
        * @memberof ununifi.yieldaggregator.QueryEstimateRedeemAmountResponse
@@ -66949,8 +74639,6 @@ export const ununifi = ($root.ununifi = (() => {
           writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.redeem_amount);
         if (message.total_amount != null && Object.hasOwnProperty.call(message, 'total_amount'))
           writer.uint32(/* id 4, wireType 2 =*/ 34).string(message.total_amount);
-        if (message.symbol != null && Object.hasOwnProperty.call(message, 'symbol'))
-          writer.uint32(/* id 5, wireType 2 =*/ 42).string(message.symbol);
         return writer;
       };
 
@@ -66997,9 +74685,6 @@ export const ununifi = ($root.ununifi = (() => {
             case 4:
               message.total_amount = reader.string();
               break;
-            case 5:
-              message.symbol = reader.string();
-              break;
             default:
               reader.skipType(tag & 7);
               break;
@@ -67042,8 +74727,6 @@ export const ununifi = ($root.ununifi = (() => {
           if (!$util.isString(message.redeem_amount)) return 'redeem_amount: string expected';
         if (message.total_amount != null && message.hasOwnProperty('total_amount'))
           if (!$util.isString(message.total_amount)) return 'total_amount: string expected';
-        if (message.symbol != null && message.hasOwnProperty('symbol'))
-          if (!$util.isString(message.symbol)) return 'symbol: string expected';
         return null;
       };
 
@@ -67066,7 +74749,6 @@ export const ununifi = ($root.ununifi = (() => {
         if (object.fee != null) message.fee = String(object.fee);
         if (object.redeem_amount != null) message.redeem_amount = String(object.redeem_amount);
         if (object.total_amount != null) message.total_amount = String(object.total_amount);
-        if (object.symbol != null) message.symbol = String(object.symbol);
         return message;
       };
 
@@ -67087,14 +74769,12 @@ export const ununifi = ($root.ununifi = (() => {
           object.fee = '';
           object.redeem_amount = '';
           object.total_amount = '';
-          object.symbol = '';
         }
         if (message.share_amount != null && message.hasOwnProperty('share_amount'))
           object.share_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.share_amount, options);
         if (message.fee != null && message.hasOwnProperty('fee')) object.fee = message.fee;
         if (message.redeem_amount != null && message.hasOwnProperty('redeem_amount')) object.redeem_amount = message.redeem_amount;
         if (message.total_amount != null && message.hasOwnProperty('total_amount')) object.total_amount = message.total_amount;
-        if (message.symbol != null && message.hasOwnProperty('symbol')) object.symbol = message.symbol;
         return object;
       };
 
