@@ -4,3 +4,4 @@ export * from './nftfactory';
 export * from './ecosystemincentive';
 export * from './derivatives';
 export * from './yieldaggregator';
+export * from './irs';
