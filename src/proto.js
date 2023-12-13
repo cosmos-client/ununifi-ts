@@ -30340,7 +30340,8 @@ export const ununifi = ($root.ununifi = (() => {
        * @memberof ununifi.irs
        * @interface IQueryEstimateSwapInPoolRequest
        * @property {Long|null} [pool_id] QueryEstimateSwapInPoolRequest pool_id
-       * @property {cosmos.base.v1beta1.ICoin|null} [amount] QueryEstimateSwapInPoolRequest amount
+       * @property {string|null} [denom] QueryEstimateSwapInPoolRequest denom
+       * @property {string|null} [amount] QueryEstimateSwapInPoolRequest amount
        */
 
       /**
@@ -30366,12 +30367,20 @@ export const ununifi = ($root.ununifi = (() => {
       QueryEstimateSwapInPoolRequest.prototype.pool_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
 
       /**
-       * QueryEstimateSwapInPoolRequest amount.
-       * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+       * QueryEstimateSwapInPoolRequest denom.
+       * @member {string} denom
        * @memberof ununifi.irs.QueryEstimateSwapInPoolRequest
        * @instance
        */
-      QueryEstimateSwapInPoolRequest.prototype.amount = null;
+      QueryEstimateSwapInPoolRequest.prototype.denom = '';
+
+      /**
+       * QueryEstimateSwapInPoolRequest amount.
+       * @member {string} amount
+       * @memberof ununifi.irs.QueryEstimateSwapInPoolRequest
+       * @instance
+       */
+      QueryEstimateSwapInPoolRequest.prototype.amount = '';
 
       /**
        * Encodes the specified QueryEstimateSwapInPoolRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateSwapInPoolRequest.verify|verify} messages.
@@ -30386,8 +30395,10 @@ export const ununifi = ($root.ununifi = (() => {
         if (!writer) writer = $Writer.create();
         if (message.pool_id != null && Object.hasOwnProperty.call(message, 'pool_id'))
           writer.uint32(/* id 1, wireType 0 =*/ 8).uint64(message.pool_id);
+        if (message.denom != null && Object.hasOwnProperty.call(message, 'denom'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.denom);
         if (message.amount != null && Object.hasOwnProperty.call(message, 'amount'))
-          $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 2, wireType 2 =*/ 18).fork()).ldelim();
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.amount);
         return writer;
       };
 
@@ -30426,7 +30437,10 @@ export const ununifi = ($root.ununifi = (() => {
               message.pool_id = reader.uint64();
               break;
             case 2:
-              message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              message.denom = reader.string();
+              break;
+            case 3:
+              message.amount = reader.string();
               break;
             default:
               reader.skipType(tag & 7);
@@ -30467,10 +30481,9 @@ export const ununifi = ($root.ununifi = (() => {
             !(message.pool_id && $util.isInteger(message.pool_id.low) && $util.isInteger(message.pool_id.high))
           )
             return 'pool_id: integer|Long expected';
-        if (message.amount != null && message.hasOwnProperty('amount')) {
-          let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
-          if (error) return 'amount.' + error;
-        }
+        if (message.denom != null && message.hasOwnProperty('denom')) if (!$util.isString(message.denom)) return 'denom: string expected';
+        if (message.amount != null && message.hasOwnProperty('amount'))
+          if (!$util.isString(message.amount)) return 'amount: string expected';
         return null;
       };
 
@@ -30491,10 +30504,8 @@ export const ununifi = ($root.ununifi = (() => {
           else if (typeof object.pool_id === 'number') message.pool_id = object.pool_id;
           else if (typeof object.pool_id === 'object')
             message.pool_id = new $util.LongBits(object.pool_id.low >>> 0, object.pool_id.high >>> 0).toNumber(true);
-        if (object.amount != null) {
-          if (typeof object.amount !== 'object') throw TypeError('.ununifi.irs.QueryEstimateSwapInPoolRequest.amount: object expected');
-          message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
-        }
+        if (object.denom != null) message.denom = String(object.denom);
+        if (object.amount != null) message.amount = String(object.amount);
         return message;
       };
 
@@ -30515,7 +30526,8 @@ export const ununifi = ($root.ununifi = (() => {
             let long = new $util.Long(0, 0, true);
             object.pool_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
           } else object.pool_id = options.longs === String ? '0' : 0;
-          object.amount = null;
+          object.denom = '';
+          object.amount = '';
         }
         if (message.pool_id != null && message.hasOwnProperty('pool_id'))
           if (typeof message.pool_id === 'number') object.pool_id = options.longs === String ? String(message.pool_id) : message.pool_id;
@@ -30526,8 +30538,8 @@ export const ununifi = ($root.ununifi = (() => {
                 : options.longs === Number
                 ? new $util.LongBits(message.pool_id.low >>> 0, message.pool_id.high >>> 0).toNumber(true)
                 : message.pool_id;
-        if (message.amount != null && message.hasOwnProperty('amount'))
-          object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+        if (message.denom != null && message.hasOwnProperty('denom')) object.denom = message.denom;
+        if (message.amount != null && message.hasOwnProperty('amount')) object.amount = message.amount;
         return object;
       };
 
@@ -30721,7 +30733,8 @@ export const ununifi = ($root.ununifi = (() => {
        * @memberof ununifi.irs
        * @interface IQueryEstimateMintPtYtPairRequest
        * @property {Long|null} [pool_id] QueryEstimateMintPtYtPairRequest pool_id
-       * @property {cosmos.base.v1beta1.ICoin|null} [amount] QueryEstimateMintPtYtPairRequest amount
+       * @property {string|null} [denom] QueryEstimateMintPtYtPairRequest denom
+       * @property {string|null} [amount] QueryEstimateMintPtYtPairRequest amount
        */
 
       /**
@@ -30747,12 +30760,20 @@ export const ununifi = ($root.ununifi = (() => {
       QueryEstimateMintPtYtPairRequest.prototype.pool_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
 
       /**
-       * QueryEstimateMintPtYtPairRequest amount.
-       * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+       * QueryEstimateMintPtYtPairRequest denom.
+       * @member {string} denom
        * @memberof ununifi.irs.QueryEstimateMintPtYtPairRequest
        * @instance
        */
-      QueryEstimateMintPtYtPairRequest.prototype.amount = null;
+      QueryEstimateMintPtYtPairRequest.prototype.denom = '';
+
+      /**
+       * QueryEstimateMintPtYtPairRequest amount.
+       * @member {string} amount
+       * @memberof ununifi.irs.QueryEstimateMintPtYtPairRequest
+       * @instance
+       */
+      QueryEstimateMintPtYtPairRequest.prototype.amount = '';
 
       /**
        * Encodes the specified QueryEstimateMintPtYtPairRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateMintPtYtPairRequest.verify|verify} messages.
@@ -30767,8 +30788,10 @@ export const ununifi = ($root.ununifi = (() => {
         if (!writer) writer = $Writer.create();
         if (message.pool_id != null && Object.hasOwnProperty.call(message, 'pool_id'))
           writer.uint32(/* id 1, wireType 0 =*/ 8).uint64(message.pool_id);
+        if (message.denom != null && Object.hasOwnProperty.call(message, 'denom'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.denom);
         if (message.amount != null && Object.hasOwnProperty.call(message, 'amount'))
-          $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 2, wireType 2 =*/ 18).fork()).ldelim();
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.amount);
         return writer;
       };
 
@@ -30807,7 +30830,10 @@ export const ununifi = ($root.ununifi = (() => {
               message.pool_id = reader.uint64();
               break;
             case 2:
-              message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              message.denom = reader.string();
+              break;
+            case 3:
+              message.amount = reader.string();
               break;
             default:
               reader.skipType(tag & 7);
@@ -30848,10 +30874,9 @@ export const ununifi = ($root.ununifi = (() => {
             !(message.pool_id && $util.isInteger(message.pool_id.low) && $util.isInteger(message.pool_id.high))
           )
             return 'pool_id: integer|Long expected';
-        if (message.amount != null && message.hasOwnProperty('amount')) {
-          let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
-          if (error) return 'amount.' + error;
-        }
+        if (message.denom != null && message.hasOwnProperty('denom')) if (!$util.isString(message.denom)) return 'denom: string expected';
+        if (message.amount != null && message.hasOwnProperty('amount'))
+          if (!$util.isString(message.amount)) return 'amount: string expected';
         return null;
       };
 
@@ -30872,10 +30897,8 @@ export const ununifi = ($root.ununifi = (() => {
           else if (typeof object.pool_id === 'number') message.pool_id = object.pool_id;
           else if (typeof object.pool_id === 'object')
             message.pool_id = new $util.LongBits(object.pool_id.low >>> 0, object.pool_id.high >>> 0).toNumber(true);
-        if (object.amount != null) {
-          if (typeof object.amount !== 'object') throw TypeError('.ununifi.irs.QueryEstimateMintPtYtPairRequest.amount: object expected');
-          message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
-        }
+        if (object.denom != null) message.denom = String(object.denom);
+        if (object.amount != null) message.amount = String(object.amount);
         return message;
       };
 
@@ -30896,7 +30919,8 @@ export const ununifi = ($root.ununifi = (() => {
             let long = new $util.Long(0, 0, true);
             object.pool_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
           } else object.pool_id = options.longs === String ? '0' : 0;
-          object.amount = null;
+          object.denom = '';
+          object.amount = '';
         }
         if (message.pool_id != null && message.hasOwnProperty('pool_id'))
           if (typeof message.pool_id === 'number') object.pool_id = options.longs === String ? String(message.pool_id) : message.pool_id;
@@ -30907,8 +30931,8 @@ export const ununifi = ($root.ununifi = (() => {
                 : options.longs === Number
                 ? new $util.LongBits(message.pool_id.low >>> 0, message.pool_id.high >>> 0).toNumber(true)
                 : message.pool_id;
-        if (message.amount != null && message.hasOwnProperty('amount'))
-          object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+        if (message.denom != null && message.hasOwnProperty('denom')) object.denom = message.denom;
+        if (message.amount != null && message.hasOwnProperty('amount')) object.amount = message.amount;
         return object;
       };
 
@@ -31131,7 +31155,8 @@ export const ununifi = ($root.ununifi = (() => {
        * @memberof ununifi.irs
        * @interface IQueryEstimateRedeemYtRequest
        * @property {Long|null} [pool_id] QueryEstimateRedeemYtRequest pool_id
-       * @property {cosmos.base.v1beta1.ICoin|null} [amount] QueryEstimateRedeemYtRequest amount
+       * @property {string|null} [denom] QueryEstimateRedeemYtRequest denom
+       * @property {string|null} [amount] QueryEstimateRedeemYtRequest amount
        */
 
       /**
@@ -31157,12 +31182,20 @@ export const ununifi = ($root.ununifi = (() => {
       QueryEstimateRedeemYtRequest.prototype.pool_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
 
       /**
-       * QueryEstimateRedeemYtRequest amount.
-       * @member {cosmos.base.v1beta1.ICoin|null|undefined} amount
+       * QueryEstimateRedeemYtRequest denom.
+       * @member {string} denom
        * @memberof ununifi.irs.QueryEstimateRedeemYtRequest
        * @instance
        */
-      QueryEstimateRedeemYtRequest.prototype.amount = null;
+      QueryEstimateRedeemYtRequest.prototype.denom = '';
+
+      /**
+       * QueryEstimateRedeemYtRequest amount.
+       * @member {string} amount
+       * @memberof ununifi.irs.QueryEstimateRedeemYtRequest
+       * @instance
+       */
+      QueryEstimateRedeemYtRequest.prototype.amount = '';
 
       /**
        * Encodes the specified QueryEstimateRedeemYtRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtRequest.verify|verify} messages.
@@ -31177,8 +31210,10 @@ export const ununifi = ($root.ununifi = (() => {
         if (!writer) writer = $Writer.create();
         if (message.pool_id != null && Object.hasOwnProperty.call(message, 'pool_id'))
           writer.uint32(/* id 1, wireType 0 =*/ 8).uint64(message.pool_id);
+        if (message.denom != null && Object.hasOwnProperty.call(message, 'denom'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.denom);
         if (message.amount != null && Object.hasOwnProperty.call(message, 'amount'))
-          $root.cosmos.base.v1beta1.Coin.encode(message.amount, writer.uint32(/* id 2, wireType 2 =*/ 18).fork()).ldelim();
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.amount);
         return writer;
       };
 
@@ -31217,7 +31252,10 @@ export const ununifi = ($root.ununifi = (() => {
               message.pool_id = reader.uint64();
               break;
             case 2:
-              message.amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              message.denom = reader.string();
+              break;
+            case 3:
+              message.amount = reader.string();
               break;
             default:
               reader.skipType(tag & 7);
@@ -31258,10 +31296,9 @@ export const ununifi = ($root.ununifi = (() => {
             !(message.pool_id && $util.isInteger(message.pool_id.low) && $util.isInteger(message.pool_id.high))
           )
             return 'pool_id: integer|Long expected';
-        if (message.amount != null && message.hasOwnProperty('amount')) {
-          let error = $root.cosmos.base.v1beta1.Coin.verify(message.amount);
-          if (error) return 'amount.' + error;
-        }
+        if (message.denom != null && message.hasOwnProperty('denom')) if (!$util.isString(message.denom)) return 'denom: string expected';
+        if (message.amount != null && message.hasOwnProperty('amount'))
+          if (!$util.isString(message.amount)) return 'amount: string expected';
         return null;
       };
 
@@ -31282,10 +31319,8 @@ export const ununifi = ($root.ununifi = (() => {
           else if (typeof object.pool_id === 'number') message.pool_id = object.pool_id;
           else if (typeof object.pool_id === 'object')
             message.pool_id = new $util.LongBits(object.pool_id.low >>> 0, object.pool_id.high >>> 0).toNumber(true);
-        if (object.amount != null) {
-          if (typeof object.amount !== 'object') throw TypeError('.ununifi.irs.QueryEstimateRedeemYtRequest.amount: object expected');
-          message.amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.amount);
-        }
+        if (object.denom != null) message.denom = String(object.denom);
+        if (object.amount != null) message.amount = String(object.amount);
         return message;
       };
 
@@ -31306,7 +31341,8 @@ export const ununifi = ($root.ununifi = (() => {
             let long = new $util.Long(0, 0, true);
             object.pool_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
           } else object.pool_id = options.longs === String ? '0' : 0;
-          object.amount = null;
+          object.denom = '';
+          object.amount = '';
         }
         if (message.pool_id != null && message.hasOwnProperty('pool_id'))
           if (typeof message.pool_id === 'number') object.pool_id = options.longs === String ? String(message.pool_id) : message.pool_id;
@@ -31317,8 +31353,8 @@ export const ununifi = ($root.ununifi = (() => {
                 : options.longs === Number
                 ? new $util.LongBits(message.pool_id.low >>> 0, message.pool_id.high >>> 0).toNumber(true)
                 : message.pool_id;
-        if (message.amount != null && message.hasOwnProperty('amount'))
-          object.amount = $root.cosmos.base.v1beta1.Coin.toObject(message.amount, options);
+        if (message.denom != null && message.hasOwnProperty('denom')) object.denom = message.denom;
+        if (message.amount != null && message.hasOwnProperty('amount')) object.amount = message.amount;
         return object;
       };
 

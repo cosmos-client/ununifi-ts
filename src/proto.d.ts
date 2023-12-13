@@ -14239,8 +14239,11 @@ export namespace ununifi {
       /** QueryEstimateSwapInPoolRequest pool_id */
       pool_id?: Long | null;
 
+      /** QueryEstimateSwapInPoolRequest denom */
+      denom?: string | null;
+
       /** QueryEstimateSwapInPoolRequest amount */
-      amount?: cosmos.base.v1beta1.ICoin | null;
+      amount?: string | null;
     }
 
     /** Represents a QueryEstimateSwapInPoolRequest. */
@@ -14254,8 +14257,11 @@ export namespace ununifi {
       /** QueryEstimateSwapInPoolRequest pool_id. */
       public pool_id: Long;
 
+      /** QueryEstimateSwapInPoolRequest denom. */
+      public denom: string;
+
       /** QueryEstimateSwapInPoolRequest amount. */
-      public amount?: cosmos.base.v1beta1.ICoin | null;
+      public amount: string;
 
       /**
        * Encodes the specified QueryEstimateSwapInPoolRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateSwapInPoolRequest.verify|verify} messages.
@@ -14413,8 +14419,11 @@ export namespace ununifi {
       /** QueryEstimateMintPtYtPairRequest pool_id */
       pool_id?: Long | null;
 
+      /** QueryEstimateMintPtYtPairRequest denom */
+      denom?: string | null;
+
       /** QueryEstimateMintPtYtPairRequest amount */
-      amount?: cosmos.base.v1beta1.ICoin | null;
+      amount?: string | null;
     }
 
     /** Represents a QueryEstimateMintPtYtPairRequest. */
@@ -14428,8 +14437,11 @@ export namespace ununifi {
       /** QueryEstimateMintPtYtPairRequest pool_id. */
       public pool_id: Long;
 
+      /** QueryEstimateMintPtYtPairRequest denom. */
+      public denom: string;
+
       /** QueryEstimateMintPtYtPairRequest amount. */
-      public amount?: cosmos.base.v1beta1.ICoin | null;
+      public amount: string;
 
       /**
        * Encodes the specified QueryEstimateMintPtYtPairRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateMintPtYtPairRequest.verify|verify} messages.
@@ -14593,8 +14605,11 @@ export namespace ununifi {
       /** QueryEstimateRedeemYtRequest pool_id */
       pool_id?: Long | null;
 
+      /** QueryEstimateRedeemYtRequest denom */
+      denom?: string | null;
+
       /** QueryEstimateRedeemYtRequest amount */
-      amount?: cosmos.base.v1beta1.ICoin | null;
+      amount?: string | null;
     }
 
     /** Represents a QueryEstimateRedeemYtRequest. */
@@ -14608,8 +14623,11 @@ export namespace ununifi {
       /** QueryEstimateRedeemYtRequest pool_id. */
       public pool_id: Long;
 
+      /** QueryEstimateRedeemYtRequest denom. */
+      public denom: string;
+
       /** QueryEstimateRedeemYtRequest amount. */
-      public amount?: cosmos.base.v1beta1.ICoin | null;
+      public amount: string;
 
       /**
        * Encodes the specified QueryEstimateRedeemYtRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtRequest.verify|verify} messages.
