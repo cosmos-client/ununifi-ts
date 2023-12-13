@@ -5562,15 +5562,15 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
      *
      * @summary Estimate mint amountof PT&YT pair
      * @param {string} [poolId]
-     * @param {string} [amountDenom]
-     * @param {string} [amountAmount]
+     * @param {string} [denom]
+     * @param {string} [amount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     estimateMintPtYtPair: async (
       poolId?: string,
-      amountDenom?: string,
-      amountAmount?: string,
+      denom?: string,
+      amount?: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
       const localVarPath = `/ununifi/irs/estimate-mint-pt-yt-pair`;
@@ -5589,12 +5589,12 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         localVarQueryParameter['pool_id'] = poolId;
       }
 
-      if (amountDenom !== undefined) {
-        localVarQueryParameter['amount.denom'] = amountDenom;
+      if (denom !== undefined) {
+        localVarQueryParameter['denom'] = denom;
       }
 
-      if (amountAmount !== undefined) {
-        localVarQueryParameter['amount.amount'] = amountAmount;
+      if (amount !== undefined) {
+        localVarQueryParameter['amount'] = amount;
       }
 
       setSearchParams(localVarUrlObj, localVarQueryParameter);
@@ -5685,17 +5685,12 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
      *
      * @summary Estimate redeem amount of YT after maturity
      * @param {string} [poolId]
-     * @param {string} [amountDenom]
-     * @param {string} [amountAmount]
+     * @param {string} [denom]
+     * @param {string} [amount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    estimateRedeemYt: async (
-      poolId?: string,
-      amountDenom?: string,
-      amountAmount?: string,
-      options: AxiosRequestConfig = {},
-    ): Promise<RequestArgs> => {
+    estimateRedeemYt: async (poolId?: string, denom?: string, amount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       const localVarPath = `/ununifi/irs/estimate-redeem-yt`;
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -5712,12 +5707,12 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         localVarQueryParameter['pool_id'] = poolId;
       }
 
-      if (amountDenom !== undefined) {
-        localVarQueryParameter['amount.denom'] = amountDenom;
+      if (denom !== undefined) {
+        localVarQueryParameter['denom'] = denom;
       }
 
-      if (amountAmount !== undefined) {
-        localVarQueryParameter['amount.amount'] = amountAmount;
+      if (amount !== undefined) {
+        localVarQueryParameter['amount'] = amount;
       }
 
       setSearchParams(localVarUrlObj, localVarQueryParameter);
@@ -5733,15 +5728,15 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
      *
      * @summary Estimate swap amount of UT/PT (in the pool)
      * @param {string} [poolId]
-     * @param {string} [amountDenom]
-     * @param {string} [amountAmount]
+     * @param {string} [denom]
+     * @param {string} [amount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     estimateSwapInPool: async (
       poolId?: string,
-      amountDenom?: string,
-      amountAmount?: string,
+      denom?: string,
+      amount?: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
       const localVarPath = `/ununifi/irs/estimate-swap-in-pool`;
@@ -5760,12 +5755,12 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
         localVarQueryParameter['pool_id'] = poolId;
       }
 
-      if (amountDenom !== undefined) {
-        localVarQueryParameter['amount.denom'] = amountDenom;
+      if (denom !== undefined) {
+        localVarQueryParameter['denom'] = denom;
       }
 
-      if (amountAmount !== undefined) {
-        localVarQueryParameter['amount.amount'] = amountAmount;
+      if (amount !== undefined) {
+        localVarQueryParameter['amount'] = amount;
       }
 
       setSearchParams(localVarUrlObj, localVarQueryParameter);
@@ -7478,18 +7473,18 @@ export const QueryApiFp = function (configuration?: Configuration) {
      *
      * @summary Estimate mint amountof PT&YT pair
      * @param {string} [poolId]
-     * @param {string} [amountDenom]
-     * @param {string} [amountAmount]
+     * @param {string} [denom]
+     * @param {string} [amount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async estimateMintPtYtPair(
       poolId?: string,
-      amountDenom?: string,
-      amountAmount?: string,
+      denom?: string,
+      amount?: string,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateMintPtYtPair200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateMintPtYtPair(poolId, amountDenom, amountAmount, options);
+      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateMintPtYtPair(poolId, denom, amount, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -7526,36 +7521,36 @@ export const QueryApiFp = function (configuration?: Configuration) {
      *
      * @summary Estimate redeem amount of YT after maturity
      * @param {string} [poolId]
-     * @param {string} [amountDenom]
-     * @param {string} [amountAmount]
+     * @param {string} [denom]
+     * @param {string} [amount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async estimateRedeemYt(
       poolId?: string,
-      amountDenom?: string,
-      amountAmount?: string,
+      denom?: string,
+      amount?: string,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRedeemYt200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemYt(poolId, amountDenom, amountAmount, options);
+      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemYt(poolId, denom, amount, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
      *
      * @summary Estimate swap amount of UT/PT (in the pool)
      * @param {string} [poolId]
-     * @param {string} [amountDenom]
-     * @param {string} [amountAmount]
+     * @param {string} [denom]
+     * @param {string} [amount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async estimateSwapInPool(
       poolId?: string,
-      amountDenom?: string,
-      amountAmount?: string,
+      denom?: string,
+      amount?: string,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRedeemYt200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateSwapInPool(poolId, amountDenom, amountAmount, options);
+      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateSwapInPool(poolId, denom, amount, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -8341,18 +8336,13 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
      *
      * @summary Estimate mint amountof PT&YT pair
      * @param {string} [poolId]
-     * @param {string} [amountDenom]
-     * @param {string} [amountAmount]
+     * @param {string} [denom]
+     * @param {string} [amount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    estimateMintPtYtPair(
-      poolId?: string,
-      amountDenom?: string,
-      amountAmount?: string,
-      options?: any,
-    ): AxiosPromise<EstimateMintPtYtPair200Response> {
-      return localVarFp.estimateMintPtYtPair(poolId, amountDenom, amountAmount, options).then((request) => request(axios, basePath));
+    estimateMintPtYtPair(poolId?: string, denom?: string, amount?: string, options?: any): AxiosPromise<EstimateMintPtYtPair200Response> {
+      return localVarFp.estimateMintPtYtPair(poolId, denom, amount, options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -8378,35 +8368,25 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
      *
      * @summary Estimate redeem amount of YT after maturity
      * @param {string} [poolId]
-     * @param {string} [amountDenom]
-     * @param {string} [amountAmount]
+     * @param {string} [denom]
+     * @param {string} [amount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    estimateRedeemYt(
-      poolId?: string,
-      amountDenom?: string,
-      amountAmount?: string,
-      options?: any,
-    ): AxiosPromise<EstimateRedeemYt200Response> {
-      return localVarFp.estimateRedeemYt(poolId, amountDenom, amountAmount, options).then((request) => request(axios, basePath));
+    estimateRedeemYt(poolId?: string, denom?: string, amount?: string, options?: any): AxiosPromise<EstimateRedeemYt200Response> {
+      return localVarFp.estimateRedeemYt(poolId, denom, amount, options).then((request) => request(axios, basePath));
     },
     /**
      *
      * @summary Estimate swap amount of UT/PT (in the pool)
      * @param {string} [poolId]
-     * @param {string} [amountDenom]
-     * @param {string} [amountAmount]
+     * @param {string} [denom]
+     * @param {string} [amount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    estimateSwapInPool(
-      poolId?: string,
-      amountDenom?: string,
-      amountAmount?: string,
-      options?: any,
-    ): AxiosPromise<EstimateRedeemYt200Response> {
-      return localVarFp.estimateSwapInPool(poolId, amountDenom, amountAmount, options).then((request) => request(axios, basePath));
+    estimateSwapInPool(poolId?: string, denom?: string, amount?: string, options?: any): AxiosPromise<EstimateRedeemYt200Response> {
+      return localVarFp.estimateSwapInPool(poolId, denom, amount, options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -9092,15 +9072,15 @@ export class QueryApi extends BaseAPI {
    *
    * @summary Estimate mint amountof PT&YT pair
    * @param {string} [poolId]
-   * @param {string} [amountDenom]
-   * @param {string} [amountAmount]
+   * @param {string} [denom]
+   * @param {string} [amount]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public estimateMintPtYtPair(poolId?: string, amountDenom?: string, amountAmount?: string, options?: AxiosRequestConfig) {
+  public estimateMintPtYtPair(poolId?: string, denom?: string, amount?: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .estimateMintPtYtPair(poolId, amountDenom, amountAmount, options)
+      .estimateMintPtYtPair(poolId, denom, amount, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -9136,15 +9116,15 @@ export class QueryApi extends BaseAPI {
    *
    * @summary Estimate redeem amount of YT after maturity
    * @param {string} [poolId]
-   * @param {string} [amountDenom]
-   * @param {string} [amountAmount]
+   * @param {string} [denom]
+   * @param {string} [amount]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public estimateRedeemYt(poolId?: string, amountDenom?: string, amountAmount?: string, options?: AxiosRequestConfig) {
+  public estimateRedeemYt(poolId?: string, denom?: string, amount?: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .estimateRedeemYt(poolId, amountDenom, amountAmount, options)
+      .estimateRedeemYt(poolId, denom, amount, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -9152,15 +9132,15 @@ export class QueryApi extends BaseAPI {
    *
    * @summary Estimate swap amount of UT/PT (in the pool)
    * @param {string} [poolId]
-   * @param {string} [amountDenom]
-   * @param {string} [amountAmount]
+   * @param {string} [denom]
+   * @param {string} [amount]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public estimateSwapInPool(poolId?: string, amountDenom?: string, amountAmount?: string, options?: AxiosRequestConfig) {
+  public estimateSwapInPool(poolId?: string, denom?: string, amount?: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .estimateSwapInPool(poolId, amountDenom, amountAmount, options)
+      .estimateSwapInPool(poolId, denom, amount, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
