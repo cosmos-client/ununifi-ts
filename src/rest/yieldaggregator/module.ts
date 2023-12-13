@@ -28,3 +28,15 @@ export function estimateMintAmount(sdk: cosmosclient.CosmosSDK, id: string, amou
 export function estimateRedeemAmount(sdk: cosmosclient.CosmosSDK, id: string, amount?: string) {
   return new QueryApi(undefined, sdk.url).estimateRedeemAmount(id, amount);
 }
+
+export function denomInfos(sdk: cosmosclient.CosmosSDK) {
+  return new QueryApi(undefined, sdk.url).denomInfos();
+}
+
+export function symbolInfos(sdk: cosmosclient.CosmosSDK) {
+  return new QueryApi(undefined, sdk.url).symbolInfos();
+}
+
+export function intermediaryAccountInfo(sdk: cosmosclient.CosmosSDK) {
+  return new QueryApi(undefined, sdk.url).intermediaryAccountInfo();
+}
