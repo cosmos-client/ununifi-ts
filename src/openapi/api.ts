@@ -245,6 +245,74 @@ export interface AllPositions200ResponsePositionsInner {
   position_instance?: EstimateDLPTokenAmountDefaultResponseDetailsInner;
 }
 /**
+ * QueryTranchesResponse is response type for the Query/Tranches RPC method.
+ * @export
+ * @interface AllTranches200Response
+ */
+export interface AllTranches200Response {
+  /**
+   *
+   * @type {Array<AllTranches200ResponseTranchesInner>}
+   * @memberof AllTranches200Response
+   */
+  tranches?: Array<AllTranches200ResponseTranchesInner>;
+}
+/**
+ *
+ * @export
+ * @interface AllTranches200ResponseTranchesInner
+ */
+export interface AllTranches200ResponseTranchesInner {
+  /**
+   *
+   * @type {string}
+   * @memberof AllTranches200ResponseTranchesInner
+   */
+  id?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AllTranches200ResponseTranchesInner
+   */
+  strategy_contract?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AllTranches200ResponseTranchesInner
+   */
+  start_time?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AllTranches200ResponseTranchesInner
+   */
+  maturity?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AllTranches200ResponseTranchesInner
+   */
+  swap_fee?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AllTranches200ResponseTranchesInner
+   */
+  exit_fee?: string;
+  /**
+   *
+   * @type {SumOfAllLPTokensSentOut}
+   * @memberof AllTranches200ResponseTranchesInner
+   */
+  total_shares?: SumOfAllLPTokensSentOut;
+  /**
+   *
+   * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
+   * @memberof AllTranches200ResponseTranchesInner
+   */
+  pool_assets?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
+}
+/**
  *
  * @export
  * @interface AvailableAssetsInPool200Response
@@ -864,6 +932,25 @@ export interface EstimateMintAmount200Response {
 /**
  *
  * @export
+ * @interface EstimateMintPtYtPair200Response
+ */
+export interface EstimateMintPtYtPair200Response {
+  /**
+   *
+   * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+   * @memberof EstimateMintPtYtPair200Response
+   */
+  pt_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+  /**
+   *
+   * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+   * @memberof EstimateMintPtYtPair200Response
+   */
+  yt_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+}
+/**
+ *
+ * @export
  * @interface EstimateRedeemAmount200Response
  */
 export interface EstimateRedeemAmount200Response {
@@ -891,12 +978,6 @@ export interface EstimateRedeemAmount200Response {
    * @memberof EstimateRedeemAmount200Response
    */
   total_amount?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof EstimateRedeemAmount200Response
-   */
-  symbol?: string;
 }
 /**
  *
@@ -916,6 +997,19 @@ export interface EstimateRedeemTokenAmount200Response {
    * @memberof EstimateRedeemTokenAmount200Response
    */
   fee?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+}
+/**
+ *
+ * @export
+ * @interface EstimateRedeemYt200Response
+ */
+export interface EstimateRedeemYt200Response {
+  /**
+   *
+   * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+   * @memberof EstimateRedeemYt200Response
+   */
+  amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * `Any` contains an arbitrary serialized protocol buffer message along with a URL that describes the type of the serialized message.  Protobuf library provides support to pack/unpack Any values in the form of utility functions or additional generated methods of the Any type.  Example 1: Pack and unpack a message in C++.      Foo foo = ...;     Any any;     any.PackFrom(foo);     ...     if (any.UnpackTo(&foo)) {       ...     }  Example 2: Pack and unpack a message in Java.      Foo foo = ...;     Any any = Any.pack(foo);     ...     if (any.is(Foo.class)) {       foo = any.unpack(Foo.class);     }  Example 3: Pack and unpack a message in Python.      foo = Foo(...)     any = Any()     any.Pack(foo)     ...     if any.Is(Foo.DESCRIPTOR):       any.Unpack(foo)       ...  Example 4: Pack and unpack a message in Go       foo := &pb.Foo{...}      any, err := anypb.New(foo)      if err != nil {        ...      }      ...      foo := &pb.Foo{}      if err := any.UnmarshalTo(foo); err != nil {        ...      }  The pack methods provided by protobuf library will by default use \'type.googleapis.com/full.type.name\' as the type URL and the unpack methods only use the fully qualified type name after the last \'/\' in the type URL, for example \"foo.bar.com/x/y.z\" will yield type name \"y.z\".   JSON  The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:      package google.profile;     message Person {       string first_name = 1;       string last_name = 2;     }      {       \"@type\": \"type.googleapis.com/google.profile.Person\",       \"firstName\": <string>,       \"lastName\": <string>     }  If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message [google.protobuf.Duration][]):      {       \"@type\": \"type.googleapis.com/google.protobuf.Duration\",       \"value\": \"1.212s\"     }
@@ -998,6 +1092,38 @@ export interface IntermediaryAccountInfo200ResponseAddrsInner {
    * @memberof IntermediaryAccountInfo200ResponseAddrsInner
    */
   address?: string;
+}
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @export
+ * @interface IrsParams200Response
+ */
+export interface IrsParams200Response {
+  /**
+   *
+   * @type {IrsParams200ResponseParams}
+   * @memberof IrsParams200Response
+   */
+  params?: IrsParams200ResponseParams;
+}
+/**
+ * params holds all the parameters of this module.
+ * @export
+ * @interface IrsParams200ResponseParams
+ */
+export interface IrsParams200ResponseParams {
+  /**
+   *
+   * @type {string}
+   * @memberof IrsParams200ResponseParams
+   */
+  authority?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof IrsParams200ResponseParams
+   */
+  trade_fee_rate?: string;
 }
 /**
  *
@@ -2050,12 +2176,6 @@ export interface StrategyAll200ResponseStrategiesInner {
    * @memberof StrategyAll200ResponseStrategiesInner
    */
   performance_fee_rate?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof StrategyAll200ResponseStrategiesInner
-   */
-  symbol?: string;
 }
 /**
  *
@@ -2101,6 +2221,25 @@ export interface StrategyAll200ResponseStrategiesInnerStrategy {
   git_url?: string;
 }
 /**
+ * Coin defines a token with a denomination and an amount.  NOTE: The amount field is an Int which implements the custom method signatures required by gogoproto.
+ * @export
+ * @interface SumOfAllLPTokensSentOut
+ */
+export interface SumOfAllLPTokensSentOut {
+  /**
+   *
+   * @type {string}
+   * @memberof SumOfAllLPTokensSentOut
+   */
+  denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof SumOfAllLPTokensSentOut
+   */
+  amount?: string;
+}
+/**
  *
  * @export
  * @interface SymbolInfos200Response
@@ -2137,6 +2276,19 @@ export interface SymbolInfos200ResponseInfoInner {
    * @memberof SymbolInfos200ResponseInfoInner
    */
   channels?: Array<DenomInfos200ResponseInfoInnerChannelsInner>;
+}
+/**
+ * QueryTranchResponse is response type for the Query/Tranch RPC method.
+ * @export
+ * @interface Tranche200Response
+ */
+export interface Tranche200Response {
+  /**
+   *
+   * @type {AllTranches200ResponseTranchesInner}
+   * @memberof Tranche200Response
+   */
+  tranche?: AllTranches200ResponseTranchesInner;
 }
 /**
  *
@@ -2950,6 +3102,258 @@ export const UnunifiEcosystemincentiveRewardType = {
 export type UnunifiEcosystemincentiveRewardType =
   (typeof UnunifiEcosystemincentiveRewardType)[keyof typeof UnunifiEcosystemincentiveRewardType];
 
+/**
+ *
+ * @export
+ * @interface UnunifiIrsInterestRateSwapVault
+ */
+export interface UnunifiIrsInterestRateSwapVault {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsInterestRateSwapVault
+   */
+  strategy_contract?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsInterestRateSwapVault
+   */
+  name?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsInterestRateSwapVault
+   */
+  description?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsInterestRateSwapVault
+   */
+  max_maturity?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsInterestRateSwapVault
+   */
+  cycle?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsInterestRateSwapVault
+   */
+  last_tranche_time?: string;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiIrsParams
+ */
+export interface UnunifiIrsParams {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsParams
+   */
+  authority?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsParams
+   */
+  trade_fee_rate?: string;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiIrsQueryEstimateMintPtYtPairResponse
+ */
+export interface UnunifiIrsQueryEstimateMintPtYtPairResponse {
+  /**
+   *
+   * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+   * @memberof UnunifiIrsQueryEstimateMintPtYtPairResponse
+   */
+  pt_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+  /**
+   *
+   * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+   * @memberof UnunifiIrsQueryEstimateMintPtYtPairResponse
+   */
+  yt_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiIrsQueryEstimateRedeemYtResponse
+ */
+export interface UnunifiIrsQueryEstimateRedeemYtResponse {
+  /**
+   *
+   * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+   * @memberof UnunifiIrsQueryEstimateRedeemYtResponse
+   */
+  amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiIrsQueryEstimateSwapInPoolResponse
+ */
+export interface UnunifiIrsQueryEstimateSwapInPoolResponse {
+  /**
+   *
+   * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+   * @memberof UnunifiIrsQueryEstimateSwapInPoolResponse
+   */
+  amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+}
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @export
+ * @interface UnunifiIrsQueryParamsResponse
+ */
+export interface UnunifiIrsQueryParamsResponse {
+  /**
+   *
+   * @type {IrsParams200ResponseParams}
+   * @memberof UnunifiIrsQueryParamsResponse
+   */
+  params?: IrsParams200ResponseParams;
+}
+/**
+ * QueryTranchResponse is response type for the Query/Tranch RPC method.
+ * @export
+ * @interface UnunifiIrsQueryTrancheResponse
+ */
+export interface UnunifiIrsQueryTrancheResponse {
+  /**
+   *
+   * @type {AllTranches200ResponseTranchesInner}
+   * @memberof UnunifiIrsQueryTrancheResponse
+   */
+  tranche?: AllTranches200ResponseTranchesInner;
+}
+/**
+ * QueryTranchesResponse is response type for the Query/Tranches RPC method.
+ * @export
+ * @interface UnunifiIrsQueryTranchesResponse
+ */
+export interface UnunifiIrsQueryTranchesResponse {
+  /**
+   *
+   * @type {Array<AllTranches200ResponseTranchesInner>}
+   * @memberof UnunifiIrsQueryTranchesResponse
+   */
+  tranches?: Array<AllTranches200ResponseTranchesInner>;
+}
+/**
+ * QueryVaultResponse is response type for the Query/Vault RPC method.
+ * @export
+ * @interface UnunifiIrsQueryVaultByContractResponse
+ */
+export interface UnunifiIrsQueryVaultByContractResponse {
+  /**
+   *
+   * @type {VaultByContract200ResponseVault}
+   * @memberof UnunifiIrsQueryVaultByContractResponse
+   */
+  vault?: VaultByContract200ResponseVault;
+}
+/**
+ * QueryVaultDetailsResponse is response type for the Query/VaultDetails RPC method.
+ * @export
+ * @interface UnunifiIrsQueryVaultDetailsResponse
+ */
+export interface UnunifiIrsQueryVaultDetailsResponse {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsQueryVaultDetailsResponse
+   */
+  liquidity_pool?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsQueryVaultDetailsResponse
+   */
+  fy_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsQueryVaultDetailsResponse
+   */
+  lvy_rate?: string;
+}
+/**
+ * QueryVaultsResponse is response type for the Query/Vaults RPC method.
+ * @export
+ * @interface UnunifiIrsQueryVaultsResponse
+ */
+export interface UnunifiIrsQueryVaultsResponse {
+  /**
+   *
+   * @type {Array<VaultByContract200ResponseVault>}
+   * @memberof UnunifiIrsQueryVaultsResponse
+   */
+  vaults?: Array<VaultByContract200ResponseVault>;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiIrsTranchePool
+ */
+export interface UnunifiIrsTranchePool {
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsTranchePool
+   */
+  id?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsTranchePool
+   */
+  strategy_contract?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsTranchePool
+   */
+  start_time?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsTranchePool
+   */
+  maturity?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsTranchePool
+   */
+  swap_fee?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsTranchePool
+   */
+  exit_fee?: string;
+  /**
+   *
+   * @type {SumOfAllLPTokensSentOut}
+   * @memberof UnunifiIrsTranchePool
+   */
+  total_shares?: SumOfAllLPTokensSentOut;
+  /**
+   *
+   * @type {Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>}
+   * @memberof UnunifiIrsTranchePool
+   */
+  pool_assets?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
+}
 /**
  *
  * @export
@@ -3965,12 +4369,6 @@ export interface UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse {
    * @memberof UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
    */
   total_amount?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
-   */
-  symbol?: string;
 }
 /**
  *
@@ -4140,12 +4538,6 @@ export interface UnunifiYieldaggregatorStrategyContainer {
    * @memberof UnunifiYieldaggregatorStrategyContainer
    */
   performance_fee_rate?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof UnunifiYieldaggregatorStrategyContainer
-   */
-  symbol?: string;
 }
 /**
  *
@@ -4531,6 +4923,100 @@ export interface VaultAllByShareHolder200Response {
   vaults?: Array<VaultAll200ResponseVaultsInner>;
 }
 /**
+ * QueryVaultResponse is response type for the Query/Vault RPC method.
+ * @export
+ * @interface VaultByContract200Response
+ */
+export interface VaultByContract200Response {
+  /**
+   *
+   * @type {VaultByContract200ResponseVault}
+   * @memberof VaultByContract200Response
+   */
+  vault?: VaultByContract200ResponseVault;
+}
+/**
+ *
+ * @export
+ * @interface VaultByContract200ResponseVault
+ */
+export interface VaultByContract200ResponseVault {
+  /**
+   *
+   * @type {string}
+   * @memberof VaultByContract200ResponseVault
+   */
+  strategy_contract?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof VaultByContract200ResponseVault
+   */
+  name?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof VaultByContract200ResponseVault
+   */
+  description?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof VaultByContract200ResponseVault
+   */
+  max_maturity?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof VaultByContract200ResponseVault
+   */
+  cycle?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof VaultByContract200ResponseVault
+   */
+  last_tranche_time?: string;
+}
+/**
+ * QueryVaultDetailsResponse is response type for the Query/VaultDetails RPC method.
+ * @export
+ * @interface VaultDetails200Response
+ */
+export interface VaultDetails200Response {
+  /**
+   *
+   * @type {string}
+   * @memberof VaultDetails200Response
+   */
+  liquidity_pool?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof VaultDetails200Response
+   */
+  fy_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof VaultDetails200Response
+   */
+  lvy_rate?: string;
+}
+/**
+ * QueryVaultsResponse is response type for the Query/Vaults RPC method.
+ * @export
+ * @interface Vaults200Response
+ */
+export interface Vaults200Response {
+  /**
+   *
+   * @type {Array<VaultByContract200ResponseVault>}
+   * @memberof Vaults200Response
+   */
+  vaults?: Array<VaultByContract200ResponseVault>;
+}
+/**
  * QueryParamsResponse is response type for the Query/Params RPC method.
  * @export
  * @interface YieldAggregatorParams200Response
@@ -4687,6 +5173,34 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
       if (paginationCountTotal !== undefined) {
         localVarQueryParameter['pagination.count_total'] = paginationCountTotal;
       }
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @summary Tranches by Strategy
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    allTranches: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/irs/all-tranches`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
 
       setSearchParams(localVarUrlObj, localVarQueryParameter);
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -5046,6 +5560,54 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
+     * @summary Estimate mint amountof PT&YT pair
+     * @param {string} [poolId]
+     * @param {string} [amountDenom]
+     * @param {string} [amountAmount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    estimateMintPtYtPair: async (
+      poolId?: string,
+      amountDenom?: string,
+      amountAmount?: string,
+      options: AxiosRequestConfig = {},
+    ): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/irs/estimate-mint-pt-yt-pair`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      if (poolId !== undefined) {
+        localVarQueryParameter['pool_id'] = poolId;
+      }
+
+      if (amountDenom !== undefined) {
+        localVarQueryParameter['amount.denom'] = amountDenom;
+      }
+
+      if (amountAmount !== undefined) {
+        localVarQueryParameter['amount.amount'] = amountAmount;
+      }
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
      * @param {string} id
      * @param {string} [burnAmount]
      * @param {*} [options] Override http request option.
@@ -5121,11 +5683,135 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
+     * @summary Estimate redeem amount of YT after maturity
+     * @param {string} [poolId]
+     * @param {string} [amountDenom]
+     * @param {string} [amountAmount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    estimateRedeemYt: async (
+      poolId?: string,
+      amountDenom?: string,
+      amountAmount?: string,
+      options: AxiosRequestConfig = {},
+    ): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/irs/estimate-redeem-yt`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      if (poolId !== undefined) {
+        localVarQueryParameter['pool_id'] = poolId;
+      }
+
+      if (amountDenom !== undefined) {
+        localVarQueryParameter['amount.denom'] = amountDenom;
+      }
+
+      if (amountAmount !== undefined) {
+        localVarQueryParameter['amount.amount'] = amountAmount;
+      }
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @summary Estimate swap amount of UT/PT (in the pool)
+     * @param {string} [poolId]
+     * @param {string} [amountDenom]
+     * @param {string} [amountAmount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    estimateSwapInPool: async (
+      poolId?: string,
+      amountDenom?: string,
+      amountAmount?: string,
+      options: AxiosRequestConfig = {},
+    ): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/irs/estimate-swap-in-pool`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      if (poolId !== undefined) {
+        localVarQueryParameter['pool_id'] = poolId;
+      }
+
+      if (amountDenom !== undefined) {
+        localVarQueryParameter['amount.denom'] = amountDenom;
+      }
+
+      if (amountAmount !== undefined) {
+        localVarQueryParameter['amount.amount'] = amountAmount;
+      }
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     intermediaryAccountInfo: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       const localVarPath = `/ununifi/yieldaggregator/intermediary-account-info`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @summary Parameters queries the parameters of the module.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    irsParams: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/irs/params`;
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -6266,6 +6952,71 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
+     * @summary Tranche by id
+     * @param {string} id
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    tranche: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      // verify required parameter 'id' is not null or undefined
+      assertParamExists('tranche', 'id', id);
+      const localVarPath = `/ununifi/irs/tranche/{id}`.replace(`{${'id'}}`, encodeURIComponent(String(id)));
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @summary Tranches by Strategy
+     * @param {string} strategyContract
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    tranches: async (strategyContract: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      // verify required parameter 'strategyContract' is not null or undefined
+      assertParamExists('tranches', 'strategyContract', strategyContract);
+      const localVarPath = `/ununifi/irs/tranches/{strategy_contract}`.replace(
+        `{${'strategy_contract'}}`,
+        encodeURIComponent(String(strategyContract)),
+      );
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
      * @param {string} id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -6383,6 +7134,104 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
+     * @summary Vault queries a single InterestRateSwapVault
+     * @param {string} strategyContract
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    vaultByContract: async (strategyContract: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      // verify required parameter 'strategyContract' is not null or undefined
+      assertParamExists('vaultByContract', 'strategyContract', strategyContract);
+      const localVarPath = `/ununifi/irs/vault/{strategy_contract}`.replace(
+        `{${'strategy_contract'}}`,
+        encodeURIComponent(String(strategyContract)),
+      );
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @summary VaultDetails queries the details of the vault
+     * @param {string} strategyContract
+     * @param {string} maturity
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    vaultDetails: async (strategyContract: string, maturity: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      // verify required parameter 'strategyContract' is not null or undefined
+      assertParamExists('vaultDetails', 'strategyContract', strategyContract);
+      // verify required parameter 'maturity' is not null or undefined
+      assertParamExists('vaultDetails', 'maturity', maturity);
+      const localVarPath = `/ununifi/irs/vault/{strategy_contract}/maturities/{maturity}`
+        .replace(`{${'strategy_contract'}}`, encodeURIComponent(String(strategyContract)))
+        .replace(`{${'maturity'}}`, encodeURIComponent(String(maturity)));
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @summary Vaults queries the InterestRateSwapVaults
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    vaults: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/irs/vaults`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
      * @summary Parameters queries the parameters of the module.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -6466,6 +7315,18 @@ export const QueryApiFp = function (configuration?: Configuration) {
         paginationCountTotal,
         options,
       );
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @summary Tranches by Strategy
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async allTranches(
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllTranches200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.allTranches(options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -6615,6 +7476,24 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
+     * @summary Estimate mint amountof PT&YT pair
+     * @param {string} [poolId]
+     * @param {string} [amountDenom]
+     * @param {string} [amountAmount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async estimateMintPtYtPair(
+      poolId?: string,
+      amountDenom?: string,
+      amountAmount?: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateMintPtYtPair200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateMintPtYtPair(poolId, amountDenom, amountAmount, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
      * @param {string} id
      * @param {string} [burnAmount]
      * @param {*} [options] Override http request option.
@@ -6645,6 +7524,42 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
+     * @summary Estimate redeem amount of YT after maturity
+     * @param {string} [poolId]
+     * @param {string} [amountDenom]
+     * @param {string} [amountAmount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async estimateRedeemYt(
+      poolId?: string,
+      amountDenom?: string,
+      amountAmount?: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRedeemYt200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemYt(poolId, amountDenom, amountAmount, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @summary Estimate swap amount of UT/PT (in the pool)
+     * @param {string} [poolId]
+     * @param {string} [amountDenom]
+     * @param {string} [amountAmount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async estimateSwapInPool(
+      poolId?: string,
+      amountDenom?: string,
+      amountAmount?: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRedeemYt200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateSwapInPool(poolId, amountDenom, amountAmount, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -6652,6 +7567,18 @@ export const QueryApiFp = function (configuration?: Configuration) {
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IntermediaryAccountInfo200Response>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.intermediaryAccountInfo(options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @summary Parameters queries the parameters of the module.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async irsParams(
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IrsParams200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.irsParams(options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -7123,6 +8050,34 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
+     * @summary Tranche by id
+     * @param {string} id
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async tranche(
+      id: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tranche200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.tranche(id, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @summary Tranches by Strategy
+     * @param {string} strategyContract
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async tranches(
+      strategyContract: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AllTranches200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.tranches(strategyContract, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
      * @param {string} id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -7171,6 +8126,46 @@ export const QueryApiFp = function (configuration?: Configuration) {
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VaultAllByShareHolder200Response>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.vaultAllByShareHolder(shareHolder, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @summary Vault queries a single InterestRateSwapVault
+     * @param {string} strategyContract
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async vaultByContract(
+      strategyContract: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VaultByContract200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.vaultByContract(strategyContract, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @summary VaultDetails queries the details of the vault
+     * @param {string} strategyContract
+     * @param {string} maturity
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async vaultDetails(
+      strategyContract: string,
+      maturity: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VaultDetails200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.vaultDetails(strategyContract, maturity, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @summary Vaults queries the InterestRateSwapVaults
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async vaults(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Vaults200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.vaults(options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -7231,6 +8226,15 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
       return localVarFp
         .allPositions(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options)
         .then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @summary Tranches by Strategy
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    allTranches(options?: any): AxiosPromise<AllTranches200Response> {
+      return localVarFp.allTranches(options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -7335,6 +8339,23 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
+     * @summary Estimate mint amountof PT&YT pair
+     * @param {string} [poolId]
+     * @param {string} [amountDenom]
+     * @param {string} [amountAmount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    estimateMintPtYtPair(
+      poolId?: string,
+      amountDenom?: string,
+      amountAmount?: string,
+      options?: any,
+    ): AxiosPromise<EstimateMintPtYtPair200Response> {
+      return localVarFp.estimateMintPtYtPair(poolId, amountDenom, amountAmount, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
      * @param {string} id
      * @param {string} [burnAmount]
      * @param {*} [options] Override http request option.
@@ -7355,11 +8376,54 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
+     * @summary Estimate redeem amount of YT after maturity
+     * @param {string} [poolId]
+     * @param {string} [amountDenom]
+     * @param {string} [amountAmount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    estimateRedeemYt(
+      poolId?: string,
+      amountDenom?: string,
+      amountAmount?: string,
+      options?: any,
+    ): AxiosPromise<EstimateRedeemYt200Response> {
+      return localVarFp.estimateRedeemYt(poolId, amountDenom, amountAmount, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @summary Estimate swap amount of UT/PT (in the pool)
+     * @param {string} [poolId]
+     * @param {string} [amountDenom]
+     * @param {string} [amountAmount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    estimateSwapInPool(
+      poolId?: string,
+      amountDenom?: string,
+      amountAmount?: string,
+      options?: any,
+    ): AxiosPromise<EstimateRedeemYt200Response> {
+      return localVarFp.estimateSwapInPool(poolId, amountDenom, amountAmount, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     intermediaryAccountInfo(options?: any): AxiosPromise<IntermediaryAccountInfo200Response> {
       return localVarFp.intermediaryAccountInfo(options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @summary Parameters queries the parameters of the module.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    irsParams(options?: any): AxiosPromise<IrsParams200Response> {
+      return localVarFp.irsParams(options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -7713,6 +8777,26 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
+     * @summary Tranche by id
+     * @param {string} id
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    tranche(id: string, options?: any): AxiosPromise<Tranche200Response> {
+      return localVarFp.tranche(id, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @summary Tranches by Strategy
+     * @param {string} strategyContract
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    tranches(strategyContract: string, options?: any): AxiosPromise<AllTranches200Response> {
+      return localVarFp.tranches(strategyContract, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
      * @param {string} id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -7749,6 +8833,36 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
      */
     vaultAllByShareHolder(shareHolder: string, options?: any): AxiosPromise<VaultAllByShareHolder200Response> {
       return localVarFp.vaultAllByShareHolder(shareHolder, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @summary Vault queries a single InterestRateSwapVault
+     * @param {string} strategyContract
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    vaultByContract(strategyContract: string, options?: any): AxiosPromise<VaultByContract200Response> {
+      return localVarFp.vaultByContract(strategyContract, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @summary VaultDetails queries the details of the vault
+     * @param {string} strategyContract
+     * @param {string} maturity
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    vaultDetails(strategyContract: string, maturity: string, options?: any): AxiosPromise<VaultDetails200Response> {
+      return localVarFp.vaultDetails(strategyContract, maturity, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @summary Vaults queries the InterestRateSwapVaults
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    vaults(options?: any): AxiosPromise<Vaults200Response> {
+      return localVarFp.vaults(options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -7813,6 +8927,19 @@ export class QueryApi extends BaseAPI {
   ) {
     return QueryApiFp(this.configuration)
       .allPositions(paginationKey, paginationOffset, paginationLimit, paginationCountTotal, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @summary Tranches by Strategy
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public allTranches(options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .allTranches(options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -7963,6 +9090,22 @@ export class QueryApi extends BaseAPI {
 
   /**
    *
+   * @summary Estimate mint amountof PT&YT pair
+   * @param {string} [poolId]
+   * @param {string} [amountDenom]
+   * @param {string} [amountAmount]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public estimateMintPtYtPair(poolId?: string, amountDenom?: string, amountAmount?: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .estimateMintPtYtPair(poolId, amountDenom, amountAmount, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
    * @param {string} id
    * @param {string} [burnAmount]
    * @param {*} [options] Override http request option.
@@ -7991,6 +9134,38 @@ export class QueryApi extends BaseAPI {
 
   /**
    *
+   * @summary Estimate redeem amount of YT after maturity
+   * @param {string} [poolId]
+   * @param {string} [amountDenom]
+   * @param {string} [amountAmount]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public estimateRedeemYt(poolId?: string, amountDenom?: string, amountAmount?: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .estimateRedeemYt(poolId, amountDenom, amountAmount, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @summary Estimate swap amount of UT/PT (in the pool)
+   * @param {string} [poolId]
+   * @param {string} [amountDenom]
+   * @param {string} [amountAmount]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public estimateSwapInPool(poolId?: string, amountDenom?: string, amountAmount?: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .estimateSwapInPool(poolId, amountDenom, amountAmount, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
@@ -7998,6 +9173,19 @@ export class QueryApi extends BaseAPI {
   public intermediaryAccountInfo(options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
       .intermediaryAccountInfo(options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @summary Parameters queries the parameters of the module.
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public irsParams(options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .irsParams(options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -8455,6 +9643,34 @@ export class QueryApi extends BaseAPI {
 
   /**
    *
+   * @summary Tranche by id
+   * @param {string} id
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public tranche(id: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .tranche(id, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @summary Tranches by Strategy
+   * @param {string} strategyContract
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public tranches(strategyContract: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .tranches(strategyContract, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
    * @param {string} id
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
@@ -8499,6 +9715,48 @@ export class QueryApi extends BaseAPI {
   public vaultAllByShareHolder(shareHolder: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
       .vaultAllByShareHolder(shareHolder, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @summary Vault queries a single InterestRateSwapVault
+   * @param {string} strategyContract
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public vaultByContract(strategyContract: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .vaultByContract(strategyContract, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @summary VaultDetails queries the details of the vault
+   * @param {string} strategyContract
+   * @param {string} maturity
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public vaultDetails(strategyContract: string, maturity: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .vaultDetails(strategyContract, maturity, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @summary Vaults queries the InterestRateSwapVaults
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public vaults(options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .vaults(options)
       .then((request) => request(this.axios, this.basePath));
   }
 
