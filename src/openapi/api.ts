@@ -978,6 +978,12 @@ export interface EstimateRedeemAmount200Response {
    * @memberof EstimateRedeemAmount200Response
    */
   total_amount?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof EstimateRedeemAmount200Response
+   */
+  symbol?: string;
 }
 /**
  *
@@ -2176,6 +2182,12 @@ export interface StrategyAll200ResponseStrategiesInner {
    * @memberof StrategyAll200ResponseStrategiesInner
    */
   performance_fee_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof StrategyAll200ResponseStrategiesInner
+   */
+  symbol?: string;
 }
 /**
  *
@@ -4369,6 +4381,12 @@ export interface UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse {
    * @memberof UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
    */
   total_amount?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiYieldaggregatorQueryEstimateRedeemAmountResponse
+   */
+  symbol?: string;
 }
 /**
  *
@@ -4538,6 +4556,12 @@ export interface UnunifiYieldaggregatorStrategyContainer {
    * @memberof UnunifiYieldaggregatorStrategyContainer
    */
   performance_fee_rate?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiYieldaggregatorStrategyContainer
+   */
+  symbol?: string;
 }
 /**
  *
