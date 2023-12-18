@@ -13101,6 +13101,44 @@ export namespace ununifi {
        * @returns Promise
        */
       public estimateRedeemYt(request: ununifi.irs.IQueryEstimateRedeemYtRequest): Promise<ununifi.irs.QueryEstimateRedeemYtResponse>;
+
+      /**
+       * Calls EstimateMintLiquidityPoolToken.
+       * @param request QueryEstimateMintLiquidityPoolTokenRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryEstimateMintLiquidityPoolTokenResponse
+       */
+      public estimateMintLiquidityPoolToken(
+        request: ununifi.irs.IQueryEstimateMintLiquidityPoolTokenRequest,
+        callback: ununifi.irs.Query.EstimateMintLiquidityPoolTokenCallback,
+      ): void;
+
+      /**
+       * Calls EstimateMintLiquidityPoolToken.
+       * @param request QueryEstimateMintLiquidityPoolTokenRequest message or plain object
+       * @returns Promise
+       */
+      public estimateMintLiquidityPoolToken(
+        request: ununifi.irs.IQueryEstimateMintLiquidityPoolTokenRequest,
+      ): Promise<ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse>;
+
+      /**
+       * Calls EstimateRedeemLiquidityPoolToken.
+       * @param request QueryEstimateRedeemLiquidityPoolTokenRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryEstimateRedeemLiquidityPoolTokenResponse
+       */
+      public estimateRedeemLiquidityPoolToken(
+        request: ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenRequest,
+        callback: ununifi.irs.Query.EstimateRedeemLiquidityPoolTokenCallback,
+      ): void;
+
+      /**
+       * Calls EstimateRedeemLiquidityPoolToken.
+       * @param request QueryEstimateRedeemLiquidityPoolTokenRequest message or plain object
+       * @returns Promise
+       */
+      public estimateRedeemLiquidityPoolToken(
+        request: ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenRequest,
+      ): Promise<ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse>;
     }
 
     namespace Query {
@@ -13173,6 +13211,26 @@ export namespace ununifi {
        * @param [response] QueryEstimateRedeemYtResponse
        */
       type EstimateRedeemYtCallback = (error: Error | null, response?: ununifi.irs.QueryEstimateRedeemYtResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#estimateMintLiquidityPoolToken}.
+       * @param error Error, if any
+       * @param [response] QueryEstimateMintLiquidityPoolTokenResponse
+       */
+      type EstimateMintLiquidityPoolTokenCallback = (
+        error: Error | null,
+        response?: ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse,
+      ) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#estimateRedeemLiquidityPoolToken}.
+       * @param error Error, if any
+       * @param [response] QueryEstimateRedeemLiquidityPoolTokenResponse
+       */
+      type EstimateRedeemLiquidityPoolTokenCallback = (
+        error: Error | null,
+        response?: ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse,
+      ) => void;
     }
 
     /** Properties of a QueryParamsRequest. */
@@ -14775,6 +14833,375 @@ export namespace ununifi {
 
       /**
        * Converts this QueryEstimateRedeemYtResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryEstimateMintLiquidityPoolTokenRequest. */
+    interface IQueryEstimateMintLiquidityPoolTokenRequest {
+      /** QueryEstimateMintLiquidityPoolTokenRequest pool_id */
+      pool_id?: Long | null;
+
+      /** QueryEstimateMintLiquidityPoolTokenRequest desired_amount */
+      desired_amount?: string | null;
+    }
+
+    /** Represents a QueryEstimateMintLiquidityPoolTokenRequest. */
+    class QueryEstimateMintLiquidityPoolTokenRequest implements IQueryEstimateMintLiquidityPoolTokenRequest {
+      /**
+       * Constructs a new QueryEstimateMintLiquidityPoolTokenRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryEstimateMintLiquidityPoolTokenRequest);
+
+      /** QueryEstimateMintLiquidityPoolTokenRequest pool_id. */
+      public pool_id: Long;
+
+      /** QueryEstimateMintLiquidityPoolTokenRequest desired_amount. */
+      public desired_amount: string;
+
+      /**
+       * Encodes the specified QueryEstimateMintLiquidityPoolTokenRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest.verify|verify} messages.
+       * @param message QueryEstimateMintLiquidityPoolTokenRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryEstimateMintLiquidityPoolTokenRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryEstimateMintLiquidityPoolTokenRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest.verify|verify} messages.
+       * @param message QueryEstimateMintLiquidityPoolTokenRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.irs.IQueryEstimateMintLiquidityPoolTokenRequest,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryEstimateMintLiquidityPoolTokenRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryEstimateMintLiquidityPoolTokenRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest;
+
+      /**
+       * Decodes a QueryEstimateMintLiquidityPoolTokenRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryEstimateMintLiquidityPoolTokenRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest;
+
+      /**
+       * Verifies a QueryEstimateMintLiquidityPoolTokenRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryEstimateMintLiquidityPoolTokenRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryEstimateMintLiquidityPoolTokenRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest;
+
+      /**
+       * Creates a plain object from a QueryEstimateMintLiquidityPoolTokenRequest message. Also converts values to other types if specified.
+       * @param message QueryEstimateMintLiquidityPoolTokenRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryEstimateMintLiquidityPoolTokenRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryEstimateMintLiquidityPoolTokenResponse. */
+    interface IQueryEstimateMintLiquidityPoolTokenResponse {
+      /** QueryEstimateMintLiquidityPoolTokenResponse required_amount */
+      required_amount?: cosmos.base.v1beta1.ICoin[] | null;
+    }
+
+    /** Represents a QueryEstimateMintLiquidityPoolTokenResponse. */
+    class QueryEstimateMintLiquidityPoolTokenResponse implements IQueryEstimateMintLiquidityPoolTokenResponse {
+      /**
+       * Constructs a new QueryEstimateMintLiquidityPoolTokenResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryEstimateMintLiquidityPoolTokenResponse);
+
+      /** QueryEstimateMintLiquidityPoolTokenResponse required_amount. */
+      public required_amount: cosmos.base.v1beta1.ICoin[];
+
+      /**
+       * Encodes the specified QueryEstimateMintLiquidityPoolTokenResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse.verify|verify} messages.
+       * @param message QueryEstimateMintLiquidityPoolTokenResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryEstimateMintLiquidityPoolTokenResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryEstimateMintLiquidityPoolTokenResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse.verify|verify} messages.
+       * @param message QueryEstimateMintLiquidityPoolTokenResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.irs.IQueryEstimateMintLiquidityPoolTokenResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryEstimateMintLiquidityPoolTokenResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryEstimateMintLiquidityPoolTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse;
+
+      /**
+       * Decodes a QueryEstimateMintLiquidityPoolTokenResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryEstimateMintLiquidityPoolTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse;
+
+      /**
+       * Verifies a QueryEstimateMintLiquidityPoolTokenResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryEstimateMintLiquidityPoolTokenResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryEstimateMintLiquidityPoolTokenResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse;
+
+      /**
+       * Creates a plain object from a QueryEstimateMintLiquidityPoolTokenResponse message. Also converts values to other types if specified.
+       * @param message QueryEstimateMintLiquidityPoolTokenResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryEstimateMintLiquidityPoolTokenResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryEstimateRedeemLiquidityPoolTokenRequest. */
+    interface IQueryEstimateRedeemLiquidityPoolTokenRequest {
+      /** QueryEstimateRedeemLiquidityPoolTokenRequest pool_id */
+      pool_id?: Long | null;
+
+      /** QueryEstimateRedeemLiquidityPoolTokenRequest amount */
+      amount?: string | null;
+    }
+
+    /** Represents a QueryEstimateRedeemLiquidityPoolTokenRequest. */
+    class QueryEstimateRedeemLiquidityPoolTokenRequest implements IQueryEstimateRedeemLiquidityPoolTokenRequest {
+      /**
+       * Constructs a new QueryEstimateRedeemLiquidityPoolTokenRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenRequest);
+
+      /** QueryEstimateRedeemLiquidityPoolTokenRequest pool_id. */
+      public pool_id: Long;
+
+      /** QueryEstimateRedeemLiquidityPoolTokenRequest amount. */
+      public amount: string;
+
+      /**
+       * Encodes the specified QueryEstimateRedeemLiquidityPoolTokenRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest.verify|verify} messages.
+       * @param message QueryEstimateRedeemLiquidityPoolTokenRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryEstimateRedeemLiquidityPoolTokenRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest.verify|verify} messages.
+       * @param message QueryEstimateRedeemLiquidityPoolTokenRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenRequest,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryEstimateRedeemLiquidityPoolTokenRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(
+        reader: $protobuf.Reader | Uint8Array,
+        length?: number,
+      ): ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest;
+
+      /**
+       * Decodes a QueryEstimateRedeemLiquidityPoolTokenRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest;
+
+      /**
+       * Verifies a QueryEstimateRedeemLiquidityPoolTokenRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryEstimateRedeemLiquidityPoolTokenRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryEstimateRedeemLiquidityPoolTokenRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest;
+
+      /**
+       * Creates a plain object from a QueryEstimateRedeemLiquidityPoolTokenRequest message. Also converts values to other types if specified.
+       * @param message QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryEstimateRedeemLiquidityPoolTokenRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryEstimateRedeemLiquidityPoolTokenResponse. */
+    interface IQueryEstimateRedeemLiquidityPoolTokenResponse {
+      /** QueryEstimateRedeemLiquidityPoolTokenResponse redeem_amount */
+      redeem_amount?: cosmos.base.v1beta1.ICoin[] | null;
+    }
+
+    /** Represents a QueryEstimateRedeemLiquidityPoolTokenResponse. */
+    class QueryEstimateRedeemLiquidityPoolTokenResponse implements IQueryEstimateRedeemLiquidityPoolTokenResponse {
+      /**
+       * Constructs a new QueryEstimateRedeemLiquidityPoolTokenResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenResponse);
+
+      /** QueryEstimateRedeemLiquidityPoolTokenResponse redeem_amount. */
+      public redeem_amount: cosmos.base.v1beta1.ICoin[];
+
+      /**
+       * Encodes the specified QueryEstimateRedeemLiquidityPoolTokenResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse.verify|verify} messages.
+       * @param message QueryEstimateRedeemLiquidityPoolTokenResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(
+        message: ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryEstimateRedeemLiquidityPoolTokenResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse.verify|verify} messages.
+       * @param message QueryEstimateRedeemLiquidityPoolTokenResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(
+        message: ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenResponse,
+        writer?: $protobuf.Writer,
+      ): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryEstimateRedeemLiquidityPoolTokenResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(
+        reader: $protobuf.Reader | Uint8Array,
+        length?: number,
+      ): ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse;
+
+      /**
+       * Decodes a QueryEstimateRedeemLiquidityPoolTokenResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse;
+
+      /**
+       * Verifies a QueryEstimateRedeemLiquidityPoolTokenResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryEstimateRedeemLiquidityPoolTokenResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryEstimateRedeemLiquidityPoolTokenResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse;
+
+      /**
+       * Creates a plain object from a QueryEstimateRedeemLiquidityPoolTokenResponse message. Also converts values to other types if specified.
+       * @param message QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryEstimateRedeemLiquidityPoolTokenResponse to JSON.
        * @returns JSON object
        */
       public toJSON(): { [k: string]: any };

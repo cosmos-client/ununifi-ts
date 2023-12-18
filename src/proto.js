@@ -28129,6 +28129,92 @@ export const ununifi = ($root.ununifi = (() => {
        * @variation 2
        */
 
+      /**
+       * Callback as used by {@link ununifi.irs.Query#estimateMintLiquidityPoolToken}.
+       * @memberof ununifi.irs.Query
+       * @typedef EstimateMintLiquidityPoolTokenCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse} [response] QueryEstimateMintLiquidityPoolTokenResponse
+       */
+
+      /**
+       * Calls EstimateMintLiquidityPoolToken.
+       * @function estimateMintLiquidityPoolToken
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateMintLiquidityPoolTokenRequest} request QueryEstimateMintLiquidityPoolTokenRequest message or plain object
+       * @param {ununifi.irs.Query.EstimateMintLiquidityPoolTokenCallback} callback Node-style callback called with the error, if any, and QueryEstimateMintLiquidityPoolTokenResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.estimateMintLiquidityPoolToken = function estimateMintLiquidityPoolToken(request, callback) {
+          return this.rpcCall(
+            estimateMintLiquidityPoolToken,
+            $root.ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest,
+            $root.ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'EstimateMintLiquidityPoolToken' },
+      );
+
+      /**
+       * Calls EstimateMintLiquidityPoolToken.
+       * @function estimateMintLiquidityPoolToken
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateMintLiquidityPoolTokenRequest} request QueryEstimateMintLiquidityPoolTokenRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#estimateRedeemLiquidityPoolToken}.
+       * @memberof ununifi.irs.Query
+       * @typedef EstimateRedeemLiquidityPoolTokenCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse} [response] QueryEstimateRedeemLiquidityPoolTokenResponse
+       */
+
+      /**
+       * Calls EstimateRedeemLiquidityPoolToken.
+       * @function estimateRedeemLiquidityPoolToken
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenRequest} request QueryEstimateRedeemLiquidityPoolTokenRequest message or plain object
+       * @param {ununifi.irs.Query.EstimateRedeemLiquidityPoolTokenCallback} callback Node-style callback called with the error, if any, and QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.estimateRedeemLiquidityPoolToken = function estimateRedeemLiquidityPoolToken(request, callback) {
+          return this.rpcCall(
+            estimateRedeemLiquidityPoolToken,
+            $root.ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest,
+            $root.ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'EstimateRedeemLiquidityPoolToken' },
+      );
+
+      /**
+       * Calls EstimateRedeemLiquidityPoolToken.
+       * @function estimateRedeemLiquidityPoolToken
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenRequest} request QueryEstimateRedeemLiquidityPoolTokenRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse>} Promise
+       * @variation 2
+       */
+
       return Query;
     })();
 
@@ -31540,6 +31626,786 @@ export const ununifi = ($root.ununifi = (() => {
       };
 
       return QueryEstimateRedeemYtResponse;
+    })();
+
+    irs.QueryEstimateMintLiquidityPoolTokenRequest = (function () {
+      /**
+       * Properties of a QueryEstimateMintLiquidityPoolTokenRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateMintLiquidityPoolTokenRequest
+       * @property {Long|null} [pool_id] QueryEstimateMintLiquidityPoolTokenRequest pool_id
+       * @property {string|null} [desired_amount] QueryEstimateMintLiquidityPoolTokenRequest desired_amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateMintLiquidityPoolTokenRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateMintLiquidityPoolTokenRequest.
+       * @implements IQueryEstimateMintLiquidityPoolTokenRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateMintLiquidityPoolTokenRequest=} [properties] Properties to set
+       */
+      function QueryEstimateMintLiquidityPoolTokenRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateMintLiquidityPoolTokenRequest pool_id.
+       * @member {Long} pool_id
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest
+       * @instance
+       */
+      QueryEstimateMintLiquidityPoolTokenRequest.prototype.pool_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * QueryEstimateMintLiquidityPoolTokenRequest desired_amount.
+       * @member {string} desired_amount
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest
+       * @instance
+       */
+      QueryEstimateMintLiquidityPoolTokenRequest.prototype.desired_amount = '';
+
+      /**
+       * Encodes the specified QueryEstimateMintLiquidityPoolTokenRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateMintLiquidityPoolTokenRequest} message QueryEstimateMintLiquidityPoolTokenRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateMintLiquidityPoolTokenRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.pool_id != null && Object.hasOwnProperty.call(message, 'pool_id'))
+          writer.uint32(/* id 1, wireType 0 =*/ 8).uint64(message.pool_id);
+        if (message.desired_amount != null && Object.hasOwnProperty.call(message, 'desired_amount'))
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.desired_amount);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateMintLiquidityPoolTokenRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateMintLiquidityPoolTokenRequest} message QueryEstimateMintLiquidityPoolTokenRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateMintLiquidityPoolTokenRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateMintLiquidityPoolTokenRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest} QueryEstimateMintLiquidityPoolTokenRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateMintLiquidityPoolTokenRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.pool_id = reader.uint64();
+              break;
+            case 3:
+              message.desired_amount = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateMintLiquidityPoolTokenRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest} QueryEstimateMintLiquidityPoolTokenRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateMintLiquidityPoolTokenRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateMintLiquidityPoolTokenRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateMintLiquidityPoolTokenRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (
+            !$util.isInteger(message.pool_id) &&
+            !(message.pool_id && $util.isInteger(message.pool_id.low) && $util.isInteger(message.pool_id.high))
+          )
+            return 'pool_id: integer|Long expected';
+        if (message.desired_amount != null && message.hasOwnProperty('desired_amount'))
+          if (!$util.isString(message.desired_amount)) return 'desired_amount: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateMintLiquidityPoolTokenRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest} QueryEstimateMintLiquidityPoolTokenRequest
+       */
+      QueryEstimateMintLiquidityPoolTokenRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest) return object;
+        let message = new $root.ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest();
+        if (object.pool_id != null)
+          if ($util.Long) (message.pool_id = $util.Long.fromValue(object.pool_id)).unsigned = true;
+          else if (typeof object.pool_id === 'string') message.pool_id = parseInt(object.pool_id, 10);
+          else if (typeof object.pool_id === 'number') message.pool_id = object.pool_id;
+          else if (typeof object.pool_id === 'object')
+            message.pool_id = new $util.LongBits(object.pool_id.low >>> 0, object.pool_id.high >>> 0).toNumber(true);
+        if (object.desired_amount != null) message.desired_amount = String(object.desired_amount);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateMintLiquidityPoolTokenRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest
+       * @static
+       * @param {ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest} message QueryEstimateMintLiquidityPoolTokenRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateMintLiquidityPoolTokenRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.pool_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.pool_id = options.longs === String ? '0' : 0;
+          object.desired_amount = '';
+        }
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (typeof message.pool_id === 'number') object.pool_id = options.longs === String ? String(message.pool_id) : message.pool_id;
+          else
+            object.pool_id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.pool_id)
+                : options.longs === Number
+                ? new $util.LongBits(message.pool_id.low >>> 0, message.pool_id.high >>> 0).toNumber(true)
+                : message.pool_id;
+        if (message.desired_amount != null && message.hasOwnProperty('desired_amount')) object.desired_amount = message.desired_amount;
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateMintLiquidityPoolTokenRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateMintLiquidityPoolTokenRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateMintLiquidityPoolTokenRequest;
+    })();
+
+    irs.QueryEstimateMintLiquidityPoolTokenResponse = (function () {
+      /**
+       * Properties of a QueryEstimateMintLiquidityPoolTokenResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateMintLiquidityPoolTokenResponse
+       * @property {Array.<cosmos.base.v1beta1.ICoin>|null} [required_amount] QueryEstimateMintLiquidityPoolTokenResponse required_amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateMintLiquidityPoolTokenResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateMintLiquidityPoolTokenResponse.
+       * @implements IQueryEstimateMintLiquidityPoolTokenResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateMintLiquidityPoolTokenResponse=} [properties] Properties to set
+       */
+      function QueryEstimateMintLiquidityPoolTokenResponse(properties) {
+        this.required_amount = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateMintLiquidityPoolTokenResponse required_amount.
+       * @member {Array.<cosmos.base.v1beta1.ICoin>} required_amount
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse
+       * @instance
+       */
+      QueryEstimateMintLiquidityPoolTokenResponse.prototype.required_amount = $util.emptyArray;
+
+      /**
+       * Encodes the specified QueryEstimateMintLiquidityPoolTokenResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateMintLiquidityPoolTokenResponse} message QueryEstimateMintLiquidityPoolTokenResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateMintLiquidityPoolTokenResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.required_amount != null && message.required_amount.length)
+          for (let i = 0; i < message.required_amount.length; ++i)
+            $root.cosmos.base.v1beta1.Coin.encode(message.required_amount[i], writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateMintLiquidityPoolTokenResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateMintLiquidityPoolTokenResponse} message QueryEstimateMintLiquidityPoolTokenResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateMintLiquidityPoolTokenResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateMintLiquidityPoolTokenResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse} QueryEstimateMintLiquidityPoolTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateMintLiquidityPoolTokenResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              if (!(message.required_amount && message.required_amount.length)) message.required_amount = [];
+              message.required_amount.push($root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32()));
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateMintLiquidityPoolTokenResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse} QueryEstimateMintLiquidityPoolTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateMintLiquidityPoolTokenResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateMintLiquidityPoolTokenResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateMintLiquidityPoolTokenResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.required_amount != null && message.hasOwnProperty('required_amount')) {
+          if (!Array.isArray(message.required_amount)) return 'required_amount: array expected';
+          for (let i = 0; i < message.required_amount.length; ++i) {
+            let error = $root.cosmos.base.v1beta1.Coin.verify(message.required_amount[i]);
+            if (error) return 'required_amount.' + error;
+          }
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateMintLiquidityPoolTokenResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse} QueryEstimateMintLiquidityPoolTokenResponse
+       */
+      QueryEstimateMintLiquidityPoolTokenResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse) return object;
+        let message = new $root.ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse();
+        if (object.required_amount) {
+          if (!Array.isArray(object.required_amount))
+            throw TypeError('.ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse.required_amount: array expected');
+          message.required_amount = [];
+          for (let i = 0; i < object.required_amount.length; ++i) {
+            if (typeof object.required_amount[i] !== 'object')
+              throw TypeError('.ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse.required_amount: object expected');
+            message.required_amount[i] = $root.cosmos.base.v1beta1.Coin.fromObject(object.required_amount[i]);
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateMintLiquidityPoolTokenResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse
+       * @static
+       * @param {ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse} message QueryEstimateMintLiquidityPoolTokenResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateMintLiquidityPoolTokenResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) object.required_amount = [];
+        if (message.required_amount && message.required_amount.length) {
+          object.required_amount = [];
+          for (let j = 0; j < message.required_amount.length; ++j)
+            object.required_amount[j] = $root.cosmos.base.v1beta1.Coin.toObject(message.required_amount[j], options);
+        }
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateMintLiquidityPoolTokenResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateMintLiquidityPoolTokenResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateMintLiquidityPoolTokenResponse;
+    })();
+
+    irs.QueryEstimateRedeemLiquidityPoolTokenRequest = (function () {
+      /**
+       * Properties of a QueryEstimateRedeemLiquidityPoolTokenRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateRedeemLiquidityPoolTokenRequest
+       * @property {Long|null} [pool_id] QueryEstimateRedeemLiquidityPoolTokenRequest pool_id
+       * @property {string|null} [amount] QueryEstimateRedeemLiquidityPoolTokenRequest amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateRedeemLiquidityPoolTokenRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateRedeemLiquidityPoolTokenRequest.
+       * @implements IQueryEstimateRedeemLiquidityPoolTokenRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenRequest=} [properties] Properties to set
+       */
+      function QueryEstimateRedeemLiquidityPoolTokenRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateRedeemLiquidityPoolTokenRequest pool_id.
+       * @member {Long} pool_id
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @instance
+       */
+      QueryEstimateRedeemLiquidityPoolTokenRequest.prototype.pool_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * QueryEstimateRedeemLiquidityPoolTokenRequest amount.
+       * @member {string} amount
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @instance
+       */
+      QueryEstimateRedeemLiquidityPoolTokenRequest.prototype.amount = '';
+
+      /**
+       * Encodes the specified QueryEstimateRedeemLiquidityPoolTokenRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenRequest} message QueryEstimateRedeemLiquidityPoolTokenRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRedeemLiquidityPoolTokenRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.pool_id != null && Object.hasOwnProperty.call(message, 'pool_id'))
+          writer.uint32(/* id 1, wireType 0 =*/ 8).uint64(message.pool_id);
+        if (message.amount != null && Object.hasOwnProperty.call(message, 'amount'))
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.amount);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateRedeemLiquidityPoolTokenRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenRequest} message QueryEstimateRedeemLiquidityPoolTokenRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRedeemLiquidityPoolTokenRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateRedeemLiquidityPoolTokenRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest} QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRedeemLiquidityPoolTokenRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.pool_id = reader.uint64();
+              break;
+            case 3:
+              message.amount = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateRedeemLiquidityPoolTokenRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest} QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRedeemLiquidityPoolTokenRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateRedeemLiquidityPoolTokenRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateRedeemLiquidityPoolTokenRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (
+            !$util.isInteger(message.pool_id) &&
+            !(message.pool_id && $util.isInteger(message.pool_id.low) && $util.isInteger(message.pool_id.high))
+          )
+            return 'pool_id: integer|Long expected';
+        if (message.amount != null && message.hasOwnProperty('amount'))
+          if (!$util.isString(message.amount)) return 'amount: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateRedeemLiquidityPoolTokenRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest} QueryEstimateRedeemLiquidityPoolTokenRequest
+       */
+      QueryEstimateRedeemLiquidityPoolTokenRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest) return object;
+        let message = new $root.ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest();
+        if (object.pool_id != null)
+          if ($util.Long) (message.pool_id = $util.Long.fromValue(object.pool_id)).unsigned = true;
+          else if (typeof object.pool_id === 'string') message.pool_id = parseInt(object.pool_id, 10);
+          else if (typeof object.pool_id === 'number') message.pool_id = object.pool_id;
+          else if (typeof object.pool_id === 'object')
+            message.pool_id = new $util.LongBits(object.pool_id.low >>> 0, object.pool_id.high >>> 0).toNumber(true);
+        if (object.amount != null) message.amount = String(object.amount);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateRedeemLiquidityPoolTokenRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @static
+       * @param {ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest} message QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateRedeemLiquidityPoolTokenRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.pool_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.pool_id = options.longs === String ? '0' : 0;
+          object.amount = '';
+        }
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (typeof message.pool_id === 'number') object.pool_id = options.longs === String ? String(message.pool_id) : message.pool_id;
+          else
+            object.pool_id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.pool_id)
+                : options.longs === Number
+                ? new $util.LongBits(message.pool_id.low >>> 0, message.pool_id.high >>> 0).toNumber(true)
+                : message.pool_id;
+        if (message.amount != null && message.hasOwnProperty('amount')) object.amount = message.amount;
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateRedeemLiquidityPoolTokenRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateRedeemLiquidityPoolTokenRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateRedeemLiquidityPoolTokenRequest;
+    })();
+
+    irs.QueryEstimateRedeemLiquidityPoolTokenResponse = (function () {
+      /**
+       * Properties of a QueryEstimateRedeemLiquidityPoolTokenResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateRedeemLiquidityPoolTokenResponse
+       * @property {Array.<cosmos.base.v1beta1.ICoin>|null} [redeem_amount] QueryEstimateRedeemLiquidityPoolTokenResponse redeem_amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateRedeemLiquidityPoolTokenResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateRedeemLiquidityPoolTokenResponse.
+       * @implements IQueryEstimateRedeemLiquidityPoolTokenResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenResponse=} [properties] Properties to set
+       */
+      function QueryEstimateRedeemLiquidityPoolTokenResponse(properties) {
+        this.redeem_amount = [];
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateRedeemLiquidityPoolTokenResponse redeem_amount.
+       * @member {Array.<cosmos.base.v1beta1.ICoin>} redeem_amount
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @instance
+       */
+      QueryEstimateRedeemLiquidityPoolTokenResponse.prototype.redeem_amount = $util.emptyArray;
+
+      /**
+       * Encodes the specified QueryEstimateRedeemLiquidityPoolTokenResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenResponse} message QueryEstimateRedeemLiquidityPoolTokenResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRedeemLiquidityPoolTokenResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.redeem_amount != null && message.redeem_amount.length)
+          for (let i = 0; i < message.redeem_amount.length; ++i)
+            $root.cosmos.base.v1beta1.Coin.encode(message.redeem_amount[i], writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateRedeemLiquidityPoolTokenResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenResponse} message QueryEstimateRedeemLiquidityPoolTokenResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRedeemLiquidityPoolTokenResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateRedeemLiquidityPoolTokenResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse} QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRedeemLiquidityPoolTokenResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              if (!(message.redeem_amount && message.redeem_amount.length)) message.redeem_amount = [];
+              message.redeem_amount.push($root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32()));
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateRedeemLiquidityPoolTokenResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse} QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRedeemLiquidityPoolTokenResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateRedeemLiquidityPoolTokenResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateRedeemLiquidityPoolTokenResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.redeem_amount != null && message.hasOwnProperty('redeem_amount')) {
+          if (!Array.isArray(message.redeem_amount)) return 'redeem_amount: array expected';
+          for (let i = 0; i < message.redeem_amount.length; ++i) {
+            let error = $root.cosmos.base.v1beta1.Coin.verify(message.redeem_amount[i]);
+            if (error) return 'redeem_amount.' + error;
+          }
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateRedeemLiquidityPoolTokenResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse} QueryEstimateRedeemLiquidityPoolTokenResponse
+       */
+      QueryEstimateRedeemLiquidityPoolTokenResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse) return object;
+        let message = new $root.ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse();
+        if (object.redeem_amount) {
+          if (!Array.isArray(object.redeem_amount))
+            throw TypeError('.ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse.redeem_amount: array expected');
+          message.redeem_amount = [];
+          for (let i = 0; i < object.redeem_amount.length; ++i) {
+            if (typeof object.redeem_amount[i] !== 'object')
+              throw TypeError('.ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse.redeem_amount: object expected');
+            message.redeem_amount[i] = $root.cosmos.base.v1beta1.Coin.fromObject(object.redeem_amount[i]);
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateRedeemLiquidityPoolTokenResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @static
+       * @param {ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse} message QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateRedeemLiquidityPoolTokenResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.arrays || options.defaults) object.redeem_amount = [];
+        if (message.redeem_amount && message.redeem_amount.length) {
+          object.redeem_amount = [];
+          for (let j = 0; j < message.redeem_amount.length; ++j)
+            object.redeem_amount[j] = $root.cosmos.base.v1beta1.Coin.toObject(message.redeem_amount[j], options);
+        }
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateRedeemLiquidityPoolTokenResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateRedeemLiquidityPoolTokenResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateRedeemLiquidityPoolTokenResponse;
     })();
 
     return irs;
