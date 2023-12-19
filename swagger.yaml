@@ -7971,6 +7971,65 @@ paths:
           type: string
       tags:
         - Query
+  /ununifi/irs/estimate-redeem-pt-yt-pair:
+    get:
+      summary: Estimate redeem amount of PT&YT pair
+      operationId: EstimateRedeemPtYtPair
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              pt_amount:
+                type: object
+                properties:
+                  denom:
+                    type: string
+                  amount:
+                    type: string
+                description: >-
+                  Coin defines a token with a denomination and an amount.
+
+
+                  NOTE: The amount field is an Int which implements the custom
+                  method
+
+                  signatures required by gogoproto.
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type_url:
+                      type: string
+                    value:
+                      type: string
+                      format: byte
+      parameters:
+        - name: pool_id
+          in: query
+          required: false
+          type: string
+          format: uint64
+        - name: yt_amount
+          in: query
+          required: false
+          type: string
+      tags:
+        - Query
   /ununifi/irs/estimate-redeem-yt:
     get:
       summary: Estimate redeem amount of YT after maturity
@@ -8034,6 +8093,65 @@ paths:
           type: string
       tags:
         - Query
+  /ununifi/irs/estimate-required-ut-swap-to-yt:
+    get:
+      summary: Estimate required UT amount to swao to YT
+      operationId: EstimateRequiredUtSwapToYt
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              required_ut_amount:
+                type: object
+                properties:
+                  denom:
+                    type: string
+                  amount:
+                    type: string
+                description: >-
+                  Coin defines a token with a denomination and an amount.
+
+
+                  NOTE: The amount field is an Int which implements the custom
+                  method
+
+                  signatures required by gogoproto.
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type_url:
+                      type: string
+                    value:
+                      type: string
+                      format: byte
+      parameters:
+        - name: pool_id
+          in: query
+          required: false
+          type: string
+          format: uint64
+        - name: desired_yt_amount
+          in: query
+          required: false
+          type: string
+      tags:
+        - Query
   /ununifi/irs/estimate-swap-in-pool:
     get:
       summary: Estimate swap amount of UT/PT (in the pool)
@@ -8092,6 +8210,65 @@ paths:
           required: false
           type: string
         - name: amount
+          in: query
+          required: false
+          type: string
+      tags:
+        - Query
+  /ununifi/irs/estimate-swap-matured-yt-to-ut:
+    get:
+      summary: Estimate swap matured YT to UT
+      operationId: EstimateSwapMaturedYtToUt
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              ut_amount:
+                type: object
+                properties:
+                  denom:
+                    type: string
+                  amount:
+                    type: string
+                description: >-
+                  Coin defines a token with a denomination and an amount.
+
+
+                  NOTE: The amount field is an Int which implements the custom
+                  method
+
+                  signatures required by gogoproto.
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type_url:
+                      type: string
+                    value:
+                      type: string
+                      format: byte
+      parameters:
+        - name: pool_id
+          in: query
+          required: false
+          type: string
+          format: uint64
+        - name: yt_amount
           in: query
           required: false
           type: string
@@ -12929,6 +13106,21 @@ definitions:
 
             NOTE: The amount field is an Int which implements the custom method
             signatures required by gogoproto.
+  ununifi.irs.QueryEstimateRedeemPtYtPairResponse:
+    type: object
+    properties:
+      pt_amount:
+        type: object
+        properties:
+          denom:
+            type: string
+          amount:
+            type: string
+        description: |-
+          Coin defines a token with a denomination and an amount.
+
+          NOTE: The amount field is an Int which implements the custom method
+          signatures required by gogoproto.
   ununifi.irs.QueryEstimateRedeemYtResponse:
     type: object
     properties:
@@ -12944,10 +13136,40 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
+  ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse:
+    type: object
+    properties:
+      required_ut_amount:
+        type: object
+        properties:
+          denom:
+            type: string
+          amount:
+            type: string
+        description: |-
+          Coin defines a token with a denomination and an amount.
+
+          NOTE: The amount field is an Int which implements the custom method
+          signatures required by gogoproto.
   ununifi.irs.QueryEstimateSwapInPoolResponse:
     type: object
     properties:
       amount:
+        type: object
+        properties:
+          denom:
+            type: string
+          amount:
+            type: string
+        description: |-
+          Coin defines a token with a denomination and an amount.
+
+          NOTE: The amount field is an Int which implements the custom method
+          signatures required by gogoproto.
+  ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse:
+    type: object
+    properties:
+      ut_amount:
         type: object
         properties:
           denom:

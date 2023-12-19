@@ -28087,6 +28087,49 @@ export const ununifi = ($root.ununifi = (() => {
        */
 
       /**
+       * Callback as used by {@link ununifi.irs.Query#estimateRedeemPtYtPair}.
+       * @memberof ununifi.irs.Query
+       * @typedef EstimateRedeemPtYtPairCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryEstimateRedeemPtYtPairResponse} [response] QueryEstimateRedeemPtYtPairResponse
+       */
+
+      /**
+       * Calls EstimateRedeemPtYtPair.
+       * @function estimateRedeemPtYtPair
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateRedeemPtYtPairRequest} request QueryEstimateRedeemPtYtPairRequest message or plain object
+       * @param {ununifi.irs.Query.EstimateRedeemPtYtPairCallback} callback Node-style callback called with the error, if any, and QueryEstimateRedeemPtYtPairResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.estimateRedeemPtYtPair = function estimateRedeemPtYtPair(request, callback) {
+          return this.rpcCall(
+            estimateRedeemPtYtPair,
+            $root.ununifi.irs.QueryEstimateRedeemPtYtPairRequest,
+            $root.ununifi.irs.QueryEstimateRedeemPtYtPairResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'EstimateRedeemPtYtPair' },
+      );
+
+      /**
+       * Calls EstimateRedeemPtYtPair.
+       * @function estimateRedeemPtYtPair
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateRedeemPtYtPairRequest} request QueryEstimateRedeemPtYtPairRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryEstimateRedeemPtYtPairResponse>} Promise
+       * @variation 2
+       */
+
+      /**
        * Callback as used by {@link ununifi.irs.Query#estimateRedeemYt}.
        * @memberof ununifi.irs.Query
        * @typedef EstimateRedeemYtCallback
@@ -28212,6 +28255,92 @@ export const ununifi = ($root.ununifi = (() => {
        * @instance
        * @param {ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenRequest} request QueryEstimateRedeemLiquidityPoolTokenRequest message or plain object
        * @returns {Promise<ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#estimateRequiredUtSwapToYt}.
+       * @memberof ununifi.irs.Query
+       * @typedef EstimateRequiredUtSwapToYtCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse} [response] QueryEstimateRequiredUtSwapToYtResponse
+       */
+
+      /**
+       * Calls EstimateRequiredUtSwapToYt.
+       * @function estimateRequiredUtSwapToYt
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateRequiredUtSwapToYtRequest} request QueryEstimateRequiredUtSwapToYtRequest message or plain object
+       * @param {ununifi.irs.Query.EstimateRequiredUtSwapToYtCallback} callback Node-style callback called with the error, if any, and QueryEstimateRequiredUtSwapToYtResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.estimateRequiredUtSwapToYt = function estimateRequiredUtSwapToYt(request, callback) {
+          return this.rpcCall(
+            estimateRequiredUtSwapToYt,
+            $root.ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest,
+            $root.ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'EstimateRequiredUtSwapToYt' },
+      );
+
+      /**
+       * Calls EstimateRequiredUtSwapToYt.
+       * @function estimateRequiredUtSwapToYt
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateRequiredUtSwapToYtRequest} request QueryEstimateRequiredUtSwapToYtRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse>} Promise
+       * @variation 2
+       */
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#estimateSwapMaturedYtToUt}.
+       * @memberof ununifi.irs.Query
+       * @typedef EstimateSwapMaturedYtToUtCallback
+       * @type {function}
+       * @param {Error|null} error Error, if any
+       * @param {ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse} [response] QueryEstimateSwapMaturedYtToUtResponse
+       */
+
+      /**
+       * Calls EstimateSwapMaturedYtToUt.
+       * @function estimateSwapMaturedYtToUt
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateSwapMaturedYtToUtRequest} request QueryEstimateSwapMaturedYtToUtRequest message or plain object
+       * @param {ununifi.irs.Query.EstimateSwapMaturedYtToUtCallback} callback Node-style callback called with the error, if any, and QueryEstimateSwapMaturedYtToUtResponse
+       * @returns {undefined}
+       * @variation 1
+       */
+      Object.defineProperty(
+        (Query.prototype.estimateSwapMaturedYtToUt = function estimateSwapMaturedYtToUt(request, callback) {
+          return this.rpcCall(
+            estimateSwapMaturedYtToUt,
+            $root.ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest,
+            $root.ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse,
+            request,
+            callback,
+          );
+        }),
+        'name',
+        { value: 'EstimateSwapMaturedYtToUt' },
+      );
+
+      /**
+       * Calls EstimateSwapMaturedYtToUt.
+       * @function estimateSwapMaturedYtToUt
+       * @memberof ununifi.irs.Query
+       * @instance
+       * @param {ununifi.irs.IQueryEstimateSwapMaturedYtToUtRequest} request QueryEstimateSwapMaturedYtToUtRequest message or plain object
+       * @returns {Promise<ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse>} Promise
        * @variation 2
        */
 
@@ -31235,6 +31364,382 @@ export const ununifi = ($root.ununifi = (() => {
       return QueryEstimateMintPtYtPairResponse;
     })();
 
+    irs.QueryEstimateRedeemPtYtPairRequest = (function () {
+      /**
+       * Properties of a QueryEstimateRedeemPtYtPairRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateRedeemPtYtPairRequest
+       * @property {Long|null} [pool_id] QueryEstimateRedeemPtYtPairRequest pool_id
+       * @property {string|null} [yt_amount] QueryEstimateRedeemPtYtPairRequest yt_amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateRedeemPtYtPairRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateRedeemPtYtPairRequest.
+       * @implements IQueryEstimateRedeemPtYtPairRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateRedeemPtYtPairRequest=} [properties] Properties to set
+       */
+      function QueryEstimateRedeemPtYtPairRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateRedeemPtYtPairRequest pool_id.
+       * @member {Long} pool_id
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairRequest
+       * @instance
+       */
+      QueryEstimateRedeemPtYtPairRequest.prototype.pool_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * QueryEstimateRedeemPtYtPairRequest yt_amount.
+       * @member {string} yt_amount
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairRequest
+       * @instance
+       */
+      QueryEstimateRedeemPtYtPairRequest.prototype.yt_amount = '';
+
+      /**
+       * Encodes the specified QueryEstimateRedeemPtYtPairRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemPtYtPairRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRedeemPtYtPairRequest} message QueryEstimateRedeemPtYtPairRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRedeemPtYtPairRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.pool_id != null && Object.hasOwnProperty.call(message, 'pool_id'))
+          writer.uint32(/* id 1, wireType 0 =*/ 8).uint64(message.pool_id);
+        if (message.yt_amount != null && Object.hasOwnProperty.call(message, 'yt_amount'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.yt_amount);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateRedeemPtYtPairRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemPtYtPairRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRedeemPtYtPairRequest} message QueryEstimateRedeemPtYtPairRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRedeemPtYtPairRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateRedeemPtYtPairRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateRedeemPtYtPairRequest} QueryEstimateRedeemPtYtPairRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRedeemPtYtPairRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateRedeemPtYtPairRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.pool_id = reader.uint64();
+              break;
+            case 2:
+              message.yt_amount = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateRedeemPtYtPairRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateRedeemPtYtPairRequest} QueryEstimateRedeemPtYtPairRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRedeemPtYtPairRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateRedeemPtYtPairRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateRedeemPtYtPairRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (
+            !$util.isInteger(message.pool_id) &&
+            !(message.pool_id && $util.isInteger(message.pool_id.low) && $util.isInteger(message.pool_id.high))
+          )
+            return 'pool_id: integer|Long expected';
+        if (message.yt_amount != null && message.hasOwnProperty('yt_amount'))
+          if (!$util.isString(message.yt_amount)) return 'yt_amount: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateRedeemPtYtPairRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateRedeemPtYtPairRequest} QueryEstimateRedeemPtYtPairRequest
+       */
+      QueryEstimateRedeemPtYtPairRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateRedeemPtYtPairRequest) return object;
+        let message = new $root.ununifi.irs.QueryEstimateRedeemPtYtPairRequest();
+        if (object.pool_id != null)
+          if ($util.Long) (message.pool_id = $util.Long.fromValue(object.pool_id)).unsigned = true;
+          else if (typeof object.pool_id === 'string') message.pool_id = parseInt(object.pool_id, 10);
+          else if (typeof object.pool_id === 'number') message.pool_id = object.pool_id;
+          else if (typeof object.pool_id === 'object')
+            message.pool_id = new $util.LongBits(object.pool_id.low >>> 0, object.pool_id.high >>> 0).toNumber(true);
+        if (object.yt_amount != null) message.yt_amount = String(object.yt_amount);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateRedeemPtYtPairRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairRequest
+       * @static
+       * @param {ununifi.irs.QueryEstimateRedeemPtYtPairRequest} message QueryEstimateRedeemPtYtPairRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateRedeemPtYtPairRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.pool_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.pool_id = options.longs === String ? '0' : 0;
+          object.yt_amount = '';
+        }
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (typeof message.pool_id === 'number') object.pool_id = options.longs === String ? String(message.pool_id) : message.pool_id;
+          else
+            object.pool_id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.pool_id)
+                : options.longs === Number
+                ? new $util.LongBits(message.pool_id.low >>> 0, message.pool_id.high >>> 0).toNumber(true)
+                : message.pool_id;
+        if (message.yt_amount != null && message.hasOwnProperty('yt_amount')) object.yt_amount = message.yt_amount;
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateRedeemPtYtPairRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateRedeemPtYtPairRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateRedeemPtYtPairRequest;
+    })();
+
+    irs.QueryEstimateRedeemPtYtPairResponse = (function () {
+      /**
+       * Properties of a QueryEstimateRedeemPtYtPairResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateRedeemPtYtPairResponse
+       * @property {cosmos.base.v1beta1.ICoin|null} [pt_amount] QueryEstimateRedeemPtYtPairResponse pt_amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateRedeemPtYtPairResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateRedeemPtYtPairResponse.
+       * @implements IQueryEstimateRedeemPtYtPairResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateRedeemPtYtPairResponse=} [properties] Properties to set
+       */
+      function QueryEstimateRedeemPtYtPairResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateRedeemPtYtPairResponse pt_amount.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} pt_amount
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairResponse
+       * @instance
+       */
+      QueryEstimateRedeemPtYtPairResponse.prototype.pt_amount = null;
+
+      /**
+       * Encodes the specified QueryEstimateRedeemPtYtPairResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemPtYtPairResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRedeemPtYtPairResponse} message QueryEstimateRedeemPtYtPairResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRedeemPtYtPairResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.pt_amount != null && Object.hasOwnProperty.call(message, 'pt_amount'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.pt_amount, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateRedeemPtYtPairResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemPtYtPairResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRedeemPtYtPairResponse} message QueryEstimateRedeemPtYtPairResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRedeemPtYtPairResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateRedeemPtYtPairResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateRedeemPtYtPairResponse} QueryEstimateRedeemPtYtPairResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRedeemPtYtPairResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateRedeemPtYtPairResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.pt_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateRedeemPtYtPairResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateRedeemPtYtPairResponse} QueryEstimateRedeemPtYtPairResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRedeemPtYtPairResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateRedeemPtYtPairResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateRedeemPtYtPairResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.pt_amount != null && message.hasOwnProperty('pt_amount')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.pt_amount);
+          if (error) return 'pt_amount.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateRedeemPtYtPairResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateRedeemPtYtPairResponse} QueryEstimateRedeemPtYtPairResponse
+       */
+      QueryEstimateRedeemPtYtPairResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateRedeemPtYtPairResponse) return object;
+        let message = new $root.ununifi.irs.QueryEstimateRedeemPtYtPairResponse();
+        if (object.pt_amount != null) {
+          if (typeof object.pt_amount !== 'object')
+            throw TypeError('.ununifi.irs.QueryEstimateRedeemPtYtPairResponse.pt_amount: object expected');
+          message.pt_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.pt_amount);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateRedeemPtYtPairResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairResponse
+       * @static
+       * @param {ununifi.irs.QueryEstimateRedeemPtYtPairResponse} message QueryEstimateRedeemPtYtPairResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateRedeemPtYtPairResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.pt_amount = null;
+        if (message.pt_amount != null && message.hasOwnProperty('pt_amount'))
+          object.pt_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.pt_amount, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateRedeemPtYtPairResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateRedeemPtYtPairResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateRedeemPtYtPairResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateRedeemPtYtPairResponse;
+    })();
+
     irs.QueryEstimateRedeemYtRequest = (function () {
       /**
        * Properties of a QueryEstimateRedeemYtRequest.
@@ -32406,6 +32911,759 @@ export const ununifi = ($root.ununifi = (() => {
       };
 
       return QueryEstimateRedeemLiquidityPoolTokenResponse;
+    })();
+
+    irs.QueryEstimateRequiredUtSwapToYtRequest = (function () {
+      /**
+       * Properties of a QueryEstimateRequiredUtSwapToYtRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateRequiredUtSwapToYtRequest
+       * @property {Long|null} [pool_id] QueryEstimateRequiredUtSwapToYtRequest pool_id
+       * @property {string|null} [desired_yt_amount] QueryEstimateRequiredUtSwapToYtRequest desired_yt_amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateRequiredUtSwapToYtRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateRequiredUtSwapToYtRequest.
+       * @implements IQueryEstimateRequiredUtSwapToYtRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateRequiredUtSwapToYtRequest=} [properties] Properties to set
+       */
+      function QueryEstimateRequiredUtSwapToYtRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateRequiredUtSwapToYtRequest pool_id.
+       * @member {Long} pool_id
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest
+       * @instance
+       */
+      QueryEstimateRequiredUtSwapToYtRequest.prototype.pool_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * QueryEstimateRequiredUtSwapToYtRequest desired_yt_amount.
+       * @member {string} desired_yt_amount
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest
+       * @instance
+       */
+      QueryEstimateRequiredUtSwapToYtRequest.prototype.desired_yt_amount = '';
+
+      /**
+       * Encodes the specified QueryEstimateRequiredUtSwapToYtRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRequiredUtSwapToYtRequest} message QueryEstimateRequiredUtSwapToYtRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRequiredUtSwapToYtRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.pool_id != null && Object.hasOwnProperty.call(message, 'pool_id'))
+          writer.uint32(/* id 1, wireType 0 =*/ 8).uint64(message.pool_id);
+        if (message.desired_yt_amount != null && Object.hasOwnProperty.call(message, 'desired_yt_amount'))
+          writer.uint32(/* id 3, wireType 2 =*/ 26).string(message.desired_yt_amount);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateRequiredUtSwapToYtRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRequiredUtSwapToYtRequest} message QueryEstimateRequiredUtSwapToYtRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRequiredUtSwapToYtRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateRequiredUtSwapToYtRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest} QueryEstimateRequiredUtSwapToYtRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRequiredUtSwapToYtRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.pool_id = reader.uint64();
+              break;
+            case 3:
+              message.desired_yt_amount = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateRequiredUtSwapToYtRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest} QueryEstimateRequiredUtSwapToYtRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRequiredUtSwapToYtRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateRequiredUtSwapToYtRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateRequiredUtSwapToYtRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (
+            !$util.isInteger(message.pool_id) &&
+            !(message.pool_id && $util.isInteger(message.pool_id.low) && $util.isInteger(message.pool_id.high))
+          )
+            return 'pool_id: integer|Long expected';
+        if (message.desired_yt_amount != null && message.hasOwnProperty('desired_yt_amount'))
+          if (!$util.isString(message.desired_yt_amount)) return 'desired_yt_amount: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateRequiredUtSwapToYtRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest} QueryEstimateRequiredUtSwapToYtRequest
+       */
+      QueryEstimateRequiredUtSwapToYtRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest) return object;
+        let message = new $root.ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest();
+        if (object.pool_id != null)
+          if ($util.Long) (message.pool_id = $util.Long.fromValue(object.pool_id)).unsigned = true;
+          else if (typeof object.pool_id === 'string') message.pool_id = parseInt(object.pool_id, 10);
+          else if (typeof object.pool_id === 'number') message.pool_id = object.pool_id;
+          else if (typeof object.pool_id === 'object')
+            message.pool_id = new $util.LongBits(object.pool_id.low >>> 0, object.pool_id.high >>> 0).toNumber(true);
+        if (object.desired_yt_amount != null) message.desired_yt_amount = String(object.desired_yt_amount);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateRequiredUtSwapToYtRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest
+       * @static
+       * @param {ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest} message QueryEstimateRequiredUtSwapToYtRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateRequiredUtSwapToYtRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.pool_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.pool_id = options.longs === String ? '0' : 0;
+          object.desired_yt_amount = '';
+        }
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (typeof message.pool_id === 'number') object.pool_id = options.longs === String ? String(message.pool_id) : message.pool_id;
+          else
+            object.pool_id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.pool_id)
+                : options.longs === Number
+                ? new $util.LongBits(message.pool_id.low >>> 0, message.pool_id.high >>> 0).toNumber(true)
+                : message.pool_id;
+        if (message.desired_yt_amount != null && message.hasOwnProperty('desired_yt_amount'))
+          object.desired_yt_amount = message.desired_yt_amount;
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateRequiredUtSwapToYtRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateRequiredUtSwapToYtRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateRequiredUtSwapToYtRequest;
+    })();
+
+    irs.QueryEstimateRequiredUtSwapToYtResponse = (function () {
+      /**
+       * Properties of a QueryEstimateRequiredUtSwapToYtResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateRequiredUtSwapToYtResponse
+       * @property {cosmos.base.v1beta1.ICoin|null} [required_ut_amount] QueryEstimateRequiredUtSwapToYtResponse required_ut_amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateRequiredUtSwapToYtResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateRequiredUtSwapToYtResponse.
+       * @implements IQueryEstimateRequiredUtSwapToYtResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateRequiredUtSwapToYtResponse=} [properties] Properties to set
+       */
+      function QueryEstimateRequiredUtSwapToYtResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateRequiredUtSwapToYtResponse required_ut_amount.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} required_ut_amount
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse
+       * @instance
+       */
+      QueryEstimateRequiredUtSwapToYtResponse.prototype.required_ut_amount = null;
+
+      /**
+       * Encodes the specified QueryEstimateRequiredUtSwapToYtResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRequiredUtSwapToYtResponse} message QueryEstimateRequiredUtSwapToYtResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRequiredUtSwapToYtResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.required_ut_amount != null && Object.hasOwnProperty.call(message, 'required_ut_amount'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.required_ut_amount, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateRequiredUtSwapToYtResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateRequiredUtSwapToYtResponse} message QueryEstimateRequiredUtSwapToYtResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateRequiredUtSwapToYtResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateRequiredUtSwapToYtResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse} QueryEstimateRequiredUtSwapToYtResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRequiredUtSwapToYtResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.required_ut_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateRequiredUtSwapToYtResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse} QueryEstimateRequiredUtSwapToYtResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateRequiredUtSwapToYtResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateRequiredUtSwapToYtResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateRequiredUtSwapToYtResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.required_ut_amount != null && message.hasOwnProperty('required_ut_amount')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.required_ut_amount);
+          if (error) return 'required_ut_amount.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateRequiredUtSwapToYtResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse} QueryEstimateRequiredUtSwapToYtResponse
+       */
+      QueryEstimateRequiredUtSwapToYtResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse) return object;
+        let message = new $root.ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse();
+        if (object.required_ut_amount != null) {
+          if (typeof object.required_ut_amount !== 'object')
+            throw TypeError('.ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse.required_ut_amount: object expected');
+          message.required_ut_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.required_ut_amount);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateRequiredUtSwapToYtResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse
+       * @static
+       * @param {ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse} message QueryEstimateRequiredUtSwapToYtResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateRequiredUtSwapToYtResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.required_ut_amount = null;
+        if (message.required_ut_amount != null && message.hasOwnProperty('required_ut_amount'))
+          object.required_ut_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.required_ut_amount, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateRequiredUtSwapToYtResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateRequiredUtSwapToYtResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateRequiredUtSwapToYtResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateRequiredUtSwapToYtResponse;
+    })();
+
+    irs.QueryEstimateSwapMaturedYtToUtRequest = (function () {
+      /**
+       * Properties of a QueryEstimateSwapMaturedYtToUtRequest.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateSwapMaturedYtToUtRequest
+       * @property {Long|null} [pool_id] QueryEstimateSwapMaturedYtToUtRequest pool_id
+       * @property {string|null} [yt_amount] QueryEstimateSwapMaturedYtToUtRequest yt_amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateSwapMaturedYtToUtRequest.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateSwapMaturedYtToUtRequest.
+       * @implements IQueryEstimateSwapMaturedYtToUtRequest
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateSwapMaturedYtToUtRequest=} [properties] Properties to set
+       */
+      function QueryEstimateSwapMaturedYtToUtRequest(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateSwapMaturedYtToUtRequest pool_id.
+       * @member {Long} pool_id
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest
+       * @instance
+       */
+      QueryEstimateSwapMaturedYtToUtRequest.prototype.pool_id = $util.Long ? $util.Long.fromBits(0, 0, true) : 0;
+
+      /**
+       * QueryEstimateSwapMaturedYtToUtRequest yt_amount.
+       * @member {string} yt_amount
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest
+       * @instance
+       */
+      QueryEstimateSwapMaturedYtToUtRequest.prototype.yt_amount = '';
+
+      /**
+       * Encodes the specified QueryEstimateSwapMaturedYtToUtRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateSwapMaturedYtToUtRequest} message QueryEstimateSwapMaturedYtToUtRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateSwapMaturedYtToUtRequest.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.pool_id != null && Object.hasOwnProperty.call(message, 'pool_id'))
+          writer.uint32(/* id 1, wireType 0 =*/ 8).uint64(message.pool_id);
+        if (message.yt_amount != null && Object.hasOwnProperty.call(message, 'yt_amount'))
+          writer.uint32(/* id 2, wireType 2 =*/ 18).string(message.yt_amount);
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateSwapMaturedYtToUtRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest
+       * @static
+       * @param {ununifi.irs.IQueryEstimateSwapMaturedYtToUtRequest} message QueryEstimateSwapMaturedYtToUtRequest message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateSwapMaturedYtToUtRequest.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateSwapMaturedYtToUtRequest message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest} QueryEstimateSwapMaturedYtToUtRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateSwapMaturedYtToUtRequest.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.pool_id = reader.uint64();
+              break;
+            case 2:
+              message.yt_amount = reader.string();
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateSwapMaturedYtToUtRequest message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest} QueryEstimateSwapMaturedYtToUtRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateSwapMaturedYtToUtRequest.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateSwapMaturedYtToUtRequest message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateSwapMaturedYtToUtRequest.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (
+            !$util.isInteger(message.pool_id) &&
+            !(message.pool_id && $util.isInteger(message.pool_id.low) && $util.isInteger(message.pool_id.high))
+          )
+            return 'pool_id: integer|Long expected';
+        if (message.yt_amount != null && message.hasOwnProperty('yt_amount'))
+          if (!$util.isString(message.yt_amount)) return 'yt_amount: string expected';
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateSwapMaturedYtToUtRequest message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest} QueryEstimateSwapMaturedYtToUtRequest
+       */
+      QueryEstimateSwapMaturedYtToUtRequest.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest) return object;
+        let message = new $root.ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest();
+        if (object.pool_id != null)
+          if ($util.Long) (message.pool_id = $util.Long.fromValue(object.pool_id)).unsigned = true;
+          else if (typeof object.pool_id === 'string') message.pool_id = parseInt(object.pool_id, 10);
+          else if (typeof object.pool_id === 'number') message.pool_id = object.pool_id;
+          else if (typeof object.pool_id === 'object')
+            message.pool_id = new $util.LongBits(object.pool_id.low >>> 0, object.pool_id.high >>> 0).toNumber(true);
+        if (object.yt_amount != null) message.yt_amount = String(object.yt_amount);
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateSwapMaturedYtToUtRequest message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest
+       * @static
+       * @param {ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest} message QueryEstimateSwapMaturedYtToUtRequest
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateSwapMaturedYtToUtRequest.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) {
+          if ($util.Long) {
+            let long = new $util.Long(0, 0, true);
+            object.pool_id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+          } else object.pool_id = options.longs === String ? '0' : 0;
+          object.yt_amount = '';
+        }
+        if (message.pool_id != null && message.hasOwnProperty('pool_id'))
+          if (typeof message.pool_id === 'number') object.pool_id = options.longs === String ? String(message.pool_id) : message.pool_id;
+          else
+            object.pool_id =
+              options.longs === String
+                ? $util.Long.prototype.toString.call(message.pool_id)
+                : options.longs === Number
+                ? new $util.LongBits(message.pool_id.low >>> 0, message.pool_id.high >>> 0).toNumber(true)
+                : message.pool_id;
+        if (message.yt_amount != null && message.hasOwnProperty('yt_amount')) object.yt_amount = message.yt_amount;
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateSwapMaturedYtToUtRequest to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtRequest
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateSwapMaturedYtToUtRequest.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateSwapMaturedYtToUtRequest;
+    })();
+
+    irs.QueryEstimateSwapMaturedYtToUtResponse = (function () {
+      /**
+       * Properties of a QueryEstimateSwapMaturedYtToUtResponse.
+       * @memberof ununifi.irs
+       * @interface IQueryEstimateSwapMaturedYtToUtResponse
+       * @property {cosmos.base.v1beta1.ICoin|null} [ut_amount] QueryEstimateSwapMaturedYtToUtResponse ut_amount
+       */
+
+      /**
+       * Constructs a new QueryEstimateSwapMaturedYtToUtResponse.
+       * @memberof ununifi.irs
+       * @classdesc Represents a QueryEstimateSwapMaturedYtToUtResponse.
+       * @implements IQueryEstimateSwapMaturedYtToUtResponse
+       * @constructor
+       * @param {ununifi.irs.IQueryEstimateSwapMaturedYtToUtResponse=} [properties] Properties to set
+       */
+      function QueryEstimateSwapMaturedYtToUtResponse(properties) {
+        if (properties)
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null) this[keys[i]] = properties[keys[i]];
+      }
+
+      /**
+       * QueryEstimateSwapMaturedYtToUtResponse ut_amount.
+       * @member {cosmos.base.v1beta1.ICoin|null|undefined} ut_amount
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse
+       * @instance
+       */
+      QueryEstimateSwapMaturedYtToUtResponse.prototype.ut_amount = null;
+
+      /**
+       * Encodes the specified QueryEstimateSwapMaturedYtToUtResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse.verify|verify} messages.
+       * @function encode
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateSwapMaturedYtToUtResponse} message QueryEstimateSwapMaturedYtToUtResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateSwapMaturedYtToUtResponse.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.ut_amount != null && Object.hasOwnProperty.call(message, 'ut_amount'))
+          $root.cosmos.base.v1beta1.Coin.encode(message.ut_amount, writer.uint32(/* id 1, wireType 2 =*/ 10).fork()).ldelim();
+        return writer;
+      };
+
+      /**
+       * Encodes the specified QueryEstimateSwapMaturedYtToUtResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse.verify|verify} messages.
+       * @function encodeDelimited
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse
+       * @static
+       * @param {ununifi.irs.IQueryEstimateSwapMaturedYtToUtResponse} message QueryEstimateSwapMaturedYtToUtResponse message or plain object to encode
+       * @param {$protobuf.Writer} [writer] Writer to encode to
+       * @returns {$protobuf.Writer} Writer
+       */
+      QueryEstimateSwapMaturedYtToUtResponse.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+      };
+
+      /**
+       * Decodes a QueryEstimateSwapMaturedYtToUtResponse message from the specified reader or buffer.
+       * @function decode
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @param {number} [length] Message length if known beforehand
+       * @returns {ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse} QueryEstimateSwapMaturedYtToUtResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateSwapMaturedYtToUtResponse.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length,
+          message = new $root.ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse();
+        while (reader.pos < end) {
+          let tag = reader.uint32();
+          switch (tag >>> 3) {
+            case 1:
+              message.ut_amount = $root.cosmos.base.v1beta1.Coin.decode(reader, reader.uint32());
+              break;
+            default:
+              reader.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+
+      /**
+       * Decodes a QueryEstimateSwapMaturedYtToUtResponse message from the specified reader or buffer, length delimited.
+       * @function decodeDelimited
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse
+       * @static
+       * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+       * @returns {ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse} QueryEstimateSwapMaturedYtToUtResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      QueryEstimateSwapMaturedYtToUtResponse.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader)) reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+      };
+
+      /**
+       * Verifies a QueryEstimateSwapMaturedYtToUtResponse message.
+       * @function verify
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse
+       * @static
+       * @param {Object.<string,*>} message Plain object to verify
+       * @returns {string|null} `null` if valid, otherwise the reason why it is not
+       */
+      QueryEstimateSwapMaturedYtToUtResponse.verify = function verify(message) {
+        if (typeof message !== 'object' || message === null) return 'object expected';
+        if (message.ut_amount != null && message.hasOwnProperty('ut_amount')) {
+          let error = $root.cosmos.base.v1beta1.Coin.verify(message.ut_amount);
+          if (error) return 'ut_amount.' + error;
+        }
+        return null;
+      };
+
+      /**
+       * Creates a QueryEstimateSwapMaturedYtToUtResponse message from a plain object. Also converts values to their respective internal types.
+       * @function fromObject
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse
+       * @static
+       * @param {Object.<string,*>} object Plain object
+       * @returns {ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse} QueryEstimateSwapMaturedYtToUtResponse
+       */
+      QueryEstimateSwapMaturedYtToUtResponse.fromObject = function fromObject(object) {
+        if (object instanceof $root.ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse) return object;
+        let message = new $root.ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse();
+        if (object.ut_amount != null) {
+          if (typeof object.ut_amount !== 'object')
+            throw TypeError('.ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse.ut_amount: object expected');
+          message.ut_amount = $root.cosmos.base.v1beta1.Coin.fromObject(object.ut_amount);
+        }
+        return message;
+      };
+
+      /**
+       * Creates a plain object from a QueryEstimateSwapMaturedYtToUtResponse message. Also converts values to other types if specified.
+       * @function toObject
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse
+       * @static
+       * @param {ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse} message QueryEstimateSwapMaturedYtToUtResponse
+       * @param {$protobuf.IConversionOptions} [options] Conversion options
+       * @returns {Object.<string,*>} Plain object
+       */
+      QueryEstimateSwapMaturedYtToUtResponse.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        let object = {};
+        if (options.defaults) object.ut_amount = null;
+        if (message.ut_amount != null && message.hasOwnProperty('ut_amount'))
+          object.ut_amount = $root.cosmos.base.v1beta1.Coin.toObject(message.ut_amount, options);
+        return object;
+      };
+
+      /**
+       * Converts this QueryEstimateSwapMaturedYtToUtResponse to JSON.
+       * @function toJSON
+       * @memberof ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse
+       * @instance
+       * @returns {Object.<string,*>} JSON object
+       */
+      QueryEstimateSwapMaturedYtToUtResponse.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+      };
+
+      return QueryEstimateSwapMaturedYtToUtResponse;
     })();
 
     return irs;
