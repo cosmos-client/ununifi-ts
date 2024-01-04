@@ -41,10 +41,6 @@ export function estimateRedeemPtYtPair(sdk: cosmosclient.CosmosSDK, poolId: stri
   return new QueryApi(undefined, sdk.url).estimateRedeemPtYtPair(poolId, ytAmount);
 }
 
-export function estimateRedeemYt(sdk: cosmosclient.CosmosSDK, poolId: string, denom: string, amount: string) {
-  return new QueryApi(undefined, sdk.url).estimateRedeemYt(poolId, denom, amount);
-}
-
 export function estimateMintLiquidityPoolToken(sdk: cosmosclient.CosmosSDK, poolId: string, desiredAmount: string) {
   return new QueryApi(undefined, sdk.url).estimateMintLiquidityPoolToken(poolId, desiredAmount);
 }
