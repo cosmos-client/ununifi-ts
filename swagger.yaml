@@ -7821,7 +7821,7 @@ paths:
                       type: string
                       format: byte
       parameters:
-        - name: pool_id
+        - name: id
           in: query
           required: false
           type: string
@@ -7895,7 +7895,7 @@ paths:
                       type: string
                       format: byte
       parameters:
-        - name: pool_id
+        - name: id
           in: query
           required: false
           type: string
@@ -7960,7 +7960,7 @@ paths:
                       type: string
                       format: byte
       parameters:
-        - name: pool_id
+        - name: id
           in: query
           required: false
           type: string
@@ -7996,51 +7996,7 @@ paths:
                   method
 
                   signatures required by gogoproto.
-        default:
-          description: An unexpected error response.
-          schema:
-            type: object
-            properties:
-              error:
-                type: string
-              code:
-                type: integer
-                format: int32
-              message:
-                type: string
-              details:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    type_url:
-                      type: string
-                    value:
-                      type: string
-                      format: byte
-      parameters:
-        - name: pool_id
-          in: query
-          required: false
-          type: string
-          format: uint64
-        - name: yt_amount
-          in: query
-          required: false
-          type: string
-      tags:
-        - Query
-  /ununifi/irs/estimate-redeem-yt:
-    get:
-      summary: Estimate redeem amount of YT after maturity
-      operationId: EstimateRedeemYt
-      responses:
-        '200':
-          description: A successful response.
-          schema:
-            type: object
-            properties:
-              amount:
+              yt_amount:
                 type: object
                 properties:
                   denom:
@@ -8078,16 +8034,12 @@ paths:
                       type: string
                       format: byte
       parameters:
-        - name: pool_id
+        - name: id
           in: query
           required: false
           type: string
           format: uint64
-        - name: denom
-          in: query
-          required: false
-          type: string
-        - name: amount
+        - name: desired_ut_amount
           in: query
           required: false
           type: string
@@ -8141,7 +8093,7 @@ paths:
                       type: string
                       format: byte
       parameters:
-        - name: pool_id
+        - name: id
           in: query
           required: false
           type: string
@@ -8200,7 +8152,7 @@ paths:
                       type: string
                       format: byte
       parameters:
-        - name: pool_id
+        - name: id
           in: query
           required: false
           type: string
@@ -8263,7 +8215,7 @@ paths:
                       type: string
                       format: byte
       parameters:
-        - name: pool_id
+        - name: id
           in: query
           required: false
           type: string
@@ -8384,6 +8336,144 @@ paths:
             description: >-
               QueryTranchResponse is response type for the Query/Tranch RPC
               method.
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type_url:
+                      type: string
+                    value:
+                      type: string
+                      format: byte
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+          format: uint64
+      tags:
+        - Query
+  /ununifi/irs/tranche/{id}/pool-apy:
+    get:
+      summary: tranche Ls APYs by id
+      operationId: TranchePoolAPYs
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              liquidity_apy:
+                type: string
+              discount_pt_apy:
+                type: string
+              liquidity_rate_per_ut:
+                type: string
+              ut_percentage_in_pool:
+                type: string
+              pt_percentage_in_pool:
+                type: string
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type_url:
+                      type: string
+                    value:
+                      type: string
+                      format: byte
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+          format: uint64
+      tags:
+        - Query
+  /ununifi/irs/tranche/{id}/pt-apy:
+    get:
+      summary: tranche PT APYs by id
+      operationId: TranchePtAPYs
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              pt_apy:
+                type: string
+              pt_rate_per_ut:
+                type: string
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type_url:
+                      type: string
+                    value:
+                      type: string
+                      format: byte
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+          format: uint64
+      tags:
+        - Query
+  /ununifi/irs/tranche/{id}/yt-apy:
+    get:
+      summary: tranche YT APYs by id
+      operationId: TrancheYtAPYs
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              yt_apy:
+                type: string
+              yt_rate_per_ut:
+                type: string
         default:
           description: An unexpected error response.
           schema:
@@ -13121,10 +13211,7 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
-  ununifi.irs.QueryEstimateRedeemYtResponse:
-    type: object
-    properties:
-      amount:
+      yt_amount:
         type: object
         properties:
           denom:
@@ -13193,6 +13280,26 @@ definitions:
           trade_fee_rate:
             type: string
     description: QueryParamsResponse is response type for the Query/Params RPC method.
+  ununifi.irs.QueryTranchePoolAPYsResponse:
+    type: object
+    properties:
+      liquidity_apy:
+        type: string
+      discount_pt_apy:
+        type: string
+      liquidity_rate_per_ut:
+        type: string
+      ut_percentage_in_pool:
+        type: string
+      pt_percentage_in_pool:
+        type: string
+  ununifi.irs.QueryTranchePtAPYsResponse:
+    type: object
+    properties:
+      pt_apy:
+        type: string
+      pt_rate_per_ut:
+        type: string
   ununifi.irs.QueryTrancheResponse:
     type: object
     properties:
@@ -13249,6 +13356,13 @@ definitions:
                 signatures required by gogoproto.
             title: Pool assets are sorted by denomination
     description: QueryTranchResponse is response type for the Query/Tranch RPC method.
+  ununifi.irs.QueryTrancheYtAPYsResponse:
+    type: object
+    properties:
+      yt_apy:
+        type: string
+      yt_rate_per_ut:
+        type: string
   ununifi.irs.QueryTranchesResponse:
     type: object
     properties:

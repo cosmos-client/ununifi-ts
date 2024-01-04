@@ -13105,23 +13105,6 @@ export namespace ununifi {
       ): Promise<ununifi.irs.QueryEstimateRedeemPtYtPairResponse>;
 
       /**
-       * Calls EstimateRedeemYt.
-       * @param request QueryEstimateRedeemYtRequest message or plain object
-       * @param callback Node-style callback called with the error, if any, and QueryEstimateRedeemYtResponse
-       */
-      public estimateRedeemYt(
-        request: ununifi.irs.IQueryEstimateRedeemYtRequest,
-        callback: ununifi.irs.Query.EstimateRedeemYtCallback,
-      ): void;
-
-      /**
-       * Calls EstimateRedeemYt.
-       * @param request QueryEstimateRedeemYtRequest message or plain object
-       * @returns Promise
-       */
-      public estimateRedeemYt(request: ununifi.irs.IQueryEstimateRedeemYtRequest): Promise<ununifi.irs.QueryEstimateRedeemYtResponse>;
-
-      /**
        * Calls EstimateMintLiquidityPoolToken.
        * @param request QueryEstimateMintLiquidityPoolTokenRequest message or plain object
        * @param callback Node-style callback called with the error, if any, and QueryEstimateMintLiquidityPoolTokenResponse
@@ -13196,6 +13179,48 @@ export namespace ununifi {
       public estimateSwapMaturedYtToUt(
         request: ununifi.irs.IQueryEstimateSwapMaturedYtToUtRequest,
       ): Promise<ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse>;
+
+      /**
+       * Calls TranchePtAPYs.
+       * @param request QueryTranchePtAPYsRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryTranchePtAPYsResponse
+       */
+      public tranchePtAPYs(request: ununifi.irs.IQueryTranchePtAPYsRequest, callback: ununifi.irs.Query.TranchePtAPYsCallback): void;
+
+      /**
+       * Calls TranchePtAPYs.
+       * @param request QueryTranchePtAPYsRequest message or plain object
+       * @returns Promise
+       */
+      public tranchePtAPYs(request: ununifi.irs.IQueryTranchePtAPYsRequest): Promise<ununifi.irs.QueryTranchePtAPYsResponse>;
+
+      /**
+       * Calls TrancheYtAPYs.
+       * @param request QueryTrancheYtAPYsRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryTrancheYtAPYsResponse
+       */
+      public trancheYtAPYs(request: ununifi.irs.IQueryTrancheYtAPYsRequest, callback: ununifi.irs.Query.TrancheYtAPYsCallback): void;
+
+      /**
+       * Calls TrancheYtAPYs.
+       * @param request QueryTrancheYtAPYsRequest message or plain object
+       * @returns Promise
+       */
+      public trancheYtAPYs(request: ununifi.irs.IQueryTrancheYtAPYsRequest): Promise<ununifi.irs.QueryTrancheYtAPYsResponse>;
+
+      /**
+       * Calls TranchePoolAPYs.
+       * @param request QueryTranchePoolAPYsRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryTranchePoolAPYsResponse
+       */
+      public tranchePoolAPYs(request: ununifi.irs.IQueryTranchePoolAPYsRequest, callback: ununifi.irs.Query.TranchePoolAPYsCallback): void;
+
+      /**
+       * Calls TranchePoolAPYs.
+       * @param request QueryTranchePoolAPYsRequest message or plain object
+       * @returns Promise
+       */
+      public tranchePoolAPYs(request: ununifi.irs.IQueryTranchePoolAPYsRequest): Promise<ununifi.irs.QueryTranchePoolAPYsResponse>;
     }
 
     namespace Query {
@@ -13270,13 +13295,6 @@ export namespace ununifi {
       type EstimateRedeemPtYtPairCallback = (error: Error | null, response?: ununifi.irs.QueryEstimateRedeemPtYtPairResponse) => void;
 
       /**
-       * Callback as used by {@link ununifi.irs.Query#estimateRedeemYt}.
-       * @param error Error, if any
-       * @param [response] QueryEstimateRedeemYtResponse
-       */
-      type EstimateRedeemYtCallback = (error: Error | null, response?: ununifi.irs.QueryEstimateRedeemYtResponse) => void;
-
-      /**
        * Callback as used by {@link ununifi.irs.Query#estimateMintLiquidityPoolToken}.
        * @param error Error, if any
        * @param [response] QueryEstimateMintLiquidityPoolTokenResponse
@@ -13312,6 +13330,27 @@ export namespace ununifi {
        * @param [response] QueryEstimateSwapMaturedYtToUtResponse
        */
       type EstimateSwapMaturedYtToUtCallback = (error: Error | null, response?: ununifi.irs.QueryEstimateSwapMaturedYtToUtResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#tranchePtAPYs}.
+       * @param error Error, if any
+       * @param [response] QueryTranchePtAPYsResponse
+       */
+      type TranchePtAPYsCallback = (error: Error | null, response?: ununifi.irs.QueryTranchePtAPYsResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#trancheYtAPYs}.
+       * @param error Error, if any
+       * @param [response] QueryTrancheYtAPYsResponse
+       */
+      type TrancheYtAPYsCallback = (error: Error | null, response?: ununifi.irs.QueryTrancheYtAPYsResponse) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#tranchePoolAPYs}.
+       * @param error Error, if any
+       * @param [response] QueryTranchePoolAPYsResponse
+       */
+      type TranchePoolAPYsCallback = (error: Error | null, response?: ununifi.irs.QueryTranchePoolAPYsResponse) => void;
     }
 
     /** Properties of a QueryParamsRequest. */
@@ -14375,8 +14414,8 @@ export namespace ununifi {
 
     /** Properties of a QueryEstimateSwapInPoolRequest. */
     interface IQueryEstimateSwapInPoolRequest {
-      /** QueryEstimateSwapInPoolRequest pool_id */
-      pool_id?: Long | null;
+      /** QueryEstimateSwapInPoolRequest id */
+      id?: Long | null;
 
       /** QueryEstimateSwapInPoolRequest denom */
       denom?: string | null;
@@ -14393,8 +14432,8 @@ export namespace ununifi {
        */
       constructor(properties?: ununifi.irs.IQueryEstimateSwapInPoolRequest);
 
-      /** QueryEstimateSwapInPoolRequest pool_id. */
-      public pool_id: Long;
+      /** QueryEstimateSwapInPoolRequest id. */
+      public id: Long;
 
       /** QueryEstimateSwapInPoolRequest denom. */
       public denom: string;
@@ -14555,8 +14594,8 @@ export namespace ununifi {
 
     /** Properties of a QueryEstimateMintPtYtPairRequest. */
     interface IQueryEstimateMintPtYtPairRequest {
-      /** QueryEstimateMintPtYtPairRequest pool_id */
-      pool_id?: Long | null;
+      /** QueryEstimateMintPtYtPairRequest id */
+      id?: Long | null;
 
       /** QueryEstimateMintPtYtPairRequest denom */
       denom?: string | null;
@@ -14573,8 +14612,8 @@ export namespace ununifi {
        */
       constructor(properties?: ununifi.irs.IQueryEstimateMintPtYtPairRequest);
 
-      /** QueryEstimateMintPtYtPairRequest pool_id. */
-      public pool_id: Long;
+      /** QueryEstimateMintPtYtPairRequest id. */
+      public id: Long;
 
       /** QueryEstimateMintPtYtPairRequest denom. */
       public denom: string;
@@ -14741,11 +14780,11 @@ export namespace ununifi {
 
     /** Properties of a QueryEstimateRedeemPtYtPairRequest. */
     interface IQueryEstimateRedeemPtYtPairRequest {
-      /** QueryEstimateRedeemPtYtPairRequest pool_id */
-      pool_id?: Long | null;
+      /** QueryEstimateRedeemPtYtPairRequest id */
+      id?: Long | null;
 
-      /** QueryEstimateRedeemPtYtPairRequest yt_amount */
-      yt_amount?: string | null;
+      /** QueryEstimateRedeemPtYtPairRequest desired_ut_amount */
+      desired_ut_amount?: string | null;
     }
 
     /** Represents a QueryEstimateRedeemPtYtPairRequest. */
@@ -14756,11 +14795,11 @@ export namespace ununifi {
        */
       constructor(properties?: ununifi.irs.IQueryEstimateRedeemPtYtPairRequest);
 
-      /** QueryEstimateRedeemPtYtPairRequest pool_id. */
-      public pool_id: Long;
+      /** QueryEstimateRedeemPtYtPairRequest id. */
+      public id: Long;
 
-      /** QueryEstimateRedeemPtYtPairRequest yt_amount. */
-      public yt_amount: string;
+      /** QueryEstimateRedeemPtYtPairRequest desired_ut_amount. */
+      public desired_ut_amount: string;
 
       /**
        * Encodes the specified QueryEstimateRedeemPtYtPairRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemPtYtPairRequest.verify|verify} messages.
@@ -14833,6 +14872,9 @@ export namespace ununifi {
     interface IQueryEstimateRedeemPtYtPairResponse {
       /** QueryEstimateRedeemPtYtPairResponse pt_amount */
       pt_amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /** QueryEstimateRedeemPtYtPairResponse yt_amount */
+      yt_amount?: cosmos.base.v1beta1.ICoin | null;
     }
 
     /** Represents a QueryEstimateRedeemPtYtPairResponse. */
@@ -14845,6 +14887,9 @@ export namespace ununifi {
 
       /** QueryEstimateRedeemPtYtPairResponse pt_amount. */
       public pt_amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /** QueryEstimateRedeemPtYtPairResponse yt_amount. */
+      public yt_amount?: cosmos.base.v1beta1.ICoin | null;
 
       /**
        * Encodes the specified QueryEstimateRedeemPtYtPairResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemPtYtPairResponse.verify|verify} messages.
@@ -14913,190 +14958,10 @@ export namespace ununifi {
       public toJSON(): { [k: string]: any };
     }
 
-    /** Properties of a QueryEstimateRedeemYtRequest. */
-    interface IQueryEstimateRedeemYtRequest {
-      /** QueryEstimateRedeemYtRequest pool_id */
-      pool_id?: Long | null;
-
-      /** QueryEstimateRedeemYtRequest denom */
-      denom?: string | null;
-
-      /** QueryEstimateRedeemYtRequest amount */
-      amount?: string | null;
-    }
-
-    /** Represents a QueryEstimateRedeemYtRequest. */
-    class QueryEstimateRedeemYtRequest implements IQueryEstimateRedeemYtRequest {
-      /**
-       * Constructs a new QueryEstimateRedeemYtRequest.
-       * @param [properties] Properties to set
-       */
-      constructor(properties?: ununifi.irs.IQueryEstimateRedeemYtRequest);
-
-      /** QueryEstimateRedeemYtRequest pool_id. */
-      public pool_id: Long;
-
-      /** QueryEstimateRedeemYtRequest denom. */
-      public denom: string;
-
-      /** QueryEstimateRedeemYtRequest amount. */
-      public amount: string;
-
-      /**
-       * Encodes the specified QueryEstimateRedeemYtRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtRequest.verify|verify} messages.
-       * @param message QueryEstimateRedeemYtRequest message or plain object to encode
-       * @param [writer] Writer to encode to
-       * @returns Writer
-       */
-      public static encode(message: ununifi.irs.IQueryEstimateRedeemYtRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Encodes the specified QueryEstimateRedeemYtRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtRequest.verify|verify} messages.
-       * @param message QueryEstimateRedeemYtRequest message or plain object to encode
-       * @param [writer] Writer to encode to
-       * @returns Writer
-       */
-      public static encodeDelimited(message: ununifi.irs.IQueryEstimateRedeemYtRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Decodes a QueryEstimateRedeemYtRequest message from the specified reader or buffer.
-       * @param reader Reader or buffer to decode from
-       * @param [length] Message length if known beforehand
-       * @returns QueryEstimateRedeemYtRequest
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryEstimateRedeemYtRequest;
-
-      /**
-       * Decodes a QueryEstimateRedeemYtRequest message from the specified reader or buffer, length delimited.
-       * @param reader Reader or buffer to decode from
-       * @returns QueryEstimateRedeemYtRequest
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateRedeemYtRequest;
-
-      /**
-       * Verifies a QueryEstimateRedeemYtRequest message.
-       * @param message Plain object to verify
-       * @returns `null` if valid, otherwise the reason why it is not
-       */
-      public static verify(message: { [k: string]: any }): string | null;
-
-      /**
-       * Creates a QueryEstimateRedeemYtRequest message from a plain object. Also converts values to their respective internal types.
-       * @param object Plain object
-       * @returns QueryEstimateRedeemYtRequest
-       */
-      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateRedeemYtRequest;
-
-      /**
-       * Creates a plain object from a QueryEstimateRedeemYtRequest message. Also converts values to other types if specified.
-       * @param message QueryEstimateRedeemYtRequest
-       * @param [options] Conversion options
-       * @returns Plain object
-       */
-      public static toObject(
-        message: ununifi.irs.QueryEstimateRedeemYtRequest,
-        options?: $protobuf.IConversionOptions,
-      ): { [k: string]: any };
-
-      /**
-       * Converts this QueryEstimateRedeemYtRequest to JSON.
-       * @returns JSON object
-       */
-      public toJSON(): { [k: string]: any };
-    }
-
-    /** Properties of a QueryEstimateRedeemYtResponse. */
-    interface IQueryEstimateRedeemYtResponse {
-      /** QueryEstimateRedeemYtResponse amount */
-      amount?: cosmos.base.v1beta1.ICoin | null;
-    }
-
-    /** Represents a QueryEstimateRedeemYtResponse. */
-    class QueryEstimateRedeemYtResponse implements IQueryEstimateRedeemYtResponse {
-      /**
-       * Constructs a new QueryEstimateRedeemYtResponse.
-       * @param [properties] Properties to set
-       */
-      constructor(properties?: ununifi.irs.IQueryEstimateRedeemYtResponse);
-
-      /** QueryEstimateRedeemYtResponse amount. */
-      public amount?: cosmos.base.v1beta1.ICoin | null;
-
-      /**
-       * Encodes the specified QueryEstimateRedeemYtResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtResponse.verify|verify} messages.
-       * @param message QueryEstimateRedeemYtResponse message or plain object to encode
-       * @param [writer] Writer to encode to
-       * @returns Writer
-       */
-      public static encode(message: ununifi.irs.IQueryEstimateRedeemYtResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Encodes the specified QueryEstimateRedeemYtResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemYtResponse.verify|verify} messages.
-       * @param message QueryEstimateRedeemYtResponse message or plain object to encode
-       * @param [writer] Writer to encode to
-       * @returns Writer
-       */
-      public static encodeDelimited(message: ununifi.irs.IQueryEstimateRedeemYtResponse, writer?: $protobuf.Writer): $protobuf.Writer;
-
-      /**
-       * Decodes a QueryEstimateRedeemYtResponse message from the specified reader or buffer.
-       * @param reader Reader or buffer to decode from
-       * @param [length] Message length if known beforehand
-       * @returns QueryEstimateRedeemYtResponse
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryEstimateRedeemYtResponse;
-
-      /**
-       * Decodes a QueryEstimateRedeemYtResponse message from the specified reader or buffer, length delimited.
-       * @param reader Reader or buffer to decode from
-       * @returns QueryEstimateRedeemYtResponse
-       * @throws {Error} If the payload is not a reader or valid buffer
-       * @throws {$protobuf.util.ProtocolError} If required fields are missing
-       */
-      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateRedeemYtResponse;
-
-      /**
-       * Verifies a QueryEstimateRedeemYtResponse message.
-       * @param message Plain object to verify
-       * @returns `null` if valid, otherwise the reason why it is not
-       */
-      public static verify(message: { [k: string]: any }): string | null;
-
-      /**
-       * Creates a QueryEstimateRedeemYtResponse message from a plain object. Also converts values to their respective internal types.
-       * @param object Plain object
-       * @returns QueryEstimateRedeemYtResponse
-       */
-      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateRedeemYtResponse;
-
-      /**
-       * Creates a plain object from a QueryEstimateRedeemYtResponse message. Also converts values to other types if specified.
-       * @param message QueryEstimateRedeemYtResponse
-       * @param [options] Conversion options
-       * @returns Plain object
-       */
-      public static toObject(
-        message: ununifi.irs.QueryEstimateRedeemYtResponse,
-        options?: $protobuf.IConversionOptions,
-      ): { [k: string]: any };
-
-      /**
-       * Converts this QueryEstimateRedeemYtResponse to JSON.
-       * @returns JSON object
-       */
-      public toJSON(): { [k: string]: any };
-    }
-
     /** Properties of a QueryEstimateMintLiquidityPoolTokenRequest. */
     interface IQueryEstimateMintLiquidityPoolTokenRequest {
-      /** QueryEstimateMintLiquidityPoolTokenRequest pool_id */
-      pool_id?: Long | null;
+      /** QueryEstimateMintLiquidityPoolTokenRequest id */
+      id?: Long | null;
 
       /** QueryEstimateMintLiquidityPoolTokenRequest desired_amount */
       desired_amount?: string | null;
@@ -15110,8 +14975,8 @@ export namespace ununifi {
        */
       constructor(properties?: ununifi.irs.IQueryEstimateMintLiquidityPoolTokenRequest);
 
-      /** QueryEstimateMintLiquidityPoolTokenRequest pool_id. */
-      public pool_id: Long;
+      /** QueryEstimateMintLiquidityPoolTokenRequest id. */
+      public id: Long;
 
       /** QueryEstimateMintLiquidityPoolTokenRequest desired_amount. */
       public desired_amount: string;
@@ -15275,8 +15140,8 @@ export namespace ununifi {
 
     /** Properties of a QueryEstimateRedeemLiquidityPoolTokenRequest. */
     interface IQueryEstimateRedeemLiquidityPoolTokenRequest {
-      /** QueryEstimateRedeemLiquidityPoolTokenRequest pool_id */
-      pool_id?: Long | null;
+      /** QueryEstimateRedeemLiquidityPoolTokenRequest id */
+      id?: Long | null;
 
       /** QueryEstimateRedeemLiquidityPoolTokenRequest amount */
       amount?: string | null;
@@ -15290,8 +15155,8 @@ export namespace ununifi {
        */
       constructor(properties?: ununifi.irs.IQueryEstimateRedeemLiquidityPoolTokenRequest);
 
-      /** QueryEstimateRedeemLiquidityPoolTokenRequest pool_id. */
-      public pool_id: Long;
+      /** QueryEstimateRedeemLiquidityPoolTokenRequest id. */
+      public id: Long;
 
       /** QueryEstimateRedeemLiquidityPoolTokenRequest amount. */
       public amount: string;
@@ -15464,8 +15329,8 @@ export namespace ununifi {
 
     /** Properties of a QueryEstimateRequiredUtSwapToYtRequest. */
     interface IQueryEstimateRequiredUtSwapToYtRequest {
-      /** QueryEstimateRequiredUtSwapToYtRequest pool_id */
-      pool_id?: Long | null;
+      /** QueryEstimateRequiredUtSwapToYtRequest id */
+      id?: Long | null;
 
       /** QueryEstimateRequiredUtSwapToYtRequest desired_yt_amount */
       desired_yt_amount?: string | null;
@@ -15479,8 +15344,8 @@ export namespace ununifi {
        */
       constructor(properties?: ununifi.irs.IQueryEstimateRequiredUtSwapToYtRequest);
 
-      /** QueryEstimateRequiredUtSwapToYtRequest pool_id. */
-      public pool_id: Long;
+      /** QueryEstimateRequiredUtSwapToYtRequest id. */
+      public id: Long;
 
       /** QueryEstimateRequiredUtSwapToYtRequest desired_yt_amount. */
       public desired_yt_amount: string;
@@ -15644,8 +15509,8 @@ export namespace ununifi {
 
     /** Properties of a QueryEstimateSwapMaturedYtToUtRequest. */
     interface IQueryEstimateSwapMaturedYtToUtRequest {
-      /** QueryEstimateSwapMaturedYtToUtRequest pool_id */
-      pool_id?: Long | null;
+      /** QueryEstimateSwapMaturedYtToUtRequest id */
+      id?: Long | null;
 
       /** QueryEstimateSwapMaturedYtToUtRequest yt_amount */
       yt_amount?: string | null;
@@ -15659,8 +15524,8 @@ export namespace ununifi {
        */
       constructor(properties?: ununifi.irs.IQueryEstimateSwapMaturedYtToUtRequest);
 
-      /** QueryEstimateSwapMaturedYtToUtRequest pool_id. */
-      public pool_id: Long;
+      /** QueryEstimateSwapMaturedYtToUtRequest id. */
+      public id: Long;
 
       /** QueryEstimateSwapMaturedYtToUtRequest yt_amount. */
       public yt_amount: string;
@@ -15817,6 +15682,534 @@ export namespace ununifi {
 
       /**
        * Converts this QueryEstimateSwapMaturedYtToUtResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryTranchePtAPYsRequest. */
+    interface IQueryTranchePtAPYsRequest {
+      /** QueryTranchePtAPYsRequest id */
+      id?: Long | null;
+    }
+
+    /** Represents a QueryTranchePtAPYsRequest. */
+    class QueryTranchePtAPYsRequest implements IQueryTranchePtAPYsRequest {
+      /**
+       * Constructs a new QueryTranchePtAPYsRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryTranchePtAPYsRequest);
+
+      /** QueryTranchePtAPYsRequest id. */
+      public id: Long;
+
+      /**
+       * Encodes the specified QueryTranchePtAPYsRequest message. Does not implicitly {@link ununifi.irs.QueryTranchePtAPYsRequest.verify|verify} messages.
+       * @param message QueryTranchePtAPYsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryTranchePtAPYsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryTranchePtAPYsRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryTranchePtAPYsRequest.verify|verify} messages.
+       * @param message QueryTranchePtAPYsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryTranchePtAPYsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryTranchePtAPYsRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryTranchePtAPYsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryTranchePtAPYsRequest;
+
+      /**
+       * Decodes a QueryTranchePtAPYsRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryTranchePtAPYsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryTranchePtAPYsRequest;
+
+      /**
+       * Verifies a QueryTranchePtAPYsRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryTranchePtAPYsRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryTranchePtAPYsRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryTranchePtAPYsRequest;
+
+      /**
+       * Creates a plain object from a QueryTranchePtAPYsRequest message. Also converts values to other types if specified.
+       * @param message QueryTranchePtAPYsRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryTranchePtAPYsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryTranchePtAPYsRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryTranchePtAPYsResponse. */
+    interface IQueryTranchePtAPYsResponse {
+      /** QueryTranchePtAPYsResponse pt_apy */
+      pt_apy?: string | null;
+
+      /** QueryTranchePtAPYsResponse pt_rate_per_ut */
+      pt_rate_per_ut?: string | null;
+    }
+
+    /** Represents a QueryTranchePtAPYsResponse. */
+    class QueryTranchePtAPYsResponse implements IQueryTranchePtAPYsResponse {
+      /**
+       * Constructs a new QueryTranchePtAPYsResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryTranchePtAPYsResponse);
+
+      /** QueryTranchePtAPYsResponse pt_apy. */
+      public pt_apy: string;
+
+      /** QueryTranchePtAPYsResponse pt_rate_per_ut. */
+      public pt_rate_per_ut: string;
+
+      /**
+       * Encodes the specified QueryTranchePtAPYsResponse message. Does not implicitly {@link ununifi.irs.QueryTranchePtAPYsResponse.verify|verify} messages.
+       * @param message QueryTranchePtAPYsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryTranchePtAPYsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryTranchePtAPYsResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryTranchePtAPYsResponse.verify|verify} messages.
+       * @param message QueryTranchePtAPYsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryTranchePtAPYsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryTranchePtAPYsResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryTranchePtAPYsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryTranchePtAPYsResponse;
+
+      /**
+       * Decodes a QueryTranchePtAPYsResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryTranchePtAPYsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryTranchePtAPYsResponse;
+
+      /**
+       * Verifies a QueryTranchePtAPYsResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryTranchePtAPYsResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryTranchePtAPYsResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryTranchePtAPYsResponse;
+
+      /**
+       * Creates a plain object from a QueryTranchePtAPYsResponse message. Also converts values to other types if specified.
+       * @param message QueryTranchePtAPYsResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryTranchePtAPYsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryTranchePtAPYsResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryTrancheYtAPYsRequest. */
+    interface IQueryTrancheYtAPYsRequest {
+      /** QueryTrancheYtAPYsRequest id */
+      id?: Long | null;
+    }
+
+    /** Represents a QueryTrancheYtAPYsRequest. */
+    class QueryTrancheYtAPYsRequest implements IQueryTrancheYtAPYsRequest {
+      /**
+       * Constructs a new QueryTrancheYtAPYsRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryTrancheYtAPYsRequest);
+
+      /** QueryTrancheYtAPYsRequest id. */
+      public id: Long;
+
+      /**
+       * Encodes the specified QueryTrancheYtAPYsRequest message. Does not implicitly {@link ununifi.irs.QueryTrancheYtAPYsRequest.verify|verify} messages.
+       * @param message QueryTrancheYtAPYsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryTrancheYtAPYsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryTrancheYtAPYsRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryTrancheYtAPYsRequest.verify|verify} messages.
+       * @param message QueryTrancheYtAPYsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryTrancheYtAPYsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryTrancheYtAPYsRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryTrancheYtAPYsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryTrancheYtAPYsRequest;
+
+      /**
+       * Decodes a QueryTrancheYtAPYsRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryTrancheYtAPYsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryTrancheYtAPYsRequest;
+
+      /**
+       * Verifies a QueryTrancheYtAPYsRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryTrancheYtAPYsRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryTrancheYtAPYsRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryTrancheYtAPYsRequest;
+
+      /**
+       * Creates a plain object from a QueryTrancheYtAPYsRequest message. Also converts values to other types if specified.
+       * @param message QueryTrancheYtAPYsRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryTrancheYtAPYsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryTrancheYtAPYsRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryTrancheYtAPYsResponse. */
+    interface IQueryTrancheYtAPYsResponse {
+      /** QueryTrancheYtAPYsResponse yt_apy */
+      yt_apy?: string | null;
+
+      /** QueryTrancheYtAPYsResponse yt_rate_per_ut */
+      yt_rate_per_ut?: string | null;
+    }
+
+    /** Represents a QueryTrancheYtAPYsResponse. */
+    class QueryTrancheYtAPYsResponse implements IQueryTrancheYtAPYsResponse {
+      /**
+       * Constructs a new QueryTrancheYtAPYsResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryTrancheYtAPYsResponse);
+
+      /** QueryTrancheYtAPYsResponse yt_apy. */
+      public yt_apy: string;
+
+      /** QueryTrancheYtAPYsResponse yt_rate_per_ut. */
+      public yt_rate_per_ut: string;
+
+      /**
+       * Encodes the specified QueryTrancheYtAPYsResponse message. Does not implicitly {@link ununifi.irs.QueryTrancheYtAPYsResponse.verify|verify} messages.
+       * @param message QueryTrancheYtAPYsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryTrancheYtAPYsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryTrancheYtAPYsResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryTrancheYtAPYsResponse.verify|verify} messages.
+       * @param message QueryTrancheYtAPYsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryTrancheYtAPYsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryTrancheYtAPYsResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryTrancheYtAPYsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryTrancheYtAPYsResponse;
+
+      /**
+       * Decodes a QueryTrancheYtAPYsResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryTrancheYtAPYsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryTrancheYtAPYsResponse;
+
+      /**
+       * Verifies a QueryTrancheYtAPYsResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryTrancheYtAPYsResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryTrancheYtAPYsResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryTrancheYtAPYsResponse;
+
+      /**
+       * Creates a plain object from a QueryTrancheYtAPYsResponse message. Also converts values to other types if specified.
+       * @param message QueryTrancheYtAPYsResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(message: ununifi.irs.QueryTrancheYtAPYsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+      /**
+       * Converts this QueryTrancheYtAPYsResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryTranchePoolAPYsRequest. */
+    interface IQueryTranchePoolAPYsRequest {
+      /** QueryTranchePoolAPYsRequest id */
+      id?: Long | null;
+    }
+
+    /** Represents a QueryTranchePoolAPYsRequest. */
+    class QueryTranchePoolAPYsRequest implements IQueryTranchePoolAPYsRequest {
+      /**
+       * Constructs a new QueryTranchePoolAPYsRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryTranchePoolAPYsRequest);
+
+      /** QueryTranchePoolAPYsRequest id. */
+      public id: Long;
+
+      /**
+       * Encodes the specified QueryTranchePoolAPYsRequest message. Does not implicitly {@link ununifi.irs.QueryTranchePoolAPYsRequest.verify|verify} messages.
+       * @param message QueryTranchePoolAPYsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryTranchePoolAPYsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryTranchePoolAPYsRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryTranchePoolAPYsRequest.verify|verify} messages.
+       * @param message QueryTranchePoolAPYsRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryTranchePoolAPYsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryTranchePoolAPYsRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryTranchePoolAPYsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryTranchePoolAPYsRequest;
+
+      /**
+       * Decodes a QueryTranchePoolAPYsRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryTranchePoolAPYsRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryTranchePoolAPYsRequest;
+
+      /**
+       * Verifies a QueryTranchePoolAPYsRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryTranchePoolAPYsRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryTranchePoolAPYsRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryTranchePoolAPYsRequest;
+
+      /**
+       * Creates a plain object from a QueryTranchePoolAPYsRequest message. Also converts values to other types if specified.
+       * @param message QueryTranchePoolAPYsRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryTranchePoolAPYsRequest,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryTranchePoolAPYsRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryTranchePoolAPYsResponse. */
+    interface IQueryTranchePoolAPYsResponse {
+      /** QueryTranchePoolAPYsResponse liquidity_apy */
+      liquidity_apy?: string | null;
+
+      /** QueryTranchePoolAPYsResponse discount_pt_apy */
+      discount_pt_apy?: string | null;
+
+      /** QueryTranchePoolAPYsResponse liquidity_rate_per_ut */
+      liquidity_rate_per_ut?: string | null;
+
+      /** QueryTranchePoolAPYsResponse ut_percentage_in_pool */
+      ut_percentage_in_pool?: string | null;
+
+      /** QueryTranchePoolAPYsResponse pt_percentage_in_pool */
+      pt_percentage_in_pool?: string | null;
+    }
+
+    /** Represents a QueryTranchePoolAPYsResponse. */
+    class QueryTranchePoolAPYsResponse implements IQueryTranchePoolAPYsResponse {
+      /**
+       * Constructs a new QueryTranchePoolAPYsResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryTranchePoolAPYsResponse);
+
+      /** QueryTranchePoolAPYsResponse liquidity_apy. */
+      public liquidity_apy: string;
+
+      /** QueryTranchePoolAPYsResponse discount_pt_apy. */
+      public discount_pt_apy: string;
+
+      /** QueryTranchePoolAPYsResponse liquidity_rate_per_ut. */
+      public liquidity_rate_per_ut: string;
+
+      /** QueryTranchePoolAPYsResponse ut_percentage_in_pool. */
+      public ut_percentage_in_pool: string;
+
+      /** QueryTranchePoolAPYsResponse pt_percentage_in_pool. */
+      public pt_percentage_in_pool: string;
+
+      /**
+       * Encodes the specified QueryTranchePoolAPYsResponse message. Does not implicitly {@link ununifi.irs.QueryTranchePoolAPYsResponse.verify|verify} messages.
+       * @param message QueryTranchePoolAPYsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryTranchePoolAPYsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryTranchePoolAPYsResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryTranchePoolAPYsResponse.verify|verify} messages.
+       * @param message QueryTranchePoolAPYsResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryTranchePoolAPYsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryTranchePoolAPYsResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryTranchePoolAPYsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryTranchePoolAPYsResponse;
+
+      /**
+       * Decodes a QueryTranchePoolAPYsResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryTranchePoolAPYsResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryTranchePoolAPYsResponse;
+
+      /**
+       * Verifies a QueryTranchePoolAPYsResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryTranchePoolAPYsResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryTranchePoolAPYsResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryTranchePoolAPYsResponse;
+
+      /**
+       * Creates a plain object from a QueryTranchePoolAPYsResponse message. Also converts values to other types if specified.
+       * @param message QueryTranchePoolAPYsResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryTranchePoolAPYsResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryTranchePoolAPYsResponse to JSON.
        * @returns JSON object
        */
       public toJSON(): { [k: string]: any };
