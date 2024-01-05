@@ -56,3 +56,15 @@ export function estimateRequiredUtSwapToYt(sdk: cosmosclient.CosmosSDK, poolId: 
 export function estimateSwapMaturedYtToUt(sdk: cosmosclient.CosmosSDK, poolId: string, ytAmount: string) {
   return new QueryApi(undefined, sdk.url).estimateSwapMaturedYtToUt(poolId, ytAmount);
 }
+
+export function tranchePtAPYs(sdk: cosmosclient.CosmosSDK, id: string) {
+  return new QueryApi(undefined, sdk.url).tranchePtAPYs(id);
+}
+
+export function trancheYtAPYs(sdk: cosmosclient.CosmosSDK, id: string) {
+  return new QueryApi(undefined, sdk.url).trancheYtAPYs(id);
+}
+
+export function tranchePoolAPYs(sdk: cosmosclient.CosmosSDK, id: string) {
+  return new QueryApi(undefined, sdk.url).tranchePoolAPYs(id);
+}
