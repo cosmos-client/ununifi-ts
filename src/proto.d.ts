@@ -14783,8 +14783,11 @@ export namespace ununifi {
       /** QueryEstimateRedeemPtYtPairRequest id */
       id?: Long | null;
 
-      /** QueryEstimateRedeemPtYtPairRequest desired_ut_amount */
-      desired_ut_amount?: string | null;
+      /** QueryEstimateRedeemPtYtPairRequest denom */
+      denom?: string | null;
+
+      /** QueryEstimateRedeemPtYtPairRequest amount */
+      amount?: string | null;
     }
 
     /** Represents a QueryEstimateRedeemPtYtPairRequest. */
@@ -14798,8 +14801,11 @@ export namespace ununifi {
       /** QueryEstimateRedeemPtYtPairRequest id. */
       public id: Long;
 
-      /** QueryEstimateRedeemPtYtPairRequest desired_ut_amount. */
-      public desired_ut_amount: string;
+      /** QueryEstimateRedeemPtYtPairRequest denom. */
+      public denom: string;
+
+      /** QueryEstimateRedeemPtYtPairRequest amount. */
+      public amount: string;
 
       /**
        * Encodes the specified QueryEstimateRedeemPtYtPairRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemPtYtPairRequest.verify|verify} messages.
@@ -14870,11 +14876,11 @@ export namespace ununifi {
 
     /** Properties of a QueryEstimateRedeemPtYtPairResponse. */
     interface IQueryEstimateRedeemPtYtPairResponse {
-      /** QueryEstimateRedeemPtYtPairResponse pt_amount */
-      pt_amount?: cosmos.base.v1beta1.ICoin | null;
+      /** QueryEstimateRedeemPtYtPairResponse redeem_amount */
+      redeem_amount?: cosmos.base.v1beta1.ICoin | null;
 
-      /** QueryEstimateRedeemPtYtPairResponse yt_amount */
-      yt_amount?: cosmos.base.v1beta1.ICoin | null;
+      /** QueryEstimateRedeemPtYtPairResponse additional_required_amount */
+      additional_required_amount?: cosmos.base.v1beta1.ICoin | null;
     }
 
     /** Represents a QueryEstimateRedeemPtYtPairResponse. */
@@ -14885,11 +14891,11 @@ export namespace ununifi {
        */
       constructor(properties?: ununifi.irs.IQueryEstimateRedeemPtYtPairResponse);
 
-      /** QueryEstimateRedeemPtYtPairResponse pt_amount. */
-      public pt_amount?: cosmos.base.v1beta1.ICoin | null;
+      /** QueryEstimateRedeemPtYtPairResponse redeem_amount. */
+      public redeem_amount?: cosmos.base.v1beta1.ICoin | null;
 
-      /** QueryEstimateRedeemPtYtPairResponse yt_amount. */
-      public yt_amount?: cosmos.base.v1beta1.ICoin | null;
+      /** QueryEstimateRedeemPtYtPairResponse additional_required_amount. */
+      public additional_required_amount?: cosmos.base.v1beta1.ICoin | null;
 
       /**
        * Encodes the specified QueryEstimateRedeemPtYtPairResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateRedeemPtYtPairResponse.verify|verify} messages.
@@ -14963,8 +14969,11 @@ export namespace ununifi {
       /** QueryEstimateMintLiquidityPoolTokenRequest id */
       id?: Long | null;
 
-      /** QueryEstimateMintLiquidityPoolTokenRequest desired_amount */
-      desired_amount?: string | null;
+      /** QueryEstimateMintLiquidityPoolTokenRequest denom */
+      denom?: string | null;
+
+      /** QueryEstimateMintLiquidityPoolTokenRequest amount */
+      amount?: string | null;
     }
 
     /** Represents a QueryEstimateMintLiquidityPoolTokenRequest. */
@@ -14978,8 +14987,11 @@ export namespace ununifi {
       /** QueryEstimateMintLiquidityPoolTokenRequest id. */
       public id: Long;
 
-      /** QueryEstimateMintLiquidityPoolTokenRequest desired_amount. */
-      public desired_amount: string;
+      /** QueryEstimateMintLiquidityPoolTokenRequest denom. */
+      public denom: string;
+
+      /** QueryEstimateMintLiquidityPoolTokenRequest amount. */
+      public amount: string;
 
       /**
        * Encodes the specified QueryEstimateMintLiquidityPoolTokenRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateMintLiquidityPoolTokenRequest.verify|verify} messages.
@@ -15053,8 +15065,11 @@ export namespace ununifi {
 
     /** Properties of a QueryEstimateMintLiquidityPoolTokenResponse. */
     interface IQueryEstimateMintLiquidityPoolTokenResponse {
-      /** QueryEstimateMintLiquidityPoolTokenResponse required_amount */
-      required_amount?: cosmos.base.v1beta1.ICoin[] | null;
+      /** QueryEstimateMintLiquidityPoolTokenResponse mint_amount */
+      mint_amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /** QueryEstimateMintLiquidityPoolTokenResponse additional_required_amount */
+      additional_required_amount?: cosmos.base.v1beta1.ICoin | null;
     }
 
     /** Represents a QueryEstimateMintLiquidityPoolTokenResponse. */
@@ -15065,8 +15080,11 @@ export namespace ununifi {
        */
       constructor(properties?: ununifi.irs.IQueryEstimateMintLiquidityPoolTokenResponse);
 
-      /** QueryEstimateMintLiquidityPoolTokenResponse required_amount. */
-      public required_amount: cosmos.base.v1beta1.ICoin[];
+      /** QueryEstimateMintLiquidityPoolTokenResponse mint_amount. */
+      public mint_amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /** QueryEstimateMintLiquidityPoolTokenResponse additional_required_amount. */
+      public additional_required_amount?: cosmos.base.v1beta1.ICoin | null;
 
       /**
        * Encodes the specified QueryEstimateMintLiquidityPoolTokenResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse.verify|verify} messages.
