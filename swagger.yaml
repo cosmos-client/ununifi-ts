@@ -7781,23 +7781,36 @@ paths:
           schema:
             type: object
             properties:
-              required_amount:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    denom:
-                      type: string
-                    amount:
-                      type: string
-                  description: >-
-                    Coin defines a token with a denomination and an amount.
+              mint_amount:
+                type: object
+                properties:
+                  denom:
+                    type: string
+                  amount:
+                    type: string
+                description: >-
+                  Coin defines a token with a denomination and an amount.
 
 
-                    NOTE: The amount field is an Int which implements the custom
-                    method
+                  NOTE: The amount field is an Int which implements the custom
+                  method
 
-                    signatures required by gogoproto.
+                  signatures required by gogoproto.
+              additional_required_amount:
+                type: object
+                properties:
+                  denom:
+                    type: string
+                  amount:
+                    type: string
+                description: >-
+                  Coin defines a token with a denomination and an amount.
+
+
+                  NOTE: The amount field is an Int which implements the custom
+                  method
+
+                  signatures required by gogoproto.
         default:
           description: An unexpected error response.
           schema:
@@ -7826,7 +7839,11 @@ paths:
           required: false
           type: string
           format: uint64
-        - name: desired_amount
+        - name: denom
+          in: query
+          required: false
+          type: string
+        - name: amount
           in: query
           required: false
           type: string
@@ -7981,7 +7998,7 @@ paths:
           schema:
             type: object
             properties:
-              pt_amount:
+              redeem_amount:
                 type: object
                 properties:
                   denom:
@@ -7996,7 +8013,7 @@ paths:
                   method
 
                   signatures required by gogoproto.
-              yt_amount:
+              additional_required_amount:
                 type: object
                 properties:
                   denom:
@@ -8039,7 +8056,11 @@ paths:
           required: false
           type: string
           format: uint64
-        - name: desired_ut_amount
+        - name: denom
+          in: query
+          required: false
+          type: string
+        - name: amount
           in: query
           required: false
           type: string
@@ -13138,20 +13159,30 @@ definitions:
   ununifi.irs.QueryEstimateMintLiquidityPoolTokenResponse:
     type: object
     properties:
-      required_amount:
-        type: array
-        items:
-          type: object
-          properties:
-            denom:
-              type: string
-            amount:
-              type: string
-          description: |-
-            Coin defines a token with a denomination and an amount.
+      mint_amount:
+        type: object
+        properties:
+          denom:
+            type: string
+          amount:
+            type: string
+        description: |-
+          Coin defines a token with a denomination and an amount.
 
-            NOTE: The amount field is an Int which implements the custom method
-            signatures required by gogoproto.
+          NOTE: The amount field is an Int which implements the custom method
+          signatures required by gogoproto.
+      additional_required_amount:
+        type: object
+        properties:
+          denom:
+            type: string
+          amount:
+            type: string
+        description: |-
+          Coin defines a token with a denomination and an amount.
+
+          NOTE: The amount field is an Int which implements the custom method
+          signatures required by gogoproto.
   ununifi.irs.QueryEstimateMintPtYtPairResponse:
     type: object
     properties:
@@ -13199,7 +13230,7 @@ definitions:
   ununifi.irs.QueryEstimateRedeemPtYtPairResponse:
     type: object
     properties:
-      pt_amount:
+      redeem_amount:
         type: object
         properties:
           denom:
@@ -13211,7 +13242,7 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
-      yt_amount:
+      additional_required_amount:
         type: object
         properties:
           denom:
