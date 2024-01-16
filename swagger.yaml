@@ -8068,7 +8068,7 @@ paths:
         - Query
   /ununifi/irs/estimate-required-ut-swap-to-yt:
     get:
-      summary: Estimate required UT amount to swao to YT
+      summary: Estimate required UT amount to swap to YT
       operationId: EstimateRequiredUtSwapToYt
       responses:
         '200':
@@ -8242,6 +8242,69 @@ paths:
           type: string
           format: uint64
         - name: yt_amount
+          in: query
+          required: false
+          type: string
+      tags:
+        - Query
+  /ununifi/irs/estimate-swap-ut-to-yt:
+    get:
+      summary: Estimate swap UT to YT
+      operationId: EstimateSwapUtToYt
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              yt_amount:
+                type: object
+                properties:
+                  denom:
+                    type: string
+                  amount:
+                    type: string
+                description: >-
+                  Coin defines a token with a denomination and an amount.
+
+
+                  NOTE: The amount field is an Int which implements the custom
+                  method
+
+                  signatures required by gogoproto.
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type_url:
+                      type: string
+                    value:
+                      type: string
+                      format: byte
+      parameters:
+        - name: id
+          in: query
+          required: false
+          type: string
+          format: uint64
+        - name: denom
+          in: query
+          required: false
+          type: string
+        - name: amount
           in: query
           required: false
           type: string
@@ -13288,6 +13351,21 @@ definitions:
     type: object
     properties:
       ut_amount:
+        type: object
+        properties:
+          denom:
+            type: string
+          amount:
+            type: string
+        description: |-
+          Coin defines a token with a denomination and an amount.
+
+          NOTE: The amount field is an Int which implements the custom method
+          signatures required by gogoproto.
+  ununifi.irs.QueryEstimateSwapUtToYtResponse:
+    type: object
+    properties:
+      yt_amount:
         type: object
         properties:
           denom:

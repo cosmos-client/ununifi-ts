@@ -1095,6 +1095,19 @@ export interface EstimateSwapMaturedYtToUt200Response {
   ut_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
+ *
+ * @export
+ * @interface EstimateSwapUtToYt200Response
+ */
+export interface EstimateSwapUtToYt200Response {
+  /**
+   *
+   * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+   * @memberof EstimateSwapUtToYt200Response
+   */
+  yt_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+}
+/**
  * `Any` contains an arbitrary serialized protocol buffer message along with a URL that describes the type of the serialized message.  Protobuf library provides support to pack/unpack Any values in the form of utility functions or additional generated methods of the Any type.  Example 1: Pack and unpack a message in C++.      Foo foo = ...;     Any any;     any.PackFrom(foo);     ...     if (any.UnpackTo(&foo)) {       ...     }  Example 2: Pack and unpack a message in Java.      Foo foo = ...;     Any any = Any.pack(foo);     ...     if (any.is(Foo.class)) {       foo = any.unpack(Foo.class);     }  Example 3: Pack and unpack a message in Python.      foo = Foo(...)     any = Any()     any.Pack(foo)     ...     if any.Is(Foo.DESCRIPTOR):       any.Unpack(foo)       ...  Example 4: Pack and unpack a message in Go       foo := &pb.Foo{...}      any, err := anypb.New(foo)      if err != nil {        ...      }      ...      foo := &pb.Foo{}      if err := any.UnmarshalTo(foo); err != nil {        ...      }  The pack methods provided by protobuf library will by default use \'type.googleapis.com/full.type.name\' as the type URL and the unpack methods only use the fully qualified type name after the last \'/\' in the type URL, for example \"foo.bar.com/x/y.z\" will yield type name \"y.z\".   JSON  The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:      package google.profile;     message Person {       string first_name = 1;       string last_name = 2;     }      {       \"@type\": \"type.googleapis.com/google.profile.Person\",       \"firstName\": <string>,       \"lastName\": <string>     }  If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message [google.protobuf.Duration][]):      {       \"@type\": \"type.googleapis.com/google.protobuf.Duration\",       \"value\": \"1.212s\"     }
  * @export
  * @interface GoogleProtobufAny
@@ -3436,6 +3449,19 @@ export interface UnunifiIrsQueryEstimateSwapMaturedYtToUtResponse {
    * @memberof UnunifiIrsQueryEstimateSwapMaturedYtToUtResponse
    */
   ut_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+}
+/**
+ *
+ * @export
+ * @interface UnunifiIrsQueryEstimateSwapUtToYtResponse
+ */
+export interface UnunifiIrsQueryEstimateSwapUtToYtResponse {
+  /**
+   *
+   * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+   * @memberof UnunifiIrsQueryEstimateSwapUtToYtResponse
+   */
+  yt_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  * QueryParamsResponse is response type for the Query/Params RPC method.
@@ -6127,7 +6153,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
-     * @summary Estimate required UT amount to swao to YT
+     * @summary Estimate required UT amount to swap to YT
      * @param {string} [id]
      * @param {string} [desiredYtAmount]
      * @param {*} [options] Override http request option.
@@ -6233,6 +6259,49 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
 
       if (ytAmount !== undefined) {
         localVarQueryParameter['yt_amount'] = ytAmount;
+      }
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
+     * @summary Estimate swap UT to YT
+     * @param {string} [id]
+     * @param {string} [denom]
+     * @param {string} [amount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    estimateSwapUtToYt: async (id?: string, denom?: string, amount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/irs/estimate-swap-ut-to-yt`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      if (id !== undefined) {
+        localVarQueryParameter['id'] = id;
+      }
+
+      if (denom !== undefined) {
+        localVarQueryParameter['denom'] = denom;
+      }
+
+      if (amount !== undefined) {
+        localVarQueryParameter['amount'] = amount;
       }
 
       setSearchParams(localVarUrlObj, localVarQueryParameter);
@@ -8136,7 +8205,7 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
-     * @summary Estimate required UT amount to swao to YT
+     * @summary Estimate required UT amount to swap to YT
      * @param {string} [id]
      * @param {string} [desiredYtAmount]
      * @param {*} [options] Override http request option.
@@ -8182,6 +8251,24 @@ export const QueryApiFp = function (configuration?: Configuration) {
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateSwapMaturedYtToUt200Response>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.estimateSwapMaturedYtToUt(id, ytAmount, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
+     * @summary Estimate swap UT to YT
+     * @param {string} [id]
+     * @param {string} [denom]
+     * @param {string} [amount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async estimateSwapUtToYt(
+      id?: string,
+      denom?: string,
+      amount?: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateSwapUtToYt200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateSwapUtToYt(id, denom, amount, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -9083,7 +9170,7 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
-     * @summary Estimate required UT amount to swao to YT
+     * @summary Estimate required UT amount to swap to YT
      * @param {string} [id]
      * @param {string} [desiredYtAmount]
      * @param {*} [options] Override http request option.
@@ -9114,6 +9201,18 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
      */
     estimateSwapMaturedYtToUt(id?: string, ytAmount?: string, options?: any): AxiosPromise<EstimateSwapMaturedYtToUt200Response> {
       return localVarFp.estimateSwapMaturedYtToUt(id, ytAmount, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
+     * @summary Estimate swap UT to YT
+     * @param {string} [id]
+     * @param {string} [denom]
+     * @param {string} [amount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    estimateSwapUtToYt(id?: string, denom?: string, amount?: string, options?: any): AxiosPromise<EstimateSwapUtToYt200Response> {
+      return localVarFp.estimateSwapUtToYt(id, denom, amount, options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -9918,7 +10017,7 @@ export class QueryApi extends BaseAPI {
 
   /**
    *
-   * @summary Estimate required UT amount to swao to YT
+   * @summary Estimate required UT amount to swap to YT
    * @param {string} [id]
    * @param {string} [desiredYtAmount]
    * @param {*} [options] Override http request option.
@@ -9959,6 +10058,22 @@ export class QueryApi extends BaseAPI {
   public estimateSwapMaturedYtToUt(id?: string, ytAmount?: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
       .estimateSwapMaturedYtToUt(id, ytAmount, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
+   * @summary Estimate swap UT to YT
+   * @param {string} [id]
+   * @param {string} [denom]
+   * @param {string} [amount]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public estimateSwapUtToYt(id?: string, denom?: string, amount?: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .estimateSwapUtToYt(id, denom, amount, options)
       .then((request) => request(this.axios, this.basePath));
   }
 

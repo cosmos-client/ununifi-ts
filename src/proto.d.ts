@@ -13143,6 +13143,23 @@ export namespace ununifi {
       ): Promise<ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse>;
 
       /**
+       * Calls EstimateSwapUtToYt.
+       * @param request QueryEstimateSwapUtToYtRequest message or plain object
+       * @param callback Node-style callback called with the error, if any, and QueryEstimateSwapUtToYtResponse
+       */
+      public estimateSwapUtToYt(
+        request: ununifi.irs.IQueryEstimateSwapUtToYtRequest,
+        callback: ununifi.irs.Query.EstimateSwapUtToYtCallback,
+      ): void;
+
+      /**
+       * Calls EstimateSwapUtToYt.
+       * @param request QueryEstimateSwapUtToYtRequest message or plain object
+       * @returns Promise
+       */
+      public estimateSwapUtToYt(request: ununifi.irs.IQueryEstimateSwapUtToYtRequest): Promise<ununifi.irs.QueryEstimateSwapUtToYtResponse>;
+
+      /**
        * Calls EstimateRequiredUtSwapToYt.
        * @param request QueryEstimateRequiredUtSwapToYtRequest message or plain object
        * @param callback Node-style callback called with the error, if any, and QueryEstimateRequiredUtSwapToYtResponse
@@ -13313,6 +13330,13 @@ export namespace ununifi {
         error: Error | null,
         response?: ununifi.irs.QueryEstimateRedeemLiquidityPoolTokenResponse,
       ) => void;
+
+      /**
+       * Callback as used by {@link ununifi.irs.Query#estimateSwapUtToYt}.
+       * @param error Error, if any
+       * @param [response] QueryEstimateSwapUtToYtResponse
+       */
+      type EstimateSwapUtToYtCallback = (error: Error | null, response?: ununifi.irs.QueryEstimateSwapUtToYtResponse) => void;
 
       /**
        * Callback as used by {@link ununifi.irs.Query#estimateRequiredUtSwapToYt}.
@@ -15340,6 +15364,186 @@ export namespace ununifi {
 
       /**
        * Converts this QueryEstimateRedeemLiquidityPoolTokenResponse to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryEstimateSwapUtToYtRequest. */
+    interface IQueryEstimateSwapUtToYtRequest {
+      /** QueryEstimateSwapUtToYtRequest id */
+      id?: Long | null;
+
+      /** QueryEstimateSwapUtToYtRequest denom */
+      denom?: string | null;
+
+      /** QueryEstimateSwapUtToYtRequest amount */
+      amount?: string | null;
+    }
+
+    /** Represents a QueryEstimateSwapUtToYtRequest. */
+    class QueryEstimateSwapUtToYtRequest implements IQueryEstimateSwapUtToYtRequest {
+      /**
+       * Constructs a new QueryEstimateSwapUtToYtRequest.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryEstimateSwapUtToYtRequest);
+
+      /** QueryEstimateSwapUtToYtRequest id. */
+      public id: Long;
+
+      /** QueryEstimateSwapUtToYtRequest denom. */
+      public denom: string;
+
+      /** QueryEstimateSwapUtToYtRequest amount. */
+      public amount: string;
+
+      /**
+       * Encodes the specified QueryEstimateSwapUtToYtRequest message. Does not implicitly {@link ununifi.irs.QueryEstimateSwapUtToYtRequest.verify|verify} messages.
+       * @param message QueryEstimateSwapUtToYtRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryEstimateSwapUtToYtRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryEstimateSwapUtToYtRequest message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateSwapUtToYtRequest.verify|verify} messages.
+       * @param message QueryEstimateSwapUtToYtRequest message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryEstimateSwapUtToYtRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryEstimateSwapUtToYtRequest message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryEstimateSwapUtToYtRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryEstimateSwapUtToYtRequest;
+
+      /**
+       * Decodes a QueryEstimateSwapUtToYtRequest message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryEstimateSwapUtToYtRequest
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateSwapUtToYtRequest;
+
+      /**
+       * Verifies a QueryEstimateSwapUtToYtRequest message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryEstimateSwapUtToYtRequest message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryEstimateSwapUtToYtRequest
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateSwapUtToYtRequest;
+
+      /**
+       * Creates a plain object from a QueryEstimateSwapUtToYtRequest message. Also converts values to other types if specified.
+       * @param message QueryEstimateSwapUtToYtRequest
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryEstimateSwapUtToYtRequest,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryEstimateSwapUtToYtRequest to JSON.
+       * @returns JSON object
+       */
+      public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a QueryEstimateSwapUtToYtResponse. */
+    interface IQueryEstimateSwapUtToYtResponse {
+      /** QueryEstimateSwapUtToYtResponse yt_amount */
+      yt_amount?: cosmos.base.v1beta1.ICoin | null;
+    }
+
+    /** Represents a QueryEstimateSwapUtToYtResponse. */
+    class QueryEstimateSwapUtToYtResponse implements IQueryEstimateSwapUtToYtResponse {
+      /**
+       * Constructs a new QueryEstimateSwapUtToYtResponse.
+       * @param [properties] Properties to set
+       */
+      constructor(properties?: ununifi.irs.IQueryEstimateSwapUtToYtResponse);
+
+      /** QueryEstimateSwapUtToYtResponse yt_amount. */
+      public yt_amount?: cosmos.base.v1beta1.ICoin | null;
+
+      /**
+       * Encodes the specified QueryEstimateSwapUtToYtResponse message. Does not implicitly {@link ununifi.irs.QueryEstimateSwapUtToYtResponse.verify|verify} messages.
+       * @param message QueryEstimateSwapUtToYtResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encode(message: ununifi.irs.IQueryEstimateSwapUtToYtResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Encodes the specified QueryEstimateSwapUtToYtResponse message, length delimited. Does not implicitly {@link ununifi.irs.QueryEstimateSwapUtToYtResponse.verify|verify} messages.
+       * @param message QueryEstimateSwapUtToYtResponse message or plain object to encode
+       * @param [writer] Writer to encode to
+       * @returns Writer
+       */
+      public static encodeDelimited(message: ununifi.irs.IQueryEstimateSwapUtToYtResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+      /**
+       * Decodes a QueryEstimateSwapUtToYtResponse message from the specified reader or buffer.
+       * @param reader Reader or buffer to decode from
+       * @param [length] Message length if known beforehand
+       * @returns QueryEstimateSwapUtToYtResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): ununifi.irs.QueryEstimateSwapUtToYtResponse;
+
+      /**
+       * Decodes a QueryEstimateSwapUtToYtResponse message from the specified reader or buffer, length delimited.
+       * @param reader Reader or buffer to decode from
+       * @returns QueryEstimateSwapUtToYtResponse
+       * @throws {Error} If the payload is not a reader or valid buffer
+       * @throws {$protobuf.util.ProtocolError} If required fields are missing
+       */
+      public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): ununifi.irs.QueryEstimateSwapUtToYtResponse;
+
+      /**
+       * Verifies a QueryEstimateSwapUtToYtResponse message.
+       * @param message Plain object to verify
+       * @returns `null` if valid, otherwise the reason why it is not
+       */
+      public static verify(message: { [k: string]: any }): string | null;
+
+      /**
+       * Creates a QueryEstimateSwapUtToYtResponse message from a plain object. Also converts values to their respective internal types.
+       * @param object Plain object
+       * @returns QueryEstimateSwapUtToYtResponse
+       */
+      public static fromObject(object: { [k: string]: any }): ununifi.irs.QueryEstimateSwapUtToYtResponse;
+
+      /**
+       * Creates a plain object from a QueryEstimateSwapUtToYtResponse message. Also converts values to other types if specified.
+       * @param message QueryEstimateSwapUtToYtResponse
+       * @param [options] Conversion options
+       * @returns Plain object
+       */
+      public static toObject(
+        message: ununifi.irs.QueryEstimateSwapUtToYtResponse,
+        options?: $protobuf.IConversionOptions,
+      ): { [k: string]: any };
+
+      /**
+       * Converts this QueryEstimateSwapUtToYtResponse to JSON.
        * @returns JSON object
        */
       public toJSON(): { [k: string]: any };
