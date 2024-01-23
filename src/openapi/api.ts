@@ -311,6 +311,12 @@ export interface AllTranches200ResponseTranchesInner {
    * @memberof AllTranches200ResponseTranchesInner
    */
   pool_assets?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
+  /**
+   *
+   * @type {string}
+   * @memberof AllTranches200ResponseTranchesInner
+   */
+  denom?: string;
 }
 /**
  *
@@ -3321,6 +3327,12 @@ export interface UnunifiIrsInterestRateSwapVault {
    * @memberof UnunifiIrsInterestRateSwapVault
    */
   last_tranche_time?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsInterestRateSwapVault
+   */
+  denom?: string;
 }
 /**
  *
@@ -3682,6 +3694,12 @@ export interface UnunifiIrsTranchePool {
    * @memberof UnunifiIrsTranchePool
    */
   pool_assets?: Array<EstimateDLPTokenAmount200ResponseEstimatedDlpAmount>;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsTranchePool
+   */
+  denom?: string;
 }
 /**
  *
@@ -5318,6 +5336,12 @@ export interface VaultByContract200ResponseVault {
    * @memberof VaultByContract200ResponseVault
    */
   last_tranche_time?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof VaultByContract200ResponseVault
+   */
+  denom?: string;
 }
 /**
  * QueryVaultDetailsResponse is response type for the Query/VaultDetails RPC method.

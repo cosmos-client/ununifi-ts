@@ -7744,6 +7744,8 @@ paths:
 
                           signatures required by gogoproto.
                       title: Pool assets are sorted by denomination
+                    denom:
+                      type: string
             description: >-
               QueryTranchesResponse is response type for the Query/Tranches RPC
               method.
@@ -8417,6 +8419,8 @@ paths:
 
                         signatures required by gogoproto.
                     title: Pool assets are sorted by denomination
+                  denom:
+                    type: string
             description: >-
               QueryTranchResponse is response type for the Query/Tranch RPC
               method.
@@ -8653,6 +8657,8 @@ paths:
 
                           signatures required by gogoproto.
                       title: Pool assets are sorted by denomination
+                    denom:
+                      type: string
             description: >-
               QueryTranchesResponse is response type for the Query/Tranches RPC
               method.
@@ -8713,6 +8719,8 @@ paths:
                   last_tranche_time:
                     type: string
                     format: uint64
+                  denom:
+                    type: string
             description: >-
               QueryVaultResponse is response type for the Query/Vault RPC
               method.
@@ -8827,6 +8835,8 @@ paths:
                     last_tranche_time:
                       type: string
                       format: uint64
+                    denom:
+                      type: string
             description: >-
               QueryVaultsResponse is response type for the Query/Vaults RPC
               method.
@@ -13212,6 +13222,8 @@ definitions:
       last_tranche_time:
         type: string
         format: uint64
+      denom:
+        type: string
   ununifi.irs.Params:
     type: object
     properties:
@@ -13464,6 +13476,8 @@ definitions:
 
                 signatures required by gogoproto.
             title: Pool assets are sorted by denomination
+          denom:
+            type: string
     description: QueryTranchResponse is response type for the Query/Tranch RPC method.
   ununifi.irs.QueryTrancheYtAPYsResponse:
     type: object
@@ -13529,6 +13543,8 @@ definitions:
 
                   signatures required by gogoproto.
               title: Pool assets are sorted by denomination
+            denom:
+              type: string
     description: QueryTranchesResponse is response type for the Query/Tranches RPC method.
   ununifi.irs.QueryVaultByContractResponse:
     type: object
@@ -13551,6 +13567,8 @@ definitions:
           last_tranche_time:
             type: string
             format: uint64
+          denom:
+            type: string
     description: QueryVaultResponse is response type for the Query/Vault RPC method.
   ununifi.irs.QueryVaultDetailsResponse:
     type: object
@@ -13587,6 +13605,8 @@ definitions:
             last_tranche_time:
               type: string
               format: uint64
+            denom:
+              type: string
     description: QueryVaultsResponse is response type for the Query/Vaults RPC method.
   ununifi.irs.TranchePool:
     type: object
@@ -13634,3 +13654,5 @@ definitions:
             NOTE: The amount field is an Int which implements the custom method
             signatures required by gogoproto.
         title: Pool assets are sorted by denomination
+      denom:
+        type: string
