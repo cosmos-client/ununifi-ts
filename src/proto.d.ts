@@ -12546,6 +12546,9 @@ export namespace ununifi {
 
       /** InterestRateSwapVault last_tranche_time */
       last_tranche_time?: Long | null;
+
+      /** InterestRateSwapVault denom */
+      denom?: string | null;
     }
 
     /** Represents an InterestRateSwapVault. */
@@ -12573,6 +12576,9 @@ export namespace ununifi {
 
       /** InterestRateSwapVault last_tranche_time. */
       public last_tranche_time: Long;
+
+      /** InterestRateSwapVault denom. */
+      public denom: string;
 
       /**
        * Encodes the specified InterestRateSwapVault message. Does not implicitly {@link ununifi.irs.InterestRateSwapVault.verify|verify} messages.
@@ -12843,6 +12849,9 @@ export namespace ununifi {
 
       /** TranchePool pool_assets */
       pool_assets?: cosmos.base.v1beta1.ICoin[] | null;
+
+      /** TranchePool denom */
+      denom?: string | null;
     }
 
     /** Represents a TranchePool. */
@@ -12876,6 +12885,9 @@ export namespace ununifi {
 
       /** TranchePool pool_assets. */
       public pool_assets: cosmos.base.v1beta1.ICoin[];
+
+      /** TranchePool denom. */
+      public denom: string;
 
       /**
        * Encodes the specified TranchePool message. Does not implicitly {@link ununifi.irs.TranchePool.verify|verify} messages.
