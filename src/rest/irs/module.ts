@@ -49,16 +49,16 @@ export function estimateRedeemLiquidityPoolToken(sdk: cosmosclient.CosmosSDK, po
   return new QueryApi(undefined, sdk.url).estimateRedeemLiquidityPoolToken(poolId, amount);
 }
 
-export function estimateSwapUtToYt(sdk: cosmosclient.CosmosSDK, poolId: string, denom: string, amount: string) {
-  return new QueryApi(undefined, sdk.url).estimateSwapUtToYt(poolId, denom, amount);
+export function estimateSwapToYt(sdk: cosmosclient.CosmosSDK, poolId: string, denom: string, amount: string) {
+  return new QueryApi(undefined, sdk.url).estimateSwapToYt(poolId, denom, amount);
 }
 
-export function estimateRequiredUtSwapToYt(sdk: cosmosclient.CosmosSDK, poolId: string, desiredAmount: string) {
-  return new QueryApi(undefined, sdk.url).estimateRequiredUtSwapToYt(poolId, desiredAmount);
+export function estimateRequiredDepositSwapToYt(sdk: cosmosclient.CosmosSDK, poolId: string, desiredAmount: string) {
+  return new QueryApi(undefined, sdk.url).estimateRequiredDepositSwapToYt(poolId, desiredAmount);
 }
 
-export function estimateSwapMaturedYtToUt(sdk: cosmosclient.CosmosSDK, poolId: string, ytAmount: string) {
-  return new QueryApi(undefined, sdk.url).estimateSwapMaturedYtToUt(poolId, ytAmount);
+export function estimateRedeemMaturedYt(sdk: cosmosclient.CosmosSDK, poolId: string, ytAmount: string) {
+  return new QueryApi(undefined, sdk.url).estimateRedeemMaturedYt(poolId, ytAmount);
 }
 
 export function tranchePtAPYs(sdk: cosmosclient.CosmosSDK, id: string) {
