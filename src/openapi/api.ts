@@ -2478,6 +2478,12 @@ export interface TrancheYtAPYs200Response {
    * @memberof TrancheYtAPYs200Response
    */
   yt_rate_per_deposit?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof TrancheYtAPYs200Response
+   */
+  ls_apy?: string;
 }
 /**
  *
@@ -3587,6 +3593,12 @@ export interface UnunifiIrsQueryTrancheYtAPYsResponse {
    * @memberof UnunifiIrsQueryTrancheYtAPYsResponse
    */
   yt_rate_per_deposit?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsQueryTrancheYtAPYsResponse
+   */
+  ls_apy?: string;
 }
 /**
  * QueryTranchesResponse is response type for the Query/Tranches RPC method.

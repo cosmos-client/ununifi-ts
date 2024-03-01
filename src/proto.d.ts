@@ -16189,6 +16189,9 @@ export namespace ununifi {
 
       /** QueryTrancheYtAPYsResponse yt_rate_per_deposit */
       yt_rate_per_deposit?: string | null;
+
+      /** QueryTrancheYtAPYsResponse ls_apy */
+      ls_apy?: string | null;
     }
 
     /** Represents a QueryTrancheYtAPYsResponse. */
@@ -16204,6 +16207,9 @@ export namespace ununifi {
 
       /** QueryTrancheYtAPYsResponse yt_rate_per_deposit. */
       public yt_rate_per_deposit: string;
+
+      /** QueryTrancheYtAPYsResponse ls_apy. */
+      public ls_apy: string;
 
       /**
        * Encodes the specified QueryTrancheYtAPYsResponse message. Does not implicitly {@link ununifi.irs.QueryTrancheYtAPYsResponse.verify|verify} messages.
