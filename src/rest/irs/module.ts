@@ -61,14 +61,14 @@ export function estimateRedeemMaturedYt(sdk: cosmosclient.CosmosSDK, poolId: str
   return new QueryApi(undefined, sdk.url).estimateRedeemMaturedYt(poolId, ytAmount);
 }
 
-export function tranchePtAPYs(sdk: cosmosclient.CosmosSDK, id: string) {
-  return new QueryApi(undefined, sdk.url).tranchePtAPYs(id);
+export function tranchePtAPYs(sdk: cosmosclient.CosmosSDK, id: string, depositAmount?: string) {
+  return new QueryApi(undefined, sdk.url).tranchePtAPYs(id, depositAmount);
 }
 
-export function trancheYtAPYs(sdk: cosmosclient.CosmosSDK, id: string) {
-  return new QueryApi(undefined, sdk.url).trancheYtAPYs(id);
+export function trancheYtAPYs(sdk: cosmosclient.CosmosSDK, id: string, desiredYtAmount?: string) {
+  return new QueryApi(undefined, sdk.url).trancheYtAPYs(id, desiredYtAmount);
 }
 
-export function tranchePoolAPYs(sdk: cosmosclient.CosmosSDK, id: string) {
-  return new QueryApi(undefined, sdk.url).tranchePoolAPYs(id);
+export function tranchePoolAPYs(sdk: cosmosclient.CosmosSDK, id: string, depositAmount?: string) {
+  return new QueryApi(undefined, sdk.url).tranchePoolAPYs(id, depositAmount);
 }
