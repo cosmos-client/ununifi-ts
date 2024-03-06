@@ -15937,6 +15937,9 @@ export namespace ununifi {
     interface IQueryTranchePtAPYsRequest {
       /** QueryTranchePtAPYsRequest id */
       id?: Long | null;
+
+      /** QueryTranchePtAPYsRequest deposit_amount */
+      deposit_amount?: string | null;
     }
 
     /** Represents a QueryTranchePtAPYsRequest. */
@@ -15949,6 +15952,9 @@ export namespace ununifi {
 
       /** QueryTranchePtAPYsRequest id. */
       public id: Long;
+
+      /** QueryTranchePtAPYsRequest deposit_amount. */
+      public deposit_amount: string;
 
       /**
        * Encodes the specified QueryTranchePtAPYsRequest message. Does not implicitly {@link ununifi.irs.QueryTranchePtAPYsRequest.verify|verify} messages.
@@ -16105,6 +16111,9 @@ export namespace ununifi {
     interface IQueryTrancheYtAPYsRequest {
       /** QueryTrancheYtAPYsRequest id */
       id?: Long | null;
+
+      /** QueryTrancheYtAPYsRequest desired_yt_amount */
+      desired_yt_amount?: string | null;
     }
 
     /** Represents a QueryTrancheYtAPYsRequest. */
@@ -16117,6 +16126,9 @@ export namespace ununifi {
 
       /** QueryTrancheYtAPYsRequest id. */
       public id: Long;
+
+      /** QueryTrancheYtAPYsRequest desired_yt_amount. */
+      public desired_yt_amount: string;
 
       /**
        * Encodes the specified QueryTrancheYtAPYsRequest message. Does not implicitly {@link ununifi.irs.QueryTrancheYtAPYsRequest.verify|verify} messages.
@@ -16279,6 +16291,9 @@ export namespace ununifi {
     interface IQueryTranchePoolAPYsRequest {
       /** QueryTranchePoolAPYsRequest id */
       id?: Long | null;
+
+      /** QueryTranchePoolAPYsRequest deposit_amount */
+      deposit_amount?: string | null;
     }
 
     /** Represents a QueryTranchePoolAPYsRequest. */
@@ -16291,6 +16306,9 @@ export namespace ununifi {
 
       /** QueryTranchePoolAPYsRequest id. */
       public id: Long;
+
+      /** QueryTranchePoolAPYsRequest deposit_amount. */
+      public deposit_amount: string;
 
       /**
        * Encodes the specified QueryTranchePoolAPYsRequest message. Does not implicitly {@link ununifi.irs.QueryTranchePoolAPYsRequest.verify|verify} messages.
