@@ -7585,10 +7585,11 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
      *
      * @summary tranche Ls APYs by id
      * @param {string} id
+     * @param {string} [depositAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    tranchePoolAPYs: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+    tranchePoolAPYs: async (id: string, depositAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       // verify required parameter 'id' is not null or undefined
       assertParamExists('tranchePoolAPYs', 'id', id);
       const localVarPath = `/ununifi/irs/tranche/{id}/pool-apy`.replace(`{${'id'}}`, encodeURIComponent(String(id)));
@@ -7603,6 +7604,10 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
       const localVarHeaderParameter = {} as any;
       const localVarQueryParameter = {} as any;
 
+      if (depositAmount !== undefined) {
+        localVarQueryParameter['deposit_amount'] = depositAmount;
+      }
+
       setSearchParams(localVarUrlObj, localVarQueryParameter);
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
       localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
@@ -7616,10 +7621,11 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
      *
      * @summary tranche PT APYs by id
      * @param {string} id
+     * @param {string} [depositAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    tranchePtAPYs: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+    tranchePtAPYs: async (id: string, depositAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       // verify required parameter 'id' is not null or undefined
       assertParamExists('tranchePtAPYs', 'id', id);
       const localVarPath = `/ununifi/irs/tranche/{id}/pt-apy`.replace(`{${'id'}}`, encodeURIComponent(String(id)));
@@ -7634,6 +7640,10 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
       const localVarHeaderParameter = {} as any;
       const localVarQueryParameter = {} as any;
 
+      if (depositAmount !== undefined) {
+        localVarQueryParameter['deposit_amount'] = depositAmount;
+      }
+
       setSearchParams(localVarUrlObj, localVarQueryParameter);
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
       localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
@@ -7647,10 +7657,11 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
      *
      * @summary tranche YT APYs by id
      * @param {string} id
+     * @param {string} [desiredYtAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    trancheYtAPYs: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+    trancheYtAPYs: async (id: string, desiredYtAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       // verify required parameter 'id' is not null or undefined
       assertParamExists('trancheYtAPYs', 'id', id);
       const localVarPath = `/ununifi/irs/tranche/{id}/yt-apy`.replace(`{${'id'}}`, encodeURIComponent(String(id)));
@@ -7664,6 +7675,10 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
       const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
       const localVarHeaderParameter = {} as any;
       const localVarQueryParameter = {} as any;
+
+      if (desiredYtAmount !== undefined) {
+        localVarQueryParameter['desired_yt_amount'] = desiredYtAmount;
+      }
 
       setSearchParams(localVarUrlObj, localVarQueryParameter);
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -8843,42 +8858,48 @@ export const QueryApiFp = function (configuration?: Configuration) {
      *
      * @summary tranche Ls APYs by id
      * @param {string} id
+     * @param {string} [depositAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async tranchePoolAPYs(
       id: string,
+      depositAmount?: string,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TranchePoolAPYs200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.tranchePoolAPYs(id, options);
+      const localVarAxiosArgs = await localVarAxiosParamCreator.tranchePoolAPYs(id, depositAmount, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
      *
      * @summary tranche PT APYs by id
      * @param {string} id
+     * @param {string} [depositAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async tranchePtAPYs(
       id: string,
+      depositAmount?: string,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TranchePtAPYs200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.tranchePtAPYs(id, options);
+      const localVarAxiosArgs = await localVarAxiosParamCreator.tranchePtAPYs(id, depositAmount, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
      *
      * @summary tranche YT APYs by id
      * @param {string} id
+     * @param {string} [desiredYtAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async trancheYtAPYs(
       id: string,
+      desiredYtAmount?: string,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TrancheYtAPYs200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.trancheYtAPYs(id, options);
+      const localVarAxiosArgs = await localVarAxiosParamCreator.trancheYtAPYs(id, desiredYtAmount, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -9663,31 +9684,34 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
      *
      * @summary tranche Ls APYs by id
      * @param {string} id
+     * @param {string} [depositAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    tranchePoolAPYs(id: string, options?: any): AxiosPromise<TranchePoolAPYs200Response> {
-      return localVarFp.tranchePoolAPYs(id, options).then((request) => request(axios, basePath));
+    tranchePoolAPYs(id: string, depositAmount?: string, options?: any): AxiosPromise<TranchePoolAPYs200Response> {
+      return localVarFp.tranchePoolAPYs(id, depositAmount, options).then((request) => request(axios, basePath));
     },
     /**
      *
      * @summary tranche PT APYs by id
      * @param {string} id
+     * @param {string} [depositAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    tranchePtAPYs(id: string, options?: any): AxiosPromise<TranchePtAPYs200Response> {
-      return localVarFp.tranchePtAPYs(id, options).then((request) => request(axios, basePath));
+    tranchePtAPYs(id: string, depositAmount?: string, options?: any): AxiosPromise<TranchePtAPYs200Response> {
+      return localVarFp.tranchePtAPYs(id, depositAmount, options).then((request) => request(axios, basePath));
     },
     /**
      *
      * @summary tranche YT APYs by id
      * @param {string} id
+     * @param {string} [desiredYtAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    trancheYtAPYs(id: string, options?: any): AxiosPromise<TrancheYtAPYs200Response> {
-      return localVarFp.trancheYtAPYs(id, options).then((request) => request(axios, basePath));
+    trancheYtAPYs(id: string, desiredYtAmount?: string, options?: any): AxiosPromise<TrancheYtAPYs200Response> {
+      return localVarFp.trancheYtAPYs(id, desiredYtAmount, options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -10640,13 +10664,14 @@ export class QueryApi extends BaseAPI {
    *
    * @summary tranche Ls APYs by id
    * @param {string} id
+   * @param {string} [depositAmount]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public tranchePoolAPYs(id: string, options?: AxiosRequestConfig) {
+  public tranchePoolAPYs(id: string, depositAmount?: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .tranchePoolAPYs(id, options)
+      .tranchePoolAPYs(id, depositAmount, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -10654,13 +10679,14 @@ export class QueryApi extends BaseAPI {
    *
    * @summary tranche PT APYs by id
    * @param {string} id
+   * @param {string} [depositAmount]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public tranchePtAPYs(id: string, options?: AxiosRequestConfig) {
+  public tranchePtAPYs(id: string, depositAmount?: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .tranchePtAPYs(id, options)
+      .tranchePtAPYs(id, depositAmount, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -10668,13 +10694,14 @@ export class QueryApi extends BaseAPI {
    *
    * @summary tranche YT APYs by id
    * @param {string} id
+   * @param {string} [desiredYtAmount]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public trancheYtAPYs(id: string, options?: AxiosRequestConfig) {
+  public trancheYtAPYs(id: string, desiredYtAmount?: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .trancheYtAPYs(id, options)
+      .trancheYtAPYs(id, desiredYtAmount, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
