@@ -317,6 +317,12 @@ export interface AllTranches200ResponseTranchesInner {
    * @memberof AllTranches200ResponseTranchesInner
    */
   denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AllTranches200ResponseTranchesInner
+   */
+  deposit_denom?: string;
 }
 /**
  *
@@ -1026,6 +1032,19 @@ export interface EstimateRedeemLiquidityPoolToken200Response {
 /**
  *
  * @export
+ * @interface EstimateRedeemMaturedYt200Response
+ */
+export interface EstimateRedeemMaturedYt200Response {
+  /**
+   *
+   * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+   * @memberof EstimateRedeemMaturedYt200Response
+   */
+  redeem_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+}
+/**
+ *
+ * @export
  * @interface EstimateRedeemPtYtPair200Response
  */
 export interface EstimateRedeemPtYtPair200Response {
@@ -1064,15 +1083,15 @@ export interface EstimateRedeemTokenAmount200Response {
 /**
  *
  * @export
- * @interface EstimateRequiredUtSwapToYt200Response
+ * @interface EstimateRequiredDepositSwapToYt200Response
  */
-export interface EstimateRequiredUtSwapToYt200Response {
+export interface EstimateRequiredDepositSwapToYt200Response {
   /**
    *
    * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-   * @memberof EstimateRequiredUtSwapToYt200Response
+   * @memberof EstimateRequiredDepositSwapToYt200Response
    */
-  required_ut_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+  required_deposit_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  *
@@ -1090,26 +1109,13 @@ export interface EstimateSwapInPool200Response {
 /**
  *
  * @export
- * @interface EstimateSwapMaturedYtToUt200Response
+ * @interface EstimateSwapToYt200Response
  */
-export interface EstimateSwapMaturedYtToUt200Response {
+export interface EstimateSwapToYt200Response {
   /**
    *
    * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-   * @memberof EstimateSwapMaturedYtToUt200Response
-   */
-  ut_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-}
-/**
- *
- * @export
- * @interface EstimateSwapUtToYt200Response
- */
-export interface EstimateSwapUtToYt200Response {
-  /**
-   *
-   * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-   * @memberof EstimateSwapUtToYt200Response
+   * @memberof EstimateSwapToYt200Response
    */
   yt_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
@@ -2421,13 +2427,13 @@ export interface TranchePoolAPYs200Response {
    * @type {string}
    * @memberof TranchePoolAPYs200Response
    */
-  liquidity_rate_per_ut?: string;
+  liquidity_rate_per_deposit?: string;
   /**
    *
    * @type {string}
    * @memberof TranchePoolAPYs200Response
    */
-  ut_percentage_in_pool?: string;
+  deposit_token_percentage_in_pool?: string;
   /**
    *
    * @type {string}
@@ -2452,7 +2458,7 @@ export interface TranchePtAPYs200Response {
    * @type {string}
    * @memberof TranchePtAPYs200Response
    */
-  pt_rate_per_ut?: string;
+  pt_rate_per_deposit?: string;
 }
 /**
  *
@@ -2471,7 +2477,13 @@ export interface TrancheYtAPYs200Response {
    * @type {string}
    * @memberof TrancheYtAPYs200Response
    */
-  yt_rate_per_ut?: string;
+  yt_rate_per_deposit?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof TrancheYtAPYs200Response
+   */
+  ls_apy?: string;
 }
 /**
  *
@@ -3333,6 +3345,12 @@ export interface UnunifiIrsInterestRateSwapVault {
    * @memberof UnunifiIrsInterestRateSwapVault
    */
   denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsInterestRateSwapVault
+   */
+  deposit_denom?: string;
 }
 /**
  *
@@ -3407,6 +3425,19 @@ export interface UnunifiIrsQueryEstimateRedeemLiquidityPoolTokenResponse {
 /**
  *
  * @export
+ * @interface UnunifiIrsQueryEstimateRedeemMaturedYtResponse
+ */
+export interface UnunifiIrsQueryEstimateRedeemMaturedYtResponse {
+  /**
+   *
+   * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
+   * @memberof UnunifiIrsQueryEstimateRedeemMaturedYtResponse
+   */
+  redeem_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+}
+/**
+ *
+ * @export
  * @interface UnunifiIrsQueryEstimateRedeemPtYtPairResponse
  */
 export interface UnunifiIrsQueryEstimateRedeemPtYtPairResponse {
@@ -3426,15 +3457,15 @@ export interface UnunifiIrsQueryEstimateRedeemPtYtPairResponse {
 /**
  *
  * @export
- * @interface UnunifiIrsQueryEstimateRequiredUtSwapToYtResponse
+ * @interface UnunifiIrsQueryEstimateRequiredDepositSwapToYtResponse
  */
-export interface UnunifiIrsQueryEstimateRequiredUtSwapToYtResponse {
+export interface UnunifiIrsQueryEstimateRequiredDepositSwapToYtResponse {
   /**
    *
    * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-   * @memberof UnunifiIrsQueryEstimateRequiredUtSwapToYtResponse
+   * @memberof UnunifiIrsQueryEstimateRequiredDepositSwapToYtResponse
    */
-  required_ut_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
+  required_deposit_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
 /**
  *
@@ -3452,26 +3483,13 @@ export interface UnunifiIrsQueryEstimateSwapInPoolResponse {
 /**
  *
  * @export
- * @interface UnunifiIrsQueryEstimateSwapMaturedYtToUtResponse
+ * @interface UnunifiIrsQueryEstimateSwapToYtResponse
  */
-export interface UnunifiIrsQueryEstimateSwapMaturedYtToUtResponse {
+export interface UnunifiIrsQueryEstimateSwapToYtResponse {
   /**
    *
    * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-   * @memberof UnunifiIrsQueryEstimateSwapMaturedYtToUtResponse
-   */
-  ut_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
-}
-/**
- *
- * @export
- * @interface UnunifiIrsQueryEstimateSwapUtToYtResponse
- */
-export interface UnunifiIrsQueryEstimateSwapUtToYtResponse {
-  /**
-   *
-   * @type {EstimateDLPTokenAmount200ResponseEstimatedDlpAmount}
-   * @memberof UnunifiIrsQueryEstimateSwapUtToYtResponse
+   * @memberof UnunifiIrsQueryEstimateSwapToYtResponse
    */
   yt_amount?: EstimateDLPTokenAmount200ResponseEstimatedDlpAmount;
 }
@@ -3511,13 +3529,13 @@ export interface UnunifiIrsQueryTranchePoolAPYsResponse {
    * @type {string}
    * @memberof UnunifiIrsQueryTranchePoolAPYsResponse
    */
-  liquidity_rate_per_ut?: string;
+  liquidity_rate_per_deposit?: string;
   /**
    *
    * @type {string}
    * @memberof UnunifiIrsQueryTranchePoolAPYsResponse
    */
-  ut_percentage_in_pool?: string;
+  deposit_token_percentage_in_pool?: string;
   /**
    *
    * @type {string}
@@ -3542,7 +3560,7 @@ export interface UnunifiIrsQueryTranchePtAPYsResponse {
    * @type {string}
    * @memberof UnunifiIrsQueryTranchePtAPYsResponse
    */
-  pt_rate_per_ut?: string;
+  pt_rate_per_deposit?: string;
 }
 /**
  * QueryTranchResponse is response type for the Query/Tranch RPC method.
@@ -3574,7 +3592,13 @@ export interface UnunifiIrsQueryTrancheYtAPYsResponse {
    * @type {string}
    * @memberof UnunifiIrsQueryTrancheYtAPYsResponse
    */
-  yt_rate_per_ut?: string;
+  yt_rate_per_deposit?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsQueryTrancheYtAPYsResponse
+   */
+  ls_apy?: string;
 }
 /**
  * QueryTranchesResponse is response type for the Query/Tranches RPC method.
@@ -3700,6 +3724,12 @@ export interface UnunifiIrsTranchePool {
    * @memberof UnunifiIrsTranchePool
    */
   denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UnunifiIrsTranchePool
+   */
+  deposit_denom?: string;
 }
 /**
  *
@@ -5342,6 +5372,12 @@ export interface VaultByContract200ResponseVault {
    * @memberof VaultByContract200ResponseVault
    */
   denom?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof VaultByContract200ResponseVault
+   */
+  deposit_denom?: string;
 }
 /**
  * QueryVaultDetailsResponse is response type for the Query/VaultDetails RPC method.
@@ -6092,6 +6128,44 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
+     * @summary Estimate redeem matured YT
+     * @param {string} [id]
+     * @param {string} [ytAmount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    estimateRedeemMaturedYt: async (id?: string, ytAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/irs/estimate-redeem-matured-yt`;
+      // use dummy base URL string because the URL constructor only accepts absolute URLs.
+      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+      let baseOptions;
+      if (configuration) {
+        baseOptions = configuration.baseOptions;
+      }
+
+      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+      const localVarHeaderParameter = {} as any;
+      const localVarQueryParameter = {} as any;
+
+      if (id !== undefined) {
+        localVarQueryParameter['id'] = id;
+      }
+
+      if (ytAmount !== undefined) {
+        localVarQueryParameter['yt_amount'] = ytAmount;
+      }
+
+      setSearchParams(localVarUrlObj, localVarQueryParameter);
+      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+
+      return {
+        url: toPathString(localVarUrlObj),
+        options: localVarRequestOptions,
+      };
+    },
+    /**
+     *
      * @summary Estimate redeem amount of PT&YT pair
      * @param {string} [id]
      * @param {string} [denom]
@@ -6177,14 +6251,18 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
-     * @summary Estimate required UT amount to swap to YT
+     * @summary Estimate required Deposit_Token amount to swap to YT
      * @param {string} [id]
      * @param {string} [desiredYtAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    estimateRequiredUtSwapToYt: async (id?: string, desiredYtAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-      const localVarPath = `/ununifi/irs/estimate-required-ut-swap-to-yt`;
+    estimateRequiredDepositSwapToYt: async (
+      id?: string,
+      desiredYtAmount?: string,
+      options: AxiosRequestConfig = {},
+    ): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/irs/estimate-required-deposit-swap-to-yt`;
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -6215,7 +6293,7 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
-     * @summary Estimate swap amount of UT/PT (in the pool)
+     * @summary Estimate swap amount of Deposit_Token/PT (in the pool)
      * @param {string} [id]
      * @param {string} [denom]
      * @param {string} [amount]
@@ -6258,53 +6336,15 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
     },
     /**
      *
-     * @summary Estimate swap matured YT to UT
-     * @param {string} [id]
-     * @param {string} [ytAmount]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    estimateSwapMaturedYtToUt: async (id?: string, ytAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-      const localVarPath = `/ununifi/irs/estimate-swap-matured-yt-to-ut`;
-      // use dummy base URL string because the URL constructor only accepts absolute URLs.
-      const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-      let baseOptions;
-      if (configuration) {
-        baseOptions = configuration.baseOptions;
-      }
-
-      const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
-      const localVarHeaderParameter = {} as any;
-      const localVarQueryParameter = {} as any;
-
-      if (id !== undefined) {
-        localVarQueryParameter['id'] = id;
-      }
-
-      if (ytAmount !== undefined) {
-        localVarQueryParameter['yt_amount'] = ytAmount;
-      }
-
-      setSearchParams(localVarUrlObj, localVarQueryParameter);
-      let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-      localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
-
-      return {
-        url: toPathString(localVarUrlObj),
-        options: localVarRequestOptions,
-      };
-    },
-    /**
-     *
-     * @summary Estimate swap UT to YT
+     * @summary Estimate swap Deposit_Token to YT
      * @param {string} [id]
      * @param {string} [denom]
      * @param {string} [amount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    estimateSwapUtToYt: async (id?: string, denom?: string, amount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-      const localVarPath = `/ununifi/irs/estimate-swap-ut-to-yt`;
+    estimateSwapToYt: async (id?: string, denom?: string, amount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+      const localVarPath = `/ununifi/irs/estimate-swap-to-yt`;
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
       let baseOptions;
@@ -7545,10 +7585,11 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
      *
      * @summary tranche Ls APYs by id
      * @param {string} id
+     * @param {string} [depositAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    tranchePoolAPYs: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+    tranchePoolAPYs: async (id: string, depositAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       // verify required parameter 'id' is not null or undefined
       assertParamExists('tranchePoolAPYs', 'id', id);
       const localVarPath = `/ununifi/irs/tranche/{id}/pool-apy`.replace(`{${'id'}}`, encodeURIComponent(String(id)));
@@ -7563,6 +7604,10 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
       const localVarHeaderParameter = {} as any;
       const localVarQueryParameter = {} as any;
 
+      if (depositAmount !== undefined) {
+        localVarQueryParameter['deposit_amount'] = depositAmount;
+      }
+
       setSearchParams(localVarUrlObj, localVarQueryParameter);
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
       localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
@@ -7576,10 +7621,11 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
      *
      * @summary tranche PT APYs by id
      * @param {string} id
+     * @param {string} [depositAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    tranchePtAPYs: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+    tranchePtAPYs: async (id: string, depositAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       // verify required parameter 'id' is not null or undefined
       assertParamExists('tranchePtAPYs', 'id', id);
       const localVarPath = `/ununifi/irs/tranche/{id}/pt-apy`.replace(`{${'id'}}`, encodeURIComponent(String(id)));
@@ -7594,6 +7640,10 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
       const localVarHeaderParameter = {} as any;
       const localVarQueryParameter = {} as any;
 
+      if (depositAmount !== undefined) {
+        localVarQueryParameter['deposit_amount'] = depositAmount;
+      }
+
       setSearchParams(localVarUrlObj, localVarQueryParameter);
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
       localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
@@ -7607,10 +7657,11 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
      *
      * @summary tranche YT APYs by id
      * @param {string} id
+     * @param {string} [desiredYtAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    trancheYtAPYs: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+    trancheYtAPYs: async (id: string, desiredYtAmount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
       // verify required parameter 'id' is not null or undefined
       assertParamExists('trancheYtAPYs', 'id', id);
       const localVarPath = `/ununifi/irs/tranche/{id}/yt-apy`.replace(`{${'id'}}`, encodeURIComponent(String(id)));
@@ -7624,6 +7675,10 @@ export const QueryApiAxiosParamCreator = function (configuration?: Configuration
       const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
       const localVarHeaderParameter = {} as any;
       const localVarQueryParameter = {} as any;
+
+      if (desiredYtAmount !== undefined) {
+        localVarQueryParameter['desired_yt_amount'] = desiredYtAmount;
+      }
 
       setSearchParams(localVarUrlObj, localVarQueryParameter);
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -8196,6 +8251,22 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
+     * @summary Estimate redeem matured YT
+     * @param {string} [id]
+     * @param {string} [ytAmount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async estimateRedeemMaturedYt(
+      id?: string,
+      ytAmount?: string,
+      options?: AxiosRequestConfig,
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRedeemMaturedYt200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRedeemMaturedYt(id, ytAmount, options);
+      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+    },
+    /**
+     *
      * @summary Estimate redeem amount of PT&YT pair
      * @param {string} [id]
      * @param {string} [denom]
@@ -8229,23 +8300,23 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
-     * @summary Estimate required UT amount to swap to YT
+     * @summary Estimate required Deposit_Token amount to swap to YT
      * @param {string} [id]
      * @param {string} [desiredYtAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async estimateRequiredUtSwapToYt(
+    async estimateRequiredDepositSwapToYt(
       id?: string,
       desiredYtAmount?: string,
       options?: AxiosRequestConfig,
-    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRequiredUtSwapToYt200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRequiredUtSwapToYt(id, desiredYtAmount, options);
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateRequiredDepositSwapToYt200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateRequiredDepositSwapToYt(id, desiredYtAmount, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
      *
-     * @summary Estimate swap amount of UT/PT (in the pool)
+     * @summary Estimate swap amount of Deposit_Token/PT (in the pool)
      * @param {string} [id]
      * @param {string} [denom]
      * @param {string} [amount]
@@ -8263,36 +8334,20 @@ export const QueryApiFp = function (configuration?: Configuration) {
     },
     /**
      *
-     * @summary Estimate swap matured YT to UT
-     * @param {string} [id]
-     * @param {string} [ytAmount]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    async estimateSwapMaturedYtToUt(
-      id?: string,
-      ytAmount?: string,
-      options?: AxiosRequestConfig,
-    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateSwapMaturedYtToUt200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateSwapMaturedYtToUt(id, ytAmount, options);
-      return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-    },
-    /**
-     *
-     * @summary Estimate swap UT to YT
+     * @summary Estimate swap Deposit_Token to YT
      * @param {string} [id]
      * @param {string} [denom]
      * @param {string} [amount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async estimateSwapUtToYt(
+    async estimateSwapToYt(
       id?: string,
       denom?: string,
       amount?: string,
       options?: AxiosRequestConfig,
-    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateSwapUtToYt200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateSwapUtToYt(id, denom, amount, options);
+    ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EstimateSwapToYt200Response>> {
+      const localVarAxiosArgs = await localVarAxiosParamCreator.estimateSwapToYt(id, denom, amount, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -8803,42 +8858,48 @@ export const QueryApiFp = function (configuration?: Configuration) {
      *
      * @summary tranche Ls APYs by id
      * @param {string} id
+     * @param {string} [depositAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async tranchePoolAPYs(
       id: string,
+      depositAmount?: string,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TranchePoolAPYs200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.tranchePoolAPYs(id, options);
+      const localVarAxiosArgs = await localVarAxiosParamCreator.tranchePoolAPYs(id, depositAmount, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
      *
      * @summary tranche PT APYs by id
      * @param {string} id
+     * @param {string} [depositAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async tranchePtAPYs(
       id: string,
+      depositAmount?: string,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TranchePtAPYs200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.tranchePtAPYs(id, options);
+      const localVarAxiosArgs = await localVarAxiosParamCreator.tranchePtAPYs(id, depositAmount, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
      *
      * @summary tranche YT APYs by id
      * @param {string} id
+     * @param {string} [desiredYtAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async trancheYtAPYs(
       id: string,
+      desiredYtAmount?: string,
       options?: AxiosRequestConfig,
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TrancheYtAPYs200Response>> {
-      const localVarAxiosArgs = await localVarAxiosParamCreator.trancheYtAPYs(id, options);
+      const localVarAxiosArgs = await localVarAxiosParamCreator.trancheYtAPYs(id, desiredYtAmount, options);
       return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
     },
     /**
@@ -9172,6 +9233,17 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
+     * @summary Estimate redeem matured YT
+     * @param {string} [id]
+     * @param {string} [ytAmount]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    estimateRedeemMaturedYt(id?: string, ytAmount?: string, options?: any): AxiosPromise<EstimateRedeemMaturedYt200Response> {
+      return localVarFp.estimateRedeemMaturedYt(id, ytAmount, options).then((request) => request(axios, basePath));
+    },
+    /**
+     *
      * @summary Estimate redeem amount of PT&YT pair
      * @param {string} [id]
      * @param {string} [denom]
@@ -9194,18 +9266,22 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
-     * @summary Estimate required UT amount to swap to YT
+     * @summary Estimate required Deposit_Token amount to swap to YT
      * @param {string} [id]
      * @param {string} [desiredYtAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    estimateRequiredUtSwapToYt(id?: string, desiredYtAmount?: string, options?: any): AxiosPromise<EstimateRequiredUtSwapToYt200Response> {
-      return localVarFp.estimateRequiredUtSwapToYt(id, desiredYtAmount, options).then((request) => request(axios, basePath));
+    estimateRequiredDepositSwapToYt(
+      id?: string,
+      desiredYtAmount?: string,
+      options?: any,
+    ): AxiosPromise<EstimateRequiredDepositSwapToYt200Response> {
+      return localVarFp.estimateRequiredDepositSwapToYt(id, desiredYtAmount, options).then((request) => request(axios, basePath));
     },
     /**
      *
-     * @summary Estimate swap amount of UT/PT (in the pool)
+     * @summary Estimate swap amount of Deposit_Token/PT (in the pool)
      * @param {string} [id]
      * @param {string} [denom]
      * @param {string} [amount]
@@ -9217,26 +9293,15 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
     },
     /**
      *
-     * @summary Estimate swap matured YT to UT
-     * @param {string} [id]
-     * @param {string} [ytAmount]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    estimateSwapMaturedYtToUt(id?: string, ytAmount?: string, options?: any): AxiosPromise<EstimateSwapMaturedYtToUt200Response> {
-      return localVarFp.estimateSwapMaturedYtToUt(id, ytAmount, options).then((request) => request(axios, basePath));
-    },
-    /**
-     *
-     * @summary Estimate swap UT to YT
+     * @summary Estimate swap Deposit_Token to YT
      * @param {string} [id]
      * @param {string} [denom]
      * @param {string} [amount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    estimateSwapUtToYt(id?: string, denom?: string, amount?: string, options?: any): AxiosPromise<EstimateSwapUtToYt200Response> {
-      return localVarFp.estimateSwapUtToYt(id, denom, amount, options).then((request) => request(axios, basePath));
+    estimateSwapToYt(id?: string, denom?: string, amount?: string, options?: any): AxiosPromise<EstimateSwapToYt200Response> {
+      return localVarFp.estimateSwapToYt(id, denom, amount, options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -9619,31 +9684,34 @@ export const QueryApiFactory = function (configuration?: Configuration, basePath
      *
      * @summary tranche Ls APYs by id
      * @param {string} id
+     * @param {string} [depositAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    tranchePoolAPYs(id: string, options?: any): AxiosPromise<TranchePoolAPYs200Response> {
-      return localVarFp.tranchePoolAPYs(id, options).then((request) => request(axios, basePath));
+    tranchePoolAPYs(id: string, depositAmount?: string, options?: any): AxiosPromise<TranchePoolAPYs200Response> {
+      return localVarFp.tranchePoolAPYs(id, depositAmount, options).then((request) => request(axios, basePath));
     },
     /**
      *
      * @summary tranche PT APYs by id
      * @param {string} id
+     * @param {string} [depositAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    tranchePtAPYs(id: string, options?: any): AxiosPromise<TranchePtAPYs200Response> {
-      return localVarFp.tranchePtAPYs(id, options).then((request) => request(axios, basePath));
+    tranchePtAPYs(id: string, depositAmount?: string, options?: any): AxiosPromise<TranchePtAPYs200Response> {
+      return localVarFp.tranchePtAPYs(id, depositAmount, options).then((request) => request(axios, basePath));
     },
     /**
      *
      * @summary tranche YT APYs by id
      * @param {string} id
+     * @param {string} [desiredYtAmount]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    trancheYtAPYs(id: string, options?: any): AxiosPromise<TrancheYtAPYs200Response> {
-      return localVarFp.trancheYtAPYs(id, options).then((request) => request(axios, basePath));
+    trancheYtAPYs(id: string, desiredYtAmount?: string, options?: any): AxiosPromise<TrancheYtAPYs200Response> {
+      return localVarFp.trancheYtAPYs(id, desiredYtAmount, options).then((request) => request(axios, basePath));
     },
     /**
      *
@@ -10011,6 +10079,21 @@ export class QueryApi extends BaseAPI {
 
   /**
    *
+   * @summary Estimate redeem matured YT
+   * @param {string} [id]
+   * @param {string} [ytAmount]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof QueryApi
+   */
+  public estimateRedeemMaturedYt(id?: string, ytAmount?: string, options?: AxiosRequestConfig) {
+    return QueryApiFp(this.configuration)
+      .estimateRedeemMaturedYt(id, ytAmount, options)
+      .then((request) => request(this.axios, this.basePath));
+  }
+
+  /**
+   *
    * @summary Estimate redeem amount of PT&YT pair
    * @param {string} [id]
    * @param {string} [denom]
@@ -10041,22 +10124,22 @@ export class QueryApi extends BaseAPI {
 
   /**
    *
-   * @summary Estimate required UT amount to swap to YT
+   * @summary Estimate required Deposit_Token amount to swap to YT
    * @param {string} [id]
    * @param {string} [desiredYtAmount]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public estimateRequiredUtSwapToYt(id?: string, desiredYtAmount?: string, options?: AxiosRequestConfig) {
+  public estimateRequiredDepositSwapToYt(id?: string, desiredYtAmount?: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .estimateRequiredUtSwapToYt(id, desiredYtAmount, options)
+      .estimateRequiredDepositSwapToYt(id, desiredYtAmount, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
   /**
    *
-   * @summary Estimate swap amount of UT/PT (in the pool)
+   * @summary Estimate swap amount of Deposit_Token/PT (in the pool)
    * @param {string} [id]
    * @param {string} [denom]
    * @param {string} [amount]
@@ -10072,22 +10155,7 @@ export class QueryApi extends BaseAPI {
 
   /**
    *
-   * @summary Estimate swap matured YT to UT
-   * @param {string} [id]
-   * @param {string} [ytAmount]
-   * @param {*} [options] Override http request option.
-   * @throws {RequiredError}
-   * @memberof QueryApi
-   */
-  public estimateSwapMaturedYtToUt(id?: string, ytAmount?: string, options?: AxiosRequestConfig) {
-    return QueryApiFp(this.configuration)
-      .estimateSwapMaturedYtToUt(id, ytAmount, options)
-      .then((request) => request(this.axios, this.basePath));
-  }
-
-  /**
-   *
-   * @summary Estimate swap UT to YT
+   * @summary Estimate swap Deposit_Token to YT
    * @param {string} [id]
    * @param {string} [denom]
    * @param {string} [amount]
@@ -10095,9 +10163,9 @@ export class QueryApi extends BaseAPI {
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public estimateSwapUtToYt(id?: string, denom?: string, amount?: string, options?: AxiosRequestConfig) {
+  public estimateSwapToYt(id?: string, denom?: string, amount?: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .estimateSwapUtToYt(id, denom, amount, options)
+      .estimateSwapToYt(id, denom, amount, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -10596,13 +10664,14 @@ export class QueryApi extends BaseAPI {
    *
    * @summary tranche Ls APYs by id
    * @param {string} id
+   * @param {string} [depositAmount]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public tranchePoolAPYs(id: string, options?: AxiosRequestConfig) {
+  public tranchePoolAPYs(id: string, depositAmount?: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .tranchePoolAPYs(id, options)
+      .tranchePoolAPYs(id, depositAmount, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -10610,13 +10679,14 @@ export class QueryApi extends BaseAPI {
    *
    * @summary tranche PT APYs by id
    * @param {string} id
+   * @param {string} [depositAmount]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public tranchePtAPYs(id: string, options?: AxiosRequestConfig) {
+  public tranchePtAPYs(id: string, depositAmount?: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .tranchePtAPYs(id, options)
+      .tranchePtAPYs(id, depositAmount, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
@@ -10624,13 +10694,14 @@ export class QueryApi extends BaseAPI {
    *
    * @summary tranche YT APYs by id
    * @param {string} id
+   * @param {string} [desiredYtAmount]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof QueryApi
    */
-  public trancheYtAPYs(id: string, options?: AxiosRequestConfig) {
+  public trancheYtAPYs(id: string, desiredYtAmount?: string, options?: AxiosRequestConfig) {
     return QueryApiFp(this.configuration)
-      .trancheYtAPYs(id, options)
+      .trancheYtAPYs(id, desiredYtAmount, options)
       .then((request) => request(this.axios, this.basePath));
   }
 
